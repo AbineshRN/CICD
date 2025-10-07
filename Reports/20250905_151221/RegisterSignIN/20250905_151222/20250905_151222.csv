@@ -1,0 +1,14 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+RegisterSignIN,Chrome 140.0.7339.81,,,05-09-2025 15:12:32,05-09-2025 15:13:43,1m - 10.908s,PASSED
+,,,,,,,
+Test Cases/CommentPost,Chrome 140.0.7339.81,This testcase checks the functionality of posting a comment in blog section,,05-09-2025 15:13:23,05-09-2025 15:13:43,20.826s,PASSED
+"DATA BINDING - {""(Default) secti..."":""ArticlePage"",""(Default) filep..."":""Include/Data Files/login_data.json""}",,,,,,,
+Start listener action : openTheBrowser,Chrome 140.0.7339.81,,,05-09-2025 15:13:23,05-09-2025 15:13:31,8.489s,PASSED
+"ExtentManager.initReport(""BlogCommentReport"")",Chrome 140.0.7339.81,,,05-09-2025 15:13:31,05-09-2025 15:13:31,0.007s,PASSED
+"ExtentManager.createTest(""Post Comment on Blog Article"")",Chrome 140.0.7339.81,,,05-09-2025 15:13:31,05-09-2025 15:13:31,0.002s,PASSED
+try,Chrome 140.0.7339.81,,,05-09-2025 15:13:31,05-09-2025 15:13:34,2.966s,PASSED
+try,Chrome 140.0.7339.81,,,05-09-2025 15:13:34,05-09-2025 15:13:38,3.517s,PASSED
+try,Chrome 140.0.7339.81,,,05-09-2025 15:13:38,05-09-2025 15:13:42,4.377s,PASSED
+try,Chrome 140.0.7339.81,,,05-09-2025 15:13:42,05-09-2025 15:13:43,0.585s,PASSED
+ExtentManager.flushReport(),Chrome 140.0.7339.81,,,05-09-2025 15:13:43,05-09-2025 15:13:43,0.152s,PASSED
+Start listener action : closeTheBrowser,Chrome 140.0.7339.81,,,05-09-2025 15:13:43,05-09-2025 15:13:43,0.409s,PASSED

@@ -1,0 +1,67 @@
+2025-09-17 11:58:55.273 INFO  c.k.katalon.core.main.TestSuiteExecutor  - START Test Suites/API_Testcases
+2025-09-17 11:58:55.379 INFO  c.k.katalon.core.main.TestSuiteExecutor  - userFullName = Abinesh R
+2025-09-17 11:58:55.380 INFO  c.k.katalon.core.main.TestSuiteExecutor  - projectName = Luma
+2025-09-17 11:58:55.381 INFO  c.k.katalon.core.main.TestSuiteExecutor  - hostName = 10835442 - 10.235.153.97
+2025-09-17 11:58:55.382 INFO  c.k.katalon.core.main.TestSuiteExecutor  - os = Windows 11 64bit
+2025-09-17 11:58:55.382 INFO  c.k.katalon.core.main.TestSuiteExecutor  - hostAddress = 10.235.153.97
+2025-09-17 11:58:55.383 INFO  c.k.katalon.core.main.TestSuiteExecutor  - katalonVersion = 10.3.1.0
+2025-09-17 11:58:56.092 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-09-17 11:58:56.092 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/JsonPlaceHolder/api_SignIn
+2025-09-17 11:58:56.196 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) filepath = https://68c8e78aceef5a150f629ed5.mockapi.io/sign_in/credentials
+2025-09-17 11:58:56.223 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) postSchemaFilePath = Include/Data Files/post_login_response_schema.json
+2025-09-17 11:58:56.248 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) getSchemaFilePath = Include/Data Files/get_response_schema.json
+2025-09-17 11:58:56.274 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) systemJsonFilePath = Include/Data Files/login_data.json
+ℹ️ Skipping browser launch for API test case: api_SignIn
+2025-09-17 11:58:56.590 DEBUG testcase.api_SignIn                      - 1: logInfo("Sending POST request to /credentials to create new credentials")
+2025-09-17 11:58:56.599 INFO  com.kms.katalon.core.util.KeywordUtil    - Sending POST request to /credentials to create new credentials
+2025-09-17 11:58:56.604 DEBUG testcase.api_SignIn                      - 2: postPayload = JsonOutput.toJson(JsonFileReader.getSectionData("loginPage", systemJsonFilePath))
+2025-09-17 11:58:56.697 DEBUG testcase.api_SignIn                      - 3: postResponse = ApiKeywords.sendPost("/credentials", postPayload)
+2025-09-17 11:58:59.654 INFO  c.k.k.core.webservice.common.HarLogger   - HAR: C:\Users\10835442\Katalon Studio\Luma\Reports\20250917_115850\API_Testcases\20250917_115850\requests\main\POST_Generic_0.har
+2025-09-17 11:58:59.790 DEBUG testcase.api_SignIn                      - 4: verifyResponseStatusCode(postResponse, 201)
+2025-09-17 11:58:59.818 DEBUG testcase.api_SignIn                      - 5: logInfo("POST response status code verified as 201")
+2025-09-17 11:58:59.822 INFO  com.kms.katalon.core.util.KeywordUtil    - POST response status code verified as 201
+2025-09-17 11:58:59.824 DEBUG testcase.api_SignIn                      - 6: postResponseBody = postResponse.getResponseBodyContent()
+2025-09-17 11:58:59.835 DEBUG testcase.api_SignIn                      - 7: createdCredential = JsonSlurper().parseText(postResponseBody)
+2025-09-17 11:58:59.839 DEBUG testcase.api_SignIn                      - 8: credentialId = id
+2025-09-17 11:58:59.843 DEBUG testcase.api_SignIn                      - 9: logInfo("Created credential ID: " + credentialId)
+2025-09-17 11:58:59.845 INFO  com.kms.katalon.core.util.KeywordUtil    - Created credential ID: 5
+2025-09-17 11:58:59.847 DEBUG testcase.api_SignIn                      - 10: validateJsonAgainstSchema(postResponseBody, postSchemaFilePath)
+2025-09-17 11:58:59.996 DEBUG testcase.api_SignIn                      - 11: markPassed("POST response schema validation passed")
+2025-09-17 11:58:59.999 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ POST response schema validation passed
+2025-09-17 11:59:00.015 DEBUG testcase.api_SignIn                      - 12: logInfo(Sending GET request to /credentials/$credentialId)
+2025-09-17 11:59:00.031 INFO  com.kms.katalon.core.util.KeywordUtil    - Sending GET request to /credentials/5
+2025-09-17 11:59:00.034 DEBUG testcase.api_SignIn                      - 13: getResponse = ApiKeywords.sendGet(/credentials/$credentialId)
+2025-09-17 11:59:00.326 INFO  c.k.k.core.webservice.common.HarLogger   - HAR: C:\Users\10835442\Katalon Studio\Luma\Reports\20250917_115850\API_Testcases\20250917_115850\requests\main\GET_Generic_1.har
+2025-09-17 11:59:00.355 DEBUG testcase.api_SignIn                      - 14: verifyResponseStatusCode(getResponse, 200)
+2025-09-17 11:59:00.371 DEBUG testcase.api_SignIn                      - 15: logInfo("GET response status code verified as 200")
+2025-09-17 11:59:00.373 INFO  com.kms.katalon.core.util.KeywordUtil    - GET response status code verified as 200
+2025-09-17 11:59:00.376 DEBUG testcase.api_SignIn                      - 16: getResponseBody = getResponse.getResponseBodyContent()
+2025-09-17 11:59:00.381 DEBUG testcase.api_SignIn                      - 17: validateJsonAgainstSchema(getResponseBody, postSchemaFilePath)
+2025-09-17 11:59:00.396 DEBUG testcase.api_SignIn                      - 18: markPassed("GET response schema validation passed")
+2025-09-17 11:59:00.399 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ GET response schema validation passed
+2025-09-17 11:59:00.405 DEBUG testcase.api_SignIn                      - 19: logInfo(Sending PATCH request to /credentials/$credentialId to update password)
+2025-09-17 11:59:00.407 INFO  com.kms.katalon.core.util.KeywordUtil    - Sending PATCH request to /credentials/5 to update password
+2025-09-17 11:59:00.408 DEBUG testcase.api_SignIn                      - 20: patchPayload = JsonOutput.toJson(["password":"NewPassword@456"])
+2025-09-17 11:59:00.411 DEBUG testcase.api_SignIn                      - 21: patchResponse = ApiKeywords.sendPatch(/credentials/$credentialId, patchPayload)
+2025-09-17 11:59:00.703 INFO  c.k.k.core.webservice.common.HarLogger   - HAR: C:\Users\10835442\Katalon Studio\Luma\Reports\20250917_115850\API_Testcases\20250917_115850\requests\main\PATCH_Generic_2.har
+2025-09-17 11:59:00.708 DEBUG testcase.api_SignIn                      - 22: verifyResponseStatusCode(patchResponse, 200)
+2025-09-17 11:59:00.716 DEBUG testcase.api_SignIn                      - 23: markPassed("PATCH password update successful")
+2025-09-17 11:59:00.718 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ PATCH password update successful
+2025-09-17 11:59:00.722 DEBUG testcase.api_SignIn                      - 24: logInfo(Sending PUT request to /credentials/$credentialId to replace full credential)
+2025-09-17 11:59:00.725 INFO  com.kms.katalon.core.util.KeywordUtil    - Sending PUT request to /credentials/5 to replace full credential
+2025-09-17 11:59:00.727 DEBUG testcase.api_SignIn                      - 25: putPayload = JsonOutput.toJson(["email":"alicesmith.38@gmail.com", "password":"NewPassword@456", "verification_text":"My Account"])
+2025-09-17 11:59:00.729 DEBUG testcase.api_SignIn                      - 26: putResponse = ApiKeywords.sendPut(/credentials/$credentialId, putPayload)
+2025-09-17 11:59:01.011 INFO  c.k.k.core.webservice.common.HarLogger   - HAR: C:\Users\10835442\Katalon Studio\Luma\Reports\20250917_115850\API_Testcases\20250917_115850\requests\main\PUT_Generic_3.har
+2025-09-17 11:59:01.016 DEBUG testcase.api_SignIn                      - 27: verifyResponseStatusCode(putResponse, 200)
+2025-09-17 11:59:01.023 DEBUG testcase.api_SignIn                      - 28: validateJsonAgainstSchema(putResponse.getResponseBodyContent(), postSchemaFilePath)
+2025-09-17 11:59:01.031 DEBUG testcase.api_SignIn                      - 29: markPassed("PUT full credential update successful and schema validated")
+2025-09-17 11:59:01.032 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ PUT full credential update successful and schema validated
+PASSED
+⚠️ Error while closing browser: Browser is not opened
+Build info: version: '4.28.1', revision: '73f5ad48a2'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: driver.version: unknown
+2025-09-17 11:59:01.160 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/JsonPlaceHolder/api_SignIn
+2025-09-17 11:59:01.221 INFO  c.k.katalon.core.main.TestSuiteExecutor  - --------------------
+2025-09-17 11:59:01.221 INFO  c.k.katalon.core.main.TestSuiteExecutor  - END Test Suites/API_Testcases
+2025-09-17 11:59:01.221 INFO  c.k.katalon.core.main.TestSuiteExecutor  - ====================

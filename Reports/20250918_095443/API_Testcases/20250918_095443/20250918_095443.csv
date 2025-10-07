@@ -1,0 +1,49 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+API_Testcases,,,,18-09-2025 09:54:48,18-09-2025 09:55:17,28.986s,ERROR
+,,,,,,,
+Test Cases/JsonPlaceHolder/api_Local_to_Server,,,,18-09-2025 09:54:48,18-09-2025 09:55:13,24.751s,PASSED
+"DATA BINDING - {""(Default) maste..."":""Include/Data Files/MasterSchema.json"",""(Default) syste..."":""Include/Data Files/login_data.json"",""(Default) postS..."":""Include/Data Files/post_login_response_schema.json"",""(Default) filep..."":""https://68c8e78aceef5a150f629ed5.mockapi.io/sign_in/credentials""}",,,,,,,
+Start listener action : beforeTestCase,,,,18-09-2025 09:54:49,18-09-2025 09:54:49,0.174s,PASSED
+"logInfo(""Sending POST request to /credentials to create new credentials"")",,,,18-09-2025 09:54:49,18-09-2025 09:54:49,0.013s,PASSED
+"postPayload = JsonOutput.toJson(JsonFileReader.getSectionData(""loginPage"", systemJsonFilePath))",,,,18-09-2025 09:54:49,18-09-2025 09:54:49,0.075s,PASSED
+println(postPayload),,,,18-09-2025 09:54:49,18-09-2025 09:54:49,0.008s,PASSED
+"postResponse = ApiKeywords.sendPost(""/credentials"", postPayload)",,,,18-09-2025 09:54:49,18-09-2025 09:55:13,23.616s,PASSED
+"verifyResponseStatusCode(postResponse, 201)",,,,18-09-2025 09:55:13,18-09-2025 09:55:13,0.026s,PASSED
+"logInfo(""POST response status code verified as 201"")",,,,18-09-2025 09:55:13,18-09-2025 09:55:13,0.007s,PASSED
+postResponseBody = postResponse.getResponseBodyContent(),,,,18-09-2025 09:55:13,18-09-2025 09:55:13,0.012s,PASSED
+createdCredential = JsonSlurper().parseText(postResponseBody),,,,18-09-2025 09:55:13,18-09-2025 09:55:13,0.004s,PASSED
+credentialId = id,,,,18-09-2025 09:55:13,18-09-2025 09:55:13,0.004s,PASSED
+"JsonFileReader.appendToJsonSection(systemJsonFilePath, ""postData"", ""CredentialId"", credentialId)",,,,18-09-2025 09:55:13,18-09-2025 09:55:13,0.049s,PASSED
+"logInfo(""Created credential ID: "" + credentialId)",,,,18-09-2025 09:55:13,18-09-2025 09:55:13,0.009s,PASSED
+"validateJsonAgainstSchema(postResponseBody, JsonOutput.toJson(JsonFileReader.getSectionData(""postResponse"", masterSchemaFilePath)))",,,,18-09-2025 09:55:13,18-09-2025 09:55:13,0.169s,PASSED
+"markPassed(""POST response schema validation passed"")",,,,18-09-2025 09:55:13,18-09-2025 09:55:13,0.017s,PASSED
+Start listener action : closeTheBrowser,,,,18-09-2025 09:55:13,18-09-2025 09:55:13,0.164s,PASSED
+,,,,,,,
+Test Cases/JsonPlaceHolder/api_updatingCred,,,,18-09-2025 09:55:13,18-09-2025 09:55:14,0.600s,PASSED
+"DATA BINDING - {""(Default) jsonF..."":""Include/Data Files/login_data.json""}",,,,,,,
+Start listener action : beforeTestCase,,,,18-09-2025 09:55:13,18-09-2025 09:55:13,0.018s,PASSED
+"credentialId = JsonFileReader.getJsonData(""postData"", ""CredentialId"", jsonFilePath)",,,,18-09-2025 09:55:13,18-09-2025 09:55:13,0.007s,PASSED
+"logInfo(""Sending PATCH request to /credentials/"" + credentialId + "" to update password"")",,,,18-09-2025 09:55:13,18-09-2025 09:55:13,0.007s,PASSED
+"patchPayload = JsonOutput.toJson([""password"":""NewPassword@456""])",,,,18-09-2025 09:55:13,18-09-2025 09:55:13,0.003s,PASSED
+"patchResponse = ApiKeywords.sendPatch(""/credentials/"" + credentialId, patchPayload)",,,,18-09-2025 09:55:13,18-09-2025 09:55:14,0.311s,PASSED
+"verifyResponseStatusCode(patchResponse, 200)",,,,18-09-2025 09:55:14,18-09-2025 09:55:14,0.007s,PASSED
+println(patchResponse.getResponseBodyContent()),,,,18-09-2025 09:55:14,18-09-2025 09:55:14,0.005s,PASSED
+"markPassed(""PATCH password update successful"")",,,,18-09-2025 09:55:14,18-09-2025 09:55:14,0.003s,PASSED
+Start listener action : closeTheBrowser,,,,18-09-2025 09:55:14,18-09-2025 09:55:14,0.021s,PASSED
+,,,,,,,
+Test Cases/JsonPlaceHolder/api_gettingCredFromServer,,,,18-09-2025 09:55:16,18-09-2025 09:55:17,0.641s,ERROR
+"DATA BINDING - {""(Default) maste..."":""Include/Data Files/MasterSchema.json"",""(Default) jsonF..."":""Include/Data Files/login_data.json""}",,,,,,,
+Start listener action : beforeTestCase,,,,18-09-2025 09:55:16,18-09-2025 09:55:16,0.003s,PASSED
+"credentialId = JsonFileReader.getJsonData(""postData"", ""CredentialId"", jsonFilePath)",,,,18-09-2025 09:55:16,18-09-2025 09:55:16,0.003s,PASSED
+"logInfo(""Sending GET request to /credentials/"" + credentialId)",,,,18-09-2025 09:55:16,18-09-2025 09:55:16,0.002s,PASSED
+"getResponse = ApiKeywords.sendGet(""/credentials/"" + credentialId)",,,,18-09-2025 09:55:16,18-09-2025 09:55:16,0.272s,PASSED
+"verifyResponseStatusCode(getResponse, 200)",,,,18-09-2025 09:55:16,18-09-2025 09:55:16,0.003s,PASSED
+"logInfo(""GET response status code verified as 200"")",,,,18-09-2025 09:55:16,18-09-2025 09:55:16,0.001s,PASSED
+getResponseBody = getResponse.getResponseBodyContent(),,,,18-09-2025 09:55:16,18-09-2025 09:55:16,0.000s,PASSED
+"validateJsonAgainstSchema(getResponseBody, JsonOutput.toJson(JsonFileReader.getSectionData(""postResponse"", masterSchemaFilePath)))",,,,18-09-2025 09:55:16,18-09-2025 09:55:16,0.006s,PASSED
+"markPassed(""GET response schema validation passed"")",,,,18-09-2025 09:55:16,18-09-2025 09:55:16,0.002s,PASSED
+"logInfo(""Sending PUT request to /credentials/"" + JsonFileReader.getJsonData(""postData"", ""CredentialId"", jsonFilePath) + "" to replace full credential"")",,,,18-09-2025 09:55:16,18-09-2025 09:55:16,0.002s,PASSED
+"putResponse = ApiKeywords.sendPost(""/credentials"", getResponseBody)",,,,18-09-2025 09:55:16,18-09-2025 09:55:17,0.284s,PASSED
+"verifyResponseStatusCode(putResponse, 201)",,,,18-09-2025 09:55:17,18-09-2025 09:55:17,0.003s,PASSED
+"validateJsonAgainstSchema(putResponse.getResponseBodyContent(), postSchemaFilePath)",,,,18-09-2025 09:55:17,18-09-2025 09:55:17,0.027s,ERROR
+Start listener action : closeTheBrowser,,,,18-09-2025 09:55:17,18-09-2025 09:55:17,0.006s,PASSED

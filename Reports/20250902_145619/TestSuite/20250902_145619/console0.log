@@ -1,0 +1,204 @@
+2025-09-02 14:56:23.529 INFO  c.k.katalon.core.main.TestSuiteExecutor  - START Test Suites/TestSuite
+2025-09-02 14:56:23.634 INFO  c.k.katalon.core.main.TestSuiteExecutor  - userFullName = Abinesh R
+2025-09-02 14:56:23.635 INFO  c.k.katalon.core.main.TestSuiteExecutor  - projectName = Luma
+2025-09-02 14:56:23.637 INFO  c.k.katalon.core.main.TestSuiteExecutor  - hostName = 10835442 - 10.235.153.96
+2025-09-02 14:56:23.638 INFO  c.k.katalon.core.main.TestSuiteExecutor  - os = Windows 11 64bit
+2025-09-02 14:56:23.639 INFO  c.k.katalon.core.main.TestSuiteExecutor  - hostAddress = 10.235.153.96
+2025-09-02 14:56:23.640 INFO  c.k.katalon.core.main.TestSuiteExecutor  - katalonVersion = 10.3.1.0
+2025-09-02 14:56:24.224 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-09-02 14:56:24.224 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/RegisterUser
+2025-09-02 14:56:24.318 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) filepath = Include/Data Files/login_data.json
+2025-09-02 14:56:24.344 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) section = register
+2025-09-02 14:56:24.750 INFO  c.k.k.core.webui.driver.DriverFactory    - Starting 'Chrome' driver
+2025-09-02 14:56:24.817 INFO  c.k.k.core.webui.driver.DriverFactory    - Action delay is set to 0 milliseconds
+Sep 02, 2025 2:56:26 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 139, returning the closest version; found: 138; Please update to a Selenium version that supports CDP version 139
+2025-09-02 14:56:27.112 INFO  c.k.k.core.webui.driver.DriverFactory    - sessionId = cd2c24380675159035a0e1ac34d521d7
+2025-09-02 14:56:27.113 INFO  c.k.k.core.webui.driver.DriverFactory    - browser = Chrome 139.0.7258.155
+2025-09-02 14:56:27.114 INFO  c.k.k.core.webui.driver.DriverFactory    - platform = Windows 11
+2025-09-02 14:56:27.114 INFO  c.k.k.core.webui.driver.DriverFactory    - seleniumVersion = 4.28.1
+2025-09-02 14:56:27.130 INFO  c.k.k.core.webui.driver.DriverFactory    - proxyInformation = ProxyInformation { proxyOption=NO_PROXY, proxyServerType=HTTP, username=, password=********, proxyServerAddress=, proxyServerPort=0, executionList="", isApplyToDesiredCapabilities=true }
+2025-09-02 14:56:36.183 DEBUG testcase.RegisterUser                    - 1: logInfo("Hovered over My Account")
+2025-09-02 14:56:36.192 INFO  com.kms.katalon.core.util.KeywordUtil    - Hovered over My Account
+2025-09-02 14:56:36.196 DEBUG testcase.RegisterUser                    - 2: pages.HomePage.hoverOverMyAccount(findTestObject("Object Repository/Home_Page/my_Account_Button"))
+2025-09-02 14:56:36.773 INFO  com.kms.katalon.core.util.KeywordUtil    - Hovering My Account
+2025-09-02 14:56:37.258 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ My Account has been hovered
+2025-09-02 14:56:37.262 DEBUG testcase.RegisterUser                    - 3: logInfo("Clicked on Register")
+2025-09-02 14:56:37.264 INFO  com.kms.katalon.core.util.KeywordUtil    - Clicked on Register
+2025-09-02 14:56:37.266 DEBUG testcase.RegisterUser                    - 4: pages.HomePage.clickOnRegister(findTestObject("Object Repository/Home_Page/register_Button"))
+2025-09-02 14:56:37.565 INFO  com.kms.katalon.core.util.KeywordUtil    - Clicking Register Button
+2025-09-02 14:56:39.983 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Register Button has been clicked
+2025-09-02 14:56:39.988 DEBUG testcase.RegisterUser                    - 5: logInfo("Entered First Name")
+2025-09-02 14:56:39.991 INFO  com.kms.katalon.core.util.KeywordUtil    - Entered First Name
+2025-09-02 14:56:39.992 DEBUG testcase.RegisterUser                    - 6: pages.UserRegistrationPage.inputFirstName(findTestObject("Object Repository/Registration_Page/first_Name_Input_Box"), JsonFileReader.getJsonData(section, "firstName", filepath))
+2025-09-02 14:56:40.432 INFO  com.kms.katalon.core.util.KeywordUtil    - Entering First Name
+2025-09-02 14:56:41.136 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ First Name has been entered
+2025-09-02 14:56:41.139 DEBUG testcase.RegisterUser                    - 7: logInfo("Entered Last Name")
+2025-09-02 14:56:41.141 INFO  com.kms.katalon.core.util.KeywordUtil    - Entered Last Name
+2025-09-02 14:56:41.142 DEBUG testcase.RegisterUser                    - 8: pages.UserRegistrationPage.inputLastName(findTestObject("Object Repository/Registration_Page/last_Name_Input_Box"), JsonFileReader.getJsonData(section, "lastName", filepath))
+2025-09-02 14:56:41.436 INFO  com.kms.katalon.core.util.KeywordUtil    - Entering Last Name
+2025-09-02 14:56:42.091 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Last Name has been entered
+2025-09-02 14:56:42.097 DEBUG testcase.RegisterUser                    - 9: logInfo("Entered Email")
+2025-09-02 14:56:42.097 INFO  com.kms.katalon.core.util.KeywordUtil    - Entered Email
+2025-09-02 14:56:42.097 DEBUG testcase.RegisterUser                    - 10: pages.UserRegistrationPage.inputEmail(findTestObject("Object Repository/Registration_Page/email_Input_Box"), JsonFileReader.getJsonData(section, "email", filepath))
+2025-09-02 14:56:42.404 INFO  com.kms.katalon.core.util.KeywordUtil    - Entering Email
+2025-09-02 14:56:43.111 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Email has been entered
+2025-09-02 14:56:43.114 DEBUG testcase.RegisterUser                    - 11: logInfo("Entered Telephone")
+2025-09-02 14:56:43.119 INFO  com.kms.katalon.core.util.KeywordUtil    - Entered Telephone
+2025-09-02 14:56:43.123 DEBUG testcase.RegisterUser                    - 12: pages.UserRegistrationPage.inputTelephone(findTestObject("Object Repository/Registration_Page/telephone_Input_Box"), JsonFileReader.getJsonData(section, "telephone", filepath))
+2025-09-02 14:56:43.510 INFO  com.kms.katalon.core.util.KeywordUtil    - Entering Telephone
+2025-09-02 14:56:44.278 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Telephone has been entered
+2025-09-02 14:56:44.287 DEBUG testcase.RegisterUser                    - 13: logInfo("Entered Password")
+2025-09-02 14:56:44.291 INFO  com.kms.katalon.core.util.KeywordUtil    - Entered Password
+2025-09-02 14:56:44.291 DEBUG testcase.RegisterUser                    - 14: pages.UserRegistrationPage.inputPassword(findTestObject("Object Repository/Registration_Page/password_Input_Box"), JsonFileReader.getJsonData(section, "password", filepath))
+2025-09-02 14:56:44.658 INFO  com.kms.katalon.core.util.KeywordUtil    - Entering Password
+2025-09-02 14:56:45.094 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Password has been entered
+2025-09-02 14:56:45.102 DEBUG testcase.RegisterUser                    - 15: logInfo("Entered Confirm Password")
+2025-09-02 14:56:45.106 INFO  com.kms.katalon.core.util.KeywordUtil    - Entered Confirm Password
+2025-09-02 14:56:45.108 DEBUG testcase.RegisterUser                    - 16: pages.UserRegistrationPage.inputConfirmPassword(findTestObject("Object Repository/Registration_Page/confirm_Password_Input_Box"), JsonFileReader.getJsonData(section, "password", filepath))
+2025-09-02 14:56:45.411 INFO  com.kms.katalon.core.util.KeywordUtil    - Entering Confirm Password
+2025-09-02 14:56:45.908 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Confirm Password has been entered
+2025-09-02 14:56:45.916 DEBUG testcase.RegisterUser                    - 17: logInfo("Clicked on Policy Checkbox")
+2025-09-02 14:56:45.921 INFO  com.kms.katalon.core.util.KeywordUtil    - Clicked on Policy Checkbox
+2025-09-02 14:56:45.921 DEBUG testcase.RegisterUser                    - 18: pages.UserRegistrationPage.clickOnPolicyCheckBox(findTestObject("Object Repository/Registration_Page/policy_CheckBox"))
+2025-09-02 14:56:46.259 INFO  com.kms.katalon.core.util.KeywordUtil    - Clicking Policy Checkbox
+2025-09-02 14:56:46.666 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Policy Checkbox has been clicked
+2025-09-02 14:56:46.670 DEBUG testcase.RegisterUser                    - 19: logInfo("Clicked on Continue Button")
+2025-09-02 14:56:46.672 INFO  com.kms.katalon.core.util.KeywordUtil    - Clicked on Continue Button
+2025-09-02 14:56:46.674 DEBUG testcase.RegisterUser                    - 20: pages.UserRegistrationPage.clickOnContinue(findTestObject("Object Repository/Registration_Page/continue_Button"))
+2025-09-02 14:56:47.038 INFO  com.kms.katalon.core.util.KeywordUtil    - Clicking Continue Button
+2025-09-02 14:56:49.815 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Continue Button has been clicked
+2025-09-02 14:56:49.820 DEBUG testcase.RegisterUser                    - 21: logInfo("Verified Account Creation Text")
+2025-09-02 14:56:49.823 INFO  com.kms.katalon.core.util.KeywordUtil    - Verified Account Creation Text
+2025-09-02 14:56:49.825 DEBUG testcase.RegisterUser                    - 22: pages.AccountCreationPage.verifyText(findTestObject("Object Repository/Account_Created_Page/account_Creation_Verification"), JsonFileReader.getJsonData(section, "verify_Text", filepath), "Account Creation")
+2025-09-02 14:56:50.375 INFO  com.kms.katalon.core.util.KeywordUtil    - Verifying Account Creation
+2025-09-02 14:56:50.687 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Account Creation has been verified
+2025-09-02 14:56:50.689 DEBUG testcase.RegisterUser                    - 23: logInfo("Updated login email in JSON file")
+2025-09-02 14:56:50.690 INFO  com.kms.katalon.core.util.KeywordUtil    - Updated login email in JSON file
+2025-09-02 14:56:50.692 DEBUG testcase.RegisterUser                    - 24: JsonFileReader.updateJsonValue("login", "email", JsonFileReader.getJsonData(section, "email", filepath), filepath)
+Updated 'email' in 'login' section to 'alicesmith.24@gmail.com'.
+2025-09-02 14:56:51.204 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/RegisterUser
+2025-09-02 14:56:51.211 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-09-02 14:56:51.211 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/SignIn
+2025-09-02 14:56:51.242 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) filepath = Include/Data Files/login_data.json
+2025-09-02 14:56:51.271 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) section = login
+2025-09-02 14:56:51.273 INFO  c.k.k.core.webui.driver.DriverFactory    - Starting 'Chrome' driver
+2025-09-02 14:56:51.279 INFO  c.k.k.core.webui.driver.DriverFactory    - Action delay is set to 0 milliseconds
+Sep 02, 2025 2:56:52 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 139, returning the closest version; found: 138; Please update to a Selenium version that supports CDP version 139
+2025-09-02 14:56:52.621 INFO  c.k.k.core.webui.driver.DriverFactory    - sessionId = f8575eac8e02536721b77d96bdc9c050
+2025-09-02 14:56:52.623 INFO  c.k.k.core.webui.driver.DriverFactory    - browser = Chrome 139.0.7258.155
+2025-09-02 14:56:52.623 INFO  c.k.k.core.webui.driver.DriverFactory    - platform = Windows 11
+2025-09-02 14:56:52.623 INFO  c.k.k.core.webui.driver.DriverFactory    - seleniumVersion = 4.28.1
+2025-09-02 14:56:52.625 INFO  c.k.k.core.webui.driver.DriverFactory    - proxyInformation = ProxyInformation { proxyOption=NO_PROXY, proxyServerType=HTTP, username=, password=********, proxyServerAddress=, proxyServerPort=0, executionList="", isApplyToDesiredCapabilities=true }
+2025-09-02 14:56:57.789 DEBUG testcase.SignIn                          - 1: logInfo("Hovered over My Account")
+2025-09-02 14:56:57.790 INFO  com.kms.katalon.core.util.KeywordUtil    - Hovered over My Account
+2025-09-02 14:56:57.791 DEBUG testcase.SignIn                          - 2: pages.HomePage.hoverOverMyAccount(findTestObject("Object Repository/Home_Page/my_Account_Button"))
+2025-09-02 14:56:58.104 INFO  com.kms.katalon.core.util.KeywordUtil    - Hovering My Account
+2025-09-02 14:56:58.513 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ My Account has been hovered
+2025-09-02 14:56:58.519 DEBUG testcase.SignIn                          - 3: logInfo("Clicked on Login")
+2025-09-02 14:56:58.522 INFO  com.kms.katalon.core.util.KeywordUtil    - Clicked on Login
+2025-09-02 14:56:58.525 DEBUG testcase.SignIn                          - 4: pages.HomePage.clickOnLogin(findTestObject("Object Repository/Home_Page/login_Button"))
+2025-09-02 14:56:58.803 INFO  com.kms.katalon.core.util.KeywordUtil    - Clicking Login Button
+2025-09-02 14:57:00.586 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Login Button has been clicked
+2025-09-02 14:57:00.594 DEBUG testcase.SignIn                          - 5: logInfo("Entered Email")
+2025-09-02 14:57:00.595 INFO  com.kms.katalon.core.util.KeywordUtil    - Entered Email
+2025-09-02 14:57:00.596 DEBUG testcase.SignIn                          - 6: pages.LoginPage.inputMail(findTestObject("Object Repository/LoginPage/Input_email"), JsonFileReader.getJsonData(section, "email", filepath))
+2025-09-02 14:57:01.055 INFO  com.kms.katalon.core.util.KeywordUtil    - Entering Mail
+2025-09-02 14:57:01.673 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Mail has been entered
+2025-09-02 14:57:01.675 DEBUG testcase.SignIn                          - 7: logInfo("Entered Password")
+2025-09-02 14:57:01.676 INFO  com.kms.katalon.core.util.KeywordUtil    - Entered Password
+2025-09-02 14:57:01.676 DEBUG testcase.SignIn                          - 8: pages.LoginPage.inputPassword(findTestObject("Object Repository/LoginPage/Input_password"), JsonFileReader.getJsonData(section, "password", filepath))
+2025-09-02 14:57:01.947 INFO  com.kms.katalon.core.util.KeywordUtil    - Entering Password
+2025-09-02 14:57:02.309 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Password has been entered
+2025-09-02 14:57:02.311 DEBUG testcase.SignIn                          - 9: logInfo("Clicked on Login Button")
+2025-09-02 14:57:02.312 INFO  com.kms.katalon.core.util.KeywordUtil    - Clicked on Login Button
+2025-09-02 14:57:02.312 DEBUG testcase.SignIn                          - 10: pages.LoginPage.clickOnLoginButton(findTestObject("Object Repository/LoginPage/Login_button"))
+2025-09-02 14:57:02.575 INFO  com.kms.katalon.core.util.KeywordUtil    - Clicking Login button
+2025-09-02 14:57:02.966 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Login button has been clicked
+2025-09-02 14:57:02.970 DEBUG testcase.SignIn                          - 11: logInfo("Verified My Account")
+2025-09-02 14:57:02.970 INFO  com.kms.katalon.core.util.KeywordUtil    - Verified My Account
+2025-09-02 14:57:02.970 DEBUG testcase.SignIn                          - 12: pages.AccountPage.verifyMyAccount(findTestObject("Object Repository/AccountPage/my_Account_verification"), JsonFileReader.getJsonData(section, "verification_text", filepath))
+2025-09-02 14:57:06.123 INFO  com.kms.katalon.core.util.KeywordUtil    - Verifying Verify My account
+2025-09-02 14:57:06.420 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Verify My account has been verified
+2025-09-02 14:57:06.756 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/SignIn
+2025-09-02 14:57:06.760 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-09-02 14:57:06.760 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/ChangePasswordFunctionality
+2025-09-02 14:57:06.781 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) filepath = Include/Data Files/login_data.json
+2025-09-02 14:57:06.809 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) section = changePassword
+2025-09-02 14:57:06.816 INFO  c.k.k.core.webui.driver.DriverFactory    - Starting 'Chrome' driver
+2025-09-02 14:57:06.818 INFO  c.k.k.core.webui.driver.DriverFactory    - Action delay is set to 0 milliseconds
+Sep 02, 2025 2:57:07 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 139, returning the closest version; found: 138; Please update to a Selenium version that supports CDP version 139
+2025-09-02 14:57:08.085 INFO  c.k.k.core.webui.driver.DriverFactory    - sessionId = 72299a15f7131c6a6c40ba74404e2f12
+2025-09-02 14:57:08.086 INFO  c.k.k.core.webui.driver.DriverFactory    - browser = Chrome 139.0.7258.155
+2025-09-02 14:57:08.086 INFO  c.k.k.core.webui.driver.DriverFactory    - platform = Windows 11
+2025-09-02 14:57:08.086 INFO  c.k.k.core.webui.driver.DriverFactory    - seleniumVersion = 4.28.1
+2025-09-02 14:57:08.088 INFO  c.k.k.core.webui.driver.DriverFactory    - proxyInformation = ProxyInformation { proxyOption=NO_PROXY, proxyServerType=HTTP, username=, password=********, proxyServerAddress=, proxyServerPort=0, executionList="", isApplyToDesiredCapabilities=true }
+2025-09-02 14:57:14.907 DEBUG testcase.ChangePasswordFunctionality     - 1: logInfo("Calling SignIn Test Case")
+2025-09-02 14:57:14.908 INFO  com.kms.katalon.core.util.KeywordUtil    - Calling SignIn Test Case
+2025-09-02 14:57:14.909 DEBUG testcase.ChangePasswordFunctionality     - 2: callTestCase(findTestCase("Test Cases/SignIn"), [:])
+2025-09-02 14:57:15.001 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-09-02 14:57:15.002 INFO  c.k.katalon.core.main.TestCaseExecutor   - CALL Test Cases/SignIn
+2025-09-02 14:57:15.014 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) filepath = Include/Data Files/login_data.json
+2025-09-02 14:57:15.015 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) section = login
+2025-09-02 14:57:15.019 DEBUG testcase.SignIn                          - 1: logInfo("Hovered over My Account")
+2025-09-02 14:57:15.020 INFO  com.kms.katalon.core.util.KeywordUtil    - Hovered over My Account
+2025-09-02 14:57:15.021 DEBUG testcase.SignIn                          - 2: pages.HomePage.hoverOverMyAccount(findTestObject("Object Repository/Home_Page/my_Account_Button"))
+2025-09-02 14:57:15.403 INFO  com.kms.katalon.core.util.KeywordUtil    - Hovering My Account
+2025-09-02 14:57:15.831 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ My Account has been hovered
+2025-09-02 14:57:15.832 DEBUG testcase.SignIn                          - 3: logInfo("Clicked on Login")
+2025-09-02 14:57:15.834 INFO  com.kms.katalon.core.util.KeywordUtil    - Clicked on Login
+2025-09-02 14:57:15.836 DEBUG testcase.SignIn                          - 4: pages.HomePage.clickOnLogin(findTestObject("Object Repository/Home_Page/login_Button"))
+2025-09-02 14:57:16.092 INFO  com.kms.katalon.core.util.KeywordUtil    - Clicking Login Button
+2025-09-02 14:57:18.378 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Login Button has been clicked
+2025-09-02 14:57:18.380 DEBUG testcase.SignIn                          - 5: logInfo("Entered Email")
+2025-09-02 14:57:18.384 INFO  com.kms.katalon.core.util.KeywordUtil    - Entered Email
+2025-09-02 14:57:18.387 DEBUG testcase.SignIn                          - 6: pages.LoginPage.inputMail(findTestObject("Object Repository/LoginPage/Input_email"), JsonFileReader.getJsonData(section, "email", filepath))
+2025-09-02 14:57:18.912 INFO  com.kms.katalon.core.util.KeywordUtil    - Entering Mail
+2025-09-02 14:57:19.622 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Mail has been entered
+2025-09-02 14:57:19.626 DEBUG testcase.SignIn                          - 7: logInfo("Entered Password")
+2025-09-02 14:57:19.626 INFO  com.kms.katalon.core.util.KeywordUtil    - Entered Password
+2025-09-02 14:57:19.626 DEBUG testcase.SignIn                          - 8: pages.LoginPage.inputPassword(findTestObject("Object Repository/LoginPage/Input_password"), JsonFileReader.getJsonData(section, "password", filepath))
+2025-09-02 14:57:19.979 INFO  com.kms.katalon.core.util.KeywordUtil    - Entering Password
+2025-09-02 14:57:20.486 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Password has been entered
+2025-09-02 14:57:20.489 DEBUG testcase.SignIn                          - 9: logInfo("Clicked on Login Button")
+2025-09-02 14:57:20.490 INFO  com.kms.katalon.core.util.KeywordUtil    - Clicked on Login Button
+2025-09-02 14:57:20.492 DEBUG testcase.SignIn                          - 10: pages.LoginPage.clickOnLoginButton(findTestObject("Object Repository/LoginPage/Login_button"))
+2025-09-02 14:57:20.773 INFO  com.kms.katalon.core.util.KeywordUtil    - Clicking Login button
+2025-09-02 14:57:21.151 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Login button has been clicked
+2025-09-02 14:57:21.155 DEBUG testcase.SignIn                          - 11: logInfo("Verified My Account")
+2025-09-02 14:57:21.157 INFO  com.kms.katalon.core.util.KeywordUtil    - Verified My Account
+2025-09-02 14:57:21.158 DEBUG testcase.SignIn                          - 12: pages.AccountPage.verifyMyAccount(findTestObject("Object Repository/AccountPage/my_Account_verification"), JsonFileReader.getJsonData(section, "verification_text", filepath))
+2025-09-02 14:57:24.427 INFO  com.kms.katalon.core.util.KeywordUtil    - Verifying Verify My account
+2025-09-02 14:57:24.739 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Verify My account has been verified
+2025-09-02 14:57:24.741 INFO  c.k.katalon.core.main.TestCaseExecutor   - END CALL Test Cases/SignIn
+2025-09-02 14:57:24.741 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-09-02 14:57:24.764 DEBUG testcase.ChangePasswordFunctionality     - 3: logInfo("Clicked on Change Password")
+2025-09-02 14:57:24.768 INFO  com.kms.katalon.core.util.KeywordUtil    - Clicked on Change Password
+2025-09-02 14:57:24.770 DEBUG testcase.ChangePasswordFunctionality     - 4: pages.AccountPage.clickOnChangePassword(findTestObject("Object Repository/AccountPage/changePassword"))
+2025-09-02 14:57:24.821 INFO  com.kms.katalon.core.util.KeywordUtil    - Clicking Change password
+2025-09-02 14:57:26.810 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Change password has been clicked
+2025-09-02 14:57:26.819 DEBUG testcase.ChangePasswordFunctionality     - 5: logInfo("Entered New Password")
+2025-09-02 14:57:26.821 INFO  com.kms.katalon.core.util.KeywordUtil    - Entered New Password
+2025-09-02 14:57:26.822 DEBUG testcase.ChangePasswordFunctionality     - 6: pages.PasswordChangePage.inputChangePassword(findTestObject("Object Repository/ChangePasswordPage/inputPassword"), JsonFileReader.getJsonData(section, "newPassword", filepath))
+2025-09-02 14:57:27.354 INFO  com.kms.katalon.core.util.KeywordUtil    - Entering New Password
+Sep 02, 2025 2:57:34 PM org.openqa.selenium.remote.http.WebSocket$Listener onError
+WARNING: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at java.net.http/jdk.internal.net.http.SocketTube.readAvailable(SocketTube.java:1170)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$InternalReadSubscription.read(SocketTube.java:833)
+	at java.net.http/jdk.internal.net.http.SocketTube$SocketFlowTask.run(SocketTube.java:181)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$SchedulableTask.run(SequentialScheduler.java:230)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:303)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:256)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$InternalReadSubscription.signalReadable(SocketTube.java:774)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$ReadEvent.signalEvent(SocketTube.java:957)
+	at java.net.http/jdk.internal.net.http.SocketTube$SocketFlowEvent.handle(SocketTube.java:253)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.handleEvent(HttpClientImpl.java:984)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.lambda$run$3(HttpClientImpl.java:939)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.run(HttpClientImpl.java:939)
+

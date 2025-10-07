@@ -1,0 +1,59 @@
+2025-09-29 14:34:15.799 INFO  c.k.katalon.core.main.TestSuiteExecutor  - START Test Suites/TestSuite
+2025-09-29 14:34:15.906 INFO  c.k.katalon.core.main.TestSuiteExecutor  - userFullName = abinesh rajendran
+2025-09-29 14:34:15.908 INFO  c.k.katalon.core.main.TestSuiteExecutor  - projectName = Luma
+2025-09-29 14:34:15.909 INFO  c.k.katalon.core.main.TestSuiteExecutor  - hostName = 10835442 - 10.235.153.87
+2025-09-29 14:34:15.909 INFO  c.k.katalon.core.main.TestSuiteExecutor  - os = Windows 11 64bit
+2025-09-29 14:34:15.910 INFO  c.k.katalon.core.main.TestSuiteExecutor  - hostAddress = 10.235.153.87
+2025-09-29 14:34:15.911 INFO  c.k.katalon.core.main.TestSuiteExecutor  - katalonVersion = 10.3.1.0
+2025-09-29 14:34:16.514 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-09-29 14:34:16.514 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/API_Testing/REST_API_Testing/TC04_getAccessToken_Api
+2025-09-29 14:34:16.606 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) jsonFilePath = Include/Data Files/login_data.json
+2025-09-29 14:34:16.628 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) masterSchemaFilePath = Include/Data Files/MasterSchema.json
+2025-09-29 14:34:16.647 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) accessToken = accessTokenUrl
+2025-09-29 14:34:16.666 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) apiBaseUrl = apiBaseUrl
+ℹ️ Skipping browser launch for API test case: TC04_getAccessToken_Api
+2025-09-29 14:34:17.046 DEBUG testcase.TC04_getAccessToken_Api         - 1: logInfo("Reading payload from JSON file...")
+2025-09-29 14:34:17.055 INFO  com.kms.katalon.core.util.KeywordUtil    - Reading payload from JSON file...
+2025-09-29 14:34:17.060 DEBUG testcase.TC04_getAccessToken_Api         - 2: payLoad = JsonOutput.toJson(JsonFileReader.getSectionData("postPayload", jsonFilePath))
+2025-09-29 14:34:17.137 DEBUG testcase.TC04_getAccessToken_Api         - 3: logInfo("Payload prepared: " + payLoad)
+2025-09-29 14:34:17.143 INFO  com.kms.katalon.core.util.KeywordUtil    - Payload prepared: {"username":"emilys","password":"emilyspass","expiresInMins":30}
+2025-09-29 14:34:17.147 DEBUG testcase.TC04_getAccessToken_Api         - 4: logInfo("Sending POST request to /login endpoint...")
+2025-09-29 14:34:17.156 INFO  com.kms.katalon.core.util.KeywordUtil    - Sending POST request to /login endpoint...
+2025-09-29 14:34:17.160 DEBUG testcase.TC04_getAccessToken_Api         - 5: baseUrl = GlobalAccessor.getProfileVariable(accessToken, apiBaseUrl)
+2025-09-29 14:34:17.258 DEBUG testcase.TC04_getAccessToken_Api         - 6: response = ApiKeywords.sendPost(baseUrl, "login", payLoad)
+2025-09-29 14:34:19.333 INFO  c.k.k.core.webservice.common.HarLogger   - HAR: C:\Users\10835442\Katalon Studio\Luma\Reports\20250929_143411\TestSuite\20250929_143411\requests\main\POST_Generic_0.har
+2025-09-29 14:34:19.424 DEBUG testcase.TC04_getAccessToken_Api         - 7: logInfo("Response received with status: " + response.getStatusCode())
+2025-09-29 14:34:19.434 INFO  com.kms.katalon.core.util.KeywordUtil    - Response received with status: 200
+2025-09-29 14:34:19.436 DEBUG testcase.TC04_getAccessToken_Api         - 8: responseBodyContent = response.getResponseBodyContent()
+2025-09-29 14:34:19.438 DEBUG testcase.TC04_getAccessToken_Api         - 9: logInfo("Response body content:
+" + responseBodyContent)
+2025-09-29 14:34:19.439 INFO  com.kms.katalon.core.util.KeywordUtil    - Response body content:
+{"accessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3NTkxMzY2NjIsImV4cCI6MTc1OTEzODQ2Mn0.-fcGLbILxurOC4-D_bPFgLyXGwvZP4Gm3s5hTmLgXxQ","refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3NTkxMzY2NjIsImV4cCI6MTc2MTcyODY2Mn0.diQOWZDjk61KB6O5FoCynTatI4KJf062PNJD8J_okAQ","id":1,"username":"emilys","email":"emily.johnson@x.dummyjson.com","firstName":"Emily","lastName":"Johnson","gender":"female","image":"https://dummyjson.com/icon/emilys/128"}
+2025-09-29 14:34:19.441 DEBUG testcase.TC04_getAccessToken_Api         - 10: logInfo("Validating response against accessTokenSchema...")
+2025-09-29 14:34:19.442 INFO  com.kms.katalon.core.util.KeywordUtil    - Validating response against accessTokenSchema...
+2025-09-29 14:34:19.444 DEBUG testcase.TC04_getAccessToken_Api         - 11: schemaMap = JsonFileReader.getSectionData("accessTokenSchema", masterSchemaFilePath)
+2025-09-29 14:34:19.450 DEBUG testcase.TC04_getAccessToken_Api         - 12: schemaString = JsonOutput.toJson(schemaMap)
+2025-09-29 14:34:19.454 DEBUG testcase.TC04_getAccessToken_Api         - 13: SchemaValidator.validateJsonWithSchema(responseBodyContent, schemaString)
+2025-09-29 14:34:19.617 INFO  com.kms.katalon.core.util.KeywordUtil    - ✅ Schema validation passed.
+2025-09-29 14:34:19.619 DEBUG testcase.TC04_getAccessToken_Api         - 14: logInfo("Schema validation passed.")
+2025-09-29 14:34:19.622 INFO  com.kms.katalon.core.util.KeywordUtil    - Schema validation passed.
+2025-09-29 14:34:19.623 DEBUG testcase.TC04_getAccessToken_Api         - 15: parsedResponse = JsonSlurper().parseText(responseBodyContent)
+2025-09-29 14:34:19.626 DEBUG testcase.TC04_getAccessToken_Api         - 16: jwtToken = accessToken
+2025-09-29 14:34:19.630 DEBUG testcase.TC04_getAccessToken_Api         - 17: logInfo("Extracted JWT Token: " + jwtToken)
+2025-09-29 14:34:19.635 INFO  com.kms.katalon.core.util.KeywordUtil    - Extracted JWT Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3NTkxMzY2NjIsImV4cCI6MTc1OTEzODQ2Mn0.-fcGLbILxurOC4-D_bPFgLyXGwvZP4Gm3s5hTmLgXxQ
+2025-09-29 14:34:19.637 DEBUG testcase.TC04_getAccessToken_Api         - 18: logInfo("Storing JWT token in DummyJson section of JSON file...")
+2025-09-29 14:34:19.640 INFO  com.kms.katalon.core.util.KeywordUtil    - Storing JWT token in DummyJson section of JSON file...
+2025-09-29 14:34:19.642 DEBUG testcase.TC04_getAccessToken_Api         - 19: JsonFileReader.appendToJsonSection(jsonFilePath, "DummyJson", "accessToken", jwtToken)
+2025-09-29 14:34:19.699 INFO  com.kms.katalon.core.util.KeywordUtil    - Saved updated JSON data to file: Include\Data Files\login_data.json
+2025-09-29 14:34:19.702 INFO  com.kms.katalon.core.util.KeywordUtil    - Appended 'accessToken: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3NTkxMzY2NjIsImV4cCI6MTc1OTEzODQ2Mn0.-fcGLbILxurOC4-D_bPFgLyXGwvZP4Gm3s5hTmLgXxQ' to section 'DummyJson' in file 'Include/Data Files/login_data.json'.
+2025-09-29 14:34:19.704 DEBUG testcase.TC04_getAccessToken_Api         - 20: logInfo("Token stored successfully.")
+2025-09-29 14:34:19.706 INFO  com.kms.katalon.core.util.KeywordUtil    - Token stored successfully.
+PASSED
+⚠️ Error while closing browser: Browser is not opened
+Build info: version: '4.28.1', revision: '73f5ad48a2'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: driver.version: unknown
+2025-09-29 14:34:19.817 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/API_Testing/REST_API_Testing/TC04_getAccessToken_Api
+2025-09-29 14:34:19.898 INFO  c.k.katalon.core.main.TestSuiteExecutor  - --------------------
+2025-09-29 14:34:19.898 INFO  c.k.katalon.core.main.TestSuiteExecutor  - END Test Suites/TestSuite
+2025-09-29 14:34:19.898 INFO  c.k.katalon.core.main.TestSuiteExecutor  - ====================

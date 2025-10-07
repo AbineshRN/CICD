@@ -1,0 +1,81 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+TestSuite,Chrome 140.0.7339.81,Contains the test cases of luma,,05-09-2025 12:05:52,05-09-2025 12:10:03,4m - 11.603s,PASSED
+,,,,,,,
+Test Cases/RegisterUser,Chrome 140.0.7339.81,,,05-09-2025 12:05:53,05-09-2025 12:06:49,56.042s,PASSED
+"DATA BINDING - {""(Default) filep..."":""Include/Data Files/login_data.json"",""(Default) regis..."":""registrarionSucccessPage""}",,,,,,,
+Start listener action : openTheBrowser,Chrome 140.0.7339.81,,,05-09-2025 12:05:53,05-09-2025 12:06:11,18.164s,PASSED
+"ExtentManager.initReport(""UserRegistrationReport"")",Chrome 140.0.7339.81,,,05-09-2025 12:06:12,05-09-2025 12:06:14,2.479s,PASSED
+"ExtentManager.createTest(""User Registration Test"")",Chrome 140.0.7339.81,,,05-09-2025 12:06:14,05-09-2025 12:06:14,0.019s,PASSED
+try,Chrome 140.0.7339.81,,,05-09-2025 12:06:14,05-09-2025 12:06:28,14.182s,PASSED
+try,Chrome 140.0.7339.81,,,05-09-2025 12:06:28,05-09-2025 12:06:37,8.499s,PASSED
+try,Chrome 140.0.7339.81,,,05-09-2025 12:06:37,05-09-2025 12:06:46,8.828s,PASSED
+try,Chrome 140.0.7339.81,,,05-09-2025 12:06:46,05-09-2025 12:06:47,0.802s,PASSED
+try,Chrome 140.0.7339.81,,,05-09-2025 12:06:47,05-09-2025 12:06:47,0.249s,PASSED
+ExtentManager.flushReport(),Chrome 140.0.7339.81,,,05-09-2025 12:06:47,05-09-2025 12:06:48,1.193s,PASSED
+Start listener action : closeTheBrowser,Chrome 140.0.7339.81,,,05-09-2025 12:06:48,05-09-2025 12:06:49,0.663s,PASSED
+,,,,,,,
+Test Cases/SignIn,Chrome 140.0.7339.81,,,05-09-2025 12:06:49,05-09-2025 12:07:23,34.039s,PASSED
+"DATA BINDING - {""(Default) secti..."":""loginPage"",""(Default) filep..."":""Include/Data Files/login_data.json""}",,,,,,,
+Start listener action : openTheBrowser,Chrome 140.0.7339.81,,,05-09-2025 12:06:49,05-09-2025 12:07:07,18.498s,PASSED
+"ExtentManager.initReport(""LoginTestReport"")",Chrome 140.0.7339.81,,,05-09-2025 12:07:08,05-09-2025 12:07:08,0.011s,PASSED
+"ExtentManager.createTest(""Login Test"")",Chrome 140.0.7339.81,,,05-09-2025 12:07:08,05-09-2025 12:07:08,0.006s,PASSED
+try,Chrome 140.0.7339.81,,,05-09-2025 12:07:08,05-09-2025 12:07:12,4.861s,PASSED
+try,Chrome 140.0.7339.81,,,05-09-2025 12:07:12,05-09-2025 12:07:21,8.468s,PASSED
+try,Chrome 140.0.7339.81,,,05-09-2025 12:07:21,05-09-2025 12:07:22,0.704s,PASSED
+ExtentManager.flushReport(),Chrome 140.0.7339.81,,,05-09-2025 12:07:22,05-09-2025 12:07:22,0.221s,PASSED
+Start listener action : closeTheBrowser,Chrome 140.0.7339.81,,,05-09-2025 12:07:22,05-09-2025 12:07:23,0.786s,PASSED
+,,,,,,,
+Test Cases/ChangePasswordFunctionality,Chrome 140.0.7339.81,This testcase checks the change password functionality.,,05-09-2025 12:07:23,05-09-2025 12:07:55,32.792s,PASSED
+"DATA BINDING - {""(Default) secti..."":""changePasswordPage"",""(Default) filep..."":""Include/Data Files/login_data.json""}",,,,,,,
+Start listener action : openTheBrowser,Chrome 140.0.7339.81,,,05-09-2025 12:07:23,05-09-2025 12:07:33,10.031s,PASSED
+"ExtentManager.initReport(""ChangePasswordReport"")",Chrome 140.0.7339.81,,,05-09-2025 12:07:33,05-09-2025 12:07:33,0.031s,PASSED
+"ExtentManager.createTest(""Change Password Test"")",Chrome 140.0.7339.81,,,05-09-2025 12:07:33,05-09-2025 12:07:33,0.004s,PASSED
+try,Chrome 140.0.7339.81,,,05-09-2025 12:07:33,05-09-2025 12:07:46,12.903s,PASSED
+try,Chrome 140.0.7339.81,,,05-09-2025 12:07:46,05-09-2025 12:07:49,2.800s,PASSED
+try,Chrome 140.0.7339.81,,,05-09-2025 12:07:49,05-09-2025 12:07:52,3.196s,PASSED
+try,Chrome 140.0.7339.81,,,05-09-2025 12:07:52,05-09-2025 12:07:55,2.862s,PASSED
+try,Chrome 140.0.7339.81,,,05-09-2025 12:07:55,05-09-2025 12:07:55,0.032s,PASSED
+ExtentManager.flushReport(),Chrome 140.0.7339.81,,,05-09-2025 12:07:55,05-09-2025 12:07:55,0.134s,PASSED
+Start listener action : closeTheBrowser,Chrome 140.0.7339.81,,,05-09-2025 12:07:55,05-09-2025 12:07:55,0.410s,PASSED
+,,,,,,,
+Test Cases/AddToCart,Chrome 140.0.7339.81,This testcase checks the functionality of add to cart functionality,,05-09-2025 12:07:55,05-09-2025 12:09:00,1m - 4.107s,PASSED
+"DATA BINDING - {""(Default) categ..."":"" Components"",""(Default) order..."":""OrderPlacedPage"",""(Default) filep..."":""Include/Data Files/login_data.json"",""(Default) cartP..."":""CartPage""}",,,,,,,
+Start listener action : openTheBrowser,Chrome 140.0.7339.81,,,05-09-2025 12:07:56,05-09-2025 12:08:05,9.426s,PASSED
+"ExtentManager.initReport(""OrderPlacementReport"")",Chrome 140.0.7339.81,,,05-09-2025 12:08:06,05-09-2025 12:08:06,0.003s,PASSED
+"ExtentManager.createTest(""Place Order Test"")",Chrome 140.0.7339.81,,,05-09-2025 12:08:06,05-09-2025 12:08:06,0.002s,PASSED
+try,Chrome 140.0.7339.81,,,05-09-2025 12:08:06,05-09-2025 12:08:17,11.655s,PASSED
+try,Chrome 140.0.7339.81,,,05-09-2025 12:08:17,05-09-2025 12:08:24,6.629s,PASSED
+try,Chrome 140.0.7339.81,,,05-09-2025 12:08:24,05-09-2025 12:08:32,8.588s,PASSED
+try,Chrome 140.0.7339.81,,,05-09-2025 12:08:32,05-09-2025 12:08:38,5.742s,PASSED
+try,Chrome 140.0.7339.81,,,05-09-2025 12:08:38,05-09-2025 12:08:42,3.987s,PASSED
+try,Chrome 140.0.7339.81,,,05-09-2025 12:08:42,05-09-2025 12:08:49,6.594s,PASSED
+try,Chrome 140.0.7339.81,,,05-09-2025 12:08:49,05-09-2025 12:08:51,2.579s,PASSED
+try,Chrome 140.0.7339.81,,,05-09-2025 12:08:51,05-09-2025 12:08:55,4.147s,PASSED
+try,Chrome 140.0.7339.81,,,05-09-2025 12:08:55,05-09-2025 12:08:59,3.529s,PASSED
+ExtentManager.flushReport(),Chrome 140.0.7339.81,,,05-09-2025 12:08:59,05-09-2025 12:08:59,0.139s,PASSED
+Start listener action : closeTheBrowser,Chrome 140.0.7339.81,,,05-09-2025 12:08:59,05-09-2025 12:09:00,0.462s,PASSED
+,,,,,,,
+Test Cases/ProductReturn,Chrome 140.0.7339.81,This testcase checks the functionality of product return,,05-09-2025 12:09:00,05-09-2025 12:09:39,39.488s,PASSED
+"DATA BINDING - {""(Default) secti..."":""ProductReturnPage"",""(Default) filep..."":""Include/Data Files/login_data.json""}",,,,,,,
+Start listener action : openTheBrowser,Chrome 140.0.7339.81,,,05-09-2025 12:09:00,05-09-2025 12:09:09,9.302s,PASSED
+"ExtentManager.initReport(""OrderReturnReport"")",Chrome 140.0.7339.81,,,05-09-2025 12:09:09,05-09-2025 12:09:09,0.007s,PASSED
+"ExtentManager.createTest(""Order Return Test"")",Chrome 140.0.7339.81,,,05-09-2025 12:09:09,05-09-2025 12:09:09,0.002s,PASSED
+try,Chrome 140.0.7339.81,,,05-09-2025 12:09:09,05-09-2025 12:09:22,12.400s,PASSED
+try,Chrome 140.0.7339.81,,,05-09-2025 12:09:22,05-09-2025 12:09:25,3.419s,PASSED
+try,Chrome 140.0.7339.81,,,05-09-2025 12:09:25,05-09-2025 12:09:29,3.733s,PASSED
+try,Chrome 140.0.7339.81,,,05-09-2025 12:09:29,05-09-2025 12:09:38,8.763s,PASSED
+try,Chrome 140.0.7339.81,,,05-09-2025 12:09:38,05-09-2025 12:09:38,0.833s,PASSED
+ExtentManager.flushReport(),Chrome 140.0.7339.81,,,05-09-2025 12:09:38,05-09-2025 12:09:39,0.127s,PASSED
+Start listener action : closeTheBrowser,Chrome 140.0.7339.81,,,05-09-2025 12:09:39,05-09-2025 12:09:39,0.472s,PASSED
+,,,,,,,
+Test Cases/CommentPost,Chrome 140.0.7339.81,This testcase checks the functionality of posting a comment in blog section,,05-09-2025 12:09:39,05-09-2025 12:10:03,24.101s,PASSED
+"DATA BINDING - {""(Default) secti..."":""ArticlePage"",""(Default) filep..."":""Include/Data Files/login_data.json""}",,,,,,,
+Start listener action : openTheBrowser,Chrome 140.0.7339.81,,,05-09-2025 12:09:39,05-09-2025 12:09:49,9.435s,PASSED
+"ExtentManager.initReport(""BlogCommentReport"")",Chrome 140.0.7339.81,,,05-09-2025 12:09:49,05-09-2025 12:09:49,0.000s,PASSED
+"ExtentManager.createTest(""Post Comment on Blog Article"")",Chrome 140.0.7339.81,,,05-09-2025 12:09:49,05-09-2025 12:09:49,0.008s,PASSED
+try,Chrome 140.0.7339.81,,,05-09-2025 12:09:49,05-09-2025 12:09:53,3.530s,PASSED
+try,Chrome 140.0.7339.81,,,05-09-2025 12:09:53,05-09-2025 12:09:57,4.273s,PASSED
+try,Chrome 140.0.7339.81,,,05-09-2025 12:09:57,05-09-2025 12:10:02,5.071s,PASSED
+try,Chrome 140.0.7339.81,,,05-09-2025 12:10:02,05-09-2025 12:10:03,0.644s,PASSED
+ExtentManager.flushReport(),Chrome 140.0.7339.81,,,05-09-2025 12:10:03,05-09-2025 12:10:03,0.203s,PASSED
+Start listener action : closeTheBrowser,Chrome 140.0.7339.81,,,05-09-2025 12:10:03,05-09-2025 12:10:03,0.477s,PASSED

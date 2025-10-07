@@ -1,0 +1,578 @@
+2025-09-03 11:33:03.063 INFO  c.k.katalon.core.main.TestSuiteExecutor  - START Test Suites/TestSuite
+2025-09-03 11:33:03.182 INFO  c.k.katalon.core.main.TestSuiteExecutor  - userFullName = Abinesh R
+2025-09-03 11:33:03.184 INFO  c.k.katalon.core.main.TestSuiteExecutor  - projectName = Luma
+2025-09-03 11:33:03.184 INFO  c.k.katalon.core.main.TestSuiteExecutor  - hostName = 10835442 - 10.235.137.0
+2025-09-03 11:33:03.186 INFO  c.k.katalon.core.main.TestSuiteExecutor  - os = Windows 11 64bit
+2025-09-03 11:33:03.186 INFO  c.k.katalon.core.main.TestSuiteExecutor  - hostAddress = 10.235.137.0
+2025-09-03 11:33:03.187 INFO  c.k.katalon.core.main.TestSuiteExecutor  - katalonVersion = 10.3.1.0
+2025-09-03 11:33:03.811 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-09-03 11:33:03.813 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/RegisterUser
+2025-09-03 11:33:03.957 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) filepath = Include/Data Files/login_data.json
+2025-09-03 11:33:03.977 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) registerPage = registerPage
+2025-09-03 11:33:03.997 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) registrationSuccessPage = registrarionSucccessPage
+2025-09-03 11:33:04.407 INFO  c.k.k.core.webui.driver.DriverFactory    - Starting 'Chrome' driver
+2025-09-03 11:33:04.477 INFO  c.k.k.core.webui.driver.DriverFactory    - Action delay is set to 0 milliseconds
+Sep 03, 2025 11:33:07 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 139, returning the closest version; found: 138; Please update to a Selenium version that supports CDP version 139
+2025-09-03 11:33:08.202 INFO  c.k.k.core.webui.driver.DriverFactory    - sessionId = 689db78e4faea0cd3458dd48aa08caa4
+2025-09-03 11:33:08.204 INFO  c.k.k.core.webui.driver.DriverFactory    - browser = Chrome 139.0.7258.155
+2025-09-03 11:33:08.206 INFO  c.k.k.core.webui.driver.DriverFactory    - platform = Windows 11
+2025-09-03 11:33:08.207 INFO  c.k.k.core.webui.driver.DriverFactory    - seleniumVersion = 4.28.1
+2025-09-03 11:33:08.230 INFO  c.k.k.core.webui.driver.DriverFactory    - proxyInformation = ProxyInformation { proxyOption=NO_PROXY, proxyServerType=HTTP, username=, password=********, proxyServerAddress=, proxyServerPort=0, executionList="", isApplyToDesiredCapabilities=true }
+2025-09-03 11:33:13.470 DEBUG testcase.RegisterUser                    - 1: logInfo("Navigating to the registration page")
+2025-09-03 11:33:13.481 INFO  com.kms.katalon.core.util.KeywordUtil    - Navigating to the registration page
+2025-09-03 11:33:13.485 DEBUG testcase.RegisterUser                    - 2: pages.HomePage.hoverOverMyAccount(findTestObject("Object Repository/Home_Page/my_Account_Button"))
+2025-09-03 11:33:14.106 INFO  com.kms.katalon.core.util.KeywordUtil    - Hovering My Account
+2025-09-03 11:33:14.634 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ My Account has been hovered
+2025-09-03 11:33:14.638 DEBUG testcase.RegisterUser                    - 3: pages.HomePage.clickOnRegister(findTestObject("Object Repository/Home_Page/register_Button"))
+2025-09-03 11:33:14.937 INFO  com.kms.katalon.core.util.KeywordUtil    - Clicking Register Button
+2025-09-03 11:33:16.953 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Register Button has been clicked
+2025-09-03 11:33:16.956 DEBUG testcase.RegisterUser                    - 4: logInfo("Navigated to the register page")
+2025-09-03 11:33:16.958 INFO  com.kms.katalon.core.util.KeywordUtil    - Navigated to the register page
+2025-09-03 11:33:16.960 DEBUG testcase.RegisterUser                    - 5: logInfo("Entering the details to register an account")
+2025-09-03 11:33:16.963 INFO  com.kms.katalon.core.util.KeywordUtil    - Entering the details to register an account
+2025-09-03 11:33:16.965 DEBUG testcase.RegisterUser                    - 6: fieldMappings = [["id":"input-firstname", "jsonKey":"firstName"], ["id":"input-lastname", "jsonKey":"lastName"], ["id":"input-email", "jsonKey":"email"], ["id":"input-telephone", "jsonKey":"telephone"], ["id":"input-password", "jsonKey":"password"], ["id":"input-confirm", "jsonKey":"password"]]
+2025-09-03 11:33:16.973 DEBUG testcase.RegisterUser                    - 7: fieldMappings.each({ -> ... })
+2025-09-03 11:33:17.432 INFO  com.kms.katalon.core.util.KeywordUtil    - Entering firstName
+2025-09-03 11:33:18.151 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ firstName has been entered
+2025-09-03 11:33:18.432 INFO  com.kms.katalon.core.util.KeywordUtil    - Entering lastName
+2025-09-03 11:33:19.148 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ lastName has been entered
+2025-09-03 11:33:19.432 INFO  com.kms.katalon.core.util.KeywordUtil    - Entering email
+2025-09-03 11:33:20.157 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ email has been entered
+2025-09-03 11:33:20.431 INFO  com.kms.katalon.core.util.KeywordUtil    - Entering telephone
+2025-09-03 11:33:21.136 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ telephone has been entered
+2025-09-03 11:33:21.417 INFO  com.kms.katalon.core.util.KeywordUtil    - Entering password
+2025-09-03 11:33:22.084 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ password has been entered
+2025-09-03 11:33:22.347 INFO  com.kms.katalon.core.util.KeywordUtil    - Entering password
+2025-09-03 11:33:23.010 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ password has been entered
+2025-09-03 11:33:23.020 DEBUG testcase.RegisterUser                    - 8: logInfo("Details for registering an acccount have been set successfully")
+2025-09-03 11:33:23.024 INFO  com.kms.katalon.core.util.KeywordUtil    - Details for registering an acccount have been set successfully
+2025-09-03 11:33:23.026 DEBUG testcase.RegisterUser                    - 9: logInfo("Navigating to the confirmation page")
+2025-09-03 11:33:23.026 INFO  com.kms.katalon.core.util.KeywordUtil    - Navigating to the confirmation page
+2025-09-03 11:33:23.031 DEBUG testcase.RegisterUser                    - 10: pages.UserRegistrationPage.clickOnPolicyCheckBox(findTestObject("Object Repository/Registration_Page/policy_CheckBox"))
+2025-09-03 11:33:23.315 INFO  com.kms.katalon.core.util.KeywordUtil    - Clicking Policy Checkbox
+2025-09-03 11:33:23.670 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Policy Checkbox has been clicked
+2025-09-03 11:33:23.674 DEBUG testcase.RegisterUser                    - 11: pages.UserRegistrationPage.clickOnContinue(findTestObject("Object Repository/Registration_Page/continue_Button"))
+2025-09-03 11:33:23.946 INFO  com.kms.katalon.core.util.KeywordUtil    - Clicking Continue Button
+2025-09-03 11:33:26.985 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Continue Button has been clicked
+2025-09-03 11:33:26.992 DEBUG testcase.RegisterUser                    - 12: logInfo("Navigated to the confirmation page")
+2025-09-03 11:33:26.996 INFO  com.kms.katalon.core.util.KeywordUtil    - Navigated to the confirmation page
+2025-09-03 11:33:26.998 DEBUG testcase.RegisterUser                    - 13: logInfo("Verifying Account Creation Text")
+2025-09-03 11:33:27.003 INFO  com.kms.katalon.core.util.KeywordUtil    - Verifying Account Creation Text
+2025-09-03 11:33:27.004 DEBUG testcase.RegisterUser                    - 14: pages.AccountCreationPage.verifyText(findTestObject("Object Repository/Account_Created_Page/account_Creation_Verification"), JsonFileReader.getJsonData(registrationSuccessPage, "verify_Text", filepath), "Account Creation")
+2025-09-03 11:33:27.497 INFO  com.kms.katalon.core.util.KeywordUtil    - Verifying Account Creation
+2025-09-03 11:33:27.802 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Account Creation has been verified
+2025-09-03 11:33:27.804 DEBUG testcase.RegisterUser                    - 15: logInfo("Verified Account Creation Text")
+2025-09-03 11:33:27.805 INFO  com.kms.katalon.core.util.KeywordUtil    - Verified Account Creation Text
+2025-09-03 11:33:27.806 DEBUG testcase.RegisterUser                    - 16: logInfo("Updating login details in JSON file")
+2025-09-03 11:33:27.808 INFO  com.kms.katalon.core.util.KeywordUtil    - Updating login details in JSON file
+2025-09-03 11:33:27.810 DEBUG testcase.RegisterUser                    - 17: JsonFileReader.updateJsonValue("login", "email", JsonFileReader.getJsonData(registerPage, "email", filepath), filepath)
+Section 'login' is not a valid object.
+2025-09-03 11:33:27.929 DEBUG testcase.RegisterUser                    - 18: JsonFileReader.updateJsonValue("login", "password", JsonFileReader.getJsonData(registerPage, "password", filepath), filepath)
+Section 'login' is not a valid object.
+2025-09-03 11:33:27.942 DEBUG testcase.RegisterUser                    - 19: logInfo("Updated login details in JSON file")
+2025-09-03 11:33:27.945 INFO  com.kms.katalon.core.util.KeywordUtil    - Updated login details in JSON file
+2025-09-03 11:33:28.441 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/RegisterUser
+2025-09-03 11:33:28.451 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-09-03 11:33:28.453 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/SignIn
+2025-09-03 11:33:28.475 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) filepath = Include/Data Files/login_data.json
+2025-09-03 11:33:28.497 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) section = loginPage
+2025-09-03 11:33:28.507 INFO  c.k.k.core.webui.driver.DriverFactory    - Starting 'Chrome' driver
+2025-09-03 11:33:28.509 INFO  c.k.k.core.webui.driver.DriverFactory    - Action delay is set to 0 milliseconds
+Sep 03, 2025 11:33:30 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 139, returning the closest version; found: 138; Please update to a Selenium version that supports CDP version 139
+2025-09-03 11:33:30.853 INFO  c.k.k.core.webui.driver.DriverFactory    - sessionId = 755017000579e2a68d3c380fa6d13302
+2025-09-03 11:33:30.855 INFO  c.k.k.core.webui.driver.DriverFactory    - browser = Chrome 139.0.7258.155
+2025-09-03 11:33:30.855 INFO  c.k.k.core.webui.driver.DriverFactory    - platform = Windows 11
+2025-09-03 11:33:30.857 INFO  c.k.k.core.webui.driver.DriverFactory    - seleniumVersion = 4.28.1
+2025-09-03 11:33:30.857 INFO  c.k.k.core.webui.driver.DriverFactory    - proxyInformation = ProxyInformation { proxyOption=NO_PROXY, proxyServerType=HTTP, username=, password=********, proxyServerAddress=, proxyServerPort=0, executionList="", isApplyToDesiredCapabilities=true }
+2025-09-03 11:33:35.981 DEBUG testcase.SignIn                          - 1: logInfo("Navigating to the sign in page")
+2025-09-03 11:33:35.985 INFO  com.kms.katalon.core.util.KeywordUtil    - Navigating to the sign in page
+2025-09-03 11:33:35.986 DEBUG testcase.SignIn                          - 2: pages.HomePage.hoverOverMyAccount(findTestObject("Object Repository/Home_Page/my_Account_Button"))
+2025-09-03 11:33:36.311 INFO  com.kms.katalon.core.util.KeywordUtil    - Hovering My Account
+2025-09-03 11:33:36.724 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ My Account has been hovered
+2025-09-03 11:33:36.725 DEBUG testcase.SignIn                          - 3: pages.HomePage.clickOnLogin(findTestObject("Object Repository/Home_Page/login_Button"))
+2025-09-03 11:33:36.995 INFO  com.kms.katalon.core.util.KeywordUtil    - Clicking Login Button
+2025-09-03 11:33:39.008 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Login Button has been clicked
+2025-09-03 11:33:39.010 DEBUG testcase.SignIn                          - 4: logInfo("Navigated to the sign in page")
+2025-09-03 11:33:39.012 INFO  com.kms.katalon.core.util.KeywordUtil    - Navigated to the sign in page
+2025-09-03 11:33:39.013 DEBUG testcase.SignIn                          - 5: logInfo("Signing into the account")
+2025-09-03 11:33:39.014 INFO  com.kms.katalon.core.util.KeywordUtil    - Signing into the account
+2025-09-03 11:33:39.018 DEBUG testcase.SignIn                          - 6: pages.LoginPage.inputMail(findTestObject("Object Repository/LoginPage/Input_email"), JsonFileReader.getJsonData(section, "email", filepath))
+2025-09-03 11:33:39.486 INFO  com.kms.katalon.core.util.KeywordUtil    - Entering Mail
+2025-09-03 11:33:40.144 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Mail has been entered
+2025-09-03 11:33:40.147 DEBUG testcase.SignIn                          - 7: pages.LoginPage.inputPassword(findTestObject("Object Repository/LoginPage/Input_password"), JsonFileReader.getJsonData(section, "password", filepath))
+2025-09-03 11:33:40.432 INFO  com.kms.katalon.core.util.KeywordUtil    - Entering Password
+2025-09-03 11:33:40.844 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Password has been entered
+2025-09-03 11:33:40.848 DEBUG testcase.SignIn                          - 8: pages.LoginPage.clickOnLoginButton(findTestObject("Object Repository/LoginPage/Login_button"))
+2025-09-03 11:33:41.132 INFO  com.kms.katalon.core.util.KeywordUtil    - Clicking Login button
+2025-09-03 11:33:44.257 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Login button has been clicked
+2025-09-03 11:33:44.260 DEBUG testcase.SignIn                          - 9: logInfo("Signed into the account")
+2025-09-03 11:33:44.261 INFO  com.kms.katalon.core.util.KeywordUtil    - Signed into the account
+2025-09-03 11:33:44.262 DEBUG testcase.SignIn                          - 10: logInfo("Verifying My Account")
+2025-09-03 11:33:44.264 INFO  com.kms.katalon.core.util.KeywordUtil    - Verifying My Account
+2025-09-03 11:33:44.266 DEBUG testcase.SignIn                          - 11: pages.AccountPage.verifyMyAccount(findTestObject("Object Repository/AccountPage/my_Account_verification"), JsonFileReader.getJsonData(section, "verification_text", filepath))
+2025-09-03 11:33:44.653 INFO  com.kms.katalon.core.util.KeywordUtil    - Verifying Verify My account
+2025-09-03 11:33:44.925 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Verify My account has been verified
+2025-09-03 11:33:44.927 DEBUG testcase.SignIn                          - 12: logInfo("Verified My Account")
+2025-09-03 11:33:44.928 INFO  com.kms.katalon.core.util.KeywordUtil    - Verified My Account
+2025-09-03 11:33:45.302 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/SignIn
+2025-09-03 11:33:45.307 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-09-03 11:33:45.307 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/ChangePasswordFunctionality
+2025-09-03 11:33:45.330 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) filepath = Include/Data Files/login_data.json
+2025-09-03 11:33:45.360 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) section = changePasswordPage
+2025-09-03 11:33:45.368 INFO  c.k.k.core.webui.driver.DriverFactory    - Starting 'Chrome' driver
+2025-09-03 11:33:45.371 INFO  c.k.k.core.webui.driver.DriverFactory    - Action delay is set to 0 milliseconds
+Sep 03, 2025 11:33:47 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 139, returning the closest version; found: 138; Please update to a Selenium version that supports CDP version 139
+2025-09-03 11:33:47.724 INFO  c.k.k.core.webui.driver.DriverFactory    - sessionId = a2114e325596f93ab8f900f622420097
+2025-09-03 11:33:47.724 INFO  c.k.k.core.webui.driver.DriverFactory    - browser = Chrome 139.0.7258.155
+2025-09-03 11:33:47.724 INFO  c.k.k.core.webui.driver.DriverFactory    - platform = Windows 11
+2025-09-03 11:33:47.726 INFO  c.k.k.core.webui.driver.DriverFactory    - seleniumVersion = 4.28.1
+2025-09-03 11:33:47.726 INFO  c.k.k.core.webui.driver.DriverFactory    - proxyInformation = ProxyInformation { proxyOption=NO_PROXY, proxyServerType=HTTP, username=, password=********, proxyServerAddress=, proxyServerPort=0, executionList="", isApplyToDesiredCapabilities=true }
+2025-09-03 11:33:53.913 DEBUG testcase.ChangePasswordFunctionality     - 1: logInfo("Signing into the account")
+2025-09-03 11:33:53.916 INFO  com.kms.katalon.core.util.KeywordUtil    - Signing into the account
+2025-09-03 11:33:53.918 DEBUG testcase.ChangePasswordFunctionality     - 2: callTestCase(findTestCase("Test Cases/SignIn"), [:])
+2025-09-03 11:33:54.009 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-09-03 11:33:54.009 INFO  c.k.katalon.core.main.TestCaseExecutor   - CALL Test Cases/SignIn
+2025-09-03 11:33:54.026 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) filepath = Include/Data Files/login_data.json
+2025-09-03 11:33:54.027 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) section = loginPage
+2025-09-03 11:33:54.033 DEBUG testcase.SignIn                          - 1: logInfo("Navigating to the sign in page")
+2025-09-03 11:33:54.036 INFO  com.kms.katalon.core.util.KeywordUtil    - Navigating to the sign in page
+2025-09-03 11:33:54.037 DEBUG testcase.SignIn                          - 2: pages.HomePage.hoverOverMyAccount(findTestObject("Object Repository/Home_Page/my_Account_Button"))
+2025-09-03 11:33:54.373 INFO  com.kms.katalon.core.util.KeywordUtil    - Hovering My Account
+2025-09-03 11:33:54.802 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ My Account has been hovered
+2025-09-03 11:33:54.803 DEBUG testcase.SignIn                          - 3: pages.HomePage.clickOnLogin(findTestObject("Object Repository/Home_Page/login_Button"))
+2025-09-03 11:33:55.055 INFO  com.kms.katalon.core.util.KeywordUtil    - Clicking Login Button
+2025-09-03 11:33:56.994 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Login Button has been clicked
+2025-09-03 11:33:56.996 DEBUG testcase.SignIn                          - 4: logInfo("Navigated to the sign in page")
+2025-09-03 11:33:56.997 INFO  com.kms.katalon.core.util.KeywordUtil    - Navigated to the sign in page
+2025-09-03 11:33:57.000 DEBUG testcase.SignIn                          - 5: logInfo("Signing into the account")
+2025-09-03 11:33:57.002 INFO  com.kms.katalon.core.util.KeywordUtil    - Signing into the account
+2025-09-03 11:33:57.003 DEBUG testcase.SignIn                          - 6: pages.LoginPage.inputMail(findTestObject("Object Repository/LoginPage/Input_email"), JsonFileReader.getJsonData(section, "email", filepath))
+2025-09-03 11:33:57.486 INFO  com.kms.katalon.core.util.KeywordUtil    - Entering Mail
+2025-09-03 11:33:58.126 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Mail has been entered
+2025-09-03 11:33:58.127 DEBUG testcase.SignIn                          - 7: pages.LoginPage.inputPassword(findTestObject("Object Repository/LoginPage/Input_password"), JsonFileReader.getJsonData(section, "password", filepath))
+2025-09-03 11:33:58.389 INFO  com.kms.katalon.core.util.KeywordUtil    - Entering Password
+2025-09-03 11:33:58.833 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Password has been entered
+2025-09-03 11:33:58.836 DEBUG testcase.SignIn                          - 8: pages.LoginPage.clickOnLoginButton(findTestObject("Object Repository/LoginPage/Login_button"))
+2025-09-03 11:33:59.113 INFO  com.kms.katalon.core.util.KeywordUtil    - Clicking Login button
+2025-09-03 11:34:02.413 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Login button has been clicked
+2025-09-03 11:34:02.416 DEBUG testcase.SignIn                          - 9: logInfo("Signed into the account")
+2025-09-03 11:34:02.419 INFO  com.kms.katalon.core.util.KeywordUtil    - Signed into the account
+2025-09-03 11:34:02.420 DEBUG testcase.SignIn                          - 10: logInfo("Verifying My Account")
+2025-09-03 11:34:02.422 INFO  com.kms.katalon.core.util.KeywordUtil    - Verifying My Account
+2025-09-03 11:34:02.423 DEBUG testcase.SignIn                          - 11: pages.AccountPage.verifyMyAccount(findTestObject("Object Repository/AccountPage/my_Account_verification"), JsonFileReader.getJsonData(section, "verification_text", filepath))
+2025-09-03 11:34:02.806 INFO  com.kms.katalon.core.util.KeywordUtil    - Verifying Verify My account
+2025-09-03 11:34:03.101 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Verify My account has been verified
+2025-09-03 11:34:03.102 DEBUG testcase.SignIn                          - 12: logInfo("Verified My Account")
+2025-09-03 11:34:03.103 INFO  com.kms.katalon.core.util.KeywordUtil    - Verified My Account
+2025-09-03 11:34:03.104 INFO  c.k.katalon.core.main.TestCaseExecutor   - END CALL Test Cases/SignIn
+2025-09-03 11:34:03.104 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-09-03 11:34:03.121 DEBUG testcase.ChangePasswordFunctionality     - 3: logInfo("Signed into the account")
+2025-09-03 11:34:03.122 INFO  com.kms.katalon.core.util.KeywordUtil    - Signed into the account
+2025-09-03 11:34:03.124 DEBUG testcase.ChangePasswordFunctionality     - 4: logInfo("Navigating to change password page")
+2025-09-03 11:34:03.125 INFO  com.kms.katalon.core.util.KeywordUtil    - Navigating to change password page
+2025-09-03 11:34:03.126 DEBUG testcase.ChangePasswordFunctionality     - 5: pages.AccountPage.clickOnChangePassword(findTestObject("Object Repository/AccountPage/changePassword"))
+2025-09-03 11:34:03.169 INFO  com.kms.katalon.core.util.KeywordUtil    - Clicking Change password
+2025-09-03 11:34:05.170 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Change password has been clicked
+2025-09-03 11:34:05.172 DEBUG testcase.ChangePasswordFunctionality     - 6: logInfo("Navigated to change password page")
+2025-09-03 11:34:05.173 INFO  com.kms.katalon.core.util.KeywordUtil    - Navigated to change password page
+2025-09-03 11:34:05.173 DEBUG testcase.ChangePasswordFunctionality     - 7: logInfo("Setting up a new password")
+2025-09-03 11:34:05.177 INFO  com.kms.katalon.core.util.KeywordUtil    - Setting up a new password
+2025-09-03 11:34:05.177 DEBUG testcase.ChangePasswordFunctionality     - 8: pages.PasswordChangePage.inputChangePassword(findTestObject("Object Repository/ChangePasswordPage/inputPassword"), JsonFileReader.getJsonData(section, "password", filepath))
+2025-09-03 11:34:05.678 INFO  com.kms.katalon.core.util.KeywordUtil    - Entering New Password
+2025-09-03 11:34:06.094 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ New Password has been entered
+2025-09-03 11:34:06.096 DEBUG testcase.ChangePasswordFunctionality     - 9: pages.PasswordChangePage.inputConfirmPassword(findTestObject("Object Repository/ChangePasswordPage/inputConfirmPassword"), JsonFileReader.getJsonData(section, "confirmPassword", filepath))
+2025-09-03 11:34:06.367 INFO  com.kms.katalon.core.util.KeywordUtil    - Entering Confirm Password
+2025-09-03 11:34:06.835 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Confirm Password has been entered
+2025-09-03 11:34:06.840 DEBUG testcase.ChangePasswordFunctionality     - 10: pages.PasswordChangePage.clickOnSubmit(findTestObject("Object Repository/ChangePasswordPage/submitButton"))
+2025-09-03 11:34:07.154 INFO  com.kms.katalon.core.util.KeywordUtil    - Clicking Submit button
+2025-09-03 11:34:07.516 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Submit button has been clicked
+2025-09-03 11:34:07.518 DEBUG testcase.ChangePasswordFunctionality     - 11: logInfo("New password has been set successfully")
+2025-09-03 11:34:07.520 INFO  com.kms.katalon.core.util.KeywordUtil    - New password has been set successfully
+2025-09-03 11:34:07.523 DEBUG testcase.ChangePasswordFunctionality     - 12: logInfo("Verifying Password Change Text")
+2025-09-03 11:34:07.525 INFO  com.kms.katalon.core.util.KeywordUtil    - Verifying Password Change Text
+2025-09-03 11:34:07.525 DEBUG testcase.ChangePasswordFunctionality     - 13: pages.AccountPage.verifyPasswordChange(findTestObject("Object Repository/AccountPage/passwordChangedText"), JsonFileReader.getJsonData(section, "verifyText", filepath))
+2025-09-03 11:34:09.925 INFO  com.kms.katalon.core.util.KeywordUtil    - Verifying Verify password change
+2025-09-03 11:34:10.174 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Verify password change has been verified
+2025-09-03 11:34:10.176 DEBUG testcase.ChangePasswordFunctionality     - 14: logInfo("Verified Password Change Text")
+2025-09-03 11:34:10.177 INFO  com.kms.katalon.core.util.KeywordUtil    - Verified Password Change Text
+2025-09-03 11:34:10.179 DEBUG testcase.ChangePasswordFunctionality     - 15: logInfo("Updating login password in JSON file")
+2025-09-03 11:34:10.181 INFO  com.kms.katalon.core.util.KeywordUtil    - Updating login password in JSON file
+2025-09-03 11:34:10.183 DEBUG testcase.ChangePasswordFunctionality     - 16: JsonFileReader.updateJsonValue("login", "password", JsonFileReader.getJsonData(section, "password", filepath), filepath)
+Section 'login' is not a valid object.
+2025-09-03 11:34:10.190 DEBUG testcase.ChangePasswordFunctionality     - 17: logInfo("Updated login password in JSON file")
+2025-09-03 11:34:10.192 INFO  com.kms.katalon.core.util.KeywordUtil    - Updated login password in JSON file
+2025-09-03 11:34:10.564 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/ChangePasswordFunctionality
+2025-09-03 11:34:10.571 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-09-03 11:34:10.571 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/AddToCart
+2025-09-03 11:34:10.592 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) filepath = Include/Data Files/login_data.json
+2025-09-03 11:34:10.613 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) cartPage = CartPage
+2025-09-03 11:34:10.635 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) orderPlacedPage = OrderPlacedPage
+2025-09-03 11:34:10.638 INFO  c.k.k.core.webui.driver.DriverFactory    - Starting 'Chrome' driver
+2025-09-03 11:34:10.640 INFO  c.k.k.core.webui.driver.DriverFactory    - Action delay is set to 0 milliseconds
+Sep 03, 2025 11:34:12 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 139, returning the closest version; found: 138; Please update to a Selenium version that supports CDP version 139
+2025-09-03 11:34:12.850 INFO  c.k.k.core.webui.driver.DriverFactory    - sessionId = 4db92e4a55d141da0b00b82886fcfd21
+2025-09-03 11:34:12.850 INFO  c.k.k.core.webui.driver.DriverFactory    - browser = Chrome 139.0.7258.155
+2025-09-03 11:34:12.850 INFO  c.k.k.core.webui.driver.DriverFactory    - platform = Windows 11
+2025-09-03 11:34:12.850 INFO  c.k.k.core.webui.driver.DriverFactory    - seleniumVersion = 4.28.1
+2025-09-03 11:34:12.850 INFO  c.k.k.core.webui.driver.DriverFactory    - proxyInformation = ProxyInformation { proxyOption=NO_PROXY, proxyServerType=HTTP, username=, password=********, proxyServerAddress=, proxyServerPort=0, executionList="", isApplyToDesiredCapabilities=true }
+2025-09-03 11:34:19.254 DEBUG testcase.AddToCart                       - 1: logInfo("Signing into the account")
+2025-09-03 11:34:19.255 INFO  com.kms.katalon.core.util.KeywordUtil    - Signing into the account
+2025-09-03 11:34:19.256 DEBUG testcase.AddToCart                       - 2: callTestCase(findTestCase("Test Cases/SignIn"), [:])
+2025-09-03 11:34:19.327 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-09-03 11:34:19.327 INFO  c.k.katalon.core.main.TestCaseExecutor   - CALL Test Cases/SignIn
+2025-09-03 11:34:19.357 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) filepath = Include/Data Files/login_data.json
+2025-09-03 11:34:19.358 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) section = loginPage
+2025-09-03 11:34:19.360 DEBUG testcase.SignIn                          - 1: logInfo("Navigating to the sign in page")
+2025-09-03 11:34:19.361 INFO  com.kms.katalon.core.util.KeywordUtil    - Navigating to the sign in page
+2025-09-03 11:34:19.362 DEBUG testcase.SignIn                          - 2: pages.HomePage.hoverOverMyAccount(findTestObject("Object Repository/Home_Page/my_Account_Button"))
+2025-09-03 11:34:19.698 INFO  com.kms.katalon.core.util.KeywordUtil    - Hovering My Account
+2025-09-03 11:34:20.133 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ My Account has been hovered
+2025-09-03 11:34:20.135 DEBUG testcase.SignIn                          - 3: pages.HomePage.clickOnLogin(findTestObject("Object Repository/Home_Page/login_Button"))
+2025-09-03 11:34:20.459 INFO  com.kms.katalon.core.util.KeywordUtil    - Clicking Login Button
+2025-09-03 11:34:22.819 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Login Button has been clicked
+2025-09-03 11:34:22.821 DEBUG testcase.SignIn                          - 4: logInfo("Navigated to the sign in page")
+2025-09-03 11:34:22.822 INFO  com.kms.katalon.core.util.KeywordUtil    - Navigated to the sign in page
+2025-09-03 11:34:22.824 DEBUG testcase.SignIn                          - 5: logInfo("Signing into the account")
+2025-09-03 11:34:22.826 INFO  com.kms.katalon.core.util.KeywordUtil    - Signing into the account
+2025-09-03 11:34:22.828 DEBUG testcase.SignIn                          - 6: pages.LoginPage.inputMail(findTestObject("Object Repository/LoginPage/Input_email"), JsonFileReader.getJsonData(section, "email", filepath))
+2025-09-03 11:34:23.287 INFO  com.kms.katalon.core.util.KeywordUtil    - Entering Mail
+2025-09-03 11:34:23.955 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Mail has been entered
+2025-09-03 11:34:23.956 DEBUG testcase.SignIn                          - 7: pages.LoginPage.inputPassword(findTestObject("Object Repository/LoginPage/Input_password"), JsonFileReader.getJsonData(section, "password", filepath))
+2025-09-03 11:34:24.223 INFO  com.kms.katalon.core.util.KeywordUtil    - Entering Password
+2025-09-03 11:34:24.608 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Password has been entered
+2025-09-03 11:34:24.608 DEBUG testcase.SignIn                          - 8: pages.LoginPage.clickOnLoginButton(findTestObject("Object Repository/LoginPage/Login_button"))
+2025-09-03 11:34:24.880 INFO  com.kms.katalon.core.util.KeywordUtil    - Clicking Login button
+2025-09-03 11:34:26.456 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Login button has been clicked
+2025-09-03 11:34:26.458 DEBUG testcase.SignIn                          - 9: logInfo("Signed into the account")
+2025-09-03 11:34:26.458 INFO  com.kms.katalon.core.util.KeywordUtil    - Signed into the account
+2025-09-03 11:34:26.458 DEBUG testcase.SignIn                          - 10: logInfo("Verifying My Account")
+2025-09-03 11:34:26.458 INFO  com.kms.katalon.core.util.KeywordUtil    - Verifying My Account
+2025-09-03 11:34:26.458 DEBUG testcase.SignIn                          - 11: pages.AccountPage.verifyMyAccount(findTestObject("Object Repository/AccountPage/my_Account_verification"), JsonFileReader.getJsonData(section, "verification_text", filepath))
+Sep 03, 2025 11:34:29 AM org.openqa.selenium.remote.http.WebSocket$Listener onError
+WARNING: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at java.net.http/jdk.internal.net.http.SocketTube.readAvailable(SocketTube.java:1170)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$InternalReadSubscription.read(SocketTube.java:833)
+	at java.net.http/jdk.internal.net.http.SocketTube$SocketFlowTask.run(SocketTube.java:181)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$SchedulableTask.run(SequentialScheduler.java:230)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:303)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:256)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$InternalReadSubscription.signalReadable(SocketTube.java:774)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$ReadEvent.signalEvent(SocketTube.java:957)
+	at java.net.http/jdk.internal.net.http.SocketTube$SocketFlowEvent.handle(SocketTube.java:253)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.handleEvent(HttpClientImpl.java:984)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.lambda$run$3(HttpClientImpl.java:939)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.run(HttpClientImpl.java:939)
+
+2025-09-03 11:34:30.149 WARN  c.k.k.c.w.h.s.WebUIScreenCaptor          - Cannot take screenshot
+2025-09-03 11:34:30.154 ERROR c.k.k.core.keyword.internal.KeywordMain  - ❌ Unable to wait for object 'Object Repository/AccountPage/my_Account_verification' to be visible (Root cause: com.kms.katalon.core.exception.StepFailedException: Unable to wait for object 'Object Repository/AccountPage/my_Account_verification' to be visible
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:175)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:49)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeywordUntilTimeout(WebUIKeywordMain.groovy:152)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain$runKeywordUntilTimeout.call(Unknown Source)
+	at com.kms.katalon.core.webui.keyword.builtin.WaitForElementVisibleKeyword.waitForElementVisible(WaitForElementVisibleKeyword.groovy:101)
+	at com.kms.katalon.core.webui.keyword.builtin.WaitForElementVisibleKeyword.execute(WaitForElementVisibleKeyword.groovy:69)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:79)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.waitForElementVisible(WebUiBuiltInKeywords.groovy:514)
+	at utils.Helper.verifyText(Helper.groovy:121)
+	at pages.AccountPage.verifyMyAccount(AccountPage.groovy:27)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at com.kms.katalon.core.main.CustomKeywordDelegatingMetaClass.invokeStaticMethod(CustomKeywordDelegatingMetaClass.java:55)
+	at SignIn.run(SignIn:43)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseMain.runTestCase(TestCaseMain.java:151)
+	at com.kms.katalon.core.keyword.builtin.CallTestCaseKeyword$_callTestCase_closure1.doCall(CallTestCaseKeyword.groovy:59)
+	at com.kms.katalon.core.keyword.builtin.CallTestCaseKeyword$_callTestCase_closure1.call(CallTestCaseKeyword.groovy)
+	at com.kms.katalon.core.keyword.internal.KeywordMain.runKeyword(KeywordMain.groovy:75)
+	at com.kms.katalon.core.keyword.builtin.CallTestCaseKeyword.callTestCase(CallTestCaseKeyword.groovy:81)
+	at com.kms.katalon.core.keyword.builtin.CallTestCaseKeyword.execute(CallTestCaseKeyword.groovy:44)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:79)
+	at com.kms.katalon.core.keyword.BuiltinKeywords.callTestCase(BuiltinKeywords.groovy:326)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at AddToCart.run(AddToCart:24)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1756879378879.run(TempTestSuite1756879378879.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+Caused by: org.openqa.selenium.NoSuchSessionException: invalid session id
+Build info: version: '4.28.1', revision: '73f5ad48a2'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: com.kms.katalon.selenium.driver.CChromeDriver
+Command: [4db92e4a55d141da0b00b82886fcfd21, findElements {using=xpath, value=//h2[(text() = 'My Account' or . = 'My Account')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.155, chrome: {chromedriverVersion: 139.0.7258.66 (a62d32994769..., userDataDir: C:\Users\10835442\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60138}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60138/devtoo..., se:cdpVersion: 139.0.7258.155, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: {alert: ignore, beforeUnload: ignore, confirm: ignore, default: ignore, file: ignore, prompt: ignore}, webSocketUrl: ws://localhost:49152/sessio..., webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4db92e4a55d141da0b00b82886fcfd21
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElements(ElementLocation.java:182)
+	at org.openqa.selenium.remote.ElementLocation.findElements(ElementLocation.java:103)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:381)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:375)
+	at jdk.internal.reflect.GeneratedMethodAccessor16.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at org.openqa.selenium.support.decorators.WebDriverDecorator.call(WebDriverDecorator.java:315)
+	at org.openqa.selenium.support.decorators.DefaultDecorated.call(DefaultDecorated.java:48)
+	at org.openqa.selenium.support.decorators.WebDriverDecorator.lambda$createProxyFactory$3(WebDriverDecorator.java:405)
+	at org.openqa.selenium.remote.RemoteWebDriver$ByteBuddy$jFNW38N5.findElements(Unknown Source)
+	at com.kms.katalon.core.webui.model.WebUiElementFinder.findElementByNormalMethods(WebUiElementFinder.java:185)
+	at com.kms.katalon.core.webui.model.WebUiElementFinder.findElementsBySelectedMethod(WebUiElementFinder.java:92)
+	at com.kms.katalon.core.webui.model.WebUiElementFinder.findElementsBySelectedMethod(WebUiElementFinder.java:75)
+	at com.kms.katalon.core.webui.model.WebUiElementFinder.findElementsBySelectedMethod(WebUiElementFinder.java:70)
+	at com.kms.katalon.core.webui.model.WebUiElementFinder.findElement(WebUiElementFinder.java:44)
+	at com.kms.katalon.core.webui.model.WebUiElementFinderWithTimeout.basicFindElement(WebUiElementFinderWithTimeout.java:50)
+	at com.kms.katalon.core.webui.model.WebUiElementFinderWithTimeout.lambda$0(WebUiElementFinderWithTimeout.java:29)
+	at com.kms.katalon.core.webui.model.SeleniumActionRetryController.performAction(SeleniumActionRetryController.java:109)
+	at com.kms.katalon.core.webui.model.SeleniumActionRetryController.performAction(SeleniumActionRetryController.java:96)
+	at com.kms.katalon.core.webui.model.WebUiElementFinderWithTimeout.findElement(WebUiElementFinderWithTimeout.java:28)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIAbstractKeyword$_findWebElement_closure2.doCall(WebUIAbstractKeyword.groovy:104)
+	at jdk.internal.reflect.GeneratedMethodAccessor14.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at jdk.proxy2/jdk.proxy2.$Proxy49.execute(Unknown Source)
+	at com.kms.katalon.core.webui.model.SeleniumActionRetryController.performAction(SeleniumActionRetryController.java:109)
+	at com.kms.katalon.core.webui.model.SeleniumActionRetryController.performAction(SeleniumActionRetryController.java:96)
+	at com.kms.katalon.core.webui.model.SeleniumActionRetryController.retry(SeleniumActionRetryController.java:62)
+	at com.kms.katalon.core.webui.model.SeleniumActionRetryController.retry(SeleniumActionRetryController.java:57)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIAbstractKeyword.findWebElement(WebUIAbstractKeyword.groovy:101)
+	at jdk.internal.reflect.GeneratedMethodAccessor24.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at com.kms.katalon.core.webui.keyword.builtin.WaitForElementVisibleKeyword$_waitForElementVisible_closure1.doCall(WaitForElementVisibleKeyword.groovy:82)
+	at jdk.internal.reflect.GeneratedMethodAccessor23.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at jdk.proxy2/jdk.proxy2.$Proxy49.execute(Unknown Source)
+	at com.kms.katalon.core.webui.model.SeleniumActionRetryController.performAction(SeleniumActionRetryController.java:109)
+	at com.kms.katalon.core.webui.model.SeleniumActionRetryController.performAction(SeleniumActionRetryController.java:96)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain$_runKeywordUntilTimeout_closure2.doCall(WebUIKeywordMain.groovy:155)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain$_runKeywordUntilTimeout_closure2.call(WebUIKeywordMain.groovy)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:41)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeywordUntilTimeout(WebUIKeywordMain.groovy:152)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain$runKeywordUntilTimeout.call(Unknown Source)
+	at com.kms.katalon.core.webui.keyword.builtin.WaitForElementVisibleKeyword.waitForElementVisible(WaitForElementVisibleKeyword.groovy:101)
+	at com.kms.katalon.core.webui.keyword.builtin.WaitForElementVisibleKeyword.execute(WaitForElementVisibleKeyword.groovy:69)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:79)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.waitForElementVisible(WebUiBuiltInKeywords.groovy:514)
+	at utils.Helper.verifyText(Helper.groovy:121)
+	at pages.AccountPage.verifyMyAccount(AccountPage.groovy:27)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at com.kms.katalon.core.main.CustomKeywordDelegatingMetaClass.invokeStaticMethod(CustomKeywordDelegatingMetaClass.java:55)
+	at Script1756104045199.run(Script1756104045199.groovy:43)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseMain.runTestCase(TestCaseMain.java:151)
+	at com.kms.katalon.core.keyword.builtin.CallTestCaseKeyword$_callTestCase_closure1.doCall(CallTestCaseKeyword.groovy:59)
+	at com.kms.katalon.core.keyword.builtin.CallTestCaseKeyword$_callTestCase_closure1.call(CallTestCaseKeyword.groovy)
+	at com.kms.katalon.core.keyword.internal.KeywordMain.runKeyword(KeywordMain.groovy:75)
+	at com.kms.katalon.core.keyword.builtin.CallTestCaseKeyword.callTestCase(CallTestCaseKeyword.groovy:81)
+	at com.kms.katalon.core.keyword.builtin.CallTestCaseKeyword.execute(CallTestCaseKeyword.groovy:44)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:79)
+	at com.kms.katalon.core.keyword.BuiltinKeywords.callTestCase(BuiltinKeywords.groovy:326)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at Script1756271117284.run(Script1756271117284.groovy:24)
+	... 15 more
+)
+2025-09-03 11:34:30.167 ERROR com.kms.katalon.core.util.KeywordUtil    - ❌ Fail to verify onVerify My account
+2025-09-03 11:34:30.167 ERROR k.k.c.m.CustomKeywordDelegatingMetaClass - ❌ com.kms.katalon.core.exception.StepFailedException: Fail to verify onVerify My account
+2025-09-03 11:34:30.169 DEBUG testcase.SignIn                          - 12: logInfo("Verified My Account")
+2025-09-03 11:34:30.172 INFO  com.kms.katalon.core.util.KeywordUtil    - Verified My Account
+2025-09-03 11:34:30.173 ERROR c.k.katalon.core.main.TestCaseExecutor   - ❌ Test Cases/SignIn FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Fail to verify onVerify My account
+	at com.kms.katalon.core.util.KeywordUtil.markFailed(KeywordUtil.java:19)
+	at utils.Helper.verifyText(Helper.groovy:128)
+	at pages.AccountPage.verifyMyAccount(AccountPage.groovy:27)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at com.kms.katalon.core.main.CustomKeywordDelegatingMetaClass.invokeStaticMethod(CustomKeywordDelegatingMetaClass.java:55)
+	at SignIn.run(SignIn:43)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseMain.runTestCase(TestCaseMain.java:151)
+	at com.kms.katalon.core.keyword.builtin.CallTestCaseKeyword$_callTestCase_closure1.doCall(CallTestCaseKeyword.groovy:59)
+	at com.kms.katalon.core.keyword.builtin.CallTestCaseKeyword$_callTestCase_closure1.call(CallTestCaseKeyword.groovy)
+	at com.kms.katalon.core.keyword.internal.KeywordMain.runKeyword(KeywordMain.groovy:75)
+	at com.kms.katalon.core.keyword.builtin.CallTestCaseKeyword.callTestCase(CallTestCaseKeyword.groovy:81)
+	at com.kms.katalon.core.keyword.builtin.CallTestCaseKeyword.execute(CallTestCaseKeyword.groovy:44)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:79)
+	at com.kms.katalon.core.keyword.BuiltinKeywords.callTestCase(BuiltinKeywords.groovy:326)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at AddToCart.run(AddToCart:24)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1756879378879.run(TempTestSuite1756879378879.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+2025-09-03 11:34:30.173 INFO  c.k.katalon.core.main.TestCaseExecutor   - END CALL Test Cases/SignIn
+2025-09-03 11:34:30.173 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-09-03 11:34:30.173 ERROR c.k.k.core.keyword.internal.KeywordMain  - ❌ Unable to call Test Case 'Test Cases/SignIn' (Root cause: com.kms.katalon.core.exception.StepFailedException: Call Test Case 'Test Cases/SignIn' failed
+	at com.kms.katalon.core.keyword.builtin.CallTestCaseKeyword$_callTestCase_closure1.doCall(CallTestCaseKeyword.groovy:63)
+	at com.kms.katalon.core.keyword.builtin.CallTestCaseKeyword$_callTestCase_closure1.call(CallTestCaseKeyword.groovy)
+	at com.kms.katalon.core.keyword.internal.KeywordMain.runKeyword(KeywordMain.groovy:75)
+	at com.kms.katalon.core.keyword.builtin.CallTestCaseKeyword.callTestCase(CallTestCaseKeyword.groovy:81)
+	at com.kms.katalon.core.keyword.builtin.CallTestCaseKeyword.execute(CallTestCaseKeyword.groovy:44)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:79)
+	at com.kms.katalon.core.keyword.BuiltinKeywords.callTestCase(BuiltinKeywords.groovy:326)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at AddToCart.run(AddToCart:24)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1756879378879.run(TempTestSuite1756879378879.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+Caused by: com.kms.katalon.core.exception.StepFailedException: Fail to verify onVerify My account
+	at com.kms.katalon.core.util.KeywordUtil.markFailed(KeywordUtil.java:19)
+	at utils.Helper.verifyText(Helper.groovy:128)
+	at pages.AccountPage.verifyMyAccount(AccountPage.groovy:27)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at com.kms.katalon.core.main.CustomKeywordDelegatingMetaClass.invokeStaticMethod(CustomKeywordDelegatingMetaClass.java:55)
+	at SignIn.run(SignIn:43)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseMain.runTestCase(TestCaseMain.java:151)
+	at com.kms.katalon.core.keyword.builtin.CallTestCaseKeyword$_callTestCase_closure1.doCall(CallTestCaseKeyword.groovy:59)
+	... 25 more
+)
+2025-09-03 11:34:30.182 ERROR c.k.katalon.core.main.TestCaseExecutor   - ❌ Test Cases/AddToCart FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Call Test Case 'Test Cases/SignIn' failed
+	at com.kms.katalon.core.keyword.builtin.CallTestCaseKeyword$_callTestCase_closure1.doCall(CallTestCaseKeyword.groovy:63)
+	at com.kms.katalon.core.keyword.builtin.CallTestCaseKeyword$_callTestCase_closure1.call(CallTestCaseKeyword.groovy)
+	at com.kms.katalon.core.keyword.internal.KeywordMain.runKeyword(KeywordMain.groovy:75)
+	at com.kms.katalon.core.keyword.builtin.CallTestCaseKeyword.callTestCase(CallTestCaseKeyword.groovy:81)
+	at com.kms.katalon.core.keyword.builtin.CallTestCaseKeyword.execute(CallTestCaseKeyword.groovy:44)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:79)
+	at com.kms.katalon.core.keyword.BuiltinKeywords.callTestCase(BuiltinKeywords.groovy:326)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at AddToCart.run(AddToCart:24)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1756879378879.run(TempTestSuite1756879378879.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+Caused by: com.kms.katalon.core.exception.StepFailedException: Fail to verify onVerify My account
+	at com.kms.katalon.core.util.KeywordUtil.markFailed(KeywordUtil.java:19)
+	at utils.Helper.verifyText(Helper.groovy:128)
+	at pages.AccountPage.verifyMyAccount(AccountPage.groovy:27)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at com.kms.katalon.core.main.CustomKeywordDelegatingMetaClass.invokeStaticMethod(CustomKeywordDelegatingMetaClass.java:55)
+	at SignIn.run(SignIn:43)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseMain.runTestCase(TestCaseMain.java:151)
+	at com.kms.katalon.core.keyword.builtin.CallTestCaseKeyword$_callTestCase_closure1.doCall(CallTestCaseKeyword.groovy:59)
+	... 25 more
+
+2025-09-03 11:34:30.231 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/AddToCart
+2025-09-03 11:34:30.237 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-09-03 11:34:30.237 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/AddToCart
+2025-09-03 11:34:30.260 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) filepath = Include/Data Files/login_data.json
+2025-09-03 11:34:30.261 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) cartPage = CartPage
+2025-09-03 11:34:30.262 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) orderPlacedPage = OrderPlacedPage
+2025-09-03 11:34:30.269 INFO  c.k.k.core.webui.driver.DriverFactory    - Starting 'Chrome' driver
+2025-09-03 11:34:30.270 INFO  c.k.k.core.webui.driver.DriverFactory    - Action delay is set to 0 milliseconds
+Sep 03, 2025 11:34:32 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 139, returning the closest version; found: 138; Please update to a Selenium version that supports CDP version 139
+2025-09-03 11:34:32.401 INFO  c.k.k.core.webui.driver.DriverFactory    - sessionId = 8c0306efd3e972696125c5de32d3b06e
+2025-09-03 11:34:32.401 INFO  c.k.k.core.webui.driver.DriverFactory    - browser = Chrome 139.0.7258.155
+2025-09-03 11:34:32.401 INFO  c.k.k.core.webui.driver.DriverFactory    - platform = Windows 11
+2025-09-03 11:34:32.401 INFO  c.k.k.core.webui.driver.DriverFactory    - seleniumVersion = 4.28.1
+2025-09-03 11:34:32.401 INFO  c.k.k.core.webui.driver.DriverFactory    - proxyInformation = ProxyInformation { proxyOption=NO_PROXY, proxyServerType=HTTP, username=, password=********, proxyServerAddress=, proxyServerPort=0, executionList="", isApplyToDesiredCapabilities=true }

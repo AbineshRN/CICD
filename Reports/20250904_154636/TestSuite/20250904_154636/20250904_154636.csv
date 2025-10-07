@@ -1,0 +1,152 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+TestSuite,Chrome 140.0.7339.81,Contains the test cases of luma,,04-09-2025 15:46:40,04-09-2025 15:50:07,3m - 26.388s,PASSED
+,,,,,,,
+Test Cases/RegisterUser,Chrome 140.0.7339.81,,,04-09-2025 15:46:41,04-09-2025 15:47:17,36.019s,PASSED
+"DATA BINDING - {""(Default) filep..."":""Include/Data Files/login_data.json"",""(Default) regis..."":""registrarionSucccessPage""}",,,,,,,
+Start listener action : openTheBrowser,Chrome 140.0.7339.81,,,04-09-2025 15:46:41,04-09-2025 15:46:57,16.089s,PASSED
+"ExtentManager.initReport(""UserRegistrationReport"")",Chrome 140.0.7339.81,,,04-09-2025 15:46:58,04-09-2025 15:46:59,1.094s,PASSED
+"ExtentManager.createTest(""User Registration Test"")",Chrome 140.0.7339.81,,,04-09-2025 15:46:59,04-09-2025 15:46:59,0.014s,PASSED
+"ExtentManager.logPass(""Navigating to the registration page"")",Chrome 140.0.7339.81,,,04-09-2025 15:46:59,04-09-2025 15:46:59,0.032s,PASSED
+pages.HomePage.navigateToRegisterPage(),Chrome 140.0.7339.81,,,04-09-2025 15:46:59,04-09-2025 15:47:03,4.045s,PASSED
+"ExtentManager.logPass(""Navigated to the register page"")",Chrome 140.0.7339.81,,,04-09-2025 15:47:03,04-09-2025 15:47:03,0.010s,PASSED
+"ExtentManager.logPass(""Entering the details to register an account"")",Chrome 140.0.7339.81,,,04-09-2025 15:47:03,04-09-2025 15:47:03,0.004s,PASSED
+"fieldMappings = [[""id"":""input-firstname"", ""jsonKey"":""firstName""], [""id"":""input-lastname"", ""jsonKey"":""lastName""], [""id"":""input-email"", ""jsonKey"":""email""], [""id"":""input-telephone"", ""jsonKey"":""telephone""], [""id"":""input-password"", ""jsonKey"":""password""], [""id"":""input-confirm"", ""jsonKey"":""password""]]",Chrome 140.0.7339.81,,,04-09-2025 15:47:03,04-09-2025 15:47:03,0.003s,PASSED
+fieldMappings.each({ -> ... }),Chrome 140.0.7339.81,,,04-09-2025 15:47:03,04-09-2025 15:47:11,7.846s,PASSED
+"ExtentManager.logPass(""Details for registering an account have been set successfully"")",Chrome 140.0.7339.81,,,04-09-2025 15:47:11,04-09-2025 15:47:11,0.000s,PASSED
+"ExtentManager.logPass(""Navigating to the confirmation page"")",Chrome 140.0.7339.81,,,04-09-2025 15:47:11,04-09-2025 15:47:11,0.008s,PASSED
+"pages.UserRegistrationPage.clickOnPolicyCheckBox(findTestObject(""Object Repository/Registration_Page/policy_CheckBox""))",Chrome 140.0.7339.81,,,04-09-2025 15:47:11,04-09-2025 15:47:11,0.788s,PASSED
+"pages.UserRegistrationPage.clickOnContinue(findTestObject(""Object Repository/Registration_Page/continue_Button""))",Chrome 140.0.7339.81,,,04-09-2025 15:47:11,04-09-2025 15:47:12,0.707s,PASSED
+"ExtentManager.logPass(""Navigated to the confirmation page"")",Chrome 140.0.7339.81,,,04-09-2025 15:47:12,04-09-2025 15:47:12,0.031s,PASSED
+"ExtentManager.logPass(""Verifying Account Creation Text"")",Chrome 140.0.7339.81,,,04-09-2025 15:47:12,04-09-2025 15:47:12,0.003s,PASSED
+"pages.AccountCreationPage.verifyText(findTestObject(""Object Repository/Account_Created_Page/account_Creation_Verification""), JsonFileReader.getJsonData(registrationSuccessPage, ""verify_Text"", filepath), ""Account Creation"")",Chrome 140.0.7339.81,,,04-09-2025 15:47:12,04-09-2025 15:47:16,3.471s,PASSED
+"ExtentManager.logPass(""Verified Account Creation Text"")",Chrome 140.0.7339.81,,,04-09-2025 15:47:16,04-09-2025 15:47:16,0.002s,PASSED
+"ExtentManager.logPass(""Updating login details in JSON file"")",Chrome 140.0.7339.81,,,04-09-2025 15:47:16,04-09-2025 15:47:16,0.002s,PASSED
+"JsonFileReader.updateJsonValue(""loginPage"", ""email"", JsonFileReader.getJsonData(registerPage, ""email"", filepath), filepath)",Chrome 140.0.7339.81,,,04-09-2025 15:47:16,04-09-2025 15:47:16,0.120s,PASSED
+"JsonFileReader.updateJsonValue(""loginPage"", ""password"", JsonFileReader.getJsonData(registerPage, ""password"", filepath), filepath)",Chrome 140.0.7339.81,,,04-09-2025 15:47:16,04-09-2025 15:47:16,0.012s,PASSED
+"ExtentManager.logPass(""Updated login details in JSON file"")",Chrome 140.0.7339.81,,,04-09-2025 15:47:16,04-09-2025 15:47:16,0.002s,PASSED
+ExtentManager.flushReport(),Chrome 140.0.7339.81,,,04-09-2025 15:47:16,04-09-2025 15:47:17,0.749s,PASSED
+Start listener action : closeTheBrowser,Chrome 140.0.7339.81,,,04-09-2025 15:47:17,04-09-2025 15:47:17,0.443s,PASSED
+,,,,,,,
+Test Cases/SignIn,Chrome 140.0.7339.81,,,04-09-2025 15:47:17,04-09-2025 15:47:36,18.653s,PASSED
+"DATA BINDING - {""(Default) secti..."":""loginPage"",""(Default) filep..."":""Include/Data Files/login_data.json""}",,,,,,,
+Start listener action : openTheBrowser,Chrome 140.0.7339.81,,,04-09-2025 15:47:17,04-09-2025 15:47:25,7.784s,PASSED
+"ExtentManager.initReport(""LoginTestReport"")",Chrome 140.0.7339.81,,,04-09-2025 15:47:25,04-09-2025 15:47:25,0.003s,PASSED
+"ExtentManager.createTest(""Login Test"")",Chrome 140.0.7339.81,,,04-09-2025 15:47:25,04-09-2025 15:47:25,0.003s,PASSED
+"ExtentManager.logPass(""Navigating to the sign in page"")",Chrome 140.0.7339.81,,,04-09-2025 15:47:25,04-09-2025 15:47:25,0.002s,PASSED
+pages.HomePage.navigateToAccountPage(),Chrome 140.0.7339.81,,,04-09-2025 15:47:25,04-09-2025 15:47:28,3.140s,PASSED
+"ExtentManager.logPass(""Navigated to the sign in page"")",Chrome 140.0.7339.81,,,04-09-2025 15:47:28,04-09-2025 15:47:28,0.006s,PASSED
+"ExtentManager.logPass(""Signing into the account"")",Chrome 140.0.7339.81,,,04-09-2025 15:47:28,04-09-2025 15:47:28,0.005s,PASSED
+"loginFields = [[""id"":""input-email"", ""jsonKey"":""email""], [""id"":""input-password"", ""jsonKey"":""password""]]",Chrome 140.0.7339.81,,,04-09-2025 15:47:28,04-09-2025 15:47:28,0.002s,PASSED
+loginFields.each({ -> ... }),Chrome 140.0.7339.81,,,04-09-2025 15:47:28,04-09-2025 15:47:30,2.262s,PASSED
+"pages.LoginPage.clickOnLoginButton(findTestObject(""Object Repository/LoginPage/Login_button""))",Chrome 140.0.7339.81,,,04-09-2025 15:47:30,04-09-2025 15:47:35,4.089s,PASSED
+"ExtentManager.logPass(""Signed into the account"")",Chrome 140.0.7339.81,,,04-09-2025 15:47:35,04-09-2025 15:47:35,0.008s,PASSED
+"ExtentManager.logPass(""Verifying My Account"")",Chrome 140.0.7339.81,,,04-09-2025 15:47:35,04-09-2025 15:47:35,0.003s,PASSED
+"pages.AccountPage.verifyMyAccount(findTestObject(""Object Repository/AccountPage/my_Account_verification""), JsonFileReader.getJsonData(section, ""verification_text"", filepath))",Chrome 140.0.7339.81,,,04-09-2025 15:47:35,04-09-2025 15:47:35,0.576s,PASSED
+"ExtentManager.logPass(""Verified My Account"")",Chrome 140.0.7339.81,,,04-09-2025 15:47:35,04-09-2025 15:47:35,0.002s,PASSED
+ExtentManager.flushReport(),Chrome 140.0.7339.81,,,04-09-2025 15:47:35,04-09-2025 15:47:35,0.148s,PASSED
+Start listener action : closeTheBrowser,Chrome 140.0.7339.81,,,04-09-2025 15:47:35,04-09-2025 15:47:36,0.348s,PASSED
+,,,,,,,
+Test Cases/ChangePasswordFunctionality,Chrome 140.0.7339.81,This testcase checks the change password functionality.,,04-09-2025 15:47:36,04-09-2025 15:48:02,26.445s,PASSED
+"DATA BINDING - {""(Default) secti..."":""changePasswordPage"",""(Default) filep..."":""Include/Data Files/login_data.json""}",,,,,,,
+Start listener action : openTheBrowser,Chrome 140.0.7339.81,,,04-09-2025 15:47:36,04-09-2025 15:47:44,8.119s,PASSED
+"ExtentManager.initReport(""ChangePasswordReport"")",Chrome 140.0.7339.81,,,04-09-2025 15:47:44,04-09-2025 15:47:44,0.004s,PASSED
+"ExtentManager.createTest(""Change Password Test"")",Chrome 140.0.7339.81,,,04-09-2025 15:47:44,04-09-2025 15:47:44,0.001s,PASSED
+"ExtentManager.logPass(""Signing into the account"")",Chrome 140.0.7339.81,,,04-09-2025 15:47:44,04-09-2025 15:47:44,0.001s,PASSED
+"callTestCase(findTestCase(""Test Cases/SignIn""), [:])",Chrome 140.0.7339.81,,,04-09-2025 15:47:44,04-09-2025 15:47:54,9.924s,PASSED
+"ExtentManager.logPass(""Signed into the account"")",Chrome 140.0.7339.81,,,04-09-2025 15:47:54,04-09-2025 15:47:54,0.001s,PASSED
+"ExtentManager.logPass(""Navigating to change password page"")",Chrome 140.0.7339.81,,,04-09-2025 15:47:54,04-09-2025 15:47:54,0.001s,PASSED
+"pages.AccountPage.clickOnChangePassword(findTestObject(""Object Repository/AccountPage/changePassword""))",Chrome 140.0.7339.81,,,04-09-2025 15:47:54,04-09-2025 15:47:56,2.245s,PASSED
+"ExtentManager.logPass(""Navigated to change password page"")",Chrome 140.0.7339.81,,,04-09-2025 15:47:56,04-09-2025 15:47:56,0.003s,PASSED
+"ExtentManager.logPass(""Setting up a new password"")",Chrome 140.0.7339.81,,,04-09-2025 15:47:56,04-09-2025 15:47:56,0.003s,PASSED
+"pages.PasswordChangePage.changingPassword(JsonFileReader.getJsonData(section, ""password"", filepath))",Chrome 140.0.7339.81,,,04-09-2025 15:47:56,04-09-2025 15:47:59,2.837s,PASSED
+"ExtentManager.logPass(""New password has been set successfully"")",Chrome 140.0.7339.81,,,04-09-2025 15:47:59,04-09-2025 15:47:59,0.003s,PASSED
+"ExtentManager.logPass(""Verifying Password Change Text"")",Chrome 140.0.7339.81,,,04-09-2025 15:47:59,04-09-2025 15:47:59,0.002s,PASSED
+"pages.AccountPage.verifyPasswordChange(findTestObject(""Object Repository/AccountPage/passwordChangedText""), JsonFileReader.getJsonData(section, ""verifyText"", filepath))",Chrome 140.0.7339.81,,,04-09-2025 15:47:59,04-09-2025 15:48:02,2.614s,PASSED
+"ExtentManager.logPass(""Verified Password Change Text"")",Chrome 140.0.7339.81,,,04-09-2025 15:48:02,04-09-2025 15:48:02,0.001s,PASSED
+"ExtentManager.logPass(""Updating login password in JSON file"")",Chrome 140.0.7339.81,,,04-09-2025 15:48:02,04-09-2025 15:48:02,0.002s,PASSED
+"JsonFileReader.updateJsonValue(""loginPage"", ""password"", JsonFileReader.getJsonData(section, ""password"", filepath), filepath)",Chrome 140.0.7339.81,,,04-09-2025 15:48:02,04-09-2025 15:48:02,0.010s,PASSED
+"ExtentManager.logPass(""Updated login password in JSON file"")",Chrome 140.0.7339.81,,,04-09-2025 15:48:02,04-09-2025 15:48:02,0.002s,PASSED
+ExtentManager.flushReport(),Chrome 140.0.7339.81,,,04-09-2025 15:48:02,04-09-2025 15:48:02,0.072s,PASSED
+Start listener action : closeTheBrowser,Chrome 140.0.7339.81,,,04-09-2025 15:48:02,04-09-2025 15:48:02,0.375s,PASSED
+,,,,,,,
+Test Cases/AddToCart,Chrome 140.0.7339.81,This testcase checks the functionality of add to cart functionality,,04-09-2025 15:48:02,04-09-2025 15:49:15,1m - 12.943s,PASSED
+"DATA BINDING - {""(Default) categ..."":"" Components"",""(Default) order..."":""OrderPlacedPage"",""(Default) filep..."":""Include/Data Files/login_data.json"",""(Default) cartP..."":""CartPage""}",,,,,,,
+Start listener action : openTheBrowser,Chrome 140.0.7339.81,,,04-09-2025 15:48:02,04-09-2025 15:48:10,7.538s,PASSED
+"ExtentManager.initReport(""OrderPlacementReport"")",Chrome 140.0.7339.81,,,04-09-2025 15:48:10,04-09-2025 15:48:10,0.003s,PASSED
+"ExtentManager.createTest(""Place Order Test"")",Chrome 140.0.7339.81,,,04-09-2025 15:48:10,04-09-2025 15:48:10,0.002s,PASSED
+"ExtentManager.logPass(""Signing into the account"")",Chrome 140.0.7339.81,,,04-09-2025 15:48:10,04-09-2025 15:48:10,0.000s,PASSED
+"callTestCase(findTestCase(""Test Cases/SignIn""), [:])",Chrome 140.0.7339.81,,,04-09-2025 15:48:10,04-09-2025 15:48:20,9.813s,PASSED
+"ExtentManager.logPass(""Signed in to the account"")",Chrome 140.0.7339.81,,,04-09-2025 15:48:20,04-09-2025 15:48:20,0.005s,PASSED
+"ExtentManager.logPass(""Navigating to the category option page"")",Chrome 140.0.7339.81,,,04-09-2025 15:48:20,04-09-2025 15:48:20,0.002s,PASSED
+pages.HomePage.clickOnShopByCategoryOptions(categoryOption),Chrome 140.0.7339.81,,,04-09-2025 15:48:20,04-09-2025 15:48:21,0.805s,PASSED
+"ExtentManager.logPass(""Navigated to the category option page"")",Chrome 140.0.7339.81,,,04-09-2025 15:48:21,04-09-2025 15:48:21,0.002s,PASSED
+"ExtentManager.logPass(""Navigating to the product page"")",Chrome 140.0.7339.81,,,04-09-2025 15:48:21,04-09-2025 15:48:21,0.002s,PASSED
+pages.ComponentsPage.clickOnInstockProducts(),Chrome 140.0.7339.81,,,04-09-2025 15:48:21,04-09-2025 15:48:51,30.908s,PASSED
+"ExtentManager.logPass(""Navigated to the product page"")",Chrome 140.0.7339.81,,,04-09-2025 15:48:51,04-09-2025 15:48:52,0.002s,PASSED
+"ExtentManager.logPass(""Navigating to the checkout page"")",Chrome 140.0.7339.81,,,04-09-2025 15:48:52,04-09-2025 15:48:52,0.002s,PASSED
+pages.ProductPage.addingProductToCart(),Chrome 140.0.7339.81,,,04-09-2025 15:48:52,04-09-2025 15:48:57,5.079s,PASSED
+"ExtentManager.logPass(""Navigated to the checkout page"")",Chrome 140.0.7339.81,,,04-09-2025 15:48:57,04-09-2025 15:48:57,0.001s,PASSED
+"pages.ShoppingCartPage.clickOnCheckout(findTestObject(""Object Repository/ShoppingCartPage/CheckOutButton""))",Chrome 140.0.7339.81,,,04-09-2025 15:48:57,04-09-2025 15:49:00,3.427s,PASSED
+"ExtentManager.logPass(""Entering billing details"")",Chrome 140.0.7339.81,,,04-09-2025 15:49:00,04-09-2025 15:49:00,0.004s,PASSED
+"paymentFields = [[""id"":""input-payment-firstname"", ""jsonKey"":""firstName"", ""label"":""First Name""], [""id"":""input-payment-lastname"", ""jsonKey"":""lastName"", ""label"":""Last Name""], [""id"":""input-payment-address-1"", ""jsonKey"":""address"", ""label"":""Address""], [""id"":""input-payment-city"", ""jsonKey"":""city"", ""label"":""City""], [""id"":""input-payment-postcode"", ""jsonKey"":""postalCode"", ""label"":""Postal Code""]]",Chrome 140.0.7339.81,,,04-09-2025 15:49:00,04-09-2025 15:49:00,0.000s,PASSED
+paymentFields.each({ -> ... }),Chrome 140.0.7339.81,,,04-09-2025 15:49:00,04-09-2025 15:49:06,6.154s,PASSED
+"ExtentManager.logPass(""Billing details entered"")",Chrome 140.0.7339.81,,,04-09-2025 15:49:06,04-09-2025 15:49:06,0.000s,PASSED
+"ExtentManager.logPass(""Navigating to the confirm order page"")",Chrome 140.0.7339.81,,,04-09-2025 15:49:06,04-09-2025 15:49:06,0.000s,PASSED
+pages.CheckOutPage.clickOnContinue(),Chrome 140.0.7339.81,,,04-09-2025 15:49:06,04-09-2025 15:49:08,2.085s,PASSED
+"ExtentManager.logPass(""Navigated to the confirm order page"")",Chrome 140.0.7339.81,,,04-09-2025 15:49:08,04-09-2025 15:49:08,0.001s,PASSED
+"ExtentManager.logPass(""Confirming the order"")",Chrome 140.0.7339.81,,,04-09-2025 15:49:08,04-09-2025 15:49:08,0.002s,PASSED
+"pages.ConfirmOrderPage.clickOnConfirmOrder(findTestObject(""Object Repository/ConfirmOrderPage/confirmOrder_Button""))",Chrome 140.0.7339.81,,,04-09-2025 15:49:08,04-09-2025 15:49:12,3.335s,PASSED
+"ExtentManager.logPass(""Order confirmed"")",Chrome 140.0.7339.81,,,04-09-2025 15:49:12,04-09-2025 15:49:12,0.002s,PASSED
+"ExtentManager.logPass(""Verifying the confirm order text"")",Chrome 140.0.7339.81,,,04-09-2025 15:49:12,04-09-2025 15:49:12,0.002s,PASSED
+"pages.CheckOutSuccessPage.verifyOrderPlaced(findTestObject(""Object Repository/CheckOutSuccessPage/OrderConfirmed""), JsonFileReader.getJsonData(orderPlacedPage, ""verifyText"", filepath))",Chrome 140.0.7339.81,,,04-09-2025 15:49:12,04-09-2025 15:49:15,3.045s,PASSED
+"ExtentManager.logPass(""Verified the confirm order text"")",Chrome 140.0.7339.81,,,04-09-2025 15:49:15,04-09-2025 15:49:15,0.001s,PASSED
+ExtentManager.flushReport(),Chrome 140.0.7339.81,,,04-09-2025 15:49:15,04-09-2025 15:49:15,0.074s,PASSED
+Start listener action : closeTheBrowser,Chrome 140.0.7339.81,,,04-09-2025 15:49:15,04-09-2025 15:49:15,0.340s,PASSED
+,,,,,,,
+Test Cases/ProductReturn,Chrome 140.0.7339.81,This testcase checks the functionality of product return,,04-09-2025 15:49:15,04-09-2025 15:49:47,31.763s,PASSED
+"DATA BINDING - {""(Default) secti..."":""ProductReturnPage"",""(Default) filep..."":""Include/Data Files/login_data.json""}",,,,,,,
+Start listener action : openTheBrowser,Chrome 140.0.7339.81,,,04-09-2025 15:49:15,04-09-2025 15:49:23,7.586s,PASSED
+"ExtentManager.initReport(""OrderReturnReport"")",Chrome 140.0.7339.81,,,04-09-2025 15:49:23,04-09-2025 15:49:23,0.002s,PASSED
+"ExtentManager.createTest(""Order Return Test"")",Chrome 140.0.7339.81,,,04-09-2025 15:49:23,04-09-2025 15:49:23,0.001s,PASSED
+"ExtentManager.logPass(""Signing into the account"")",Chrome 140.0.7339.81,,,04-09-2025 15:49:23,04-09-2025 15:49:23,0.001s,PASSED
+"callTestCase(findTestCase(""Test Cases/SignIn""), [:])",Chrome 140.0.7339.81,,,04-09-2025 15:49:23,04-09-2025 15:49:33,10.105s,PASSED
+"ExtentManager.logPass(""Signed into the account"")",Chrome 140.0.7339.81,,,04-09-2025 15:49:33,04-09-2025 15:49:33,0.001s,PASSED
+"ExtentManager.logPass(""Navigating to order history page"")",Chrome 140.0.7339.81,,,04-09-2025 15:49:33,04-09-2025 15:49:33,0.002s,PASSED
+"sideBarElements = [[""text"":"" Order History"", ""label"":""Order History""]]",Chrome 140.0.7339.81,,,04-09-2025 15:49:33,04-09-2025 15:49:33,0.001s,PASSED
+sideBarElements.each({ -> ... }),Chrome 140.0.7339.81,,,04-09-2025 15:49:33,04-09-2025 15:49:36,2.888s,PASSED
+"ExtentManager.logPass(""Navigated to order history page"")",Chrome 140.0.7339.81,,,04-09-2025 15:49:36,04-09-2025 15:49:36,0.002s,PASSED
+"ExtentManager.logPass(""Navigating to the order information page"")",Chrome 140.0.7339.81,,,04-09-2025 15:49:36,04-09-2025 15:49:36,0.001s,PASSED
+"pages.OrderHistoryPage.clickOnViewButton(findTestObject(""Object Repository/OrderHistoryPage/viewInformationButton""))",Chrome 140.0.7339.81,,,04-09-2025 15:49:36,04-09-2025 15:49:39,2.772s,PASSED
+"ExtentManager.logPass(""Navigated to the order information page"")",Chrome 140.0.7339.81,,,04-09-2025 15:49:39,04-09-2025 15:49:39,0.002s,PASSED
+"ExtentManager.logPass(""Navigating to the order return page"")",Chrome 140.0.7339.81,,,04-09-2025 15:49:39,04-09-2025 15:49:39,0.002s,PASSED
+"pages.OrderInformationPage.clickOnReturnButton(findTestObject(""Object Repository/OrderInformationPage/returnButton""))",Chrome 140.0.7339.81,,,04-09-2025 15:49:39,04-09-2025 15:49:41,2.771s,PASSED
+pages.OrderReturnPage.submittingAnOrderReturn(),Chrome 140.0.7339.81,,,04-09-2025 15:49:41,04-09-2025 15:49:46,4.165s,PASSED
+"ExtentManager.logPass(""Navigated to the order return page"")",Chrome 140.0.7339.81,,,04-09-2025 15:49:46,04-09-2025 15:49:46,0.003s,PASSED
+"ExtentManager.logPass(""Verifying the order return"")",Chrome 140.0.7339.81,,,04-09-2025 15:49:46,04-09-2025 15:49:46,0.001s,PASSED
+"pages.OrderReturnPage.verifyOrderReturn(findTestObject(""Object Repository/ProductReturnsPage/verifyText""), JsonFileReader.getJsonData(section, ""verifyText"", filepath))",Chrome 140.0.7339.81,,,04-09-2025 15:49:46,04-09-2025 15:49:46,0.770s,PASSED
+"ExtentManager.logPass(""Verified the order return"")",Chrome 140.0.7339.81,,,04-09-2025 15:49:46,04-09-2025 15:49:46,0.001s,PASSED
+ExtentManager.flushReport(),Chrome 140.0.7339.81,,,04-09-2025 15:49:46,04-09-2025 15:49:46,0.087s,PASSED
+Start listener action : closeTheBrowser,Chrome 140.0.7339.81,,,04-09-2025 15:49:46,04-09-2025 15:49:47,0.333s,PASSED
+,,,,,,,
+Test Cases/CommentPost,Chrome 140.0.7339.81,This testcase checks the functionality of posting a comment in blog section,,04-09-2025 15:49:47,04-09-2025 15:50:07,19.916s,PASSED
+"DATA BINDING - {""(Default) secti..."":""ArticlePage"",""(Default) filep..."":""Include/Data Files/login_data.json""}",,,,,,,
+Start listener action : openTheBrowser,Chrome 140.0.7339.81,,,04-09-2025 15:49:47,04-09-2025 15:49:55,8.223s,PASSED
+"ExtentManager.initReport(""BlogCommentReport"")",Chrome 140.0.7339.81,,,04-09-2025 15:49:55,04-09-2025 15:49:55,0.002s,PASSED
+"ExtentManager.createTest(""Post Comment on Blog Article"")",Chrome 140.0.7339.81,,,04-09-2025 15:49:55,04-09-2025 15:49:55,0.000s,PASSED
+"ExtentManager.logPass(""Navigating to the blog page"")",Chrome 140.0.7339.81,,,04-09-2025 15:49:55,04-09-2025 15:49:55,0.001s,PASSED
+"pages.HomePage.clickOnBlog(findTestObject(""Object Repository/Home_Page/Blogs""), ""Blog"")",Chrome 140.0.7339.81,,,04-09-2025 15:49:55,04-09-2025 15:49:58,2.681s,PASSED
+"ExtentManager.logPass(""Navigated to the blog page"")",Chrome 140.0.7339.81,,,04-09-2025 15:49:58,04-09-2025 15:49:58,0.000s,PASSED
+"ExtentManager.logPass(""Navigating to the article page"")",Chrome 140.0.7339.81,,,04-09-2025 15:49:58,04-09-2025 15:49:58,0.001s,PASSED
+"pages.BlogPage.clickOnArticle(findTestObject(""Object Repository/BlogsPage/Article""))",Chrome 140.0.7339.81,,,04-09-2025 15:49:58,04-09-2025 15:50:02,3.552s,PASSED
+"ExtentManager.logPass(""Navigated to the article page"")",Chrome 140.0.7339.81,,,04-09-2025 15:50:02,04-09-2025 15:50:02,0.002s,PASSED
+"ExtentManager.logPass(""Entering the details to post a comment"")",Chrome 140.0.7339.81,,,04-09-2025 15:50:02,04-09-2025 15:50:02,0.001s,PASSED
+"articleFields = [[""id"":""input-name"", ""jsonKey"":""name"", ""label"":""Name""], [""id"":""input-email"", ""jsonKey"":""email"", ""label"":""Email""]]",Chrome 140.0.7339.81,,,04-09-2025 15:50:02,04-09-2025 15:50:02,0.001s,PASSED
+articleFields.each({ -> ... }),Chrome 140.0.7339.81,,,04-09-2025 15:50:02,04-09-2025 15:50:04,2.302s,PASSED
+"pages.ArticlePage.inputCommentOnArticle(findTestObject(""Object Repository/ArticlePage/inputComment""), JsonFileReader.getJsonData(section, ""comment"", filepath))",Chrome 140.0.7339.81,,,04-09-2025 15:50:04,04-09-2025 15:50:05,1.160s,PASSED
+"pages.ArticlePage.clickOnPostCommentButton(findTestObject(""Object Repository/ArticlePage/postCommentButton""))",Chrome 140.0.7339.81,,,04-09-2025 15:50:05,04-09-2025 15:50:06,0.703s,PASSED
+"ExtentManager.logPass(""Details for posting a comment have been entered"")",Chrome 140.0.7339.81,,,04-09-2025 15:50:06,04-09-2025 15:50:06,0.004s,PASSED
+"ExtentManager.logPass(""Verifying Success Message"")",Chrome 140.0.7339.81,,,04-09-2025 15:50:06,04-09-2025 15:50:06,0.001s,PASSED
+"pages.ArticlePage.verifySuccessText(findTestObject(""Object Repository/ArticlePage/successMessage""), JsonFileReader.getJsonData(section, ""successMessage"", filepath))",Chrome 140.0.7339.81,,,04-09-2025 15:50:06,04-09-2025 15:50:06,0.575s,PASSED
+"ExtentManager.logPass(""Verified Success Message"")",Chrome 140.0.7339.81,,,04-09-2025 15:50:06,04-09-2025 15:50:06,0.000s,PASSED
+ExtentManager.flushReport(),Chrome 140.0.7339.81,,,04-09-2025 15:50:06,04-09-2025 15:50:06,0.113s,PASSED
+Start listener action : closeTheBrowser,Chrome 140.0.7339.81,,,04-09-2025 15:50:06,04-09-2025 15:50:07,0.354s,PASSED

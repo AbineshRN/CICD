@@ -1,0 +1,44 @@
+2025-09-18 12:30:53.509 INFO  c.k.katalon.core.main.TestSuiteExecutor  - START Test Suites/API_AccessToken
+2025-09-18 12:30:53.630 INFO  c.k.katalon.core.main.TestSuiteExecutor  - userFullName = Abinesh R
+2025-09-18 12:30:53.631 INFO  c.k.katalon.core.main.TestSuiteExecutor  - projectName = Luma
+2025-09-18 12:30:53.632 INFO  c.k.katalon.core.main.TestSuiteExecutor  - hostName = 10835442 - 10.235.154.124
+2025-09-18 12:30:53.633 INFO  c.k.katalon.core.main.TestSuiteExecutor  - os = Windows 11 64bit
+2025-09-18 12:30:53.635 INFO  c.k.katalon.core.main.TestSuiteExecutor  - hostAddress = 10.235.154.124
+2025-09-18 12:30:53.636 INFO  c.k.katalon.core.main.TestSuiteExecutor  - katalonVersion = 10.3.1.0
+2025-09-18 12:30:54.285 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-09-18 12:30:54.285 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/JsonPlaceHolder/api_getAccessToken
+2025-09-18 12:30:54.377 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) jsonFilePath = Include/Data Files/login_data.json
+ℹ️ Skipping browser launch for API test case: api_getAccessToken
+2025-09-18 12:30:54.671 DEBUG testcase.api_getAccessToken              - 1: payLoad = JsonOutput.toJson(JsonFileReader.getSectionData("postPayload", jsonFilePath))
+2025-09-18 12:30:54.776 DEBUG testcase.api_getAccessToken              - 2: response = ApiKeywords.sendPost("login", payLoad)
+2025-09-18 12:30:57.001 INFO  c.k.k.core.webservice.common.HarLogger   - HAR: C:\Users\10835442\Katalon Studio\Luma\Reports\20250918_123048\API_AccessToken\20250918_123048\requests\main\POST_Generic_0.har
+2025-09-18 12:30:57.105 DEBUG testcase.api_getAccessToken              - 3: parsedResponse = JsonSlurper().parseText(response.getResponseBodyContent())
+2025-09-18 12:30:57.120 DEBUG testcase.api_getAccessToken              - 4: jwtToken = accessToken
+2025-09-18 12:30:57.125 DEBUG testcase.api_getAccessToken              - 5: println("JWT Token: " + jwtToken)
+JWT Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3NTgxNzg4NTgsImV4cCI6MTc1ODE4MDY1OH0.C1FhU1Nyu3EybRST0LoNfUlmx7A8yKeo47wnEH-LBE8
+2025-09-18 12:30:57.135 DEBUG testcase.api_getAccessToken              - 6: JsonFileReader.appendToJsonSection(jsonFilePath, "DummyJson", "accessToken", jwtToken)
+PASSED
+⚠️ Error while closing browser: Browser is not opened
+Build info: version: '4.28.1', revision: '73f5ad48a2'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: driver.version: unknown
+2025-09-18 12:30:57.378 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/JsonPlaceHolder/api_getAccessToken
+2025-09-18 12:30:57.388 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-09-18 12:30:57.388 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/JsonPlaceHolder/api_currentUserDetail
+2025-09-18 12:30:57.424 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) jsonFilePath = Include/Data Files/login_data.json
+ℹ️ Skipping browser launch for API test case: api_currentUserDetail
+2025-09-18 12:30:57.565 DEBUG testcase.api_currentUserDetail           - 1: accessToken = JsonFileReader.getJsonData("DummyJson", "accessToken", jsonFilePath)
+2025-09-18 12:30:57.576 DEBUG testcase.api_currentUserDetail           - 2: headers = ["Authorization":accessToken]
+2025-09-18 12:30:57.583 DEBUG testcase.api_currentUserDetail           - 3: response = ApiKeywords.sendGetHeaders("me", headers)
+2025-09-18 12:30:57.989 INFO  c.k.k.core.webservice.common.HarLogger   - HAR: C:\Users\10835442\Katalon Studio\Luma\Reports\20250918_123048\API_AccessToken\20250918_123048\requests\main\null_1.har
+2025-09-18 12:30:57.995 DEBUG testcase.api_currentUserDetail           - 4: println(response.getResponseBodyContent())
+{"id":1,"firstName":"Emily","lastName":"Johnson","maidenName":"Smith","age":28,"gender":"female","email":"emily.johnson@x.dummyjson.com","phone":"+81 965-431-3024","username":"emilys","password":"emilyspass","birthDate":"1996-5-30","image":"https://dummyjson.com/icon/emilys/128","bloodGroup":"O-","height":193.24,"weight":63.16,"eyeColor":"Green","hair":{"color":"Brown","type":"Curly"},"ip":"42.48.100.32","address":{"address":"626 Main Street","city":"Phoenix","state":"Mississippi","stateCode":"MS","postalCode":"29112","coordinates":{"lat":-77.16213,"lng":-92.084824},"country":"United States"},"macAddress":"47:fa:41:18:ec:eb","university":"University of Wisconsin--Madison","bank":{"cardExpire":"03/26","cardNumber":"9289760655481815","cardType":"Elo","currency":"CNY","iban":"YPUXISOBI7TTHPK2BR3HAIXL"},"company":{"department":"Engineering","name":"Dooley, Kozey and Cronin","title":"Sales Manager","address":{"address":"263 Tenth Street","city":"San Francisco","state":"Wisconsin","stateCode":"WI","postalCode":"37657","coordinates":{"lat":71.814525,"lng":-161.150263},"country":"United States"}},"ein":"977-175","ssn":"900-590-289","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/537.36","crypto":{"coin":"Bitcoin","wallet":"0xb9fc2fe63b2a6c003f1c324c3bfa53259162181a","network":"Ethereum (ERC20)"},"role":"admin"}
+PASSED
+⚠️ Error while closing browser: Browser is not opened
+Build info: version: '4.28.1', revision: '73f5ad48a2'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: driver.version: unknown
+2025-09-18 12:30:58.014 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/JsonPlaceHolder/api_currentUserDetail
+2025-09-18 12:30:58.077 INFO  c.k.katalon.core.main.TestSuiteExecutor  - --------------------
+2025-09-18 12:30:58.077 INFO  c.k.katalon.core.main.TestSuiteExecutor  - END Test Suites/API_AccessToken
+2025-09-18 12:30:58.077 INFO  c.k.katalon.core.main.TestSuiteExecutor  - ====================

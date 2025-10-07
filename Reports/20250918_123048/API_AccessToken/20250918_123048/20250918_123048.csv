@@ -1,0 +1,22 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+API_AccessToken,,,,18-09-2025 12:30:53,18-09-2025 12:30:58,4.470s,PASSED
+,,,,,,,
+Test Cases/JsonPlaceHolder/api_getAccessToken,,,,18-09-2025 12:30:54,18-09-2025 12:30:57,3.092s,PASSED
+"DATA BINDING - {""(Default) jsonF..."":""Include/Data Files/login_data.json""}",,,,,,,
+Start listener action : beforeTestCase,,,,18-09-2025 12:30:54,18-09-2025 12:30:54,0.136s,PASSED
+"payLoad = JsonOutput.toJson(JsonFileReader.getSectionData(""postPayload"", jsonFilePath))",,,,18-09-2025 12:30:54,18-09-2025 12:30:54,0.105s,PASSED
+"response = ApiKeywords.sendPost(""login"", payLoad)",,,,18-09-2025 12:30:54,18-09-2025 12:30:57,2.329s,PASSED
+parsedResponse = JsonSlurper().parseText(response.getResponseBodyContent()),,,,18-09-2025 12:30:57,18-09-2025 12:30:57,0.014s,PASSED
+jwtToken = accessToken,,,,18-09-2025 12:30:57,18-09-2025 12:30:57,0.005s,PASSED
+"println(""JWT Token: "" + jwtToken)",,,,18-09-2025 12:30:57,18-09-2025 12:30:57,0.010s,PASSED
+"JsonFileReader.appendToJsonSection(jsonFilePath, ""DummyJson"", ""accessToken"", jwtToken)",,,,18-09-2025 12:30:57,18-09-2025 12:30:57,0.045s,PASSED
+Start listener action : closeTheBrowser,,,,18-09-2025 12:30:57,18-09-2025 12:30:57,0.191s,PASSED
+,,,,,,,
+Test Cases/JsonPlaceHolder/api_currentUserDetail,,,,18-09-2025 12:30:57,18-09-2025 12:30:58,0.626s,PASSED
+"DATA BINDING - {""(Default) jsonF..."":""Include/Data Files/login_data.json""}",,,,,,,
+Start listener action : beforeTestCase,,,,18-09-2025 12:30:57,18-09-2025 12:30:57,0.026s,PASSED
+"accessToken = JsonFileReader.getJsonData(""DummyJson"", ""accessToken"", jsonFilePath)",,,,18-09-2025 12:30:57,18-09-2025 12:30:57,0.010s,PASSED
+"headers = [""Authorization"":accessToken]",,,,18-09-2025 12:30:57,18-09-2025 12:30:57,0.007s,PASSED
+"response = ApiKeywords.sendGetHeaders(""me"", headers)",,,,18-09-2025 12:30:57,18-09-2025 12:30:57,0.412s,PASSED
+println(response.getResponseBodyContent()),,,,18-09-2025 12:30:57,18-09-2025 12:30:57,0.002s,PASSED
+Start listener action : closeTheBrowser,,,,18-09-2025 12:30:58,18-09-2025 12:30:58,0.013s,PASSED

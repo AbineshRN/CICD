@@ -1,0 +1,20 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+RegisterSignIN,Chrome 140.0.7339.81,,,04-09-2025 15:15:36,04-09-2025 15:16:10,33.171s,PASSED
+,,,,,,,
+Test Cases/SignIn,Chrome 140.0.7339.81,,,04-09-2025 15:15:38,04-09-2025 15:16:10,32.020s,PASSED
+"DATA BINDING - {""(Default) secti..."":""loginPage"",""(Default) filep..."":""Include/Data Files/login_data.json""}",,,,,,,
+Start listener action : openTheBrowser,Chrome 140.0.7339.81,,,04-09-2025 15:15:38,04-09-2025 15:15:54,16.089s,PASSED
+"ExtentManager.initReport(""LoginTestReport"")",Chrome 140.0.7339.81,,,04-09-2025 15:15:54,04-09-2025 15:15:56,2.052s,PASSED
+"ExtentManager.createTest(""Login Test"")",Chrome 140.0.7339.81,,,04-09-2025 15:15:56,04-09-2025 15:15:56,0.020s,PASSED
+"ExtentManager.logPass(""Navigating to the sign in page"")",Chrome 140.0.7339.81,,,04-09-2025 15:15:56,04-09-2025 15:15:56,0.036s,PASSED
+pages.HomePage.navigateToAccountPage(),Chrome 140.0.7339.81,,,04-09-2025 15:15:56,04-09-2025 15:16:01,4.850s,PASSED
+"ExtentManager.logPass(""Navigated to the sign in page"")",Chrome 140.0.7339.81,,,04-09-2025 15:16:01,04-09-2025 15:16:01,0.007s,PASSED
+"ExtentManager.logPass(""Signing into the account"")",Chrome 140.0.7339.81,,,04-09-2025 15:16:01,04-09-2025 15:16:01,0.008s,PASSED
+"loginFields = [[""id"":""input-email"", ""jsonKey"":""email""], [""id"":""input-password"", ""jsonKey"":""password""]]",Chrome 140.0.7339.81,,,04-09-2025 15:16:01,04-09-2025 15:16:01,0.005s,PASSED
+loginFields.each({ -> ... }),Chrome 140.0.7339.81,,,04-09-2025 15:16:01,04-09-2025 15:16:04,3.052s,PASSED
+"pages.LoginPage.clickOnLoginButton(findTestObject(""Object Repository/LoginPage/Login_button""))",Chrome 140.0.7339.81,,,04-09-2025 15:16:04,04-09-2025 15:16:08,3.969s,PASSED
+"ExtentManager.logPass(""Signed into the account"")",Chrome 140.0.7339.81,,,04-09-2025 15:16:08,04-09-2025 15:16:08,0.004s,PASSED
+"ExtentManager.logPass(""Verifying My Account"")",Chrome 140.0.7339.81,,,04-09-2025 15:16:08,04-09-2025 15:16:08,0.012s,PASSED
+"pages.AccountPage.verifyMyAccount(findTestObject(""Object Repository/AccountPage/my_Account_verification""), JsonFileReader.getJsonData(section, ""verification_text"", filepath))",Chrome 140.0.7339.81,,,04-09-2025 15:16:08,04-09-2025 15:16:09,0.689s,PASSED
+"ExtentManager.logPass(""Verified My Account"")",Chrome 140.0.7339.81,,,04-09-2025 15:16:09,04-09-2025 15:16:09,0.008s,PASSED
+Start listener action : closeTheBrowser,Chrome 140.0.7339.81,,,04-09-2025 15:16:09,04-09-2025 15:16:10,0.558s,PASSED

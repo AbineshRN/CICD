@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="API_AccessToken" time="10.512" tests="2" failures="0" errors="2">
+   <testsuite name="API_AccessToken" tests="2" failures="0" errors="2" time="10.512" skipped="0" timestamp="2025-09-18T09:36:24.450Z" hostname="10835442 - 10.235.154.124" id="Test Suites/API_AccessToken">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform"/>
+         <property name="logFolder" value="C:\\Users\\10835442\\Katalon Studio\\Luma\\Reports\\20250918_150613\\API_AccessToken\\20250918_150613"/>
+         <property name="logFiles" value="C:\\Users\\10835442\\Katalon Studio\\Luma\\Reports\\20250918_150613\\API_AccessToken\\20250918_150613\\console0.log, C:\\Users\\10835442\\Katalon Studio\\Luma\\Reports\\20250918_150613\\API_AccessToken\\20250918_150613\\execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="userFullName" value="Abinesh R"/>
+         <property name="hostName" value="10835442 - 10.235.154.124"/>
+         <property name="hostAddress" value="10.235.154.124"/>
+         <property name="projectName" value="Luma"/>
+         <property name="os" value="Windows 11 64bit"/>
+         <property name="katalonVersion" value="10.3.1.0"/>
+      </properties>
+      <testcase name="Test Cases/API_Testing/api_getAccessToken" time="0.427" classname="Test Cases/API_Testing/api_getAccessToken" status="ERROR">
+         <properties>
+            <property name="data_binding"><![CDATA[{"(Default) jsonF...":"Include/Data Files/login_data.json"}]]></property>
+         </properties>
+         <error type="ERROR" message="Test Cases/API_Testing/api_getAccessToken FAILED.&#xa;Reason:&#xa;groovy.json.JsonException: Unable to determine the current character, it is not a string, number, array, or object&#xa;&#xa;The current character read is 'I' with an int value of 73&#xa;Unable to determine the current character, it is not a string, number, array, or object&#xa;line number 1&#xa;index number 0&#xa;Invalid request&#xa;^&#xa;	at org.apache.groovy.json.internal.JsonParserCharArray.decodeValueInternal(JsonParserCharArray.java:202)&#xa;	at org.apache.groovy.json.internal.JsonParserCharArray.decodeValue(JsonParserCharArray.java:153)&#xa;	at org.apache.groovy.json.internal.JsonParserCharArray.decodeFromChars(JsonParserCharArray.java:43)&#xa;	at org.apache.groovy.json.internal.JsonParserCharArray.parse(JsonParserCharArray.java:380)&#xa;	at org.apache.groovy.json.internal.BaseJsonParser.parse(BaseJsonParser.java:113)&#xa;	at api_getAccessToken.run(api_getAccessToken:26)&#xa;	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)&#xa;	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)&#xa;	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)&#xa;	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)&#xa;	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)&#xa;	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)&#xa;	at TempTestSuite1758188173669.run(TempTestSuite1758188173669.groovy:35)&#xa;	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#xa;	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#xa;	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#xa;"/>
+         <system-out><![CDATA[18-09-2025T15:06:32 - [TEST_CASE][ERROR] - Test Cases/API_Testing/api_getAccessToken: Test Cases/API_Testing/api_getAccessToken FAILED.
+Reason:
+groovy.json.JsonException: Unable to determine the current character, it is not a string, number, array, or object
+
+The current character read is 'I' with an int value of 73
+Unable to determine the current character, it is not a string, number, array, or object
+line number 1
+index number 0
+Invalid request
+^
+	at org.apache.groovy.json.internal.JsonParserCharArray.decodeValueInternal(JsonParserCharArray.java:202)
+	at org.apache.groovy.json.internal.JsonParserCharArray.decodeValue(JsonParserCharArray.java:153)
+	at org.apache.groovy.json.internal.JsonParserCharArray.decodeFromChars(JsonParserCharArray.java:43)
+	at org.apache.groovy.json.internal.JsonParserCharArray.parse(JsonParserCharArray.java:380)
+	at org.apache.groovy.json.internal.BaseJsonParser.parse(BaseJsonParser.java:113)
+	at api_getAccessToken.run(api_getAccessToken:26)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1758188173669.run(TempTestSuite1758188173669.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+
+18-09-2025T15:06:32 - [TEST_STEP][PASSED] - Start listener action : beforeTestCase: null
+
+18-09-2025T15:06:32 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+18-09-2025T15:06:32 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+18-09-2025T15:06:32 - [TEST_STEP][PASSED] - if (toLowerCase().startsWith("api_")): null
+
+18-09-2025T15:06:32 - [TEST_STEP][PASSED] - println(ℹ️ Skipping browser launch for API test case: $testCaseName): null
+
+18-09-2025T15:06:32 - [TEST_STEP][PASSED] - return null: null
+
+18-09-2025T15:06:32 - [TEST_STEP][PASSED] - payLoad = JsonOutput.toJson(JsonFileReader.getSectionData("postPayload", jsonFilePath)): null
+
+18-09-2025T15:06:32 - [TEST_STEP][PASSED] - response = ApiKeywords.sendPost("login", payLoad): Send request successfully
+
+18-09-2025T15:06:33 - [MESSAGE][INFO] - HAR: C:\Users\10835442\Katalon Studio\Luma\Reports\20250918_150613\API_AccessToken\20250918_150613\requests\main\POST_Generic_3.har
+
+18-09-2025T15:06:33 - [MESSAGE][PASSED] - Send request successfully
+
+18-09-2025T15:06:33 - [TEST_STEP][ERROR] - parsedResponse = JsonSlurper().parseText(response.getResponseBodyContent()): Test Cases/API_Testing/api_getAccessToken FAILED.
+Reason:
+groovy.json.JsonException: Unable to determine the current character, it is not a string, number, array, or object
+
+The current character read is 'I' with an int value of 73
+Unable to determine the current character, it is not a string, number, array, or object
+line number 1
+index number 0
+Invalid request
+^
+	at org.apache.groovy.json.internal.JsonParserCharArray.decodeValueInternal(JsonParserCharArray.java:202)
+	at org.apache.groovy.json.internal.JsonParserCharArray.decodeValue(JsonParserCharArray.java:153)
+	at org.apache.groovy.json.internal.JsonParserCharArray.decodeFromChars(JsonParserCharArray.java:43)
+	at org.apache.groovy.json.internal.JsonParserCharArray.parse(JsonParserCharArray.java:380)
+	at org.apache.groovy.json.internal.BaseJsonParser.parse(BaseJsonParser.java:113)
+	at api_getAccessToken.run(api_getAccessToken:26)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1758188173669.run(TempTestSuite1758188173669.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+
+18-09-2025T15:06:33 - [MESSAGE][ERROR] - Test Cases/API_Testing/api_getAccessToken FAILED.
+Reason:
+groovy.json.JsonException: Unable to determine the current character, it is not a string, number, array, or object
+
+The current character read is 'I' with an int value of 73
+Unable to determine the current character, it is not a string, number, array, or object
+line number 1
+index number 0
+Invalid request
+^
+	at org.apache.groovy.json.internal.JsonParserCharArray.decodeValueInternal(JsonParserCharArray.java:202)
+	at org.apache.groovy.json.internal.JsonParserCharArray.decodeValue(JsonParserCharArray.java:153)
+	at org.apache.groovy.json.internal.JsonParserCharArray.decodeFromChars(JsonParserCharArray.java:43)
+	at org.apache.groovy.json.internal.JsonParserCharArray.parse(JsonParserCharArray.java:380)
+	at org.apache.groovy.json.internal.BaseJsonParser.parse(BaseJsonParser.java:113)
+	at api_getAccessToken.run(api_getAccessToken:26)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1758188173669.run(TempTestSuite1758188173669.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+
+18-09-2025T15:06:33 - [TEST_STEP][PASSED] - Start listener action : closeTheBrowser: null
+
+18-09-2025T15:06:33 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+18-09-2025T15:06:33 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+18-09-2025T15:06:33 - [TEST_STEP][PASSED] - testCaseStatus = testCaseContext.getTestCaseStatus(): null
+
+18-09-2025T15:06:33 - [TEST_STEP][PASSED] - println(testCaseStatus): null
+
+18-09-2025T15:06:33 - [TEST_STEP][PASSED] - StatusMap = DependencyHandler.getStatusMap(): null
+
+18-09-2025T15:06:33 - [TEST_STEP][PASSED] - if (StatusMap.containsKey(testCaseName)): null
+
+18-09-2025T15:06:33 - [TEST_STEP][PASSED] - try: null
+
+18-09-2025T15:06:33 - [TEST_STEP][PASSED] - driver = getWebDriver(): null
+
+18-09-2025T15:06:33 - [TEST_STEP][PASSED] - catch (Exception e): null
+
+18-09-2025T15:06:33 - [TEST_STEP][PASSED] - println(⚠️ Error while closing browser: $e.message): null]]></system-out>
+         <system-err><![CDATA[18-09-2025T15:06:32 - [TEST_CASE][ERROR] - Test Cases/API_Testing/api_getAccessToken: Test Cases/API_Testing/api_getAccessToken FAILED.
+Reason:
+groovy.json.JsonException: Unable to determine the current character, it is not a string, number, array, or object
+
+The current character read is 'I' with an int value of 73
+Unable to determine the current character, it is not a string, number, array, or object
+line number 1
+index number 0
+Invalid request
+^
+	at org.apache.groovy.json.internal.JsonParserCharArray.decodeValueInternal(JsonParserCharArray.java:202)
+	at org.apache.groovy.json.internal.JsonParserCharArray.decodeValue(JsonParserCharArray.java:153)
+	at org.apache.groovy.json.internal.JsonParserCharArray.decodeFromChars(JsonParserCharArray.java:43)
+	at org.apache.groovy.json.internal.JsonParserCharArray.parse(JsonParserCharArray.java:380)
+	at org.apache.groovy.json.internal.BaseJsonParser.parse(BaseJsonParser.java:113)
+	at api_getAccessToken.run(api_getAccessToken:26)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1758188173669.run(TempTestSuite1758188173669.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/API_Testing/api_currentUserDetail" time="0.39" classname="Test Cases/API_Testing/api_currentUserDetail" status="ERROR">
+         <properties>
+            <property name="data_binding"><![CDATA[{"(Default) jsonF...":"Include/Data Files/login_data.json"}]]></property>
+         </properties>
+         <error type="ERROR" message="Test Cases/API_Testing/api_currentUserDetail FAILED.&#xa;Reason:&#xa;groovy.lang.MissingPropertyException: No such property: firstName for class: java.lang.String&#xa;	at api_currentUserDetail.run(api_currentUserDetail:33)&#xa;	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)&#xa;	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)&#xa;	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)&#xa;	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)&#xa;	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)&#xa;	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)&#xa;	at TempTestSuite1758188173669.run(TempTestSuite1758188173669.groovy:35)&#xa;	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#xa;	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#xa;	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#xa;"/>
+         <system-out><![CDATA[18-09-2025T15:06:34 - [TEST_CASE][ERROR] - Test Cases/API_Testing/api_currentUserDetail: Test Cases/API_Testing/api_currentUserDetail FAILED.
+Reason:
+groovy.lang.MissingPropertyException: No such property: firstName for class: java.lang.String
+	at api_currentUserDetail.run(api_currentUserDetail:33)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1758188173669.run(TempTestSuite1758188173669.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+
+18-09-2025T15:06:34 - [TEST_STEP][PASSED] - Start listener action : beforeTestCase: null
+
+18-09-2025T15:06:34 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+18-09-2025T15:06:34 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+18-09-2025T15:06:34 - [TEST_STEP][PASSED] - if (toLowerCase().startsWith("api_")): null
+
+18-09-2025T15:06:34 - [TEST_STEP][PASSED] - println(ℹ️ Skipping browser launch for API test case: $testCaseName): null
+
+18-09-2025T15:06:34 - [TEST_STEP][PASSED] - return null: null
+
+18-09-2025T15:06:34 - [TEST_STEP][PASSED] - accessToken = JsonFileReader.getJsonData("DummyJson", "accessToken", jsonFilePath): null
+
+18-09-2025T15:06:34 - [TEST_STEP][PASSED] - headers = ["Authorization":accessToken, "Content-Type":"application/json"]: null
+
+18-09-2025T15:06:34 - [TEST_STEP][PASSED] - response = ApiKeywords.sendGet("me", headers): Send request successfully
+
+18-09-2025T15:06:34 - [MESSAGE][INFO] - HAR: C:\Users\10835442\Katalon Studio\Luma\Reports\20250918_150613\API_AccessToken\20250918_150613\requests\main\GET_Generic_7.har
+
+18-09-2025T15:06:34 - [MESSAGE][PASSED] - Send request successfully
+
+18-09-2025T15:06:34 - [TEST_STEP][PASSED] - parsedResponse = JsonSlurper().parseText(response.getResponseBodyContent()): null
+
+18-09-2025T15:06:34 - [TEST_STEP][ERROR] - JsonFileReader.appendToJsonSection(jsonFilePath, "apiResonse", "firstName", firstName): Test Cases/API_Testing/api_currentUserDetail FAILED.
+Reason:
+groovy.lang.MissingPropertyException: No such property: firstName for class: java.lang.String
+	at api_currentUserDetail.run(api_currentUserDetail:33)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1758188173669.run(TempTestSuite1758188173669.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+
+18-09-2025T15:06:34 - [MESSAGE][ERROR] - Test Cases/API_Testing/api_currentUserDetail FAILED.
+Reason:
+groovy.lang.MissingPropertyException: No such property: firstName for class: java.lang.String
+	at api_currentUserDetail.run(api_currentUserDetail:33)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1758188173669.run(TempTestSuite1758188173669.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+
+18-09-2025T15:06:34 - [TEST_STEP][PASSED] - Start listener action : closeTheBrowser: null
+
+18-09-2025T15:06:34 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+18-09-2025T15:06:34 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+18-09-2025T15:06:34 - [TEST_STEP][PASSED] - testCaseStatus = testCaseContext.getTestCaseStatus(): null
+
+18-09-2025T15:06:34 - [TEST_STEP][PASSED] - println(testCaseStatus): null
+
+18-09-2025T15:06:34 - [TEST_STEP][PASSED] - StatusMap = DependencyHandler.getStatusMap(): null
+
+18-09-2025T15:06:34 - [TEST_STEP][PASSED] - if (StatusMap.containsKey(testCaseName)): null
+
+18-09-2025T15:06:34 - [TEST_STEP][PASSED] - try: null
+
+18-09-2025T15:06:34 - [TEST_STEP][PASSED] - driver = getWebDriver(): null
+
+18-09-2025T15:06:34 - [TEST_STEP][PASSED] - catch (Exception e): null
+
+18-09-2025T15:06:34 - [TEST_STEP][PASSED] - println(⚠️ Error while closing browser: $e.message): null]]></system-out>
+         <system-err><![CDATA[18-09-2025T15:06:34 - [TEST_CASE][ERROR] - Test Cases/API_Testing/api_currentUserDetail: Test Cases/API_Testing/api_currentUserDetail FAILED.
+Reason:
+groovy.lang.MissingPropertyException: No such property: firstName for class: java.lang.String
+	at api_currentUserDetail.run(api_currentUserDetail:33)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1758188173669.run(TempTestSuite1758188173669.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)]]></system-err>
+      </testcase>
+      <system-out><![CDATA[18-09-2025T15:06:24 - [TEST_SUITE][ERROR] - API_AccessToken: null]]></system-out>
+      <system-err><![CDATA[18-09-2025T15:06:24 - [TEST_SUITE][ERROR] - API_AccessToken: null]]></system-err>
+   </testsuite>
+</testsuites>

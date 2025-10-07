@@ -1,0 +1,483 @@
+2025-09-12 16:09:30.223 INFO  c.k.katalon.core.main.TestSuiteExecutor  - START Test Suites/DependentTestcase
+2025-09-12 16:09:30.372 INFO  c.k.katalon.core.main.TestSuiteExecutor  - userFullName = Abinesh R
+2025-09-12 16:09:30.374 INFO  c.k.katalon.core.main.TestSuiteExecutor  - projectName = Luma
+2025-09-12 16:09:30.375 INFO  c.k.katalon.core.main.TestSuiteExecutor  - hostName = 10835442 - 10.235.153.17
+2025-09-12 16:09:30.376 INFO  c.k.katalon.core.main.TestSuiteExecutor  - os = Windows 11 64bit
+2025-09-12 16:09:30.376 INFO  c.k.katalon.core.main.TestSuiteExecutor  - hostAddress = 10.235.153.17
+2025-09-12 16:09:30.378 INFO  c.k.katalon.core.main.TestSuiteExecutor  - katalonVersion = 10.3.1.0
+2025-09-12 16:09:31.098 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-09-12 16:09:31.099 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/TC_SignIn
+2025-09-12 16:09:31.280 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) filepath = Include/Data Files/login_data.json
+2025-09-12 16:09:31.308 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) section = loginPage
+2025-09-12 16:09:31.959 INFO  c.k.k.core.webui.driver.DriverFactory    - Starting 'Chrome' driver
+2025-09-12 16:09:32.051 INFO  c.k.k.core.webui.driver.DriverFactory    - Action delay is set to 0 milliseconds
+Sep 12, 2025 4:09:34 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 140, returning the closest version; found: 138; Please update to a Selenium version that supports CDP version 140
+2025-09-12 16:09:35.510 INFO  c.k.k.core.webui.driver.DriverFactory    - sessionId = 409232a742bbe10bc895fcb824d09fcb
+2025-09-12 16:09:35.512 INFO  c.k.k.core.webui.driver.DriverFactory    - browser = Chrome 140.0.7339.128
+2025-09-12 16:09:35.512 INFO  c.k.k.core.webui.driver.DriverFactory    - platform = Windows 11
+2025-09-12 16:09:35.513 INFO  c.k.k.core.webui.driver.DriverFactory    - seleniumVersion = 4.28.1
+2025-09-12 16:09:35.527 INFO  c.k.k.core.webui.driver.DriverFactory    - proxyInformation = ProxyInformation { proxyOption=NO_PROXY, proxyServerType=HTTP, username=, password=********, proxyServerAddress=, proxyServerPort=0, executionList="", isApplyToDesiredCapabilities=true }
+2025-09-12 16:09:44.505 DEBUG testcase.TC_SignIn                       - 1: try
+2025-09-12 16:09:44.508 DEBUG testcase.TC_SignIn                       - 1: ExtentManager.initReport("LoginTestReport")
+2025-09-12 16:09:45.855 DEBUG testcase.TC_SignIn                       - 2: ExtentManager.createTest("Login Test")
+2025-09-12 16:09:45.875 DEBUG testcase.TC_SignIn                       - 3: ExtentManager.logInfo("Navigating to the sign in page")
+2025-09-12 16:09:45.933 DEBUG testcase.TC_SignIn                       - 4: pages.HomePage.navigateToAccountPage(STOP_ON_FAILURE)
+2025-09-12 16:09:50.130 INFO  k.k.c.m.CustomKeywordDelegatingMetaClass - pages.HomePage.navigateToAccountPage is PASSED
+2025-09-12 16:09:50.138 DEBUG testcase.TC_SignIn                       - 5: ExtentManager.logPass("Navigated to the sign in page")
+2025-09-12 16:09:50.142 DEBUG testcase.TC_SignIn                       - 6: ExtentManager.logInfo("Signing into the account")
+2025-09-12 16:09:50.145 DEBUG testcase.TC_SignIn                       - 7: loginFields = [["id":"input-email", "jsonKey":"email"], ["id":"input-password", "jsonKey":"password"]]
+2025-09-12 16:09:50.151 DEBUG testcase.TC_SignIn                       - 8: loginFields.each({ -> ... })
+2025-09-12 16:09:51.344 INFO  k.k.c.m.CustomKeywordDelegatingMetaClass - pages.LoginPage.inputField is PASSED
+2025-09-12 16:09:52.326 INFO  k.k.c.m.CustomKeywordDelegatingMetaClass - pages.LoginPage.inputField is PASSED
+2025-09-12 16:09:52.327 DEBUG testcase.TC_SignIn                       - 9: pages.LoginPage.clickOnLoginButton(findTestObject("Object Repository/LoginPage/Login_button"), STOP_ON_FAILURE)
+2025-09-12 16:09:53.035 INFO  k.k.c.m.CustomKeywordDelegatingMetaClass - pages.LoginPage.clickOnLoginButton is PASSED
+2025-09-12 16:09:53.038 DEBUG testcase.TC_SignIn                       - 10: ExtentManager.logPass("Signed into the account")
+2025-09-12 16:09:53.042 DEBUG testcase.TC_SignIn                       - 11: ExtentManager.logInfo("Verifying My Account")
+2025-09-12 16:09:53.055 DEBUG testcase.TC_SignIn                       - 12: pages.AccountPage.verifyMyAccount(findTestObject("Object Repository/AccountPage/my_Account_verification"), JsonFileReader.getJsonData(section, "verification_text", filepath), STOP_ON_FAILURE)
+2025-09-12 16:09:57.307 ERROR c.k.k.core.keyword.internal.KeywordMain  - ❌ Actual text 'My Account' and expected text 'My Acc' of test object 'Object Repository/AccountPage/my_Account_verification' are NOT matched. (Root cause: com.kms.katalon.core.exception.StepFailedException: Actual text 'My Account' and expected text 'My Acc' of test object 'Object Repository/AccountPage/my_Account_verification' are NOT matched.
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:175)
+	at com.kms.katalon.core.webui.keyword.builtin.VerifyElementTextKeyword$_verifyElementText_closure1.doCall(VerifyElementTextKeyword.groovy:63)
+	at com.kms.katalon.core.webui.keyword.builtin.VerifyElementTextKeyword$_verifyElementText_closure1.call(VerifyElementTextKeyword.groovy)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:41)
+	at com.kms.katalon.core.webui.keyword.builtin.VerifyElementTextKeyword.verifyElementText(VerifyElementTextKeyword.groovy:78)
+	at com.kms.katalon.core.webui.keyword.builtin.VerifyElementTextKeyword.execute(VerifyElementTextKeyword.groovy:39)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:79)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.verifyElementText(WebUiBuiltInKeywords.groovy:5003)
+	at utils.Helper.verifyText(Helper.groovy:101)
+	at pages.AccountPage.verifyMyAccount(AccountPage.groovy:28)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at com.kms.katalon.core.main.CustomKeywordDelegatingMetaClass.invokeStaticMethod(CustomKeywordDelegatingMetaClass.java:55)
+	at TC_SignIn.run(TC_SignIn:55)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1757673566002.run(TempTestSuite1757673566002.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+)
+2025-09-12 16:09:57.431 ERROR c.k.k.core.keyword.internal.KeywordMain  - ❌ Verify element text of test object 'Object Repository/AccountPage/my_Account_verification' FAILED. (Root cause: com.kms.katalon.core.exception.StepFailedException: Verify element text of test object 'Object Repository/AccountPage/my_Account_verification' FAILED.
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:175)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:49)
+	at com.kms.katalon.core.webui.keyword.builtin.VerifyElementTextKeyword.verifyElementText(VerifyElementTextKeyword.groovy:78)
+	at com.kms.katalon.core.webui.keyword.builtin.VerifyElementTextKeyword.execute(VerifyElementTextKeyword.groovy:39)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:79)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.verifyElementText(WebUiBuiltInKeywords.groovy:5003)
+	at utils.Helper.verifyText(Helper.groovy:101)
+	at pages.AccountPage.verifyMyAccount(AccountPage.groovy:28)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at com.kms.katalon.core.main.CustomKeywordDelegatingMetaClass.invokeStaticMethod(CustomKeywordDelegatingMetaClass.java:55)
+	at TC_SignIn.run(TC_SignIn:55)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1757673566002.run(TempTestSuite1757673566002.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+Caused by: com.kms.katalon.core.exception.StepFailedException: Actual text 'My Account' and expected text 'My Acc' of test object 'Object Repository/AccountPage/my_Account_verification' are NOT matched.
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:175)
+	at com.kms.katalon.core.webui.keyword.builtin.VerifyElementTextKeyword$_verifyElementText_closure1.doCall(VerifyElementTextKeyword.groovy:63)
+	at com.kms.katalon.core.webui.keyword.builtin.VerifyElementTextKeyword$_verifyElementText_closure1.call(VerifyElementTextKeyword.groovy)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:41)
+	... 26 more
+)
+2025-09-12 16:09:58.002 ERROR k.k.c.m.CustomKeywordDelegatingMetaClass - ❌ Verify element text of test object 'Object Repository/AccountPage/my_Account_verification' FAILED.
+2025-09-12 16:09:58.003 DEBUG testcase.TC_SignIn                       - 2: catch (Exception e)
+2025-09-12 16:09:58.006 DEBUG testcase.TC_SignIn                       - 1: isSignInPassed = false
+2025-09-12 16:09:58.009 DEBUG testcase.TC_SignIn                       - 2: ExtentManager.logFail("Signin testcase failed: " + message)
+2025-09-12 16:09:58.124 DEBUG testcase.TC_SignIn                       - 3: takeScreenshot()
+2025-09-12 16:09:58.464 DEBUG testcase.TC_SignIn                       - 3: Finally
+2025-09-12 16:09:58.466 DEBUG testcase.TC_SignIn                       - 1: ExtentManager.flushReport()
+2025-09-12 16:09:59.131 ERROR c.k.katalon.core.main.TestCaseExecutor   - ❌ Test Cases/TC_SignIn FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Verify element text of test object 'Object Repository/AccountPage/my_Account_verification' FAILED.
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:175)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:49)
+	at com.kms.katalon.core.webui.keyword.builtin.VerifyElementTextKeyword.verifyElementText(VerifyElementTextKeyword.groovy:78)
+	at com.kms.katalon.core.webui.keyword.builtin.VerifyElementTextKeyword.execute(VerifyElementTextKeyword.groovy:39)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:79)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.verifyElementText(WebUiBuiltInKeywords.groovy:5003)
+	at utils.Helper.verifyText(Helper.groovy:101)
+	at pages.AccountPage.verifyMyAccount(AccountPage.groovy:28)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at com.kms.katalon.core.main.CustomKeywordDelegatingMetaClass.invokeStaticMethod(CustomKeywordDelegatingMetaClass.java:55)
+	at TC_SignIn.run(TC_SignIn:55)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1757673566002.run(TempTestSuite1757673566002.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+Caused by: com.kms.katalon.core.exception.StepFailedException: Actual text 'My Account' and expected text 'My Acc' of test object 'Object Repository/AccountPage/my_Account_verification' are NOT matched.
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:175)
+	at com.kms.katalon.core.webui.keyword.builtin.VerifyElementTextKeyword$_verifyElementText_closure1.doCall(VerifyElementTextKeyword.groovy:63)
+	at com.kms.katalon.core.webui.keyword.builtin.VerifyElementTextKeyword$_verifyElementText_closure1.call(VerifyElementTextKeyword.groovy)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:41)
+	... 26 more
+
+✅ Browser closed successfully.
+2025-09-12 16:09:59.591 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/TC_SignIn
+2025-09-12 16:09:59.601 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-09-12 16:09:59.601 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/TC_ChangePassword
+2025-09-12 16:09:59.644 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) filepath = Include/Data Files/login_data.json
+2025-09-12 16:09:59.671 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) section = changePasswordPage
+2025-09-12 16:09:59.695 INFO  c.k.k.core.webui.driver.DriverFactory    - Starting 'Chrome' driver
+2025-09-12 16:09:59.701 INFO  c.k.k.core.webui.driver.DriverFactory    - Action delay is set to 0 milliseconds
+Sep 12, 2025 4:10:01 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 140, returning the closest version; found: 138; Please update to a Selenium version that supports CDP version 140
+2025-09-12 16:10:01.875 INFO  c.k.k.core.webui.driver.DriverFactory    - sessionId = 800ef31a1868289395f33cc8bb114f5b
+2025-09-12 16:10:01.875 INFO  c.k.k.core.webui.driver.DriverFactory    - browser = Chrome 140.0.7339.128
+2025-09-12 16:10:01.877 INFO  c.k.k.core.webui.driver.DriverFactory    - platform = Windows 11
+2025-09-12 16:10:01.877 INFO  c.k.k.core.webui.driver.DriverFactory    - seleniumVersion = 4.28.1
+2025-09-12 16:10:01.880 INFO  c.k.k.core.webui.driver.DriverFactory    - proxyInformation = ProxyInformation { proxyOption=NO_PROXY, proxyServerType=HTTP, username=, password=********, proxyServerAddress=, proxyServerPort=0, executionList="", isApplyToDesiredCapabilities=true }
+2025-09-12 16:10:09.989 DEBUG testcase.TC_ChangePassword               - 1: ExtentManager.initReport("ChangePasswordReport")
+2025-09-12 16:10:09.994 DEBUG testcase.TC_ChangePassword               - 2: ExtentManager.createTest("Change Password Test")
+2025-09-12 16:10:09.998 DEBUG testcase.TC_ChangePassword               - 3: try
+2025-09-12 16:10:10.001 DEBUG testcase.TC_ChangePassword               - 1: ExtentManager.logInfo("Signing into the account")
+2025-09-12 16:10:10.003 DEBUG testcase.TC_ChangePassword               - 2: callTestCase(findTestCase("Test Cases/TC_SignIn"), [:])
+2025-09-12 16:10:10.104 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-09-12 16:10:10.104 INFO  c.k.katalon.core.main.TestCaseExecutor   - CALL Test Cases/TC_SignIn
+2025-09-12 16:10:10.131 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) filepath = Include/Data Files/login_data.json
+2025-09-12 16:10:10.132 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) section = loginPage
+2025-09-12 16:10:10.137 DEBUG testcase.TC_SignIn                       - 1: try
+2025-09-12 16:10:10.152 DEBUG testcase.TC_SignIn                       - 1: ExtentManager.initReport("LoginTestReport")
+2025-09-12 16:10:10.166 DEBUG testcase.TC_SignIn                       - 2: ExtentManager.createTest("Login Test")
+2025-09-12 16:10:10.172 DEBUG testcase.TC_SignIn                       - 3: ExtentManager.logInfo("Navigating to the sign in page")
+2025-09-12 16:10:10.183 DEBUG testcase.TC_SignIn                       - 4: pages.HomePage.navigateToAccountPage(STOP_ON_FAILURE)
+2025-09-12 16:10:13.585 INFO  k.k.c.m.CustomKeywordDelegatingMetaClass - pages.HomePage.navigateToAccountPage is PASSED
+2025-09-12 16:10:13.587 DEBUG testcase.TC_SignIn                       - 5: ExtentManager.logPass("Navigated to the sign in page")
+2025-09-12 16:10:13.590 DEBUG testcase.TC_SignIn                       - 6: ExtentManager.logInfo("Signing into the account")
+2025-09-12 16:10:13.593 DEBUG testcase.TC_SignIn                       - 7: loginFields = [["id":"input-email", "jsonKey":"email"], ["id":"input-password", "jsonKey":"password"]]
+2025-09-12 16:10:13.599 DEBUG testcase.TC_SignIn                       - 8: loginFields.each({ -> ... })
+2025-09-12 16:10:14.897 INFO  k.k.c.m.CustomKeywordDelegatingMetaClass - pages.LoginPage.inputField is PASSED
+2025-09-12 16:10:15.971 INFO  k.k.c.m.CustomKeywordDelegatingMetaClass - pages.LoginPage.inputField is PASSED
+2025-09-12 16:10:15.971 DEBUG testcase.TC_SignIn                       - 9: pages.LoginPage.clickOnLoginButton(findTestObject("Object Repository/LoginPage/Login_button"), STOP_ON_FAILURE)
+2025-09-12 16:10:16.894 INFO  k.k.c.m.CustomKeywordDelegatingMetaClass - pages.LoginPage.clickOnLoginButton is PASSED
+2025-09-12 16:10:16.898 DEBUG testcase.TC_SignIn                       - 10: ExtentManager.logPass("Signed into the account")
+2025-09-12 16:10:16.904 DEBUG testcase.TC_SignIn                       - 11: ExtentManager.logInfo("Verifying My Account")
+2025-09-12 16:10:16.917 DEBUG testcase.TC_SignIn                       - 12: pages.AccountPage.verifyMyAccount(findTestObject("Object Repository/AccountPage/my_Account_verification"), JsonFileReader.getJsonData(section, "verification_text", filepath), STOP_ON_FAILURE)
+2025-09-12 16:10:21.301 ERROR c.k.k.core.keyword.internal.KeywordMain  - ❌ Actual text 'My Account' and expected text 'My Acc' of test object 'Object Repository/AccountPage/my_Account_verification' are NOT matched. (Root cause: com.kms.katalon.core.exception.StepFailedException: Actual text 'My Account' and expected text 'My Acc' of test object 'Object Repository/AccountPage/my_Account_verification' are NOT matched.
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:175)
+	at com.kms.katalon.core.webui.keyword.builtin.VerifyElementTextKeyword$_verifyElementText_closure1.doCall(VerifyElementTextKeyword.groovy:63)
+	at com.kms.katalon.core.webui.keyword.builtin.VerifyElementTextKeyword$_verifyElementText_closure1.call(VerifyElementTextKeyword.groovy)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:41)
+	at com.kms.katalon.core.webui.keyword.builtin.VerifyElementTextKeyword.verifyElementText(VerifyElementTextKeyword.groovy:78)
+	at com.kms.katalon.core.webui.keyword.builtin.VerifyElementTextKeyword.execute(VerifyElementTextKeyword.groovy:39)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:79)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.verifyElementText(WebUiBuiltInKeywords.groovy:5003)
+	at utils.Helper.verifyText(Helper.groovy:101)
+	at pages.AccountPage.verifyMyAccount(AccountPage.groovy:28)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at com.kms.katalon.core.main.CustomKeywordDelegatingMetaClass.invokeStaticMethod(CustomKeywordDelegatingMetaClass.java:55)
+	at TC_SignIn.run(TC_SignIn:55)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseMain.runTestCase(TestCaseMain.java:151)
+	at com.kms.katalon.core.keyword.builtin.CallTestCaseKeyword$_callTestCase_closure1.doCall(CallTestCaseKeyword.groovy:59)
+	at com.kms.katalon.core.keyword.builtin.CallTestCaseKeyword$_callTestCase_closure1.call(CallTestCaseKeyword.groovy)
+	at com.kms.katalon.core.keyword.internal.KeywordMain.runKeyword(KeywordMain.groovy:75)
+	at com.kms.katalon.core.keyword.builtin.CallTestCaseKeyword.callTestCase(CallTestCaseKeyword.groovy:81)
+	at com.kms.katalon.core.keyword.builtin.CallTestCaseKeyword.execute(CallTestCaseKeyword.groovy:44)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:79)
+	at com.kms.katalon.core.keyword.BuiltinKeywords.callTestCase(BuiltinKeywords.groovy:326)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at TC_ChangePassword.run(TC_ChangePassword:34)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1757673566002.run(TempTestSuite1757673566002.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+)
+2025-09-12 16:10:21.439 ERROR c.k.k.core.keyword.internal.KeywordMain  - ❌ Verify element text of test object 'Object Repository/AccountPage/my_Account_verification' FAILED. (Root cause: com.kms.katalon.core.exception.StepFailedException: Verify element text of test object 'Object Repository/AccountPage/my_Account_verification' FAILED.
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:175)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:49)
+	at com.kms.katalon.core.webui.keyword.builtin.VerifyElementTextKeyword.verifyElementText(VerifyElementTextKeyword.groovy:78)
+	at com.kms.katalon.core.webui.keyword.builtin.VerifyElementTextKeyword.execute(VerifyElementTextKeyword.groovy:39)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:79)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.verifyElementText(WebUiBuiltInKeywords.groovy:5003)
+	at utils.Helper.verifyText(Helper.groovy:101)
+	at pages.AccountPage.verifyMyAccount(AccountPage.groovy:28)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at com.kms.katalon.core.main.CustomKeywordDelegatingMetaClass.invokeStaticMethod(CustomKeywordDelegatingMetaClass.java:55)
+	at TC_SignIn.run(TC_SignIn:55)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseMain.runTestCase(TestCaseMain.java:151)
+	at com.kms.katalon.core.keyword.builtin.CallTestCaseKeyword$_callTestCase_closure1.doCall(CallTestCaseKeyword.groovy:59)
+	at com.kms.katalon.core.keyword.builtin.CallTestCaseKeyword$_callTestCase_closure1.call(CallTestCaseKeyword.groovy)
+	at com.kms.katalon.core.keyword.internal.KeywordMain.runKeyword(KeywordMain.groovy:75)
+	at com.kms.katalon.core.keyword.builtin.CallTestCaseKeyword.callTestCase(CallTestCaseKeyword.groovy:81)
+	at com.kms.katalon.core.keyword.builtin.CallTestCaseKeyword.execute(CallTestCaseKeyword.groovy:44)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:79)
+	at com.kms.katalon.core.keyword.BuiltinKeywords.callTestCase(BuiltinKeywords.groovy:326)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at TC_ChangePassword.run(TC_ChangePassword:34)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1757673566002.run(TempTestSuite1757673566002.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+Caused by: com.kms.katalon.core.exception.StepFailedException: Actual text 'My Account' and expected text 'My Acc' of test object 'Object Repository/AccountPage/my_Account_verification' are NOT matched.
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:175)
+	at com.kms.katalon.core.webui.keyword.builtin.VerifyElementTextKeyword$_verifyElementText_closure1.doCall(VerifyElementTextKeyword.groovy:63)
+	at com.kms.katalon.core.webui.keyword.builtin.VerifyElementTextKeyword$_verifyElementText_closure1.call(VerifyElementTextKeyword.groovy)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:41)
+	... 45 more
+)
+2025-09-12 16:10:21.915 ERROR k.k.c.m.CustomKeywordDelegatingMetaClass - ❌ Verify element text of test object 'Object Repository/AccountPage/my_Account_verification' FAILED.
+2025-09-12 16:10:21.917 DEBUG testcase.TC_SignIn                       - 2: catch (Exception e)
+2025-09-12 16:10:21.918 DEBUG testcase.TC_SignIn                       - 1: isSignInPassed = false
+2025-09-12 16:10:21.918 DEBUG testcase.TC_SignIn                       - 2: ExtentManager.logFail("Signin testcase failed: " + message)
+2025-09-12 16:10:22.026 DEBUG testcase.TC_SignIn                       - 3: takeScreenshot()
+2025-09-12 16:10:22.391 DEBUG testcase.TC_SignIn                       - 3: Finally
+2025-09-12 16:10:22.392 DEBUG testcase.TC_SignIn                       - 1: ExtentManager.flushReport()
+2025-09-12 16:10:22.550 ERROR c.k.katalon.core.main.TestCaseExecutor   - ❌ Test Cases/TC_SignIn FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Verify element text of test object 'Object Repository/AccountPage/my_Account_verification' FAILED.
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:175)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:49)
+	at com.kms.katalon.core.webui.keyword.builtin.VerifyElementTextKeyword.verifyElementText(VerifyElementTextKeyword.groovy:78)
+	at com.kms.katalon.core.webui.keyword.builtin.VerifyElementTextKeyword.execute(VerifyElementTextKeyword.groovy:39)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:79)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.verifyElementText(WebUiBuiltInKeywords.groovy:5003)
+	at utils.Helper.verifyText(Helper.groovy:101)
+	at pages.AccountPage.verifyMyAccount(AccountPage.groovy:28)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at com.kms.katalon.core.main.CustomKeywordDelegatingMetaClass.invokeStaticMethod(CustomKeywordDelegatingMetaClass.java:55)
+	at TC_SignIn.run(TC_SignIn:55)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseMain.runTestCase(TestCaseMain.java:151)
+	at com.kms.katalon.core.keyword.builtin.CallTestCaseKeyword$_callTestCase_closure1.doCall(CallTestCaseKeyword.groovy:59)
+	at com.kms.katalon.core.keyword.builtin.CallTestCaseKeyword$_callTestCase_closure1.call(CallTestCaseKeyword.groovy)
+	at com.kms.katalon.core.keyword.internal.KeywordMain.runKeyword(KeywordMain.groovy:75)
+	at com.kms.katalon.core.keyword.builtin.CallTestCaseKeyword.callTestCase(CallTestCaseKeyword.groovy:81)
+	at com.kms.katalon.core.keyword.builtin.CallTestCaseKeyword.execute(CallTestCaseKeyword.groovy:44)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:79)
+	at com.kms.katalon.core.keyword.BuiltinKeywords.callTestCase(BuiltinKeywords.groovy:326)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at TC_ChangePassword.run(TC_ChangePassword:34)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1757673566002.run(TempTestSuite1757673566002.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+Caused by: com.kms.katalon.core.exception.StepFailedException: Actual text 'My Account' and expected text 'My Acc' of test object 'Object Repository/AccountPage/my_Account_verification' are NOT matched.
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:175)
+	at com.kms.katalon.core.webui.keyword.builtin.VerifyElementTextKeyword$_verifyElementText_closure1.doCall(VerifyElementTextKeyword.groovy:63)
+	at com.kms.katalon.core.webui.keyword.builtin.VerifyElementTextKeyword$_verifyElementText_closure1.call(VerifyElementTextKeyword.groovy)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:41)
+	... 45 more
+
+2025-09-12 16:10:22.555 INFO  c.k.katalon.core.main.TestCaseExecutor   - END CALL Test Cases/TC_SignIn
+2025-09-12 16:10:22.555 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-09-12 16:10:22.570 ERROR c.k.k.core.keyword.internal.KeywordMain  - ❌ Unable to call Test Case 'Test Cases/TC_SignIn' (Root cause: com.kms.katalon.core.exception.StepFailedException: Call Test Case 'Test Cases/TC_SignIn' failed
+	at com.kms.katalon.core.keyword.builtin.CallTestCaseKeyword$_callTestCase_closure1.doCall(CallTestCaseKeyword.groovy:63)
+	at com.kms.katalon.core.keyword.builtin.CallTestCaseKeyword$_callTestCase_closure1.call(CallTestCaseKeyword.groovy)
+	at com.kms.katalon.core.keyword.internal.KeywordMain.runKeyword(KeywordMain.groovy:75)
+	at com.kms.katalon.core.keyword.builtin.CallTestCaseKeyword.callTestCase(CallTestCaseKeyword.groovy:81)
+	at com.kms.katalon.core.keyword.builtin.CallTestCaseKeyword.execute(CallTestCaseKeyword.groovy:44)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:79)
+	at com.kms.katalon.core.keyword.BuiltinKeywords.callTestCase(BuiltinKeywords.groovy:326)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at TC_ChangePassword.run(TC_ChangePassword:34)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1757673566002.run(TempTestSuite1757673566002.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+Caused by: com.kms.katalon.core.exception.StepFailedException: Verify element text of test object 'Object Repository/AccountPage/my_Account_verification' FAILED.
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:175)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:49)
+	at com.kms.katalon.core.webui.keyword.builtin.VerifyElementTextKeyword.verifyElementText(VerifyElementTextKeyword.groovy:78)
+	at com.kms.katalon.core.webui.keyword.builtin.VerifyElementTextKeyword.execute(VerifyElementTextKeyword.groovy:39)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:79)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.verifyElementText(WebUiBuiltInKeywords.groovy:5003)
+	at utils.Helper.verifyText(Helper.groovy:101)
+	at pages.AccountPage.verifyMyAccount(AccountPage.groovy:28)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at com.kms.katalon.core.main.CustomKeywordDelegatingMetaClass.invokeStaticMethod(CustomKeywordDelegatingMetaClass.java:55)
+	at TC_SignIn.run(TC_SignIn:55)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseMain.runTestCase(TestCaseMain.java:151)
+	at com.kms.katalon.core.keyword.builtin.CallTestCaseKeyword$_callTestCase_closure1.doCall(CallTestCaseKeyword.groovy:59)
+	... 25 more
+Caused by: com.kms.katalon.core.exception.StepFailedException: Actual text 'My Account' and expected text 'My Acc' of test object 'Object Repository/AccountPage/my_Account_verification' are NOT matched.
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:175)
+	at com.kms.katalon.core.webui.keyword.builtin.VerifyElementTextKeyword$_verifyElementText_closure1.doCall(VerifyElementTextKeyword.groovy:63)
+	at com.kms.katalon.core.webui.keyword.builtin.VerifyElementTextKeyword$_verifyElementText_closure1.call(VerifyElementTextKeyword.groovy)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:41)
+	... 45 more
+)
+2025-09-12 16:10:22.575 DEBUG testcase.TC_ChangePassword               - 4: catch (Exception e)
+2025-09-12 16:10:22.577 DEBUG testcase.TC_ChangePassword               - 1: ExtentManager.logFail("Failed to sign into the account: " + message)
+2025-09-12 16:10:22.686 DEBUG testcase.TC_ChangePassword               - 6: try
+2025-09-12 16:10:22.687 DEBUG testcase.TC_ChangePassword               - 1: ExtentManager.logInfo("Navigating to change password page")
+2025-09-12 16:10:22.689 DEBUG testcase.TC_ChangePassword               - 2: pages.AccountPage.clickOnChangePassword(findTestObject("Object Repository/AccountPage/changePassword"), STOP_ON_FAILURE)
+2025-09-12 16:10:25.534 INFO  k.k.c.m.CustomKeywordDelegatingMetaClass - pages.AccountPage.clickOnChangePassword is PASSED
+2025-09-12 16:10:25.540 DEBUG testcase.TC_ChangePassword               - 3: ExtentManager.logPass("Navigated to change password page")
+2025-09-12 16:10:25.541 DEBUG testcase.TC_ChangePassword               - 9: try
+2025-09-12 16:10:25.541 DEBUG testcase.TC_ChangePassword               - 1: ExtentManager.logInfo("Setting up a new password")
+2025-09-12 16:10:25.549 DEBUG testcase.TC_ChangePassword               - 2: pages.PasswordChangePage.changingPassword(JsonFileReader.getJsonData(section, "password", filepath), STOP_ON_FAILURE)
+2025-09-12 16:10:28.560 INFO  k.k.c.m.CustomKeywordDelegatingMetaClass - pages.PasswordChangePage.changingPassword is PASSED
+2025-09-12 16:10:28.561 DEBUG testcase.TC_ChangePassword               - 3: ExtentManager.logPass("New password has been set successfully")
+2025-09-12 16:10:28.564 DEBUG testcase.TC_ChangePassword               - 12: try
+2025-09-12 16:10:28.567 DEBUG testcase.TC_ChangePassword               - 1: ExtentManager.logInfo("Verifying Password Change Text")
+2025-09-12 16:10:28.569 DEBUG testcase.TC_ChangePassword               - 2: pages.AccountPage.verifyPasswordChange(findTestObject("Object Repository/AccountPage/passwordChangedText"), JsonFileReader.getJsonData(section, "verifyText", filepath), STOP_ON_FAILURE)
+2025-09-12 16:10:31.443 INFO  k.k.c.m.CustomKeywordDelegatingMetaClass - pages.AccountPage.verifyPasswordChange is PASSED
+2025-09-12 16:10:31.445 DEBUG testcase.TC_ChangePassword               - 3: ExtentManager.logPass("Verified Password Change Text")
+2025-09-12 16:10:31.447 DEBUG testcase.TC_ChangePassword               - 15: try
+2025-09-12 16:10:31.449 DEBUG testcase.TC_ChangePassword               - 1: ExtentManager.logInfo("Updating login password in JSON file")
+2025-09-12 16:10:31.450 DEBUG testcase.TC_ChangePassword               - 2: JsonFileReader.updateJsonValue("loginPage", "password", JsonFileReader.getJsonData(section, "password", filepath), filepath)
+Updated 'password' in 'loginPage' section to 'Password@123'.
+2025-09-12 16:10:31.556 DEBUG testcase.TC_ChangePassword               - 3: ExtentManager.logPass("Updated login password in JSON file")
+2025-09-12 16:10:31.559 DEBUG testcase.TC_ChangePassword               - 18: try
+2025-09-12 16:10:31.562 DEBUG testcase.TC_ChangePassword               - 1: ExtentManager.logInfo("Navigating to change password page")
+2025-09-12 16:10:31.565 DEBUG testcase.TC_ChangePassword               - 2: pages.AccountPage.clickOnChangePassword(findTestObject("Object Repository/AccountPage/changePassword"))
+2025-09-12 16:10:31.598 ERROR k.k.c.m.CustomKeywordDelegatingMetaClass - ❌ No signature of method: pages.AccountPage.clickOnChangePassword() is applicable for argument types: (com.kms.katalon.core.testobject.TestObject) values: [TestObject - 'Object Repository/AccountPage/changePassword']
+Possible solutions: clickOnChangePassword(com.kms.katalon.core.testobject.TestObject, com.kms.katalon.core.model.FailureHandling)
+2025-09-12 16:10:31.603 DEBUG testcase.TC_ChangePassword               - 19: catch (Exception e)
+2025-09-12 16:10:31.605 DEBUG testcase.TC_ChangePassword               - 1: ExtentManager.logFail("Failed to navigate to change password page: " + message)
+2025-09-12 16:10:31.731 DEBUG testcase.TC_ChangePassword               - 21: try
+2025-09-12 16:10:31.733 DEBUG testcase.TC_ChangePassword               - 1: ExtentManager.logInfo("Setting up a new password")
+2025-09-12 16:10:31.734 DEBUG testcase.TC_ChangePassword               - 2: pages.PasswordChangePage.changingPassword(JsonFileReader.getJsonData(section, "password", filepath))
+2025-09-12 16:10:31.745 ERROR k.k.c.m.CustomKeywordDelegatingMetaClass - ❌ No signature of method: pages.PasswordChangePage.changingPassword() is applicable for argument types: (String) values: [Password@123]
+Possible solutions: changingPassword(java.lang.String, com.kms.katalon.core.model.FailureHandling)
+2025-09-12 16:10:31.749 DEBUG testcase.TC_ChangePassword               - 22: catch (Exception e)
+2025-09-12 16:10:31.751 DEBUG testcase.TC_ChangePassword               - 1: ExtentManager.logFail("Failed to set new password: " + message)
+2025-09-12 16:10:31.865 DEBUG testcase.TC_ChangePassword               - 24: try
+2025-09-12 16:10:31.868 DEBUG testcase.TC_ChangePassword               - 1: ExtentManager.logInfo("Verifying Password Change Text")
+2025-09-12 16:10:31.870 DEBUG testcase.TC_ChangePassword               - 2: pages.AccountPage.verifyPasswordChange(findTestObject("Object Repository/AccountPage/passwordChangedText"), JsonFileReader.getJsonData(section, "verifyText", filepath), STOP_ON_FAILURE)
+2025-09-12 16:10:32.413 INFO  k.k.c.m.CustomKeywordDelegatingMetaClass - pages.AccountPage.verifyPasswordChange is PASSED
+2025-09-12 16:10:32.414 DEBUG testcase.TC_ChangePassword               - 3: ExtentManager.logPass("Verified Password Change Text")
+2025-09-12 16:10:32.416 DEBUG testcase.TC_ChangePassword               - 27: try
+2025-09-12 16:10:32.417 DEBUG testcase.TC_ChangePassword               - 1: ExtentManager.logInfo("Updating login password in JSON file")
+2025-09-12 16:10:32.419 DEBUG testcase.TC_ChangePassword               - 2: JsonFileReader.updateJsonValue("loginPage", "password", JsonFileReader.getJsonData(section, "password", filepath), filepath)
+Updated 'password' in 'loginPage' section to 'Password@123'.
+2025-09-12 16:10:32.432 DEBUG testcase.TC_ChangePassword               - 3: ExtentManager.logPass("Updated login password in JSON file")
+2025-09-12 16:10:32.434 DEBUG testcase.TC_ChangePassword               - 30: ExtentManager.flushReport()
+2025-09-12 16:10:32.543 ERROR c.k.katalon.core.main.TestCaseExecutor   - ❌ Test Cases/TC_ChangePassword FAILED.
+Reason:
+org.codehaus.groovy.runtime.metaclass.MissingMethodExceptionNoStack: No signature of method: pages.PasswordChangePage.changingPassword() is applicable for argument types: (String) values: [Password@123]
+Possible solutions: changingPassword(java.lang.String, com.kms.katalon.core.model.FailureHandling)
+
+2025-09-12 16:10:32.569 ERROR c.k.katalon.core.main.TestCaseExecutor   - ❌ Test Cases/TC_ChangePassword FAILED.
+Reason:
+org.codehaus.groovy.runtime.metaclass.MissingMethodExceptionNoStack: No signature of method: pages.AccountPage.clickOnChangePassword() is applicable for argument types: (com.kms.katalon.core.testobject.TestObject) values: [TestObject - 'Object Repository/AccountPage/changePassword']
+Possible solutions: clickOnChangePassword(com.kms.katalon.core.testobject.TestObject, com.kms.katalon.core.model.FailureHandling)
+
+✅ Browser closed successfully.
+2025-09-12 16:10:33.070 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/TC_ChangePassword
+2025-09-12 16:10:33.121 INFO  c.k.katalon.core.main.TestSuiteExecutor  - --------------------
+2025-09-12 16:10:33.121 INFO  c.k.katalon.core.main.TestSuiteExecutor  - END Test Suites/DependentTestcase
+2025-09-12 16:10:33.121 INFO  c.k.katalon.core.main.TestSuiteExecutor  - ====================

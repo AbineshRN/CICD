@@ -1,0 +1,27 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+API_Testcases,,,,17-09-2025 09:54:46,17-09-2025 09:54:50,4.447s,PASSED
+,,,,,,,
+Test Cases/JsonPlaceHolder/api_SignIn,,,,17-09-2025 09:54:47,17-09-2025 09:54:50,3.746s,PASSED
+"DATA BINDING - {""(Default) getSc..."":""Include/Data Files/get_response_schema.json"",""(Default) postS..."":""Include/Data Files/post_login_response_schema.json"",""(Default) filep..."":""https://68c8e78aceef5a150f629ed5.mockapi.io/sign_in/credentials""}",,,,,,,
+Start listener action : beforeTestCase,,,,17-09-2025 09:54:47,17-09-2025 09:54:47,0.109s,PASSED
+"logInfo(""Sending GET request to /credentials"")",,,,17-09-2025 09:54:47,17-09-2025 09:54:47,0.013s,PASSED
+"getresponse = ApiKeywords.sendGet(""/credentials"")",,,,17-09-2025 09:54:47,17-09-2025 09:54:50,2.438s,PASSED
+"verifyResponseStatusCode(getresponse, 200)",,,,17-09-2025 09:54:50,17-09-2025 09:54:50,0.028s,PASSED
+"logInfo(""GET response status code verified as 200"")",,,,17-09-2025 09:54:50,17-09-2025 09:54:50,0.004s,PASSED
+credentialList = JsonSlurper().parseText(getresponse.getResponseBodyContent()),,,,17-09-2025 09:54:50,17-09-2025 09:54:50,0.042s,PASSED
+"logInfo(""Parsed GET response body"")",,,,17-09-2025 09:54:50,17-09-2025 09:54:50,0.004s,PASSED
+"getResponseJson = JsonOutput.toJson(JsonFileReader.getSectionData(credentialList, ""loginPage""))",,,,17-09-2025 09:54:50,17-09-2025 09:54:50,0.039s,PASSED
+"logInfo(""Extracted loginPage section from credentials list"")",,,,17-09-2025 09:54:50,17-09-2025 09:54:50,0.005s,PASSED
+"logInfo(""Validating GET response JSON against schema: "" + getSchemaFilePath)",,,,17-09-2025 09:54:50,17-09-2025 09:54:50,0.004s,PASSED
+"validateJsonAgainstSchema(getResponseJson, getSchemaFilePath)",,,,17-09-2025 09:54:50,17-09-2025 09:54:50,0.147s,PASSED
+"markPassed(""GET response schema validation passed"")",,,,17-09-2025 09:54:50,17-09-2025 09:54:50,0.016s,PASSED
+"logInfo(""Sending POST request to /credentials with extracted loginPage data"")",,,,17-09-2025 09:54:50,17-09-2025 09:54:50,0.004s,PASSED
+"postResponse = ApiKeywords.sendPost(""/credentials"", getResponseJson)",,,,17-09-2025 09:54:50,17-09-2025 09:54:50,0.349s,PASSED
+"verifyResponseStatusCode(postResponse, 201)",,,,17-09-2025 09:54:50,17-09-2025 09:54:50,0.013s,PASSED
+"logInfo(""POST response status code verified as 201"")",,,,17-09-2025 09:54:50,17-09-2025 09:54:50,0.005s,PASSED
+postResponseBody = postResponse.getResponseBodyContent(),,,,17-09-2025 09:54:50,17-09-2025 09:54:50,0.003s,PASSED
+"logInfo(""Extracted POST response body"")",,,,17-09-2025 09:54:50,17-09-2025 09:54:50,0.005s,PASSED
+"logInfo(""Validating POST response JSON against schema: "" + postSchemaFilePath)",,,,17-09-2025 09:54:50,17-09-2025 09:54:50,0.004s,PASSED
+"validateJsonAgainstSchema(postResponseBody, postSchemaFilePath)",,,,17-09-2025 09:54:50,17-09-2025 09:54:50,0.019s,PASSED
+"markPassed(""POST response schema validation passed"")",,,,17-09-2025 09:54:50,17-09-2025 09:54:50,0.004s,PASSED
+Start listener action : closeTheBrowser,,,,17-09-2025 09:54:50,17-09-2025 09:54:50,0.146s,PASSED

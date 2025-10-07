@@ -1,0 +1,100 @@
+2025-09-19 15:30:29.053 INFO  c.k.katalon.core.main.TestSuiteExecutor  - START Test Suites/API_Testcases
+2025-09-19 15:30:29.222 INFO  c.k.katalon.core.main.TestSuiteExecutor  - userFullName = Abinesh R
+2025-09-19 15:30:29.223 INFO  c.k.katalon.core.main.TestSuiteExecutor  - projectName = Luma
+2025-09-19 15:30:29.223 INFO  c.k.katalon.core.main.TestSuiteExecutor  - hostName = 10835442 - 10.235.155.176
+2025-09-19 15:30:29.225 INFO  c.k.katalon.core.main.TestSuiteExecutor  - os = Windows 11 64bit
+2025-09-19 15:30:29.226 INFO  c.k.katalon.core.main.TestSuiteExecutor  - hostAddress = 10.235.155.176
+2025-09-19 15:30:29.228 INFO  c.k.katalon.core.main.TestSuiteExecutor  - katalonVersion = 10.3.1.0
+2025-09-19 15:30:30.037 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-09-19 15:30:30.037 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/API_Testing/TC01_localToServer_Api
+2025-09-19 15:30:30.159 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) filepath = https://68c8e78aceef5a150f629ed5.mockapi.io/sign_in/credentials
+2025-09-19 15:30:30.192 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) postSchemaFilePath = Include/Data Files/post_login_response_schema.json
+2025-09-19 15:30:30.220 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) masterSchemaFilePath = Include/Data Files/MasterSchema.json
+2025-09-19 15:30:30.258 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) systemJsonFilePath = Include/Data Files/login_data.json
+ℹ️ Skipping browser launch for API test case: TC01_localToServer_Api
+2025-09-19 15:30:30.701 DEBUG testcase.TC01_localToServer_Api          - 1: logInfo("Sending POST request to /credentials to create new credentials")
+2025-09-19 15:30:30.714 INFO  com.kms.katalon.core.util.KeywordUtil    - Sending POST request to /credentials to create new credentials
+2025-09-19 15:30:30.720 DEBUG testcase.TC01_localToServer_Api          - 2: postPayload = JsonOutput.toJson(JsonFileReader.getSectionData("loginPage", systemJsonFilePath))
+2025-09-19 15:30:30.811 DEBUG testcase.TC01_localToServer_Api          - 3: println(postPayload)
+{"email":"alicesmith.38@gmail.com","password":"Password@123","verification_text":"My Acc"}
+2025-09-19 15:30:30.822 DEBUG testcase.TC01_localToServer_Api          - 4: postResponse = ApiKeywords.sendPost("/credentials", postPayload)
+2025-09-19 15:30:55.525 INFO  c.k.k.core.webservice.common.HarLogger   - HAR: C:\Users\10835442\Katalon Studio\Luma\Reports\20250919_153022\API_Testcases\20250919_153022\requests\main\POST_Generic_0.har
+2025-09-19 15:30:55.653 DEBUG testcase.TC01_localToServer_Api          - 5: verifyResponseStatusCode(postResponse, 201)
+2025-09-19 15:30:55.685 DEBUG testcase.TC01_localToServer_Api          - 6: logInfo("POST response status code verified as 201")
+2025-09-19 15:30:55.689 INFO  com.kms.katalon.core.util.KeywordUtil    - POST response status code verified as 201
+2025-09-19 15:30:55.692 DEBUG testcase.TC01_localToServer_Api          - 7: postResponseBody = postResponse.getResponseBodyContent()
+2025-09-19 15:30:55.706 DEBUG testcase.TC01_localToServer_Api          - 8: println(postResponseBody)
+{"id":"7","email":"alicesmith.38@gmail.com","password":"Password@123","verification_text":"My Acc"}
+2025-09-19 15:30:55.710 DEBUG testcase.TC01_localToServer_Api          - 9: createdCredential = JsonSlurper().parseText(postResponseBody)
+2025-09-19 15:30:55.718 DEBUG testcase.TC01_localToServer_Api          - 10: println(createdCredential)
+[id:7, email:alicesmith.38@gmail.com, password:Password@123, verification_text:My Acc]
+2025-09-19 15:30:55.723 DEBUG testcase.TC01_localToServer_Api          - 11: credentialId = id
+2025-09-19 15:30:55.729 DEBUG testcase.TC01_localToServer_Api          - 12: JsonFileReader.appendToJsonSection(systemJsonFilePath, "postData", "CredentialId", credentialId)
+2025-09-19 15:30:55.807 DEBUG testcase.TC01_localToServer_Api          - 13: logInfo("Created credential ID: " + credentialId)
+2025-09-19 15:30:55.813 INFO  com.kms.katalon.core.util.KeywordUtil    - Created credential ID: 7
+2025-09-19 15:30:55.817 DEBUG testcase.TC01_localToServer_Api          - 14: validateJsonAgainstSchema(postResponseBody, JsonOutput.toJson(JsonFileReader.getSectionData("postResponse", masterSchemaFilePath)))
+2025-09-19 15:30:55.994 DEBUG testcase.TC01_localToServer_Api          - 15: markPassed("POST response schema validation passed")
+2025-09-19 15:30:55.999 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ POST response schema validation passed
+PASSED
+⚠️ Error while closing browser: Browser is not opened
+Build info: version: '4.28.1', revision: '73f5ad48a2'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: driver.version: unknown
+2025-09-19 15:30:56.226 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/API_Testing/TC01_localToServer_Api
+2025-09-19 15:30:56.239 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-09-19 15:30:56.240 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/API_Testing/TC02_updatingCred_Api
+2025-09-19 15:30:56.314 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) jsonFilePath = Include/Data Files/login_data.json
+2025-09-19 15:30:56.318 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) schemaFilePath = Include/Data Files/MasterSchema.json
+ℹ️ Skipping browser launch for API test case: TC02_updatingCred_Api
+2025-09-19 15:30:56.591 DEBUG testcase.TC02_updatingCred_Api           - 1: credentialId = JsonFileReader.getJsonData("postData", "CredentialId", jsonFilePath)
+2025-09-19 15:30:56.602 DEBUG testcase.TC02_updatingCred_Api           - 2: logInfo("Sending PATCH request to /credentials/" + credentialId + " to update password")
+2025-09-19 15:30:56.606 INFO  com.kms.katalon.core.util.KeywordUtil    - Sending PATCH request to /credentials/7 to update password
+2025-09-19 15:30:56.608 DEBUG testcase.TC02_updatingCred_Api           - 3: patchPayload = JsonOutput.toJson(["password":"NewPassword@456"])
+2025-09-19 15:30:56.611 DEBUG testcase.TC02_updatingCred_Api           - 4: patchResponse = ApiKeywords.sendPatch("/credentials/" + credentialId, patchPayload)
+2025-09-19 15:30:56.930 INFO  c.k.k.core.webservice.common.HarLogger   - HAR: C:\Users\10835442\Katalon Studio\Luma\Reports\20250919_153022\API_Testcases\20250919_153022\requests\main\PATCH_Generic_1.har
+2025-09-19 15:30:56.955 DEBUG testcase.TC02_updatingCred_Api           - 5: verifyResponseStatusCode(patchResponse, 200)
+2025-09-19 15:30:57.002 DEBUG testcase.TC02_updatingCred_Api           - 6: println(patchResponse.getResponseBodyContent())
+{"id":"7","email":"alicesmith.38@gmail.com","password":"NewPassword@456","verification_text":"My Acc"}
+2025-09-19 15:30:57.020 DEBUG testcase.TC02_updatingCred_Api           - 7: validateJsonAgainstSchema(patchResponse.getResponseBodyContent(), JsonOutput.toJson(JsonFileReader.getSectionData("patchResponse", schemaFilePath)))
+2025-09-19 15:30:57.056 DEBUG testcase.TC02_updatingCred_Api           - 8: markPassed("PATCH password update successful")
+2025-09-19 15:30:57.060 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ PATCH password update successful
+PASSED
+⚠️ Error while closing browser: Browser is not opened
+Build info: version: '4.28.1', revision: '73f5ad48a2'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: driver.version: unknown
+2025-09-19 15:30:57.085 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/API_Testing/TC02_updatingCred_Api
+2025-09-19 15:30:57.091 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-09-19 15:30:57.092 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/API_Testing/TC03_gettingCredFromServer_Api
+2025-09-19 15:30:57.117 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) jsonFilePath = Include/Data Files/login_data.json
+2025-09-19 15:30:57.118 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) masterSchemaFilePath = Include/Data Files/MasterSchema.json
+ℹ️ Skipping browser launch for API test case: TC03_gettingCredFromServer_Api
+2025-09-19 15:30:57.286 DEBUG t.TC03_gettingCredFromServer_Api         - 1: credentialId = JsonFileReader.getJsonData("postData", "CredentialId", jsonFilePath)
+2025-09-19 15:30:57.292 DEBUG t.TC03_gettingCredFromServer_Api         - 2: logInfo("Sending GET request to /credentials/" + credentialId)
+2025-09-19 15:30:57.295 INFO  com.kms.katalon.core.util.KeywordUtil    - Sending GET request to /credentials/7
+2025-09-19 15:30:57.297 DEBUG t.TC03_gettingCredFromServer_Api         - 3: getResponse = ApiKeywords.sendGet("/credentials/" + credentialId)
+2025-09-19 15:30:57.603 INFO  c.k.k.core.webservice.common.HarLogger   - HAR: C:\Users\10835442\Katalon Studio\Luma\Reports\20250919_153022\API_Testcases\20250919_153022\requests\main\GET_Generic_2.har
+2025-09-19 15:30:57.615 DEBUG t.TC03_gettingCredFromServer_Api         - 4: verifyResponseStatusCode(getResponse, 200)
+2025-09-19 15:30:57.636 DEBUG t.TC03_gettingCredFromServer_Api         - 5: logInfo("GET response status code verified as 200")
+2025-09-19 15:30:57.640 INFO  com.kms.katalon.core.util.KeywordUtil    - GET response status code verified as 200
+2025-09-19 15:30:57.643 DEBUG t.TC03_gettingCredFromServer_Api         - 6: getResponseBody = getResponse.getResponseBodyContent()
+2025-09-19 15:30:57.648 DEBUG t.TC03_gettingCredFromServer_Api         - 7: validateJsonAgainstSchema(getResponseBody, JsonOutput.toJson(JsonFileReader.getSectionData("postResponse", masterSchemaFilePath)))
+2025-09-19 15:30:57.666 DEBUG t.TC03_gettingCredFromServer_Api         - 8: markPassed("GET response schema validation passed")
+2025-09-19 15:30:57.668 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ GET response schema validation passed
+2025-09-19 15:30:57.670 DEBUG t.TC03_gettingCredFromServer_Api         - 9: logInfo("Sending POST request to /credentials/ to replace full credential")
+2025-09-19 15:30:57.672 INFO  com.kms.katalon.core.util.KeywordUtil    - Sending POST request to /credentials/ to replace full credential
+2025-09-19 15:30:57.674 DEBUG t.TC03_gettingCredFromServer_Api         - 10: postResponse = ApiKeywords.sendPost("/credentials", getResponseBody)
+2025-09-19 15:30:57.959 INFO  c.k.k.core.webservice.common.HarLogger   - HAR: C:\Users\10835442\Katalon Studio\Luma\Reports\20250919_153022\API_Testcases\20250919_153022\requests\main\POST_Generic_3.har
+2025-09-19 15:30:57.966 DEBUG t.TC03_gettingCredFromServer_Api         - 11: verifyResponseStatusCode(postResponse, 201)
+2025-09-19 15:30:57.975 DEBUG t.TC03_gettingCredFromServer_Api         - 12: validateJsonAgainstSchema(postResponse.getResponseBodyContent(), JsonOutput.toJson(JsonFileReader.getSectionData("postResponse", masterSchemaFilePath)))
+2025-09-19 15:30:57.995 DEBUG t.TC03_gettingCredFromServer_Api         - 13: markPassed("POST full credential successfully and schema validated")
+2025-09-19 15:30:57.997 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ POST full credential successfully and schema validated
+PASSED
+⚠️ Error while closing browser: Browser is not opened
+Build info: version: '4.28.1', revision: '73f5ad48a2'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: driver.version: unknown
+2025-09-19 15:30:58.021 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/API_Testing/TC03_gettingCredFromServer_Api
+2025-09-19 15:30:58.095 INFO  c.k.katalon.core.main.TestSuiteExecutor  - --------------------
+2025-09-19 15:30:58.095 INFO  c.k.katalon.core.main.TestSuiteExecutor  - END Test Suites/API_Testcases
+2025-09-19 15:30:58.095 INFO  c.k.katalon.core.main.TestSuiteExecutor  - ====================

@@ -1,0 +1,20 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+API_AccessToken,,,,18-09-2025 15:06:24,18-09-2025 15:06:35,10.606s,ERROR
+,,,,,,,
+Test Cases/API_Testing/api_getAccessToken,,,,18-09-2025 15:06:32,18-09-2025 15:06:33,0.427s,ERROR
+"DATA BINDING - {""(Default) jsonF..."":""Include/Data Files/login_data.json""}",,,,,,,
+Start listener action : beforeTestCase,,,,18-09-2025 15:06:32,18-09-2025 15:06:32,0.051s,PASSED
+"payLoad = JsonOutput.toJson(JsonFileReader.getSectionData(""postPayload"", jsonFilePath))",,,,18-09-2025 15:06:32,18-09-2025 15:06:32,0.005s,PASSED
+"response = ApiKeywords.sendPost(""login"", payLoad)",,,,18-09-2025 15:06:32,18-09-2025 15:06:33,0.297s,PASSED
+parsedResponse = JsonSlurper().parseText(response.getResponseBodyContent()),,,,18-09-2025 15:06:33,18-09-2025 15:06:33,0.007s,ERROR
+Start listener action : closeTheBrowser,,,,18-09-2025 15:06:33,18-09-2025 15:06:33,0.019s,PASSED
+,,,,,,,
+Test Cases/API_Testing/api_currentUserDetail,,,,18-09-2025 15:06:34,18-09-2025 15:06:34,0.390s,ERROR
+"DATA BINDING - {""(Default) jsonF..."":""Include/Data Files/login_data.json""}",,,,,,,
+Start listener action : beforeTestCase,,,,18-09-2025 15:06:34,18-09-2025 15:06:34,0.006s,PASSED
+"accessToken = JsonFileReader.getJsonData(""DummyJson"", ""accessToken"", jsonFilePath)",,,,18-09-2025 15:06:34,18-09-2025 15:06:34,0.003s,PASSED
+"headers = [""Authorization"":accessToken, ""Content-Type"":""application/json""]",,,,18-09-2025 15:06:34,18-09-2025 15:06:34,0.015s,PASSED
+"response = ApiKeywords.sendGet(""me"", headers)",,,,18-09-2025 15:06:34,18-09-2025 15:06:34,0.318s,PASSED
+parsedResponse = JsonSlurper().parseText(response.getResponseBodyContent()),,,,18-09-2025 15:06:34,18-09-2025 15:06:34,0.001s,PASSED
+"JsonFileReader.appendToJsonSection(jsonFilePath, ""apiResonse"", ""firstName"", firstName)",,,,18-09-2025 15:06:34,18-09-2025 15:06:34,0.005s,ERROR
+Start listener action : closeTheBrowser,,,,18-09-2025 15:06:34,18-09-2025 15:06:34,0.012s,PASSED

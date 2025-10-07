@@ -1,0 +1,538 @@
+2025-09-04 15:46:40.827 INFO  c.k.katalon.core.main.TestSuiteExecutor  - START Test Suites/TestSuite
+2025-09-04 15:46:40.936 INFO  c.k.katalon.core.main.TestSuiteExecutor  - userFullName = Abinesh R
+2025-09-04 15:46:40.938 INFO  c.k.katalon.core.main.TestSuiteExecutor  - projectName = Luma
+2025-09-04 15:46:40.939 INFO  c.k.katalon.core.main.TestSuiteExecutor  - hostName = 10835442 - 10.235.155.132
+2025-09-04 15:46:40.939 INFO  c.k.katalon.core.main.TestSuiteExecutor  - os = Windows 11 64bit
+2025-09-04 15:46:40.941 INFO  c.k.katalon.core.main.TestSuiteExecutor  - hostAddress = 10.235.155.132
+2025-09-04 15:46:40.942 INFO  c.k.katalon.core.main.TestSuiteExecutor  - katalonVersion = 10.3.1.0
+2025-09-04 15:46:41.482 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-09-04 15:46:41.482 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/RegisterUser
+2025-09-04 15:46:41.609 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) filepath = Include/Data Files/login_data.json
+2025-09-04 15:46:41.630 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) registerPage = registerPage
+2025-09-04 15:46:41.650 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) registrationSuccessPage = registrarionSucccessPage
+2025-09-04 15:46:42.105 INFO  c.k.k.core.webui.driver.DriverFactory    - Starting 'Chrome' driver
+2025-09-04 15:46:42.203 INFO  c.k.k.core.webui.driver.DriverFactory    - Action delay is set to 0 milliseconds
+Sep 04, 2025 3:46:50 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 140, returning the closest version; found: 138; Please update to a Selenium version that supports CDP version 140
+2025-09-04 15:46:51.650 INFO  c.k.k.core.webui.driver.DriverFactory    - sessionId = 767921f9e79ea64c507992ad6e5aa670
+2025-09-04 15:46:51.651 INFO  c.k.k.core.webui.driver.DriverFactory    - browser = Chrome 140.0.7339.81
+2025-09-04 15:46:51.653 INFO  c.k.k.core.webui.driver.DriverFactory    - platform = Windows 11
+2025-09-04 15:46:51.653 INFO  c.k.k.core.webui.driver.DriverFactory    - seleniumVersion = 4.28.1
+2025-09-04 15:46:51.662 INFO  c.k.k.core.webui.driver.DriverFactory    - proxyInformation = ProxyInformation { proxyOption=NO_PROXY, proxyServerType=HTTP, username=, password=********, proxyServerAddress=, proxyServerPort=0, executionList="", isApplyToDesiredCapabilities=true }
+2025-09-04 15:46:58.098 DEBUG testcase.RegisterUser                    - 1: ExtentManager.initReport("UserRegistrationReport")
+2025-09-04 15:46:59.194 DEBUG testcase.RegisterUser                    - 2: ExtentManager.createTest("User Registration Test")
+2025-09-04 15:46:59.209 DEBUG testcase.RegisterUser                    - 3: ExtentManager.logPass("Navigating to the registration page")
+2025-09-04 15:46:59.242 DEBUG testcase.RegisterUser                    - 4: pages.HomePage.navigateToRegisterPage()
+2025-09-04 15:46:59.913 INFO  com.kms.katalon.core.util.KeywordUtil    - Hovering over: my account
+2025-09-04 15:47:00.454 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ my account has been hovered
+2025-09-04 15:47:00.798 INFO  com.kms.katalon.core.util.KeywordUtil    - Clicking on: login button
+2025-09-04 15:47:03.286 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ login button has been clicked
+2025-09-04 15:47:03.288 DEBUG testcase.RegisterUser                    - 5: ExtentManager.logPass("Navigated to the register page")
+2025-09-04 15:47:03.295 DEBUG testcase.RegisterUser                    - 6: ExtentManager.logPass("Entering the details to register an account")
+2025-09-04 15:47:03.303 DEBUG testcase.RegisterUser                    - 7: fieldMappings = [["id":"input-firstname", "jsonKey":"firstName"], ["id":"input-lastname", "jsonKey":"lastName"], ["id":"input-email", "jsonKey":"email"], ["id":"input-telephone", "jsonKey":"telephone"], ["id":"input-password", "jsonKey":"password"], ["id":"input-confirm", "jsonKey":"password"]]
+2025-09-04 15:47:03.307 DEBUG testcase.RegisterUser                    - 8: fieldMappings.each({ -> ... })
+2025-09-04 15:47:04.600 INFO  com.kms.katalon.core.util.KeywordUtil    - Entering data into: firstName
+2025-09-04 15:47:05.326 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ firstName has been entered
+2025-09-04 15:47:05.623 INFO  com.kms.katalon.core.util.KeywordUtil    - Entering data into: lastName
+2025-09-04 15:47:06.384 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ lastName has been entered
+2025-09-04 15:47:06.736 INFO  com.kms.katalon.core.util.KeywordUtil    - Entering data into: email
+2025-09-04 15:47:07.510 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ email has been entered
+2025-09-04 15:47:07.853 INFO  com.kms.katalon.core.util.KeywordUtil    - Entering data into: telephone
+2025-09-04 15:47:08.556 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ telephone has been entered
+2025-09-04 15:47:08.905 INFO  com.kms.katalon.core.util.KeywordUtil    - Entering data into: password
+2025-09-04 15:47:09.973 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ password has been entered
+2025-09-04 15:47:10.292 INFO  com.kms.katalon.core.util.KeywordUtil    - Entering data into: password
+2025-09-04 15:47:11.154 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ password has been entered
+2025-09-04 15:47:11.154 DEBUG testcase.RegisterUser                    - 9: ExtentManager.logPass("Details for registering an account have been set successfully")
+2025-09-04 15:47:11.154 DEBUG testcase.RegisterUser                    - 10: ExtentManager.logPass("Navigating to the confirmation page")
+2025-09-04 15:47:11.161 DEBUG testcase.RegisterUser                    - 11: pages.UserRegistrationPage.clickOnPolicyCheckBox(findTestObject("Object Repository/Registration_Page/policy_CheckBox"))
+2025-09-04 15:47:11.518 INFO  com.kms.katalon.core.util.KeywordUtil    - Clicking on: Policy Checkbox
+2025-09-04 15:47:11.945 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Policy Checkbox has been clicked
+2025-09-04 15:47:11.950 DEBUG testcase.RegisterUser                    - 12: pages.UserRegistrationPage.clickOnContinue(findTestObject("Object Repository/Registration_Page/continue_Button"))
+2025-09-04 15:47:12.251 INFO  com.kms.katalon.core.util.KeywordUtil    - Clicking on: Continue Button
+2025-09-04 15:47:12.656 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Continue Button has been clicked
+2025-09-04 15:47:12.657 DEBUG testcase.RegisterUser                    - 13: ExtentManager.logPass("Navigated to the confirmation page")
+2025-09-04 15:47:12.687 DEBUG testcase.RegisterUser                    - 14: ExtentManager.logPass("Verifying Account Creation Text")
+2025-09-04 15:47:12.693 DEBUG testcase.RegisterUser                    - 15: pages.AccountCreationPage.verifyText(findTestObject("Object Repository/Account_Created_Page/account_Creation_Verification"), JsonFileReader.getJsonData(registrationSuccessPage, "verify_Text", filepath), "Account Creation")
+2025-09-04 15:47:15.847 INFO  com.kms.katalon.core.util.KeywordUtil    - Verifying text for: Account Creation
+2025-09-04 15:47:16.161 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Account Creation has been verified
+2025-09-04 15:47:16.164 DEBUG testcase.RegisterUser                    - 16: ExtentManager.logPass("Verified Account Creation Text")
+2025-09-04 15:47:16.168 DEBUG testcase.RegisterUser                    - 17: ExtentManager.logPass("Updating login details in JSON file")
+2025-09-04 15:47:16.171 DEBUG testcase.RegisterUser                    - 18: JsonFileReader.updateJsonValue("loginPage", "email", JsonFileReader.getJsonData(registerPage, "email", filepath), filepath)
+Updated 'email' in 'loginPage' section to 'alicesmith.35@gmail.com'.
+2025-09-04 15:47:16.292 DEBUG testcase.RegisterUser                    - 19: JsonFileReader.updateJsonValue("loginPage", "password", JsonFileReader.getJsonData(registerPage, "password", filepath), filepath)
+Updated 'password' in 'loginPage' section to 'Password123'.
+2025-09-04 15:47:16.305 DEBUG testcase.RegisterUser                    - 20: ExtentManager.logPass("Updated login details in JSON file")
+2025-09-04 15:47:16.307 DEBUG testcase.RegisterUser                    - 21: ExtentManager.flushReport()
+2025-09-04 15:47:17.502 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/RegisterUser
+2025-09-04 15:47:17.510 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-09-04 15:47:17.510 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/SignIn
+2025-09-04 15:47:17.533 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) filepath = Include/Data Files/login_data.json
+2025-09-04 15:47:17.554 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) section = loginPage
+2025-09-04 15:47:17.559 INFO  c.k.k.core.webui.driver.DriverFactory    - Starting 'Chrome' driver
+2025-09-04 15:47:17.565 INFO  c.k.k.core.webui.driver.DriverFactory    - Action delay is set to 0 milliseconds
+Sep 04, 2025 3:47:19 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 140, returning the closest version; found: 138; Please update to a Selenium version that supports CDP version 140
+2025-09-04 15:47:19.495 INFO  c.k.k.core.webui.driver.DriverFactory    - sessionId = 5256c0f43a3cca3161070cf469120109
+2025-09-04 15:47:19.495 INFO  c.k.k.core.webui.driver.DriverFactory    - browser = Chrome 140.0.7339.81
+2025-09-04 15:47:19.495 INFO  c.k.k.core.webui.driver.DriverFactory    - platform = Windows 11
+2025-09-04 15:47:19.495 INFO  c.k.k.core.webui.driver.DriverFactory    - seleniumVersion = 4.28.1
+2025-09-04 15:47:19.495 INFO  c.k.k.core.webui.driver.DriverFactory    - proxyInformation = ProxyInformation { proxyOption=NO_PROXY, proxyServerType=HTTP, username=, password=********, proxyServerAddress=, proxyServerPort=0, executionList="", isApplyToDesiredCapabilities=true }
+2025-09-04 15:47:25.557 DEBUG testcase.SignIn                          - 1: ExtentManager.initReport("LoginTestReport")
+2025-09-04 15:47:25.561 DEBUG testcase.SignIn                          - 2: ExtentManager.createTest("Login Test")
+2025-09-04 15:47:25.565 DEBUG testcase.SignIn                          - 3: ExtentManager.logPass("Navigating to the sign in page")
+2025-09-04 15:47:25.568 DEBUG testcase.SignIn                          - 4: pages.HomePage.navigateToAccountPage()
+2025-09-04 15:47:25.841 INFO  com.kms.katalon.core.util.KeywordUtil    - Hovering over: my account
+2025-09-04 15:47:26.283 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ my account has been hovered
+2025-09-04 15:47:26.623 INFO  com.kms.katalon.core.util.KeywordUtil    - Clicking on: login button
+2025-09-04 15:47:28.704 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ login button has been clicked
+2025-09-04 15:47:28.708 DEBUG testcase.SignIn                          - 5: ExtentManager.logPass("Navigated to the sign in page")
+2025-09-04 15:47:28.715 DEBUG testcase.SignIn                          - 6: ExtentManager.logPass("Signing into the account")
+2025-09-04 15:47:28.720 DEBUG testcase.SignIn                          - 7: loginFields = [["id":"input-email", "jsonKey":"email"], ["id":"input-password", "jsonKey":"password"]]
+2025-09-04 15:47:28.723 DEBUG testcase.SignIn                          - 8: loginFields.each({ -> ... })
+2025-09-04 15:47:29.224 INFO  com.kms.katalon.core.util.KeywordUtil    - Entering data into: email
+2025-09-04 15:47:29.884 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ email has been entered
+2025-09-04 15:47:30.230 INFO  com.kms.katalon.core.util.KeywordUtil    - Entering data into: password
+2025-09-04 15:47:30.982 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ password has been entered
+2025-09-04 15:47:30.984 DEBUG testcase.SignIn                          - 9: pages.LoginPage.clickOnLoginButton(findTestObject("Object Repository/LoginPage/Login_button"))
+2025-09-04 15:47:31.350 INFO  com.kms.katalon.core.util.KeywordUtil    - Clicking on: Login button
+2025-09-04 15:47:35.070 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Login button has been clicked
+2025-09-04 15:47:35.074 DEBUG testcase.SignIn                          - 10: ExtentManager.logPass("Signed into the account")
+2025-09-04 15:47:35.082 DEBUG testcase.SignIn                          - 11: ExtentManager.logPass("Verifying My Account")
+2025-09-04 15:47:35.085 DEBUG testcase.SignIn                          - 12: pages.AccountPage.verifyMyAccount(findTestObject("Object Repository/AccountPage/my_Account_verification"), JsonFileReader.getJsonData(section, "verification_text", filepath))
+2025-09-04 15:47:35.376 INFO  com.kms.katalon.core.util.KeywordUtil    - Verifying text for: Verify My account
+2025-09-04 15:47:35.658 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Verify My account has been verified
+2025-09-04 15:47:35.661 DEBUG testcase.SignIn                          - 13: ExtentManager.logPass("Verified My Account")
+2025-09-04 15:47:35.664 DEBUG testcase.SignIn                          - 14: ExtentManager.flushReport()
+2025-09-04 15:47:36.163 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/SignIn
+2025-09-04 15:47:36.167 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-09-04 15:47:36.167 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/ChangePasswordFunctionality
+2025-09-04 15:47:36.192 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) filepath = Include/Data Files/login_data.json
+2025-09-04 15:47:36.220 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) section = changePasswordPage
+2025-09-04 15:47:36.222 INFO  c.k.k.core.webui.driver.DriverFactory    - Starting 'Chrome' driver
+2025-09-04 15:47:36.229 INFO  c.k.k.core.webui.driver.DriverFactory    - Action delay is set to 0 milliseconds
+Sep 04, 2025 3:47:38 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 140, returning the closest version; found: 138; Please update to a Selenium version that supports CDP version 140
+2025-09-04 15:47:38.350 INFO  c.k.k.core.webui.driver.DriverFactory    - sessionId = 115ba48f8ddec0f5ef9378f0f464d8e0
+2025-09-04 15:47:38.350 INFO  c.k.k.core.webui.driver.DriverFactory    - browser = Chrome 140.0.7339.81
+2025-09-04 15:47:38.350 INFO  c.k.k.core.webui.driver.DriverFactory    - platform = Windows 11
+2025-09-04 15:47:38.352 INFO  c.k.k.core.webui.driver.DriverFactory    - seleniumVersion = 4.28.1
+2025-09-04 15:47:38.352 INFO  c.k.k.core.webui.driver.DriverFactory    - proxyInformation = ProxyInformation { proxyOption=NO_PROXY, proxyServerType=HTTP, username=, password=********, proxyServerAddress=, proxyServerPort=0, executionList="", isApplyToDesiredCapabilities=true }
+2025-09-04 15:47:44.499 DEBUG testcase.ChangePasswordFunctionality     - 1: ExtentManager.initReport("ChangePasswordReport")
+2025-09-04 15:47:44.503 DEBUG testcase.ChangePasswordFunctionality     - 2: ExtentManager.createTest("Change Password Test")
+2025-09-04 15:47:44.505 DEBUG testcase.ChangePasswordFunctionality     - 3: ExtentManager.logPass("Signing into the account")
+2025-09-04 15:47:44.506 DEBUG testcase.ChangePasswordFunctionality     - 4: callTestCase(findTestCase("Test Cases/SignIn"), [:])
+2025-09-04 15:47:44.602 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-09-04 15:47:44.602 INFO  c.k.katalon.core.main.TestCaseExecutor   - CALL Test Cases/SignIn
+2025-09-04 15:47:44.618 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) filepath = Include/Data Files/login_data.json
+2025-09-04 15:47:44.619 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) section = loginPage
+2025-09-04 15:47:44.621 DEBUG testcase.SignIn                          - 1: ExtentManager.initReport("LoginTestReport")
+2025-09-04 15:47:44.622 DEBUG testcase.SignIn                          - 2: ExtentManager.createTest("Login Test")
+2025-09-04 15:47:44.624 DEBUG testcase.SignIn                          - 3: ExtentManager.logPass("Navigating to the sign in page")
+2025-09-04 15:47:44.626 DEBUG testcase.SignIn                          - 4: pages.HomePage.navigateToAccountPage()
+2025-09-04 15:47:44.952 INFO  com.kms.katalon.core.util.KeywordUtil    - Hovering over: my account
+2025-09-04 15:47:45.357 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ my account has been hovered
+2025-09-04 15:47:45.650 INFO  com.kms.katalon.core.util.KeywordUtil    - Clicking on: login button
+2025-09-04 15:47:47.632 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ login button has been clicked
+2025-09-04 15:47:47.635 DEBUG testcase.SignIn                          - 5: ExtentManager.logPass("Navigated to the sign in page")
+2025-09-04 15:47:47.637 DEBUG testcase.SignIn                          - 6: ExtentManager.logPass("Signing into the account")
+2025-09-04 15:47:47.645 DEBUG testcase.SignIn                          - 7: loginFields = [["id":"input-email", "jsonKey":"email"], ["id":"input-password", "jsonKey":"password"]]
+2025-09-04 15:47:47.647 DEBUG testcase.SignIn                          - 8: loginFields.each({ -> ... })
+2025-09-04 15:47:48.140 INFO  com.kms.katalon.core.util.KeywordUtil    - Entering data into: email
+2025-09-04 15:47:48.789 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ email has been entered
+2025-09-04 15:47:49.117 INFO  com.kms.katalon.core.util.KeywordUtil    - Entering data into: password
+2025-09-04 15:47:49.781 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ password has been entered
+2025-09-04 15:47:49.784 DEBUG testcase.SignIn                          - 9: pages.LoginPage.clickOnLoginButton(findTestObject("Object Repository/LoginPage/Login_button"))
+2025-09-04 15:47:50.093 INFO  com.kms.katalon.core.util.KeywordUtil    - Clicking on: Login button
+2025-09-04 15:47:50.459 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Login button has been clicked
+2025-09-04 15:47:50.462 DEBUG testcase.SignIn                          - 10: ExtentManager.logPass("Signed into the account")
+2025-09-04 15:47:50.463 DEBUG testcase.SignIn                          - 11: ExtentManager.logPass("Verifying My Account")
+2025-09-04 15:47:50.465 DEBUG testcase.SignIn                          - 12: pages.AccountPage.verifyMyAccount(findTestObject("Object Repository/AccountPage/my_Account_verification"), JsonFileReader.getJsonData(section, "verification_text", filepath))
+2025-09-04 15:47:53.898 INFO  com.kms.katalon.core.util.KeywordUtil    - Verifying text for: Verify My account
+2025-09-04 15:47:54.253 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Verify My account has been verified
+2025-09-04 15:47:54.254 DEBUG testcase.SignIn                          - 13: ExtentManager.logPass("Verified My Account")
+2025-09-04 15:47:54.256 DEBUG testcase.SignIn                          - 14: ExtentManager.flushReport()
+2025-09-04 15:47:54.416 INFO  c.k.katalon.core.main.TestCaseExecutor   - END CALL Test Cases/SignIn
+2025-09-04 15:47:54.416 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-09-04 15:47:54.430 DEBUG testcase.ChangePasswordFunctionality     - 5: ExtentManager.logPass("Signed into the account")
+2025-09-04 15:47:54.432 DEBUG testcase.ChangePasswordFunctionality     - 6: ExtentManager.logPass("Navigating to change password page")
+2025-09-04 15:47:54.434 DEBUG testcase.ChangePasswordFunctionality     - 7: pages.AccountPage.clickOnChangePassword(findTestObject("Object Repository/AccountPage/changePassword"))
+2025-09-04 15:47:54.484 INFO  com.kms.katalon.core.util.KeywordUtil    - Clicking on: Change password
+2025-09-04 15:47:56.673 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Change password has been clicked
+2025-09-04 15:47:56.680 DEBUG testcase.ChangePasswordFunctionality     - 8: ExtentManager.logPass("Navigated to change password page")
+2025-09-04 15:47:56.684 DEBUG testcase.ChangePasswordFunctionality     - 9: ExtentManager.logPass("Setting up a new password")
+2025-09-04 15:47:56.688 DEBUG testcase.ChangePasswordFunctionality     - 10: pages.PasswordChangePage.changingPassword(JsonFileReader.getJsonData(section, "password", filepath))
+2025-09-04 15:47:57.178 INFO  com.kms.katalon.core.util.KeywordUtil    - Entering data into: New Password
+2025-09-04 15:47:57.816 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ New Password has been entered
+2025-09-04 15:47:58.107 INFO  com.kms.katalon.core.util.KeywordUtil    - Entering data into: Confirm Password
+2025-09-04 15:47:58.779 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Confirm Password has been entered
+2025-09-04 15:47:59.101 INFO  com.kms.katalon.core.util.KeywordUtil    - Clicking on: Submit button
+2025-09-04 15:47:59.524 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Submit button has been clicked
+2025-09-04 15:47:59.525 DEBUG testcase.ChangePasswordFunctionality     - 11: ExtentManager.logPass("New password has been set successfully")
+2025-09-04 15:47:59.528 DEBUG testcase.ChangePasswordFunctionality     - 12: ExtentManager.logPass("Verifying Password Change Text")
+2025-09-04 15:47:59.532 DEBUG testcase.ChangePasswordFunctionality     - 13: pages.AccountPage.verifyPasswordChange(findTestObject("Object Repository/AccountPage/passwordChangedText"), JsonFileReader.getJsonData(section, "verifyText", filepath))
+2025-09-04 15:48:01.857 INFO  com.kms.katalon.core.util.KeywordUtil    - Verifying text for: Verify password change
+2025-09-04 15:48:02.144 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Verify password change has been verified
+2025-09-04 15:48:02.146 DEBUG testcase.ChangePasswordFunctionality     - 14: ExtentManager.logPass("Verified Password Change Text")
+2025-09-04 15:48:02.148 DEBUG testcase.ChangePasswordFunctionality     - 15: ExtentManager.logPass("Updating login password in JSON file")
+2025-09-04 15:48:02.150 DEBUG testcase.ChangePasswordFunctionality     - 16: JsonFileReader.updateJsonValue("loginPage", "password", JsonFileReader.getJsonData(section, "password", filepath), filepath)
+Updated 'password' in 'loginPage' section to 'Password@123'.
+2025-09-04 15:48:02.160 DEBUG testcase.ChangePasswordFunctionality     - 17: ExtentManager.logPass("Updated login password in JSON file")
+2025-09-04 15:48:02.163 DEBUG testcase.ChangePasswordFunctionality     - 18: ExtentManager.flushReport()
+2025-09-04 15:48:02.612 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/ChangePasswordFunctionality
+2025-09-04 15:48:02.616 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-09-04 15:48:02.616 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/AddToCart
+2025-09-04 15:48:02.633 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) filepath = Include/Data Files/login_data.json
+2025-09-04 15:48:02.652 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) cartPage = CartPage
+2025-09-04 15:48:02.673 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) orderPlacedPage = OrderPlacedPage
+2025-09-04 15:48:02.691 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) categoryOption =  Components
+2025-09-04 15:48:02.696 INFO  c.k.k.core.webui.driver.DriverFactory    - Starting 'Chrome' driver
+2025-09-04 15:48:02.698 INFO  c.k.k.core.webui.driver.DriverFactory    - Action delay is set to 0 milliseconds
+Sep 04, 2025 3:48:04 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 140, returning the closest version; found: 138; Please update to a Selenium version that supports CDP version 140
+2025-09-04 15:48:04.867 INFO  c.k.k.core.webui.driver.DriverFactory    - sessionId = 4e94997f24fbcc2963fa20e8b6a93816
+2025-09-04 15:48:04.868 INFO  c.k.k.core.webui.driver.DriverFactory    - browser = Chrome 140.0.7339.81
+2025-09-04 15:48:04.868 INFO  c.k.k.core.webui.driver.DriverFactory    - platform = Windows 11
+2025-09-04 15:48:04.868 INFO  c.k.k.core.webui.driver.DriverFactory    - seleniumVersion = 4.28.1
+2025-09-04 15:48:04.870 INFO  c.k.k.core.webui.driver.DriverFactory    - proxyInformation = ProxyInformation { proxyOption=NO_PROXY, proxyServerType=HTTP, username=, password=********, proxyServerAddress=, proxyServerPort=0, executionList="", isApplyToDesiredCapabilities=true }
+2025-09-04 15:48:10.452 DEBUG testcase.AddToCart                       - 1: ExtentManager.initReport("OrderPlacementReport")
+2025-09-04 15:48:10.455 DEBUG testcase.AddToCart                       - 2: ExtentManager.createTest("Place Order Test")
+2025-09-04 15:48:10.457 DEBUG testcase.AddToCart                       - 3: ExtentManager.logPass("Signing into the account")
+2025-09-04 15:48:10.458 DEBUG testcase.AddToCart                       - 4: callTestCase(findTestCase("Test Cases/SignIn"), [:])
+2025-09-04 15:48:10.528 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-09-04 15:48:10.528 INFO  c.k.katalon.core.main.TestCaseExecutor   - CALL Test Cases/SignIn
+2025-09-04 15:48:10.541 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) filepath = Include/Data Files/login_data.json
+2025-09-04 15:48:10.543 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) section = loginPage
+2025-09-04 15:48:10.547 DEBUG testcase.SignIn                          - 1: ExtentManager.initReport("LoginTestReport")
+2025-09-04 15:48:10.550 DEBUG testcase.SignIn                          - 2: ExtentManager.createTest("Login Test")
+2025-09-04 15:48:10.554 DEBUG testcase.SignIn                          - 3: ExtentManager.logPass("Navigating to the sign in page")
+2025-09-04 15:48:10.555 DEBUG testcase.SignIn                          - 4: pages.HomePage.navigateToAccountPage()
+2025-09-04 15:48:10.867 INFO  com.kms.katalon.core.util.KeywordUtil    - Hovering over: my account
+2025-09-04 15:48:11.267 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ my account has been hovered
+2025-09-04 15:48:11.590 INFO  com.kms.katalon.core.util.KeywordUtil    - Clicking on: login button
+2025-09-04 15:48:13.789 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ login button has been clicked
+2025-09-04 15:48:13.795 DEBUG testcase.SignIn                          - 5: ExtentManager.logPass("Navigated to the sign in page")
+2025-09-04 15:48:13.802 DEBUG testcase.SignIn                          - 6: ExtentManager.logPass("Signing into the account")
+2025-09-04 15:48:13.805 DEBUG testcase.SignIn                          - 7: loginFields = [["id":"input-email", "jsonKey":"email"], ["id":"input-password", "jsonKey":"password"]]
+2025-09-04 15:48:13.806 DEBUG testcase.SignIn                          - 8: loginFields.each({ -> ... })
+2025-09-04 15:48:14.331 INFO  com.kms.katalon.core.util.KeywordUtil    - Entering data into: email
+2025-09-04 15:48:15.016 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ email has been entered
+2025-09-04 15:48:15.327 INFO  com.kms.katalon.core.util.KeywordUtil    - Entering data into: password
+2025-09-04 15:48:16.018 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ password has been entered
+2025-09-04 15:48:16.021 DEBUG testcase.SignIn                          - 9: pages.LoginPage.clickOnLoginButton(findTestObject("Object Repository/LoginPage/Login_button"))
+2025-09-04 15:48:16.303 INFO  com.kms.katalon.core.util.KeywordUtil    - Clicking on: Login button
+2025-09-04 15:48:16.709 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Login button has been clicked
+2025-09-04 15:48:16.711 DEBUG testcase.SignIn                          - 10: ExtentManager.logPass("Signed into the account")
+2025-09-04 15:48:16.714 DEBUG testcase.SignIn                          - 11: ExtentManager.logPass("Verifying My Account")
+2025-09-04 15:48:16.716 DEBUG testcase.SignIn                          - 12: pages.AccountPage.verifyMyAccount(findTestObject("Object Repository/AccountPage/my_Account_verification"), JsonFileReader.getJsonData(section, "verification_text", filepath))
+2025-09-04 15:48:19.833 INFO  com.kms.katalon.core.util.KeywordUtil    - Verifying text for: Verify My account
+2025-09-04 15:48:20.100 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Verify My account has been verified
+2025-09-04 15:48:20.100 DEBUG testcase.SignIn                          - 13: ExtentManager.logPass("Verified My Account")
+2025-09-04 15:48:20.102 DEBUG testcase.SignIn                          - 14: ExtentManager.flushReport()
+2025-09-04 15:48:20.270 INFO  c.k.katalon.core.main.TestCaseExecutor   - END CALL Test Cases/SignIn
+2025-09-04 15:48:20.270 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-09-04 15:48:20.273 DEBUG testcase.AddToCart                       - 5: ExtentManager.logPass("Signed in to the account")
+2025-09-04 15:48:20.277 DEBUG testcase.AddToCart                       - 6: ExtentManager.logPass("Navigating to the category option page")
+2025-09-04 15:48:20.280 DEBUG testcase.AddToCart                       - 7: pages.HomePage.clickOnShopByCategoryOptions(categoryOption)
+2025-09-04 15:48:20.566 INFO  com.kms.katalon.core.util.KeywordUtil    - Clicking on: Shop by category
+2025-09-04 15:48:21.031 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Shop by category has been clicked
+2025-09-04 15:48:21.032 WARN  c.k.k.core.testobject.ObjectRepository   - Test object with id 'Object Repository/AccountPage/dynamic_ShopByCategory_Options' does not exist
+2025-09-04 15:48:21.042 WARN  c.k.k.core.testobject.ObjectRepository   - Test object with id 'Object Repository/' does not exist
+2025-09-04 15:48:21.063 WARN  c.k.k.core.keyword.internal.KeywordMain  - Unable to wait for object to be visible (Root cause: com.kms.katalon.core.exception.StepFailedException: Unable to wait for object to be visible
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:175)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:49)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeywordUntilTimeout(WebUIKeywordMain.groovy:152)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain$runKeywordUntilTimeout.call(Unknown Source)
+	at com.kms.katalon.core.webui.keyword.builtin.WaitForElementVisibleKeyword.waitForElementVisible(WaitForElementVisibleKeyword.groovy:101)
+	at com.kms.katalon.core.webui.keyword.builtin.WaitForElementVisibleKeyword.execute(WaitForElementVisibleKeyword.groovy:69)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:79)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.waitForElementVisible(WebUiBuiltInKeywords.groovy:498)
+	at utils.Helper.clickElement(Helper.groovy:66)
+	at pages.HomePage.clickOnShopByCategoryOptions(HomePage.groovy:40)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at com.kms.katalon.core.main.CustomKeywordDelegatingMetaClass.invokeStaticMethod(CustomKeywordDelegatingMetaClass.java:55)
+	at AddToCart.run(AddToCart:30)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1756980996766.run(TempTestSuite1756980996766.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+Caused by: com.kms.katalon.core.exception.IllegalTestObjectException: Object is null
+	at com.kms.katalon.core.helper.KeywordHelper.checkTestObjectParameter(KeywordHelper.java:35)
+	at com.kms.katalon.core.helper.KeywordHelper$checkTestObjectParameter$0.call(Unknown Source)
+	at com.kms.katalon.core.helper.KeywordHelper$checkTestObjectParameter$0.call(Unknown Source)
+	at com.kms.katalon.core.webui.keyword.builtin.WaitForElementVisibleKeyword$_waitForElementVisible_closure1.doCall(WaitForElementVisibleKeyword.groovy:79)
+	at jdk.internal.reflect.GeneratedMethodAccessor27.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at jdk.proxy2/jdk.proxy2.$Proxy52.execute(Unknown Source)
+	at com.kms.katalon.core.webui.model.SeleniumActionRetryController.performAction(SeleniumActionRetryController.java:109)
+	at com.kms.katalon.core.webui.model.SeleniumActionRetryController.performAction(SeleniumActionRetryController.java:96)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain$_runKeywordUntilTimeout_closure2.doCall(WebUIKeywordMain.groovy:155)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain$_runKeywordUntilTimeout_closure2.call(WebUIKeywordMain.groovy)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:41)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeywordUntilTimeout(WebUIKeywordMain.groovy:152)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain$runKeywordUntilTimeout.call(Unknown Source)
+	at com.kms.katalon.core.webui.keyword.builtin.WaitForElementVisibleKeyword.waitForElementVisible(WaitForElementVisibleKeyword.groovy:101)
+	at com.kms.katalon.core.webui.keyword.builtin.WaitForElementVisibleKeyword.execute(WaitForElementVisibleKeyword.groovy:69)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:79)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.waitForElementVisible(WebUiBuiltInKeywords.groovy:498)
+	at utils.Helper.clickElement(Helper.groovy:66)
+	at pages.HomePage.clickOnShopByCategoryOptions(HomePage.groovy:40)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at com.kms.katalon.core.main.CustomKeywordDelegatingMetaClass.invokeStaticMethod(CustomKeywordDelegatingMetaClass.java:55)
+	at Script1756271117284.run(Script1756271117284.groovy:30)
+	... 15 more
+)
+2025-09-04 15:48:21.067 INFO  com.kms.katalon.core.util.KeywordUtil    - Clicking on: Components
+2025-09-04 15:48:21.074 WARN  c.k.k.core.testobject.ObjectRepository   - Test object with id 'Object Repository/' does not exist
+2025-09-04 15:48:21.078 WARN  c.k.k.core.keyword.internal.KeywordMain  - Unable to click on object (Root cause: com.kms.katalon.core.exception.StepFailedException: Unable to click on object
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:175)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:49)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeywordUntilTimeout(WebUIKeywordMain.groovy:132)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:63)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:38)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:79)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:684)
+	at utils.Helper.clickElement(Helper.groovy:68)
+	at pages.HomePage.clickOnShopByCategoryOptions(HomePage.groovy:40)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at com.kms.katalon.core.main.CustomKeywordDelegatingMetaClass.invokeStaticMethod(CustomKeywordDelegatingMetaClass.java:55)
+	at AddToCart.run(AddToCart:30)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1756980996766.run(TempTestSuite1756980996766.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+Caused by: com.kms.katalon.core.exception.IllegalTestObjectException: Object is null
+	at com.kms.katalon.core.helper.KeywordHelper.checkTestObjectParameter(KeywordHelper.java:35)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword$_click_closure1.doCall(ClickKeyword.groovy:48)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at jdk.proxy2/jdk.proxy2.$Proxy52.execute(Unknown Source)
+	at com.kms.katalon.core.webui.model.SeleniumActionRetryController.performAction(SeleniumActionRetryController.java:109)
+	at com.kms.katalon.core.webui.model.SeleniumActionRetryController.performAction(SeleniumActionRetryController.java:96)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain$_runKeywordUntilTimeout_closure1.doCall(WebUIKeywordMain.groovy:135)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain$_runKeywordUntilTimeout_closure1.call(WebUIKeywordMain.groovy)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:41)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeywordUntilTimeout(WebUIKeywordMain.groovy:132)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:63)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:38)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:79)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:684)
+	at utils.Helper.clickElement(Helper.groovy:68)
+	at pages.HomePage.clickOnShopByCategoryOptions(HomePage.groovy:40)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at com.kms.katalon.core.main.CustomKeywordDelegatingMetaClass.invokeStaticMethod(CustomKeywordDelegatingMetaClass.java:55)
+	at Script1756271117284.run(Script1756271117284.groovy:30)
+	... 15 more
+)
+2025-09-04 15:48:21.082 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Components has been clicked
+2025-09-04 15:48:21.086 DEBUG testcase.AddToCart                       - 8: ExtentManager.logPass("Navigated to the category option page")
+2025-09-04 15:48:21.088 DEBUG testcase.AddToCart                       - 9: ExtentManager.logPass("Navigating to the product page")
+2025-09-04 15:48:21.090 DEBUG testcase.AddToCart                       - 10: pages.ComponentsPage.clickOnInstockProducts()
+2025-09-04 15:48:31.383 WARN  k.k.c.w.k.b.WaitForElementVisibleKeyword - Web element with id: 'Object Repository/CompenentsPage/instockLabel' located by 'By.xpath: //div[@id='mz-filter-panel-0-5']/div/div/div/label' not found
+2025-09-04 15:48:31.385 INFO  com.kms.katalon.core.util.KeywordUtil    - Clicking on: In stock label
+2025-09-04 15:48:45.516 WARN  c.k.k.c.w.keyword.builtin.ClickKeyword   - Waiting for element timed out
+2025-09-04 15:48:45.668 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ In stock label has been clicked
+2025-09-04 15:48:48.281 INFO  com.kms.katalon.core.util.KeywordUtil    - Clicking on: Product
+2025-09-04 15:48:51.991 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Product has been clicked
+2025-09-04 15:48:51.998 DEBUG testcase.AddToCart                       - 11: ExtentManager.logPass("Navigated to the product page")
+2025-09-04 15:48:52.000 DEBUG testcase.AddToCart                       - 12: ExtentManager.logPass("Navigating to the checkout page")
+2025-09-04 15:48:52.002 DEBUG testcase.AddToCart                       - 13: pages.ProductPage.addingProductToCart()
+2025-09-04 15:48:52.503 INFO  com.kms.katalon.core.util.KeywordUtil    - Clicking on: Add To Cart Button
+2025-09-04 15:48:52.870 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Add To Cart Button has been clicked
+2025-09-04 15:48:54.245 INFO  com.kms.katalon.core.util.KeywordUtil    - Clicking on: View Cart
+2025-09-04 15:48:57.077 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ View Cart has been clicked
+2025-09-04 15:48:57.081 DEBUG testcase.AddToCart                       - 14: ExtentManager.logPass("Navigated to the checkout page")
+2025-09-04 15:48:57.082 DEBUG testcase.AddToCart                       - 15: pages.ShoppingCartPage.clickOnCheckout(findTestObject("Object Repository/ShoppingCartPage/CheckOutButton"))
+2025-09-04 15:48:57.788 INFO  com.kms.katalon.core.util.KeywordUtil    - Clicking on: Checkout button
+2025-09-04 15:49:00.509 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Checkout button has been clicked
+2025-09-04 15:49:00.511 DEBUG testcase.AddToCart                       - 16: ExtentManager.logPass("Entering billing details")
+2025-09-04 15:49:00.515 DEBUG testcase.AddToCart                       - 17: paymentFields = [["id":"input-payment-firstname", "jsonKey":"firstName", "label":"First Name"], ["id":"input-payment-lastname", "jsonKey":"lastName", "label":"Last Name"], ["id":"input-payment-address-1", "jsonKey":"address", "label":"Address"], ["id":"input-payment-city", "jsonKey":"city", "label":"City"], ["id":"input-payment-postcode", "jsonKey":"postalCode", "label":"Postal Code"]]
+2025-09-04 15:49:00.515 DEBUG testcase.AddToCart                       - 18: paymentFields.each({ -> ... })
+2025-09-04 15:49:01.477 INFO  com.kms.katalon.core.util.KeywordUtil    - Entering data into: First Name
+2025-09-04 15:49:02.270 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ First Name has been entered
+2025-09-04 15:49:02.631 INFO  com.kms.katalon.core.util.KeywordUtil    - Entering data into: Last Name
+2025-09-04 15:49:03.360 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Last Name has been entered
+2025-09-04 15:49:03.712 INFO  com.kms.katalon.core.util.KeywordUtil    - Entering data into: Address
+2025-09-04 15:49:04.527 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Address has been entered
+2025-09-04 15:49:04.882 INFO  com.kms.katalon.core.util.KeywordUtil    - Entering data into: City
+2025-09-04 15:49:05.587 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ City has been entered
+2025-09-04 15:49:05.926 INFO  com.kms.katalon.core.util.KeywordUtil    - Entering data into: Postal Code
+2025-09-04 15:49:06.666 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Postal Code has been entered
+2025-09-04 15:49:06.669 DEBUG testcase.AddToCart                       - 19: ExtentManager.logPass("Billing details entered")
+2025-09-04 15:49:06.669 DEBUG testcase.AddToCart                       - 20: ExtentManager.logPass("Navigating to the confirm order page")
+2025-09-04 15:49:06.669 DEBUG testcase.AddToCart                       - 21: pages.CheckOutPage.clickOnContinue()
+2025-09-04 15:49:06.945 INFO  com.kms.katalon.core.util.KeywordUtil    - Clicking on: Privacy Policy statement
+2025-09-04 15:49:07.359 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Privacy Policy statement has been clicked
+2025-09-04 15:49:08.410 INFO  com.kms.katalon.core.util.KeywordUtil    - Clicking on: Continue Button
+2025-09-04 15:49:08.753 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Continue Button has been clicked
+2025-09-04 15:49:08.754 DEBUG testcase.AddToCart                       - 22: ExtentManager.logPass("Navigated to the confirm order page")
+2025-09-04 15:49:08.755 DEBUG testcase.AddToCart                       - 23: ExtentManager.logPass("Confirming the order")
+2025-09-04 15:49:08.757 DEBUG testcase.AddToCart                       - 24: pages.ConfirmOrderPage.clickOnConfirmOrder(findTestObject("Object Repository/ConfirmOrderPage/confirmOrder_Button"))
+2025-09-04 15:49:11.758 INFO  com.kms.katalon.core.util.KeywordUtil    - Clicking on: Confirm Order button
+2025-09-04 15:49:12.090 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Confirm Order button has been clicked
+2025-09-04 15:49:12.093 DEBUG testcase.AddToCart                       - 25: ExtentManager.logPass("Order confirmed")
+2025-09-04 15:49:12.096 DEBUG testcase.AddToCart                       - 26: ExtentManager.logPass("Verifying the confirm order text")
+2025-09-04 15:49:12.097 DEBUG testcase.AddToCart                       - 27: pages.CheckOutSuccessPage.verifyOrderPlaced(findTestObject("Object Repository/CheckOutSuccessPage/OrderConfirmed"), JsonFileReader.getJsonData(orderPlacedPage, "verifyText", filepath))
+2025-09-04 15:49:14.878 INFO  com.kms.katalon.core.util.KeywordUtil    - Verifying text for: Order text
+2025-09-04 15:49:15.142 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Order text has been verified
+2025-09-04 15:49:15.143 DEBUG testcase.AddToCart                       - 28: ExtentManager.logPass("Verified the confirm order text")
+2025-09-04 15:49:15.144 DEBUG testcase.AddToCart                       - 29: ExtentManager.flushReport()
+2025-09-04 15:49:15.559 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/AddToCart
+2025-09-04 15:49:15.559 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-09-04 15:49:15.559 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/ProductReturn
+2025-09-04 15:49:15.578 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) filepath = Include/Data Files/login_data.json
+2025-09-04 15:49:15.594 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) section = ProductReturnPage
+2025-09-04 15:49:15.598 INFO  c.k.k.core.webui.driver.DriverFactory    - Starting 'Chrome' driver
+2025-09-04 15:49:15.601 INFO  c.k.k.core.webui.driver.DriverFactory    - Action delay is set to 0 milliseconds
+Sep 04, 2025 3:49:17 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 140, returning the closest version; found: 138; Please update to a Selenium version that supports CDP version 140
+2025-09-04 15:49:17.838 INFO  c.k.k.core.webui.driver.DriverFactory    - sessionId = ba0723d4a7e4148c07dbe4406c79e110
+2025-09-04 15:49:17.839 INFO  c.k.k.core.webui.driver.DriverFactory    - browser = Chrome 140.0.7339.81
+2025-09-04 15:49:17.841 INFO  c.k.k.core.webui.driver.DriverFactory    - platform = Windows 11
+2025-09-04 15:49:17.842 INFO  c.k.k.core.webui.driver.DriverFactory    - seleniumVersion = 4.28.1
+2025-09-04 15:49:17.842 INFO  c.k.k.core.webui.driver.DriverFactory    - proxyInformation = ProxyInformation { proxyOption=NO_PROXY, proxyServerType=HTTP, username=, password=********, proxyServerAddress=, proxyServerPort=0, executionList="", isApplyToDesiredCapabilities=true }
+2025-09-04 15:49:23.399 DEBUG testcase.ProductReturn                   - 1: ExtentManager.initReport("OrderReturnReport")
+2025-09-04 15:49:23.401 DEBUG testcase.ProductReturn                   - 2: ExtentManager.createTest("Order Return Test")
+2025-09-04 15:49:23.402 DEBUG testcase.ProductReturn                   - 3: ExtentManager.logPass("Signing into the account")
+2025-09-04 15:49:23.403 DEBUG testcase.ProductReturn                   - 4: callTestCase(findTestCase("Test Cases/SignIn"), [:])
+2025-09-04 15:49:23.469 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-09-04 15:49:23.469 INFO  c.k.katalon.core.main.TestCaseExecutor   - CALL Test Cases/SignIn
+2025-09-04 15:49:23.498 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) filepath = Include/Data Files/login_data.json
+2025-09-04 15:49:23.499 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) section = loginPage
+2025-09-04 15:49:23.501 DEBUG testcase.SignIn                          - 1: ExtentManager.initReport("LoginTestReport")
+2025-09-04 15:49:23.502 DEBUG testcase.SignIn                          - 2: ExtentManager.createTest("Login Test")
+2025-09-04 15:49:23.503 DEBUG testcase.SignIn                          - 3: ExtentManager.logPass("Navigating to the sign in page")
+2025-09-04 15:49:23.504 DEBUG testcase.SignIn                          - 4: pages.HomePage.navigateToAccountPage()
+2025-09-04 15:49:23.826 INFO  com.kms.katalon.core.util.KeywordUtil    - Hovering over: my account
+2025-09-04 15:49:24.225 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ my account has been hovered
+2025-09-04 15:49:24.492 INFO  com.kms.katalon.core.util.KeywordUtil    - Clicking on: login button
+2025-09-04 15:49:26.964 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ login button has been clicked
+2025-09-04 15:49:26.965 DEBUG testcase.SignIn                          - 5: ExtentManager.logPass("Navigated to the sign in page")
+2025-09-04 15:49:26.968 DEBUG testcase.SignIn                          - 6: ExtentManager.logPass("Signing into the account")
+2025-09-04 15:49:26.970 DEBUG testcase.SignIn                          - 7: loginFields = [["id":"input-email", "jsonKey":"email"], ["id":"input-password", "jsonKey":"password"]]
+2025-09-04 15:49:26.970 DEBUG testcase.SignIn                          - 8: loginFields.each({ -> ... })
+2025-09-04 15:49:27.435 INFO  com.kms.katalon.core.util.KeywordUtil    - Entering data into: email
+2025-09-04 15:49:28.079 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ email has been entered
+2025-09-04 15:49:28.400 INFO  com.kms.katalon.core.util.KeywordUtil    - Entering data into: password
+2025-09-04 15:49:29.108 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ password has been entered
+2025-09-04 15:49:29.111 DEBUG testcase.SignIn                          - 9: pages.LoginPage.clickOnLoginButton(findTestObject("Object Repository/LoginPage/Login_button"))
+2025-09-04 15:49:29.474 INFO  com.kms.katalon.core.util.KeywordUtil    - Clicking on: Login button
+2025-09-04 15:49:29.897 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Login button has been clicked
+2025-09-04 15:49:29.898 DEBUG testcase.SignIn                          - 10: ExtentManager.logPass("Signed into the account")
+2025-09-04 15:49:29.898 DEBUG testcase.SignIn                          - 11: ExtentManager.logPass("Verifying My Account")
+2025-09-04 15:49:29.899 DEBUG testcase.SignIn                          - 12: pages.AccountPage.verifyMyAccount(findTestObject("Object Repository/AccountPage/my_Account_verification"), JsonFileReader.getJsonData(section, "verification_text", filepath))
+2025-09-04 15:49:33.100 INFO  com.kms.katalon.core.util.KeywordUtil    - Verifying text for: Verify My account
+2025-09-04 15:49:33.369 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Verify My account has been verified
+2025-09-04 15:49:33.371 DEBUG testcase.SignIn                          - 13: ExtentManager.logPass("Verified My Account")
+2025-09-04 15:49:33.374 DEBUG testcase.SignIn                          - 14: ExtentManager.flushReport()
+2025-09-04 15:49:33.503 INFO  c.k.katalon.core.main.TestCaseExecutor   - END CALL Test Cases/SignIn
+2025-09-04 15:49:33.504 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-09-04 15:49:33.507 DEBUG testcase.ProductReturn                   - 5: ExtentManager.logPass("Signed into the account")
+2025-09-04 15:49:33.510 DEBUG testcase.ProductReturn                   - 6: ExtentManager.logPass("Navigating to order history page")
+2025-09-04 15:49:33.511 DEBUG testcase.ProductReturn                   - 7: sideBarElements = [["text":" Order History", "label":"Order History"]]
+2025-09-04 15:49:33.513 DEBUG testcase.ProductReturn                   - 8: sideBarElements.each({ -> ... })
+2025-09-04 15:49:33.813 INFO  com.kms.katalon.core.util.KeywordUtil    - Clicking on: Order History
+2025-09-04 15:49:36.400 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Order History has been clicked
+2025-09-04 15:49:36.401 DEBUG testcase.ProductReturn                   - 9: ExtentManager.logPass("Navigated to order history page")
+2025-09-04 15:49:36.403 DEBUG testcase.ProductReturn                   - 10: ExtentManager.logPass("Navigating to the order information page")
+2025-09-04 15:49:36.408 DEBUG testcase.ProductReturn                   - 11: pages.OrderHistoryPage.clickOnViewButton(findTestObject("Object Repository/OrderHistoryPage/viewInformationButton"))
+2025-09-04 15:49:36.947 INFO  com.kms.katalon.core.util.KeywordUtil    - Clicking on: view Button
+2025-09-04 15:49:39.179 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ view Button has been clicked
+2025-09-04 15:49:39.181 DEBUG testcase.ProductReturn                   - 12: ExtentManager.logPass("Navigated to the order information page")
+2025-09-04 15:49:39.183 DEBUG testcase.ProductReturn                   - 13: ExtentManager.logPass("Navigating to the order return page")
+2025-09-04 15:49:39.185 DEBUG testcase.ProductReturn                   - 14: pages.OrderInformationPage.clickOnReturnButton(findTestObject("Object Repository/OrderInformationPage/returnButton"))
+2025-09-04 15:49:39.664 INFO  com.kms.katalon.core.util.KeywordUtil    - Clicking on: Return button
+2025-09-04 15:49:41.955 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Return button has been clicked
+2025-09-04 15:49:41.957 DEBUG testcase.ProductReturn                   - 15: pages.OrderReturnPage.submittingAnOrderReturn()
+2025-09-04 15:49:42.502 INFO  com.kms.katalon.core.util.KeywordUtil    - Clicking on: order error option
+2025-09-04 15:49:42.911 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ order error option has been clicked
+2025-09-04 15:49:43.199 INFO  com.kms.katalon.core.util.KeywordUtil    - Clicking on: submit button
+2025-09-04 15:49:46.120 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ submit button has been clicked
+2025-09-04 15:49:46.122 DEBUG testcase.ProductReturn                   - 16: ExtentManager.logPass("Navigated to the order return page")
+2025-09-04 15:49:46.125 DEBUG testcase.ProductReturn                   - 17: ExtentManager.logPass("Verifying the order return")
+2025-09-04 15:49:46.127 DEBUG testcase.ProductReturn                   - 18: pages.OrderReturnPage.verifyOrderReturn(findTestObject("Object Repository/ProductReturnsPage/verifyText"), JsonFileReader.getJsonData(section, "verifyText", filepath))
+2025-09-04 15:49:46.604 INFO  com.kms.katalon.core.util.KeywordUtil    - Verifying text for: Order return
+2025-09-04 15:49:46.895 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Order return has been verified
+2025-09-04 15:49:46.897 DEBUG testcase.ProductReturn                   - 19: ExtentManager.logPass("Verified the order return")
+2025-09-04 15:49:46.899 DEBUG testcase.ProductReturn                   - 20: ExtentManager.flushReport()
+2025-09-04 15:49:47.322 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/ProductReturn
+2025-09-04 15:49:47.329 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-09-04 15:49:47.329 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/CommentPost
+2025-09-04 15:49:47.339 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) filepath = Include/Data Files/login_data.json
+2025-09-04 15:49:47.355 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) section = ArticlePage
+2025-09-04 15:49:47.359 INFO  c.k.k.core.webui.driver.DriverFactory    - Starting 'Chrome' driver
+2025-09-04 15:49:47.361 INFO  c.k.k.core.webui.driver.DriverFactory    - Action delay is set to 0 milliseconds
+Sep 04, 2025 3:49:49 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 140, returning the closest version; found: 138; Please update to a Selenium version that supports CDP version 140
+2025-09-04 15:49:49.551 INFO  c.k.k.core.webui.driver.DriverFactory    - sessionId = 5451df9d370e36dbd378dab41464ec0f
+2025-09-04 15:49:49.551 INFO  c.k.k.core.webui.driver.DriverFactory    - browser = Chrome 140.0.7339.81
+2025-09-04 15:49:49.551 INFO  c.k.k.core.webui.driver.DriverFactory    - platform = Windows 11
+2025-09-04 15:49:49.551 INFO  c.k.k.core.webui.driver.DriverFactory    - seleniumVersion = 4.28.1
+2025-09-04 15:49:49.553 INFO  c.k.k.core.webui.driver.DriverFactory    - proxyInformation = ProxyInformation { proxyOption=NO_PROXY, proxyServerType=HTTP, username=, password=********, proxyServerAddress=, proxyServerPort=0, executionList="", isApplyToDesiredCapabilities=true }
+2025-09-04 15:49:55.780 DEBUG testcase.CommentPost                     - 1: ExtentManager.initReport("BlogCommentReport")
+2025-09-04 15:49:55.782 DEBUG testcase.CommentPost                     - 2: ExtentManager.createTest("Post Comment on Blog Article")
+2025-09-04 15:49:55.783 DEBUG testcase.CommentPost                     - 3: ExtentManager.logPass("Navigating to the blog page")
+2025-09-04 15:49:55.784 DEBUG testcase.CommentPost                     - 4: pages.HomePage.clickOnBlog(findTestObject("Object Repository/Home_Page/Blogs"), "Blog")
+2025-09-04 15:49:56.090 INFO  com.kms.katalon.core.util.KeywordUtil    - Clicking on: Blog
+2025-09-04 15:49:58.465 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Blog has been clicked
+2025-09-04 15:49:58.466 DEBUG testcase.CommentPost                     - 5: ExtentManager.logPass("Navigated to the blog page")
+2025-09-04 15:49:58.467 DEBUG testcase.CommentPost                     - 6: ExtentManager.logPass("Navigating to the article page")
+2025-09-04 15:49:58.468 DEBUG testcase.CommentPost                     - 7: pages.BlogPage.clickOnArticle(findTestObject("Object Repository/BlogsPage/Article"))
+2025-09-04 15:49:58.874 INFO  com.kms.katalon.core.util.KeywordUtil    - Clicking on: Article
+2025-09-04 15:50:02.018 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Article has been clicked
+2025-09-04 15:50:02.021 DEBUG testcase.CommentPost                     - 8: ExtentManager.logPass("Navigated to the article page")
+2025-09-04 15:50:02.022 DEBUG testcase.CommentPost                     - 9: ExtentManager.logPass("Entering the details to post a comment")
+2025-09-04 15:50:02.025 DEBUG testcase.CommentPost                     - 10: articleFields = [["id":"input-name", "jsonKey":"name", "label":"Name"], ["id":"input-email", "jsonKey":"email", "label":"Email"]]
+2025-09-04 15:50:02.027 DEBUG testcase.CommentPost                     - 11: articleFields.each({ -> ... })
+2025-09-04 15:50:02.525 INFO  com.kms.katalon.core.util.KeywordUtil    - Entering data into: Name
+2025-09-04 15:50:03.266 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Name has been entered
+2025-09-04 15:50:03.547 INFO  com.kms.katalon.core.util.KeywordUtil    - Entering data into: Email
+2025-09-04 15:50:04.328 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Email has been entered
+2025-09-04 15:50:04.330 DEBUG testcase.CommentPost                     - 12: pages.ArticlePage.inputCommentOnArticle(findTestObject("Object Repository/ArticlePage/inputComment"), JsonFileReader.getJsonData(section, "comment", filepath))
+2025-09-04 15:50:04.645 INFO  com.kms.katalon.core.util.KeywordUtil    - Entering data into: Comment
+2025-09-04 15:50:05.490 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Comment has been entered
+2025-09-04 15:50:05.490 DEBUG testcase.CommentPost                     - 13: pages.ArticlePage.clickOnPostCommentButton(findTestObject("Object Repository/ArticlePage/postCommentButton"))
+2025-09-04 15:50:05.806 INFO  com.kms.katalon.core.util.KeywordUtil    - Clicking on: Post comment
+2025-09-04 15:50:06.194 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Post comment has been clicked
+2025-09-04 15:50:06.196 DEBUG testcase.CommentPost                     - 14: ExtentManager.logPass("Details for posting a comment have been entered")
+2025-09-04 15:50:06.196 DEBUG testcase.CommentPost                     - 15: ExtentManager.logPass("Verifying Success Message")
+2025-09-04 15:50:06.201 DEBUG testcase.CommentPost                     - 16: pages.ArticlePage.verifySuccessText(findTestObject("Object Repository/ArticlePage/successMessage"), JsonFileReader.getJsonData(section, "successMessage", filepath))
+2025-09-04 15:50:06.739 INFO  com.kms.katalon.core.util.KeywordUtil    - Verifying text for: Success Text
+2025-09-04 15:50:06.777 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Success Text has been verified
+2025-09-04 15:50:06.777 DEBUG testcase.CommentPost                     - 17: ExtentManager.logPass("Verified Success Message")
+2025-09-04 15:50:06.777 DEBUG testcase.CommentPost                     - 18: ExtentManager.flushReport()
+2025-09-04 15:50:07.245 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/CommentPost
+2025-09-04 15:50:07.302 INFO  c.k.katalon.core.main.TestSuiteExecutor  - --------------------
+2025-09-04 15:50:07.302 INFO  c.k.katalon.core.main.TestSuiteExecutor  - END Test Suites/TestSuite
+2025-09-04 15:50:07.302 INFO  c.k.katalon.core.main.TestSuiteExecutor  - ====================

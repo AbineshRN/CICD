@@ -1,0 +1,461 @@
+2025-09-15 16:03:41.085 INFO  c.k.katalon.core.main.TestSuiteExecutor  - START Test Suites/DependentTestcase
+2025-09-15 16:03:41.200 INFO  c.k.katalon.core.main.TestSuiteExecutor  - userFullName = Abinesh R
+2025-09-15 16:03:41.203 INFO  c.k.katalon.core.main.TestSuiteExecutor  - projectName = Luma
+2025-09-15 16:03:41.203 INFO  c.k.katalon.core.main.TestSuiteExecutor  - hostName = 10835442 - 10.235.153.218
+2025-09-15 16:03:41.204 INFO  c.k.katalon.core.main.TestSuiteExecutor  - os = Windows 11 64bit
+2025-09-15 16:03:41.205 INFO  c.k.katalon.core.main.TestSuiteExecutor  - hostAddress = 10.235.153.218
+2025-09-15 16:03:41.205 INFO  c.k.katalon.core.main.TestSuiteExecutor  - katalonVersion = 10.3.1.0
+2025-09-15 16:03:41.971 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-09-15 16:03:41.971 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/TC_SignIn
+2025-09-15 16:03:42.139 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) filepath = Include/Data Files/login_data.json
+2025-09-15 16:03:42.174 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) section = loginPage
+2025-09-15 16:03:42.385 ERROR c.k.k.core.context.internal.TestHooker   - ❌ groovy.json.JsonException: Unable to determine the current character, it is not a string, number, array, or object
+
+The current character read is 'P' with an int value of 80
+Unable to determine the current character, it is not a string, number, array, or object
+line number 61
+index number 1777
+        "TC_SignIn": PASSED,
+.....................^
+	at org.apache.groovy.json.internal.JsonParserCharArray.decodeValueInternal(JsonParserCharArray.java:202)
+	at org.apache.groovy.json.internal.JsonParserCharArray.decodeJsonObject(JsonParserCharArray.java:128)
+	at org.apache.groovy.json.internal.JsonParserCharArray.decodeValueInternal(JsonParserCharArray.java:182)
+	at org.apache.groovy.json.internal.JsonParserCharArray.decodeJsonObject(JsonParserCharArray.java:128)
+	at org.apache.groovy.json.internal.JsonParserCharArray.decodeValueInternal(JsonParserCharArray.java:182)
+	at org.apache.groovy.json.internal.JsonParserCharArray.decodeValue(JsonParserCharArray.java:153)
+	at org.apache.groovy.json.internal.JsonParserCharArray.decodeFromChars(JsonParserCharArray.java:43)
+	at org.apache.groovy.json.internal.JsonParserCharArray.parse(JsonParserCharArray.java:380)
+	at org.apache.groovy.json.internal.BaseJsonParser.parse(BaseJsonParser.java:134)
+	at org.apache.groovy.json.internal.BaseJsonParser.parse(BaseJsonParser.java:157)
+	at utils.JsonFileReader.getSectionData(JsonFileReader.groovy:92)
+	at utils.DependencyHandler.getDependencyMap(DependencyHandler.groovy:29)
+	at BrowserListener.beforeTestCase(BrowserListener.groovy:29)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at com.kms.katalon.core.context.internal.TestHooker.invokeMethod(TestHooker.java:111)
+	at com.kms.katalon.core.context.internal.TestHooker.lambda$3(TestHooker.java:95)
+	at com.kms.katalon.core.context.internal.TestHooker.invokeContextMethods(TestHooker.java:94)
+	at com.kms.katalon.core.context.internal.TestListenerCollector.lambda$3(TestListenerCollector.java:88)
+	at com.kms.katalon.core.context.internal.TestListenerCollector.handleListenerEvent(TestListenerCollector.java:85)
+	at com.kms.katalon.core.context.internal.ExecutionEventManager.publicEvent(ExecutionEventManager.java:36)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:304)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1757932416234.run(TempTestSuite1757932416234.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+2025-09-15 16:03:42.675 DEBUG testcase.TC_SignIn                       - 1: try
+2025-09-15 16:03:42.678 DEBUG testcase.TC_SignIn                       - 1: ExtentManager.initReport("LoginTestReport")
+2025-09-15 16:03:43.721 DEBUG testcase.TC_SignIn                       - 2: ExtentManager.createTest("Login Test")
+2025-09-15 16:03:43.736 DEBUG testcase.TC_SignIn                       - 3: ExtentManager.logInfo("Navigating to the sign in page")
+2025-09-15 16:03:43.771 DEBUG testcase.TC_SignIn                       - 4: pages.HomePage.navigateToAccountPage(STOP_ON_FAILURE)
+2025-09-15 16:03:44.254 ERROR k.k.c.m.CustomKeywordDelegatingMetaClass - ❌ Browser is not opened
+Build info: version: '4.28.1', revision: '73f5ad48a2'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: driver.version: unknown
+2025-09-15 16:03:44.269 DEBUG testcase.TC_SignIn                       - 2: catch (Exception e)
+2025-09-15 16:03:44.270 DEBUG testcase.TC_SignIn                       - 1: JsonFileReader.updateJsonValue("executionStatus", "TC_SignIn", false, filepath)
+2025-09-15 16:03:44.287 DEBUG testcase.TC_SignIn                       - 3: Finally
+2025-09-15 16:03:44.291 DEBUG testcase.TC_SignIn                       - 1: ExtentManager.flushReport()
+2025-09-15 16:03:44.726 ERROR c.k.katalon.core.main.TestCaseExecutor   - ❌ Test Cases/TC_SignIn FAILED.
+Reason:
+groovy.json.JsonException: Unable to determine the current character, it is not a string, number, array, or object
+
+The current character read is 'P' with an int value of 80
+Unable to determine the current character, it is not a string, number, array, or object
+line number 61
+index number 1777
+        "TC_SignIn": PASSED,
+.....................^
+	at org.apache.groovy.json.internal.JsonParserCharArray.decodeValueInternal(JsonParserCharArray.java:202)
+	at org.apache.groovy.json.internal.JsonParserCharArray.decodeJsonObject(JsonParserCharArray.java:128)
+	at org.apache.groovy.json.internal.JsonParserCharArray.decodeValueInternal(JsonParserCharArray.java:182)
+	at org.apache.groovy.json.internal.JsonParserCharArray.decodeJsonObject(JsonParserCharArray.java:128)
+	at org.apache.groovy.json.internal.JsonParserCharArray.decodeValueInternal(JsonParserCharArray.java:182)
+	at org.apache.groovy.json.internal.JsonParserCharArray.decodeValue(JsonParserCharArray.java:153)
+	at org.apache.groovy.json.internal.JsonParserCharArray.decodeFromChars(JsonParserCharArray.java:43)
+	at org.apache.groovy.json.internal.JsonParserCharArray.parse(JsonParserCharArray.java:380)
+	at org.apache.groovy.json.internal.BaseJsonParser.parse(BaseJsonParser.java:134)
+	at org.apache.groovy.json.internal.BaseJsonParser.parse(BaseJsonParser.java:157)
+	at utils.JsonFileReader.updateJsonValue(JsonFileReader.groovy:60)
+	at TC_SignIn.run(TC_SignIn:60)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1757932416234.run(TempTestSuite1757932416234.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+2025-09-15 16:03:44.737 ERROR c.k.katalon.core.main.TestCaseExecutor   - ❌ Test Cases/TC_SignIn FAILED.
+Reason:
+com.kms.katalon.core.webui.exception.BrowserNotOpenedException: Browser is not opened
+Build info: version: '4.28.1', revision: '73f5ad48a2'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: driver.version: unknown
+	at com.kms.katalon.core.webui.driver.DriverFactory.verifyWebDriverIsOpen(DriverFactory.java:587)
+	at com.kms.katalon.core.webui.driver.DriverFactory.verifyWebDriver(DriverFactory.java:572)
+	at com.kms.katalon.core.webui.driver.DriverFactory.getWebDriver(DriverFactory.java:546)
+	at utils.Helper.hoverElement(Helper.groovy:71)
+	at pages.HomePage.navigateToAccountPage(HomePage.groovy:28)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at com.kms.katalon.core.main.CustomKeywordDelegatingMetaClass.invokeStaticMethod(CustomKeywordDelegatingMetaClass.java:55)
+	at TC_SignIn.run(TC_SignIn:33)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1757932416234.run(TempTestSuite1757932416234.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+⚠️ Error while closing browser: Browser is not opened
+Build info: version: '4.28.1', revision: '73f5ad48a2'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: driver.version: unknown
+2025-09-15 16:03:44.849 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/TC_SignIn
+2025-09-15 16:03:44.872 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-09-15 16:03:44.872 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/TC_ChangePassword
+2025-09-15 16:03:44.928 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) filepath = Include/Data Files/login_data.json
+2025-09-15 16:03:44.963 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) section = changePasswordPage
+2025-09-15 16:03:44.992 ERROR c.k.k.core.context.internal.TestHooker   - ❌ groovy.json.JsonException: Unable to determine the current character, it is not a string, number, array, or object
+
+The current character read is 'P' with an int value of 80
+Unable to determine the current character, it is not a string, number, array, or object
+line number 61
+index number 1777
+        "TC_SignIn": PASSED,
+.....................^
+	at org.apache.groovy.json.internal.JsonParserCharArray.decodeValueInternal(JsonParserCharArray.java:202)
+	at org.apache.groovy.json.internal.JsonParserCharArray.decodeJsonObject(JsonParserCharArray.java:128)
+	at org.apache.groovy.json.internal.JsonParserCharArray.decodeValueInternal(JsonParserCharArray.java:182)
+	at org.apache.groovy.json.internal.JsonParserCharArray.decodeJsonObject(JsonParserCharArray.java:128)
+	at org.apache.groovy.json.internal.JsonParserCharArray.decodeValueInternal(JsonParserCharArray.java:182)
+	at org.apache.groovy.json.internal.JsonParserCharArray.decodeValue(JsonParserCharArray.java:153)
+	at org.apache.groovy.json.internal.JsonParserCharArray.decodeFromChars(JsonParserCharArray.java:43)
+	at org.apache.groovy.json.internal.JsonParserCharArray.parse(JsonParserCharArray.java:380)
+	at org.apache.groovy.json.internal.BaseJsonParser.parse(BaseJsonParser.java:134)
+	at org.apache.groovy.json.internal.BaseJsonParser.parse(BaseJsonParser.java:157)
+	at utils.JsonFileReader.getSectionData(JsonFileReader.groovy:92)
+	at utils.DependencyHandler.getDependencyMap(DependencyHandler.groovy:29)
+	at BrowserListener.beforeTestCase(BrowserListener.groovy:29)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at com.kms.katalon.core.context.internal.TestHooker.invokeMethod(TestHooker.java:111)
+	at com.kms.katalon.core.context.internal.TestHooker.lambda$3(TestHooker.java:95)
+	at com.kms.katalon.core.context.internal.TestHooker.invokeContextMethods(TestHooker.java:94)
+	at com.kms.katalon.core.context.internal.TestListenerCollector.lambda$3(TestListenerCollector.java:88)
+	at com.kms.katalon.core.context.internal.TestListenerCollector.handleListenerEvent(TestListenerCollector.java:85)
+	at com.kms.katalon.core.context.internal.ExecutionEventManager.publicEvent(ExecutionEventManager.java:36)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:304)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1757932416234.run(TempTestSuite1757932416234.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+2025-09-15 16:03:45.420 DEBUG testcase.TC_ChangePassword               - 1: ExtentManager.initReport("ChangePasswordReport")
+2025-09-15 16:03:45.431 DEBUG testcase.TC_ChangePassword               - 2: ExtentManager.createTest("Change Password Test")
+2025-09-15 16:03:45.437 DEBUG testcase.TC_ChangePassword               - 3: try
+2025-09-15 16:03:45.439 DEBUG testcase.TC_ChangePassword               - 1: ExtentManager.logInfo("Signing into the account")
+2025-09-15 16:03:45.443 DEBUG testcase.TC_ChangePassword               - 2: callTestCase(findTestCase("Test Cases/TC_SignIn"), [:])
+2025-09-15 16:03:45.571 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-09-15 16:03:45.571 INFO  c.k.katalon.core.main.TestCaseExecutor   - CALL Test Cases/TC_SignIn
+2025-09-15 16:03:45.594 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) filepath = Include/Data Files/login_data.json
+2025-09-15 16:03:45.597 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) section = loginPage
+2025-09-15 16:03:45.603 DEBUG testcase.TC_SignIn                       - 1: try
+2025-09-15 16:03:45.605 DEBUG testcase.TC_SignIn                       - 1: ExtentManager.initReport("LoginTestReport")
+2025-09-15 16:03:45.610 DEBUG testcase.TC_SignIn                       - 2: ExtentManager.createTest("Login Test")
+2025-09-15 16:03:45.614 DEBUG testcase.TC_SignIn                       - 3: ExtentManager.logInfo("Navigating to the sign in page")
+2025-09-15 16:03:45.627 DEBUG testcase.TC_SignIn                       - 4: pages.HomePage.navigateToAccountPage(STOP_ON_FAILURE)
+2025-09-15 16:03:45.645 ERROR k.k.c.m.CustomKeywordDelegatingMetaClass - ❌ Browser is not opened
+Build info: version: '4.28.1', revision: '73f5ad48a2'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: driver.version: unknown
+2025-09-15 16:03:45.645 DEBUG testcase.TC_SignIn                       - 2: catch (Exception e)
+2025-09-15 16:03:45.652 DEBUG testcase.TC_SignIn                       - 1: JsonFileReader.updateJsonValue("executionStatus", "TC_SignIn", false, filepath)
+2025-09-15 16:03:45.655 DEBUG testcase.TC_SignIn                       - 3: Finally
+2025-09-15 16:03:45.658 DEBUG testcase.TC_SignIn                       - 1: ExtentManager.flushReport()
+2025-09-15 16:03:45.770 ERROR c.k.katalon.core.main.TestCaseExecutor   - ❌ Test Cases/TC_SignIn FAILED.
+Reason:
+groovy.json.JsonException: Unable to determine the current character, it is not a string, number, array, or object
+
+The current character read is 'P' with an int value of 80
+Unable to determine the current character, it is not a string, number, array, or object
+line number 61
+index number 1777
+        "TC_SignIn": PASSED,
+.....................^
+	at org.apache.groovy.json.internal.JsonParserCharArray.decodeValueInternal(JsonParserCharArray.java:202)
+	at org.apache.groovy.json.internal.JsonParserCharArray.decodeJsonObject(JsonParserCharArray.java:128)
+	at org.apache.groovy.json.internal.JsonParserCharArray.decodeValueInternal(JsonParserCharArray.java:182)
+	at org.apache.groovy.json.internal.JsonParserCharArray.decodeJsonObject(JsonParserCharArray.java:128)
+	at org.apache.groovy.json.internal.JsonParserCharArray.decodeValueInternal(JsonParserCharArray.java:182)
+	at org.apache.groovy.json.internal.JsonParserCharArray.decodeValue(JsonParserCharArray.java:153)
+	at org.apache.groovy.json.internal.JsonParserCharArray.decodeFromChars(JsonParserCharArray.java:43)
+	at org.apache.groovy.json.internal.JsonParserCharArray.parse(JsonParserCharArray.java:380)
+	at org.apache.groovy.json.internal.BaseJsonParser.parse(BaseJsonParser.java:134)
+	at org.apache.groovy.json.internal.BaseJsonParser.parse(BaseJsonParser.java:157)
+	at utils.JsonFileReader.updateJsonValue(JsonFileReader.groovy:60)
+	at TC_SignIn.run(TC_SignIn:60)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseMain.runTestCase(TestCaseMain.java:151)
+	at com.kms.katalon.core.keyword.builtin.CallTestCaseKeyword$_callTestCase_closure1.doCall(CallTestCaseKeyword.groovy:59)
+	at com.kms.katalon.core.keyword.builtin.CallTestCaseKeyword$_callTestCase_closure1.call(CallTestCaseKeyword.groovy)
+	at com.kms.katalon.core.keyword.internal.KeywordMain.runKeyword(KeywordMain.groovy:75)
+	at com.kms.katalon.core.keyword.builtin.CallTestCaseKeyword.callTestCase(CallTestCaseKeyword.groovy:81)
+	at com.kms.katalon.core.keyword.builtin.CallTestCaseKeyword.execute(CallTestCaseKeyword.groovy:44)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:79)
+	at com.kms.katalon.core.keyword.BuiltinKeywords.callTestCase(BuiltinKeywords.groovy:326)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at TC_ChangePassword.run(TC_ChangePassword:34)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1757932416234.run(TempTestSuite1757932416234.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+2025-09-15 16:03:45.777 ERROR c.k.katalon.core.main.TestCaseExecutor   - ❌ Test Cases/TC_SignIn FAILED.
+Reason:
+com.kms.katalon.core.webui.exception.BrowserNotOpenedException: Browser is not opened
+Build info: version: '4.28.1', revision: '73f5ad48a2'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: driver.version: unknown
+	at com.kms.katalon.core.webui.driver.DriverFactory.verifyWebDriverIsOpen(DriverFactory.java:587)
+	at com.kms.katalon.core.webui.driver.DriverFactory.verifyWebDriver(DriverFactory.java:572)
+	at com.kms.katalon.core.webui.driver.DriverFactory.getWebDriver(DriverFactory.java:546)
+	at utils.Helper.hoverElement(Helper.groovy:71)
+	at pages.HomePage.navigateToAccountPage(HomePage.groovy:28)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at com.kms.katalon.core.main.CustomKeywordDelegatingMetaClass.invokeStaticMethod(CustomKeywordDelegatingMetaClass.java:55)
+	at TC_SignIn.run(TC_SignIn:33)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseMain.runTestCase(TestCaseMain.java:151)
+	at com.kms.katalon.core.keyword.builtin.CallTestCaseKeyword$_callTestCase_closure1.doCall(CallTestCaseKeyword.groovy:59)
+	at com.kms.katalon.core.keyword.builtin.CallTestCaseKeyword$_callTestCase_closure1.call(CallTestCaseKeyword.groovy)
+	at com.kms.katalon.core.keyword.internal.KeywordMain.runKeyword(KeywordMain.groovy:75)
+	at com.kms.katalon.core.keyword.builtin.CallTestCaseKeyword.callTestCase(CallTestCaseKeyword.groovy:81)
+	at com.kms.katalon.core.keyword.builtin.CallTestCaseKeyword.execute(CallTestCaseKeyword.groovy:44)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:79)
+	at com.kms.katalon.core.keyword.BuiltinKeywords.callTestCase(BuiltinKeywords.groovy:326)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at TC_ChangePassword.run(TC_ChangePassword:34)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1757932416234.run(TempTestSuite1757932416234.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+2025-09-15 16:03:45.782 INFO  c.k.katalon.core.main.TestCaseExecutor   - END CALL Test Cases/TC_SignIn
+2025-09-15 16:03:45.784 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-09-15 16:03:45.804 ERROR c.k.k.core.keyword.internal.KeywordMain  - ❌ Unable to call Test Case 'Test Cases/TC_SignIn' (Root cause: com.kms.katalon.core.exception.StepErrorException: Call Test Case 'Test Cases/TC_SignIn' failed because of error(s)
+	at com.kms.katalon.core.keyword.builtin.CallTestCaseKeyword$_callTestCase_closure1.doCall(CallTestCaseKeyword.groovy:66)
+	at com.kms.katalon.core.keyword.builtin.CallTestCaseKeyword$_callTestCase_closure1.call(CallTestCaseKeyword.groovy)
+	at com.kms.katalon.core.keyword.internal.KeywordMain.runKeyword(KeywordMain.groovy:75)
+	at com.kms.katalon.core.keyword.builtin.CallTestCaseKeyword.callTestCase(CallTestCaseKeyword.groovy:81)
+	at com.kms.katalon.core.keyword.builtin.CallTestCaseKeyword.execute(CallTestCaseKeyword.groovy:44)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:79)
+	at com.kms.katalon.core.keyword.BuiltinKeywords.callTestCase(BuiltinKeywords.groovy:326)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at TC_ChangePassword.run(TC_ChangePassword:34)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1757932416234.run(TempTestSuite1757932416234.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+Caused by: com.kms.katalon.core.webui.exception.BrowserNotOpenedException: Browser is not opened
+Build info: version: '4.28.1', revision: '73f5ad48a2'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: driver.version: unknown
+	at com.kms.katalon.core.webui.driver.DriverFactory.verifyWebDriverIsOpen(DriverFactory.java:587)
+	at com.kms.katalon.core.webui.driver.DriverFactory.verifyWebDriver(DriverFactory.java:572)
+	at com.kms.katalon.core.webui.driver.DriverFactory.getWebDriver(DriverFactory.java:546)
+	at utils.Helper.hoverElement(Helper.groovy:71)
+	at pages.HomePage.navigateToAccountPage(HomePage.groovy:28)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at com.kms.katalon.core.main.CustomKeywordDelegatingMetaClass.invokeStaticMethod(CustomKeywordDelegatingMetaClass.java:55)
+	at TC_SignIn.run(TC_SignIn:33)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseMain.runTestCase(TestCaseMain.java:151)
+	at com.kms.katalon.core.keyword.builtin.CallTestCaseKeyword$_callTestCase_closure1.doCall(CallTestCaseKeyword.groovy:59)
+	... 25 more
+)
+2025-09-15 16:03:45.809 DEBUG testcase.TC_ChangePassword               - 4: catch (Exception e)
+2025-09-15 16:03:45.813 DEBUG testcase.TC_ChangePassword               - 1: ExtentManager.logFail("Failed to sign into the account: " + message)
+2025-09-15 16:03:45.839 DEBUG testcase.TC_ChangePassword               - 6: try
+2025-09-15 16:03:45.847 DEBUG testcase.TC_ChangePassword               - 1: ExtentManager.logInfo("Navigating to change password page")
+2025-09-15 16:03:45.854 DEBUG testcase.TC_ChangePassword               - 2: pages.AccountPage.clickOnChangePassword(findTestObject("Object Repository/AccountPage/changePassword"), STOP_ON_FAILURE)
+2025-09-15 16:03:45.898 ERROR k.k.c.m.CustomKeywordDelegatingMetaClass - ❌ Browser is not opened
+Build info: version: '4.28.1', revision: '73f5ad48a2'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: driver.version: unknown
+2025-09-15 16:03:45.905 DEBUG testcase.TC_ChangePassword               - 7: catch (Exception e)
+2025-09-15 16:03:45.908 DEBUG testcase.TC_ChangePassword               - 1: ExtentManager.logFail("Failed to navigate to change password page: " + message)
+2025-09-15 16:03:45.912 DEBUG testcase.TC_ChangePassword               - 9: try
+2025-09-15 16:03:45.920 DEBUG testcase.TC_ChangePassword               - 1: ExtentManager.logInfo("Setting up a new password")
+2025-09-15 16:03:45.924 DEBUG testcase.TC_ChangePassword               - 2: pages.PasswordChangePage.changingPassword(JsonFileReader.getJsonData(section, "password", filepath), STOP_ON_FAILURE)
+2025-09-15 16:03:45.931 DEBUG testcase.TC_ChangePassword               - 10: catch (Exception e)
+2025-09-15 16:03:45.939 DEBUG testcase.TC_ChangePassword               - 1: ExtentManager.logFail("Failed to set new password: " + message)
+2025-09-15 16:03:45.948 DEBUG testcase.TC_ChangePassword               - 12: try
+2025-09-15 16:03:45.958 DEBUG testcase.TC_ChangePassword               - 1: ExtentManager.logInfo("Verifying Password Change Text")
+2025-09-15 16:03:45.962 DEBUG testcase.TC_ChangePassword               - 2: pages.AccountPage.verifyPasswordChange(findTestObject("Object Repository/AccountPage/passwordChangedText"), JsonFileReader.getJsonData(section, "verifyText", filepath), STOP_ON_FAILURE)
+2025-09-15 16:03:45.986 DEBUG testcase.TC_ChangePassword               - 13: catch (Exception e)
+2025-09-15 16:03:45.990 DEBUG testcase.TC_ChangePassword               - 1: ExtentManager.logFail("Failed to verify password change text: " + message)
+2025-09-15 16:03:45.994 DEBUG testcase.TC_ChangePassword               - 15: try
+2025-09-15 16:03:45.998 DEBUG testcase.TC_ChangePassword               - 1: ExtentManager.logInfo("Updating login password in JSON file")
+2025-09-15 16:03:46.005 DEBUG testcase.TC_ChangePassword               - 2: JsonFileReader.updateJsonValue("loginPage", "password", JsonFileReader.getJsonData(section, "password", filepath), filepath)
+2025-09-15 16:03:46.015 DEBUG testcase.TC_ChangePassword               - 16: catch (Exception e)
+2025-09-15 16:03:46.027 DEBUG testcase.TC_ChangePassword               - 1: ExtentManager.logFail("Failed to update password in JSON file: " + message)
+2025-09-15 16:03:46.032 DEBUG testcase.TC_ChangePassword               - 18: try
+2025-09-15 16:03:46.043 DEBUG testcase.TC_ChangePassword               - 1: ExtentManager.logInfo("Navigating to change password page")
+2025-09-15 16:03:46.048 DEBUG testcase.TC_ChangePassword               - 2: pages.AccountPage.clickOnChangePassword(findTestObject("Object Repository/AccountPage/changePassword"))
+2025-09-15 16:03:46.119 ERROR k.k.c.m.CustomKeywordDelegatingMetaClass - ❌ No signature of method: pages.AccountPage.clickOnChangePassword() is applicable for argument types: (com.kms.katalon.core.testobject.TestObject) values: [TestObject - 'Object Repository/AccountPage/changePassword']
+Possible solutions: clickOnChangePassword(com.kms.katalon.core.testobject.TestObject, com.kms.katalon.core.model.FailureHandling)
+2025-09-15 16:03:46.125 DEBUG testcase.TC_ChangePassword               - 19: catch (Exception e)
+2025-09-15 16:03:46.128 DEBUG testcase.TC_ChangePassword               - 1: ExtentManager.logFail("Failed to navigate to change password page: " + message)
+2025-09-15 16:03:46.139 DEBUG testcase.TC_ChangePassword               - 21: try
+2025-09-15 16:03:46.142 DEBUG testcase.TC_ChangePassword               - 1: ExtentManager.logInfo("Setting up a new password")
+2025-09-15 16:03:46.145 DEBUG testcase.TC_ChangePassword               - 2: pages.PasswordChangePage.changingPassword(JsonFileReader.getJsonData(section, "password", filepath))
+2025-09-15 16:03:46.154 DEBUG testcase.TC_ChangePassword               - 22: catch (Exception e)
+2025-09-15 16:03:46.157 DEBUG testcase.TC_ChangePassword               - 1: ExtentManager.logFail("Failed to set new password: " + message)
+2025-09-15 16:03:46.160 DEBUG testcase.TC_ChangePassword               - 24: try
+2025-09-15 16:03:46.164 DEBUG testcase.TC_ChangePassword               - 1: ExtentManager.logInfo("Verifying Password Change Text")
+2025-09-15 16:03:46.170 DEBUG testcase.TC_ChangePassword               - 2: pages.AccountPage.verifyPasswordChange(findTestObject("Object Repository/AccountPage/passwordChangedText"), JsonFileReader.getJsonData(section, "verifyText", filepath), STOP_ON_FAILURE)
+2025-09-15 16:03:46.180 DEBUG testcase.TC_ChangePassword               - 25: catch (Exception e)
+2025-09-15 16:03:46.188 DEBUG testcase.TC_ChangePassword               - 1: ExtentManager.logFail("Failed to verify password change text: " + message)
+2025-09-15 16:03:46.194 DEBUG testcase.TC_ChangePassword               - 27: try
+2025-09-15 16:03:46.196 DEBUG testcase.TC_ChangePassword               - 1: ExtentManager.logInfo("Updating login password in JSON file")
+2025-09-15 16:03:46.204 DEBUG testcase.TC_ChangePassword               - 2: JsonFileReader.updateJsonValue("loginPage", "password", JsonFileReader.getJsonData(section, "password", filepath), filepath)
+2025-09-15 16:03:46.212 DEBUG testcase.TC_ChangePassword               - 28: catch (Exception e)
+2025-09-15 16:03:46.214 DEBUG testcase.TC_ChangePassword               - 1: ExtentManager.logFail("Failed to update password in JSON file: " + message)
+2025-09-15 16:03:46.223 DEBUG testcase.TC_ChangePassword               - 30: ExtentManager.flushReport()
+2025-09-15 16:03:46.255 ERROR c.k.katalon.core.main.TestCaseExecutor   - ❌ Test Cases/TC_ChangePassword FAILED.
+Reason:
+org.codehaus.groovy.runtime.metaclass.MissingMethodExceptionNoStack: No signature of method: pages.AccountPage.clickOnChangePassword() is applicable for argument types: (com.kms.katalon.core.testobject.TestObject) values: [TestObject - 'Object Repository/AccountPage/changePassword']
+Possible solutions: clickOnChangePassword(com.kms.katalon.core.testobject.TestObject, com.kms.katalon.core.model.FailureHandling)
+
+2025-09-15 16:03:46.273 ERROR c.k.katalon.core.main.TestCaseExecutor   - ❌ Test Cases/TC_ChangePassword FAILED.
+Reason:
+com.kms.katalon.core.webui.exception.BrowserNotOpenedException: Browser is not opened
+Build info: version: '4.28.1', revision: '73f5ad48a2'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: driver.version: unknown
+	at com.kms.katalon.core.webui.driver.DriverFactory.verifyWebDriverIsOpen(DriverFactory.java:587)
+	at com.kms.katalon.core.webui.driver.DriverFactory.verifyWebDriver(DriverFactory.java:572)
+	at com.kms.katalon.core.webui.driver.DriverFactory.getWebDriver(DriverFactory.java:546)
+	at utils.Helper.clickElement(Helper.groovy:53)
+	at pages.AccountPage.clickOnChangePassword(AccountPage.groovy:33)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at com.kms.katalon.core.main.CustomKeywordDelegatingMetaClass.invokeStaticMethod(CustomKeywordDelegatingMetaClass.java:55)
+	at TC_ChangePassword.run(TC_ChangePassword:45)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1757932416234.run(TempTestSuite1757932416234.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+⚠️ Error while closing browser: Browser is not opened
+Build info: version: '4.28.1', revision: '73f5ad48a2'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: driver.version: unknown
+2025-09-15 16:03:46.295 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/TC_ChangePassword
+2025-09-15 16:03:46.369 INFO  c.k.katalon.core.main.TestSuiteExecutor  - --------------------
+2025-09-15 16:03:46.369 INFO  c.k.katalon.core.main.TestSuiteExecutor  - END Test Suites/DependentTestcase
+2025-09-15 16:03:46.369 INFO  c.k.katalon.core.main.TestSuiteExecutor  - ====================

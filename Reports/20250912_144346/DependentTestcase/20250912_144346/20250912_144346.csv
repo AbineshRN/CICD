@@ -1,0 +1,34 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+DependentTestcase,Chrome 140.0.7339.128,,,12-09-2025 14:43:50,12-09-2025 14:44:23,32.597s,ERROR
+,,,,,,,
+Test Cases/TC_SignIn,Chrome 140.0.7339.128,,,12-09-2025 14:43:51,12-09-2025 14:44:21,30.070s,FAILED
+"DATA BINDING - {""(Default) secti..."":""loginPage"",""(Default) filep..."":""Include/Data Files/login_data.json""}",,,,,,,
+Start listener action : beforeTestCase,Chrome 140.0.7339.128,,,12-09-2025 14:43:51,12-09-2025 14:44:02,11.246s,PASSED
+try,Chrome 140.0.7339.128,,,12-09-2025 14:44:02,12-09-2025 14:44:19,16.692s,FAILED
+catch (Exception e),Chrome 140.0.7339.128,,,12-09-2025 14:44:19,12-09-2025 14:44:20,0.484s,PASSED
+Finally,Chrome 140.0.7339.128,,,12-09-2025 14:44:20,12-09-2025 14:44:20,0.640s,PASSED
+Start listener action : closeTheBrowser,Chrome 140.0.7339.128,,,12-09-2025 14:44:20,12-09-2025 14:44:21,0.511s,PASSED
+,,,,,,,
+Test Cases/TC_ChangePassword,Chrome 140.0.7339.128,This testcase checks the change password functionality.,,12-09-2025 14:44:21,12-09-2025 14:44:23,1.701s,ERROR
+"DATA BINDING - {""(Default) secti..."":""changePasswordPage"",""(Default) filep..."":""Include/Data Files/login_data.json""}",,,,,,,
+Start listener action : beforeTestCase,Chrome 140.0.7339.128,,,12-09-2025 14:44:21,12-09-2025 14:44:21,0.123s,PASSED
+"ExtentManager.initReport(""ChangePasswordReport"")",Chrome 140.0.7339.128,,,12-09-2025 14:44:21,12-09-2025 14:44:21,0.006s,PASSED
+"ExtentManager.createTest(""Change Password Test"")",Chrome 140.0.7339.128,,,12-09-2025 14:44:21,12-09-2025 14:44:21,0.003s,PASSED
+try,Chrome 140.0.7339.128,,,12-09-2025 14:44:21,12-09-2025 14:44:22,0.691s,FAILED
+catch (Exception e),Chrome 140.0.7339.128,,,12-09-2025 14:44:22,12-09-2025 14:44:22,0.007s,PASSED
+try,Chrome 140.0.7339.128,,,12-09-2025 14:44:22,12-09-2025 14:44:22,0.032s,ERROR
+catch (Exception e),Chrome 140.0.7339.128,,,12-09-2025 14:44:22,12-09-2025 14:44:22,0.013s,PASSED
+try,Chrome 140.0.7339.128,,,12-09-2025 14:44:22,12-09-2025 14:44:22,0.065s,ERROR
+catch (Exception e),Chrome 140.0.7339.128,,,12-09-2025 14:44:22,12-09-2025 14:44:22,0.008s,PASSED
+try,Chrome 140.0.7339.128,,,12-09-2025 14:44:22,12-09-2025 14:44:22,0.035s,ERROR
+catch (Exception e),Chrome 140.0.7339.128,,,12-09-2025 14:44:22,12-09-2025 14:44:22,0.007s,PASSED
+try,Chrome 140.0.7339.128,,,12-09-2025 14:44:22,12-09-2025 14:44:22,0.086s,PASSED
+try,Chrome 140.0.7339.128,,,12-09-2025 14:44:22,12-09-2025 14:44:22,0.038s,ERROR
+catch (Exception e),Chrome 140.0.7339.128,,,12-09-2025 14:44:22,12-09-2025 14:44:22,0.006s,PASSED
+try,Chrome 140.0.7339.128,,,12-09-2025 14:44:22,12-09-2025 14:44:22,0.025s,ERROR
+catch (Exception e),Chrome 140.0.7339.128,,,12-09-2025 14:44:22,12-09-2025 14:44:22,0.007s,PASSED
+try,Chrome 140.0.7339.128,,,12-09-2025 14:44:22,12-09-2025 14:44:22,0.040s,ERROR
+catch (Exception e),Chrome 140.0.7339.128,,,12-09-2025 14:44:22,12-09-2025 14:44:22,0.025s,PASSED
+try,Chrome 140.0.7339.128,,,12-09-2025 14:44:22,12-09-2025 14:44:22,0.034s,PASSED
+ExtentManager.flushReport(),Chrome 140.0.7339.128,,,12-09-2025 14:44:22,12-09-2025 14:44:23,0.048s,ERROR
+Start listener action : closeTheBrowser,Chrome 140.0.7339.128,,,12-09-2025 14:44:23,12-09-2025 14:44:23,0.016s,PASSED

@@ -1,0 +1,36 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+API_Testcases,,,,17-09-2025 11:58:55,17-09-2025 11:59:01,5.873s,PASSED
+,,,,,,,
+Test Cases/JsonPlaceHolder/api_SignIn,,,,17-09-2025 11:58:56,17-09-2025 11:59:01,5.067s,PASSED
+"DATA BINDING - {""(Default) getSc..."":""Include/Data Files/get_response_schema.json"",""(Default) syste..."":""Include/Data Files/login_data.json"",""(Default) postS..."":""Include/Data Files/post_login_response_schema.json"",""(Default) filep..."":""https://68c8e78aceef5a150f629ed5.mockapi.io/sign_in/credentials""}",,,,,,,
+Start listener action : beforeTestCase,,,,17-09-2025 11:58:56,17-09-2025 11:58:56,0.149s,PASSED
+"logInfo(""Sending POST request to /credentials to create new credentials"")",,,,17-09-2025 11:58:56,17-09-2025 11:58:56,0.014s,PASSED
+"postPayload = JsonOutput.toJson(JsonFileReader.getSectionData(""loginPage"", systemJsonFilePath))",,,,17-09-2025 11:58:56,17-09-2025 11:58:56,0.092s,PASSED
+"postResponse = ApiKeywords.sendPost(""/credentials"", postPayload)",,,,17-09-2025 11:58:56,17-09-2025 11:58:59,3.093s,PASSED
+"verifyResponseStatusCode(postResponse, 201)",,,,17-09-2025 11:58:59,17-09-2025 11:58:59,0.027s,PASSED
+"logInfo(""POST response status code verified as 201"")",,,,17-09-2025 11:58:59,17-09-2025 11:58:59,0.004s,PASSED
+postResponseBody = postResponse.getResponseBodyContent(),,,,17-09-2025 11:58:59,17-09-2025 11:58:59,0.010s,PASSED
+createdCredential = JsonSlurper().parseText(postResponseBody),,,,17-09-2025 11:58:59,17-09-2025 11:58:59,0.003s,PASSED
+credentialId = id,,,,17-09-2025 11:58:59,17-09-2025 11:58:59,0.003s,PASSED
+"logInfo(""Created credential ID: "" + credentialId)",,,,17-09-2025 11:58:59,17-09-2025 11:58:59,0.005s,PASSED
+"validateJsonAgainstSchema(postResponseBody, postSchemaFilePath)",,,,17-09-2025 11:58:59,17-09-2025 11:58:59,0.148s,PASSED
+"markPassed(""POST response schema validation passed"")",,,,17-09-2025 11:58:59,17-09-2025 11:59:00,0.018s,PASSED
+logInfo(Sending GET request to /credentials/$credentialId),,,,17-09-2025 11:59:00,17-09-2025 11:59:00,0.019s,PASSED
+getResponse = ApiKeywords.sendGet(/credentials/$credentialId),,,,17-09-2025 11:59:00,17-09-2025 11:59:00,0.320s,PASSED
+"verifyResponseStatusCode(getResponse, 200)",,,,17-09-2025 11:59:00,17-09-2025 11:59:00,0.014s,PASSED
+"logInfo(""GET response status code verified as 200"")",,,,17-09-2025 11:59:00,17-09-2025 11:59:00,0.004s,PASSED
+getResponseBody = getResponse.getResponseBodyContent(),,,,17-09-2025 11:59:00,17-09-2025 11:59:00,0.004s,PASSED
+"validateJsonAgainstSchema(getResponseBody, postSchemaFilePath)",,,,17-09-2025 11:59:00,17-09-2025 11:59:00,0.015s,PASSED
+"markPassed(""GET response schema validation passed"")",,,,17-09-2025 11:59:00,17-09-2025 11:59:00,0.007s,PASSED
+logInfo(Sending PATCH request to /credentials/$credentialId to update password),,,,17-09-2025 11:59:00,17-09-2025 11:59:00,0.003s,PASSED
+"patchPayload = JsonOutput.toJson([""password"":""NewPassword@456""])",,,,17-09-2025 11:59:00,17-09-2025 11:59:00,0.002s,PASSED
+"patchResponse = ApiKeywords.sendPatch(/credentials/$credentialId, patchPayload)",,,,17-09-2025 11:59:00,17-09-2025 11:59:00,0.297s,PASSED
+"verifyResponseStatusCode(patchResponse, 200)",,,,17-09-2025 11:59:00,17-09-2025 11:59:00,0.007s,PASSED
+"markPassed(""PATCH password update successful"")",,,,17-09-2025 11:59:00,17-09-2025 11:59:00,0.006s,PASSED
+logInfo(Sending PUT request to /credentials/$credentialId to replace full credential),,,,17-09-2025 11:59:00,17-09-2025 11:59:00,0.004s,PASSED
+"putPayload = JsonOutput.toJson([""email"":""alicesmith.38@gmail.com"", ""password"":""NewPassword@456"", ""verification_text"":""My Account""])",,,,17-09-2025 11:59:00,17-09-2025 11:59:00,0.003s,PASSED
+"putResponse = ApiKeywords.sendPut(/credentials/$credentialId, putPayload)",,,,17-09-2025 11:59:00,17-09-2025 11:59:01,0.286s,PASSED
+"verifyResponseStatusCode(putResponse, 200)",,,,17-09-2025 11:59:01,17-09-2025 11:59:01,0.006s,PASSED
+"validateJsonAgainstSchema(putResponse.getResponseBodyContent(), postSchemaFilePath)",,,,17-09-2025 11:59:01,17-09-2025 11:59:01,0.008s,PASSED
+"markPassed(""PUT full credential update successful and schema validated"")",,,,17-09-2025 11:59:01,17-09-2025 11:59:01,0.001s,PASSED
+Start listener action : closeTheBrowser,,,,17-09-2025 11:59:01,17-09-2025 11:59:01,0.123s,PASSED

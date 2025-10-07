@@ -1,0 +1,128 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+GraphQL_API,,,,25-09-2025 19:02:00,25-09-2025 19:02:09,8.412s,PASSED
+,,,,,,,
+Test Cases/API_Testing/GraphQL_API_Testing/graphql_Put_api,,,,25-09-2025 19:02:01,25-09-2025 19:02:05,3.765s,PASSED
+"DATA BINDING - {""(Default) graph..."":""graphQL"",""(Default) schem..."":""Include/Data Files/MasterSchema.json"",""(Default) apiBa..."":""apiBaseUrl""}",,,,,,,
+Start listener action : beforeTestCase,,,,25-09-2025 19:02:01,25-09-2025 19:02:01,0.124s,PASSED
+"logInfo(""Sending GraphQL mutation to update post with title and body"")",,,,25-09-2025 19:02:01,25-09-2025 19:02:01,0.012s,PASSED
+"query = ""
+mutation UpdatePost($input: UpdatePostInput!, $id: ID!) {
+  updatePost(id: $id, input: $input) {
+    id
+    title
+    body
+  }
+}
+""",,,,25-09-2025 19:02:01,25-09-2025 19:02:01,0.004s,PASSED
+"variables = [""id"":1, ""input"":[""title"":""A Very Captivating Post Title"", ""body"":""Some interesting content.""]]",,,,25-09-2025 19:02:01,25-09-2025 19:02:01,0.004s,PASSED
+"headers = [""Content-Type"":""application/json""]",,,,25-09-2025 19:02:01,25-09-2025 19:02:01,0.004s,PASSED
+"baseUrl = GlobalAccessor.getProfileVariable(graphQL, apiBaseUrl)",,,,25-09-2025 19:02:01,25-09-2025 19:02:02,0.111s,PASSED
+"response = ApiKeywords.sendGraphQL(baseUrl, query, variables, headers)",,,,25-09-2025 19:02:02,25-09-2025 19:02:04,2.921s,PASSED
+"verifyResponseStatusCode(response, 200)",,,,25-09-2025 19:02:04,25-09-2025 19:02:04,0.018s,PASSED
+"logInfo(""GraphQL response status code verified as 200"")",,,,25-09-2025 19:02:04,25-09-2025 19:02:04,0.002s,PASSED
+responseBody = response.getResponseBodyContent(),,,,25-09-2025 19:02:04,25-09-2025 19:02:04,0.010s,PASSED
+json = JsonSlurper().parseText(responseBody),,,,25-09-2025 19:02:04,25-09-2025 19:02:05,0.012s,PASSED
+logInfo(Updated Post ID: $json.data.updatePost.id),,,,25-09-2025 19:02:05,25-09-2025 19:02:05,0.011s,PASSED
+logInfo(Updated Post Title: $json.data.updatePost.title),,,,25-09-2025 19:02:05,25-09-2025 19:02:05,0.004s,PASSED
+logInfo(Updated Post Body: $json.data.updatePost.body),,,,25-09-2025 19:02:05,25-09-2025 19:02:05,0.004s,PASSED
+"validateJsonAgainstSchema(responseBody, JsonOutput.toJson(JsonFileReader.getSectionData(""graphQL_Patch"", schemaFilePath)))",,,,25-09-2025 19:02:05,25-09-2025 19:02:05,0.122s,PASSED
+"markPassed(""GraphQL updatePost response schema validation passed"")",,,,25-09-2025 19:02:05,25-09-2025 19:02:05,0.010s,PASSED
+Start listener action : closeTheBrowser,,,,25-09-2025 19:02:05,25-09-2025 19:02:05,0.105s,PASSED
+,,,,,,,
+Test Cases/API_Testing/GraphQL_API_Testing/graphql_Post_api,,,,25-09-2025 19:02:05,25-09-2025 19:02:05,0.677s,PASSED
+"DATA BINDING - {""(Default) graph..."":""graphQL"",""(Default) schem..."":""Include/Data Files/MasterSchema.json"",""(Default) apiBa..."":""apiBaseUrl""}",,,,,,,
+Start listener action : beforeTestCase,,,,25-09-2025 19:02:05,25-09-2025 19:02:05,0.022s,PASSED
+"logInfo(""Sending GraphQL mutation to create a new post"")",,,,25-09-2025 19:02:05,25-09-2025 19:02:05,0.004s,PASSED
+"query = ""
+mutation CreatePost($input: CreatePostInput!) {
+  createPost(input: $input) {
+    id
+    title
+    body
+  }
+}
+""",,,,25-09-2025 19:02:05,25-09-2025 19:02:05,0.001s,PASSED
+"variables = [""input"":[""title"":""A Very Captivating Post Title"", ""body"":""Some interesting content.""]]",,,,25-09-2025 19:02:05,25-09-2025 19:02:05,0.003s,PASSED
+"headers = [""Content-Type"":""application/json""]",,,,25-09-2025 19:02:05,25-09-2025 19:02:05,0.002s,PASSED
+"baseUrl = GlobalAccessor.getProfileVariable(graphQL, apiBaseUrl)",,,,25-09-2025 19:02:05,25-09-2025 19:02:05,0.007s,PASSED
+"response = ApiKeywords.sendGraphQL(baseUrl, query, variables, headers)",,,,25-09-2025 19:02:05,25-09-2025 19:02:05,0.349s,PASSED
+"verifyResponseStatusCode(response, 200)",,,,25-09-2025 19:02:05,25-09-2025 19:02:05,0.006s,PASSED
+"logInfo(""GraphQL response status code verified as 200"")",,,,25-09-2025 19:02:05,25-09-2025 19:02:05,0.004s,PASSED
+responseBody = response.getResponseBodyContent(),,,,25-09-2025 19:02:05,25-09-2025 19:02:05,0.004s,PASSED
+json = JsonSlurper().parseText(responseBody),,,,25-09-2025 19:02:05,25-09-2025 19:02:05,0.003s,PASSED
+logInfo(Created Post ID: $json.data.createPost.id),,,,25-09-2025 19:02:05,25-09-2025 19:02:05,0.004s,PASSED
+logInfo(Created Post Title: $json.data.createPost.title),,,,25-09-2025 19:02:05,25-09-2025 19:02:05,0.004s,PASSED
+"validateJsonAgainstSchema(responseBody, JsonOutput.toJson(JsonFileReader.getSectionData(""graphQL_Post"", schemaFilePath)))",,,,25-09-2025 19:02:05,25-09-2025 19:02:05,0.008s,PASSED
+"markPassed(""GraphQL createPost response schema validation passed"")",,,,25-09-2025 19:02:05,25-09-2025 19:02:05,0.004s,PASSED
+Start listener action : closeTheBrowser,,,,25-09-2025 19:02:05,25-09-2025 19:02:05,0.016s,PASSED
+,,,,,,,
+Test Cases/API_Testing/GraphQL_API_Testing/graphql_Patch_api,,,,25-09-2025 19:02:05,25-09-2025 19:02:07,1.373s,PASSED
+"DATA BINDING - {""(Default) graph..."":""graphQL"",""(Default) schem..."":""Include/Data Files/MasterSchema.json"",""(Default) apiBa..."":""apiBaseUrl""}",,,,,,,
+Start listener action : beforeTestCase,,,,25-09-2025 19:02:05,25-09-2025 19:02:05,0.007s,PASSED
+"logInfo(""Sending GraphQL mutation to update post"")",,,,25-09-2025 19:02:06,25-09-2025 19:02:06,0.002s,PASSED
+"query = ""
+mutation UpdatePost($input: UpdatePostInput!, $id: ID!) {
+  updatePost(id: $id, input: $input) {
+    id
+    title
+  }
+}
+""",,,,25-09-2025 19:02:06,25-09-2025 19:02:06,0.001s,PASSED
+"variables = [""id"":1, ""input"":[""title"":""Patch modified title""]]",,,,25-09-2025 19:02:06,25-09-2025 19:02:06,0.001s,PASSED
+"headers = [""Content-Type"":""application/json""]",,,,25-09-2025 19:02:06,25-09-2025 19:02:06,0.002s,PASSED
+"baseUrl = GlobalAccessor.getProfileVariable(graphQL, apiBaseUrl)",,,,25-09-2025 19:02:06,25-09-2025 19:02:06,0.008s,PASSED
+"response = ApiKeywords.sendGraphQL(baseUrl, query, variables, headers)",,,,25-09-2025 19:02:06,25-09-2025 19:02:07,1.150s,PASSED
+"verifyResponseStatusCode(response, 200)",,,,25-09-2025 19:02:07,25-09-2025 19:02:07,0.004s,PASSED
+"logInfo(""GraphQL response status code verified as 200"")",,,,25-09-2025 19:02:07,25-09-2025 19:02:07,0.002s,PASSED
+responseBody = response.getResponseBodyContent(),,,,25-09-2025 19:02:07,25-09-2025 19:02:07,0.002s,PASSED
+json = JsonSlurper().parseText(responseBody),,,,25-09-2025 19:02:07,25-09-2025 19:02:07,0.003s,PASSED
+logInfo(Updated Post ID: $json.data.updatePost.id),,,,25-09-2025 19:02:07,25-09-2025 19:02:07,0.002s,PASSED
+logInfo(Updated Post Title: $json.data.updatePost.title),,,,25-09-2025 19:02:07,25-09-2025 19:02:07,0.002s,PASSED
+"validateJsonAgainstSchema(responseBody, JsonOutput.toJson(JsonFileReader.getSectionData(""graphQL_Patch"", schemaFilePath)))",,,,25-09-2025 19:02:07,25-09-2025 19:02:07,0.009s,PASSED
+"markPassed(""GraphQL updatePost response schema validation passed"")",,,,25-09-2025 19:02:07,25-09-2025 19:02:07,0.002s,PASSED
+Start listener action : closeTheBrowser,,,,25-09-2025 19:02:07,25-09-2025 19:02:07,0.009s,PASSED
+,,,,,,,
+Test Cases/API_Testing/GraphQL_API_Testing/graphql_Get_api,,,,25-09-2025 19:02:07,25-09-2025 19:02:08,1.469s,PASSED
+"DATA BINDING - {""(Default) graph..."":""graphQL"",""(Default) schem..."":""Include/Data Files/MasterSchema.json"",""(Default) apiBa..."":""apiBaseUrl""}",,,,,,,
+Start listener action : beforeTestCase,,,,25-09-2025 19:02:07,25-09-2025 19:02:07,0.008s,PASSED
+"logInfo(""Sending GraphQL query to fetch post by ID"")",,,,25-09-2025 19:02:07,25-09-2025 19:02:07,0.006s,PASSED
+"query = ""
+query GetPost($id: ID!) {
+  post(id: $id) {
+    id
+    title
+    body
+  }
+}
+""",,,,25-09-2025 19:02:07,25-09-2025 19:02:07,0.002s,PASSED
+"variables = [""id"":1]",,,,25-09-2025 19:02:07,25-09-2025 19:02:07,0.001s,PASSED
+"headers = [""Content-Type"":""application/json""]",,,,25-09-2025 19:02:07,25-09-2025 19:02:07,0.001s,PASSED
+"baseUrl = GlobalAccessor.getProfileVariable(graphQL, apiBaseUrl)",,,,25-09-2025 19:02:07,25-09-2025 19:02:07,0.011s,PASSED
+"response = ApiKeywords.sendGraphQL(baseUrl, query, variables, headers)",,,,25-09-2025 19:02:07,25-09-2025 19:02:08,1.175s,PASSED
+"verifyResponseStatusCode(response, 200)",,,,25-09-2025 19:02:08,25-09-2025 19:02:08,0.005s,PASSED
+"logInfo(""GraphQL response status code verified as 200"")",,,,25-09-2025 19:02:08,25-09-2025 19:02:08,0.001s,PASSED
+responseBody = response.getResponseBodyContent(),,,,25-09-2025 19:02:08,25-09-2025 19:02:08,0.001s,PASSED
+json = JsonSlurper().parseText(responseBody),,,,25-09-2025 19:02:08,25-09-2025 19:02:08,0.001s,PASSED
+println(JsonOutput.prettyPrint(JsonOutput.toJson(json))),,,,25-09-2025 19:02:08,25-09-2025 19:02:08,0.018s,PASSED
+logInfo(Post ID: $json.data.post.id),,,,25-09-2025 19:02:08,25-09-2025 19:02:08,0.002s,PASSED
+logInfo(Post Title: $json.data.post.title),,,,25-09-2025 19:02:08,25-09-2025 19:02:08,0.002s,PASSED
+"validateJsonAgainstSchema(responseBody, JsonOutput.toJson(JsonFileReader.getSectionData(""graphQL_GET"", schemaFilePath)))",,,,25-09-2025 19:02:08,25-09-2025 19:02:08,0.008s,PASSED
+"markPassed(""GraphQL response schema validation passed"")",,,,25-09-2025 19:02:08,25-09-2025 19:02:08,0.001s,PASSED
+Start listener action : closeTheBrowser,,,,25-09-2025 19:02:08,25-09-2025 19:02:08,0.010s,PASSED
+,,,,,,,
+Test Cases/API_Testing/GraphQL_API_Testing/graphql_Delete_api,,,,25-09-2025 19:02:08,25-09-2025 19:02:09,0.530s,PASSED
+"DATA BINDING - {""(Default) graph..."":""graphQL"",""(Default) apiBa..."":""apiBaseUrl""}",,,,,,,
+Start listener action : beforeTestCase,,,,25-09-2025 19:02:08,25-09-2025 19:02:08,0.010s,PASSED
+"logInfo(""Sending GraphQL mutation to delete post by ID"")",,,,25-09-2025 19:02:08,25-09-2025 19:02:08,0.002s,PASSED
+"query = ""
+mutation DeletePost($id: ID!) {
+  deletePost(id: $id)
+}
+""",,,,25-09-2025 19:02:08,25-09-2025 19:02:08,0.002s,PASSED
+"variables = [""id"":1]",,,,25-09-2025 19:02:08,25-09-2025 19:02:08,0.001s,PASSED
+"headers = [""Content-Type"":""application/json""]",,,,25-09-2025 19:02:08,25-09-2025 19:02:08,0.001s,PASSED
+"baseUrl = GlobalAccessor.getProfileVariable(graphQL, apiBaseUrl)",,,,25-09-2025 19:02:08,25-09-2025 19:02:08,0.004s,PASSED
+"response = ApiKeywords.sendGraphQL(baseUrl, query, variables, headers)",,,,25-09-2025 19:02:08,25-09-2025 19:02:09,0.350s,PASSED
+"verifyResponseStatusCode(response, 200)",,,,25-09-2025 19:02:09,25-09-2025 19:02:09,0.016s,PASSED
+"logInfo(""GraphQL response status code verified as 200"")",,,,25-09-2025 19:02:09,25-09-2025 19:02:09,0.005s,PASSED
+Start listener action : closeTheBrowser,,,,25-09-2025 19:02:09,25-09-2025 19:02:09,0.015s,PASSED

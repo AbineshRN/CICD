@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="DependentTestcase" time="51.154" tests="4" failures="1" errors="0">
+   <testsuite name="DependentTestcase" tests="4" failures="1" errors="0" time="51.154" skipped="2" timestamp="2025-09-15T11:08:40.631Z" hostname="10835442 - 10.235.153.218" id="Test Suites/DependentTestcase">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform"/>
+         <property name="logFolder" value="C:\\Users\\10835442\\Katalon Studio\\Luma\\Reports\\20250915_163836\\DependentTestcase\\20250915_163836"/>
+         <property name="logFiles" value="C:\\Users\\10835442\\Katalon Studio\\Luma\\Reports\\20250915_163836\\DependentTestcase\\20250915_163836\\console0.log, C:\\Users\\10835442\\Katalon Studio\\Luma\\Reports\\20250915_163836\\DependentTestcase\\20250915_163836\\execution0.log"/>
+         <property name="attachments" value="C:\\Users\\10835442\\Katalon Studio\\Luma\\Reports\\20250915_163836\\DependentTestcase\\20250915_163836\\1757934545402.png, C:\\Users\\10835442\\Katalon Studio\\Luma\\Reports\\20250915_163836\\DependentTestcase\\20250915_163836\\1757934545535.png, C:\\Users\\10835442\\Katalon Studio\\Luma\\Reports\\20250915_163836\\DependentTestcase\\20250915_163836\\1757934545838.png, C:\\Users\\10835442\\Katalon Studio\\Luma\\Reports\\20250915_163836\\DependentTestcase\\20250915_163836\\1757934546344.png"/>
+         <property name="hostName" value="10835442 - 10.235.153.218"/>
+         <property name="os" value="Windows 11 64bit"/>
+         <property name="katalonVersion" value="10.3.1.0"/>
+         <property name="browser" value="Chrome 140.0.7339.128"/>
+         <property name="userFullName" value="Abinesh R"/>
+         <property name="hostAddress" value="10.235.153.218"/>
+         <property name="sessionId" value="5fae18f72fef9741dbf47fea940fda87"/>
+         <property name="projectName" value="Luma"/>
+         <property name="seleniumVersion" value="4.28.1"/>
+         <property name="proxyInformation" value="ProxyInformation { proxyOption=NO_PROXY, proxyServerType=HTTP, username=, password=********, proxyServerAddress=, proxyServerPort=0, executionList=&quot;&quot;, isApplyToDesiredCapabilities=true }"/>
+         <property name="platform" value="Windows 11"/>
+      </properties>
+      <testcase name="Test Cases/TC_SignIn" time="26.807" classname="Test Cases/TC_SignIn" status="FAILED">
+         <properties>
+            <property name="data_binding"><![CDATA[{"(Default) secti...":"loginPage","(Default) filep...":"Include/Data Files/login_data.json"}]]></property>
+         </properties>
+         <failure type="FAILED" message="Test Cases/TC_SignIn FAILED.&#xa;Reason:&#xa;com.kms.katalon.core.exception.StepFailedException: Verify element text of test object 'Object Repository/AccountPage/my_Account_verification' FAILED.&#xa;	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:175)&#xa;	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:49)&#xa;	at com.kms.katalon.core.webui.keyword.builtin.VerifyElementTextKeyword.verifyElementText(VerifyElementTextKeyword.groovy:78)&#xa;	at com.kms.katalon.core.webui.keyword.builtin.VerifyElementTextKeyword.execute(VerifyElementTextKeyword.groovy:39)&#xa;	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:79)&#xa;	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.verifyElementText(WebUiBuiltInKeywords.groovy:5003)&#xa;	at utils.Helper.verifyText(Helper.groovy:101)&#xa;	at pages.AccountPage.verifyMyAccount(AccountPage.groovy:28)&#xa;	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#xa;	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#xa;	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#xa;	at com.kms.katalon.core.main.CustomKeywordDelegatingMetaClass.invokeStaticMethod(CustomKeywordDelegatingMetaClass.java:55)&#xa;	at TC_SignIn.run(TC_SignIn:53)&#xa;	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)&#xa;	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)&#xa;	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)&#xa;	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)&#xa;	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)&#xa;	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)&#xa;	at TempTestSuite1757934516104.run(TempTestSuite1757934516104.groovy:35)&#xa;	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#xa;	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#xa;	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#xa;Caused by: com.kms.katalon.core.exception.StepFailedException: Actual text 'My Account' and expected text 'My Acc' of test object 'Object Repository/AccountPage/my_Account_verification' are NOT matched.&#xa;	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:175)&#xa;	at com.kms.katalon.core.webui.keyword.builtin.VerifyElementTextKeyword$_verifyElementText_closure1.doCall(VerifyElementTextKeyword.groovy:63)&#xa;	at com.kms.katalon.core.webui.keyword.builtin.VerifyElementTextKeyword$_verifyElementText_closure1.call(VerifyElementTextKeyword.groovy)&#xa;	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:41)&#xa;	... 26 more&#xa;"/>
+         <system-out><![CDATA[15-09-2025T16:38:41 - [TEST_CASE][FAILED] - Test Cases/TC_SignIn: Test Cases/TC_SignIn FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Verify element text of test object 'Object Repository/AccountPage/my_Account_verification' FAILED.
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:175)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:49)
+	at com.kms.katalon.core.webui.keyword.builtin.VerifyElementTextKeyword.verifyElementText(VerifyElementTextKeyword.groovy:78)
+	at com.kms.katalon.core.webui.keyword.builtin.VerifyElementTextKeyword.execute(VerifyElementTextKeyword.groovy:39)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:79)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.verifyElementText(WebUiBuiltInKeywords.groovy:5003)
+	at utils.Helper.verifyText(Helper.groovy:101)
+	at pages.AccountPage.verifyMyAccount(AccountPage.groovy:28)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at com.kms.katalon.core.main.CustomKeywordDelegatingMetaClass.invokeStaticMethod(CustomKeywordDelegatingMetaClass.java:55)
+	at TC_SignIn.run(TC_SignIn:53)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1757934516104.run(TempTestSuite1757934516104.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+Caused by: com.kms.katalon.core.exception.StepFailedException: Actual text 'My Account' and expected text 'My Acc' of test object 'Object Repository/AccountPage/my_Account_verification' are NOT matched.
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:175)
+	at com.kms.katalon.core.webui.keyword.builtin.VerifyElementTextKeyword$_verifyElementText_closure1.doCall(VerifyElementTextKeyword.groovy:63)
+	at com.kms.katalon.core.webui.keyword.builtin.VerifyElementTextKeyword$_verifyElementText_closure1.call(VerifyElementTextKeyword.groovy)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:41)
+	... 26 more
+
+
+15-09-2025T16:38:41 - [TEST_STEP][PASSED] - Start listener action : beforeTestCase: Current window maximized
+
+15-09-2025T16:38:41 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+15-09-2025T16:38:41 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+15-09-2025T16:38:41 - [TEST_STEP][PASSED] - if (toLowerCase().startsWith("api_")): null
+
+15-09-2025T16:38:41 - [TEST_STEP][PASSED] - dependencyMap = DependencyHandler.getDependencyMap(): null
+
+15-09-2025T16:38:41 - [TEST_STEP][PASSED] - if (dependencyMap.containsKey(testCaseName)): null
+
+15-09-2025T16:38:41 - [TEST_STEP][PASSED] - baseTestCase = dependencyMap[testCaseName]: null
+
+15-09-2025T16:38:41 - [TEST_STEP][PASSED] - try: null
+
+15-09-2025T16:38:41 - [TEST_STEP][PASSED] - DependencyHandler.checkDependency(baseTestCase, testCaseName): null
+
+15-09-2025T16:38:41 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+15-09-2025T16:38:42 - [MESSAGE][INFO] - Starting 'Chrome' driver
+
+15-09-2025T16:38:42 - [MESSAGE][INFO] - Action delay is set to 0 milliseconds
+
+15-09-2025T16:38:45 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+15-09-2025T16:38:45 - [TEST_STEP][PASSED] - navigateToUrl(baseUrl): Navigate to 'https://ecommerce-playground.lambdatest.io/' successfully
+
+15-09-2025T16:38:51 - [MESSAGE][PASSED] - Navigate to 'https://ecommerce-playground.lambdatest.io/' successfully
+
+15-09-2025T16:38:51 - [TEST_STEP][PASSED] - maximizeWindow(): Current window maximized
+
+15-09-2025T16:38:52 - [MESSAGE][PASSED] - Current window maximized
+
+15-09-2025T16:38:52 - [TEST_STEP][FAILED] - try: Verify element text of test object 'Object Repository/AccountPage/my_Account_verification' FAILED.
+
+15-09-2025T16:38:52 - [TEST_STEP][PASSED] - ExtentManager.initReport("LoginTestReport"): null
+
+15-09-2025T16:38:53 - [TEST_STEP][PASSED] - ExtentManager.createTest("Login Test"): null
+
+15-09-2025T16:38:53 - [TEST_STEP][PASSED] - ExtentManager.logInfo("Navigating to the sign in page"): null
+
+15-09-2025T16:38:53 - [TEST_STEP][PASSED] - pages.HomePage.navigateToAccountPage(STOP_ON_FAILURE): pages.HomePage.navigateToAccountPage is PASSED
+
+15-09-2025T16:38:54 - [MESSAGE][PASSED] - Object 'Object Repository/HomePage/my_Account_Button' is visible
+
+15-09-2025T16:38:54 - [MESSAGE][PASSED] - Object: 'Object Repository/HomePage/my_Account_Button' is hovered
+
+15-09-2025T16:38:54 - [MESSAGE][PASSED] - Object 'Object Repository/HomePage/login_Button' is visible
+
+15-09-2025T16:38:57 - [MESSAGE][PASSED] - Object: 'Object Repository/HomePage/login_Button' is clicked on
+
+15-09-2025T16:38:57 - [MESSAGE][PASSED] - pages.HomePage.navigateToAccountPage is PASSED
+
+15-09-2025T16:38:57 - [TEST_STEP][PASSED] - ExtentManager.logPass("Navigated to the sign in page"): null
+
+15-09-2025T16:38:57 - [TEST_STEP][PASSED] - ExtentManager.logInfo("Signing into the account"): null
+
+15-09-2025T16:38:57 - [TEST_STEP][PASSED] - loginFields = [["id":"input-email", "jsonKey":"email"], ["id":"input-password", "jsonKey":"password"]]: null
+
+15-09-2025T16:38:57 - [TEST_STEP][PASSED] - loginFields.each({ -> ... }): pages.LoginPage.inputField is PASSED
+
+15-09-2025T16:38:58 - [MESSAGE][PASSED] - Object 'Object Repository/LoginPage/generic_Input' is visible
+
+15-09-2025T16:38:59 - [MESSAGE][PASSED] - Text 'alicesmith.38@gmail.com' is set on object 'Object Repository/LoginPage/generic_Input'
+
+15-09-2025T16:38:59 - [MESSAGE][PASSED] - pages.LoginPage.inputField is PASSED
+
+15-09-2025T16:38:59 - [MESSAGE][PASSED] - Object 'Object Repository/LoginPage/generic_Input' is visible
+
+15-09-2025T16:39:00 - [MESSAGE][PASSED] - Text 'Password@123' is set on object 'Object Repository/LoginPage/generic_Input'
+
+15-09-2025T16:39:00 - [MESSAGE][PASSED] - pages.LoginPage.inputField is PASSED
+
+15-09-2025T16:39:00 - [TEST_STEP][PASSED] - pages.LoginPage.clickOnLoginButton(findTestObject("Object Repository/LoginPage/Login_button"), STOP_ON_FAILURE): pages.LoginPage.clickOnLoginButton is PASSED
+
+15-09-2025T16:39:00 - [MESSAGE][PASSED] - Object 'Object Repository/LoginPage/Login_button' is visible
+
+15-09-2025T16:39:00 - [MESSAGE][PASSED] - Object: 'Object Repository/LoginPage/Login_button' is clicked on
+
+15-09-2025T16:39:00 - [MESSAGE][PASSED] - pages.LoginPage.clickOnLoginButton is PASSED
+
+15-09-2025T16:39:00 - [TEST_STEP][PASSED] - ExtentManager.logPass("Signed into the account"): null
+
+15-09-2025T16:39:00 - [TEST_STEP][PASSED] - ExtentManager.logInfo("Verifying My Account"): null
+
+15-09-2025T16:39:01 - [TEST_STEP][FAILED] - pages.AccountPage.verifyMyAccount(findTestObject("Object Repository/AccountPage/my_Account_verification"), JsonFileReader.getJsonData(section, "verification_text", filepath), STOP_ON_FAILURE): Verify element text of test object 'Object Repository/AccountPage/my_Account_verification' FAILED.
+
+15-09-2025T16:39:05 - [MESSAGE][PASSED] - Object 'Object Repository/AccountPage/my_Account_verification' is visible
+
+15-09-2025T16:39:05 - [MESSAGE][FAILED] - Actual text 'My Account' and expected text 'My Acc' of test object 'Object Repository/AccountPage/my_Account_verification' are NOT matched. (Root cause: com.kms.katalon.core.exception.StepFailedException: Actual text 'My Account' and expected text 'My Acc' of test object 'Object Repository/AccountPage/my_Account_verification' are NOT matched.
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:175)
+	at com.kms.katalon.core.webui.keyword.builtin.VerifyElementTextKeyword$_verifyElementText_closure1.doCall(VerifyElementTextKeyword.groovy:63)
+	at com.kms.katalon.core.webui.keyword.builtin.VerifyElementTextKeyword$_verifyElementText_closure1.call(VerifyElementTextKeyword.groovy)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:41)
+	at com.kms.katalon.core.webui.keyword.builtin.VerifyElementTextKeyword.verifyElementText(VerifyElementTextKeyword.groovy:78)
+	at com.kms.katalon.core.webui.keyword.builtin.VerifyElementTextKeyword.execute(VerifyElementTextKeyword.groovy:39)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:79)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.verifyElementText(WebUiBuiltInKeywords.groovy:5003)
+	at utils.Helper.verifyText(Helper.groovy:101)
+	at pages.AccountPage.verifyMyAccount(AccountPage.groovy:28)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at com.kms.katalon.core.main.CustomKeywordDelegatingMetaClass.invokeStaticMethod(CustomKeywordDelegatingMetaClass.java:55)
+	at TC_SignIn.run(TC_SignIn:53)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1757934516104.run(TempTestSuite1757934516104.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+)
+[[ATTACHMENT|C:\\Users\\10835442\\Katalon Studio\\Luma\\Reports\\20250915_163836\\DependentTestcase\\20250915_163836\\1757934545402.png]]
+
+15-09-2025T16:39:05 - [MESSAGE][FAILED] - Verify element text of test object 'Object Repository/AccountPage/my_Account_verification' FAILED. (Root cause: com.kms.katalon.core.exception.StepFailedException: Verify element text of test object 'Object Repository/AccountPage/my_Account_verification' FAILED.
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:175)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:49)
+	at com.kms.katalon.core.webui.keyword.builtin.VerifyElementTextKeyword.verifyElementText(VerifyElementTextKeyword.groovy:78)
+	at com.kms.katalon.core.webui.keyword.builtin.VerifyElementTextKeyword.execute(VerifyElementTextKeyword.groovy:39)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:79)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.verifyElementText(WebUiBuiltInKeywords.groovy:5003)
+	at utils.Helper.verifyText(Helper.groovy:101)
+	at pages.AccountPage.verifyMyAccount(AccountPage.groovy:28)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at com.kms.katalon.core.main.CustomKeywordDelegatingMetaClass.invokeStaticMethod(CustomKeywordDelegatingMetaClass.java:55)
+	at TC_SignIn.run(TC_SignIn:53)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1757934516104.run(TempTestSuite1757934516104.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+Caused by: com.kms.katalon.core.exception.StepFailedException: Actual text 'My Account' and expected text 'My Acc' of test object 'Object Repository/AccountPage/my_Account_verification' are NOT matched.
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:175)
+	at com.kms.katalon.core.webui.keyword.builtin.VerifyElementTextKeyword$_verifyElementText_closure1.doCall(VerifyElementTextKeyword.groovy:63)
+	at com.kms.katalon.core.webui.keyword.builtin.VerifyElementTextKeyword$_verifyElementText_closure1.call(VerifyElementTextKeyword.groovy)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:41)
+	... 26 more
+)
+[[ATTACHMENT|C:\\Users\\10835442\\Katalon Studio\\Luma\\Reports\\20250915_163836\\DependentTestcase\\20250915_163836\\1757934545535.png]]
+
+15-09-2025T16:39:06 - [MESSAGE][PASSED] - Taking screenshot successfully
+[[ATTACHMENT|C:\\Users\\10835442\\Katalon Studio\\Luma\\Reports\\20250915_163836\\DependentTestcase\\20250915_163836\\1757934545838.png]]
+
+15-09-2025T16:39:06 - [MESSAGE][FAILED] - Verify element text of test object 'Object Repository/AccountPage/my_Account_verification' FAILED.
+
+15-09-2025T16:39:06 - [TEST_STEP][PASSED] - catch (Exception e): Taking screenshot successfully
+
+15-09-2025T16:39:06 - [TEST_STEP][PASSED] - ExtentManager.logFail("Signin testcase failed: " + message): null
+
+15-09-2025T16:39:06 - [TEST_STEP][PASSED] - takeScreenshot(): Taking screenshot successfully
+
+15-09-2025T16:39:06 - [MESSAGE][PASSED] - Taking screenshot successfully
+[[ATTACHMENT|C:\\Users\\10835442\\Katalon Studio\\Luma\\Reports\\20250915_163836\\DependentTestcase\\20250915_163836\\1757934546344.png]]
+
+15-09-2025T16:39:06 - [TEST_STEP][PASSED] - Finally: null
+
+15-09-2025T16:39:06 - [TEST_STEP][PASSED] - ExtentManager.flushReport(): null
+
+15-09-2025T16:39:07 - [TEST_STEP][PASSED] - Start listener action : closeTheBrowser: null
+
+15-09-2025T16:39:07 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+15-09-2025T16:39:07 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+15-09-2025T16:39:07 - [TEST_STEP][PASSED] - testCaseStatus = testCaseContext.getTestCaseStatus(): null
+
+15-09-2025T16:39:07 - [TEST_STEP][PASSED] - println(testCaseStatus): null
+
+15-09-2025T16:39:07 - [TEST_STEP][PASSED] - StatusMap = DependencyHandler.getStatusMap(): null
+
+15-09-2025T16:39:07 - [TEST_STEP][PASSED] - if (StatusMap.containsKey(testCaseName)): null
+
+15-09-2025T16:39:07 - [TEST_STEP][PASSED] - JsonFileReader.updateJsonValue("executionStatus", testCaseName, testCaseStatus, jsonDataFilePath): null
+
+15-09-2025T16:39:07 - [TEST_STEP][PASSED] - try: null
+
+15-09-2025T16:39:07 - [TEST_STEP][PASSED] - driver = getWebDriver(): null
+
+15-09-2025T16:39:07 - [TEST_STEP][PASSED] - if (driver != null): null
+
+15-09-2025T16:39:07 - [TEST_STEP][PASSED] - closeBrowser(): Browser is closed
+
+15-09-2025T16:39:08 - [MESSAGE][PASSED] - Browser is closed
+
+15-09-2025T16:39:08 - [TEST_STEP][PASSED] - println("✅ Browser closed successfully."): null]]></system-out>
+         <system-err><![CDATA[15-09-2025T16:38:41 - [TEST_CASE][FAILED] - Test Cases/TC_SignIn: Test Cases/TC_SignIn FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Verify element text of test object 'Object Repository/AccountPage/my_Account_verification' FAILED.
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:175)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:49)
+	at com.kms.katalon.core.webui.keyword.builtin.VerifyElementTextKeyword.verifyElementText(VerifyElementTextKeyword.groovy:78)
+	at com.kms.katalon.core.webui.keyword.builtin.VerifyElementTextKeyword.execute(VerifyElementTextKeyword.groovy:39)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:79)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.verifyElementText(WebUiBuiltInKeywords.groovy:5003)
+	at utils.Helper.verifyText(Helper.groovy:101)
+	at pages.AccountPage.verifyMyAccount(AccountPage.groovy:28)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at com.kms.katalon.core.main.CustomKeywordDelegatingMetaClass.invokeStaticMethod(CustomKeywordDelegatingMetaClass.java:55)
+	at TC_SignIn.run(TC_SignIn:53)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1757934516104.run(TempTestSuite1757934516104.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+Caused by: com.kms.katalon.core.exception.StepFailedException: Actual text 'My Account' and expected text 'My Acc' of test object 'Object Repository/AccountPage/my_Account_verification' are NOT matched.
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:175)
+	at com.kms.katalon.core.webui.keyword.builtin.VerifyElementTextKeyword$_verifyElementText_closure1.doCall(VerifyElementTextKeyword.groovy:63)
+	at com.kms.katalon.core.webui.keyword.builtin.VerifyElementTextKeyword$_verifyElementText_closure1.call(VerifyElementTextKeyword.groovy)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:41)
+	... 26 more]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/TC_ChangePassword" time="0.338" classname="Test Cases/TC_ChangePassword" status="SKIPPED">
+         <properties>
+            <property name="data_binding"><![CDATA[{"(Default) secti...":"changePasswordPage","(Default) filep...":"Include/Data Files/login_data.json"}]]></property>
+         </properties>
+         <skipped message="Test was skipped"/>
+         <system-out><![CDATA[15-09-2025T16:39:08 - [TEST_CASE][SKIPPED] - Test Cases/TC_ChangePassword: 
+
+15-09-2025T16:39:08 - [TEST_STEP][PASSED] - Start listener action : beforeTestCase: null
+
+15-09-2025T16:39:08 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+15-09-2025T16:39:08 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+15-09-2025T16:39:08 - [TEST_STEP][PASSED] - if (toLowerCase().startsWith("api_")): null
+
+15-09-2025T16:39:08 - [TEST_STEP][PASSED] - dependencyMap = DependencyHandler.getDependencyMap(): null
+
+15-09-2025T16:39:08 - [TEST_STEP][PASSED] - if (dependencyMap.containsKey(testCaseName)): null
+
+15-09-2025T16:39:08 - [TEST_STEP][PASSED] - baseTestCase = dependencyMap[testCaseName]: null
+
+15-09-2025T16:39:08 - [TEST_STEP][PASSED] - try: null
+
+15-09-2025T16:39:08 - [TEST_STEP][PASSED] - DependencyHandler.checkDependency(baseTestCase, testCaseName): null
+
+15-09-2025T16:39:08 - [TEST_STEP][PASSED] - catch (utils.SkipThisTestExecution e): null
+
+15-09-2025T16:39:08 - [TEST_STEP][WARNING] - markWarning(message): Skipping TC_ChangePassword due to failed TC_SignIn
+
+15-09-2025T16:39:08 - [MESSAGE][WARNING] - Skipping TC_ChangePassword due to failed TC_SignIn
+
+15-09-2025T16:39:08 - [TEST_STEP][PASSED] - testCaseContext.skipThisTestCase(): null
+
+15-09-2025T16:39:08 - [TEST_STEP][PASSED] - return null: null
+
+15-09-2025T16:39:08 - [TEST_STEP][PASSED] - Start listener action : closeTheBrowser: null
+
+15-09-2025T16:39:08 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+15-09-2025T16:39:08 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+15-09-2025T16:39:08 - [TEST_STEP][PASSED] - testCaseStatus = testCaseContext.getTestCaseStatus(): null
+
+15-09-2025T16:39:08 - [TEST_STEP][PASSED] - println(testCaseStatus): null
+
+15-09-2025T16:39:08 - [TEST_STEP][PASSED] - StatusMap = DependencyHandler.getStatusMap(): null
+
+15-09-2025T16:39:08 - [TEST_STEP][PASSED] - if (StatusMap.containsKey(testCaseName)): null
+
+15-09-2025T16:39:08 - [TEST_STEP][PASSED] - try: null
+
+15-09-2025T16:39:08 - [TEST_STEP][PASSED] - driver = getWebDriver(): null
+
+15-09-2025T16:39:08 - [TEST_STEP][PASSED] - catch (Exception e): null
+
+15-09-2025T16:39:08 - [TEST_STEP][PASSED] - println(⚠️ Error while closing browser: $e.message): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/TC_AddToCart" time="0.186" classname="Test Cases/TC_AddToCart" status="SKIPPED">
+         <properties>
+            <property name="data_binding"><![CDATA[{"(Default) categ...":" Components","(Default) order...":"OrderPlacedPage","(Default) filep...":"Include/Data Files/login_data.json","(Default) cartP...":"CartPage"}]]></property>
+         </properties>
+         <skipped message="Test was skipped"/>
+         <system-out><![CDATA[15-09-2025T16:39:08 - [TEST_CASE][SKIPPED] - Test Cases/TC_AddToCart: 
+
+15-09-2025T16:39:08 - [TEST_STEP][PASSED] - Start listener action : beforeTestCase: null
+
+15-09-2025T16:39:08 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+15-09-2025T16:39:08 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+15-09-2025T16:39:08 - [TEST_STEP][PASSED] - if (toLowerCase().startsWith("api_")): null
+
+15-09-2025T16:39:08 - [TEST_STEP][PASSED] - dependencyMap = DependencyHandler.getDependencyMap(): null
+
+15-09-2025T16:39:08 - [TEST_STEP][PASSED] - if (dependencyMap.containsKey(testCaseName)): null
+
+15-09-2025T16:39:08 - [TEST_STEP][PASSED] - baseTestCase = dependencyMap[testCaseName]: null
+
+15-09-2025T16:39:08 - [TEST_STEP][PASSED] - try: null
+
+15-09-2025T16:39:08 - [TEST_STEP][PASSED] - DependencyHandler.checkDependency(baseTestCase, testCaseName): null
+
+15-09-2025T16:39:08 - [TEST_STEP][PASSED] - catch (utils.SkipThisTestExecution e): null
+
+15-09-2025T16:39:08 - [TEST_STEP][WARNING] - markWarning(message): Skipping TC_AddToCart due to failed TC_SignIn
+
+15-09-2025T16:39:08 - [MESSAGE][WARNING] - Skipping TC_AddToCart due to failed TC_SignIn
+
+15-09-2025T16:39:08 - [TEST_STEP][PASSED] - testCaseContext.skipThisTestCase(): null
+
+15-09-2025T16:39:08 - [TEST_STEP][PASSED] - return null: null
+
+15-09-2025T16:39:08 - [TEST_STEP][PASSED] - Start listener action : closeTheBrowser: null
+
+15-09-2025T16:39:08 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+15-09-2025T16:39:08 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+15-09-2025T16:39:08 - [TEST_STEP][PASSED] - testCaseStatus = testCaseContext.getTestCaseStatus(): null
+
+15-09-2025T16:39:08 - [TEST_STEP][PASSED] - println(testCaseStatus): null
+
+15-09-2025T16:39:08 - [TEST_STEP][PASSED] - StatusMap = DependencyHandler.getStatusMap(): null
+
+15-09-2025T16:39:08 - [TEST_STEP][PASSED] - if (StatusMap.containsKey(testCaseName)): null
+
+15-09-2025T16:39:08 - [TEST_STEP][PASSED] - try: null
+
+15-09-2025T16:39:08 - [TEST_STEP][PASSED] - driver = getWebDriver(): null
+
+15-09-2025T16:39:08 - [TEST_STEP][PASSED] - catch (Exception e): null
+
+15-09-2025T16:39:08 - [TEST_STEP][PASSED] - println(⚠️ Error while closing browser: $e.message): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/TC_Blog_PostComment" time="23.168" classname="Test Cases/TC_Blog_PostComment" status="PASSED">
+         <properties>
+            <property name="data_binding"><![CDATA[{"(Default) secti...":"ArticlePage","(Default) filep...":"Include/Data Files/login_data.json"}]]></property>
+         </properties>
+         <system-out><![CDATA[15-09-2025T16:39:08 - [TEST_CASE][PASSED] - Test Cases/TC_Blog_PostComment: Test Cases/TC_Blog_PostComment
+
+15-09-2025T16:39:08 - [TEST_STEP][PASSED] - Start listener action : beforeTestCase: Current window maximized
+
+15-09-2025T16:39:08 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+15-09-2025T16:39:08 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+15-09-2025T16:39:08 - [TEST_STEP][PASSED] - if (toLowerCase().startsWith("api_")): null
+
+15-09-2025T16:39:08 - [TEST_STEP][PASSED] - dependencyMap = DependencyHandler.getDependencyMap(): null
+
+15-09-2025T16:39:08 - [TEST_STEP][PASSED] - if (dependencyMap.containsKey(testCaseName)): null
+
+15-09-2025T16:39:08 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+15-09-2025T16:39:08 - [MESSAGE][INFO] - Starting 'Chrome' driver
+
+15-09-2025T16:39:08 - [MESSAGE][INFO] - Action delay is set to 0 milliseconds
+
+15-09-2025T16:39:11 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+15-09-2025T16:39:11 - [TEST_STEP][PASSED] - navigateToUrl(baseUrl): Navigate to 'https://ecommerce-playground.lambdatest.io/' successfully
+
+15-09-2025T16:39:19 - [MESSAGE][PASSED] - Navigate to 'https://ecommerce-playground.lambdatest.io/' successfully
+
+15-09-2025T16:39:19 - [TEST_STEP][PASSED] - maximizeWindow(): Current window maximized
+
+15-09-2025T16:39:19 - [MESSAGE][PASSED] - Current window maximized
+
+15-09-2025T16:39:19 - [TEST_STEP][PASSED] - ExtentManager.initReport("BlogCommentReport"): null
+
+15-09-2025T16:39:19 - [TEST_STEP][PASSED] - ExtentManager.createTest("Post Comment on Blog Article"): null
+
+15-09-2025T16:39:19 - [TEST_STEP][PASSED] - try: null
+
+15-09-2025T16:39:19 - [TEST_STEP][PASSED] - ExtentManager.logInfo("Navigating to the blog page"): null
+
+15-09-2025T16:39:19 - [TEST_STEP][PASSED] - pages.HomePage.clickOnBlog(findTestObject("Object Repository/HomePage/Blogs"), "Blog", STOP_ON_FAILURE): pages.HomePage.clickOnBlog is PASSED
+
+15-09-2025T16:39:19 - [MESSAGE][PASSED] - Object 'Object Repository/HomePage/Blogs' is visible
+
+15-09-2025T16:39:22 - [MESSAGE][PASSED] - Object: 'Object Repository/HomePage/Blogs' is clicked on
+
+15-09-2025T16:39:22 - [MESSAGE][PASSED] - pages.HomePage.clickOnBlog is PASSED
+
+15-09-2025T16:39:22 - [TEST_STEP][PASSED] - ExtentManager.logPass("Navigated to the blog page"): null
+
+15-09-2025T16:39:22 - [TEST_STEP][PASSED] - try: null
+
+15-09-2025T16:39:22 - [TEST_STEP][PASSED] - ExtentManager.logInfo("Navigating to the article page"): null
+
+15-09-2025T16:39:22 - [TEST_STEP][PASSED] - pages.BlogPage.clickOnArticle(findTestObject("Object Repository/BlogsPage/Article"), STOP_ON_FAILURE): pages.BlogPage.clickOnArticle is PASSED
+
+15-09-2025T16:39:23 - [MESSAGE][PASSED] - Object 'Object Repository/BlogsPage/Article' is visible
+
+15-09-2025T16:39:26 - [MESSAGE][PASSED] - Object: 'Object Repository/BlogsPage/Article' is clicked on
+
+15-09-2025T16:39:26 - [MESSAGE][PASSED] - pages.BlogPage.clickOnArticle is PASSED
+
+15-09-2025T16:39:26 - [TEST_STEP][PASSED] - ExtentManager.logPass("Navigated to the article page"): null
+
+15-09-2025T16:39:26 - [TEST_STEP][PASSED] - try: null
+
+15-09-2025T16:39:26 - [TEST_STEP][PASSED] - ExtentManager.logInfo("Entering the details to post a comment"): null
+
+15-09-2025T16:39:26 - [TEST_STEP][PASSED] - articleFields = [["id":"input-name", "jsonKey":"name", "label":"Name"], ["id":"input-email", "jsonKey":"email", "label":"Email"]]: null
+
+15-09-2025T16:39:26 - [TEST_STEP][PASSED] - articleFields.each({ -> ... }): pages.ArticlePage.articleDetails is PASSED
+
+15-09-2025T16:39:26 - [MESSAGE][PASSED] - Object 'Object Repository/ArticlePage/dynamicInput' is visible
+
+15-09-2025T16:39:27 - [MESSAGE][PASSED] - Text 'Amal' is set on object 'Object Repository/ArticlePage/dynamicInput'
+
+15-09-2025T16:39:27 - [MESSAGE][PASSED] - pages.ArticlePage.articleDetails is PASSED
+
+15-09-2025T16:39:27 - [MESSAGE][PASSED] - Object 'Object Repository/ArticlePage/dynamicInput' is visible
+
+15-09-2025T16:39:28 - [MESSAGE][PASSED] - Text 'amal@gmail.com' is set on object 'Object Repository/ArticlePage/dynamicInput'
+
+15-09-2025T16:39:28 - [MESSAGE][PASSED] - pages.ArticlePage.articleDetails is PASSED
+
+15-09-2025T16:39:28 - [TEST_STEP][PASSED] - pages.ArticlePage.inputCommentOnArticle(findTestObject("Object Repository/ArticlePage/inputComment"), JsonFileReader.getJsonData(section, "comment", filepath), STOP_ON_FAILURE): pages.ArticlePage.inputCommentOnArticle is PASSED
+
+15-09-2025T16:39:28 - [MESSAGE][PASSED] - Object 'Object Repository/ArticlePage/inputComment' is visible
+
+15-09-2025T16:39:29 - [MESSAGE][PASSED] - Text 'This comment is to ensure that this testcase is currently running' is set on object 'Object Repository/ArticlePage/inputComment'
+
+15-09-2025T16:39:29 - [MESSAGE][PASSED] - pages.ArticlePage.inputCommentOnArticle is PASSED
+
+15-09-2025T16:39:29 - [TEST_STEP][PASSED] - pages.ArticlePage.clickOnPostCommentButton(findTestObject("Object Repository/ArticlePage/postCommentButton"), STOP_ON_FAILURE): pages.ArticlePage.clickOnPostCommentButton is PASSED
+
+15-09-2025T16:39:30 - [MESSAGE][PASSED] - Object 'Object Repository/ArticlePage/postCommentButton' is visible
+
+15-09-2025T16:39:30 - [MESSAGE][PASSED] - Object: 'Object Repository/ArticlePage/postCommentButton' is clicked on
+
+15-09-2025T16:39:30 - [MESSAGE][PASSED] - pages.ArticlePage.clickOnPostCommentButton is PASSED
+
+15-09-2025T16:39:30 - [TEST_STEP][PASSED] - ExtentManager.logPass("Details for posting a comment have been entered"): null
+
+15-09-2025T16:39:30 - [TEST_STEP][PASSED] - try: null
+
+15-09-2025T16:39:30 - [TEST_STEP][PASSED] - ExtentManager.logInfo("Verifying Success Message"): null
+
+15-09-2025T16:39:30 - [TEST_STEP][PASSED] - pages.ArticlePage.verifySuccessText(findTestObject("Object Repository/ArticlePage/successMessage"), JsonFileReader.getJsonData(section, "successMessage", filepath), STOP_ON_FAILURE): pages.ArticlePage.verifySuccessText is PASSED
+
+15-09-2025T16:39:31 - [MESSAGE][PASSED] - Object 'Object Repository/ArticlePage/successMessage' is visible
+
+15-09-2025T16:39:31 - [MESSAGE][PASSED] - Actual text and expected text of test object 'Object Repository/ArticlePage/successMessage' are matched.
+
+15-09-2025T16:39:31 - [MESSAGE][PASSED] - pages.ArticlePage.verifySuccessText is PASSED
+
+15-09-2025T16:39:31 - [TEST_STEP][PASSED] - ExtentManager.logPass("Verified Success Message"): null
+
+15-09-2025T16:39:31 - [TEST_STEP][PASSED] - ExtentManager.flushReport(): null
+
+15-09-2025T16:39:31 - [TEST_STEP][PASSED] - Start listener action : closeTheBrowser: null
+
+15-09-2025T16:39:31 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+15-09-2025T16:39:31 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+15-09-2025T16:39:31 - [TEST_STEP][PASSED] - testCaseStatus = testCaseContext.getTestCaseStatus(): null
+
+15-09-2025T16:39:31 - [TEST_STEP][PASSED] - println(testCaseStatus): null
+
+15-09-2025T16:39:31 - [TEST_STEP][PASSED] - StatusMap = DependencyHandler.getStatusMap(): null
+
+15-09-2025T16:39:31 - [TEST_STEP][PASSED] - if (StatusMap.containsKey(testCaseName)): null
+
+15-09-2025T16:39:31 - [TEST_STEP][PASSED] - try: null
+
+15-09-2025T16:39:31 - [TEST_STEP][PASSED] - driver = getWebDriver(): null
+
+15-09-2025T16:39:31 - [TEST_STEP][PASSED] - if (driver != null): null
+
+15-09-2025T16:39:31 - [TEST_STEP][PASSED] - closeBrowser(): Browser is closed
+
+15-09-2025T16:39:31 - [MESSAGE][PASSED] - Browser is closed
+
+15-09-2025T16:39:31 - [TEST_STEP][PASSED] - println("✅ Browser closed successfully."): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[15-09-2025T16:38:40 - [TEST_SUITE][FAILED] - DependentTestcase: null]]></system-out>
+      <system-err><![CDATA[15-09-2025T16:38:40 - [TEST_SUITE][FAILED] - DependentTestcase: null]]></system-err>
+   </testsuite>
+</testsuites>

@@ -1,0 +1,152 @@
+2025-10-01 09:36:44.623 INFO  c.k.katalon.core.main.TestSuiteExecutor  - START Test Suites/GraphQL_API
+2025-10-01 09:36:44.799 INFO  c.k.katalon.core.main.TestSuiteExecutor  - userFullName = abinesh rajendran
+2025-10-01 09:36:44.801 INFO  c.k.katalon.core.main.TestSuiteExecutor  - projectName = Luma
+2025-10-01 09:36:44.803 INFO  c.k.katalon.core.main.TestSuiteExecutor  - hostName = 10835442 - 192.168.1.4
+2025-10-01 09:36:44.805 INFO  c.k.katalon.core.main.TestSuiteExecutor  - os = Windows 11 64bit
+2025-10-01 09:36:44.806 INFO  c.k.katalon.core.main.TestSuiteExecutor  - hostAddress = 192.168.1.4
+2025-10-01 09:36:44.809 INFO  c.k.katalon.core.main.TestSuiteExecutor  - katalonVersion = 10.3.1.0
+2025-10-01 09:36:45.681 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-10-01 09:36:45.681 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/API_Testing/GraphQL_API_Testing/TC01_graphql_Get_api
+2025-10-01 09:36:45.790 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) graphQL = graphQL
+2025-10-01 09:36:45.821 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) apiBaseUrl = apiBaseUrl
+2025-10-01 09:36:45.850 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) schemaFilePath = Include/Data Files/MasterSchema.json
+2025-10-01 09:36:45.883 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) JsonFilePath = Include/Data Files/login_data.json
+2025-10-01 09:36:46.090 INFO  com.kms.katalon.core.util.KeywordUtil    - Skipping browser launch for API test case: TC01_graphql_Get_api
+2025-10-01 09:36:46.343 DEBUG testcase.TC01_graphql_Get_api            - 1: logInfo("Sending GraphQL query to fetch post by ID")
+2025-10-01 09:36:46.347 INFO  com.kms.katalon.core.util.KeywordUtil    - Sending GraphQL query to fetch post by ID
+2025-10-01 09:36:46.349 DEBUG testcase.TC01_graphql_Get_api            - 2: testData = JsonFileReader.getSectionData("graphQL_getPost", jsonDataFilePath)
+2025-10-01 09:36:46.586 DEBUG testcase.TC01_graphql_Get_api            - 3: query = QueryBuilder.buildQuery(testData)
+2025-10-01 09:36:46.619 DEBUG testcase.TC01_graphql_Get_api            - 4: variables = variables
+2025-10-01 09:36:46.623 DEBUG testcase.TC01_graphql_Get_api            - 5: headers = (testData.headers) ? testData.headers : [:]
+2025-10-01 09:36:46.630 DEBUG testcase.TC01_graphql_Get_api            - 6: profileVariables = loadProfileVariables.loadAllProfileVariables("graphQL")
+2025-10-01 09:36:46.748 DEBUG testcase.TC01_graphql_Get_api            - 7: response = ApiKeywords.sendGraphQL(profileVariables["apiBaseUrl"], query, variables, headers)
+2025-10-01 09:36:49.946 INFO  c.k.k.core.webservice.common.HarLogger   - HAR: C:\Users\10835442\Katalon Studio\Luma\Reports\20251001_093637\GraphQL_API\20251001_093637\requests\main\POST_Generic_0.har
+2025-10-01 09:36:50.073 DEBUG testcase.TC01_graphql_Get_api            - 8: verifyResponseStatusCode(response, 200)
+2025-10-01 09:36:50.108 DEBUG testcase.TC01_graphql_Get_api            - 9: logInfo("GraphQL response status code verified as 200")
+2025-10-01 09:36:50.113 INFO  com.kms.katalon.core.util.KeywordUtil    - GraphQL response status code verified as 200
+2025-10-01 09:36:50.115 DEBUG testcase.TC01_graphql_Get_api            - 10: responseBody = response.getResponseBodyContent()
+2025-10-01 09:36:50.130 DEBUG testcase.TC01_graphql_Get_api            - 11: json = JsonSlurper().parseText(responseBody)
+2025-10-01 09:36:50.136 DEBUG testcase.TC01_graphql_Get_api            - 12: println(responseBody)
+{"data":{"post":{"id":"1","title":"sunt aut facere repellat provident occaecati excepturi optio reprehenderit","body":"quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"}}}
+
+2025-10-01 09:36:50.143 DEBUG testcase.TC01_graphql_Get_api            - 13: logInfo(Post ID: $json.data.post.id)
+2025-10-01 09:36:50.147 INFO  com.kms.katalon.core.util.KeywordUtil    - Post ID: 1
+2025-10-01 09:36:50.149 DEBUG testcase.TC01_graphql_Get_api            - 14: logInfo(Post Title: $json.data.post.title)
+2025-10-01 09:36:50.154 INFO  com.kms.katalon.core.util.KeywordUtil    - Post Title: sunt aut facere repellat provident occaecati excepturi optio reprehenderit
+2025-10-01 09:36:50.158 DEBUG testcase.TC01_graphql_Get_api            - 15: SchemaValidator.validateJsonWithSchema(responseBody, JsonOutput.toJson(JsonFileReader.getSectionData("graphQL_GET", schemaFilePath)))
+2025-10-01 09:36:50.240 INFO  com.kms.katalon.core.util.KeywordUtil    - Schema expects the following fields:
+2025-10-01 09:36:50.264 INFO  com.kms.katalon.core.util.KeywordUtil    - ->Field: 'data' | Type: 'object'
+2025-10-01 09:36:50.399 INFO  com.kms.katalon.core.util.KeywordUtil    - Schema validation passed.
+2025-10-01 09:36:50.401 DEBUG testcase.TC01_graphql_Get_api            - 16: markPassed("GraphQL response schema validation passed")
+2025-10-01 09:36:50.403 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ GraphQL response schema validation passed
+2025-10-01 09:36:50.418 DEBUG testcase.TC01_graphql_Get_api            - 17: JsonFileReader.storeApiResponse("get_GraphQL_Response", response, responseDataFilePath)
+2025-10-01 09:36:50.482 INFO  com.kms.katalon.core.util.KeywordUtil    - Saved updated JSON data to file: Include\Data Files\Response_data.json
+2025-10-01 09:36:50.484 INFO  com.kms.katalon.core.util.KeywordUtil    - Stored API response under section 'get_GraphQL_Response' in file 'Include/Data Files/Response_data.json'.
+PASSED
+2025-10-01 09:36:50.711 INFO  com.kms.katalon.core.util.KeywordUtil    - Error while closing browser: Browser is not opened
+Build info: version: '4.28.1', revision: '73f5ad48a2'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: driver.version: unknown
+2025-10-01 09:36:50.717 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/API_Testing/GraphQL_API_Testing/TC01_graphql_Get_api
+2025-10-01 09:36:50.736 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-10-01 09:36:50.737 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/API_Testing/GraphQL_API_Testing/TC02_graphql_Post_api
+2025-10-01 09:36:50.781 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) graphQL = graphQL
+2025-10-01 09:36:50.782 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) apiBaseUrl = apiBaseUrl
+2025-10-01 09:36:50.785 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) schemaFilePath = Include/Data Files/MasterSchema.json
+2025-10-01 09:36:50.787 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) JsonFilePath = Include/Data Files/login_data.json
+2025-10-01 09:36:50.835 INFO  com.kms.katalon.core.util.KeywordUtil    - Skipping browser launch for API test case: TC02_graphql_Post_api
+2025-10-01 09:36:51.089 DEBUG testcase.TC02_graphql_Post_api           - 1: logInfo("Sending GraphQL mutation to create a new post using stored GET response")
+2025-10-01 09:36:51.092 INFO  com.kms.katalon.core.util.KeywordUtil    - Sending GraphQL mutation to create a new post using stored GET response
+2025-10-01 09:36:51.094 DEBUG testcase.TC02_graphql_Post_api           - 2: testData = JsonFileReader.getSectionData("graphQL_createPost", jsonDataFilePath)
+2025-10-01 09:36:51.101 DEBUG testcase.TC02_graphql_Post_api           - 3: query = QueryBuilder.buildQuery(testData)
+2025-10-01 09:36:51.105 DEBUG testcase.TC02_graphql_Post_api           - 4: headers = (testData.headers) ? testData.headers : [:]
+2025-10-01 09:36:51.110 DEBUG testcase.TC02_graphql_Post_api           - 5: storedData = JsonFileReader.getSectionData("get_GraphQL_Response", responseDataFilePath)
+2025-10-01 09:36:51.119 DEBUG testcase.TC02_graphql_Post_api           - 6: postData = post
+2025-10-01 09:36:51.124 DEBUG testcase.TC02_graphql_Post_api           - 7: variables = ["input":["title":title, "body":body]]
+2025-10-01 09:36:51.131 DEBUG testcase.TC02_graphql_Post_api           - 8: baseUrl = GlobalAccessor.getProfileVariable(graphQL, apiBaseUrl)
+2025-10-01 09:36:51.166 DEBUG testcase.TC02_graphql_Post_api           - 9: response = ApiKeywords.sendGraphQL(baseUrl, query, variables, headers)
+2025-10-01 09:36:51.979 INFO  c.k.k.core.webservice.common.HarLogger   - HAR: C:\Users\10835442\Katalon Studio\Luma\Reports\20251001_093637\GraphQL_API\20251001_093637\requests\main\POST_Generic_1.har
+2025-10-01 09:36:51.999 DEBUG testcase.TC02_graphql_Post_api           - 10: verifyResponseStatusCode(response, 200)
+2025-10-01 09:36:52.048 DEBUG testcase.TC02_graphql_Post_api           - 11: logInfo("GraphQL response status code verified as 200")
+2025-10-01 09:36:52.055 INFO  com.kms.katalon.core.util.KeywordUtil    - GraphQL response status code verified as 200
+2025-10-01 09:36:52.060 DEBUG testcase.TC02_graphql_Post_api           - 12: responseBody = response.getResponseBodyContent()
+2025-10-01 09:36:52.072 DEBUG testcase.TC02_graphql_Post_api           - 13: json = JsonSlurper().parseText(responseBody)
+2025-10-01 09:36:52.086 DEBUG testcase.TC02_graphql_Post_api           - 14: logInfo(Created Post ID: $json.data.createPost.id)
+2025-10-01 09:36:52.091 INFO  com.kms.katalon.core.util.KeywordUtil    - Created Post ID: 101
+2025-10-01 09:36:52.096 DEBUG testcase.TC02_graphql_Post_api           - 15: logInfo(Created Post Title: $json.data.createPost.title)
+2025-10-01 09:36:52.103 INFO  com.kms.katalon.core.util.KeywordUtil    - Created Post Title: sunt aut facere repellat provident occaecati excepturi optio reprehenderit
+2025-10-01 09:36:52.106 DEBUG testcase.TC02_graphql_Post_api           - 16: SchemaValidator.validateJsonWithSchema(responseBody, JsonOutput.toJson(JsonFileReader.getSectionData("graphQL_Post", schemaFilePath)))
+2025-10-01 09:36:52.113 INFO  com.kms.katalon.core.util.KeywordUtil    - Schema expects the following fields:
+2025-10-01 09:36:52.114 INFO  com.kms.katalon.core.util.KeywordUtil    - ->Field: 'data' | Type: 'object'
+2025-10-01 09:36:52.119 INFO  com.kms.katalon.core.util.KeywordUtil    - Schema validation passed.
+2025-10-01 09:36:52.121 DEBUG testcase.TC02_graphql_Post_api           - 17: markPassed("GraphQL createPost response schema validation passed")
+2025-10-01 09:36:52.123 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ GraphQL createPost response schema validation passed
+PASSED
+2025-10-01 09:36:52.147 INFO  com.kms.katalon.core.util.KeywordUtil    - Error while closing browser: Browser is not opened
+Build info: version: '4.28.1', revision: '73f5ad48a2'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: driver.version: unknown
+2025-10-01 09:36:52.151 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/API_Testing/GraphQL_API_Testing/TC02_graphql_Post_api
+2025-10-01 09:36:52.159 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-10-01 09:36:52.159 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/API_Testing/GraphQL_API_Testing/TC03_graphql_Patch_api
+2025-10-01 09:36:52.201 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) graphQL = graphQL
+2025-10-01 09:36:52.202 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) apiBaseUrl = apiBaseUrl
+2025-10-01 09:36:52.202 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) schemaFilePath = Include/Data Files/MasterSchema.json
+2025-10-01 09:36:52.206 INFO  com.kms.katalon.core.util.KeywordUtil    - Skipping browser launch for API test case: TC03_graphql_Patch_api
+2025-10-01 09:36:52.393 DEBUG testcase.TC03_graphql_Patch_api          - 1: logInfo("Sending GraphQL mutation to update post")
+2025-10-01 09:36:52.395 INFO  com.kms.katalon.core.util.KeywordUtil    - Sending GraphQL mutation to update post
+2025-10-01 09:36:52.397 DEBUG testcase.TC03_graphql_Patch_api          - 2: testData = JsonFileReader.getSectionData("graphQL_updatePost", jsonDataFilePath)
+2025-10-01 09:36:52.402 DEBUG testcase.TC03_graphql_Patch_api          - 3: query = QueryBuilder.buildQuery(testData)
+2025-10-01 09:36:52.405 DEBUG testcase.TC03_graphql_Patch_api          - 4: variables = variables
+2025-10-01 09:36:52.409 DEBUG testcase.TC03_graphql_Patch_api          - 5: headers = (testData.headers) ? testData.headers : [:]
+2025-10-01 09:36:52.413 DEBUG testcase.TC03_graphql_Patch_api          - 6: baseUrl = GlobalAccessor.getProfileVariable(graphQL, apiBaseUrl)
+2025-10-01 09:36:52.423 DEBUG testcase.TC03_graphql_Patch_api          - 7: response = ApiKeywords.sendGraphQL(baseUrl, query, variables, headers)
+2025-10-01 09:36:53.181 INFO  c.k.k.core.webservice.common.HarLogger   - HAR: C:\Users\10835442\Katalon Studio\Luma\Reports\20251001_093637\GraphQL_API\20251001_093637\requests\main\POST_Generic_2.har
+2025-10-01 09:36:53.192 DEBUG testcase.TC03_graphql_Patch_api          - 8: verifyResponseStatusCode(response, 200)
+2025-10-01 09:36:53.213 DEBUG testcase.TC03_graphql_Patch_api          - 9: logInfo("GraphQL response status code verified as 200")
+2025-10-01 09:36:53.219 INFO  com.kms.katalon.core.util.KeywordUtil    - GraphQL response status code verified as 200
+2025-10-01 09:36:53.223 DEBUG testcase.TC03_graphql_Patch_api          - 10: responseBody = response.getResponseBodyContent()
+2025-10-01 09:36:53.232 DEBUG testcase.TC03_graphql_Patch_api          - 11: json = JsonSlurper().parseText(responseBody)
+2025-10-01 09:36:53.236 DEBUG testcase.TC03_graphql_Patch_api          - 12: logInfo(Updated Post ID: $json.data.updatePost.id)
+2025-10-01 09:36:53.236 INFO  com.kms.katalon.core.util.KeywordUtil    - Updated Post ID: 1
+2025-10-01 09:36:53.242 DEBUG testcase.TC03_graphql_Patch_api          - 13: logInfo(Updated Post Title: $json.data.updatePost.title)
+2025-10-01 09:36:53.248 INFO  com.kms.katalon.core.util.KeywordUtil    - Updated Post Title: Patch modified title
+2025-10-01 09:36:53.252 DEBUG testcase.TC03_graphql_Patch_api          - 14: SchemaValidator.validateJsonWithSchema(responseBody, JsonOutput.toJson(JsonFileReader.getSectionData("graphQL_Patch", schemaFilePath)))
+2025-10-01 09:36:53.263 INFO  com.kms.katalon.core.util.KeywordUtil    - Schema expects the following fields:
+2025-10-01 09:36:53.264 INFO  com.kms.katalon.core.util.KeywordUtil    - ->Field: 'data' | Type: 'object'
+2025-10-01 09:36:53.266 INFO  com.kms.katalon.core.util.KeywordUtil    - Schema validation passed.
+2025-10-01 09:36:53.268 DEBUG testcase.TC03_graphql_Patch_api          - 15: markPassed("GraphQL updatePost response schema validation passed")
+2025-10-01 09:36:53.269 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ GraphQL updatePost response schema validation passed
+PASSED
+2025-10-01 09:36:53.285 INFO  com.kms.katalon.core.util.KeywordUtil    - Error while closing browser: Browser is not opened
+Build info: version: '4.28.1', revision: '73f5ad48a2'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: driver.version: unknown
+2025-10-01 09:36:53.288 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/API_Testing/GraphQL_API_Testing/TC03_graphql_Patch_api
+2025-10-01 09:36:53.317 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-10-01 09:36:53.317 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/API_Testing/GraphQL_API_Testing/TC04_graphql_Delete_api
+2025-10-01 09:36:53.350 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) graphQL = graphQL
+2025-10-01 09:36:53.352 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) apiBaseUrl = apiBaseUrl
+2025-10-01 09:36:53.355 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) JsonFilePath = Include/Data Files/login_data.json
+2025-10-01 09:36:53.377 INFO  com.kms.katalon.core.util.KeywordUtil    - Skipping browser launch for API test case: TC04_graphql_Delete_api
+2025-10-01 09:36:53.564 DEBUG testcase.TC04_graphql_Delete_api         - 1: logInfo("Sending GraphQL mutation to delete post by ID")
+2025-10-01 09:36:53.566 INFO  com.kms.katalon.core.util.KeywordUtil    - Sending GraphQL mutation to delete post by ID
+2025-10-01 09:36:53.567 DEBUG testcase.TC04_graphql_Delete_api         - 2: testData = JsonFileReader.getSectionData("graphQL_deletePost", jsonDataFilePath)
+2025-10-01 09:36:53.572 DEBUG testcase.TC04_graphql_Delete_api         - 3: query = QueryBuilder.buildQuery(testData)
+2025-10-01 09:36:53.575 DEBUG testcase.TC04_graphql_Delete_api         - 4: variables = variables
+2025-10-01 09:36:53.579 DEBUG testcase.TC04_graphql_Delete_api         - 5: headers = (testData.headers) ? testData.headers : [:]
+2025-10-01 09:36:53.582 DEBUG testcase.TC04_graphql_Delete_api         - 6: baseUrl = GlobalAccessor.getProfileVariable(graphQL, apiBaseUrl)
+2025-10-01 09:36:53.589 DEBUG testcase.TC04_graphql_Delete_api         - 7: response = ApiKeywords.sendGraphQL(baseUrl, query, variables, headers)
+2025-10-01 09:36:53.918 INFO  c.k.k.core.webservice.common.HarLogger   - HAR: C:\Users\10835442\Katalon Studio\Luma\Reports\20251001_093637\GraphQL_API\20251001_093637\requests\main\POST_Generic_3.har
+2025-10-01 09:36:53.923 DEBUG testcase.TC04_graphql_Delete_api         - 8: verifyResponseStatusCode(response, 200)
+2025-10-01 09:36:53.928 DEBUG testcase.TC04_graphql_Delete_api         - 9: logInfo("GraphQL response status code verified as 200")
+2025-10-01 09:36:53.930 INFO  com.kms.katalon.core.util.KeywordUtil    - GraphQL response status code verified as 200
+PASSED
+2025-10-01 09:36:53.946 INFO  com.kms.katalon.core.util.KeywordUtil    - Error while closing browser: Browser is not opened
+Build info: version: '4.28.1', revision: '73f5ad48a2'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: driver.version: unknown
+2025-10-01 09:36:53.949 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/API_Testing/GraphQL_API_Testing/TC04_graphql_Delete_api
+2025-10-01 09:36:54.031 INFO  c.k.katalon.core.main.TestSuiteExecutor  - --------------------
+2025-10-01 09:36:54.032 INFO  c.k.katalon.core.main.TestSuiteExecutor  - END Test Suites/GraphQL_API
+2025-10-01 09:36:54.032 INFO  c.k.katalon.core.main.TestSuiteExecutor  - ====================

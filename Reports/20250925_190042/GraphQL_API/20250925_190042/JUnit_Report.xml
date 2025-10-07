@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="GraphQL_API" time="12.182" tests="5" failures="0" errors="1">
+   <testsuite name="GraphQL_API" tests="5" failures="0" errors="1" time="12.182" skipped="0" timestamp="2025-09-25T13:30:47.047Z" hostname="10835442 - 7DS3S93" id="Test Suites/GraphQL_API">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform"/>
+         <property name="logFolder" value="C:\\Users\\10835442\\Katalon Studio\\Luma\\Reports\\20250925_190042\\GraphQL_API\\20250925_190042"/>
+         <property name="logFiles" value="C:\\Users\\10835442\\Katalon Studio\\Luma\\Reports\\20250925_190042\\GraphQL_API\\20250925_190042\\console0.log, C:\\Users\\10835442\\Katalon Studio\\Luma\\Reports\\20250925_190042\\GraphQL_API\\20250925_190042\\execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="userFullName" value="abinesh rajendran"/>
+         <property name="hostName" value="10835442 - 7DS3S93"/>
+         <property name="hostAddress" value="192.168.2.159"/>
+         <property name="projectName" value="Luma"/>
+         <property name="os" value="Windows 11 64bit"/>
+         <property name="katalonVersion" value="10.3.1.0"/>
+      </properties>
+      <testcase name="Test Cases/API_Testing/GraphQL_API_Testing/graphql_Put_api" time="4.241" classname="Test Cases/API_Testing/GraphQL_API_Testing/graphql_Put_api" status="PASSED">
+         <properties>
+            <property name="data_binding"><![CDATA[{"(Default) graph...":"graphQL","(Default) schem...":"Include/Data Files/MasterSchema.json","(Default) apiBa...":"apiBaseUrl"}]]></property>
+         </properties>
+         <system-out><![CDATA[25-09-2025T19:00:47 - [TEST_CASE][PASSED] - Test Cases/API_Testing/GraphQL_API_Testing/graphql_Put_api: Test Cases/API_Testing/GraphQL_API_Testing/graphql_Put_api
+
+25-09-2025T19:00:47 - [TEST_STEP][PASSED] - Start listener action : beforeTestCase: null
+
+25-09-2025T19:00:47 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+25-09-2025T19:00:47 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+25-09-2025T19:00:47 - [TEST_STEP][PASSED] - if (toLowerCase().endsWith("api")): null
+
+25-09-2025T19:00:47 - [TEST_STEP][PASSED] - println(ℹ️ Skipping browser launch for API test case: $testCaseName): null
+
+25-09-2025T19:00:47 - [TEST_STEP][PASSED] - return null: null
+
+25-09-2025T19:00:48 - [TEST_STEP][PASSED] - logInfo("Sending GraphQL mutation to update post with title and body"): Sending GraphQL mutation to update post with title and body
+
+25-09-2025T19:00:48 - [MESSAGE][INFO] - Sending GraphQL mutation to update post with title and body
+
+25-09-2025T19:00:48 - [TEST_STEP][PASSED] - query = "
+mutation UpdatePost($input: UpdatePostInput!, $id: ID!) {
+  updatePost(id: $id, input: $input) {
+    id
+    title
+    body
+  }
+}
+": null
+
+25-09-2025T19:00:48 - [TEST_STEP][PASSED] - variables = ["id":1, "input":["title":"A Very Captivating Post Title", "body":"Some interesting content."]]: null
+
+25-09-2025T19:00:48 - [TEST_STEP][PASSED] - headers = ["Content-Type":"application/json"]: null
+
+25-09-2025T19:00:48 - [TEST_STEP][PASSED] - baseUrl = GlobalAccessor.getProfileVariable(graphQL, apiBaseUrl): null
+
+25-09-2025T19:00:48 - [TEST_STEP][PASSED] - response = ApiKeywords.sendGraphQL(baseUrl, query, variables, headers): Send request successfully
+
+25-09-2025T19:00:51 - [MESSAGE][INFO] - HAR: C:\Users\10835442\Katalon Studio\Luma\Reports\20250925_190042\GraphQL_API\20250925_190042\requests\main\POST_Generic_0.har
+
+25-09-2025T19:00:51 - [MESSAGE][PASSED] - Send request successfully
+
+25-09-2025T19:00:51 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 200): Verify response status code successfully
+
+25-09-2025T19:00:51 - [MESSAGE][PASSED] - Verify response status code successfully
+
+25-09-2025T19:00:51 - [TEST_STEP][PASSED] - logInfo("GraphQL response status code verified as 200"): GraphQL response status code verified as 200
+
+25-09-2025T19:00:51 - [MESSAGE][INFO] - GraphQL response status code verified as 200
+
+25-09-2025T19:00:51 - [TEST_STEP][PASSED] - responseBody = response.getResponseBodyContent(): null
+
+25-09-2025T19:00:51 - [TEST_STEP][PASSED] - json = JsonSlurper().parseText(responseBody): null
+
+25-09-2025T19:00:51 - [TEST_STEP][PASSED] - logInfo(Updated Post ID: $json.data.updatePost.id): Updated Post ID: 1
+
+25-09-2025T19:00:51 - [MESSAGE][INFO] - Updated Post ID: 1
+
+25-09-2025T19:00:51 - [TEST_STEP][PASSED] - logInfo(Updated Post Title: $json.data.updatePost.title): Updated Post Title: A Very Captivating Post Title
+
+25-09-2025T19:00:51 - [MESSAGE][INFO] - Updated Post Title: A Very Captivating Post Title
+
+25-09-2025T19:00:51 - [TEST_STEP][PASSED] - logInfo(Updated Post Body: $json.data.updatePost.body): Updated Post Body: Some interesting content.
+
+25-09-2025T19:00:51 - [MESSAGE][INFO] - Updated Post Body: Some interesting content.
+
+25-09-2025T19:00:51 - [TEST_STEP][PASSED] - validateJsonAgainstSchema(responseBody, JsonOutput.toJson(JsonFileReader.getSectionData("graphQL_Patch", schemaFilePath))): Validate with JSON Schema successfully
+
+25-09-2025T19:00:51 - [MESSAGE][PASSED] - Validate with JSON Schema successfully
+
+25-09-2025T19:00:51 - [TEST_STEP][PASSED] - markPassed("GraphQL updatePost response schema validation passed"): GraphQL updatePost response schema validation passed
+
+25-09-2025T19:00:51 - [MESSAGE][PASSED] - GraphQL updatePost response schema validation passed
+
+25-09-2025T19:00:51 - [TEST_STEP][PASSED] - Start listener action : closeTheBrowser: null
+
+25-09-2025T19:00:51 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+25-09-2025T19:00:51 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+25-09-2025T19:00:51 - [TEST_STEP][PASSED] - testCaseStatus = testCaseContext.getTestCaseStatus(): null
+
+25-09-2025T19:00:51 - [TEST_STEP][PASSED] - println(testCaseStatus): null
+
+25-09-2025T19:00:51 - [TEST_STEP][PASSED] - StatusMap = DependencyHandler.getStatusMap(): null
+
+25-09-2025T19:00:51 - [TEST_STEP][PASSED] - if (StatusMap.containsKey(testCaseName)): null
+
+25-09-2025T19:00:51 - [TEST_STEP][PASSED] - try: null
+
+25-09-2025T19:00:51 - [TEST_STEP][PASSED] - driver = getWebDriver(): null
+
+25-09-2025T19:00:51 - [TEST_STEP][PASSED] - catch (Exception e): null
+
+25-09-2025T19:00:51 - [TEST_STEP][PASSED] - println(⚠️ Error while closing browser: $e.message): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/API_Testing/GraphQL_API_Testing/graphql_Post_api" time="0.774" classname="Test Cases/API_Testing/GraphQL_API_Testing/graphql_Post_api" status="PASSED">
+         <properties>
+            <property name="data_binding"><![CDATA[{"(Default) graph...":"graphQL","(Default) schem...":"Include/Data Files/MasterSchema.json","(Default) apiBa...":"apiBaseUrl"}]]></property>
+         </properties>
+         <system-out><![CDATA[25-09-2025T19:00:51 - [TEST_CASE][PASSED] - Test Cases/API_Testing/GraphQL_API_Testing/graphql_Post_api: Test Cases/API_Testing/GraphQL_API_Testing/graphql_Post_api
+
+25-09-2025T19:00:52 - [TEST_STEP][PASSED] - Start listener action : beforeTestCase: null
+
+25-09-2025T19:00:52 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+25-09-2025T19:00:52 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+25-09-2025T19:00:52 - [TEST_STEP][PASSED] - if (toLowerCase().endsWith("api")): null
+
+25-09-2025T19:00:52 - [TEST_STEP][PASSED] - println(ℹ️ Skipping browser launch for API test case: $testCaseName): null
+
+25-09-2025T19:00:52 - [TEST_STEP][PASSED] - return null: null
+
+25-09-2025T19:00:52 - [TEST_STEP][PASSED] - logInfo("Sending GraphQL mutation to create a new post"): Sending GraphQL mutation to create a new post
+
+25-09-2025T19:00:52 - [MESSAGE][INFO] - Sending GraphQL mutation to create a new post
+
+25-09-2025T19:00:52 - [TEST_STEP][PASSED] - query = "
+mutation CreatePost($input: CreatePostInput!) {
+  createPost(input: $input) {
+    id
+    title
+    body
+  }
+}
+": null
+
+25-09-2025T19:00:52 - [TEST_STEP][PASSED] - variables = ["input":["title":"A Very Captivating Post Title", "body":"Some interesting content."]]: null
+
+25-09-2025T19:00:52 - [TEST_STEP][PASSED] - headers = ["Content-Type":"application/json"]: null
+
+25-09-2025T19:00:52 - [TEST_STEP][PASSED] - baseUrl = GlobalAccessor.getProfileVariable(graphQL, apiBaseUrl): null
+
+25-09-2025T19:00:52 - [TEST_STEP][PASSED] - response = ApiKeywords.sendGraphQL(baseUrl, query, variables, headers): Send request successfully
+
+25-09-2025T19:00:52 - [MESSAGE][INFO] - HAR: C:\Users\10835442\Katalon Studio\Luma\Reports\20250925_190042\GraphQL_API\20250925_190042\requests\main\POST_Generic_1.har
+
+25-09-2025T19:00:52 - [MESSAGE][PASSED] - Send request successfully
+
+25-09-2025T19:00:52 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 200): Verify response status code successfully
+
+25-09-2025T19:00:52 - [MESSAGE][PASSED] - Verify response status code successfully
+
+25-09-2025T19:00:52 - [TEST_STEP][PASSED] - logInfo("GraphQL response status code verified as 200"): GraphQL response status code verified as 200
+
+25-09-2025T19:00:52 - [MESSAGE][INFO] - GraphQL response status code verified as 200
+
+25-09-2025T19:00:52 - [TEST_STEP][PASSED] - responseBody = response.getResponseBodyContent(): null
+
+25-09-2025T19:00:52 - [TEST_STEP][PASSED] - json = JsonSlurper().parseText(responseBody): null
+
+25-09-2025T19:00:52 - [TEST_STEP][PASSED] - logInfo(Created Post ID: $json.data.createPost.id): Created Post ID: 101
+
+25-09-2025T19:00:52 - [MESSAGE][INFO] - Created Post ID: 101
+
+25-09-2025T19:00:52 - [TEST_STEP][PASSED] - logInfo(Created Post Title: $json.data.createPost.title): Created Post Title: A Very Captivating Post Title
+
+25-09-2025T19:00:52 - [MESSAGE][INFO] - Created Post Title: A Very Captivating Post Title
+
+25-09-2025T19:00:52 - [TEST_STEP][PASSED] - validateJsonAgainstSchema(responseBody, JsonOutput.toJson(JsonFileReader.getSectionData("graphQL_Post", schemaFilePath))): Validate with JSON Schema successfully
+
+25-09-2025T19:00:52 - [MESSAGE][PASSED] - Validate with JSON Schema successfully
+
+25-09-2025T19:00:52 - [TEST_STEP][PASSED] - markPassed("GraphQL createPost response schema validation passed"): GraphQL createPost response schema validation passed
+
+25-09-2025T19:00:52 - [MESSAGE][PASSED] - GraphQL createPost response schema validation passed
+
+25-09-2025T19:00:52 - [TEST_STEP][PASSED] - Start listener action : closeTheBrowser: null
+
+25-09-2025T19:00:52 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+25-09-2025T19:00:52 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+25-09-2025T19:00:52 - [TEST_STEP][PASSED] - testCaseStatus = testCaseContext.getTestCaseStatus(): null
+
+25-09-2025T19:00:52 - [TEST_STEP][PASSED] - println(testCaseStatus): null
+
+25-09-2025T19:00:52 - [TEST_STEP][PASSED] - StatusMap = DependencyHandler.getStatusMap(): null
+
+25-09-2025T19:00:52 - [TEST_STEP][PASSED] - if (StatusMap.containsKey(testCaseName)): null
+
+25-09-2025T19:00:52 - [TEST_STEP][PASSED] - try: null
+
+25-09-2025T19:00:52 - [TEST_STEP][PASSED] - driver = getWebDriver(): null
+
+25-09-2025T19:00:52 - [TEST_STEP][PASSED] - catch (Exception e): null
+
+25-09-2025T19:00:52 - [TEST_STEP][PASSED] - println(⚠️ Error while closing browser: $e.message): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/API_Testing/GraphQL_API_Testing/graphql_Patch_api" time="1.164" classname="Test Cases/API_Testing/GraphQL_API_Testing/graphql_Patch_api" status="PASSED">
+         <properties>
+            <property name="data_binding"><![CDATA[{"(Default) graph...":"graphQL","(Default) schem...":"Include/Data Files/MasterSchema.json","(Default) apiBa...":"apiBaseUrl"}]]></property>
+         </properties>
+         <system-out><![CDATA[25-09-2025T19:00:52 - [TEST_CASE][PASSED] - Test Cases/API_Testing/GraphQL_API_Testing/graphql_Patch_api: Test Cases/API_Testing/GraphQL_API_Testing/graphql_Patch_api
+
+25-09-2025T19:00:52 - [TEST_STEP][PASSED] - Start listener action : beforeTestCase: null
+
+25-09-2025T19:00:52 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+25-09-2025T19:00:52 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+25-09-2025T19:00:52 - [TEST_STEP][PASSED] - if (toLowerCase().endsWith("api")): null
+
+25-09-2025T19:00:52 - [TEST_STEP][PASSED] - println(ℹ️ Skipping browser launch for API test case: $testCaseName): null
+
+25-09-2025T19:00:52 - [TEST_STEP][PASSED] - return null: null
+
+25-09-2025T19:00:52 - [TEST_STEP][PASSED] - logInfo("Sending GraphQL mutation to update post"): Sending GraphQL mutation to update post
+
+25-09-2025T19:00:52 - [MESSAGE][INFO] - Sending GraphQL mutation to update post
+
+25-09-2025T19:00:52 - [TEST_STEP][PASSED] - query = "
+mutation UpdatePost($input: UpdatePostInput!, $id: ID!) {
+  updatePost(id: $id, input: $input) {
+    id
+    title
+  }
+}
+": null
+
+25-09-2025T19:00:52 - [TEST_STEP][PASSED] - variables = ["id":1, "input":["title":"Patch modified title"]]: null
+
+25-09-2025T19:00:52 - [TEST_STEP][PASSED] - headers = ["Content-Type":"application/json"]: null
+
+25-09-2025T19:00:52 - [TEST_STEP][PASSED] - baseUrl = GlobalAccessor.getProfileVariable(graphQL, apiBaseUrl): null
+
+25-09-2025T19:00:52 - [TEST_STEP][PASSED] - response = ApiKeywords.sendGraphQL(baseUrl, query, variables, headers): Send request successfully
+
+25-09-2025T19:00:53 - [MESSAGE][INFO] - HAR: C:\Users\10835442\Katalon Studio\Luma\Reports\20250925_190042\GraphQL_API\20250925_190042\requests\main\POST_Generic_2.har
+
+25-09-2025T19:00:53 - [MESSAGE][PASSED] - Send request successfully
+
+25-09-2025T19:00:53 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 200): Verify response status code successfully
+
+25-09-2025T19:00:53 - [MESSAGE][PASSED] - Verify response status code successfully
+
+25-09-2025T19:00:53 - [TEST_STEP][PASSED] - logInfo("GraphQL response status code verified as 200"): GraphQL response status code verified as 200
+
+25-09-2025T19:00:53 - [MESSAGE][INFO] - GraphQL response status code verified as 200
+
+25-09-2025T19:00:53 - [TEST_STEP][PASSED] - responseBody = response.getResponseBodyContent(): null
+
+25-09-2025T19:00:53 - [TEST_STEP][PASSED] - json = JsonSlurper().parseText(responseBody): null
+
+25-09-2025T19:00:53 - [TEST_STEP][PASSED] - logInfo(Updated Post ID: $json.data.updatePost.id): Updated Post ID: 1
+
+25-09-2025T19:00:53 - [MESSAGE][INFO] - Updated Post ID: 1
+
+25-09-2025T19:00:53 - [TEST_STEP][PASSED] - logInfo(Updated Post Title: $json.data.updatePost.title): Updated Post Title: Patch modified title
+
+25-09-2025T19:00:53 - [MESSAGE][INFO] - Updated Post Title: Patch modified title
+
+25-09-2025T19:00:53 - [TEST_STEP][PASSED] - validateJsonAgainstSchema(responseBody, JsonOutput.toJson(JsonFileReader.getSectionData("graphQL_Patch", schemaFilePath))): Validate with JSON Schema successfully
+
+25-09-2025T19:00:53 - [MESSAGE][PASSED] - Validate with JSON Schema successfully
+
+25-09-2025T19:00:53 - [TEST_STEP][PASSED] - markPassed("GraphQL updatePost response schema validation passed"): GraphQL updatePost response schema validation passed
+
+25-09-2025T19:00:53 - [MESSAGE][PASSED] - GraphQL updatePost response schema validation passed
+
+25-09-2025T19:00:53 - [TEST_STEP][PASSED] - Start listener action : closeTheBrowser: null
+
+25-09-2025T19:00:53 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+25-09-2025T19:00:53 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+25-09-2025T19:00:53 - [TEST_STEP][PASSED] - testCaseStatus = testCaseContext.getTestCaseStatus(): null
+
+25-09-2025T19:00:53 - [TEST_STEP][PASSED] - println(testCaseStatus): null
+
+25-09-2025T19:00:53 - [TEST_STEP][PASSED] - StatusMap = DependencyHandler.getStatusMap(): null
+
+25-09-2025T19:00:53 - [TEST_STEP][PASSED] - if (StatusMap.containsKey(testCaseName)): null
+
+25-09-2025T19:00:53 - [TEST_STEP][PASSED] - try: null
+
+25-09-2025T19:00:53 - [TEST_STEP][PASSED] - driver = getWebDriver(): null
+
+25-09-2025T19:00:53 - [TEST_STEP][PASSED] - catch (Exception e): null
+
+25-09-2025T19:00:53 - [TEST_STEP][PASSED] - println(⚠️ Error while closing browser: $e.message): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/API_Testing/GraphQL_API_Testing/graphql_Get_api" time="0.702" classname="Test Cases/API_Testing/GraphQL_API_Testing/graphql_Get_api" status="PASSED">
+         <properties>
+            <property name="data_binding"><![CDATA[{"(Default) graph...":"graphQL","(Default) schem...":"Include/Data Files/MasterSchema.json","(Default) apiBa...":"apiBaseUrl"}]]></property>
+         </properties>
+         <system-out><![CDATA[25-09-2025T19:00:53 - [TEST_CASE][PASSED] - Test Cases/API_Testing/GraphQL_API_Testing/graphql_Get_api: Test Cases/API_Testing/GraphQL_API_Testing/graphql_Get_api
+
+25-09-2025T19:00:53 - [TEST_STEP][PASSED] - Start listener action : beforeTestCase: null
+
+25-09-2025T19:00:53 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+25-09-2025T19:00:53 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+25-09-2025T19:00:53 - [TEST_STEP][PASSED] - if (toLowerCase().endsWith("api")): null
+
+25-09-2025T19:00:53 - [TEST_STEP][PASSED] - println(ℹ️ Skipping browser launch for API test case: $testCaseName): null
+
+25-09-2025T19:00:53 - [TEST_STEP][PASSED] - return null: null
+
+25-09-2025T19:00:54 - [TEST_STEP][PASSED] - logInfo("Sending GraphQL query to fetch post by ID"): Sending GraphQL query to fetch post by ID
+
+25-09-2025T19:00:54 - [MESSAGE][INFO] - Sending GraphQL query to fetch post by ID
+
+25-09-2025T19:00:54 - [TEST_STEP][PASSED] - query = "
+query GetPost($id: ID!) {
+  post(id: $id) {
+    id
+    title
+    body
+  }
+}
+": null
+
+25-09-2025T19:00:54 - [TEST_STEP][PASSED] - variables = ["id":1]: null
+
+25-09-2025T19:00:54 - [TEST_STEP][PASSED] - headers = ["Content-Type":"application/json"]: null
+
+25-09-2025T19:00:54 - [TEST_STEP][PASSED] - baseUrl = GlobalAccessor.getProfileVariable(graphQL, apiBaseUrl): null
+
+25-09-2025T19:00:54 - [TEST_STEP][PASSED] - response = ApiKeywords.sendGraphQL(baseUrl, query, variables, headers): Send request successfully
+
+25-09-2025T19:00:54 - [MESSAGE][INFO] - HAR: C:\Users\10835442\Katalon Studio\Luma\Reports\20250925_190042\GraphQL_API\20250925_190042\requests\main\POST_Generic_3.har
+
+25-09-2025T19:00:54 - [MESSAGE][PASSED] - Send request successfully
+
+25-09-2025T19:00:54 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 200): Verify response status code successfully
+
+25-09-2025T19:00:54 - [MESSAGE][PASSED] - Verify response status code successfully
+
+25-09-2025T19:00:54 - [TEST_STEP][PASSED] - logInfo("GraphQL response status code verified as 200"): GraphQL response status code verified as 200
+
+25-09-2025T19:00:54 - [MESSAGE][INFO] - GraphQL response status code verified as 200
+
+25-09-2025T19:00:54 - [TEST_STEP][PASSED] - responseBody = response.getResponseBodyContent(): null
+
+25-09-2025T19:00:54 - [TEST_STEP][PASSED] - json = JsonSlurper().parseText(responseBody): null
+
+25-09-2025T19:00:54 - [TEST_STEP][PASSED] - println(JsonOutput.prettyPrint(JsonOutput.toJson(json))): null
+
+25-09-2025T19:00:54 - [TEST_STEP][PASSED] - logInfo(Post ID: $json.data.post.id): Post ID: 1
+
+25-09-2025T19:00:54 - [MESSAGE][INFO] - Post ID: 1
+
+25-09-2025T19:00:54 - [TEST_STEP][PASSED] - logInfo(Post Title: $json.data.post.title): Post Title: sunt aut facere repellat provident occaecati excepturi optio reprehenderit
+
+25-09-2025T19:00:54 - [MESSAGE][INFO] - Post Title: sunt aut facere repellat provident occaecati excepturi optio reprehenderit
+
+25-09-2025T19:00:54 - [TEST_STEP][PASSED] - validateJsonAgainstSchema(responseBody, JsonOutput.toJson(JsonFileReader.getSectionData("graphQL_GET", schemaFilePath))): Validate with JSON Schema successfully
+
+25-09-2025T19:00:54 - [MESSAGE][PASSED] - Validate with JSON Schema successfully
+
+25-09-2025T19:00:54 - [TEST_STEP][PASSED] - markPassed("GraphQL response schema validation passed"): GraphQL response schema validation passed
+
+25-09-2025T19:00:54 - [MESSAGE][PASSED] - GraphQL response schema validation passed
+
+25-09-2025T19:00:54 - [TEST_STEP][PASSED] - Start listener action : closeTheBrowser: null
+
+25-09-2025T19:00:54 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+25-09-2025T19:00:54 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+25-09-2025T19:00:54 - [TEST_STEP][PASSED] - testCaseStatus = testCaseContext.getTestCaseStatus(): null
+
+25-09-2025T19:00:54 - [TEST_STEP][PASSED] - println(testCaseStatus): null
+
+25-09-2025T19:00:54 - [TEST_STEP][PASSED] - StatusMap = DependencyHandler.getStatusMap(): null
+
+25-09-2025T19:00:54 - [TEST_STEP][PASSED] - if (StatusMap.containsKey(testCaseName)): null
+
+25-09-2025T19:00:54 - [TEST_STEP][PASSED] - try: null
+
+25-09-2025T19:00:54 - [TEST_STEP][PASSED] - driver = getWebDriver(): null
+
+25-09-2025T19:00:54 - [TEST_STEP][PASSED] - catch (Exception e): null
+
+25-09-2025T19:00:54 - [TEST_STEP][PASSED] - println(⚠️ Error while closing browser: $e.message): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/API_Testing/GraphQL_API_Testing/graphql_Delete_api" time="1.087" classname="Test Cases/API_Testing/GraphQL_API_Testing/graphql_Delete_api" status="ERROR">
+         <properties>
+            <property name="data_binding"><![CDATA[{"(Default) graph...":"graphQL","(Default) apiBa...":"apiBaseUrl"}]]></property>
+         </properties>
+         <error type="ERROR" message="Test Cases/API_Testing/GraphQL_API_Testing/graphql_Delete_api FAILED.&#xa;Reason:&#xa;groovy.lang.MissingPropertyException: No such property: json for class: Script1758794418783&#xa;	at graphql_Delete_api.run(graphql_Delete_api:28)&#xa;	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)&#xa;	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)&#xa;	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)&#xa;	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)&#xa;	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)&#xa;	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)&#xa;	at TempTestSuite1758807042321.run(TempTestSuite1758807042321.groovy:35)&#xa;	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#xa;	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#xa;	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#xa;"/>
+         <system-out><![CDATA[25-09-2025T19:00:58 - [TEST_CASE][ERROR] - Test Cases/API_Testing/GraphQL_API_Testing/graphql_Delete_api: Test Cases/API_Testing/GraphQL_API_Testing/graphql_Delete_api FAILED.
+Reason:
+groovy.lang.MissingPropertyException: No such property: json for class: Script1758794418783
+	at graphql_Delete_api.run(graphql_Delete_api:28)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1758807042321.run(TempTestSuite1758807042321.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+
+25-09-2025T19:00:58 - [TEST_STEP][PASSED] - Start listener action : beforeTestCase: null
+
+25-09-2025T19:00:58 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+25-09-2025T19:00:58 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+25-09-2025T19:00:58 - [TEST_STEP][PASSED] - if (toLowerCase().endsWith("api")): null
+
+25-09-2025T19:00:58 - [TEST_STEP][PASSED] - println(ℹ️ Skipping browser launch for API test case: $testCaseName): null
+
+25-09-2025T19:00:58 - [TEST_STEP][PASSED] - return null: null
+
+25-09-2025T19:00:58 - [TEST_STEP][PASSED] - logInfo("Sending GraphQL mutation to delete post by ID"): Sending GraphQL mutation to delete post by ID
+
+25-09-2025T19:00:58 - [MESSAGE][INFO] - Sending GraphQL mutation to delete post by ID
+
+25-09-2025T19:00:58 - [TEST_STEP][PASSED] - query = "
+mutation DeletePost($id: ID!) {
+  deletePost(id: $id)
+}
+": null
+
+25-09-2025T19:00:58 - [TEST_STEP][PASSED] - variables = ["id":1]: null
+
+25-09-2025T19:00:58 - [TEST_STEP][PASSED] - headers = ["Content-Type":"application/json"]: null
+
+25-09-2025T19:00:58 - [TEST_STEP][PASSED] - baseUrl = GlobalAccessor.getProfileVariable(graphQL, apiBaseUrl): null
+
+25-09-2025T19:00:58 - [TEST_STEP][PASSED] - response = ApiKeywords.sendGraphQL(baseUrl, query, variables, headers): Send request successfully
+
+25-09-2025T19:00:59 - [MESSAGE][INFO] - HAR: C:\Users\10835442\Katalon Studio\Luma\Reports\20250925_190042\GraphQL_API\20250925_190042\requests\main\POST_Generic_7.har
+
+25-09-2025T19:00:59 - [MESSAGE][PASSED] - Send request successfully
+
+25-09-2025T19:00:59 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 200): Verify response status code successfully
+
+25-09-2025T19:00:59 - [MESSAGE][PASSED] - Verify response status code successfully
+
+25-09-2025T19:00:59 - [TEST_STEP][PASSED] - logInfo("GraphQL response status code verified as 200"): GraphQL response status code verified as 200
+
+25-09-2025T19:00:59 - [MESSAGE][INFO] - GraphQL response status code verified as 200
+
+25-09-2025T19:00:59 - [TEST_STEP][ERROR] - logInfo(Delete result: $json.data.deletePost): Test Cases/API_Testing/GraphQL_API_Testing/graphql_Delete_api FAILED.
+Reason:
+groovy.lang.MissingPropertyException: No such property: json for class: Script1758794418783
+	at graphql_Delete_api.run(graphql_Delete_api:28)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1758807042321.run(TempTestSuite1758807042321.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+
+25-09-2025T19:00:59 - [MESSAGE][ERROR] - Test Cases/API_Testing/GraphQL_API_Testing/graphql_Delete_api FAILED.
+Reason:
+groovy.lang.MissingPropertyException: No such property: json for class: Script1758794418783
+	at graphql_Delete_api.run(graphql_Delete_api:28)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1758807042321.run(TempTestSuite1758807042321.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+
+25-09-2025T19:00:59 - [TEST_STEP][PASSED] - Start listener action : closeTheBrowser: null
+
+25-09-2025T19:00:59 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+25-09-2025T19:00:59 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+25-09-2025T19:00:59 - [TEST_STEP][PASSED] - testCaseStatus = testCaseContext.getTestCaseStatus(): null
+
+25-09-2025T19:00:59 - [TEST_STEP][PASSED] - println(testCaseStatus): null
+
+25-09-2025T19:00:59 - [TEST_STEP][PASSED] - StatusMap = DependencyHandler.getStatusMap(): null
+
+25-09-2025T19:00:59 - [TEST_STEP][PASSED] - if (StatusMap.containsKey(testCaseName)): null
+
+25-09-2025T19:00:59 - [TEST_STEP][PASSED] - try: null
+
+25-09-2025T19:00:59 - [TEST_STEP][PASSED] - driver = getWebDriver(): null
+
+25-09-2025T19:00:59 - [TEST_STEP][PASSED] - catch (Exception e): null
+
+25-09-2025T19:00:59 - [TEST_STEP][PASSED] - println(⚠️ Error while closing browser: $e.message): null]]></system-out>
+         <system-err><![CDATA[25-09-2025T19:00:58 - [TEST_CASE][ERROR] - Test Cases/API_Testing/GraphQL_API_Testing/graphql_Delete_api: Test Cases/API_Testing/GraphQL_API_Testing/graphql_Delete_api FAILED.
+Reason:
+groovy.lang.MissingPropertyException: No such property: json for class: Script1758794418783
+	at graphql_Delete_api.run(graphql_Delete_api:28)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1758807042321.run(TempTestSuite1758807042321.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)]]></system-err>
+      </testcase>
+      <system-out><![CDATA[25-09-2025T19:00:47 - [TEST_SUITE][ERROR] - GraphQL_API: null]]></system-out>
+      <system-err><![CDATA[25-09-2025T19:00:47 - [TEST_SUITE][ERROR] - GraphQL_API: null]]></system-err>
+   </testsuite>
+</testsuites>

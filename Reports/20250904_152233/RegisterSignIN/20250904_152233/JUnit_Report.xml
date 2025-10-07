@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="RegisterSignIN" time="23.927" tests="1" failures="0" errors="0">
+   <testsuite name="RegisterSignIN" tests="1" failures="0" errors="0" time="23.927" skipped="0" timestamp="2025-09-04T09:52:37.921Z" hostname="10835442 - 10.235.155.132" id="Test Suites/RegisterSignIN">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform"/>
+         <property name="logFolder" value="C:\\Users\\10835442\\Katalon Studio\\Luma\\Reports\\20250904_152233\\RegisterSignIN\\20250904_152233"/>
+         <property name="logFiles" value="C:\\Users\\10835442\\Katalon Studio\\Luma\\Reports\\20250904_152233\\RegisterSignIN\\20250904_152233\\console0.log, C:\\Users\\10835442\\Katalon Studio\\Luma\\Reports\\20250904_152233\\RegisterSignIN\\20250904_152233\\execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="10835442 - 10.235.155.132"/>
+         <property name="os" value="Windows 11 64bit"/>
+         <property name="katalonVersion" value="10.3.1.0"/>
+         <property name="browser" value="Chrome 140.0.7339.81"/>
+         <property name="userFullName" value="Abinesh R"/>
+         <property name="hostAddress" value="10.235.155.132"/>
+         <property name="sessionId" value="ed4b6337a11cfbcebbc9180c61e33b5d"/>
+         <property name="projectName" value="Luma"/>
+         <property name="seleniumVersion" value="4.28.1"/>
+         <property name="proxyInformation" value="ProxyInformation { proxyOption=NO_PROXY, proxyServerType=HTTP, username=, password=********, proxyServerAddress=, proxyServerPort=0, executionList=&quot;&quot;, isApplyToDesiredCapabilities=true }"/>
+         <property name="platform" value="Windows 11"/>
+      </properties>
+      <testcase name="Test Cases/SignIn" time="23.344" classname="Test Cases/SignIn" status="PASSED">
+         <properties>
+            <property name="data_binding"><![CDATA[{"(Default) secti...":"loginPage","(Default) filep...":"Include/Data Files/login_data.json"}]]></property>
+         </properties>
+         <system-out><![CDATA[04-09-2025T15:22:38 - [TEST_CASE][PASSED] - Test Cases/SignIn: Test Cases/SignIn
+
+04-09-2025T15:22:38 - [TEST_STEP][PASSED] - Start listener action : openTheBrowser: Current window maximized
+
+04-09-2025T15:22:38 - [TEST_STEP][PASSED] - openBrowser(baseUrl): Browser is opened with url: 'https://ecommerce-playground.lambdatest.io/'
+
+04-09-2025T15:22:39 - [MESSAGE][INFO] - Starting 'Chrome' driver
+
+04-09-2025T15:22:39 - [MESSAGE][INFO] - Action delay is set to 0 milliseconds
+
+04-09-2025T15:22:48 - [MESSAGE][PASSED] - Browser is opened with url: 'https://ecommerce-playground.lambdatest.io/'
+
+04-09-2025T15:22:48 - [TEST_STEP][PASSED] - maximizeWindow(): Current window maximized
+
+04-09-2025T15:22:48 - [MESSAGE][PASSED] - Current window maximized
+
+04-09-2025T15:22:49 - [TEST_STEP][PASSED] - ExtentManager.initReport("LoginTestReport"): null
+
+04-09-2025T15:22:50 - [TEST_STEP][PASSED] - ExtentManager.createTest("Login Test"): null
+
+04-09-2025T15:22:50 - [TEST_STEP][PASSED] - ExtentManager.logPass("Navigating to the sign in page"): null
+
+04-09-2025T15:22:50 - [TEST_STEP][PASSED] - pages.HomePage.navigateToAccountPage(): login button has been clicked
+
+04-09-2025T15:22:50 - [MESSAGE][PASSED] - Object 'Object Repository/Home_Page/my_Account_Button' is visible
+
+04-09-2025T15:22:50 - [MESSAGE][INFO] - Hovering over: my account
+
+04-09-2025T15:22:51 - [MESSAGE][PASSED] - Object: 'Object Repository/Home_Page/my_Account_Button' is hovered
+
+04-09-2025T15:22:51 - [MESSAGE][PASSED] - my account has been hovered
+
+04-09-2025T15:22:51 - [MESSAGE][PASSED] - Object 'Object Repository/Home_Page/login_Button' is visible
+
+04-09-2025T15:22:51 - [MESSAGE][INFO] - Clicking on: login button
+
+04-09-2025T15:22:54 - [MESSAGE][PASSED] - Object: 'Object Repository/Home_Page/login_Button' is clicked on
+
+04-09-2025T15:22:54 - [MESSAGE][PASSED] - login button has been clicked
+
+04-09-2025T15:22:54 - [TEST_STEP][PASSED] - ExtentManager.logPass("Navigated to the sign in page"): null
+
+04-09-2025T15:22:54 - [TEST_STEP][PASSED] - ExtentManager.logPass("Signing into the account"): null
+
+04-09-2025T15:22:54 - [TEST_STEP][PASSED] - loginFields = [["id":"input-email", "jsonKey":"email"], ["id":"input-password", "jsonKey":"password"]]: null
+
+04-09-2025T15:22:54 - [TEST_STEP][PASSED] - loginFields.each({ -> ... }): password has been entered
+
+04-09-2025T15:22:54 - [MESSAGE][PASSED] - Object 'Object Repository/LoginPage/generic_Input' is visible
+
+04-09-2025T15:22:54 - [MESSAGE][INFO] - Entering data into: email
+
+04-09-2025T15:22:55 - [MESSAGE][PASSED] - Text 'alicesmith.33@gmail.com' is set on object 'Object Repository/LoginPage/generic_Input'
+
+04-09-2025T15:22:55 - [MESSAGE][PASSED] - email has been entered
+
+04-09-2025T15:22:55 - [MESSAGE][PASSED] - Object 'Object Repository/LoginPage/generic_Input' is visible
+
+04-09-2025T15:22:55 - [MESSAGE][INFO] - Entering data into: password
+
+04-09-2025T15:22:56 - [MESSAGE][PASSED] - Text 'Password@123' is set on object 'Object Repository/LoginPage/generic_Input'
+
+04-09-2025T15:22:56 - [MESSAGE][PASSED] - password has been entered
+
+04-09-2025T15:22:56 - [TEST_STEP][PASSED] - pages.LoginPage.clickOnLoginButton(findTestObject("Object Repository/LoginPage/Login_button")): Login button has been clicked
+
+04-09-2025T15:22:56 - [MESSAGE][PASSED] - Object 'Object Repository/LoginPage/Login_button' is visible
+
+04-09-2025T15:22:56 - [MESSAGE][INFO] - Clicking on: Login button
+
+04-09-2025T15:22:57 - [MESSAGE][PASSED] - Object: 'Object Repository/LoginPage/Login_button' is clicked on
+
+04-09-2025T15:22:57 - [MESSAGE][PASSED] - Login button has been clicked
+
+04-09-2025T15:22:57 - [TEST_STEP][PASSED] - ExtentManager.logPass("Signed into the account"): null
+
+04-09-2025T15:22:57 - [TEST_STEP][PASSED] - ExtentManager.logPass("Verifying My Account"): null
+
+04-09-2025T15:22:57 - [TEST_STEP][PASSED] - pages.AccountPage.verifyMyAccount(findTestObject("Object Repository/AccountPage/my_Account_verification"), JsonFileReader.getJsonData(section, "verification_text", filepath)): Verify My account has been verified
+
+04-09-2025T15:23:00 - [MESSAGE][PASSED] - Object 'Object Repository/AccountPage/my_Account_verification' is visible
+
+04-09-2025T15:23:00 - [MESSAGE][INFO] - Verifying text for: Verify My account
+
+04-09-2025T15:23:00 - [MESSAGE][PASSED] - Actual text and expected text of test object 'Object Repository/AccountPage/my_Account_verification' are matched.
+
+04-09-2025T15:23:00 - [MESSAGE][PASSED] - Verify My account has been verified
+
+04-09-2025T15:23:00 - [TEST_STEP][PASSED] - ExtentManager.logPass("Verified My Account"): null
+
+04-09-2025T15:23:00 - [TEST_STEP][PASSED] - ExtentManager.flushReport(): null
+
+04-09-2025T15:23:01 - [TEST_STEP][PASSED] - Start listener action : closeTheBrowser: Browser is closed
+
+04-09-2025T15:23:01 - [TEST_STEP][PASSED] - closeBrowser(): Browser is closed
+
+04-09-2025T15:23:01 - [MESSAGE][PASSED] - Browser is closed]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[04-09-2025T15:22:37 - [TEST_SUITE][PASSED] - RegisterSignIN: null]]></system-out>
+      <system-err><![CDATA[]]></system-err>
+   </testsuite>
+</testsuites>

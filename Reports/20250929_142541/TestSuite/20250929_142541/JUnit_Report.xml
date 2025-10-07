@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="TestSuite" time="2.157" tests="1" failures="0" errors="1">
+   <testsuite name="TestSuite" tests="1" failures="0" errors="1" time="2.157" skipped="0" timestamp="2025-09-29T08:55:46.429Z" hostname="10835442 - 10.235.153.87" id="Test Suites/TestSuite">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform"/>
+         <property name="logFolder" value="C:\\Users\\10835442\\Katalon Studio\\Luma\\Reports\\20250929_142541\\TestSuite\\20250929_142541"/>
+         <property name="logFiles" value="C:\\Users\\10835442\\Katalon Studio\\Luma\\Reports\\20250929_142541\\TestSuite\\20250929_142541\\console0.log, C:\\Users\\10835442\\Katalon Studio\\Luma\\Reports\\20250929_142541\\TestSuite\\20250929_142541\\execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="userFullName" value="abinesh rajendran"/>
+         <property name="hostName" value="10835442 - 10.235.153.87"/>
+         <property name="hostAddress" value="10.235.153.87"/>
+         <property name="projectName" value="Luma"/>
+         <property name="os" value="Windows 11 64bit"/>
+         <property name="katalonVersion" value="10.3.1.0"/>
+      </properties>
+      <testcase name="Test Cases/API_Testing/REST_API_Testing/TC04_getAccessToken_Api" time="1.147" classname="Test Cases/API_Testing/REST_API_Testing/TC04_getAccessToken_Api" status="ERROR">
+         <properties>
+            <property name="data_binding"><![CDATA[{"(Default) maste...":"Include/Data Files/MasterSchema.json","(Default) jsonF...":"Include/Data Files/login_data.json","(Default) apiBa...":"apiBaseUrl","(Default) acces...":"accessTokenUrl"}]]></property>
+         </properties>
+         <error type="ERROR" message="Test Cases/API_Testing/REST_API_Testing/TC04_getAccessToken_Api FAILED.&#xa;Reason:&#xa;groovy.lang.MissingPropertyException: No such property: accsessToken for class: Script1758781576339&#xa;	at TC04_getAccessToken_Api.run(TC04_getAccessToken_Api:32)&#xa;	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)&#xa;	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)&#xa;	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)&#xa;	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)&#xa;	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)&#xa;	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)&#xa;	at TempTestSuite1759136141544.run(TempTestSuite1759136141544.groovy:35)&#xa;	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#xa;	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#xa;	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#xa;"/>
+         <system-out><![CDATA[29-09-2025T14:25:47 - [TEST_CASE][ERROR] - Test Cases/API_Testing/REST_API_Testing/TC04_getAccessToken_Api: Test Cases/API_Testing/REST_API_Testing/TC04_getAccessToken_Api FAILED.
+Reason:
+groovy.lang.MissingPropertyException: No such property: accsessToken for class: Script1758781576339
+	at TC04_getAccessToken_Api.run(TC04_getAccessToken_Api:32)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1759136141544.run(TempTestSuite1759136141544.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+
+29-09-2025T14:25:47 - [TEST_STEP][PASSED] - Start listener action : beforeTestCase: null
+
+29-09-2025T14:25:47 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+29-09-2025T14:25:47 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+29-09-2025T14:25:47 - [TEST_STEP][PASSED] - if (toLowerCase().endsWith("api")): null
+
+29-09-2025T14:25:47 - [TEST_STEP][PASSED] - println(ℹ️ Skipping browser launch for API test case: $testCaseName): null
+
+29-09-2025T14:25:47 - [TEST_STEP][PASSED] - return null: null
+
+29-09-2025T14:25:48 - [TEST_STEP][PASSED] - logInfo("Reading payload from JSON file..."): Reading payload from JSON file...
+
+29-09-2025T14:25:48 - [MESSAGE][INFO] - Reading payload from JSON file...
+
+29-09-2025T14:25:48 - [TEST_STEP][PASSED] - payLoad = JsonOutput.toJson(JsonFileReader.getSectionData("postPayload", jsonFilePath)): null
+
+29-09-2025T14:25:48 - [TEST_STEP][PASSED] - logInfo("Payload prepared: " + payLoad): Payload prepared: {"username":"emilys","password":"emilyspass","expiresInMins":30}
+
+29-09-2025T14:25:48 - [MESSAGE][INFO] - Payload prepared: {"username":"emilys","password":"emilyspass","expiresInMins":30}
+
+29-09-2025T14:25:48 - [TEST_STEP][PASSED] - logInfo("Sending POST request to /login endpoint..."): Sending POST request to /login endpoint...
+
+29-09-2025T14:25:48 - [MESSAGE][INFO] - Sending POST request to /login endpoint...
+
+29-09-2025T14:25:48 - [TEST_STEP][ERROR] - baseUrl = GlobalAccessor.getProfileVariable(accsessToken, apiBaseUrl): Test Cases/API_Testing/REST_API_Testing/TC04_getAccessToken_Api FAILED.
+Reason:
+groovy.lang.MissingPropertyException: No such property: accsessToken for class: Script1758781576339
+	at TC04_getAccessToken_Api.run(TC04_getAccessToken_Api:32)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1759136141544.run(TempTestSuite1759136141544.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+
+29-09-2025T14:25:48 - [MESSAGE][ERROR] - Test Cases/API_Testing/REST_API_Testing/TC04_getAccessToken_Api FAILED.
+Reason:
+groovy.lang.MissingPropertyException: No such property: accsessToken for class: Script1758781576339
+	at TC04_getAccessToken_Api.run(TC04_getAccessToken_Api:32)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1759136141544.run(TempTestSuite1759136141544.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+
+29-09-2025T14:25:48 - [TEST_STEP][PASSED] - Start listener action : closeTheBrowser: null
+
+29-09-2025T14:25:48 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+29-09-2025T14:25:48 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+29-09-2025T14:25:48 - [TEST_STEP][PASSED] - testCaseStatus = testCaseContext.getTestCaseStatus(): null
+
+29-09-2025T14:25:48 - [TEST_STEP][PASSED] - println(testCaseStatus): null
+
+29-09-2025T14:25:48 - [TEST_STEP][PASSED] - StatusMap = DependencyHandler.getStatusMap(): null
+
+29-09-2025T14:25:48 - [TEST_STEP][PASSED] - if (StatusMap.containsKey(testCaseName)): null
+
+29-09-2025T14:25:48 - [TEST_STEP][PASSED] - try: null
+
+29-09-2025T14:25:48 - [TEST_STEP][PASSED] - driver = getWebDriver(): null
+
+29-09-2025T14:25:48 - [TEST_STEP][PASSED] - catch (Exception e): null
+
+29-09-2025T14:25:48 - [TEST_STEP][PASSED] - println(⚠️ Error while closing browser: $e.message): null]]></system-out>
+         <system-err><![CDATA[29-09-2025T14:25:47 - [TEST_CASE][ERROR] - Test Cases/API_Testing/REST_API_Testing/TC04_getAccessToken_Api: Test Cases/API_Testing/REST_API_Testing/TC04_getAccessToken_Api FAILED.
+Reason:
+groovy.lang.MissingPropertyException: No such property: accsessToken for class: Script1758781576339
+	at TC04_getAccessToken_Api.run(TC04_getAccessToken_Api:32)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1759136141544.run(TempTestSuite1759136141544.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)]]></system-err>
+      </testcase>
+      <system-out><![CDATA[29-09-2025T14:25:46 - [TEST_SUITE][ERROR] - TestSuite: null]]></system-out>
+      <system-err><![CDATA[29-09-2025T14:25:46 - [TEST_SUITE][ERROR] - TestSuite: null]]></system-err>
+   </testsuite>
+</testsuites>

@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="API_AccessToken" time="7.274" tests="4" failures="0" errors="0">
+   <testsuite name="API_AccessToken" tests="4" failures="0" errors="0" time="7.274" skipped="0" timestamp="2025-09-19T09:28:00.489Z" hostname="10835442 - 10.235.155.176" id="Test Suites/API_AccessToken">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform"/>
+         <property name="logFolder" value="C:\\Users\\10835442\\Katalon Studio\\Luma\\Reports\\20250919_145754\\API_AccessToken\\20250919_145754"/>
+         <property name="logFiles" value="C:\\Users\\10835442\\Katalon Studio\\Luma\\Reports\\20250919_145754\\API_AccessToken\\20250919_145754\\console0.log, C:\\Users\\10835442\\Katalon Studio\\Luma\\Reports\\20250919_145754\\API_AccessToken\\20250919_145754\\execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="userFullName" value="Abinesh R"/>
+         <property name="hostName" value="10835442 - 10.235.155.176"/>
+         <property name="hostAddress" value="10.235.155.176"/>
+         <property name="projectName" value="Luma"/>
+         <property name="os" value="Windows 11 64bit"/>
+         <property name="katalonVersion" value="10.3.1.0"/>
+      </properties>
+      <testcase name="Test Cases/API_Testing/TC04_getAccessToken_Api" time="4.104" classname="Test Cases/API_Testing/TC04_getAccessToken_Api" status="PASSED">
+         <properties>
+            <property name="data_binding"><![CDATA[{"(Default) maste...":"Include/Data Files/MasterSchema.json","(Default) jsonF...":"Include/Data Files/login_data.json"}]]></property>
+         </properties>
+         <system-out><![CDATA[19-09-2025T14:58:01 - [TEST_CASE][PASSED] - Test Cases/API_Testing/TC04_getAccessToken_Api: Test Cases/API_Testing/TC04_getAccessToken_Api
+
+19-09-2025T14:58:01 - [TEST_STEP][PASSED] - Start listener action : beforeTestCase: null
+
+19-09-2025T14:58:01 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+19-09-2025T14:58:01 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+19-09-2025T14:58:01 - [TEST_STEP][PASSED] - if (toLowerCase().endsWith("api")): null
+
+19-09-2025T14:58:01 - [TEST_STEP][PASSED] - println(ℹ️ Skipping browser launch for API test case: $testCaseName): null
+
+19-09-2025T14:58:01 - [TEST_STEP][PASSED] - return null: null
+
+19-09-2025T14:58:01 - [TEST_STEP][PASSED] - logInfo("Reading payload from JSON file..."): Reading payload from JSON file...
+
+19-09-2025T14:58:01 - [MESSAGE][INFO] - Reading payload from JSON file...
+
+19-09-2025T14:58:01 - [TEST_STEP][PASSED] - payLoad = JsonOutput.toJson(JsonFileReader.getSectionData("postPayload", jsonFilePath)): null
+
+19-09-2025T14:58:02 - [TEST_STEP][PASSED] - logInfo("Payload prepared: " + payLoad): Payload prepared: {"username":"emilys","password":"emilyspass","expiresInMins":30}
+
+19-09-2025T14:58:02 - [MESSAGE][INFO] - Payload prepared: {"username":"emilys","password":"emilyspass","expiresInMins":30}
+
+19-09-2025T14:58:02 - [TEST_STEP][PASSED] - logInfo("Sending POST request to /login endpoint..."): Sending POST request to /login endpoint...
+
+19-09-2025T14:58:02 - [MESSAGE][INFO] - Sending POST request to /login endpoint...
+
+19-09-2025T14:58:02 - [TEST_STEP][PASSED] - response = ApiKeywords.sendPost("login", payLoad): Send request successfully
+
+19-09-2025T14:58:04 - [MESSAGE][INFO] - HAR: C:\Users\10835442\Katalon Studio\Luma\Reports\20250919_145754\API_AccessToken\20250919_145754\requests\main\POST_Generic_0.har
+
+19-09-2025T14:58:04 - [MESSAGE][PASSED] - Send request successfully
+
+19-09-2025T14:58:04 - [TEST_STEP][PASSED] - logInfo("Response received with status: " + response.getStatusCode()): Response received with status: 200
+
+19-09-2025T14:58:04 - [MESSAGE][INFO] - Response received with status: 200
+
+19-09-2025T14:58:04 - [TEST_STEP][PASSED] - responseBodyContent = response.getResponseBodyContent(): null
+
+19-09-2025T14:58:04 - [TEST_STEP][PASSED] - logInfo("Response body content:
+" + responseBodyContent): Response body content:
+{"accessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3NTgyNzQwODQsImV4cCI6MTc1ODI3NTg4NH0.5KAvsWCGMiLsoTuHK9flCeMn1vn6vcKsAoKEy8-l19I","refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3NTgyNzQwODQsImV4cCI6MTc2MDg2NjA4NH0.zO7KTZym5q2NbI8W0lLdOihZZURmhVHPWKpTQYldKvQ","id":1,"username":"emilys","email":"emily.johnson@x.dummyjson.com","firstName":"Emily","lastName":"Johnson","gender":"female","image":"https://dummyjson.com/icon/emilys/128"}
+
+19-09-2025T14:58:04 - [MESSAGE][INFO] - Response body content:
+{"accessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3NTgyNzQwODQsImV4cCI6MTc1ODI3NTg4NH0.5KAvsWCGMiLsoTuHK9flCeMn1vn6vcKsAoKEy8-l19I","refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3NTgyNzQwODQsImV4cCI6MTc2MDg2NjA4NH0.zO7KTZym5q2NbI8W0lLdOihZZURmhVHPWKpTQYldKvQ","id":1,"username":"emilys","email":"emily.johnson@x.dummyjson.com","firstName":"Emily","lastName":"Johnson","gender":"female","image":"https://dummyjson.com/icon/emilys/128"}
+
+19-09-2025T14:58:04 - [TEST_STEP][PASSED] - logInfo("Validating response against accessTokenSchema..."): Validating response against accessTokenSchema...
+
+19-09-2025T14:58:04 - [MESSAGE][INFO] - Validating response against accessTokenSchema...
+
+19-09-2025T14:58:05 - [TEST_STEP][PASSED] - schemaMap = JsonFileReader.getSectionData("accessTokenSchema", masterSchemaFilePath): null
+
+19-09-2025T14:58:05 - [TEST_STEP][PASSED] - schemaString = JsonOutput.toJson(schemaMap): null
+
+19-09-2025T14:58:05 - [TEST_STEP][PASSED] - validateJsonAgainstSchema(responseBodyContent, schemaString): Validate with JSON Schema successfully
+
+19-09-2025T14:58:05 - [MESSAGE][PASSED] - Validate with JSON Schema successfully
+
+19-09-2025T14:58:05 - [TEST_STEP][PASSED] - logInfo("Schema validation passed."): Schema validation passed.
+
+19-09-2025T14:58:05 - [MESSAGE][INFO] - Schema validation passed.
+
+19-09-2025T14:58:05 - [TEST_STEP][PASSED] - parsedResponse = JsonSlurper().parseText(responseBodyContent): null
+
+19-09-2025T14:58:05 - [TEST_STEP][PASSED] - jwtToken = accessToken: null
+
+19-09-2025T14:58:05 - [TEST_STEP][PASSED] - logInfo("Extracted JWT Token: " + jwtToken): Extracted JWT Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3NTgyNzQwODQsImV4cCI6MTc1ODI3NTg4NH0.5KAvsWCGMiLsoTuHK9flCeMn1vn6vcKsAoKEy8-l19I
+
+19-09-2025T14:58:05 - [MESSAGE][INFO] - Extracted JWT Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3NTgyNzQwODQsImV4cCI6MTc1ODI3NTg4NH0.5KAvsWCGMiLsoTuHK9flCeMn1vn6vcKsAoKEy8-l19I
+
+19-09-2025T14:58:05 - [TEST_STEP][PASSED] - logInfo("Storing JWT token in DummyJson section of JSON file..."): Storing JWT token in DummyJson section of JSON file...
+
+19-09-2025T14:58:05 - [MESSAGE][INFO] - Storing JWT token in DummyJson section of JSON file...
+
+19-09-2025T14:58:05 - [TEST_STEP][PASSED] - JsonFileReader.appendToJsonSection(jsonFilePath, "DummyJson", "accessToken", jwtToken): null
+
+19-09-2025T14:58:05 - [TEST_STEP][PASSED] - logInfo("Token stored successfully."): Token stored successfully.
+
+19-09-2025T14:58:05 - [MESSAGE][INFO] - Token stored successfully.
+
+19-09-2025T14:58:05 - [TEST_STEP][PASSED] - Start listener action : closeTheBrowser: null
+
+19-09-2025T14:58:05 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+19-09-2025T14:58:05 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+19-09-2025T14:58:05 - [TEST_STEP][PASSED] - testCaseStatus = testCaseContext.getTestCaseStatus(): null
+
+19-09-2025T14:58:05 - [TEST_STEP][PASSED] - println(testCaseStatus): null
+
+19-09-2025T14:58:05 - [TEST_STEP][PASSED] - StatusMap = DependencyHandler.getStatusMap(): null
+
+19-09-2025T14:58:05 - [TEST_STEP][PASSED] - if (StatusMap.containsKey(testCaseName)): null
+
+19-09-2025T14:58:05 - [TEST_STEP][PASSED] - try: null
+
+19-09-2025T14:58:05 - [TEST_STEP][PASSED] - driver = getWebDriver(): null
+
+19-09-2025T14:58:05 - [TEST_STEP][PASSED] - catch (Exception e): null
+
+19-09-2025T14:58:05 - [TEST_STEP][PASSED] - println(⚠️ Error while closing browser: $e.message): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/API_Testing/TC06_currentUserDetail_positive_Api" time="0.962" classname="Test Cases/API_Testing/TC06_currentUserDetail_positive_Api" status="PASSED">
+         <properties>
+            <property name="data_binding"><![CDATA[{"(Default) jsonF...":"Include/Data Files/login_data.json"}]]></property>
+         </properties>
+         <system-out><![CDATA[19-09-2025T14:58:05 - [TEST_CASE][PASSED] - Test Cases/API_Testing/TC06_currentUserDetail_positive_Api: Test Cases/API_Testing/TC06_currentUserDetail_positive_Api
+
+19-09-2025T14:58:05 - [TEST_STEP][PASSED] - Start listener action : beforeTestCase: null
+
+19-09-2025T14:58:05 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+19-09-2025T14:58:05 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+19-09-2025T14:58:05 - [TEST_STEP][PASSED] - if (toLowerCase().endsWith("api")): null
+
+19-09-2025T14:58:05 - [TEST_STEP][PASSED] - println(ℹ️ Skipping browser launch for API test case: $testCaseName): null
+
+19-09-2025T14:58:05 - [TEST_STEP][PASSED] - return null: null
+
+19-09-2025T14:58:05 - [TEST_STEP][PASSED] - logInfo("Reading access token from JSON file..."): Reading access token from JSON file...
+
+19-09-2025T14:58:05 - [MESSAGE][INFO] - Reading access token from JSON file...
+
+19-09-2025T14:58:05 - [TEST_STEP][PASSED] - accessToken = JsonFileReader.getJsonData("DummyJson", "accessToken", jsonFilePath): null
+
+19-09-2025T14:58:05 - [TEST_STEP][PASSED] - logInfo("Access token retrieved: " + accessToken): Access token retrieved: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3NTgyNzQwODQsImV4cCI6MTc1ODI3NTg4NH0.5KAvsWCGMiLsoTuHK9flCeMn1vn6vcKsAoKEy8-l19I
+
+19-09-2025T14:58:05 - [MESSAGE][INFO] - Access token retrieved: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3NTgyNzQwODQsImV4cCI6MTc1ODI3NTg4NH0.5KAvsWCGMiLsoTuHK9flCeMn1vn6vcKsAoKEy8-l19I
+
+19-09-2025T14:58:05 - [TEST_STEP][PASSED] - headers = ["Authorization":accessToken, "Content-Type":"application/json"]: null
+
+19-09-2025T14:58:05 - [TEST_STEP][PASSED] - logInfo("Headers prepared: " + headers.toString()): Headers prepared: [Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3NTgyNzQwODQsImV4cCI6MTc1ODI3NTg4NH0.5KAvsWCGMiLsoTuHK9flCeMn1vn6vcKsAoKEy8-l19I, Content-Type:application/json]
+
+19-09-2025T14:58:05 - [MESSAGE][INFO] - Headers prepared: [Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3NTgyNzQwODQsImV4cCI6MTc1ODI3NTg4NH0.5KAvsWCGMiLsoTuHK9flCeMn1vn6vcKsAoKEy8-l19I, Content-Type:application/json]
+
+19-09-2025T14:58:05 - [TEST_STEP][PASSED] - logInfo("Sending GET request to /me endpoint..."): Sending GET request to /me endpoint...
+
+19-09-2025T14:58:05 - [MESSAGE][INFO] - Sending GET request to /me endpoint...
+
+19-09-2025T14:58:05 - [TEST_STEP][PASSED] - response = ApiKeywords.sendGet("me", headers): Send request successfully
+
+19-09-2025T14:58:06 - [MESSAGE][INFO] - HAR: C:\Users\10835442\Katalon Studio\Luma\Reports\20250919_145754\API_AccessToken\20250919_145754\requests\main\GET_Generic_1.har
+
+19-09-2025T14:58:06 - [MESSAGE][PASSED] - Send request successfully
+
+19-09-2025T14:58:06 - [TEST_STEP][PASSED] - logInfo("Response received with status: " + response.getStatusCode()): Response received with status: 200
+
+19-09-2025T14:58:06 - [MESSAGE][INFO] - Response received with status: 200
+
+19-09-2025T14:58:06 - [TEST_STEP][PASSED] - parsedResponse = JsonSlurper().parseText(response.getResponseBodyContent()): null
+
+19-09-2025T14:58:06 - [TEST_STEP][PASSED] - logInfo("Parsed response: " + parsedResponse.toString()): Parsed response: {id=1, firstName=Emily, lastName=Johnson, maidenName=Smith, age=28, gender=female, email=emily.johnson@x.dummyjson.com, phone=+81 965-431-3024, username=emilys, password=emilyspass, birthDate=1996-5-30, image=https://dummyjson.com/icon/emilys/128, bloodGroup=O-, height=193.24, weight=63.16, eyeColor=Green, hair={color=Brown, type=Curly}, ip=42.48.100.32, address={address=626 Main Street, city=Phoenix, state=Mississippi, stateCode=MS, postalCode=29112, coordinates={lat=-77.16213, lng=-92.084824}, country=United States}, macAddress=47:fa:41:18:ec:eb, university=University of Wisconsin--Madison, bank={cardExpire=03/26, cardNumber=9289760655481815, cardType=Elo, currency=CNY, iban=YPUXISOBI7TTHPK2BR3HAIXL}, company={department=Engineering, name=Dooley, Kozey and Cronin, title=Sales Manager, address={address=263 Tenth Street, city=San Francisco, state=Wisconsin, stateCode=WI, postalCode=37657, coordinates={lat=71.814525, lng=-161.150263}, country=United States}}, ein=977-175, ssn=900-590-289, userAgent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/537.36, crypto={coin=Bitcoin, wallet=0xb9fc2fe63b2a6c003f1c324c3bfa53259162181a, network=Ethereum (ERC20)}, role=admin}
+
+19-09-2025T14:58:06 - [MESSAGE][INFO] - Parsed response: {id=1, firstName=Emily, lastName=Johnson, maidenName=Smith, age=28, gender=female, email=emily.johnson@x.dummyjson.com, phone=+81 965-431-3024, username=emilys, password=emilyspass, birthDate=1996-5-30, image=https://dummyjson.com/icon/emilys/128, bloodGroup=O-, height=193.24, weight=63.16, eyeColor=Green, hair={color=Brown, type=Curly}, ip=42.48.100.32, address={address=626 Main Street, city=Phoenix, state=Mississippi, stateCode=MS, postalCode=29112, coordinates={lat=-77.16213, lng=-92.084824}, country=United States}, macAddress=47:fa:41:18:ec:eb, university=University of Wisconsin--Madison, bank={cardExpire=03/26, cardNumber=9289760655481815, cardType=Elo, currency=CNY, iban=YPUXISOBI7TTHPK2BR3HAIXL}, company={department=Engineering, name=Dooley, Kozey and Cronin, title=Sales Manager, address={address=263 Tenth Street, city=San Francisco, state=Wisconsin, stateCode=WI, postalCode=37657, coordinates={lat=71.814525, lng=-161.150263}, country=United States}}, ein=977-175, ssn=900-590-289, userAgent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/537.36, crypto={coin=Bitcoin, wallet=0xb9fc2fe63b2a6c003f1c324c3bfa53259162181a, network=Ethereum (ERC20)}, role=admin}
+
+19-09-2025T14:58:06 - [TEST_STEP][PASSED] - logInfo("Storing firstName in apiResponse section of JSON file..."): Storing firstName in apiResponse section of JSON file...
+
+19-09-2025T14:58:06 - [MESSAGE][INFO] - Storing firstName in apiResponse section of JSON file...
+
+19-09-2025T14:58:06 - [TEST_STEP][PASSED] - JsonFileReader.appendToJsonSection(jsonFilePath, "apiResonse", "firstName", firstName): null
+
+19-09-2025T14:58:06 - [TEST_STEP][PASSED] - logInfo("firstName stored successfully: " + firstName): firstName stored successfully: Emily
+
+19-09-2025T14:58:06 - [MESSAGE][INFO] - firstName stored successfully: Emily
+
+19-09-2025T14:58:06 - [TEST_STEP][PASSED] - logInfo("Storing full response under userData section..."): Storing full response under userData section...
+
+19-09-2025T14:58:06 - [MESSAGE][INFO] - Storing full response under userData section...
+
+19-09-2025T14:58:06 - [TEST_STEP][PASSED] - JsonFileReader.storeApiResponse("userData", response, jsonFilePath): null
+
+19-09-2025T14:58:06 - [TEST_STEP][PASSED] - logInfo("Full response stored successfully."): Full response stored successfully.
+
+19-09-2025T14:58:06 - [MESSAGE][INFO] - Full response stored successfully.
+
+19-09-2025T14:58:06 - [TEST_STEP][PASSED] - Start listener action : closeTheBrowser: null
+
+19-09-2025T14:58:06 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+19-09-2025T14:58:06 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+19-09-2025T14:58:06 - [TEST_STEP][PASSED] - testCaseStatus = testCaseContext.getTestCaseStatus(): null
+
+19-09-2025T14:58:06 - [TEST_STEP][PASSED] - println(testCaseStatus): null
+
+19-09-2025T14:58:06 - [TEST_STEP][PASSED] - StatusMap = DependencyHandler.getStatusMap(): null
+
+19-09-2025T14:58:06 - [TEST_STEP][PASSED] - if (StatusMap.containsKey(testCaseName)): null
+
+19-09-2025T14:58:06 - [TEST_STEP][PASSED] - try: null
+
+19-09-2025T14:58:06 - [TEST_STEP][PASSED] - driver = getWebDriver(): null
+
+19-09-2025T14:58:06 - [TEST_STEP][PASSED] - catch (Exception e): null
+
+19-09-2025T14:58:06 - [TEST_STEP][PASSED] - println(⚠️ Error while closing browser: $e.message): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/API_Testing/TC05_RefereshAccessToken_Api" time="0.699" classname="Test Cases/API_Testing/TC05_RefereshAccessToken_Api" status="PASSED">
+         <properties>
+            <property name="data_binding"><![CDATA[{"(Default) jsonF...":"Include/Data Files/login_data.json"}]]></property>
+         </properties>
+         <system-out><![CDATA[19-09-2025T14:58:06 - [TEST_CASE][PASSED] - Test Cases/API_Testing/TC05_RefereshAccessToken_Api: Test Cases/API_Testing/TC05_RefereshAccessToken_Api
+
+19-09-2025T14:58:06 - [TEST_STEP][PASSED] - Start listener action : beforeTestCase: null
+
+19-09-2025T14:58:06 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+19-09-2025T14:58:06 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+19-09-2025T14:58:06 - [TEST_STEP][PASSED] - if (toLowerCase().endsWith("api")): null
+
+19-09-2025T14:58:06 - [TEST_STEP][PASSED] - println(ℹ️ Skipping browser launch for API test case: $testCaseName): null
+
+19-09-2025T14:58:06 - [TEST_STEP][PASSED] - return null: null
+
+19-09-2025T14:58:06 - [TEST_STEP][PASSED] - logInfo("Preparing headers for refresh token request..."): Preparing headers for refresh token request...
+
+19-09-2025T14:58:06 - [MESSAGE][INFO] - Preparing headers for refresh token request...
+
+19-09-2025T14:58:06 - [TEST_STEP][PASSED] - headers = ["Content-Type":"application/json"]: null
+
+19-09-2025T14:58:06 - [TEST_STEP][PASSED] - logInfo("Reading refresh payload from JSON file..."): Reading refresh payload from JSON file...
+
+19-09-2025T14:58:06 - [MESSAGE][INFO] - Reading refresh payload from JSON file...
+
+19-09-2025T14:58:06 - [TEST_STEP][PASSED] - payLoad = JsonOutput.toJson(JsonFileReader.getSectionData("refreshData", jsonFilePath)): null
+
+19-09-2025T14:58:06 - [TEST_STEP][PASSED] - logInfo("Payload prepared: " + payLoad): Payload prepared: {"refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3NTgxODg0NDksImV4cCI6MTc1ODE5MDI0OX0.DLmFfVhjYw1LLvTslkDHBCohcrM2O9LF2ujqAWm36EQ","expiresInMins":30}
+
+19-09-2025T14:58:06 - [MESSAGE][INFO] - Payload prepared: {"refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3NTgxODg0NDksImV4cCI6MTc1ODE5MDI0OX0.DLmFfVhjYw1LLvTslkDHBCohcrM2O9LF2ujqAWm36EQ","expiresInMins":30}
+
+19-09-2025T14:58:06 - [TEST_STEP][PASSED] - logInfo("Sending POST request to /refresh endpoint..."): Sending POST request to /refresh endpoint...
+
+19-09-2025T14:58:06 - [MESSAGE][INFO] - Sending POST request to /refresh endpoint...
+
+19-09-2025T14:58:06 - [TEST_STEP][PASSED] - refreshResponse = ApiKeywords.sendPost("refresh", payLoad, headers): Send request successfully
+
+19-09-2025T14:58:07 - [MESSAGE][INFO] - HAR: C:\Users\10835442\Katalon Studio\Luma\Reports\20250919_145754\API_AccessToken\20250919_145754\requests\main\POST_Generic_2.har
+
+19-09-2025T14:58:07 - [MESSAGE][PASSED] - Send request successfully
+
+19-09-2025T14:58:07 - [TEST_STEP][PASSED] - logInfo("Response received with status: " + refreshResponse.getStatusCode()): Response received with status: 403
+
+19-09-2025T14:58:07 - [MESSAGE][INFO] - Response received with status: 403
+
+19-09-2025T14:58:07 - [TEST_STEP][PASSED] - parsedResponse = JsonSlurper().parseText(refreshResponse.getResponseBodyContent()): null
+
+19-09-2025T14:58:07 - [TEST_STEP][PASSED] - logInfo("Parsed response: " + parsedResponse.toString()): Parsed response: {message=Invalid refresh token}
+
+19-09-2025T14:58:07 - [MESSAGE][INFO] - Parsed response: {message=Invalid refresh token}
+
+19-09-2025T14:58:07 - [TEST_STEP][PASSED] - jwtToken = accessToken: null
+
+19-09-2025T14:58:07 - [TEST_STEP][PASSED] - logInfo("Extracted new JWT Token: " + jwtToken): Extracted new JWT Token: null
+
+19-09-2025T14:58:07 - [MESSAGE][INFO] - Extracted new JWT Token: null
+
+19-09-2025T14:58:07 - [TEST_STEP][PASSED] - logInfo("Storing new JWT token in DummyJson section of JSON file..."): Storing new JWT token in DummyJson section of JSON file...
+
+19-09-2025T14:58:07 - [MESSAGE][INFO] - Storing new JWT token in DummyJson section of JSON file...
+
+19-09-2025T14:58:07 - [TEST_STEP][PASSED] - JsonFileReader.appendToJsonSection(jsonFilePath, "DummyJson", "accessToken", jwtToken): null
+
+19-09-2025T14:58:07 - [TEST_STEP][PASSED] - logInfo("Token stored successfully."): Token stored successfully.
+
+19-09-2025T14:58:07 - [MESSAGE][INFO] - Token stored successfully.
+
+19-09-2025T14:58:07 - [TEST_STEP][PASSED] - Start listener action : closeTheBrowser: null
+
+19-09-2025T14:58:07 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+19-09-2025T14:58:07 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+19-09-2025T14:58:07 - [TEST_STEP][PASSED] - testCaseStatus = testCaseContext.getTestCaseStatus(): null
+
+19-09-2025T14:58:07 - [TEST_STEP][PASSED] - println(testCaseStatus): null
+
+19-09-2025T14:58:07 - [TEST_STEP][PASSED] - StatusMap = DependencyHandler.getStatusMap(): null
+
+19-09-2025T14:58:07 - [TEST_STEP][PASSED] - if (StatusMap.containsKey(testCaseName)): null
+
+19-09-2025T14:58:07 - [TEST_STEP][PASSED] - try: null
+
+19-09-2025T14:58:07 - [TEST_STEP][PASSED] - driver = getWebDriver(): null
+
+19-09-2025T14:58:07 - [TEST_STEP][PASSED] - catch (Exception e): null
+
+19-09-2025T14:58:07 - [TEST_STEP][PASSED] - println(⚠️ Error while closing browser: $e.message): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/API_Testing/TC07_currentUserDetail_negative_Api" time="0.585" classname="Test Cases/API_Testing/TC07_currentUserDetail_negative_Api" status="PASSED">
+         <properties>
+            <property name="data_binding"><![CDATA[{"(Default) jsonF...":"Include/Data Files/login_data.json"}]]></property>
+         </properties>
+         <system-out><![CDATA[19-09-2025T14:58:07 - [TEST_CASE][PASSED] - Test Cases/API_Testing/TC07_currentUserDetail_negative_Api: Test Cases/API_Testing/TC07_currentUserDetail_negative_Api
+
+19-09-2025T14:58:07 - [TEST_STEP][PASSED] - Start listener action : beforeTestCase: null
+
+19-09-2025T14:58:07 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+19-09-2025T14:58:07 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+19-09-2025T14:58:07 - [TEST_STEP][PASSED] - if (toLowerCase().endsWith("api")): null
+
+19-09-2025T14:58:07 - [TEST_STEP][PASSED] - println(ℹ️ Skipping browser launch for API test case: $testCaseName): null
+
+19-09-2025T14:58:07 - [TEST_STEP][PASSED] - return null: null
+
+19-09-2025T14:58:07 - [TEST_STEP][PASSED] - logInfo("Reading access token from JSON file..."): Reading access token from JSON file...
+
+19-09-2025T14:58:07 - [MESSAGE][INFO] - Reading access token from JSON file...
+
+19-09-2025T14:58:07 - [TEST_STEP][PASSED] - accessToken = JsonFileReader.getJsonData("DummyJson", "invalidToken", jsonFilePath): null
+
+19-09-2025T14:58:07 - [TEST_STEP][PASSED] - logInfo("Access token retrieved: " + accessToken): Access token retrieved: qwertyuiosdfghjklzxcvbnm
+
+19-09-2025T14:58:07 - [MESSAGE][INFO] - Access token retrieved: qwertyuiosdfghjklzxcvbnm
+
+19-09-2025T14:58:07 - [TEST_STEP][PASSED] - headers = ["Authorization":accessToken, "Content-Type":"application/json"]: null
+
+19-09-2025T14:58:07 - [TEST_STEP][PASSED] - logInfo("Headers prepared: " + headers.toString()): Headers prepared: [Authorization:qwertyuiosdfghjklzxcvbnm, Content-Type:application/json]
+
+19-09-2025T14:58:07 - [MESSAGE][INFO] - Headers prepared: [Authorization:qwertyuiosdfghjklzxcvbnm, Content-Type:application/json]
+
+19-09-2025T14:58:07 - [TEST_STEP][PASSED] - logInfo("Sending GET request to /me endpoint..."): Sending GET request to /me endpoint...
+
+19-09-2025T14:58:07 - [MESSAGE][INFO] - Sending GET request to /me endpoint...
+
+19-09-2025T14:58:07 - [TEST_STEP][PASSED] - response = ApiKeywords.sendGet("me", headers): Send request successfully
+
+19-09-2025T14:58:07 - [MESSAGE][INFO] - HAR: C:\Users\10835442\Katalon Studio\Luma\Reports\20250919_145754\API_AccessToken\20250919_145754\requests\main\GET_Generic_3.har
+
+19-09-2025T14:58:07 - [MESSAGE][PASSED] - Send request successfully
+
+19-09-2025T14:58:07 - [TEST_STEP][PASSED] - logInfo("Response received with status: " + response.getStatusCode()): Response received with status: 401
+
+19-09-2025T14:58:07 - [MESSAGE][INFO] - Response received with status: 401
+
+19-09-2025T14:58:07 - [TEST_STEP][PASSED] - if (response.getStatusCode() == 200): null
+
+19-09-2025T14:58:07 - [TEST_STEP][PASSED] - Start listener action : closeTheBrowser: null
+
+19-09-2025T14:58:07 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+19-09-2025T14:58:07 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+19-09-2025T14:58:07 - [TEST_STEP][PASSED] - testCaseStatus = testCaseContext.getTestCaseStatus(): null
+
+19-09-2025T14:58:07 - [TEST_STEP][PASSED] - println(testCaseStatus): null
+
+19-09-2025T14:58:07 - [TEST_STEP][PASSED] - StatusMap = DependencyHandler.getStatusMap(): null
+
+19-09-2025T14:58:07 - [TEST_STEP][PASSED] - if (StatusMap.containsKey(testCaseName)): null
+
+19-09-2025T14:58:07 - [TEST_STEP][PASSED] - try: null
+
+19-09-2025T14:58:07 - [TEST_STEP][PASSED] - driver = getWebDriver(): null
+
+19-09-2025T14:58:07 - [TEST_STEP][PASSED] - catch (Exception e): null
+
+19-09-2025T14:58:07 - [TEST_STEP][PASSED] - println(⚠️ Error while closing browser: $e.message): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[19-09-2025T14:58:00 - [TEST_SUITE][PASSED] - API_AccessToken: null]]></system-out>
+      <system-err><![CDATA[]]></system-err>
+   </testsuite>
+</testsuites>

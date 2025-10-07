@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="GraphQL_API" time="8.361" tests="5" failures="0" errors="0">
+   <testsuite name="GraphQL_API" tests="5" failures="0" errors="0" time="8.361" skipped="0" timestamp="2025-09-25T13:32:00.979Z" hostname="10835442 - 7DS3S93" id="Test Suites/GraphQL_API">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform"/>
+         <property name="logFolder" value="C:\\Users\\10835442\\Katalon Studio\\Luma\\Reports\\20250925_190155\\GraphQL_API\\20250925_190156"/>
+         <property name="logFiles" value="C:\\Users\\10835442\\Katalon Studio\\Luma\\Reports\\20250925_190155\\GraphQL_API\\20250925_190156\\console0.log, C:\\Users\\10835442\\Katalon Studio\\Luma\\Reports\\20250925_190155\\GraphQL_API\\20250925_190156\\execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="userFullName" value="abinesh rajendran"/>
+         <property name="hostName" value="10835442 - 7DS3S93"/>
+         <property name="hostAddress" value="192.168.2.159"/>
+         <property name="projectName" value="Luma"/>
+         <property name="os" value="Windows 11 64bit"/>
+         <property name="katalonVersion" value="10.3.1.0"/>
+      </properties>
+      <testcase name="Test Cases/API_Testing/GraphQL_API_Testing/graphql_Put_api" time="3.765" classname="Test Cases/API_Testing/GraphQL_API_Testing/graphql_Put_api" status="PASSED">
+         <properties>
+            <property name="data_binding"><![CDATA[{"(Default) graph...":"graphQL","(Default) schem...":"Include/Data Files/MasterSchema.json","(Default) apiBa...":"apiBaseUrl"}]]></property>
+         </properties>
+         <system-out><![CDATA[25-09-2025T19:02:01 - [TEST_CASE][PASSED] - Test Cases/API_Testing/GraphQL_API_Testing/graphql_Put_api: Test Cases/API_Testing/GraphQL_API_Testing/graphql_Put_api
+
+25-09-2025T19:02:01 - [TEST_STEP][PASSED] - Start listener action : beforeTestCase: null
+
+25-09-2025T19:02:01 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+25-09-2025T19:02:01 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+25-09-2025T19:02:01 - [TEST_STEP][PASSED] - if (toLowerCase().endsWith("api")): null
+
+25-09-2025T19:02:01 - [TEST_STEP][PASSED] - println(ℹ️ Skipping browser launch for API test case: $testCaseName): null
+
+25-09-2025T19:02:01 - [TEST_STEP][PASSED] - return null: null
+
+25-09-2025T19:02:01 - [TEST_STEP][PASSED] - logInfo("Sending GraphQL mutation to update post with title and body"): Sending GraphQL mutation to update post with title and body
+
+25-09-2025T19:02:01 - [MESSAGE][INFO] - Sending GraphQL mutation to update post with title and body
+
+25-09-2025T19:02:01 - [TEST_STEP][PASSED] - query = "
+mutation UpdatePost($input: UpdatePostInput!, $id: ID!) {
+  updatePost(id: $id, input: $input) {
+    id
+    title
+    body
+  }
+}
+": null
+
+25-09-2025T19:02:01 - [TEST_STEP][PASSED] - variables = ["id":1, "input":["title":"A Very Captivating Post Title", "body":"Some interesting content."]]: null
+
+25-09-2025T19:02:01 - [TEST_STEP][PASSED] - headers = ["Content-Type":"application/json"]: null
+
+25-09-2025T19:02:01 - [TEST_STEP][PASSED] - baseUrl = GlobalAccessor.getProfileVariable(graphQL, apiBaseUrl): null
+
+25-09-2025T19:02:02 - [TEST_STEP][PASSED] - response = ApiKeywords.sendGraphQL(baseUrl, query, variables, headers): Send request successfully
+
+25-09-2025T19:02:04 - [MESSAGE][INFO] - HAR: C:\Users\10835442\Katalon Studio\Luma\Reports\20250925_190155\GraphQL_API\20250925_190156\requests\main\POST_Generic_0.har
+
+25-09-2025T19:02:04 - [MESSAGE][PASSED] - Send request successfully
+
+25-09-2025T19:02:04 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 200): Verify response status code successfully
+
+25-09-2025T19:02:04 - [MESSAGE][PASSED] - Verify response status code successfully
+
+25-09-2025T19:02:04 - [TEST_STEP][PASSED] - logInfo("GraphQL response status code verified as 200"): GraphQL response status code verified as 200
+
+25-09-2025T19:02:04 - [MESSAGE][INFO] - GraphQL response status code verified as 200
+
+25-09-2025T19:02:04 - [TEST_STEP][PASSED] - responseBody = response.getResponseBodyContent(): null
+
+25-09-2025T19:02:04 - [TEST_STEP][PASSED] - json = JsonSlurper().parseText(responseBody): null
+
+25-09-2025T19:02:05 - [TEST_STEP][PASSED] - logInfo(Updated Post ID: $json.data.updatePost.id): Updated Post ID: 1
+
+25-09-2025T19:02:05 - [MESSAGE][INFO] - Updated Post ID: 1
+
+25-09-2025T19:02:05 - [TEST_STEP][PASSED] - logInfo(Updated Post Title: $json.data.updatePost.title): Updated Post Title: A Very Captivating Post Title
+
+25-09-2025T19:02:05 - [MESSAGE][INFO] - Updated Post Title: A Very Captivating Post Title
+
+25-09-2025T19:02:05 - [TEST_STEP][PASSED] - logInfo(Updated Post Body: $json.data.updatePost.body): Updated Post Body: Some interesting content.
+
+25-09-2025T19:02:05 - [MESSAGE][INFO] - Updated Post Body: Some interesting content.
+
+25-09-2025T19:02:05 - [TEST_STEP][PASSED] - validateJsonAgainstSchema(responseBody, JsonOutput.toJson(JsonFileReader.getSectionData("graphQL_Patch", schemaFilePath))): Validate with JSON Schema successfully
+
+25-09-2025T19:02:05 - [MESSAGE][PASSED] - Validate with JSON Schema successfully
+
+25-09-2025T19:02:05 - [TEST_STEP][PASSED] - markPassed("GraphQL updatePost response schema validation passed"): GraphQL updatePost response schema validation passed
+
+25-09-2025T19:02:05 - [MESSAGE][PASSED] - GraphQL updatePost response schema validation passed
+
+25-09-2025T19:02:05 - [TEST_STEP][PASSED] - Start listener action : closeTheBrowser: null
+
+25-09-2025T19:02:05 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+25-09-2025T19:02:05 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+25-09-2025T19:02:05 - [TEST_STEP][PASSED] - testCaseStatus = testCaseContext.getTestCaseStatus(): null
+
+25-09-2025T19:02:05 - [TEST_STEP][PASSED] - println(testCaseStatus): null
+
+25-09-2025T19:02:05 - [TEST_STEP][PASSED] - StatusMap = DependencyHandler.getStatusMap(): null
+
+25-09-2025T19:02:05 - [TEST_STEP][PASSED] - if (StatusMap.containsKey(testCaseName)): null
+
+25-09-2025T19:02:05 - [TEST_STEP][PASSED] - try: null
+
+25-09-2025T19:02:05 - [TEST_STEP][PASSED] - driver = getWebDriver(): null
+
+25-09-2025T19:02:05 - [TEST_STEP][PASSED] - catch (Exception e): null
+
+25-09-2025T19:02:05 - [TEST_STEP][PASSED] - println(⚠️ Error while closing browser: $e.message): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/API_Testing/GraphQL_API_Testing/graphql_Post_api" time="0.677" classname="Test Cases/API_Testing/GraphQL_API_Testing/graphql_Post_api" status="PASSED">
+         <properties>
+            <property name="data_binding"><![CDATA[{"(Default) graph...":"graphQL","(Default) schem...":"Include/Data Files/MasterSchema.json","(Default) apiBa...":"apiBaseUrl"}]]></property>
+         </properties>
+         <system-out><![CDATA[25-09-2025T19:02:05 - [TEST_CASE][PASSED] - Test Cases/API_Testing/GraphQL_API_Testing/graphql_Post_api: Test Cases/API_Testing/GraphQL_API_Testing/graphql_Post_api
+
+25-09-2025T19:02:05 - [TEST_STEP][PASSED] - Start listener action : beforeTestCase: null
+
+25-09-2025T19:02:05 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+25-09-2025T19:02:05 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+25-09-2025T19:02:05 - [TEST_STEP][PASSED] - if (toLowerCase().endsWith("api")): null
+
+25-09-2025T19:02:05 - [TEST_STEP][PASSED] - println(ℹ️ Skipping browser launch for API test case: $testCaseName): null
+
+25-09-2025T19:02:05 - [TEST_STEP][PASSED] - return null: null
+
+25-09-2025T19:02:05 - [TEST_STEP][PASSED] - logInfo("Sending GraphQL mutation to create a new post"): Sending GraphQL mutation to create a new post
+
+25-09-2025T19:02:05 - [MESSAGE][INFO] - Sending GraphQL mutation to create a new post
+
+25-09-2025T19:02:05 - [TEST_STEP][PASSED] - query = "
+mutation CreatePost($input: CreatePostInput!) {
+  createPost(input: $input) {
+    id
+    title
+    body
+  }
+}
+": null
+
+25-09-2025T19:02:05 - [TEST_STEP][PASSED] - variables = ["input":["title":"A Very Captivating Post Title", "body":"Some interesting content."]]: null
+
+25-09-2025T19:02:05 - [TEST_STEP][PASSED] - headers = ["Content-Type":"application/json"]: null
+
+25-09-2025T19:02:05 - [TEST_STEP][PASSED] - baseUrl = GlobalAccessor.getProfileVariable(graphQL, apiBaseUrl): null
+
+25-09-2025T19:02:05 - [TEST_STEP][PASSED] - response = ApiKeywords.sendGraphQL(baseUrl, query, variables, headers): Send request successfully
+
+25-09-2025T19:02:05 - [MESSAGE][INFO] - HAR: C:\Users\10835442\Katalon Studio\Luma\Reports\20250925_190155\GraphQL_API\20250925_190156\requests\main\POST_Generic_1.har
+
+25-09-2025T19:02:05 - [MESSAGE][PASSED] - Send request successfully
+
+25-09-2025T19:02:05 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 200): Verify response status code successfully
+
+25-09-2025T19:02:05 - [MESSAGE][PASSED] - Verify response status code successfully
+
+25-09-2025T19:02:05 - [TEST_STEP][PASSED] - logInfo("GraphQL response status code verified as 200"): GraphQL response status code verified as 200
+
+25-09-2025T19:02:05 - [MESSAGE][INFO] - GraphQL response status code verified as 200
+
+25-09-2025T19:02:05 - [TEST_STEP][PASSED] - responseBody = response.getResponseBodyContent(): null
+
+25-09-2025T19:02:05 - [TEST_STEP][PASSED] - json = JsonSlurper().parseText(responseBody): null
+
+25-09-2025T19:02:05 - [TEST_STEP][PASSED] - logInfo(Created Post ID: $json.data.createPost.id): Created Post ID: 101
+
+25-09-2025T19:02:05 - [MESSAGE][INFO] - Created Post ID: 101
+
+25-09-2025T19:02:05 - [TEST_STEP][PASSED] - logInfo(Created Post Title: $json.data.createPost.title): Created Post Title: A Very Captivating Post Title
+
+25-09-2025T19:02:05 - [MESSAGE][INFO] - Created Post Title: A Very Captivating Post Title
+
+25-09-2025T19:02:05 - [TEST_STEP][PASSED] - validateJsonAgainstSchema(responseBody, JsonOutput.toJson(JsonFileReader.getSectionData("graphQL_Post", schemaFilePath))): Validate with JSON Schema successfully
+
+25-09-2025T19:02:05 - [MESSAGE][PASSED] - Validate with JSON Schema successfully
+
+25-09-2025T19:02:05 - [TEST_STEP][PASSED] - markPassed("GraphQL createPost response schema validation passed"): GraphQL createPost response schema validation passed
+
+25-09-2025T19:02:05 - [MESSAGE][PASSED] - GraphQL createPost response schema validation passed
+
+25-09-2025T19:02:05 - [TEST_STEP][PASSED] - Start listener action : closeTheBrowser: null
+
+25-09-2025T19:02:05 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+25-09-2025T19:02:05 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+25-09-2025T19:02:05 - [TEST_STEP][PASSED] - testCaseStatus = testCaseContext.getTestCaseStatus(): null
+
+25-09-2025T19:02:05 - [TEST_STEP][PASSED] - println(testCaseStatus): null
+
+25-09-2025T19:02:05 - [TEST_STEP][PASSED] - StatusMap = DependencyHandler.getStatusMap(): null
+
+25-09-2025T19:02:05 - [TEST_STEP][PASSED] - if (StatusMap.containsKey(testCaseName)): null
+
+25-09-2025T19:02:05 - [TEST_STEP][PASSED] - try: null
+
+25-09-2025T19:02:05 - [TEST_STEP][PASSED] - driver = getWebDriver(): null
+
+25-09-2025T19:02:05 - [TEST_STEP][PASSED] - catch (Exception e): null
+
+25-09-2025T19:02:05 - [TEST_STEP][PASSED] - println(⚠️ Error while closing browser: $e.message): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/API_Testing/GraphQL_API_Testing/graphql_Patch_api" time="1.373" classname="Test Cases/API_Testing/GraphQL_API_Testing/graphql_Patch_api" status="PASSED">
+         <properties>
+            <property name="data_binding"><![CDATA[{"(Default) graph...":"graphQL","(Default) schem...":"Include/Data Files/MasterSchema.json","(Default) apiBa...":"apiBaseUrl"}]]></property>
+         </properties>
+         <system-out><![CDATA[25-09-2025T19:02:05 - [TEST_CASE][PASSED] - Test Cases/API_Testing/GraphQL_API_Testing/graphql_Patch_api: Test Cases/API_Testing/GraphQL_API_Testing/graphql_Patch_api
+
+25-09-2025T19:02:05 - [TEST_STEP][PASSED] - Start listener action : beforeTestCase: null
+
+25-09-2025T19:02:05 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+25-09-2025T19:02:05 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+25-09-2025T19:02:05 - [TEST_STEP][PASSED] - if (toLowerCase().endsWith("api")): null
+
+25-09-2025T19:02:05 - [TEST_STEP][PASSED] - println(ℹ️ Skipping browser launch for API test case: $testCaseName): null
+
+25-09-2025T19:02:05 - [TEST_STEP][PASSED] - return null: null
+
+25-09-2025T19:02:06 - [TEST_STEP][PASSED] - logInfo("Sending GraphQL mutation to update post"): Sending GraphQL mutation to update post
+
+25-09-2025T19:02:06 - [MESSAGE][INFO] - Sending GraphQL mutation to update post
+
+25-09-2025T19:02:06 - [TEST_STEP][PASSED] - query = "
+mutation UpdatePost($input: UpdatePostInput!, $id: ID!) {
+  updatePost(id: $id, input: $input) {
+    id
+    title
+  }
+}
+": null
+
+25-09-2025T19:02:06 - [TEST_STEP][PASSED] - variables = ["id":1, "input":["title":"Patch modified title"]]: null
+
+25-09-2025T19:02:06 - [TEST_STEP][PASSED] - headers = ["Content-Type":"application/json"]: null
+
+25-09-2025T19:02:06 - [TEST_STEP][PASSED] - baseUrl = GlobalAccessor.getProfileVariable(graphQL, apiBaseUrl): null
+
+25-09-2025T19:02:06 - [TEST_STEP][PASSED] - response = ApiKeywords.sendGraphQL(baseUrl, query, variables, headers): Send request successfully
+
+25-09-2025T19:02:07 - [MESSAGE][INFO] - HAR: C:\Users\10835442\Katalon Studio\Luma\Reports\20250925_190155\GraphQL_API\20250925_190156\requests\main\POST_Generic_2.har
+
+25-09-2025T19:02:07 - [MESSAGE][PASSED] - Send request successfully
+
+25-09-2025T19:02:07 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 200): Verify response status code successfully
+
+25-09-2025T19:02:07 - [MESSAGE][PASSED] - Verify response status code successfully
+
+25-09-2025T19:02:07 - [TEST_STEP][PASSED] - logInfo("GraphQL response status code verified as 200"): GraphQL response status code verified as 200
+
+25-09-2025T19:02:07 - [MESSAGE][INFO] - GraphQL response status code verified as 200
+
+25-09-2025T19:02:07 - [TEST_STEP][PASSED] - responseBody = response.getResponseBodyContent(): null
+
+25-09-2025T19:02:07 - [TEST_STEP][PASSED] - json = JsonSlurper().parseText(responseBody): null
+
+25-09-2025T19:02:07 - [TEST_STEP][PASSED] - logInfo(Updated Post ID: $json.data.updatePost.id): Updated Post ID: 1
+
+25-09-2025T19:02:07 - [MESSAGE][INFO] - Updated Post ID: 1
+
+25-09-2025T19:02:07 - [TEST_STEP][PASSED] - logInfo(Updated Post Title: $json.data.updatePost.title): Updated Post Title: Patch modified title
+
+25-09-2025T19:02:07 - [MESSAGE][INFO] - Updated Post Title: Patch modified title
+
+25-09-2025T19:02:07 - [TEST_STEP][PASSED] - validateJsonAgainstSchema(responseBody, JsonOutput.toJson(JsonFileReader.getSectionData("graphQL_Patch", schemaFilePath))): Validate with JSON Schema successfully
+
+25-09-2025T19:02:07 - [MESSAGE][PASSED] - Validate with JSON Schema successfully
+
+25-09-2025T19:02:07 - [TEST_STEP][PASSED] - markPassed("GraphQL updatePost response schema validation passed"): GraphQL updatePost response schema validation passed
+
+25-09-2025T19:02:07 - [MESSAGE][PASSED] - GraphQL updatePost response schema validation passed
+
+25-09-2025T19:02:07 - [TEST_STEP][PASSED] - Start listener action : closeTheBrowser: null
+
+25-09-2025T19:02:07 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+25-09-2025T19:02:07 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+25-09-2025T19:02:07 - [TEST_STEP][PASSED] - testCaseStatus = testCaseContext.getTestCaseStatus(): null
+
+25-09-2025T19:02:07 - [TEST_STEP][PASSED] - println(testCaseStatus): null
+
+25-09-2025T19:02:07 - [TEST_STEP][PASSED] - StatusMap = DependencyHandler.getStatusMap(): null
+
+25-09-2025T19:02:07 - [TEST_STEP][PASSED] - if (StatusMap.containsKey(testCaseName)): null
+
+25-09-2025T19:02:07 - [TEST_STEP][PASSED] - try: null
+
+25-09-2025T19:02:07 - [TEST_STEP][PASSED] - driver = getWebDriver(): null
+
+25-09-2025T19:02:07 - [TEST_STEP][PASSED] - catch (Exception e): null
+
+25-09-2025T19:02:07 - [TEST_STEP][PASSED] - println(⚠️ Error while closing browser: $e.message): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/API_Testing/GraphQL_API_Testing/graphql_Get_api" time="1.469" classname="Test Cases/API_Testing/GraphQL_API_Testing/graphql_Get_api" status="PASSED">
+         <properties>
+            <property name="data_binding"><![CDATA[{"(Default) graph...":"graphQL","(Default) schem...":"Include/Data Files/MasterSchema.json","(Default) apiBa...":"apiBaseUrl"}]]></property>
+         </properties>
+         <system-out><![CDATA[25-09-2025T19:02:07 - [TEST_CASE][PASSED] - Test Cases/API_Testing/GraphQL_API_Testing/graphql_Get_api: Test Cases/API_Testing/GraphQL_API_Testing/graphql_Get_api
+
+25-09-2025T19:02:07 - [TEST_STEP][PASSED] - Start listener action : beforeTestCase: null
+
+25-09-2025T19:02:07 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+25-09-2025T19:02:07 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+25-09-2025T19:02:07 - [TEST_STEP][PASSED] - if (toLowerCase().endsWith("api")): null
+
+25-09-2025T19:02:07 - [TEST_STEP][PASSED] - println(ℹ️ Skipping browser launch for API test case: $testCaseName): null
+
+25-09-2025T19:02:07 - [TEST_STEP][PASSED] - return null: null
+
+25-09-2025T19:02:07 - [TEST_STEP][PASSED] - logInfo("Sending GraphQL query to fetch post by ID"): Sending GraphQL query to fetch post by ID
+
+25-09-2025T19:02:07 - [MESSAGE][INFO] - Sending GraphQL query to fetch post by ID
+
+25-09-2025T19:02:07 - [TEST_STEP][PASSED] - query = "
+query GetPost($id: ID!) {
+  post(id: $id) {
+    id
+    title
+    body
+  }
+}
+": null
+
+25-09-2025T19:02:07 - [TEST_STEP][PASSED] - variables = ["id":1]: null
+
+25-09-2025T19:02:07 - [TEST_STEP][PASSED] - headers = ["Content-Type":"application/json"]: null
+
+25-09-2025T19:02:07 - [TEST_STEP][PASSED] - baseUrl = GlobalAccessor.getProfileVariable(graphQL, apiBaseUrl): null
+
+25-09-2025T19:02:07 - [TEST_STEP][PASSED] - response = ApiKeywords.sendGraphQL(baseUrl, query, variables, headers): Send request successfully
+
+25-09-2025T19:02:08 - [MESSAGE][INFO] - HAR: C:\Users\10835442\Katalon Studio\Luma\Reports\20250925_190155\GraphQL_API\20250925_190156\requests\main\POST_Generic_3.har
+
+25-09-2025T19:02:08 - [MESSAGE][PASSED] - Send request successfully
+
+25-09-2025T19:02:08 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 200): Verify response status code successfully
+
+25-09-2025T19:02:08 - [MESSAGE][PASSED] - Verify response status code successfully
+
+25-09-2025T19:02:08 - [TEST_STEP][PASSED] - logInfo("GraphQL response status code verified as 200"): GraphQL response status code verified as 200
+
+25-09-2025T19:02:08 - [MESSAGE][INFO] - GraphQL response status code verified as 200
+
+25-09-2025T19:02:08 - [TEST_STEP][PASSED] - responseBody = response.getResponseBodyContent(): null
+
+25-09-2025T19:02:08 - [TEST_STEP][PASSED] - json = JsonSlurper().parseText(responseBody): null
+
+25-09-2025T19:02:08 - [TEST_STEP][PASSED] - println(JsonOutput.prettyPrint(JsonOutput.toJson(json))): null
+
+25-09-2025T19:02:08 - [TEST_STEP][PASSED] - logInfo(Post ID: $json.data.post.id): Post ID: 1
+
+25-09-2025T19:02:08 - [MESSAGE][INFO] - Post ID: 1
+
+25-09-2025T19:02:08 - [TEST_STEP][PASSED] - logInfo(Post Title: $json.data.post.title): Post Title: sunt aut facere repellat provident occaecati excepturi optio reprehenderit
+
+25-09-2025T19:02:08 - [MESSAGE][INFO] - Post Title: sunt aut facere repellat provident occaecati excepturi optio reprehenderit
+
+25-09-2025T19:02:08 - [TEST_STEP][PASSED] - validateJsonAgainstSchema(responseBody, JsonOutput.toJson(JsonFileReader.getSectionData("graphQL_GET", schemaFilePath))): Validate with JSON Schema successfully
+
+25-09-2025T19:02:08 - [MESSAGE][PASSED] - Validate with JSON Schema successfully
+
+25-09-2025T19:02:08 - [TEST_STEP][PASSED] - markPassed("GraphQL response schema validation passed"): GraphQL response schema validation passed
+
+25-09-2025T19:02:08 - [MESSAGE][PASSED] - GraphQL response schema validation passed
+
+25-09-2025T19:02:08 - [TEST_STEP][PASSED] - Start listener action : closeTheBrowser: null
+
+25-09-2025T19:02:08 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+25-09-2025T19:02:08 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+25-09-2025T19:02:08 - [TEST_STEP][PASSED] - testCaseStatus = testCaseContext.getTestCaseStatus(): null
+
+25-09-2025T19:02:08 - [TEST_STEP][PASSED] - println(testCaseStatus): null
+
+25-09-2025T19:02:08 - [TEST_STEP][PASSED] - StatusMap = DependencyHandler.getStatusMap(): null
+
+25-09-2025T19:02:08 - [TEST_STEP][PASSED] - if (StatusMap.containsKey(testCaseName)): null
+
+25-09-2025T19:02:08 - [TEST_STEP][PASSED] - try: null
+
+25-09-2025T19:02:08 - [TEST_STEP][PASSED] - driver = getWebDriver(): null
+
+25-09-2025T19:02:08 - [TEST_STEP][PASSED] - catch (Exception e): null
+
+25-09-2025T19:02:08 - [TEST_STEP][PASSED] - println(⚠️ Error while closing browser: $e.message): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/API_Testing/GraphQL_API_Testing/graphql_Delete_api" time="0.53" classname="Test Cases/API_Testing/GraphQL_API_Testing/graphql_Delete_api" status="PASSED">
+         <properties>
+            <property name="data_binding"><![CDATA[{"(Default) graph...":"graphQL","(Default) apiBa...":"apiBaseUrl"}]]></property>
+         </properties>
+         <system-out><![CDATA[25-09-2025T19:02:08 - [TEST_CASE][PASSED] - Test Cases/API_Testing/GraphQL_API_Testing/graphql_Delete_api: Test Cases/API_Testing/GraphQL_API_Testing/graphql_Delete_api
+
+25-09-2025T19:02:08 - [TEST_STEP][PASSED] - Start listener action : beforeTestCase: null
+
+25-09-2025T19:02:08 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+25-09-2025T19:02:08 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+25-09-2025T19:02:08 - [TEST_STEP][PASSED] - if (toLowerCase().endsWith("api")): null
+
+25-09-2025T19:02:08 - [TEST_STEP][PASSED] - println(ℹ️ Skipping browser launch for API test case: $testCaseName): null
+
+25-09-2025T19:02:08 - [TEST_STEP][PASSED] - return null: null
+
+25-09-2025T19:02:08 - [TEST_STEP][PASSED] - logInfo("Sending GraphQL mutation to delete post by ID"): Sending GraphQL mutation to delete post by ID
+
+25-09-2025T19:02:08 - [MESSAGE][INFO] - Sending GraphQL mutation to delete post by ID
+
+25-09-2025T19:02:08 - [TEST_STEP][PASSED] - query = "
+mutation DeletePost($id: ID!) {
+  deletePost(id: $id)
+}
+": null
+
+25-09-2025T19:02:08 - [TEST_STEP][PASSED] - variables = ["id":1]: null
+
+25-09-2025T19:02:08 - [TEST_STEP][PASSED] - headers = ["Content-Type":"application/json"]: null
+
+25-09-2025T19:02:08 - [TEST_STEP][PASSED] - baseUrl = GlobalAccessor.getProfileVariable(graphQL, apiBaseUrl): null
+
+25-09-2025T19:02:08 - [TEST_STEP][PASSED] - response = ApiKeywords.sendGraphQL(baseUrl, query, variables, headers): Send request successfully
+
+25-09-2025T19:02:09 - [MESSAGE][INFO] - HAR: C:\Users\10835442\Katalon Studio\Luma\Reports\20250925_190155\GraphQL_API\20250925_190156\requests\main\POST_Generic_4.har
+
+25-09-2025T19:02:09 - [MESSAGE][PASSED] - Send request successfully
+
+25-09-2025T19:02:09 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 200): Verify response status code successfully
+
+25-09-2025T19:02:09 - [MESSAGE][PASSED] - Verify response status code successfully
+
+25-09-2025T19:02:09 - [TEST_STEP][PASSED] - logInfo("GraphQL response status code verified as 200"): GraphQL response status code verified as 200
+
+25-09-2025T19:02:09 - [MESSAGE][INFO] - GraphQL response status code verified as 200
+
+25-09-2025T19:02:09 - [TEST_STEP][PASSED] - Start listener action : closeTheBrowser: null
+
+25-09-2025T19:02:09 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+25-09-2025T19:02:09 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+25-09-2025T19:02:09 - [TEST_STEP][PASSED] - testCaseStatus = testCaseContext.getTestCaseStatus(): null
+
+25-09-2025T19:02:09 - [TEST_STEP][PASSED] - println(testCaseStatus): null
+
+25-09-2025T19:02:09 - [TEST_STEP][PASSED] - StatusMap = DependencyHandler.getStatusMap(): null
+
+25-09-2025T19:02:09 - [TEST_STEP][PASSED] - if (StatusMap.containsKey(testCaseName)): null
+
+25-09-2025T19:02:09 - [TEST_STEP][PASSED] - try: null
+
+25-09-2025T19:02:09 - [TEST_STEP][PASSED] - driver = getWebDriver(): null
+
+25-09-2025T19:02:09 - [TEST_STEP][PASSED] - catch (Exception e): null
+
+25-09-2025T19:02:09 - [TEST_STEP][PASSED] - println(⚠️ Error while closing browser: $e.message): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[25-09-2025T19:02:00 - [TEST_SUITE][PASSED] - GraphQL_API: null]]></system-out>
+      <system-err><![CDATA[]]></system-err>
+   </testsuite>
+</testsuites>

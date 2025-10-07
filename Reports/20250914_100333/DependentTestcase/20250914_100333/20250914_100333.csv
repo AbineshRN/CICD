@@ -1,0 +1,15 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+DependentTestcase,Chrome 140.0.7339.128,,,14-09-2025 10:03:39,14-09-2025 10:04:10,31.261s,FAILED
+,,,,,,,
+Test Cases/TC_SignIn,Chrome 140.0.7339.128,,,14-09-2025 10:03:40,14-09-2025 10:04:10,29.859s,FAILED
+"DATA BINDING - {""(Default) secti..."":""loginPage"",""(Default) filep..."":""Include/Data Files/login_data.json""}",,,,,,,
+Start listener action : beforeTestCase,Chrome 140.0.7339.128,,,14-09-2025 10:03:40,14-09-2025 10:03:53,13.371s,PASSED
+try,Chrome 140.0.7339.128,,,14-09-2025 10:03:54,14-09-2025 10:04:08,13.799s,FAILED
+catch (Exception e),Chrome 140.0.7339.128,,,14-09-2025 10:04:08,14-09-2025 10:04:08,0.606s,PASSED
+Finally,Chrome 140.0.7339.128,,,14-09-2025 10:04:08,14-09-2025 10:04:09,0.755s,PASSED
+Start listener action : closeTheBrowser,Chrome 140.0.7339.128,,,14-09-2025 10:04:09,14-09-2025 10:04:10,0.629s,PASSED
+,,,,,,,
+Test Cases/TC_ChangePassword,Chrome 140.0.7339.128,This testcase checks the change password functionality.,,14-09-2025 10:04:10,14-09-2025 10:04:10,0.289s,SKIPPED
+"DATA BINDING - {""(Default) secti..."":""changePasswordPage"",""(Default) filep..."":""Include/Data Files/login_data.json""}",,,,,,,
+Start listener action : beforeTestCase,Chrome 140.0.7339.128,,,14-09-2025 10:04:10,14-09-2025 10:04:10,0.145s,PASSED
+Start listener action : closeTheBrowser,Chrome 140.0.7339.128,,,14-09-2025 10:04:10,14-09-2025 10:04:10,0.041s,PASSED

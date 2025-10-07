@@ -1,0 +1,32 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+DependentTestcase,Chrome 140.0.7339.128,,,15-09-2025 16:38:40,15-09-2025 16:39:31,51.198s,FAILED
+,,,,,,,
+Test Cases/TC_SignIn,Chrome 140.0.7339.128,,,15-09-2025 16:38:41,15-09-2025 16:39:08,26.807s,FAILED
+"DATA BINDING - {""(Default) secti..."":""loginPage"",""(Default) filep..."":""Include/Data Files/login_data.json""}",,,,,,,
+Start listener action : beforeTestCase,Chrome 140.0.7339.128,,,15-09-2025 16:38:41,15-09-2025 16:38:52,10.717s,PASSED
+try,Chrome 140.0.7339.128,,,15-09-2025 16:38:52,15-09-2025 16:39:06,13.731s,FAILED
+catch (Exception e),Chrome 140.0.7339.128,,,15-09-2025 16:39:06,15-09-2025 16:39:06,0.463s,PASSED
+Finally,Chrome 140.0.7339.128,,,15-09-2025 16:39:06,15-09-2025 16:39:07,0.681s,PASSED
+Start listener action : closeTheBrowser,Chrome 140.0.7339.128,,,15-09-2025 16:39:07,15-09-2025 16:39:08,0.662s,PASSED
+,,,,,,,
+Test Cases/TC_ChangePassword,Chrome 140.0.7339.128,This testcase checks the change password functionality.,,15-09-2025 16:39:08,15-09-2025 16:39:08,0.338s,SKIPPED
+"DATA BINDING - {""(Default) secti..."":""changePasswordPage"",""(Default) filep..."":""Include/Data Files/login_data.json""}",,,,,,,
+Start listener action : beforeTestCase,Chrome 140.0.7339.128,,,15-09-2025 16:39:08,15-09-2025 16:39:08,0.117s,PASSED
+Start listener action : closeTheBrowser,Chrome 140.0.7339.128,,,15-09-2025 16:39:08,15-09-2025 16:39:08,0.097s,PASSED
+,,,,,,,
+Test Cases/TC_AddToCart,Chrome 140.0.7339.128,This testcase checks the functionality of add to cart functionality,,15-09-2025 16:39:08,15-09-2025 16:39:08,0.186s,SKIPPED
+"DATA BINDING - {""(Default) categ..."":"" Components"",""(Default) order..."":""OrderPlacedPage"",""(Default) filep..."":""Include/Data Files/login_data.json"",""(Default) cartP..."":""CartPage""}",,,,,,,
+Start listener action : beforeTestCase,Chrome 140.0.7339.128,,,15-09-2025 16:39:08,15-09-2025 16:39:08,0.031s,PASSED
+Start listener action : closeTheBrowser,Chrome 140.0.7339.128,,,15-09-2025 16:39:08,15-09-2025 16:39:08,0.009s,PASSED
+,,,,,,,
+Test Cases/TC_Blog_PostComment,Chrome 140.0.7339.128,This testcase checks the functionality of posting a comment in blog section,,15-09-2025 16:39:08,15-09-2025 16:39:31,23.168s,PASSED
+"DATA BINDING - {""(Default) secti..."":""ArticlePage"",""(Default) filep..."":""Include/Data Files/login_data.json""}",,,,,,,
+Start listener action : beforeTestCase,Chrome 140.0.7339.128,,,15-09-2025 16:39:08,15-09-2025 16:39:19,10.692s,PASSED
+"ExtentManager.initReport(""BlogCommentReport"")",Chrome 140.0.7339.128,,,15-09-2025 16:39:19,15-09-2025 16:39:19,0.003s,PASSED
+"ExtentManager.createTest(""Post Comment on Blog Article"")",Chrome 140.0.7339.128,,,15-09-2025 16:39:19,15-09-2025 16:39:19,0.003s,PASSED
+try,Chrome 140.0.7339.128,,,15-09-2025 16:39:19,15-09-2025 16:39:22,3.134s,PASSED
+try,Chrome 140.0.7339.128,,,15-09-2025 16:39:22,15-09-2025 16:39:26,3.427s,PASSED
+try,Chrome 140.0.7339.128,,,15-09-2025 16:39:26,15-09-2025 16:39:30,4.412s,PASSED
+try,Chrome 140.0.7339.128,,,15-09-2025 16:39:30,15-09-2025 16:39:31,0.703s,PASSED
+ExtentManager.flushReport(),Chrome 140.0.7339.128,,,15-09-2025 16:39:31,15-09-2025 16:39:31,0.142s,PASSED
+Start listener action : closeTheBrowser,Chrome 140.0.7339.128,,,15-09-2025 16:39:31,15-09-2025 16:39:31,0.375s,PASSED

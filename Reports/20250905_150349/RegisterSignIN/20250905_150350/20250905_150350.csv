@@ -1,0 +1,25 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+RegisterSignIN,Chrome 140.0.7339.81,,,05-09-2025 15:04:01,05-09-2025 15:04:55,54.459s,PASSED
+,,,,,,,
+Test Cases/SignIn,Chrome 140.0.7339.81,,,05-09-2025 15:04:02,05-09-2025 15:04:34,32.133s,PASSED
+"DATA BINDING - {""(Default) secti..."":""loginPage"",""(Default) filep..."":""Include/Data Files/login_data.json""}",,,,,,,
+Start listener action : openTheBrowser,Chrome 140.0.7339.81,,,05-09-2025 15:04:03,05-09-2025 15:04:18,15.696s,PASSED
+"ExtentManager.initReport(""LoginTestReport"")",Chrome 140.0.7339.81,,,05-09-2025 15:04:19,05-09-2025 15:04:21,2.570s,PASSED
+"ExtentManager.createTest(""Login Test"")",Chrome 140.0.7339.81,,,05-09-2025 15:04:21,05-09-2025 15:04:21,0.023s,PASSED
+try,Chrome 140.0.7339.81,,,05-09-2025 15:04:21,05-09-2025 15:04:26,4.665s,PASSED
+try,Chrome 140.0.7339.81,,,05-09-2025 15:04:26,05-09-2025 15:04:32,6.078s,PASSED
+try,Chrome 140.0.7339.81,,,05-09-2025 15:04:32,05-09-2025 15:04:33,0.788s,PASSED
+ExtentManager.flushReport(),Chrome 140.0.7339.81,,,05-09-2025 15:04:33,05-09-2025 15:04:34,0.729s,PASSED
+Start listener action : closeTheBrowser,Chrome 140.0.7339.81,,,05-09-2025 15:04:34,05-09-2025 15:04:34,0.718s,PASSED
+,,,,,,,
+Test Cases/CommentPost,Chrome 140.0.7339.81,This testcase checks the functionality of posting a comment in blog section,,05-09-2025 15:04:34,05-09-2025 15:04:55,20.732s,PASSED
+"DATA BINDING - {""(Default) secti..."":""ArticlePage"",""(Default) filep..."":""Include/Data Files/login_data.json""}",,,,,,,
+Start listener action : openTheBrowser,Chrome 140.0.7339.81,,,05-09-2025 15:04:34,05-09-2025 15:04:43,8.585s,PASSED
+"ExtentManager.initReport(""BlogCommentReport"")",Chrome 140.0.7339.81,,,05-09-2025 15:04:43,05-09-2025 15:04:43,0.009s,PASSED
+"ExtentManager.createTest(""Post Comment on Blog Article"")",Chrome 140.0.7339.81,,,05-09-2025 15:04:43,05-09-2025 15:04:43,0.002s,PASSED
+try,Chrome 140.0.7339.81,,,05-09-2025 15:04:43,05-09-2025 15:04:46,2.744s,PASSED
+try,Chrome 140.0.7339.81,,,05-09-2025 15:04:46,05-09-2025 15:04:50,3.709s,PASSED
+try,Chrome 140.0.7339.81,,,05-09-2025 15:04:50,05-09-2025 15:04:54,4.259s,PASSED
+try,Chrome 140.0.7339.81,,,05-09-2025 15:04:54,05-09-2025 15:04:55,0.610s,PASSED
+ExtentManager.flushReport(),Chrome 140.0.7339.81,,,05-09-2025 15:04:55,05-09-2025 15:04:55,0.151s,PASSED
+Start listener action : closeTheBrowser,Chrome 140.0.7339.81,,,05-09-2025 15:04:55,05-09-2025 15:04:55,0.294s,PASSED

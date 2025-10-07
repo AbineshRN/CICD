@@ -1,0 +1,16 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+DependentTestcase,Chrome 140.0.7339.81,,,10-09-2025 15:06:12,10-09-2025 15:06:57,44.505s,ERROR
+,,,,,,,
+Test Cases/TC_SignIn_Success,Chrome 140.0.7339.81,,,10-09-2025 15:06:13,10-09-2025 15:06:46,32.590s,FAILED
+"DATA BINDING - {""(Default) secti..."":""loginPage"",""(Default) filep..."":""Include/Data Files/login_data.json""}",,,,,,,
+Start listener action : beforeTestCase,Chrome 140.0.7339.81,,,10-09-2025 15:06:13,10-09-2025 15:06:26,12.762s,PASSED
+try,Chrome 140.0.7339.81,,,10-09-2025 15:06:27,10-09-2025 15:06:43,16.656s,FAILED
+catch (Exception e),Chrome 140.0.7339.81,,,10-09-2025 15:06:43,10-09-2025 15:06:44,0.523s,PASSED
+Finally,Chrome 140.0.7339.81,,,10-09-2025 15:06:44,10-09-2025 15:06:45,1.140s,PASSED
+Start listener action : closeTheBrowser,Chrome 140.0.7339.81,,,10-09-2025 15:06:45,10-09-2025 15:06:46,0.604s,PASSED
+,,,,,,,
+Test Cases/TC_ChangePassword_Success,Chrome 140.0.7339.81,This testcase checks the change password functionality.,,10-09-2025 15:06:46,10-09-2025 15:06:57,10.999s,ERROR
+"DATA BINDING - {""(Default) secti..."":""changePasswordPage"",""(Default) filep..."":""Include/Data Files/login_data.json""}",,,,,,,
+Start listener action : beforeTestCase,Chrome 140.0.7339.81,,,10-09-2025 15:06:46,10-09-2025 15:06:56,9.745s,PASSED
+"DependencyHandler.checkDependency(""Sign_In"", ""ChangePassword"")",Chrome 140.0.7339.81,,,10-09-2025 15:06:56,10-09-2025 15:06:56,0.228s,ERROR
+Start listener action : closeTheBrowser,Chrome 140.0.7339.81,,,10-09-2025 15:06:56,10-09-2025 15:06:57,0.416s,PASSED

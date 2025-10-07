@@ -1,0 +1,26 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+TestSuite,Chrome 140.0.7339.81,Contains the test cases of luma,,05-09-2025 15:17:09,05-09-2025 15:18:04,55.125s,PASSED
+,,,,,,,
+Test Cases/RegisterUser,Chrome 140.0.7339.81,,,05-09-2025 15:17:10,05-09-2025 15:17:44,34.086s,PASSED
+"DATA BINDING - {""(Default) filep..."":""Include/Data Files/login_data.json"",""(Default) regis..."":""registrarionSucccessPage""}",,,,,,,
+Start listener action : openTheBrowser,Chrome 140.0.7339.81,,,05-09-2025 15:17:10,05-09-2025 15:17:23,12.477s,PASSED
+"ExtentManager.initReport(""UserRegistrationReport"")",Chrome 140.0.7339.81,,,05-09-2025 15:17:23,05-09-2025 15:17:26,2.241s,PASSED
+"ExtentManager.createTest(""User Registration Test"")",Chrome 140.0.7339.81,,,05-09-2025 15:17:26,05-09-2025 15:17:26,0.014s,PASSED
+try,Chrome 140.0.7339.81,,,05-09-2025 15:17:26,05-09-2025 15:17:30,4.545s,PASSED
+try,Chrome 140.0.7339.81,,,05-09-2025 15:17:30,05-09-2025 15:17:37,6.626s,PASSED
+try,Chrome 140.0.7339.81,,,05-09-2025 15:17:37,05-09-2025 15:17:38,1.538s,PASSED
+try,Chrome 140.0.7339.81,,,05-09-2025 15:17:38,05-09-2025 15:17:42,3.723s,PASSED
+try,Chrome 140.0.7339.81,,,05-09-2025 15:17:42,05-09-2025 15:17:42,0.268s,PASSED
+ExtentManager.flushReport(),Chrome 140.0.7339.81,,,05-09-2025 15:17:42,05-09-2025 15:17:43,0.951s,PASSED
+Start listener action : closeTheBrowser,Chrome 140.0.7339.81,,,05-09-2025 15:17:43,05-09-2025 15:17:44,0.482s,PASSED
+,,,,,,,
+Test Cases/SignIn,Chrome 140.0.7339.81,,,05-09-2025 15:17:44,05-09-2025 15:18:04,19.713s,PASSED
+"DATA BINDING - {""(Default) secti..."":""loginPage"",""(Default) filep..."":""Include/Data Files/login_data.json""}",,,,,,,
+Start listener action : openTheBrowser,Chrome 140.0.7339.81,,,05-09-2025 15:17:44,05-09-2025 15:17:53,9.074s,PASSED
+"ExtentManager.initReport(""LoginTestReport"")",Chrome 140.0.7339.81,,,05-09-2025 15:17:53,05-09-2025 15:17:53,0.008s,PASSED
+"ExtentManager.createTest(""Login Test"")",Chrome 140.0.7339.81,,,05-09-2025 15:17:53,05-09-2025 15:17:53,0.010s,PASSED
+try,Chrome 140.0.7339.81,,,05-09-2025 15:17:53,05-09-2025 15:17:57,3.173s,PASSED
+try,Chrome 140.0.7339.81,,,05-09-2025 15:17:57,05-09-2025 15:18:00,3.063s,PASSED
+try,Chrome 140.0.7339.81,,,05-09-2025 15:18:00,05-09-2025 15:18:03,3.462s,PASSED
+ExtentManager.flushReport(),Chrome 140.0.7339.81,,,05-09-2025 15:18:03,05-09-2025 15:18:03,0.131s,PASSED
+Start listener action : closeTheBrowser,Chrome 140.0.7339.81,,,05-09-2025 15:18:03,05-09-2025 15:18:04,0.332s,PASSED

@@ -1,0 +1,14 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+TestSuite,Chrome 140.0.7339.81,Contains the test cases of luma,,05-09-2025 15:15:59,05-09-2025 15:16:38,39.355s,FAILED
+,,,,,,,
+Test Cases/SignIn,Chrome 140.0.7339.81,,,05-09-2025 15:16:33,05-09-2025 15:16:38,5.010s,FAILED
+"DATA BINDING - {""(Default) secti..."":""loginPage"",""(Default) filep..."":""Include/Data Files/login_data.json""}",,,,,,,
+Start listener action : openTheBrowser,Chrome 140.0.7339.81,,,05-09-2025 15:16:33,05-09-2025 15:16:37,3.751s,ERROR
+"ExtentManager.initReport(""LoginTestReport"")",Chrome 140.0.7339.81,,,05-09-2025 15:16:37,05-09-2025 15:16:37,0.004s,PASSED
+"ExtentManager.createTest(""Login Test"")",Chrome 140.0.7339.81,,,05-09-2025 15:16:37,05-09-2025 15:16:37,0.002s,PASSED
+try,Chrome 140.0.7339.81,,,05-09-2025 15:16:37,05-09-2025 15:16:37,0.130s,PASSED
+try,Chrome 140.0.7339.81,,,05-09-2025 15:16:37,05-09-2025 15:16:38,0.424s,PASSED
+try,Chrome 140.0.7339.81,,,05-09-2025 15:16:38,05-09-2025 15:16:38,0.081s,FAILED
+catch (Exception e),Chrome 140.0.7339.81,,,05-09-2025 15:16:38,05-09-2025 15:16:38,0.049s,PASSED
+ExtentManager.flushReport(),Chrome 140.0.7339.81,,,05-09-2025 15:16:38,05-09-2025 15:16:38,0.206s,PASSED
+Start listener action : closeTheBrowser,Chrome 140.0.7339.81,,,05-09-2025 15:16:38,05-09-2025 15:16:38,0.041s,PASSED

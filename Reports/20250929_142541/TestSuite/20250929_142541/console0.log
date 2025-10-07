@@ -1,0 +1,71 @@
+2025-09-29 14:25:46.328 INFO  c.k.katalon.core.main.TestSuiteExecutor  - START Test Suites/TestSuite
+2025-09-29 14:25:46.463 INFO  c.k.katalon.core.main.TestSuiteExecutor  - userFullName = abinesh rajendran
+2025-09-29 14:25:46.465 INFO  c.k.katalon.core.main.TestSuiteExecutor  - projectName = Luma
+2025-09-29 14:25:46.467 INFO  c.k.katalon.core.main.TestSuiteExecutor  - hostName = 10835442 - 10.235.153.87
+2025-09-29 14:25:46.468 INFO  c.k.katalon.core.main.TestSuiteExecutor  - os = Windows 11 64bit
+2025-09-29 14:25:46.469 INFO  c.k.katalon.core.main.TestSuiteExecutor  - hostAddress = 10.235.153.87
+2025-09-29 14:25:46.470 INFO  c.k.katalon.core.main.TestSuiteExecutor  - katalonVersion = 10.3.1.0
+2025-09-29 14:25:47.439 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-09-29 14:25:47.439 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/API_Testing/REST_API_Testing/TC04_getAccessToken_Api
+2025-09-29 14:25:47.603 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) jsonFilePath = Include/Data Files/login_data.json
+2025-09-29 14:25:47.634 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) masterSchemaFilePath = Include/Data Files/MasterSchema.json
+2025-09-29 14:25:47.662 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) accessToken = accessTokenUrl
+2025-09-29 14:25:47.693 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) apiBaseUrl = apiBaseUrl
+ℹ️ Skipping browser launch for API test case: TC04_getAccessToken_Api
+2025-09-29 14:25:48.139 DEBUG testcase.TC04_getAccessToken_Api         - 1: logInfo("Reading payload from JSON file...")
+2025-09-29 14:25:48.151 INFO  com.kms.katalon.core.util.KeywordUtil    - Reading payload from JSON file...
+2025-09-29 14:25:48.154 DEBUG testcase.TC04_getAccessToken_Api         - 2: payLoad = JsonOutput.toJson(JsonFileReader.getSectionData("postPayload", jsonFilePath))
+2025-09-29 14:25:48.231 DEBUG testcase.TC04_getAccessToken_Api         - 3: logInfo("Payload prepared: " + payLoad)
+2025-09-29 14:25:48.235 INFO  com.kms.katalon.core.util.KeywordUtil    - Payload prepared: {"username":"emilys","password":"emilyspass","expiresInMins":30}
+2025-09-29 14:25:48.237 DEBUG testcase.TC04_getAccessToken_Api         - 4: logInfo("Sending POST request to /login endpoint...")
+2025-09-29 14:25:48.242 INFO  com.kms.katalon.core.util.KeywordUtil    - Sending POST request to /login endpoint...
+2025-09-29 14:25:48.246 DEBUG testcase.TC04_getAccessToken_Api         - 5: baseUrl = GlobalAccessor.getProfileVariable(accsessToken, apiBaseUrl)
+2025-09-29 14:25:48.263 ERROR c.k.katalon.core.main.TestCaseExecutor   - ❌ Test Cases/API_Testing/REST_API_Testing/TC04_getAccessToken_Api FAILED.
+Reason:
+groovy.lang.MissingPropertyException: No such property: accsessToken for class: Script1758781576339
+	at TC04_getAccessToken_Api.run(TC04_getAccessToken_Api:32)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1759136141544.run(TempTestSuite1759136141544.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+2025-09-29 14:25:48.284 ERROR c.k.katalon.core.main.TestCaseExecutor   - ❌ Test Cases/API_Testing/REST_API_Testing/TC04_getAccessToken_Api FAILED.
+Reason:
+groovy.lang.MissingPropertyException: No such property: accsessToken for class: Script1758781576339
+	at TC04_getAccessToken_Api.run(TC04_getAccessToken_Api:32)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1759136141544.run(TempTestSuite1759136141544.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+ERROR
+⚠️ Error while closing browser: Browser is not opened
+Build info: version: '4.28.1', revision: '73f5ad48a2'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: driver.version: unknown
+2025-09-29 14:25:48.586 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/API_Testing/REST_API_Testing/TC04_getAccessToken_Api
+2025-09-29 14:25:48.687 INFO  c.k.katalon.core.main.TestSuiteExecutor  - --------------------
+2025-09-29 14:25:48.688 INFO  c.k.katalon.core.main.TestSuiteExecutor  - END Test Suites/TestSuite
+2025-09-29 14:25:48.688 INFO  c.k.katalon.core.main.TestSuiteExecutor  - ====================

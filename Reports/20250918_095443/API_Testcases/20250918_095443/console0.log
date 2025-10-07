@@ -1,0 +1,351 @@
+2025-09-18 09:54:48.132 INFO  c.k.katalon.core.main.TestSuiteExecutor  - START Test Suites/API_Testcases
+2025-09-18 09:54:48.230 INFO  c.k.katalon.core.main.TestSuiteExecutor  - userFullName = Abinesh R
+2025-09-18 09:54:48.232 INFO  c.k.katalon.core.main.TestSuiteExecutor  - projectName = Luma
+2025-09-18 09:54:48.233 INFO  c.k.katalon.core.main.TestSuiteExecutor  - hostName = 10835442 - 10.235.154.124
+2025-09-18 09:54:48.234 INFO  c.k.katalon.core.main.TestSuiteExecutor  - os = Windows 11 64bit
+2025-09-18 09:54:48.234 INFO  c.k.katalon.core.main.TestSuiteExecutor  - hostAddress = 10.235.154.124
+2025-09-18 09:54:48.235 INFO  c.k.katalon.core.main.TestSuiteExecutor  - katalonVersion = 10.3.1.0
+2025-09-18 09:54:48.863 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-09-18 09:54:48.863 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/JsonPlaceHolder/api_Local_to_Server
+2025-09-18 09:54:48.973 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) filepath = https://68c8e78aceef5a150f629ed5.mockapi.io/sign_in/credentials
+2025-09-18 09:54:49.001 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) postSchemaFilePath = Include/Data Files/post_login_response_schema.json
+2025-09-18 09:54:49.027 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) masterSchemaFilePath = Include/Data Files/MasterSchema.json
+2025-09-18 09:54:49.062 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) systemJsonFilePath = Include/Data Files/login_data.json
+ℹ️ Skipping browser launch for API test case: api_Local_to_Server
+2025-09-18 09:54:49.422 DEBUG testcase.api_Local_to_Server             - 1: logInfo("Sending POST request to /credentials to create new credentials")
+2025-09-18 09:54:49.432 INFO  com.kms.katalon.core.util.KeywordUtil    - Sending POST request to /credentials to create new credentials
+2025-09-18 09:54:49.435 DEBUG testcase.api_Local_to_Server             - 2: postPayload = JsonOutput.toJson(JsonFileReader.getSectionData("loginPage", systemJsonFilePath))
+2025-09-18 09:54:49.511 DEBUG testcase.api_Local_to_Server             - 3: println(postPayload)
+{"email":"alicesmith.38@gmail.com","password":"Password@123","verification_text":"My Acc"}
+2025-09-18 09:54:49.519 DEBUG testcase.api_Local_to_Server             - 4: postResponse = ApiKeywords.sendPost("/credentials", postPayload)
+2025-09-18 09:55:13.051 INFO  c.k.k.core.webservice.common.HarLogger   - HAR: C:\Users\10835442\Katalon Studio\Luma\Reports\20250918_095443\API_Testcases\20250918_095443\requests\main\POST_Generic_0.har
+2025-09-18 09:55:13.136 DEBUG testcase.api_Local_to_Server             - 5: verifyResponseStatusCode(postResponse, 201)
+2025-09-18 09:55:13.163 DEBUG testcase.api_Local_to_Server             - 6: logInfo("POST response status code verified as 201")
+2025-09-18 09:55:13.169 INFO  com.kms.katalon.core.util.KeywordUtil    - POST response status code verified as 201
+2025-09-18 09:55:13.172 DEBUG testcase.api_Local_to_Server             - 7: postResponseBody = postResponse.getResponseBodyContent()
+2025-09-18 09:55:13.183 DEBUG testcase.api_Local_to_Server             - 8: createdCredential = JsonSlurper().parseText(postResponseBody)
+2025-09-18 09:55:13.190 DEBUG testcase.api_Local_to_Server             - 9: credentialId = id
+2025-09-18 09:55:13.196 DEBUG testcase.api_Local_to_Server             - 10: JsonFileReader.appendToJsonSection(systemJsonFilePath, "postData", "CredentialId", credentialId)
+2025-09-18 09:55:13.247 DEBUG testcase.api_Local_to_Server             - 11: logInfo("Created credential ID: " + credentialId)
+2025-09-18 09:55:13.252 INFO  com.kms.katalon.core.util.KeywordUtil    - Created credential ID: 1
+2025-09-18 09:55:13.257 DEBUG testcase.api_Local_to_Server             - 12: validateJsonAgainstSchema(postResponseBody, JsonOutput.toJson(JsonFileReader.getSectionData("postResponse", masterSchemaFilePath)))
+2025-09-18 09:55:13.427 DEBUG testcase.api_Local_to_Server             - 13: markPassed("POST response schema validation passed")
+2025-09-18 09:55:13.431 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ POST response schema validation passed
+PASSED
+⚠️ Error while closing browser: Browser is not opened
+Build info: version: '4.28.1', revision: '73f5ad48a2'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: driver.version: unknown
+2025-09-18 09:55:13.614 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/JsonPlaceHolder/api_Local_to_Server
+2025-09-18 09:55:13.628 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-09-18 09:55:13.628 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/JsonPlaceHolder/api_updatingCred
+2025-09-18 09:55:13.689 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) jsonFilePath = Include/Data Files/login_data.json
+ℹ️ Skipping browser launch for API test case: api_updatingCred
+2025-09-18 09:55:13.856 DEBUG testcase.api_updatingCred                - 1: credentialId = JsonFileReader.getJsonData("postData", "CredentialId", jsonFilePath)
+2025-09-18 09:55:13.863 DEBUG testcase.api_updatingCred                - 2: logInfo("Sending PATCH request to /credentials/" + credentialId + " to update password")
+2025-09-18 09:55:13.867 INFO  com.kms.katalon.core.util.KeywordUtil    - Sending PATCH request to /credentials/1 to update password
+2025-09-18 09:55:13.871 DEBUG testcase.api_updatingCred                - 3: patchPayload = JsonOutput.toJson(["password":"NewPassword@456"])
+2025-09-18 09:55:13.875 DEBUG testcase.api_updatingCred                - 4: patchResponse = ApiKeywords.sendPatch("/credentials/" + credentialId, patchPayload)
+2025-09-18 09:55:14.175 INFO  c.k.k.core.webservice.common.HarLogger   - HAR: C:\Users\10835442\Katalon Studio\Luma\Reports\20250918_095443\API_Testcases\20250918_095443\requests\main\PATCH_Generic_1.har
+2025-09-18 09:55:14.186 DEBUG testcase.api_updatingCred                - 5: verifyResponseStatusCode(patchResponse, 200)
+2025-09-18 09:55:14.194 DEBUG testcase.api_updatingCred                - 6: println(patchResponse.getResponseBodyContent())
+{"id":"1","email":"alicesmith.38@gmail.com","password":"NewPassword@456","verification_text":"My Acc"}
+2025-09-18 09:55:14.200 DEBUG testcase.api_updatingCred                - 7: markPassed("PATCH password update successful")
+2025-09-18 09:55:14.202 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ PATCH password update successful
+PASSED
+⚠️ Error while closing browser: Browser is not opened
+Build info: version: '4.28.1', revision: '73f5ad48a2'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: driver.version: unknown
+2025-09-18 09:55:14.228 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/JsonPlaceHolder/api_updatingCred
+2025-09-18 09:55:14.235 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-09-18 09:55:14.235 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/JsonPlaceHolder/api_gettingCredFromServer
+2025-09-18 09:55:14.255 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) jsonFilePath = Include/Data Files/login_data.json
+2025-09-18 09:55:14.256 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) masterSchemaFilePath = Include/Data Files/MasterSchema.json
+ℹ️ Skipping browser launch for API test case: api_gettingCredFromServer
+2025-09-18 09:55:14.401 DEBUG testcase.api_gettingCredFromServer       - 1: credentialId = JsonFileReader.getJsonData("postData", "CredentialId", jsonFilePath)
+2025-09-18 09:55:14.404 DEBUG testcase.api_gettingCredFromServer       - 2: logInfo("Sending GET request to /credentials/" + credentialId)
+2025-09-18 09:55:14.406 INFO  com.kms.katalon.core.util.KeywordUtil    - Sending GET request to /credentials/1
+2025-09-18 09:55:14.407 DEBUG testcase.api_gettingCredFromServer       - 3: getResponse = ApiKeywords.sendGet("/credentials/" + credentialId)
+2025-09-18 09:55:14.703 INFO  c.k.k.core.webservice.common.HarLogger   - HAR: C:\Users\10835442\Katalon Studio\Luma\Reports\20250918_095443\API_Testcases\20250918_095443\requests\main\GET_Generic_2.har
+2025-09-18 09:55:14.719 DEBUG testcase.api_gettingCredFromServer       - 4: verifyResponseStatusCode(getResponse, 200)
+2025-09-18 09:55:14.737 DEBUG testcase.api_gettingCredFromServer       - 5: logInfo("GET response status code verified as 200")
+2025-09-18 09:55:14.741 INFO  com.kms.katalon.core.util.KeywordUtil    - GET response status code verified as 200
+2025-09-18 09:55:14.743 DEBUG testcase.api_gettingCredFromServer       - 6: getResponseBody = getResponse.getResponseBodyContent()
+2025-09-18 09:55:14.748 DEBUG testcase.api_gettingCredFromServer       - 7: validateJsonAgainstSchema(getResponseBody, JsonOutput.toJson(JsonFileReader.getSectionData("postResponse", masterSchemaFilePath)))
+2025-09-18 09:55:14.760 DEBUG testcase.api_gettingCredFromServer       - 8: markPassed("GET response schema validation passed")
+2025-09-18 09:55:14.762 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ GET response schema validation passed
+2025-09-18 09:55:14.766 DEBUG testcase.api_gettingCredFromServer       - 9: logInfo("Sending PUT request to /credentials/" + JsonFileReader.getJsonData("postData", "CredentialId", jsonFilePath) + " to replace full credential")
+2025-09-18 09:55:14.770 INFO  com.kms.katalon.core.util.KeywordUtil    - Sending PUT request to /credentials/1 to replace full credential
+2025-09-18 09:55:14.773 DEBUG testcase.api_gettingCredFromServer       - 10: putResponse = ApiKeywords.sendPost("/credentials", getResponseBody)
+2025-09-18 09:55:15.059 INFO  c.k.k.core.webservice.common.HarLogger   - HAR: C:\Users\10835442\Katalon Studio\Luma\Reports\20250918_095443\API_Testcases\20250918_095443\requests\main\POST_Generic_3.har
+2025-09-18 09:55:15.075 DEBUG testcase.api_gettingCredFromServer       - 11: verifyResponseStatusCode(putResponse, 201)
+2025-09-18 09:55:15.089 DEBUG testcase.api_gettingCredFromServer       - 12: validateJsonAgainstSchema(putResponse.getResponseBodyContent(), postSchemaFilePath)
+2025-09-18 09:55:15.101 ERROR c.k.katalon.core.main.TestCaseExecutor   - ❌ Test Cases/JsonPlaceHolder/api_gettingCredFromServer FAILED.
+Reason:
+groovy.lang.MissingPropertyException: No such property: postSchemaFilePath for class: Script1758103813687
+	at api_gettingCredFromServer.run(api_gettingCredFromServer:39)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1758169483240.run(TempTestSuite1758169483240.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+2025-09-18 09:55:15.113 ERROR c.k.katalon.core.main.TestCaseExecutor   - ❌ Test Cases/JsonPlaceHolder/api_gettingCredFromServer FAILED.
+Reason:
+groovy.lang.MissingPropertyException: No such property: postSchemaFilePath for class: Script1758103813687
+	at api_gettingCredFromServer.run(api_gettingCredFromServer:39)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1758169483240.run(TempTestSuite1758169483240.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+ERROR
+⚠️ Error while closing browser: Browser is not opened
+Build info: version: '4.28.1', revision: '73f5ad48a2'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: driver.version: unknown
+2025-09-18 09:55:15.126 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/JsonPlaceHolder/api_gettingCredFromServer
+2025-09-18 09:55:15.129 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-09-18 09:55:15.129 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/JsonPlaceHolder/api_gettingCredFromServer
+2025-09-18 09:55:15.143 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) jsonFilePath = Include/Data Files/login_data.json
+2025-09-18 09:55:15.144 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) masterSchemaFilePath = Include/Data Files/MasterSchema.json
+ℹ️ Skipping browser launch for API test case: api_gettingCredFromServer
+2025-09-18 09:55:15.155 DEBUG testcase.api_gettingCredFromServer       - 1: credentialId = JsonFileReader.getJsonData("postData", "CredentialId", jsonFilePath)
+2025-09-18 09:55:15.157 DEBUG testcase.api_gettingCredFromServer       - 2: logInfo("Sending GET request to /credentials/" + credentialId)
+2025-09-18 09:55:15.158 INFO  com.kms.katalon.core.util.KeywordUtil    - Sending GET request to /credentials/1
+2025-09-18 09:55:15.159 DEBUG testcase.api_gettingCredFromServer       - 3: getResponse = ApiKeywords.sendGet("/credentials/" + credentialId)
+2025-09-18 09:55:15.452 INFO  c.k.k.core.webservice.common.HarLogger   - HAR: C:\Users\10835442\Katalon Studio\Luma\Reports\20250918_095443\API_Testcases\20250918_095443\requests\main\GET_Generic_4.har
+2025-09-18 09:55:15.463 DEBUG testcase.api_gettingCredFromServer       - 4: verifyResponseStatusCode(getResponse, 200)
+2025-09-18 09:55:15.477 DEBUG testcase.api_gettingCredFromServer       - 5: logInfo("GET response status code verified as 200")
+2025-09-18 09:55:15.480 INFO  com.kms.katalon.core.util.KeywordUtil    - GET response status code verified as 200
+2025-09-18 09:55:15.483 DEBUG testcase.api_gettingCredFromServer       - 6: getResponseBody = getResponse.getResponseBodyContent()
+2025-09-18 09:55:15.486 DEBUG testcase.api_gettingCredFromServer       - 7: validateJsonAgainstSchema(getResponseBody, JsonOutput.toJson(JsonFileReader.getSectionData("postResponse", masterSchemaFilePath)))
+2025-09-18 09:55:15.500 DEBUG testcase.api_gettingCredFromServer       - 8: markPassed("GET response schema validation passed")
+2025-09-18 09:55:15.502 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ GET response schema validation passed
+2025-09-18 09:55:15.503 DEBUG testcase.api_gettingCredFromServer       - 9: logInfo("Sending PUT request to /credentials/" + JsonFileReader.getJsonData("postData", "CredentialId", jsonFilePath) + " to replace full credential")
+2025-09-18 09:55:15.507 INFO  com.kms.katalon.core.util.KeywordUtil    - Sending PUT request to /credentials/1 to replace full credential
+2025-09-18 09:55:15.508 DEBUG testcase.api_gettingCredFromServer       - 10: putResponse = ApiKeywords.sendPost("/credentials", getResponseBody)
+2025-09-18 09:55:15.790 INFO  c.k.k.core.webservice.common.HarLogger   - HAR: C:\Users\10835442\Katalon Studio\Luma\Reports\20250918_095443\API_Testcases\20250918_095443\requests\main\POST_Generic_5.har
+2025-09-18 09:55:15.801 DEBUG testcase.api_gettingCredFromServer       - 11: verifyResponseStatusCode(putResponse, 201)
+2025-09-18 09:55:15.811 DEBUG testcase.api_gettingCredFromServer       - 12: validateJsonAgainstSchema(putResponse.getResponseBodyContent(), postSchemaFilePath)
+2025-09-18 09:55:15.814 ERROR c.k.katalon.core.main.TestCaseExecutor   - ❌ Test Cases/JsonPlaceHolder/api_gettingCredFromServer FAILED.
+Reason:
+groovy.lang.MissingPropertyException: No such property: postSchemaFilePath for class: Script1758103813687
+	at api_gettingCredFromServer.run(api_gettingCredFromServer:39)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1758169483240.run(TempTestSuite1758169483240.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+2025-09-18 09:55:15.821 ERROR c.k.katalon.core.main.TestCaseExecutor   - ❌ Test Cases/JsonPlaceHolder/api_gettingCredFromServer FAILED.
+Reason:
+groovy.lang.MissingPropertyException: No such property: postSchemaFilePath for class: Script1758103813687
+	at api_gettingCredFromServer.run(api_gettingCredFromServer:39)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1758169483240.run(TempTestSuite1758169483240.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+ERROR
+⚠️ Error while closing browser: Browser is not opened
+Build info: version: '4.28.1', revision: '73f5ad48a2'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: driver.version: unknown
+2025-09-18 09:55:15.840 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/JsonPlaceHolder/api_gettingCredFromServer
+2025-09-18 09:55:15.843 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-09-18 09:55:15.843 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/JsonPlaceHolder/api_gettingCredFromServer
+2025-09-18 09:55:15.857 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) jsonFilePath = Include/Data Files/login_data.json
+2025-09-18 09:55:15.858 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) masterSchemaFilePath = Include/Data Files/MasterSchema.json
+ℹ️ Skipping browser launch for API test case: api_gettingCredFromServer
+2025-09-18 09:55:15.870 DEBUG testcase.api_gettingCredFromServer       - 1: credentialId = JsonFileReader.getJsonData("postData", "CredentialId", jsonFilePath)
+2025-09-18 09:55:15.873 DEBUG testcase.api_gettingCredFromServer       - 2: logInfo("Sending GET request to /credentials/" + credentialId)
+2025-09-18 09:55:15.874 INFO  com.kms.katalon.core.util.KeywordUtil    - Sending GET request to /credentials/1
+2025-09-18 09:55:15.875 DEBUG testcase.api_gettingCredFromServer       - 3: getResponse = ApiKeywords.sendGet("/credentials/" + credentialId)
+2025-09-18 09:55:16.160 INFO  c.k.k.core.webservice.common.HarLogger   - HAR: C:\Users\10835442\Katalon Studio\Luma\Reports\20250918_095443\API_Testcases\20250918_095443\requests\main\GET_Generic_6.har
+2025-09-18 09:55:16.165 DEBUG testcase.api_gettingCredFromServer       - 4: verifyResponseStatusCode(getResponse, 200)
+2025-09-18 09:55:16.175 DEBUG testcase.api_gettingCredFromServer       - 5: logInfo("GET response status code verified as 200")
+2025-09-18 09:55:16.176 INFO  com.kms.katalon.core.util.KeywordUtil    - GET response status code verified as 200
+2025-09-18 09:55:16.177 DEBUG testcase.api_gettingCredFromServer       - 6: getResponseBody = getResponse.getResponseBodyContent()
+2025-09-18 09:55:16.178 DEBUG testcase.api_gettingCredFromServer       - 7: validateJsonAgainstSchema(getResponseBody, JsonOutput.toJson(JsonFileReader.getSectionData("postResponse", masterSchemaFilePath)))
+2025-09-18 09:55:16.189 DEBUG testcase.api_gettingCredFromServer       - 8: markPassed("GET response schema validation passed")
+2025-09-18 09:55:16.190 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ GET response schema validation passed
+2025-09-18 09:55:16.192 DEBUG testcase.api_gettingCredFromServer       - 9: logInfo("Sending PUT request to /credentials/" + JsonFileReader.getJsonData("postData", "CredentialId", jsonFilePath) + " to replace full credential")
+2025-09-18 09:55:16.194 INFO  com.kms.katalon.core.util.KeywordUtil    - Sending PUT request to /credentials/1 to replace full credential
+2025-09-18 09:55:16.195 DEBUG testcase.api_gettingCredFromServer       - 10: putResponse = ApiKeywords.sendPost("/credentials", getResponseBody)
+2025-09-18 09:55:16.477 INFO  c.k.k.core.webservice.common.HarLogger   - HAR: C:\Users\10835442\Katalon Studio\Luma\Reports\20250918_095443\API_Testcases\20250918_095443\requests\main\POST_Generic_7.har
+2025-09-18 09:55:16.479 DEBUG testcase.api_gettingCredFromServer       - 11: verifyResponseStatusCode(putResponse, 201)
+2025-09-18 09:55:16.483 DEBUG testcase.api_gettingCredFromServer       - 12: validateJsonAgainstSchema(putResponse.getResponseBodyContent(), postSchemaFilePath)
+2025-09-18 09:55:16.485 ERROR c.k.katalon.core.main.TestCaseExecutor   - ❌ Test Cases/JsonPlaceHolder/api_gettingCredFromServer FAILED.
+Reason:
+groovy.lang.MissingPropertyException: No such property: postSchemaFilePath for class: Script1758103813687
+	at api_gettingCredFromServer.run(api_gettingCredFromServer:39)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1758169483240.run(TempTestSuite1758169483240.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+2025-09-18 09:55:16.488 ERROR c.k.katalon.core.main.TestCaseExecutor   - ❌ Test Cases/JsonPlaceHolder/api_gettingCredFromServer FAILED.
+Reason:
+groovy.lang.MissingPropertyException: No such property: postSchemaFilePath for class: Script1758103813687
+	at api_gettingCredFromServer.run(api_gettingCredFromServer:39)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1758169483240.run(TempTestSuite1758169483240.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+ERROR
+⚠️ Error while closing browser: Browser is not opened
+Build info: version: '4.28.1', revision: '73f5ad48a2'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: driver.version: unknown
+2025-09-18 09:55:16.504 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/JsonPlaceHolder/api_gettingCredFromServer
+2025-09-18 09:55:16.508 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-09-18 09:55:16.508 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/JsonPlaceHolder/api_gettingCredFromServer
+2025-09-18 09:55:16.521 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) jsonFilePath = Include/Data Files/login_data.json
+2025-09-18 09:55:16.522 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) masterSchemaFilePath = Include/Data Files/MasterSchema.json
+ℹ️ Skipping browser launch for API test case: api_gettingCredFromServer
+2025-09-18 09:55:16.526 DEBUG testcase.api_gettingCredFromServer       - 1: credentialId = JsonFileReader.getJsonData("postData", "CredentialId", jsonFilePath)
+2025-09-18 09:55:16.528 DEBUG testcase.api_gettingCredFromServer       - 2: logInfo("Sending GET request to /credentials/" + credentialId)
+2025-09-18 09:55:16.529 INFO  com.kms.katalon.core.util.KeywordUtil    - Sending GET request to /credentials/1
+2025-09-18 09:55:16.531 DEBUG testcase.api_gettingCredFromServer       - 3: getResponse = ApiKeywords.sendGet("/credentials/" + credentialId)
+2025-09-18 09:55:16.801 INFO  c.k.k.core.webservice.common.HarLogger   - HAR: C:\Users\10835442\Katalon Studio\Luma\Reports\20250918_095443\API_Testcases\20250918_095443\requests\main\GET_Generic_8.har
+2025-09-18 09:55:16.804 DEBUG testcase.api_gettingCredFromServer       - 4: verifyResponseStatusCode(getResponse, 200)
+2025-09-18 09:55:16.807 DEBUG testcase.api_gettingCredFromServer       - 5: logInfo("GET response status code verified as 200")
+2025-09-18 09:55:16.808 INFO  com.kms.katalon.core.util.KeywordUtil    - GET response status code verified as 200
+2025-09-18 09:55:16.808 DEBUG testcase.api_gettingCredFromServer       - 6: getResponseBody = getResponse.getResponseBodyContent()
+2025-09-18 09:55:16.809 DEBUG testcase.api_gettingCredFromServer       - 7: validateJsonAgainstSchema(getResponseBody, JsonOutput.toJson(JsonFileReader.getSectionData("postResponse", masterSchemaFilePath)))
+2025-09-18 09:55:16.816 DEBUG testcase.api_gettingCredFromServer       - 8: markPassed("GET response schema validation passed")
+2025-09-18 09:55:16.818 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ GET response schema validation passed
+2025-09-18 09:55:16.819 DEBUG testcase.api_gettingCredFromServer       - 9: logInfo("Sending PUT request to /credentials/" + JsonFileReader.getJsonData("postData", "CredentialId", jsonFilePath) + " to replace full credential")
+2025-09-18 09:55:16.821 INFO  com.kms.katalon.core.util.KeywordUtil    - Sending PUT request to /credentials/1 to replace full credential
+2025-09-18 09:55:16.822 DEBUG testcase.api_gettingCredFromServer       - 10: putResponse = ApiKeywords.sendPost("/credentials", getResponseBody)
+2025-09-18 09:55:17.100 INFO  c.k.k.core.webservice.common.HarLogger   - HAR: C:\Users\10835442\Katalon Studio\Luma\Reports\20250918_095443\API_Testcases\20250918_095443\requests\main\POST_Generic_9.har
+2025-09-18 09:55:17.106 DEBUG testcase.api_gettingCredFromServer       - 11: verifyResponseStatusCode(putResponse, 201)
+2025-09-18 09:55:17.110 DEBUG testcase.api_gettingCredFromServer       - 12: validateJsonAgainstSchema(putResponse.getResponseBodyContent(), postSchemaFilePath)
+2025-09-18 09:55:17.134 ERROR c.k.katalon.core.main.TestCaseExecutor   - ❌ Test Cases/JsonPlaceHolder/api_gettingCredFromServer FAILED.
+Reason:
+groovy.lang.MissingPropertyException: No such property: postSchemaFilePath for class: Script1758103813687
+	at api_gettingCredFromServer.run(api_gettingCredFromServer:39)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1758169483240.run(TempTestSuite1758169483240.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+2025-09-18 09:55:17.138 ERROR c.k.katalon.core.main.TestCaseExecutor   - ❌ Test Cases/JsonPlaceHolder/api_gettingCredFromServer FAILED.
+Reason:
+groovy.lang.MissingPropertyException: No such property: postSchemaFilePath for class: Script1758103813687
+	at api_gettingCredFromServer.run(api_gettingCredFromServer:39)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1758169483240.run(TempTestSuite1758169483240.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+ERROR
+⚠️ Error while closing browser: Browser is not opened
+Build info: version: '4.28.1', revision: '73f5ad48a2'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: driver.version: unknown
+2025-09-18 09:55:17.148 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/JsonPlaceHolder/api_gettingCredFromServer
+2025-09-18 09:55:17.197 INFO  c.k.katalon.core.main.TestSuiteExecutor  - --------------------
+2025-09-18 09:55:17.197 INFO  c.k.katalon.core.main.TestSuiteExecutor  - END Test Suites/API_Testcases
+2025-09-18 09:55:17.197 INFO  c.k.katalon.core.main.TestSuiteExecutor  - ====================

@@ -1,0 +1,67 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+API_AccessToken,,,,18-09-2025 16:23:22,18-09-2025 16:23:36,14.143s,ERROR
+,,,,,,,
+Test Cases/API_Testing/api_getAccessToken,,,,18-09-2025 16:23:23,18-09-2025 16:23:33,9.909s,PASSED
+"DATA BINDING - {""(Default) maste..."":""Include/Data Files/MasterSchema.json"",""(Default) jsonF..."":""Include/Data Files/login_data.json""}",,,,,,,
+Start listener action : beforeTestCase,,,,18-09-2025 16:23:23,18-09-2025 16:23:23,0.185s,PASSED
+"logInfo(""Reading payload from JSON file..."")",,,,18-09-2025 16:23:23,18-09-2025 16:23:23,0.030s,PASSED
+"payLoad = JsonOutput.toJson(JsonFileReader.getSectionData(""postPayload"", jsonFilePath))",,,,18-09-2025 16:23:23,18-09-2025 16:23:23,0.101s,PASSED
+"logInfo(""Payload prepared: "" + payLoad)",,,,18-09-2025 16:23:23,18-09-2025 16:23:23,0.012s,PASSED
+"logInfo(""Sending POST request to /login endpoint..."")",,,,18-09-2025 16:23:23,18-09-2025 16:23:23,0.007s,PASSED
+"response = ApiKeywords.sendPost(""login"", payLoad)",,,,18-09-2025 16:23:23,18-09-2025 16:23:32,8.714s,PASSED
+"logInfo(""Response received with status: "" + response.getStatusCode())",,,,18-09-2025 16:23:32,18-09-2025 16:23:32,0.014s,PASSED
+responseBodyContent = response.getResponseBodyContent(),,,,18-09-2025 16:23:32,18-09-2025 16:23:32,0.004s,PASSED
+"logInfo(""Response body content:
+"" + responseBodyContent)",,,,18-09-2025 16:23:32,18-09-2025 16:23:32,0.008s,PASSED
+"logInfo(""Validating response against accessTokenSchema..."")",,,,18-09-2025 16:23:32,18-09-2025 16:23:32,0.005s,PASSED
+"schemaMap = JsonFileReader.getSectionData(""accessTokenSchema"", masterSchemaFilePath)",,,,18-09-2025 16:23:32,18-09-2025 16:23:32,0.010s,PASSED
+schemaString = JsonOutput.toJson(schemaMap),,,,18-09-2025 16:23:32,18-09-2025 16:23:32,0.004s,PASSED
+"validateJsonAgainstSchema(responseBodyContent, schemaString)",,,,18-09-2025 16:23:32,18-09-2025 16:23:32,0.164s,PASSED
+"logInfo(""Schema validation passed."")",,,,18-09-2025 16:23:32,18-09-2025 16:23:32,0.005s,PASSED
+parsedResponse = JsonSlurper().parseText(responseBodyContent),,,,18-09-2025 16:23:32,18-09-2025 16:23:32,0.006s,PASSED
+jwtToken = accessToken,,,,18-09-2025 16:23:32,18-09-2025 16:23:32,0.003s,PASSED
+"logInfo(""Extracted JWT Token: "" + jwtToken)",,,,18-09-2025 16:23:32,18-09-2025 16:23:32,0.003s,PASSED
+"logInfo(""Storing JWT token in DummyJson section of JSON file..."")",,,,18-09-2025 16:23:32,18-09-2025 16:23:32,0.003s,PASSED
+"JsonFileReader.appendToJsonSection(jsonFilePath, ""DummyJson"", ""accessToken"", jwtToken)",,,,18-09-2025 16:23:32,18-09-2025 16:23:32,0.050s,PASSED
+"logInfo(""Token stored successfully."")",,,,18-09-2025 16:23:32,18-09-2025 16:23:32,0.002s,PASSED
+Start listener action : closeTheBrowser,,,,18-09-2025 16:23:32,18-09-2025 16:23:33,0.198s,PASSED
+,,,,,,,
+Test Cases/API_Testing/api_currentUserDetail,,,,18-09-2025 16:23:35,18-09-2025 16:23:35,0.472s,ERROR
+"DATA BINDING - {""(Default) jsonF..."":""Include/Data Files/login_data.json""}",,,,,,,
+Start listener action : beforeTestCase,,,,18-09-2025 16:23:35,18-09-2025 16:23:35,0.004s,PASSED
+"logInfo(""Reading access token from JSON file..."")",,,,18-09-2025 16:23:35,18-09-2025 16:23:35,0.004s,PASSED
+"accessToken = JsonFileReader.getJsonData(""DummyJson"", ""accessToken"", jsonFilePath)",,,,18-09-2025 16:23:35,18-09-2025 16:23:35,0.006s,PASSED
+"logInfo(""Access token retrieved: "" + accessToken)",,,,18-09-2025 16:23:35,18-09-2025 16:23:35,0.000s,PASSED
+"headers = [""Authorization"":accessToken, ""Content-Type"":""application/json""]",,,,18-09-2025 16:23:35,18-09-2025 16:23:35,0.002s,PASSED
+"logInfo(""Headers prepared: "" + headers.toString())",,,,18-09-2025 16:23:35,18-09-2025 16:23:35,0.000s,PASSED
+"logInfo(""Sending GET request to /me endpoint..."")",,,,18-09-2025 16:23:35,18-09-2025 16:23:35,0.000s,PASSED
+"response = ApiKeywords.sendGet(""me"", headers)",,,,18-09-2025 16:23:35,18-09-2025 16:23:35,0.340s,PASSED
+"logInfo(""Response received with status: "" + response.getStatusCode())",,,,18-09-2025 16:23:35,18-09-2025 16:23:35,0.006s,PASSED
+parsedResponse = JsonSlurper().parseText(response.getResponseBodyContent()),,,,18-09-2025 16:23:35,18-09-2025 16:23:35,0.008s,PASSED
+"logInfo(""Parsed response: "" + parsedResponse.toString())",,,,18-09-2025 16:23:35,18-09-2025 16:23:35,0.007s,PASSED
+"logInfo(""Storing firstName in apiResponse section of JSON file..."")",,,,18-09-2025 16:23:35,18-09-2025 16:23:35,0.003s,PASSED
+"JsonFileReader.appendToJsonSection(jsonFilePath, ""apiResonse"", ""firstName"", firstName)",,,,18-09-2025 16:23:35,18-09-2025 16:23:35,0.015s,PASSED
+"logInfo(""firstName stored successfully: "" + firstName)",,,,18-09-2025 16:23:35,18-09-2025 16:23:35,0.003s,PASSED
+"logInfo(""Storing full response under userData section..."")",,,,18-09-2025 16:23:35,18-09-2025 16:23:35,0.002s,PASSED
+"JsonFileReader.storeApiResponse(""userData"", parsedResponse, jsonFilePath)",,,,18-09-2025 16:23:35,18-09-2025 16:23:35,0.009s,ERROR
+Start listener action : closeTheBrowser,,,,18-09-2025 16:23:35,18-09-2025 16:23:35,0.012s,PASSED
+,,,,,,,
+Test Cases/API_Testing/api_RefereshAccessToken,,,,18-09-2025 16:23:35,18-09-2025 16:23:36,0.763s,PASSED
+"DATA BINDING - {""(Default) jsonF..."":""Include/Data Files/login_data.json""}",,,,,,,
+Start listener action : beforeTestCase,,,,18-09-2025 16:23:35,18-09-2025 16:23:35,0.006s,PASSED
+"logInfo(""Preparing headers for refresh token request..."")",,,,18-09-2025 16:23:35,18-09-2025 16:23:35,0.004s,PASSED
+"headers = [""Content-Type"":""application/json""]",,,,18-09-2025 16:23:35,18-09-2025 16:23:35,0.003s,PASSED
+"logInfo(""Reading refresh payload from JSON file..."")",,,,18-09-2025 16:23:35,18-09-2025 16:23:35,0.002s,PASSED
+"payLoad = JsonOutput.toJson(JsonFileReader.getSectionData(""refreshData"", jsonFilePath))",,,,18-09-2025 16:23:35,18-09-2025 16:23:35,0.009s,PASSED
+"logInfo(""Payload prepared: "" + payLoad)",,,,18-09-2025 16:23:35,18-09-2025 16:23:35,0.004s,PASSED
+"logInfo(""Sending POST request to /refresh endpoint..."")",,,,18-09-2025 16:23:35,18-09-2025 16:23:35,0.003s,PASSED
+"refreshResponse = ApiKeywords.sendPost(""refresh"", payLoad, headers)",,,,18-09-2025 16:23:35,18-09-2025 16:23:36,0.420s,PASSED
+"logInfo(""Response received with status: "" + refreshResponse.getStatusCode())",,,,18-09-2025 16:23:36,18-09-2025 16:23:36,0.004s,PASSED
+parsedResponse = JsonSlurper().parseText(refreshResponse.getResponseBodyContent()),,,,18-09-2025 16:23:36,18-09-2025 16:23:36,0.002s,PASSED
+"logInfo(""Parsed response: "" + parsedResponse.toString())",,,,18-09-2025 16:23:36,18-09-2025 16:23:36,0.000s,PASSED
+jwtToken = accessToken,,,,18-09-2025 16:23:36,18-09-2025 16:23:36,0.006s,PASSED
+"logInfo(""Extracted new JWT Token: "" + jwtToken)",,,,18-09-2025 16:23:36,18-09-2025 16:23:36,0.023s,PASSED
+"logInfo(""Storing new JWT token in DummyJson section of JSON file..."")",,,,18-09-2025 16:23:36,18-09-2025 16:23:36,0.001s,PASSED
+"JsonFileReader.appendToJsonSection(jsonFilePath, ""DummyJson"", ""accessToken"", jwtToken)",,,,18-09-2025 16:23:36,18-09-2025 16:23:36,0.008s,PASSED
+"logInfo(""Token stored successfully."")",,,,18-09-2025 16:23:36,18-09-2025 16:23:36,0.000s,PASSED
+Start listener action : closeTheBrowser,,,,18-09-2025 16:23:36,18-09-2025 16:23:36,0.008s,PASSED

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="API_AccessToken" time="8.743" tests="2" failures="0" errors="0">
+   <testsuite name="API_AccessToken" tests="2" failures="0" errors="0" time="8.743" skipped="0" timestamp="2025-09-18T09:40:40.882Z" hostname="10835442 - 10.235.154.124" id="Test Suites/API_AccessToken">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform"/>
+         <property name="logFolder" value="C:\\Users\\10835442\\Katalon Studio\\Luma\\Reports\\20250918_151029\\API_AccessToken\\20250918_151029"/>
+         <property name="logFiles" value="C:\\Users\\10835442\\Katalon Studio\\Luma\\Reports\\20250918_151029\\API_AccessToken\\20250918_151029\\console0.log, C:\\Users\\10835442\\Katalon Studio\\Luma\\Reports\\20250918_151029\\API_AccessToken\\20250918_151029\\execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="userFullName" value="Abinesh R"/>
+         <property name="hostName" value="10835442 - 10.235.154.124"/>
+         <property name="hostAddress" value="10.235.154.124"/>
+         <property name="projectName" value="Luma"/>
+         <property name="os" value="Windows 11 64bit"/>
+         <property name="katalonVersion" value="10.3.1.0"/>
+      </properties>
+      <testcase name="Test Cases/API_Testing/api_getAccessToken" time="6.161" classname="Test Cases/API_Testing/api_getAccessToken" status="PASSED">
+         <properties>
+            <property name="data_binding"><![CDATA[{"(Default) jsonF...":"Include/Data Files/login_data.json"}]]></property>
+         </properties>
+         <system-out><![CDATA[18-09-2025T15:10:42 - [TEST_CASE][PASSED] - Test Cases/API_Testing/api_getAccessToken: Test Cases/API_Testing/api_getAccessToken
+
+18-09-2025T15:10:42 - [TEST_STEP][PASSED] - Start listener action : beforeTestCase: null
+
+18-09-2025T15:10:42 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+18-09-2025T15:10:42 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+18-09-2025T15:10:42 - [TEST_STEP][PASSED] - if (toLowerCase().startsWith("api_")): null
+
+18-09-2025T15:10:42 - [TEST_STEP][PASSED] - println(ℹ️ Skipping browser launch for API test case: $testCaseName): null
+
+18-09-2025T15:10:42 - [TEST_STEP][PASSED] - return null: null
+
+18-09-2025T15:10:43 - [TEST_STEP][PASSED] - payLoad = JsonOutput.toJson(JsonFileReader.getSectionData("postPayload", jsonFilePath)): null
+
+18-09-2025T15:10:43 - [TEST_STEP][PASSED] - response = ApiKeywords.sendPost("login", payLoad): Send request successfully
+
+18-09-2025T15:10:47 - [MESSAGE][INFO] - HAR: C:\Users\10835442\Katalon Studio\Luma\Reports\20250918_151029\API_AccessToken\20250918_151029\requests\main\POST_Generic_0.har
+
+18-09-2025T15:10:48 - [MESSAGE][PASSED] - Send request successfully
+
+18-09-2025T15:10:48 - [TEST_STEP][PASSED] - println(response): null
+
+18-09-2025T15:10:48 - [TEST_STEP][PASSED] - parsedResponse = JsonSlurper().parseText(response.getResponseBodyContent()): null
+
+18-09-2025T15:10:48 - [TEST_STEP][PASSED] - jwtToken = accessToken: null
+
+18-09-2025T15:10:48 - [TEST_STEP][PASSED] - println("JWT Token: " + jwtToken): null
+
+18-09-2025T15:10:48 - [TEST_STEP][PASSED] - JsonFileReader.appendToJsonSection(jsonFilePath, "DummyJson", "accessToken", jwtToken): null
+
+18-09-2025T15:10:48 - [TEST_STEP][PASSED] - Start listener action : closeTheBrowser: null
+
+18-09-2025T15:10:48 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+18-09-2025T15:10:48 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+18-09-2025T15:10:48 - [TEST_STEP][PASSED] - testCaseStatus = testCaseContext.getTestCaseStatus(): null
+
+18-09-2025T15:10:48 - [TEST_STEP][PASSED] - println(testCaseStatus): null
+
+18-09-2025T15:10:48 - [TEST_STEP][PASSED] - StatusMap = DependencyHandler.getStatusMap(): null
+
+18-09-2025T15:10:48 - [TEST_STEP][PASSED] - if (StatusMap.containsKey(testCaseName)): null
+
+18-09-2025T15:10:48 - [TEST_STEP][PASSED] - try: null
+
+18-09-2025T15:10:48 - [TEST_STEP][PASSED] - driver = getWebDriver(): null
+
+18-09-2025T15:10:48 - [TEST_STEP][PASSED] - catch (Exception e): null
+
+18-09-2025T15:10:48 - [TEST_STEP][PASSED] - println(⚠️ Error while closing browser: $e.message): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/API_Testing/api_currentUserDetail" time="1.05" classname="Test Cases/API_Testing/api_currentUserDetail" status="PASSED">
+         <properties>
+            <property name="data_binding"><![CDATA[{"(Default) jsonF...":"Include/Data Files/login_data.json"}]]></property>
+         </properties>
+         <system-out><![CDATA[18-09-2025T15:10:48 - [TEST_CASE][PASSED] - Test Cases/API_Testing/api_currentUserDetail: Test Cases/API_Testing/api_currentUserDetail
+
+18-09-2025T15:10:48 - [TEST_STEP][PASSED] - Start listener action : beforeTestCase: null
+
+18-09-2025T15:10:48 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+18-09-2025T15:10:48 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+18-09-2025T15:10:48 - [TEST_STEP][PASSED] - if (toLowerCase().startsWith("api_")): null
+
+18-09-2025T15:10:48 - [TEST_STEP][PASSED] - println(ℹ️ Skipping browser launch for API test case: $testCaseName): null
+
+18-09-2025T15:10:48 - [TEST_STEP][PASSED] - return null: null
+
+18-09-2025T15:10:49 - [TEST_STEP][PASSED] - accessToken = JsonFileReader.getJsonData("DummyJson", "accessToken", jsonFilePath): null
+
+18-09-2025T15:10:49 - [TEST_STEP][PASSED] - headers = ["Authorization":accessToken, "Content-Type":"application/json"]: null
+
+18-09-2025T15:10:49 - [TEST_STEP][PASSED] - response = ApiKeywords.sendGet("me", headers): Send request successfully
+
+18-09-2025T15:10:49 - [MESSAGE][INFO] - HAR: C:\Users\10835442\Katalon Studio\Luma\Reports\20250918_151029\API_AccessToken\20250918_151029\requests\main\GET_Generic_1.har
+
+18-09-2025T15:10:49 - [MESSAGE][PASSED] - Send request successfully
+
+18-09-2025T15:10:49 - [TEST_STEP][PASSED] - parsedResponse = JsonSlurper().parseText(response.getResponseBodyContent()): null
+
+18-09-2025T15:10:49 - [TEST_STEP][PASSED] - JsonFileReader.appendToJsonSection(jsonFilePath, "apiResonse", "firstName", firstName): null
+
+18-09-2025T15:10:49 - [TEST_STEP][PASSED] - JsonFileReader.storeApiResponse("userData", response, jsonFilePath): null
+
+18-09-2025T15:10:49 - [TEST_STEP][PASSED] - Start listener action : closeTheBrowser: null
+
+18-09-2025T15:10:49 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+18-09-2025T15:10:49 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+18-09-2025T15:10:49 - [TEST_STEP][PASSED] - testCaseStatus = testCaseContext.getTestCaseStatus(): null
+
+18-09-2025T15:10:49 - [TEST_STEP][PASSED] - println(testCaseStatus): null
+
+18-09-2025T15:10:49 - [TEST_STEP][PASSED] - StatusMap = DependencyHandler.getStatusMap(): null
+
+18-09-2025T15:10:49 - [TEST_STEP][PASSED] - if (StatusMap.containsKey(testCaseName)): null
+
+18-09-2025T15:10:49 - [TEST_STEP][PASSED] - try: null
+
+18-09-2025T15:10:49 - [TEST_STEP][PASSED] - driver = getWebDriver(): null
+
+18-09-2025T15:10:49 - [TEST_STEP][PASSED] - catch (Exception e): null
+
+18-09-2025T15:10:49 - [TEST_STEP][PASSED] - println(⚠️ Error while closing browser: $e.message): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[18-09-2025T15:10:40 - [TEST_SUITE][PASSED] - API_AccessToken: null]]></system-out>
+      <system-err><![CDATA[]]></system-err>
+   </testsuite>
+</testsuites>

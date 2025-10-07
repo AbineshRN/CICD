@@ -1,0 +1,52 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+API_Testcases,,,,19-09-2025 15:25:52,19-09-2025 15:26:22,30.322s,ERROR
+,,,,,,,
+Test Cases/API_Testing/TC01_localToServer_Api,,,,19-09-2025 15:25:52,19-09-2025 15:26:18,25.999s,PASSED
+"DATA BINDING - {""(Default) maste..."":""Include/Data Files/MasterSchema.json"",""(Default) syste..."":""Include/Data Files/login_data.json"",""(Default) postS..."":""Include/Data Files/post_login_response_schema.json"",""(Default) filep..."":""https://68c8e78aceef5a150f629ed5.mockapi.io/sign_in/credentials""}",,,,,,,
+Start listener action : beforeTestCase,,,,19-09-2025 15:25:53,19-09-2025 15:25:53,0.165s,PASSED
+"logInfo(""Sending POST request to /credentials to create new credentials"")",,,,19-09-2025 15:25:53,19-09-2025 15:25:53,0.014s,PASSED
+"postPayload = JsonOutput.toJson(JsonFileReader.getSectionData(""loginPage"", systemJsonFilePath))",,,,19-09-2025 15:25:53,19-09-2025 15:25:53,0.117s,PASSED
+println(postPayload),,,,19-09-2025 15:25:53,19-09-2025 15:25:53,0.006s,PASSED
+"postResponse = ApiKeywords.sendPost(""/credentials"", postPayload)",,,,19-09-2025 15:25:53,19-09-2025 15:26:18,24.723s,PASSED
+"verifyResponseStatusCode(postResponse, 201)",,,,19-09-2025 15:26:18,19-09-2025 15:26:18,0.035s,PASSED
+"logInfo(""POST response status code verified as 201"")",,,,19-09-2025 15:26:18,19-09-2025 15:26:18,0.003s,PASSED
+postResponseBody = postResponse.getResponseBodyContent(),,,,19-09-2025 15:26:18,19-09-2025 15:26:18,0.018s,PASSED
+println(postResponseBody),,,,19-09-2025 15:26:18,19-09-2025 15:26:18,0.008s,PASSED
+createdCredential = JsonSlurper().parseText(postResponseBody),,,,19-09-2025 15:26:18,19-09-2025 15:26:18,0.006s,PASSED
+println(createdCredential),,,,19-09-2025 15:26:18,19-09-2025 15:26:18,0.007s,PASSED
+credentialId = id,,,,19-09-2025 15:26:18,19-09-2025 15:26:18,0.008s,PASSED
+"JsonFileReader.appendToJsonSection(systemJsonFilePath, ""postData"", ""CredentialId"", credentialId)",,,,19-09-2025 15:26:18,19-09-2025 15:26:18,0.084s,PASSED
+"logInfo(""Created credential ID: "" + credentialId)",,,,19-09-2025 15:26:18,19-09-2025 15:26:18,0.005s,PASSED
+"validateJsonAgainstSchema(postResponseBody, JsonOutput.toJson(JsonFileReader.getSectionData(""postResponse"", masterSchemaFilePath)))",,,,19-09-2025 15:26:18,19-09-2025 15:26:18,0.165s,PASSED
+"markPassed(""POST response schema validation passed"")",,,,19-09-2025 15:26:18,19-09-2025 15:26:18,0.015s,PASSED
+Start listener action : closeTheBrowser,,,,19-09-2025 15:26:18,19-09-2025 15:26:18,0.183s,PASSED
+,,,,,,,
+Test Cases/API_Testing/TC02_updatingCred_Api,,,,19-09-2025 15:26:20,19-09-2025 15:26:21,0.425s,ERROR
+"DATA BINDING - {""(Default) jsonF..."":""Include/Data Files/login_data.json"",""(Default) schem..."":""Include/Data Files/MasterSchema.json""}",,,,,,,
+Start listener action : beforeTestCase,,,,19-09-2025 15:26:20,19-09-2025 15:26:20,0.005s,PASSED
+"credentialId = JsonFileReader.getJsonData(""postData"", ""CredentialId"", jsonFilePath)",,,,19-09-2025 15:26:20,19-09-2025 15:26:20,0.004s,PASSED
+"logInfo(""Sending PATCH request to /credentials/"" + credentialId + "" to update password"")",,,,19-09-2025 15:26:20,19-09-2025 15:26:20,0.002s,PASSED
+"patchPayload = JsonOutput.toJson([""password"":""NewPassword@456""])",,,,19-09-2025 15:26:20,19-09-2025 15:26:20,0.001s,PASSED
+"patchResponse = ApiKeywords.sendPatch(""/credentials/"" + credentialId, patchPayload)",,,,19-09-2025 15:26:20,19-09-2025 15:26:21,0.301s,PASSED
+"verifyResponseStatusCode(patchResponse, 200)",,,,19-09-2025 15:26:21,19-09-2025 15:26:21,0.011s,PASSED
+println(patchResponse.getResponseBodyContent()),,,,19-09-2025 15:26:21,19-09-2025 15:26:21,0.002s,PASSED
+jsonResponse = JsonSlurper().parseText(patchResponse.getResponseBodyConent()),,,,19-09-2025 15:26:21,19-09-2025 15:26:21,0.018s,ERROR
+Start listener action : closeTheBrowser,,,,19-09-2025 15:26:21,19-09-2025 15:26:21,0.025s,PASSED
+,,,,,,,
+Test Cases/API_Testing/TC03_gettingCredFromServer_Api,,,,19-09-2025 15:26:21,19-09-2025 15:26:22,1.076s,PASSED
+"DATA BINDING - {""(Default) maste..."":""Include/Data Files/MasterSchema.json"",""(Default) jsonF..."":""Include/Data Files/login_data.json""}",,,,,,,
+Start listener action : beforeTestCase,,,,19-09-2025 15:26:21,19-09-2025 15:26:21,0.008s,PASSED
+"credentialId = JsonFileReader.getJsonData(""postData"", ""CredentialId"", jsonFilePath)",,,,19-09-2025 15:26:21,19-09-2025 15:26:21,0.009s,PASSED
+"logInfo(""Sending GET request to /credentials/"" + credentialId)",,,,19-09-2025 15:26:21,19-09-2025 15:26:21,0.002s,PASSED
+"getResponse = ApiKeywords.sendGet(""/credentials/"" + credentialId)",,,,19-09-2025 15:26:21,19-09-2025 15:26:21,0.290s,PASSED
+"verifyResponseStatusCode(getResponse, 200)",,,,19-09-2025 15:26:21,19-09-2025 15:26:21,0.014s,PASSED
+"logInfo(""GET response status code verified as 200"")",,,,19-09-2025 15:26:21,19-09-2025 15:26:21,0.012s,PASSED
+getResponseBody = getResponse.getResponseBodyContent(),,,,19-09-2025 15:26:21,19-09-2025 15:26:21,0.008s,PASSED
+"validateJsonAgainstSchema(getResponseBody, JsonOutput.toJson(JsonFileReader.getSectionData(""postResponse"", masterSchemaFilePath)))",,,,19-09-2025 15:26:21,19-09-2025 15:26:21,0.039s,PASSED
+"markPassed(""GET response schema validation passed"")",,,,19-09-2025 15:26:21,19-09-2025 15:26:21,0.013s,PASSED
+"logInfo(""Sending POST request to /credentials/ to replace full credential"")",,,,19-09-2025 15:26:21,19-09-2025 15:26:21,0.006s,PASSED
+"postResponse = ApiKeywords.sendPost(""/credentials"", getResponseBody)",,,,19-09-2025 15:26:21,19-09-2025 15:26:22,0.291s,PASSED
+"verifyResponseStatusCode(postResponse, 201)",,,,19-09-2025 15:26:22,19-09-2025 15:26:22,0.006s,PASSED
+"validateJsonAgainstSchema(postResponse.getResponseBodyContent(), JsonOutput.toJson(JsonFileReader.getSectionData(""postResponse"", masterSchemaFilePath)))",,,,19-09-2025 15:26:22,19-09-2025 15:26:22,0.011s,PASSED
+"markPassed(""POST full credential successfully and schema validated"")",,,,19-09-2025 15:26:22,19-09-2025 15:26:22,0.001s,PASSED
+Start listener action : closeTheBrowser,,,,19-09-2025 15:26:22,19-09-2025 15:26:22,0.054s,PASSED

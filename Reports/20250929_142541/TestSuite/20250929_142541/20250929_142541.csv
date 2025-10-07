@@ -1,0 +1,12 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+TestSuite,,Contains the test cases of luma,,29-09-2025 14:25:46,29-09-2025 14:25:48,2.259s,ERROR
+,,,,,,,
+Test Cases/API_Testing/REST_API_Testing/TC04_getAccessToken_Api,,,,29-09-2025 14:25:47,29-09-2025 14:25:48,1.147s,ERROR
+"DATA BINDING - {""(Default) maste..."":""Include/Data Files/MasterSchema.json"",""(Default) jsonF..."":""Include/Data Files/login_data.json"",""(Default) apiBa..."":""apiBaseUrl"",""(Default) acces..."":""accessTokenUrl""}",,,,,,,
+Start listener action : beforeTestCase,,,,29-09-2025 14:25:47,29-09-2025 14:25:47,0.211s,PASSED
+"logInfo(""Reading payload from JSON file..."")",,,,29-09-2025 14:25:48,29-09-2025 14:25:48,0.014s,PASSED
+"payLoad = JsonOutput.toJson(JsonFileReader.getSectionData(""postPayload"", jsonFilePath))",,,,29-09-2025 14:25:48,29-09-2025 14:25:48,0.076s,PASSED
+"logInfo(""Payload prepared: "" + payLoad)",,,,29-09-2025 14:25:48,29-09-2025 14:25:48,0.007s,PASSED
+"logInfo(""Sending POST request to /login endpoint..."")",,,,29-09-2025 14:25:48,29-09-2025 14:25:48,0.008s,PASSED
+"baseUrl = GlobalAccessor.getProfileVariable(accsessToken, apiBaseUrl)",,,,29-09-2025 14:25:48,29-09-2025 14:25:48,0.031s,ERROR
+Start listener action : closeTheBrowser,,,,29-09-2025 14:25:48,29-09-2025 14:25:48,0.290s,PASSED

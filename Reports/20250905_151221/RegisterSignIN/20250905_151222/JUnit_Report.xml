@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="RegisterSignIN" time="70.864" tests="1" failures="0" errors="0">
+   <testsuite name="RegisterSignIN" tests="1" failures="0" errors="0" time="70.864" skipped="0" timestamp="2025-09-05T09:42:32.980Z" hostname="10835442 - 10.235.152.34" id="Test Suites/RegisterSignIN">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform"/>
+         <property name="logFolder" value="C:\\Users\\10835442\\Katalon Studio\\Luma\\Reports\\20250905_151221\\RegisterSignIN\\20250905_151222"/>
+         <property name="logFiles" value="C:\\Users\\10835442\\Katalon Studio\\Luma\\Reports\\20250905_151221\\RegisterSignIN\\20250905_151222\\console0.log, C:\\Users\\10835442\\Katalon Studio\\Luma\\Reports\\20250905_151221\\RegisterSignIN\\20250905_151222\\execution0.log"/>
+         <property name="attachments" value="C:\\Users\\10835442\\Katalon Studio\\Luma\\Reports\\20250905_151221\\RegisterSignIN\\20250905_151222\\1757065400828.png, C:\\Users\\10835442\\Katalon Studio\\Luma\\Reports\\20250905_151221\\RegisterSignIN\\20250905_151222\\1757065400983.png, C:\\Users\\10835442\\Katalon Studio\\Luma\\Reports\\20250905_151221\\RegisterSignIN\\20250905_151222\\1757065401205.png"/>
+         <property name="hostName" value="10835442 - 10.235.152.34"/>
+         <property name="os" value="Windows 11 64bit"/>
+         <property name="katalonVersion" value="10.3.1.0"/>
+         <property name="browser" value="Chrome 140.0.7339.81"/>
+         <property name="userFullName" value="Abinesh R"/>
+         <property name="hostAddress" value="10.235.152.34"/>
+         <property name="sessionId" value="d903e8ad705f4921a4b8d972e9b13715"/>
+         <property name="projectName" value="Luma"/>
+         <property name="seleniumVersion" value="4.28.1"/>
+         <property name="proxyInformation" value="ProxyInformation { proxyOption=NO_PROXY, proxyServerType=HTTP, username=, password=********, proxyServerAddress=, proxyServerPort=0, executionList=&quot;&quot;, isApplyToDesiredCapabilities=true }"/>
+         <property name="platform" value="Windows 11"/>
+      </properties>
+      <testcase name="Test Cases/CommentPost" time="20.826" classname="Test Cases/CommentPost" status="PASSED">
+         <properties>
+            <property name="data_binding"><![CDATA[{"(Default) secti...":"ArticlePage","(Default) filep...":"Include/Data Files/login_data.json"}]]></property>
+         </properties>
+         <system-out><![CDATA[05-09-2025T15:13:23 - [TEST_CASE][PASSED] - Test Cases/CommentPost: Test Cases/CommentPost
+
+05-09-2025T15:13:23 - [TEST_STEP][PASSED] - Start listener action : openTheBrowser: Current window maximized
+
+05-09-2025T15:13:23 - [TEST_STEP][PASSED] - openBrowser(baseUrl): Browser is opened with url: 'https://ecommerce-playground.lambdatest.io/'
+
+05-09-2025T15:13:23 - [MESSAGE][INFO] - Starting 'Chrome' driver
+
+05-09-2025T15:13:23 - [MESSAGE][INFO] - Action delay is set to 0 milliseconds
+
+05-09-2025T15:13:31 - [MESSAGE][PASSED] - Browser is opened with url: 'https://ecommerce-playground.lambdatest.io/'
+
+05-09-2025T15:13:31 - [TEST_STEP][PASSED] - maximizeWindow(): Current window maximized
+
+05-09-2025T15:13:31 - [MESSAGE][PASSED] - Current window maximized
+
+05-09-2025T15:13:31 - [TEST_STEP][PASSED] - ExtentManager.initReport("BlogCommentReport"): null
+
+05-09-2025T15:13:31 - [TEST_STEP][PASSED] - ExtentManager.createTest("Post Comment on Blog Article"): null
+
+05-09-2025T15:13:31 - [TEST_STEP][PASSED] - try: null
+
+05-09-2025T15:13:31 - [TEST_STEP][PASSED] - ExtentManager.logInfo("Navigating to the blog page"): null
+
+05-09-2025T15:13:31 - [TEST_STEP][PASSED] - pages.HomePage.clickOnBlog(findTestObject("Object Repository/Home_Page/Blogs"), "Blog"): Blog has been clicked
+
+05-09-2025T15:13:32 - [MESSAGE][PASSED] - Object 'Object Repository/Home_Page/Blogs' is visible
+
+05-09-2025T15:13:32 - [MESSAGE][INFO] - Clicking on: Blog
+
+05-09-2025T15:13:34 - [MESSAGE][PASSED] - Object: 'Object Repository/Home_Page/Blogs' is clicked on
+
+05-09-2025T15:13:34 - [MESSAGE][PASSED] - Blog has been clicked
+
+05-09-2025T15:13:34 - [TEST_STEP][PASSED] - ExtentManager.logPass("Navigated to the blog page"): null
+
+05-09-2025T15:13:34 - [TEST_STEP][PASSED] - try: null
+
+05-09-2025T15:13:34 - [TEST_STEP][PASSED] - ExtentManager.logInfo("Navigating to the article page"): null
+
+05-09-2025T15:13:34 - [TEST_STEP][PASSED] - pages.BlogPage.clickOnArticle(findTestObject("Object Repository/BlogsPage/Article")): Article has been clicked
+
+05-09-2025T15:13:35 - [MESSAGE][PASSED] - Object 'Object Repository/BlogsPage/Article' is visible
+
+05-09-2025T15:13:35 - [MESSAGE][INFO] - Clicking on: Article
+
+05-09-2025T15:13:38 - [MESSAGE][PASSED] - Object: 'Object Repository/BlogsPage/Article' is clicked on
+
+05-09-2025T15:13:38 - [MESSAGE][PASSED] - Article has been clicked
+
+05-09-2025T15:13:38 - [TEST_STEP][PASSED] - ExtentManager.logPass("Navigated to the article page"): null
+
+05-09-2025T15:13:38 - [TEST_STEP][PASSED] - try: null
+
+05-09-2025T15:13:38 - [TEST_STEP][PASSED] - ExtentManager.logInfo("Entering the details to post a comment"): null
+
+05-09-2025T15:13:38 - [TEST_STEP][PASSED] - articleFields = [["id":"input-name", "jsonKey":"name", "label":"Name"], ["id":"input-email", "jsonKey":"email", "label":"Email"]]: null
+
+05-09-2025T15:13:38 - [TEST_STEP][PASSED] - articleFields.each({ -> ... }): Email has been entered
+
+05-09-2025T15:13:38 - [MESSAGE][PASSED] - Object 'Object Repository/ArticlePage/dynamicInput' is visible
+
+05-09-2025T15:13:38 - [MESSAGE][INFO] - Entering data into: Name
+
+05-09-2025T15:13:39 - [MESSAGE][PASSED] - Text 'Amal' is set on object 'Object Repository/ArticlePage/dynamicInput'
+
+05-09-2025T15:13:39 - [MESSAGE][PASSED] - Name has been entered
+
+05-09-2025T15:13:39 - [MESSAGE][PASSED] - Object 'Object Repository/ArticlePage/dynamicInput' is visible
+
+05-09-2025T15:13:39 - [MESSAGE][INFO] - Entering data into: Email
+
+05-09-2025T15:13:40 - [MESSAGE][PASSED] - Text 'amal@gmail.com' is set on object 'Object Repository/ArticlePage/dynamicInput'
+
+05-09-2025T15:13:40 - [MESSAGE][PASSED] - Email has been entered
+
+05-09-2025T15:13:40 - [TEST_STEP][PASSED] - pages.ArticlePage.inputCommentOnArticle(findTestObject("Object Repository/ArticlePage/inputComment"), JsonFileReader.getJsonData(section, "comment", filepath)): Comment has been entered
+
+05-09-2025T15:13:41 - [MESSAGE][PASSED] - Object 'Object Repository/ArticlePage/inputComment' is visible
+
+05-09-2025T15:13:41 - [MESSAGE][INFO] - Entering data into: Comment
+
+05-09-2025T15:13:41 - [MESSAGE][PASSED] - Text 'This comment is to ensure that this testcase is currently running' is set on object 'Object Repository/ArticlePage/inputComment'
+
+05-09-2025T15:13:41 - [MESSAGE][PASSED] - Comment has been entered
+
+05-09-2025T15:13:41 - [TEST_STEP][PASSED] - pages.ArticlePage.clickOnPostCommentButton(findTestObject("Object Repository/ArticlePage/postCommentButton")): Post comment has been clicked
+
+05-09-2025T15:13:42 - [MESSAGE][PASSED] - Object 'Object Repository/ArticlePage/postCommentButton' is visible
+
+05-09-2025T15:13:42 - [MESSAGE][INFO] - Clicking on: Post comment
+
+05-09-2025T15:13:42 - [MESSAGE][PASSED] - Object: 'Object Repository/ArticlePage/postCommentButton' is clicked on
+
+05-09-2025T15:13:42 - [MESSAGE][PASSED] - Post comment has been clicked
+
+05-09-2025T15:13:42 - [TEST_STEP][PASSED] - ExtentManager.logPass("Details for posting a comment have been entered"): null
+
+05-09-2025T15:13:42 - [TEST_STEP][PASSED] - try: null
+
+05-09-2025T15:13:42 - [TEST_STEP][PASSED] - ExtentManager.logInfo("Verifying Success Message"): null
+
+05-09-2025T15:13:42 - [TEST_STEP][PASSED] - pages.ArticlePage.verifySuccessText(findTestObject("Object Repository/ArticlePage/successMessage"), JsonFileReader.getJsonData(section, "successMessage", filepath)): Success Text has been verified
+
+05-09-2025T15:13:43 - [MESSAGE][PASSED] - Object 'Object Repository/ArticlePage/successMessage' is visible
+
+05-09-2025T15:13:43 - [MESSAGE][INFO] - Verifying text for: Success Text
+
+05-09-2025T15:13:43 - [MESSAGE][PASSED] - Actual text and expected text of test object 'Object Repository/ArticlePage/successMessage' are matched.
+
+05-09-2025T15:13:43 - [MESSAGE][PASSED] - Success Text has been verified
+
+05-09-2025T15:13:43 - [TEST_STEP][PASSED] - ExtentManager.logPass("Verified Success Message"): null
+
+05-09-2025T15:13:43 - [TEST_STEP][PASSED] - ExtentManager.flushReport(): null
+
+05-09-2025T15:13:43 - [TEST_STEP][PASSED] - Start listener action : closeTheBrowser: Browser is closed
+
+05-09-2025T15:13:43 - [TEST_STEP][PASSED] - closeBrowser(): Browser is closed
+
+05-09-2025T15:13:43 - [MESSAGE][PASSED] - Browser is closed]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[05-09-2025T15:12:32 - [TEST_SUITE][PASSED] - RegisterSignIN: null]]></system-out>
+      <system-err><![CDATA[]]></system-err>
+   </testsuite>
+</testsuites>

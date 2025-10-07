@@ -1,0 +1,34 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+DependentTestcase,,,,14-09-2025 09:43:14,14-09-2025 09:43:22,7.528s,ERROR
+,,,,,,,
+Test Cases/TC_SignIn,,,,14-09-2025 09:43:15,14-09-2025 09:43:20,4.377s,ERROR
+"DATA BINDING - {""(Default) secti..."":""loginPage"",""(Default) filep..."":""Include/Data Files/login_data.json""}",,,,,,,
+Start listener action : beforeTestCase,,,,14-09-2025 09:43:15,14-09-2025 09:43:16,0.407s,ERROR
+try,,,,14-09-2025 09:43:16,14-09-2025 09:43:19,2.361s,ERROR
+catch (Exception e),,,,14-09-2025 09:43:19,14-09-2025 09:43:19,0.224s,FAILED
+Finally,,,,14-09-2025 09:43:19,14-09-2025 09:43:20,0.700s,PASSED
+Start listener action : closeTheBrowser,,,,14-09-2025 09:43:20,14-09-2025 09:43:20,0.020s,PASSED
+,,,,,,,
+Test Cases/TC_ChangePassword,,This testcase checks the change password functionality.,,14-09-2025 09:43:20,14-09-2025 09:43:22,2.016s,ERROR
+"DATA BINDING - {""(Default) secti..."":""changePasswordPage"",""(Default) filep..."":""Include/Data Files/login_data.json""}",,,,,,,
+Start listener action : beforeTestCase,,,,14-09-2025 09:43:20,14-09-2025 09:43:20,0.136s,ERROR
+"ExtentManager.initReport(""ChangePasswordReport"")",,,,14-09-2025 09:43:20,14-09-2025 09:43:20,0.010s,PASSED
+"ExtentManager.createTest(""Change Password Test"")",,,,14-09-2025 09:43:20,14-09-2025 09:43:20,0.005s,PASSED
+try,,,,14-09-2025 09:43:20,14-09-2025 09:43:21,0.695s,FAILED
+catch (Exception e),,,,14-09-2025 09:43:21,14-09-2025 09:43:21,0.014s,PASSED
+try,,,,14-09-2025 09:43:21,14-09-2025 09:43:21,0.060s,ERROR
+catch (Exception e),,,,14-09-2025 09:43:21,14-09-2025 09:43:21,0.011s,PASSED
+try,,,,14-09-2025 09:43:21,14-09-2025 09:43:21,0.096s,ERROR
+catch (Exception e),,,,14-09-2025 09:43:21,14-09-2025 09:43:21,0.015s,PASSED
+try,,,,14-09-2025 09:43:21,14-09-2025 09:43:21,0.054s,ERROR
+catch (Exception e),,,,14-09-2025 09:43:21,14-09-2025 09:43:21,0.011s,PASSED
+try,,,,14-09-2025 09:43:21,14-09-2025 09:43:21,0.068s,PASSED
+try,,,,14-09-2025 09:43:21,14-09-2025 09:43:21,0.092s,ERROR
+catch (Exception e),,,,14-09-2025 09:43:21,14-09-2025 09:43:21,0.008s,PASSED
+try,,,,14-09-2025 09:43:21,14-09-2025 09:43:21,0.046s,ERROR
+catch (Exception e),,,,14-09-2025 09:43:21,14-09-2025 09:43:21,0.019s,PASSED
+try,,,,14-09-2025 09:43:21,14-09-2025 09:43:22,0.039s,ERROR
+catch (Exception e),,,,14-09-2025 09:43:22,14-09-2025 09:43:22,0.006s,PASSED
+try,,,,14-09-2025 09:43:22,14-09-2025 09:43:22,0.050s,PASSED
+ExtentManager.flushReport(),,,,14-09-2025 09:43:22,14-09-2025 09:43:22,0.044s,ERROR
+Start listener action : closeTheBrowser,,,,14-09-2025 09:43:22,14-09-2025 09:43:22,0.021s,PASSED

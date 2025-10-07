@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="RegisterSignIN" time="21.468" tests="1" failures="0" errors="0">
+   <testsuite name="RegisterSignIN" tests="1" failures="0" errors="0" time="21.468" skipped="0" timestamp="2025-10-06T10:08:06.158Z" hostname="10835442 - 192.168.1.3" id="Test Suites/RegisterSignIN">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform"/>
+         <property name="logFolder" value="C:\\Users\\10835442\\Katalon Studio\\Luma\\Reports\\20251006_153750\\RegisterSignIN\\20251006_153801"/>
+         <property name="logFiles" value="C:\\Users\\10835442\\Katalon Studio\\Luma\\Reports\\20251006_153750\\RegisterSignIN\\20251006_153801\\console0.log, C:\\Users\\10835442\\Katalon Studio\\Luma\\Reports\\20251006_153750\\RegisterSignIN\\20251006_153801\\execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="10835442 - 192.168.1.3"/>
+         <property name="os" value="Windows 11 64bit"/>
+         <property name="katalonVersion" value="10.3.2.0"/>
+         <property name="browser" value="Chrome 141.0.7390.55"/>
+         <property name="userFullName" value="abinesh rajendran"/>
+         <property name="hostAddress" value="192.168.1.3"/>
+         <property name="sessionId" value="8cfd7c0133bde0ba22829653b55326af"/>
+         <property name="projectName" value="Luma"/>
+         <property name="seleniumVersion" value="4.28.1"/>
+         <property name="proxyInformation" value="ProxyInformation { proxyOption=NO_PROXY, proxyServerType=HTTP, username=, password=********, proxyServerAddress=, proxyServerPort=0, executionList=&quot;&quot;, isApplyToDesiredCapabilities=true }"/>
+         <property name="platform" value="Windows 11"/>
+      </properties>
+      <testcase name="Test Cases/TC_SignIn" time="20.864" classname="Test Cases/TC_SignIn" status="PASSED">
+         <properties>
+            <property name="data_binding"><![CDATA[{"(Default) secti...":"loginPage","(Default) filep...":"Include/Data Files/login_data.json"}]]></property>
+         </properties>
+         <system-out><![CDATA[06-10-2025T15:38:06 - [TEST_CASE][PASSED] - Test Cases/TC_SignIn: Test Cases/TC_SignIn
+
+06-10-2025T15:38:06 - [TEST_STEP][PASSED] - Start listener action : beforeTestCase: Current window maximized
+
+06-10-2025T15:38:06 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+06-10-2025T15:38:06 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+06-10-2025T15:38:06 - [TEST_STEP][PASSED] - if (toLowerCase().endsWith("api")): null
+
+06-10-2025T15:38:06 - [TEST_STEP][PASSED] - dependencyMap = DependencyHandler.getDependencyMap(): null
+
+06-10-2025T15:38:07 - [TEST_STEP][PASSED] - if (dependencyMap.containsKey(testCaseName)): null
+
+06-10-2025T15:38:07 - [TEST_STEP][PASSED] - baseTestCase = dependencyMap[testCaseName]: null
+
+06-10-2025T15:38:07 - [TEST_STEP][PASSED] - try: null
+
+06-10-2025T15:38:07 - [TEST_STEP][PASSED] - DependencyHandler.checkDependency(baseTestCase, testCaseName): null
+
+06-10-2025T15:38:07 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+06-10-2025T15:38:07 - [MESSAGE][INFO] - Starting 'Chrome' driver
+
+06-10-2025T15:38:07 - [MESSAGE][INFO] - Action delay is set to 0 milliseconds
+
+06-10-2025T15:38:10 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+06-10-2025T15:38:10 - [TEST_STEP][PASSED] - navigateToUrl(baseUrl): Navigate to 'https://ecommerce-playground.lambdatest.io/' successfully
+
+06-10-2025T15:38:16 - [MESSAGE][PASSED] - Navigate to 'https://ecommerce-playground.lambdatest.io/' successfully
+
+06-10-2025T15:38:16 - [TEST_STEP][PASSED] - maximizeWindow(): Current window maximized
+
+06-10-2025T15:38:16 - [MESSAGE][PASSED] - Current window maximized
+
+06-10-2025T15:38:17 - [TEST_STEP][PASSED] - try: Verified My Account
+
+06-10-2025T15:38:17 - [TEST_STEP][PASSED] - logInfo("Navigating to the sign in page"): Navigating to the sign in page
+
+06-10-2025T15:38:17 - [MESSAGE][INFO] - Navigating to the sign in page
+
+06-10-2025T15:38:17 - [TEST_STEP][PASSED] - pages.HomePage.navigateToAccountPage(STOP_ON_FAILURE): ✅ login button clicked successfully
+
+06-10-2025T15:38:17 - [MESSAGE][PASSED] - Object 'Object Repository/HomePage/my_Account_Button' is visible
+
+06-10-2025T15:38:17 - [MESSAGE][INFO] - ℹ️ Hovering over: my account
+
+06-10-2025T15:38:17 - [MESSAGE][PASSED] - Object: 'Object Repository/HomePage/my_Account_Button' is hovered
+
+06-10-2025T15:38:17 - [MESSAGE][PASSED] - ✅ my account hovered successfully
+
+06-10-2025T15:38:18 - [MESSAGE][PASSED] - Object 'Object Repository/HomePage/login_Button' is visible
+
+06-10-2025T15:38:18 - [MESSAGE][INFO] - ℹ️ Clicking on: login button
+
+06-10-2025T15:38:20 - [MESSAGE][PASSED] - Object: 'Object Repository/HomePage/login_Button' is clicked on
+
+06-10-2025T15:38:20 - [MESSAGE][PASSED] - ✅ login button clicked successfully
+
+06-10-2025T15:38:20 - [TEST_STEP][PASSED] - markPassed("Navigated to the sign in page"): Navigated to the sign in page
+
+06-10-2025T15:38:20 - [MESSAGE][PASSED] - Navigated to the sign in page
+
+06-10-2025T15:38:20 - [TEST_STEP][PASSED] - logInfo("Signing into the account"): Signing into the account
+
+06-10-2025T15:38:20 - [MESSAGE][INFO] - Signing into the account
+
+06-10-2025T15:38:20 - [TEST_STEP][PASSED] - loginFields = [["id":"input-email", "jsonKey":"email"], ["id":"input-password", "jsonKey":"password"]]: null
+
+06-10-2025T15:38:20 - [TEST_STEP][PASSED] - loginFields.each({ -> ... }): ✅ password entered successfully
+
+06-10-2025T15:38:21 - [MESSAGE][PASSED] - Object 'Object Repository/LoginPage/generic_Input' is visible
+
+06-10-2025T15:38:21 - [MESSAGE][INFO] - ℹ️ Entering data into: email
+
+06-10-2025T15:38:21 - [MESSAGE][PASSED] - Text 'alicesmith.38@gmail.com' is set on object 'Object Repository/LoginPage/generic_Input'
+
+06-10-2025T15:38:21 - [MESSAGE][PASSED] - ✅ email entered successfully
+
+06-10-2025T15:38:22 - [MESSAGE][PASSED] - Object 'Object Repository/LoginPage/generic_Input' is visible
+
+06-10-2025T15:38:22 - [MESSAGE][INFO] - ℹ️ Entering data into: password
+
+06-10-2025T15:38:22 - [MESSAGE][PASSED] - Text 'Password@123' is set on object 'Object Repository/LoginPage/generic_Input'
+
+06-10-2025T15:38:22 - [MESSAGE][PASSED] - ✅ password entered successfully
+
+06-10-2025T15:38:22 - [TEST_STEP][PASSED] - pages.LoginPage.clickOnLoginButton(findTestObject("Object Repository/LoginPage/Login_button"), STOP_ON_FAILURE): ✅ Login button clicked successfully
+
+06-10-2025T15:38:23 - [MESSAGE][PASSED] - Object 'Object Repository/LoginPage/Login_button' is visible
+
+06-10-2025T15:38:23 - [MESSAGE][INFO] - ℹ️ Clicking on: Login button
+
+06-10-2025T15:38:23 - [MESSAGE][PASSED] - Object: 'Object Repository/LoginPage/Login_button' is clicked on
+
+06-10-2025T15:38:23 - [MESSAGE][PASSED] - ✅ Login button clicked successfully
+
+06-10-2025T15:38:23 - [TEST_STEP][PASSED] - markPassed("Signed into the account"): Signed into the account
+
+06-10-2025T15:38:23 - [MESSAGE][PASSED] - Signed into the account
+
+06-10-2025T15:38:23 - [TEST_STEP][PASSED] - logInfo("Verifying My Account"): Verifying My Account
+
+06-10-2025T15:38:23 - [MESSAGE][INFO] - Verifying My Account
+
+06-10-2025T15:38:23 - [TEST_STEP][PASSED] - pages.AccountPage.verifyMyAccount(findTestObject("Object Repository/AccountPage/my_Account_verification"), JsonFileReader.getJsonData(section, "verification_text", jsonDataFilePath), STOP_ON_FAILURE): ✅ Verify My account verified successfully
+
+06-10-2025T15:38:26 - [MESSAGE][PASSED] - Object 'Object Repository/AccountPage/my_Account_verification' is visible
+
+06-10-2025T15:38:26 - [MESSAGE][INFO] - ℹ️ Verifying text for: Verify My account
+
+06-10-2025T15:38:27 - [MESSAGE][PASSED] - Actual text and expected text of test object 'Object Repository/AccountPage/my_Account_verification' are matched.
+
+06-10-2025T15:38:27 - [MESSAGE][PASSED] - ✅ Verify My account verified successfully
+
+06-10-2025T15:38:27 - [TEST_STEP][PASSED] - markPassed("Verified My Account"): Verified My Account
+
+06-10-2025T15:38:27 - [MESSAGE][PASSED] - Verified My Account
+
+06-10-2025T15:38:27 - [TEST_STEP][PASSED] - Start listener action : closeTheBrowser: Browser closed successfully.
+
+06-10-2025T15:38:27 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+06-10-2025T15:38:27 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+06-10-2025T15:38:27 - [TEST_STEP][PASSED] - testCaseStatus = testCaseContext.getTestCaseStatus(): null
+
+06-10-2025T15:38:27 - [TEST_STEP][PASSED] - println(testCaseStatus): null
+
+06-10-2025T15:38:27 - [TEST_STEP][PASSED] - StatusMap = DependencyHandler.getStatusMap(): null
+
+06-10-2025T15:38:27 - [TEST_STEP][PASSED] - if (StatusMap.containsKey(testCaseName)): Saved updated JSON data to file: Include\Data Files\JSON_DATA.json
+
+06-10-2025T15:38:27 - [TEST_STEP][PASSED] - JsonFileReader.updateJsonValue("executionStatus", testCaseName, testCaseStatus, jsonDataFilePath): Saved updated JSON data to file: Include\Data Files\JSON_DATA.json
+
+06-10-2025T15:38:27 - [MESSAGE][INFO] - Updated 'TC_SignIn' in 'executionStatus' section to 'PASSED'.
+
+06-10-2025T15:38:27 - [MESSAGE][INFO] - Saved updated JSON data to file: Include\Data Files\JSON_DATA.json
+
+06-10-2025T15:38:27 - [TEST_STEP][PASSED] - try: Browser closed successfully.
+
+06-10-2025T15:38:27 - [TEST_STEP][PASSED] - driver = getWebDriver(): null
+
+06-10-2025T15:38:27 - [TEST_STEP][PASSED] - if (driver != null): Browser closed successfully.
+
+06-10-2025T15:38:27 - [TEST_STEP][PASSED] - closeBrowser(): Browser is closed
+
+06-10-2025T15:38:27 - [MESSAGE][PASSED] - Browser is closed
+
+06-10-2025T15:38:27 - [TEST_STEP][PASSED] - logInfo("Browser closed successfully."): Browser closed successfully.
+
+06-10-2025T15:38:27 - [MESSAGE][INFO] - Browser closed successfully.]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[06-10-2025T15:38:06 - [TEST_SUITE][PASSED] - RegisterSignIN: null]]></system-out>
+      <system-err><![CDATA[]]></system-err>
+   </testsuite>
+</testsuites>

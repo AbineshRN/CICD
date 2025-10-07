@@ -1,0 +1,150 @@
+2025-09-19 14:58:00.389 INFO  c.k.katalon.core.main.TestSuiteExecutor  - START Test Suites/API_AccessToken
+2025-09-19 14:58:00.529 INFO  c.k.katalon.core.main.TestSuiteExecutor  - userFullName = Abinesh R
+2025-09-19 14:58:00.531 INFO  c.k.katalon.core.main.TestSuiteExecutor  - projectName = Luma
+2025-09-19 14:58:00.532 INFO  c.k.katalon.core.main.TestSuiteExecutor  - hostName = 10835442 - 10.235.155.176
+2025-09-19 14:58:00.533 INFO  c.k.katalon.core.main.TestSuiteExecutor  - os = Windows 11 64bit
+2025-09-19 14:58:00.533 INFO  c.k.katalon.core.main.TestSuiteExecutor  - hostAddress = 10.235.155.176
+2025-09-19 14:58:00.534 INFO  c.k.katalon.core.main.TestSuiteExecutor  - katalonVersion = 10.3.1.0
+2025-09-19 14:58:01.385 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-09-19 14:58:01.385 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/API_Testing/TC04_getAccessToken_Api
+2025-09-19 14:58:01.509 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) jsonFilePath = Include/Data Files/login_data.json
+2025-09-19 14:58:01.540 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) masterSchemaFilePath = Include/Data Files/MasterSchema.json
+ℹ️ Skipping browser launch for API test case: TC04_getAccessToken_Api
+2025-09-19 14:58:01.933 DEBUG testcase.TC04_getAccessToken_Api         - 1: logInfo("Reading payload from JSON file...")
+2025-09-19 14:58:01.945 INFO  com.kms.katalon.core.util.KeywordUtil    - Reading payload from JSON file...
+2025-09-19 14:58:01.948 DEBUG testcase.TC04_getAccessToken_Api         - 2: payLoad = JsonOutput.toJson(JsonFileReader.getSectionData("postPayload", jsonFilePath))
+2025-09-19 14:58:02.056 DEBUG testcase.TC04_getAccessToken_Api         - 3: logInfo("Payload prepared: " + payLoad)
+2025-09-19 14:58:02.069 INFO  com.kms.katalon.core.util.KeywordUtil    - Payload prepared: {"username":"emilys","password":"emilyspass","expiresInMins":30}
+2025-09-19 14:58:02.073 DEBUG testcase.TC04_getAccessToken_Api         - 4: logInfo("Sending POST request to /login endpoint...")
+2025-09-19 14:58:02.076 INFO  com.kms.katalon.core.util.KeywordUtil    - Sending POST request to /login endpoint...
+2025-09-19 14:58:02.080 DEBUG testcase.TC04_getAccessToken_Api         - 5: response = ApiKeywords.sendPost("login", payLoad)
+2025-09-19 14:58:04.826 INFO  c.k.k.core.webservice.common.HarLogger   - HAR: C:\Users\10835442\Katalon Studio\Luma\Reports\20250919_145754\API_AccessToken\20250919_145754\requests\main\POST_Generic_0.har
+2025-09-19 14:58:04.963 DEBUG testcase.TC04_getAccessToken_Api         - 6: logInfo("Response received with status: " + response.getStatusCode())
+2025-09-19 14:58:04.976 INFO  com.kms.katalon.core.util.KeywordUtil    - Response received with status: 200
+2025-09-19 14:58:04.981 DEBUG testcase.TC04_getAccessToken_Api         - 7: responseBodyContent = response.getResponseBodyContent()
+2025-09-19 14:58:04.986 DEBUG testcase.TC04_getAccessToken_Api         - 8: logInfo("Response body content:
+" + responseBodyContent)
+2025-09-19 14:58:04.989 INFO  com.kms.katalon.core.util.KeywordUtil    - Response body content:
+{"accessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3NTgyNzQwODQsImV4cCI6MTc1ODI3NTg4NH0.5KAvsWCGMiLsoTuHK9flCeMn1vn6vcKsAoKEy8-l19I","refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3NTgyNzQwODQsImV4cCI6MTc2MDg2NjA4NH0.zO7KTZym5q2NbI8W0lLdOihZZURmhVHPWKpTQYldKvQ","id":1,"username":"emilys","email":"emily.johnson@x.dummyjson.com","firstName":"Emily","lastName":"Johnson","gender":"female","image":"https://dummyjson.com/icon/emilys/128"}
+2025-09-19 14:58:04.992 DEBUG testcase.TC04_getAccessToken_Api         - 9: logInfo("Validating response against accessTokenSchema...")
+2025-09-19 14:58:04.997 INFO  com.kms.katalon.core.util.KeywordUtil    - Validating response against accessTokenSchema...
+2025-09-19 14:58:05.002 DEBUG testcase.TC04_getAccessToken_Api         - 10: schemaMap = JsonFileReader.getSectionData("accessTokenSchema", masterSchemaFilePath)
+2025-09-19 14:58:05.015 DEBUG testcase.TC04_getAccessToken_Api         - 11: schemaString = JsonOutput.toJson(schemaMap)
+2025-09-19 14:58:05.024 DEBUG testcase.TC04_getAccessToken_Api         - 12: validateJsonAgainstSchema(responseBodyContent, schemaString)
+2025-09-19 14:58:05.189 DEBUG testcase.TC04_getAccessToken_Api         - 13: logInfo("Schema validation passed.")
+2025-09-19 14:58:05.191 INFO  com.kms.katalon.core.util.KeywordUtil    - Schema validation passed.
+2025-09-19 14:58:05.194 DEBUG testcase.TC04_getAccessToken_Api         - 14: parsedResponse = JsonSlurper().parseText(responseBodyContent)
+2025-09-19 14:58:05.201 DEBUG testcase.TC04_getAccessToken_Api         - 15: jwtToken = accessToken
+2025-09-19 14:58:05.205 DEBUG testcase.TC04_getAccessToken_Api         - 16: logInfo("Extracted JWT Token: " + jwtToken)
+2025-09-19 14:58:05.208 INFO  com.kms.katalon.core.util.KeywordUtil    - Extracted JWT Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3NTgyNzQwODQsImV4cCI6MTc1ODI3NTg4NH0.5KAvsWCGMiLsoTuHK9flCeMn1vn6vcKsAoKEy8-l19I
+2025-09-19 14:58:05.209 DEBUG testcase.TC04_getAccessToken_Api         - 17: logInfo("Storing JWT token in DummyJson section of JSON file...")
+2025-09-19 14:58:05.213 INFO  com.kms.katalon.core.util.KeywordUtil    - Storing JWT token in DummyJson section of JSON file...
+2025-09-19 14:58:05.215 DEBUG testcase.TC04_getAccessToken_Api         - 18: JsonFileReader.appendToJsonSection(jsonFilePath, "DummyJson", "accessToken", jwtToken)
+2025-09-19 14:58:05.270 DEBUG testcase.TC04_getAccessToken_Api         - 19: logInfo("Token stored successfully.")
+2025-09-19 14:58:05.273 INFO  com.kms.katalon.core.util.KeywordUtil    - Token stored successfully.
+PASSED
+⚠️ Error while closing browser: Browser is not opened
+Build info: version: '4.28.1', revision: '73f5ad48a2'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: driver.version: unknown
+2025-09-19 14:58:05.490 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/API_Testing/TC04_getAccessToken_Api
+2025-09-19 14:58:05.503 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-09-19 14:58:05.503 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/API_Testing/TC06_currentUserDetail_positive_Api
+2025-09-19 14:58:05.574 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) jsonFilePath = Include/Data Files/login_data.json
+ℹ️ Skipping browser launch for API test case: TC06_currentUserDetail_positive_Api
+2025-09-19 14:58:05.791 DEBUG t.TC06_currentUserDetail_positive_Api    - 1: logInfo("Reading access token from JSON file...")
+2025-09-19 14:58:05.792 INFO  com.kms.katalon.core.util.KeywordUtil    - Reading access token from JSON file...
+2025-09-19 14:58:05.798 DEBUG t.TC06_currentUserDetail_positive_Api    - 2: accessToken = JsonFileReader.getJsonData("DummyJson", "accessToken", jsonFilePath)
+2025-09-19 14:58:05.809 DEBUG t.TC06_currentUserDetail_positive_Api    - 3: logInfo("Access token retrieved: " + accessToken)
+2025-09-19 14:58:05.815 INFO  com.kms.katalon.core.util.KeywordUtil    - Access token retrieved: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3NTgyNzQwODQsImV4cCI6MTc1ODI3NTg4NH0.5KAvsWCGMiLsoTuHK9flCeMn1vn6vcKsAoKEy8-l19I
+2025-09-19 14:58:05.817 DEBUG t.TC06_currentUserDetail_positive_Api    - 4: headers = ["Authorization":accessToken, "Content-Type":"application/json"]
+2025-09-19 14:58:05.821 DEBUG t.TC06_currentUserDetail_positive_Api    - 5: logInfo("Headers prepared: " + headers.toString())
+2025-09-19 14:58:05.826 INFO  com.kms.katalon.core.util.KeywordUtil    - Headers prepared: [Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3NTgyNzQwODQsImV4cCI6MTc1ODI3NTg4NH0.5KAvsWCGMiLsoTuHK9flCeMn1vn6vcKsAoKEy8-l19I, Content-Type:application/json]
+2025-09-19 14:58:05.831 DEBUG t.TC06_currentUserDetail_positive_Api    - 6: logInfo("Sending GET request to /me endpoint...")
+2025-09-19 14:58:05.834 INFO  com.kms.katalon.core.util.KeywordUtil    - Sending GET request to /me endpoint...
+2025-09-19 14:58:05.842 DEBUG t.TC06_currentUserDetail_positive_Api    - 7: response = ApiKeywords.sendGet("me", headers)
+2025-09-19 14:58:06.250 INFO  c.k.k.core.webservice.common.HarLogger   - HAR: C:\Users\10835442\Katalon Studio\Luma\Reports\20250919_145754\API_AccessToken\20250919_145754\requests\main\GET_Generic_1.har
+2025-09-19 14:58:06.276 DEBUG t.TC06_currentUserDetail_positive_Api    - 8: logInfo("Response received with status: " + response.getStatusCode())
+2025-09-19 14:58:06.288 INFO  com.kms.katalon.core.util.KeywordUtil    - Response received with status: 200
+2025-09-19 14:58:06.296 DEBUG t.TC06_currentUserDetail_positive_Api    - 9: parsedResponse = JsonSlurper().parseText(response.getResponseBodyContent())
+2025-09-19 14:58:06.308 DEBUG t.TC06_currentUserDetail_positive_Api    - 10: logInfo("Parsed response: " + parsedResponse.toString())
+2025-09-19 14:58:06.323 INFO  com.kms.katalon.core.util.KeywordUtil    - Parsed response: {id=1, firstName=Emily, lastName=Johnson, maidenName=Smith, age=28, gender=female, email=emily.johnson@x.dummyjson.com, phone=+81 965-431-3024, username=emilys, password=emilyspass, birthDate=1996-5-30, image=https://dummyjson.com/icon/emilys/128, bloodGroup=O-, height=193.24, weight=63.16, eyeColor=Green, hair={color=Brown, type=Curly}, ip=42.48.100.32, address={address=626 Main Street, city=Phoenix, state=Mississippi, stateCode=MS, postalCode=29112, coordinates={lat=-77.16213, lng=-92.084824}, country=United States}, macAddress=47:fa:41:18:ec:eb, university=University of Wisconsin--Madison, bank={cardExpire=03/26, cardNumber=9289760655481815, cardType=Elo, currency=CNY, iban=YPUXISOBI7TTHPK2BR3HAIXL}, company={department=Engineering, name=Dooley, Kozey and Cronin, title=Sales Manager, address={address=263 Tenth Street, city=San Francisco, state=Wisconsin, stateCode=WI, postalCode=37657, coordinates={lat=71.814525, lng=-161.150263}, country=United States}}, ein=977-175, ssn=900-590-289, userAgent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/537.36, crypto={coin=Bitcoin, wallet=0xb9fc2fe63b2a6c003f1c324c3bfa53259162181a, network=Ethereum (ERC20)}, role=admin}
+2025-09-19 14:58:06.331 DEBUG t.TC06_currentUserDetail_positive_Api    - 11: logInfo("Storing firstName in apiResponse section of JSON file...")
+2025-09-19 14:58:06.340 INFO  com.kms.katalon.core.util.KeywordUtil    - Storing firstName in apiResponse section of JSON file...
+2025-09-19 14:58:06.348 DEBUG t.TC06_currentUserDetail_positive_Api    - 12: JsonFileReader.appendToJsonSection(jsonFilePath, "apiResonse", "firstName", firstName)
+2025-09-19 14:58:06.375 DEBUG t.TC06_currentUserDetail_positive_Api    - 13: logInfo("firstName stored successfully: " + firstName)
+2025-09-19 14:58:06.386 INFO  com.kms.katalon.core.util.KeywordUtil    - firstName stored successfully: Emily
+2025-09-19 14:58:06.389 DEBUG t.TC06_currentUserDetail_positive_Api    - 14: logInfo("Storing full response under userData section...")
+2025-09-19 14:58:06.391 INFO  com.kms.katalon.core.util.KeywordUtil    - Storing full response under userData section...
+2025-09-19 14:58:06.394 DEBUG t.TC06_currentUserDetail_positive_Api    - 15: JsonFileReader.storeApiResponse("userData", response, jsonFilePath)
+2025-09-19 14:58:06.441 DEBUG t.TC06_currentUserDetail_positive_Api    - 16: logInfo("Full response stored successfully.")
+2025-09-19 14:58:06.443 INFO  com.kms.katalon.core.util.KeywordUtil    - Full response stored successfully.
+PASSED
+⚠️ Error while closing browser: Browser is not opened
+Build info: version: '4.28.1', revision: '73f5ad48a2'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: driver.version: unknown
+2025-09-19 14:58:06.466 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/API_Testing/TC06_currentUserDetail_positive_Api
+2025-09-19 14:58:06.472 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-09-19 14:58:06.472 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/API_Testing/TC05_RefereshAccessToken_Api
+2025-09-19 14:58:06.493 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) jsonFilePath = Include/Data Files/login_data.json
+ℹ️ Skipping browser launch for API test case: TC05_RefereshAccessToken_Api
+2025-09-19 14:58:06.645 DEBUG testcase.TC05_RefereshAccessToken_Api    - 1: logInfo("Preparing headers for refresh token request...")
+2025-09-19 14:58:06.647 INFO  com.kms.katalon.core.util.KeywordUtil    - Preparing headers for refresh token request...
+2025-09-19 14:58:06.650 DEBUG testcase.TC05_RefereshAccessToken_Api    - 2: headers = ["Content-Type":"application/json"]
+2025-09-19 14:58:06.652 DEBUG testcase.TC05_RefereshAccessToken_Api    - 3: logInfo("Reading refresh payload from JSON file...")
+2025-09-19 14:58:06.653 INFO  com.kms.katalon.core.util.KeywordUtil    - Reading refresh payload from JSON file...
+2025-09-19 14:58:06.654 DEBUG testcase.TC05_RefereshAccessToken_Api    - 4: payLoad = JsonOutput.toJson(JsonFileReader.getSectionData("refreshData", jsonFilePath))
+2025-09-19 14:58:06.658 DEBUG testcase.TC05_RefereshAccessToken_Api    - 5: logInfo("Payload prepared: " + payLoad)
+2025-09-19 14:58:06.659 INFO  com.kms.katalon.core.util.KeywordUtil    - Payload prepared: {"refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3NTgxODg0NDksImV4cCI6MTc1ODE5MDI0OX0.DLmFfVhjYw1LLvTslkDHBCohcrM2O9LF2ujqAWm36EQ","expiresInMins":30}
+2025-09-19 14:58:06.661 DEBUG testcase.TC05_RefereshAccessToken_Api    - 6: logInfo("Sending POST request to /refresh endpoint...")
+2025-09-19 14:58:06.663 INFO  com.kms.katalon.core.util.KeywordUtil    - Sending POST request to /refresh endpoint...
+2025-09-19 14:58:06.664 DEBUG testcase.TC05_RefereshAccessToken_Api    - 7: refreshResponse = ApiKeywords.sendPost("refresh", payLoad, headers)
+2025-09-19 14:58:07.013 INFO  c.k.k.core.webservice.common.HarLogger   - HAR: C:\Users\10835442\Katalon Studio\Luma\Reports\20250919_145754\API_AccessToken\20250919_145754\requests\main\POST_Generic_2.har
+2025-09-19 14:58:07.028 DEBUG testcase.TC05_RefereshAccessToken_Api    - 8: logInfo("Response received with status: " + refreshResponse.getStatusCode())
+2025-09-19 14:58:07.035 INFO  com.kms.katalon.core.util.KeywordUtil    - Response received with status: 403
+2025-09-19 14:58:07.040 DEBUG testcase.TC05_RefereshAccessToken_Api    - 9: parsedResponse = JsonSlurper().parseText(refreshResponse.getResponseBodyContent())
+2025-09-19 14:58:07.050 DEBUG testcase.TC05_RefereshAccessToken_Api    - 10: logInfo("Parsed response: " + parsedResponse.toString())
+2025-09-19 14:58:07.057 INFO  com.kms.katalon.core.util.KeywordUtil    - Parsed response: {message=Invalid refresh token}
+2025-09-19 14:58:07.062 DEBUG testcase.TC05_RefereshAccessToken_Api    - 11: jwtToken = accessToken
+2025-09-19 14:58:07.075 DEBUG testcase.TC05_RefereshAccessToken_Api    - 12: logInfo("Extracted new JWT Token: " + jwtToken)
+2025-09-19 14:58:07.120 INFO  com.kms.katalon.core.util.KeywordUtil    - Extracted new JWT Token: null
+2025-09-19 14:58:07.121 DEBUG testcase.TC05_RefereshAccessToken_Api    - 13: logInfo("Storing new JWT token in DummyJson section of JSON file...")
+2025-09-19 14:58:07.123 INFO  com.kms.katalon.core.util.KeywordUtil    - Storing new JWT token in DummyJson section of JSON file...
+2025-09-19 14:58:07.124 DEBUG testcase.TC05_RefereshAccessToken_Api    - 14: JsonFileReader.appendToJsonSection(jsonFilePath, "DummyJson", "accessToken", jwtToken)
+2025-09-19 14:58:07.143 DEBUG testcase.TC05_RefereshAccessToken_Api    - 15: logInfo("Token stored successfully.")
+2025-09-19 14:58:07.149 INFO  com.kms.katalon.core.util.KeywordUtil    - Token stored successfully.
+PASSED
+⚠️ Error while closing browser: Browser is not opened
+Build info: version: '4.28.1', revision: '73f5ad48a2'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: driver.version: unknown
+2025-09-19 14:58:07.171 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/API_Testing/TC05_RefereshAccessToken_Api
+2025-09-19 14:58:07.177 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-09-19 14:58:07.177 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/API_Testing/TC07_currentUserDetail_negative_Api
+2025-09-19 14:58:07.216 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) jsonFilePath = Include/Data Files/login_data.json
+ℹ️ Skipping browser launch for API test case: TC07_currentUserDetail_negative_Api
+2025-09-19 14:58:07.351 DEBUG t.TC07_currentUserDetail_negative_Api    - 1: logInfo("Reading access token from JSON file...")
+2025-09-19 14:58:07.352 INFO  com.kms.katalon.core.util.KeywordUtil    - Reading access token from JSON file...
+2025-09-19 14:58:07.353 DEBUG t.TC07_currentUserDetail_negative_Api    - 2: accessToken = JsonFileReader.getJsonData("DummyJson", "invalidToken", jsonFilePath)
+2025-09-19 14:58:07.356 DEBUG t.TC07_currentUserDetail_negative_Api    - 3: logInfo("Access token retrieved: " + accessToken)
+2025-09-19 14:58:07.357 INFO  com.kms.katalon.core.util.KeywordUtil    - Access token retrieved: qwertyuiosdfghjklzxcvbnm
+2025-09-19 14:58:07.358 DEBUG t.TC07_currentUserDetail_negative_Api    - 4: headers = ["Authorization":accessToken, "Content-Type":"application/json"]
+2025-09-19 14:58:07.360 DEBUG t.TC07_currentUserDetail_negative_Api    - 5: logInfo("Headers prepared: " + headers.toString())
+2025-09-19 14:58:07.363 INFO  com.kms.katalon.core.util.KeywordUtil    - Headers prepared: [Authorization:qwertyuiosdfghjklzxcvbnm, Content-Type:application/json]
+2025-09-19 14:58:07.365 DEBUG t.TC07_currentUserDetail_negative_Api    - 6: logInfo("Sending GET request to /me endpoint...")
+2025-09-19 14:58:07.366 INFO  com.kms.katalon.core.util.KeywordUtil    - Sending GET request to /me endpoint...
+2025-09-19 14:58:07.367 DEBUG t.TC07_currentUserDetail_negative_Api    - 7: response = ApiKeywords.sendGet("me", headers)
+2025-09-19 14:58:07.685 INFO  c.k.k.core.webservice.common.HarLogger   - HAR: C:\Users\10835442\Katalon Studio\Luma\Reports\20250919_145754\API_AccessToken\20250919_145754\requests\main\GET_Generic_3.har
+2025-09-19 14:58:07.698 DEBUG t.TC07_currentUserDetail_negative_Api    - 8: logInfo("Response received with status: " + response.getStatusCode())
+2025-09-19 14:58:07.703 INFO  com.kms.katalon.core.util.KeywordUtil    - Response received with status: 401
+2025-09-19 14:58:07.708 DEBUG t.TC07_currentUserDetail_negative_Api    - 9: if (response.getStatusCode() == 200)
+PASSED
+⚠️ Error while closing browser: Browser is not opened
+Build info: version: '4.28.1', revision: '73f5ad48a2'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: driver.version: unknown
+2025-09-19 14:58:07.763 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/API_Testing/TC07_currentUserDetail_negative_Api
+2025-09-19 14:58:07.860 INFO  c.k.katalon.core.main.TestSuiteExecutor  - --------------------
+2025-09-19 14:58:07.860 INFO  c.k.katalon.core.main.TestSuiteExecutor  - END Test Suites/API_AccessToken
+2025-09-19 14:58:07.860 INFO  c.k.katalon.core.main.TestSuiteExecutor  - ====================

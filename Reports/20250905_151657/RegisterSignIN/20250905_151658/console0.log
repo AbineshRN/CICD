@@ -1,0 +1,103 @@
+2025-09-05 15:17:08.483 INFO  c.k.katalon.core.main.TestSuiteExecutor  - START Test Suites/RegisterSignIN
+2025-09-05 15:17:08.741 INFO  c.k.katalon.core.main.TestSuiteExecutor  - userFullName = Abinesh R
+2025-09-05 15:17:08.743 INFO  c.k.katalon.core.main.TestSuiteExecutor  - projectName = Luma
+2025-09-05 15:17:08.744 INFO  c.k.katalon.core.main.TestSuiteExecutor  - hostName = 10835442 - 10.235.152.34
+2025-09-05 15:17:08.748 INFO  c.k.katalon.core.main.TestSuiteExecutor  - os = Windows 11 64bit
+2025-09-05 15:17:08.750 INFO  c.k.katalon.core.main.TestSuiteExecutor  - hostAddress = 10.235.152.34
+2025-09-05 15:17:08.753 INFO  c.k.katalon.core.main.TestSuiteExecutor  - katalonVersion = 10.3.1.0
+2025-09-05 15:17:10.116 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-09-05 15:17:10.116 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/CommentPost
+2025-09-05 15:17:10.426 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) filepath = Include/Data Files/login_data.json
+2025-09-05 15:17:10.483 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) section = ArticlePage
+2025-09-05 15:17:11.388 INFO  c.k.k.core.webui.driver.DriverFactory    - Starting 'Chrome' driver
+2025-09-05 15:17:11.479 INFO  c.k.k.core.webui.driver.DriverFactory    - Action delay is set to 0 milliseconds
+Sep 05, 2025 3:17:14 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 140, returning the closest version; found: 138; Please update to a Selenium version that supports CDP version 140
+2025-09-05 15:17:16.008 INFO  c.k.k.core.webui.driver.DriverFactory    - sessionId = cc2af4bd97cbbf8b238067cd92d71cc5
+2025-09-05 15:17:16.010 INFO  c.k.k.core.webui.driver.DriverFactory    - browser = Chrome 140.0.7339.81
+2025-09-05 15:17:16.011 INFO  c.k.k.core.webui.driver.DriverFactory    - platform = Windows 11
+2025-09-05 15:17:16.015 INFO  c.k.k.core.webui.driver.DriverFactory    - seleniumVersion = 4.28.1
+2025-09-05 15:17:16.027 INFO  c.k.k.core.webui.driver.DriverFactory    - proxyInformation = ProxyInformation { proxyOption=NO_PROXY, proxyServerType=HTTP, username=, password=********, proxyServerAddress=, proxyServerPort=0, executionList="", isApplyToDesiredCapabilities=true }
+2025-09-05 15:17:22.454 DEBUG testcase.CommentPost                     - 1: ExtentManager.initReport("BlogCommentReport")
+2025-09-05 15:17:24.298 DEBUG testcase.CommentPost                     - 2: ExtentManager.createTest("Post Comment on Blog Article")
+2025-09-05 15:17:24.326 DEBUG testcase.CommentPost                     - 3: try
+2025-09-05 15:17:24.341 DEBUG testcase.CommentPost                     - 1: ExtentManager.logInfo("Navigating to the blog page")
+2025-09-05 15:17:24.381 DEBUG testcase.CommentPost                     - 2: pages.HomePage.clickOnBlog(findTestObject("Object Repository/Home_Page/Blogs"), "Blog")
+2025-09-05 15:17:25.571 INFO  com.kms.katalon.core.util.KeywordUtil    - Clicking on: Blog
+2025-09-05 15:17:29.600 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Blog has been clicked
+2025-09-05 15:17:29.604 DEBUG testcase.CommentPost                     - 3: ExtentManager.logPass("Navigated to the blog page")
+2025-09-05 15:17:29.615 DEBUG testcase.CommentPost                     - 6: try
+2025-09-05 15:17:29.618 DEBUG testcase.CommentPost                     - 1: ExtentManager.logInfo("Navigating to the article page")
+2025-09-05 15:17:29.623 DEBUG testcase.CommentPost                     - 2: pages.BlogPage.clickOnArticle(findTestObject("Object Repository/BlogsPage/Article"))
+2025-09-05 15:17:30.049 INFO  com.kms.katalon.core.util.KeywordUtil    - Clicking on: Article
+2025-09-05 15:17:33.403 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Article has been clicked
+2025-09-05 15:17:33.406 DEBUG testcase.CommentPost                     - 3: ExtentManager.logPass("Navigated to the article page")
+2025-09-05 15:17:33.412 DEBUG testcase.CommentPost                     - 9: try
+2025-09-05 15:17:33.416 DEBUG testcase.CommentPost                     - 1: ExtentManager.logInfo("Entering the details to post a comment")
+2025-09-05 15:17:33.419 DEBUG testcase.CommentPost                     - 2: articleFields = [["id":"input-name", "jsonKey":"name", "label":"Name"], ["id":"input-email", "jsonKey":"email", "label":"Email"]]
+2025-09-05 15:17:33.421 DEBUG testcase.CommentPost                     - 3: articleFields.each({ -> ... })
+2025-09-05 15:17:34.032 INFO  com.kms.katalon.core.util.KeywordUtil    - Entering data into: Name
+2025-09-05 15:17:34.850 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Name has been entered
+2025-09-05 15:17:35.221 INFO  com.kms.katalon.core.util.KeywordUtil    - Entering data into: Email
+2025-09-05 15:17:36.111 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Email has been entered
+2025-09-05 15:17:36.114 DEBUG testcase.CommentPost                     - 4: pages.ArticlePage.inputCommentOnArticle(findTestObject("Object Repository/ArticlePage/inputComment"), JsonFileReader.getJsonData(section, "comment", filepath))
+2025-09-05 15:17:36.413 INFO  com.kms.katalon.core.util.KeywordUtil    - Entering data into: Comment
+2025-09-05 15:17:37.222 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Comment has been entered
+2025-09-05 15:17:37.224 DEBUG testcase.CommentPost                     - 5: pages.ArticlePage.clickOnPostCommentButton(findTestObject("Object Repository/ArticlePage/postCommentButton"))
+2025-09-05 15:17:37.513 INFO  com.kms.katalon.core.util.KeywordUtil    - Clicking on: Post comment
+2025-09-05 15:17:38.093 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Post comment has been clicked
+2025-09-05 15:17:38.097 DEBUG testcase.CommentPost                     - 6: ExtentManager.logPass("Details for posting a comment have been entered")
+2025-09-05 15:17:38.105 DEBUG testcase.CommentPost                     - 12: try
+2025-09-05 15:17:38.108 DEBUG testcase.CommentPost                     - 1: ExtentManager.logInfo("Verifying Success Message")
+2025-09-05 15:17:38.120 DEBUG testcase.CommentPost                     - 2: pages.ArticlePage.verifySuccessText(findTestObject("Object Repository/ArticlePage/successMessage"), JsonFileReader.getJsonData(section, "successMessage", filepath))
+2025-09-05 15:17:38.674 INFO  com.kms.katalon.core.util.KeywordUtil    - Verifying text for: Success Text
+2025-09-05 15:17:38.769 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Success Text has been verified
+2025-09-05 15:17:38.772 DEBUG testcase.CommentPost                     - 3: ExtentManager.logPass("Verified Success Message")
+2025-09-05 15:17:38.775 DEBUG testcase.CommentPost                     - 15: ExtentManager.flushReport()
+2025-09-05 15:17:39.965 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/CommentPost
+2025-09-05 15:17:39.972 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-09-05 15:17:39.973 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/SignIn
+2025-09-05 15:17:40.003 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) filepath = Include/Data Files/login_data.json
+2025-09-05 15:17:40.025 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) section = loginPage
+2025-09-05 15:17:40.037 INFO  c.k.k.core.webui.driver.DriverFactory    - Starting 'Chrome' driver
+2025-09-05 15:17:40.039 INFO  c.k.k.core.webui.driver.DriverFactory    - Action delay is set to 0 milliseconds
+Sep 05, 2025 3:17:42 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 140, returning the closest version; found: 138; Please update to a Selenium version that supports CDP version 140
+2025-09-05 15:17:42.734 INFO  c.k.k.core.webui.driver.DriverFactory    - sessionId = 11f43dbe291c929117f97b28aa40e9b6
+2025-09-05 15:17:42.735 INFO  c.k.k.core.webui.driver.DriverFactory    - browser = Chrome 140.0.7339.81
+2025-09-05 15:17:42.736 INFO  c.k.k.core.webui.driver.DriverFactory    - platform = Windows 11
+2025-09-05 15:17:42.738 INFO  c.k.k.core.webui.driver.DriverFactory    - seleniumVersion = 4.28.1
+2025-09-05 15:17:42.739 INFO  c.k.k.core.webui.driver.DriverFactory    - proxyInformation = ProxyInformation { proxyOption=NO_PROXY, proxyServerType=HTTP, username=, password=********, proxyServerAddress=, proxyServerPort=0, executionList="", isApplyToDesiredCapabilities=true }
+2025-09-05 15:17:49.600 DEBUG testcase.SignIn                          - 1: ExtentManager.initReport("LoginTestReport")
+2025-09-05 15:17:49.605 DEBUG testcase.SignIn                          - 2: ExtentManager.createTest("Login Test")
+2025-09-05 15:17:49.608 DEBUG testcase.SignIn                          - 3: try
+2025-09-05 15:17:49.614 DEBUG testcase.SignIn                          - 1: ExtentManager.logInfo("Navigating to the sign in page")
+2025-09-05 15:17:49.617 DEBUG testcase.SignIn                          - 2: pages.HomePage.navigateToAccountPage()
+2025-09-05 15:17:49.911 INFO  com.kms.katalon.core.util.KeywordUtil    - Hovering over: my account
+2025-09-05 15:17:50.392 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ my account has been hovered
+2025-09-05 15:17:50.672 INFO  com.kms.katalon.core.util.KeywordUtil    - Clicking on: login button
+2025-09-05 15:17:52.549 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ login button has been clicked
+2025-09-05 15:17:52.554 DEBUG testcase.SignIn                          - 3: ExtentManager.logPass("Navigated to the sign in page")
+2025-09-05 15:17:52.559 DEBUG testcase.SignIn                          - 6: try
+2025-09-05 15:17:52.566 DEBUG testcase.SignIn                          - 1: ExtentManager.logInfo("Signing into the account")
+2025-09-05 15:17:52.569 DEBUG testcase.SignIn                          - 2: loginFields = [["id":"input-email", "jsonKey":"email"], ["id":"input-password", "jsonKey":"password"]]
+2025-09-05 15:17:52.571 DEBUG testcase.SignIn                          - 3: loginFields.each({ -> ... })
+2025-09-05 15:17:53.008 INFO  com.kms.katalon.core.util.KeywordUtil    - Entering data into: email
+2025-09-05 15:17:53.913 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ email has been entered
+2025-09-05 15:17:54.238 INFO  com.kms.katalon.core.util.KeywordUtil    - Entering data into: password
+2025-09-05 15:17:54.978 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ password has been entered
+2025-09-05 15:17:54.982 DEBUG testcase.SignIn                          - 4: pages.LoginPage.clickOnLoginButton(findTestObject("Object Repository/LoginPage/Login_button"))
+2025-09-05 15:17:55.284 INFO  com.kms.katalon.core.util.KeywordUtil    - Clicking on: Login button
+2025-09-05 15:17:59.339 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Login button has been clicked
+2025-09-05 15:17:59.345 DEBUG testcase.SignIn                          - 5: ExtentManager.logPass("Signed into the account")
+2025-09-05 15:17:59.353 DEBUG testcase.SignIn                          - 9: try
+2025-09-05 15:17:59.356 DEBUG testcase.SignIn                          - 1: ExtentManager.logInfo("Verifying My Account")
+2025-09-05 15:17:59.365 DEBUG testcase.SignIn                          - 2: pages.AccountPage.verifyMyAccount(findTestObject("Object Repository/AccountPage/my_Account_verification"), JsonFileReader.getJsonData(section, "verification_text", filepath))
+2025-09-05 15:17:59.803 INFO  com.kms.katalon.core.util.KeywordUtil    - Verifying text for: Verify My account
+2025-09-05 15:18:00.083 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Verify My account has been verified
+2025-09-05 15:18:00.085 DEBUG testcase.SignIn                          - 3: ExtentManager.logPass("Verified My Account")
+2025-09-05 15:18:00.089 DEBUG testcase.SignIn                          - 12: ExtentManager.flushReport()
+2025-09-05 15:18:00.580 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/SignIn
+2025-09-05 15:18:00.648 INFO  c.k.katalon.core.main.TestSuiteExecutor  - --------------------
+2025-09-05 15:18:00.648 INFO  c.k.katalon.core.main.TestSuiteExecutor  - END Test Suites/RegisterSignIN
+2025-09-05 15:18:00.648 INFO  c.k.katalon.core.main.TestSuiteExecutor  - ====================

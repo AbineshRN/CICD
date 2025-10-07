@@ -1,0 +1,1189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="TestSuite" time="175.987" tests="6" failures="0" errors="0">
+   <testsuite name="TestSuite" tests="6" failures="0" errors="0" time="175.987" skipped="0" timestamp="2025-09-03T06:26:51.520Z" hostname="10835442 - 10.235.137.0" id="Test Suites/TestSuite">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform"/>
+         <property name="logFolder" value="C:\\Users\\10835442\\Katalon Studio\\Luma\\Reports\\20250903_115647\\TestSuite\\20250903_115647"/>
+         <property name="logFiles" value="C:\\Users\\10835442\\Katalon Studio\\Luma\\Reports\\20250903_115647\\TestSuite\\20250903_115647\\console0.log, C:\\Users\\10835442\\Katalon Studio\\Luma\\Reports\\20250903_115647\\TestSuite\\20250903_115647\\execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="10835442 - 10.235.137.0"/>
+         <property name="os" value="Windows 11 64bit"/>
+         <property name="katalonVersion" value="10.3.1.0"/>
+         <property name="browser" value="Chrome 139.0.7258.155"/>
+         <property name="userFullName" value="Abinesh R"/>
+         <property name="hostAddress" value="10.235.137.0"/>
+         <property name="sessionId" value="2d815a50bd2b533c9d869988eb9c9894"/>
+         <property name="projectName" value="Luma"/>
+         <property name="seleniumVersion" value="4.28.1"/>
+         <property name="proxyInformation" value="ProxyInformation { proxyOption=NO_PROXY, proxyServerType=HTTP, username=, password=********, proxyServerAddress=, proxyServerPort=0, executionList=&quot;&quot;, isApplyToDesiredCapabilities=true }"/>
+         <property name="platform" value="Windows 11"/>
+      </properties>
+      <testcase name="Test Cases/RegisterUser" time="24.822" classname="Test Cases/RegisterUser" status="PASSED">
+         <properties>
+            <property name="data_binding"><![CDATA[{"(Default) filep...":"Include/Data Files/login_data.json","(Default) regis...":"registrarionSucccessPage"}]]></property>
+         </properties>
+         <system-out><![CDATA[03-09-2025T11:56:52 - [TEST_CASE][PASSED] - Test Cases/RegisterUser: Test Cases/RegisterUser
+
+03-09-2025T11:56:52 - [TEST_STEP][PASSED] - Start listener action : openTheBrowser: Current window maximized
+
+03-09-2025T11:56:52 - [TEST_STEP][PASSED] - openBrowser(baseUrl): Browser is opened with url: 'https://ecommerce-playground.lambdatest.io/'
+
+03-09-2025T11:56:52 - [MESSAGE][INFO] - Starting 'Chrome' driver
+
+03-09-2025T11:56:52 - [MESSAGE][INFO] - Action delay is set to 0 milliseconds
+
+03-09-2025T11:57:00 - [MESSAGE][PASSED] - Browser is opened with url: 'https://ecommerce-playground.lambdatest.io/'
+
+03-09-2025T11:57:00 - [TEST_STEP][PASSED] - maximizeWindow(): Current window maximized
+
+03-09-2025T11:57:01 - [MESSAGE][PASSED] - Current window maximized
+
+03-09-2025T11:57:01 - [TEST_STEP][PASSED] - logInfo("Navigating to the registration page"): Navigating to the registration page
+
+03-09-2025T11:57:01 - [MESSAGE][INFO] - Navigating to the registration page
+
+03-09-2025T11:57:01 - [TEST_STEP][PASSED] - pages.HomePage.hoverOverMyAccount(findTestObject("Object Repository/Home_Page/my_Account_Button")): My Account has been hovered
+
+03-09-2025T11:57:02 - [MESSAGE][PASSED] - Object 'Object Repository/Home_Page/my_Account_Button' is visible
+
+03-09-2025T11:57:02 - [MESSAGE][INFO] - Hovering My Account
+
+03-09-2025T11:57:02 - [MESSAGE][PASSED] - Object: 'Object Repository/Home_Page/my_Account_Button' is hovered
+
+03-09-2025T11:57:02 - [MESSAGE][PASSED] - My Account has been hovered
+
+03-09-2025T11:57:02 - [TEST_STEP][PASSED] - pages.HomePage.clickOnRegister(findTestObject("Object Repository/Home_Page/register_Button")): Register Button has been clicked
+
+03-09-2025T11:57:02 - [MESSAGE][PASSED] - Object 'Object Repository/Home_Page/register_Button' is visible
+
+03-09-2025T11:57:02 - [MESSAGE][INFO] - Clicking Register Button
+
+03-09-2025T11:57:04 - [MESSAGE][PASSED] - Object: 'Object Repository/Home_Page/register_Button' is clicked on
+
+03-09-2025T11:57:04 - [MESSAGE][PASSED] - Register Button has been clicked
+
+03-09-2025T11:57:04 - [TEST_STEP][PASSED] - logInfo("Navigated to the register page"): Navigated to the register page
+
+03-09-2025T11:57:04 - [MESSAGE][INFO] - Navigated to the register page
+
+03-09-2025T11:57:04 - [TEST_STEP][PASSED] - logInfo("Entering the details to register an account"): Entering the details to register an account
+
+03-09-2025T11:57:04 - [MESSAGE][INFO] - Entering the details to register an account
+
+03-09-2025T11:57:04 - [TEST_STEP][PASSED] - fieldMappings = [["id":"input-firstname", "jsonKey":"firstName"], ["id":"input-lastname", "jsonKey":"lastName"], ["id":"input-email", "jsonKey":"email"], ["id":"input-telephone", "jsonKey":"telephone"], ["id":"input-password", "jsonKey":"password"], ["id":"input-confirm", "jsonKey":"password"]]: null
+
+03-09-2025T11:57:04 - [TEST_STEP][PASSED] - fieldMappings.each({ -> ... }): password has been entered
+
+03-09-2025T11:57:05 - [MESSAGE][PASSED] - Object 'Object Repository/Registration_Page/generic_Input' is visible
+
+03-09-2025T11:57:05 - [MESSAGE][INFO] - Entering firstName
+
+03-09-2025T11:57:06 - [MESSAGE][PASSED] - Text 'Alice' is set on object 'Object Repository/Registration_Page/generic_Input'
+
+03-09-2025T11:57:06 - [MESSAGE][PASSED] - firstName has been entered
+
+03-09-2025T11:57:06 - [MESSAGE][PASSED] - Object 'Object Repository/Registration_Page/generic_Input' is visible
+
+03-09-2025T11:57:06 - [MESSAGE][INFO] - Entering lastName
+
+03-09-2025T11:57:07 - [MESSAGE][PASSED] - Text 'Smithh' is set on object 'Object Repository/Registration_Page/generic_Input'
+
+03-09-2025T11:57:07 - [MESSAGE][PASSED] - lastName has been entered
+
+03-09-2025T11:57:07 - [MESSAGE][PASSED] - Object 'Object Repository/Registration_Page/generic_Input' is visible
+
+03-09-2025T11:57:07 - [MESSAGE][INFO] - Entering email
+
+03-09-2025T11:57:08 - [MESSAGE][PASSED] - Text 'alicesmith.33@gmail.com' is set on object 'Object Repository/Registration_Page/generic_Input'
+
+03-09-2025T11:57:08 - [MESSAGE][PASSED] - email has been entered
+
+03-09-2025T11:57:08 - [MESSAGE][PASSED] - Object 'Object Repository/Registration_Page/generic_Input' is visible
+
+03-09-2025T11:57:08 - [MESSAGE][INFO] - Entering telephone
+
+03-09-2025T11:57:09 - [MESSAGE][PASSED] - Text '1234567890' is set on object 'Object Repository/Registration_Page/generic_Input'
+
+03-09-2025T11:57:09 - [MESSAGE][PASSED] - telephone has been entered
+
+03-09-2025T11:57:09 - [MESSAGE][PASSED] - Object 'Object Repository/Registration_Page/generic_Input' is visible
+
+03-09-2025T11:57:09 - [MESSAGE][INFO] - Entering password
+
+03-09-2025T11:57:10 - [MESSAGE][PASSED] - Text 'Password123' is set on object 'Object Repository/Registration_Page/generic_Input'
+
+03-09-2025T11:57:10 - [MESSAGE][PASSED] - password has been entered
+
+03-09-2025T11:57:10 - [MESSAGE][PASSED] - Object 'Object Repository/Registration_Page/generic_Input' is visible
+
+03-09-2025T11:57:10 - [MESSAGE][INFO] - Entering password
+
+03-09-2025T11:57:11 - [MESSAGE][PASSED] - Text 'Password123' is set on object 'Object Repository/Registration_Page/generic_Input'
+
+03-09-2025T11:57:11 - [MESSAGE][PASSED] - password has been entered
+
+03-09-2025T11:57:11 - [TEST_STEP][PASSED] - logInfo("Details for registering an acccount have been set successfully"): Details for registering an acccount have been set successfully
+
+03-09-2025T11:57:11 - [MESSAGE][INFO] - Details for registering an acccount have been set successfully
+
+03-09-2025T11:57:11 - [TEST_STEP][PASSED] - logInfo("Navigating to the confirmation page"): Navigating to the confirmation page
+
+03-09-2025T11:57:11 - [MESSAGE][INFO] - Navigating to the confirmation page
+
+03-09-2025T11:57:11 - [TEST_STEP][PASSED] - pages.UserRegistrationPage.clickOnPolicyCheckBox(findTestObject("Object Repository/Registration_Page/policy_CheckBox")): Policy Checkbox has been clicked
+
+03-09-2025T11:57:11 - [MESSAGE][PASSED] - Object 'Object Repository/Registration_Page/policy_CheckBox' is visible
+
+03-09-2025T11:57:11 - [MESSAGE][INFO] - Clicking Policy Checkbox
+
+03-09-2025T11:57:12 - [MESSAGE][PASSED] - Object: 'Object Repository/Registration_Page/policy_CheckBox' is clicked on
+
+03-09-2025T11:57:12 - [MESSAGE][PASSED] - Policy Checkbox has been clicked
+
+03-09-2025T11:57:12 - [TEST_STEP][PASSED] - pages.UserRegistrationPage.clickOnContinue(findTestObject("Object Repository/Registration_Page/continue_Button")): Continue Button has been clicked
+
+03-09-2025T11:57:12 - [MESSAGE][PASSED] - Object 'Object Repository/Registration_Page/continue_Button' is visible
+
+03-09-2025T11:57:12 - [MESSAGE][INFO] - Clicking Continue Button
+
+03-09-2025T11:57:15 - [MESSAGE][PASSED] - Object: 'Object Repository/Registration_Page/continue_Button' is clicked on
+
+03-09-2025T11:57:15 - [MESSAGE][PASSED] - Continue Button has been clicked
+
+03-09-2025T11:57:15 - [TEST_STEP][PASSED] - logInfo("Navigated to the confirmation page"): Navigated to the confirmation page
+
+03-09-2025T11:57:15 - [MESSAGE][INFO] - Navigated to the confirmation page
+
+03-09-2025T11:57:15 - [TEST_STEP][PASSED] - logInfo("Verifying Account Creation Text"): Verifying Account Creation Text
+
+03-09-2025T11:57:15 - [MESSAGE][INFO] - Verifying Account Creation Text
+
+03-09-2025T11:57:15 - [TEST_STEP][PASSED] - pages.AccountCreationPage.verifyText(findTestObject("Object Repository/Account_Created_Page/account_Creation_Verification"), JsonFileReader.getJsonData(registrationSuccessPage, "verify_Text", filepath), "Account Creation"): Account Creation has been verified
+
+03-09-2025T11:57:16 - [MESSAGE][PASSED] - Object 'Object Repository/Account_Created_Page/account_Creation_Verification' is visible
+
+03-09-2025T11:57:16 - [MESSAGE][INFO] - Verifying Account Creation
+
+03-09-2025T11:57:16 - [MESSAGE][PASSED] - Actual text and expected text of test object 'Object Repository/Account_Created_Page/account_Creation_Verification' are matched.
+
+03-09-2025T11:57:16 - [MESSAGE][PASSED] - Account Creation has been verified
+
+03-09-2025T11:57:16 - [TEST_STEP][PASSED] - logInfo("Verified Account Creation Text"): Verified Account Creation Text
+
+03-09-2025T11:57:16 - [MESSAGE][INFO] - Verified Account Creation Text
+
+03-09-2025T11:57:16 - [TEST_STEP][PASSED] - logInfo("Updating login details in JSON file"): Updating login details in JSON file
+
+03-09-2025T11:57:16 - [MESSAGE][INFO] - Updating login details in JSON file
+
+03-09-2025T11:57:16 - [TEST_STEP][PASSED] - JsonFileReader.updateJsonValue("loginPage", "email", JsonFileReader.getJsonData(registerPage, "email", filepath), filepath): null
+
+03-09-2025T11:57:16 - [TEST_STEP][PASSED] - JsonFileReader.updateJsonValue("loginPage", "password", JsonFileReader.getJsonData(registerPage, "password", filepath), filepath): null
+
+03-09-2025T11:57:16 - [TEST_STEP][PASSED] - logInfo("Updated login details in JSON file"): Updated login details in JSON file
+
+03-09-2025T11:57:16 - [MESSAGE][INFO] - Updated login details in JSON file
+
+03-09-2025T11:57:16 - [TEST_STEP][PASSED] - Start listener action : closeTheBrowser: Browser is closed
+
+03-09-2025T11:57:16 - [TEST_STEP][PASSED] - closeBrowser(): Browser is closed
+
+03-09-2025T11:57:16 - [MESSAGE][PASSED] - Browser is closed]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/SignIn" time="17.898" classname="Test Cases/SignIn" status="PASSED">
+         <properties>
+            <property name="data_binding"><![CDATA[{"(Default) secti...":"loginPage","(Default) filep...":"Include/Data Files/login_data.json"}]]></property>
+         </properties>
+         <system-out><![CDATA[03-09-2025T11:57:17 - [TEST_CASE][PASSED] - Test Cases/SignIn: Test Cases/SignIn
+
+03-09-2025T11:57:17 - [TEST_STEP][PASSED] - Start listener action : openTheBrowser: Current window maximized
+
+03-09-2025T11:57:17 - [TEST_STEP][PASSED] - openBrowser(baseUrl): Browser is opened with url: 'https://ecommerce-playground.lambdatest.io/'
+
+03-09-2025T11:57:17 - [MESSAGE][INFO] - Starting 'Chrome' driver
+
+03-09-2025T11:57:17 - [MESSAGE][INFO] - Action delay is set to 0 milliseconds
+
+03-09-2025T11:57:25 - [MESSAGE][PASSED] - Browser is opened with url: 'https://ecommerce-playground.lambdatest.io/'
+
+03-09-2025T11:57:25 - [TEST_STEP][PASSED] - maximizeWindow(): Current window maximized
+
+03-09-2025T11:57:25 - [MESSAGE][PASSED] - Current window maximized
+
+03-09-2025T11:57:25 - [TEST_STEP][PASSED] - logInfo("Navigating to the sign in page"): Navigating to the sign in page
+
+03-09-2025T11:57:25 - [MESSAGE][INFO] - Navigating to the sign in page
+
+03-09-2025T11:57:25 - [TEST_STEP][PASSED] - pages.HomePage.hoverOverMyAccount(findTestObject("Object Repository/Home_Page/my_Account_Button")): My Account has been hovered
+
+03-09-2025T11:57:25 - [MESSAGE][PASSED] - Object 'Object Repository/Home_Page/my_Account_Button' is visible
+
+03-09-2025T11:57:25 - [MESSAGE][INFO] - Hovering My Account
+
+03-09-2025T11:57:26 - [MESSAGE][PASSED] - Object: 'Object Repository/Home_Page/my_Account_Button' is hovered
+
+03-09-2025T11:57:26 - [MESSAGE][PASSED] - My Account has been hovered
+
+03-09-2025T11:57:26 - [TEST_STEP][PASSED] - pages.HomePage.clickOnLogin(findTestObject("Object Repository/Home_Page/login_Button")): Login Button has been clicked
+
+03-09-2025T11:57:26 - [MESSAGE][PASSED] - Object 'Object Repository/Home_Page/login_Button' is visible
+
+03-09-2025T11:57:26 - [MESSAGE][INFO] - Clicking Login Button
+
+03-09-2025T11:57:28 - [MESSAGE][PASSED] - Object: 'Object Repository/Home_Page/login_Button' is clicked on
+
+03-09-2025T11:57:28 - [MESSAGE][PASSED] - Login Button has been clicked
+
+03-09-2025T11:57:28 - [TEST_STEP][PASSED] - logInfo("Navigated to the sign in page"): Navigated to the sign in page
+
+03-09-2025T11:57:28 - [MESSAGE][INFO] - Navigated to the sign in page
+
+03-09-2025T11:57:28 - [TEST_STEP][PASSED] - logInfo("Signing into the account"): Signing into the account
+
+03-09-2025T11:57:28 - [MESSAGE][INFO] - Signing into the account
+
+03-09-2025T11:57:28 - [TEST_STEP][PASSED] - loginFields = [["id":"input-email", "jsonKey":"email"], ["id":"input-password", "jsonKey":"password"]]: null
+
+03-09-2025T11:57:28 - [TEST_STEP][PASSED] - loginFields.each({ -> ... }): password has been entered
+
+03-09-2025T11:57:29 - [MESSAGE][PASSED] - Object 'Object Repository/LoginPage/generic_Input' is visible
+
+03-09-2025T11:57:29 - [MESSAGE][INFO] - Entering email
+
+03-09-2025T11:57:29 - [MESSAGE][PASSED] - Text 'alicesmith.33@gmail.com' is set on object 'Object Repository/LoginPage/generic_Input'
+
+03-09-2025T11:57:29 - [MESSAGE][PASSED] - email has been entered
+
+03-09-2025T11:57:30 - [MESSAGE][PASSED] - Object 'Object Repository/LoginPage/generic_Input' is visible
+
+03-09-2025T11:57:30 - [MESSAGE][INFO] - Entering password
+
+03-09-2025T11:57:30 - [MESSAGE][PASSED] - Text 'Password123' is set on object 'Object Repository/LoginPage/generic_Input'
+
+03-09-2025T11:57:30 - [MESSAGE][PASSED] - password has been entered
+
+03-09-2025T11:57:30 - [TEST_STEP][PASSED] - pages.LoginPage.clickOnLoginButton(findTestObject("Object Repository/LoginPage/Login_button")): Login button has been clicked
+
+03-09-2025T11:57:31 - [MESSAGE][PASSED] - Object 'Object Repository/LoginPage/Login_button' is visible
+
+03-09-2025T11:57:31 - [MESSAGE][INFO] - Clicking Login button
+
+03-09-2025T11:57:33 - [MESSAGE][PASSED] - Object: 'Object Repository/LoginPage/Login_button' is clicked on
+
+03-09-2025T11:57:33 - [MESSAGE][PASSED] - Login button has been clicked
+
+03-09-2025T11:57:33 - [TEST_STEP][PASSED] - logInfo("Signed into the account"): Signed into the account
+
+03-09-2025T11:57:33 - [MESSAGE][INFO] - Signed into the account
+
+03-09-2025T11:57:33 - [TEST_STEP][PASSED] - logInfo("Verifying My Account"): Verifying My Account
+
+03-09-2025T11:57:33 - [MESSAGE][INFO] - Verifying My Account
+
+03-09-2025T11:57:33 - [TEST_STEP][PASSED] - pages.AccountPage.verifyMyAccount(findTestObject("Object Repository/AccountPage/my_Account_verification"), JsonFileReader.getJsonData(section, "verification_text", filepath)): Verify My account has been verified
+
+03-09-2025T11:57:34 - [MESSAGE][PASSED] - Object 'Object Repository/AccountPage/my_Account_verification' is visible
+
+03-09-2025T11:57:34 - [MESSAGE][INFO] - Verifying Verify My account
+
+03-09-2025T11:57:34 - [MESSAGE][PASSED] - Actual text and expected text of test object 'Object Repository/AccountPage/my_Account_verification' are matched.
+
+03-09-2025T11:57:34 - [MESSAGE][PASSED] - Verify My account has been verified
+
+03-09-2025T11:57:34 - [TEST_STEP][PASSED] - logInfo("Verified My Account"): Verified My Account
+
+03-09-2025T11:57:34 - [MESSAGE][INFO] - Verified My Account
+
+03-09-2025T11:57:34 - [TEST_STEP][PASSED] - Start listener action : closeTheBrowser: Browser is closed
+
+03-09-2025T11:57:34 - [TEST_STEP][PASSED] - closeBrowser(): Browser is closed
+
+03-09-2025T11:57:34 - [MESSAGE][PASSED] - Browser is closed]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/ChangePasswordFunctionality" time="25.826" classname="Test Cases/ChangePasswordFunctionality" status="PASSED">
+         <properties>
+            <property name="data_binding"><![CDATA[{"(Default) secti...":"changePasswordPage","(Default) filep...":"Include/Data Files/login_data.json"}]]></property>
+         </properties>
+         <system-out><![CDATA[03-09-2025T11:57:34 - [TEST_CASE][PASSED] - Test Cases/ChangePasswordFunctionality: Test Cases/ChangePasswordFunctionality
+
+03-09-2025T11:57:34 - [TEST_STEP][PASSED] - Start listener action : openTheBrowser: Current window maximized
+
+03-09-2025T11:57:34 - [TEST_STEP][PASSED] - openBrowser(baseUrl): Browser is opened with url: 'https://ecommerce-playground.lambdatest.io/'
+
+03-09-2025T11:57:34 - [MESSAGE][INFO] - Starting 'Chrome' driver
+
+03-09-2025T11:57:34 - [MESSAGE][INFO] - Action delay is set to 0 milliseconds
+
+03-09-2025T11:57:42 - [MESSAGE][PASSED] - Browser is opened with url: 'https://ecommerce-playground.lambdatest.io/'
+
+03-09-2025T11:57:42 - [TEST_STEP][PASSED] - maximizeWindow(): Current window maximized
+
+03-09-2025T11:57:42 - [MESSAGE][PASSED] - Current window maximized
+
+03-09-2025T11:57:43 - [TEST_STEP][PASSED] - logInfo("Signing into the account"): Signing into the account
+
+03-09-2025T11:57:43 - [MESSAGE][INFO] - Signing into the account
+
+03-09-2025T11:57:43 - [TEST_STEP][PASSED] - callTestCase(findTestCase("Test Cases/SignIn"), [:]): Call Test Case 'Test Cases/SignIn' successfully
+
+03-09-2025T11:57:43 - [TEST_CASE][PASSED] - Test Cases/SignIn: Test Cases/SignIn
+
+03-09-2025T11:57:43 - [TEST_STEP][PASSED] - logInfo("Navigating to the sign in page"): Navigating to the sign in page
+
+03-09-2025T11:57:43 - [MESSAGE][INFO] - Navigating to the sign in page
+
+03-09-2025T11:57:43 - [TEST_STEP][PASSED] - pages.HomePage.hoverOverMyAccount(findTestObject("Object Repository/Home_Page/my_Account_Button")): My Account has been hovered
+
+03-09-2025T11:57:43 - [MESSAGE][PASSED] - Object 'Object Repository/Home_Page/my_Account_Button' is visible
+
+03-09-2025T11:57:43 - [MESSAGE][INFO] - Hovering My Account
+
+03-09-2025T11:57:43 - [MESSAGE][PASSED] - Object: 'Object Repository/Home_Page/my_Account_Button' is hovered
+
+03-09-2025T11:57:43 - [MESSAGE][PASSED] - My Account has been hovered
+
+03-09-2025T11:57:43 - [TEST_STEP][PASSED] - pages.HomePage.clickOnLogin(findTestObject("Object Repository/Home_Page/login_Button")): Login Button has been clicked
+
+03-09-2025T11:57:44 - [MESSAGE][PASSED] - Object 'Object Repository/Home_Page/login_Button' is visible
+
+03-09-2025T11:57:44 - [MESSAGE][INFO] - Clicking Login Button
+
+03-09-2025T11:57:46 - [MESSAGE][PASSED] - Object: 'Object Repository/Home_Page/login_Button' is clicked on
+
+03-09-2025T11:57:46 - [MESSAGE][PASSED] - Login Button has been clicked
+
+03-09-2025T11:57:46 - [TEST_STEP][PASSED] - logInfo("Navigated to the sign in page"): Navigated to the sign in page
+
+03-09-2025T11:57:46 - [MESSAGE][INFO] - Navigated to the sign in page
+
+03-09-2025T11:57:46 - [TEST_STEP][PASSED] - logInfo("Signing into the account"): Signing into the account
+
+03-09-2025T11:57:46 - [MESSAGE][INFO] - Signing into the account
+
+03-09-2025T11:57:46 - [TEST_STEP][PASSED] - loginFields = [["id":"input-email", "jsonKey":"email"], ["id":"input-password", "jsonKey":"password"]]: null
+
+03-09-2025T11:57:46 - [TEST_STEP][PASSED] - loginFields.each({ -> ... }): password has been entered
+
+03-09-2025T11:57:46 - [MESSAGE][PASSED] - Object 'Object Repository/LoginPage/generic_Input' is visible
+
+03-09-2025T11:57:46 - [MESSAGE][INFO] - Entering email
+
+03-09-2025T11:57:47 - [MESSAGE][PASSED] - Text 'alicesmith.33@gmail.com' is set on object 'Object Repository/LoginPage/generic_Input'
+
+03-09-2025T11:57:47 - [MESSAGE][PASSED] - email has been entered
+
+03-09-2025T11:57:47 - [MESSAGE][PASSED] - Object 'Object Repository/LoginPage/generic_Input' is visible
+
+03-09-2025T11:57:47 - [MESSAGE][INFO] - Entering password
+
+03-09-2025T11:57:48 - [MESSAGE][PASSED] - Text 'Password123' is set on object 'Object Repository/LoginPage/generic_Input'
+
+03-09-2025T11:57:48 - [MESSAGE][PASSED] - password has been entered
+
+03-09-2025T11:57:48 - [TEST_STEP][PASSED] - pages.LoginPage.clickOnLoginButton(findTestObject("Object Repository/LoginPage/Login_button")): Login button has been clicked
+
+03-09-2025T11:57:48 - [MESSAGE][PASSED] - Object 'Object Repository/LoginPage/Login_button' is visible
+
+03-09-2025T11:57:48 - [MESSAGE][INFO] - Clicking Login button
+
+03-09-2025T11:57:49 - [MESSAGE][PASSED] - Object: 'Object Repository/LoginPage/Login_button' is clicked on
+
+03-09-2025T11:57:49 - [MESSAGE][PASSED] - Login button has been clicked
+
+03-09-2025T11:57:49 - [TEST_STEP][PASSED] - logInfo("Signed into the account"): Signed into the account
+
+03-09-2025T11:57:49 - [MESSAGE][INFO] - Signed into the account
+
+03-09-2025T11:57:49 - [TEST_STEP][PASSED] - logInfo("Verifying My Account"): Verifying My Account
+
+03-09-2025T11:57:49 - [MESSAGE][INFO] - Verifying My Account
+
+03-09-2025T11:57:49 - [TEST_STEP][PASSED] - pages.AccountPage.verifyMyAccount(findTestObject("Object Repository/AccountPage/my_Account_verification"), JsonFileReader.getJsonData(section, "verification_text", filepath)): Verify My account has been verified
+
+03-09-2025T11:57:52 - [MESSAGE][PASSED] - Object 'Object Repository/AccountPage/my_Account_verification' is visible
+
+03-09-2025T11:57:52 - [MESSAGE][INFO] - Verifying Verify My account
+
+03-09-2025T11:57:52 - [MESSAGE][PASSED] - Actual text and expected text of test object 'Object Repository/AccountPage/my_Account_verification' are matched.
+
+03-09-2025T11:57:52 - [MESSAGE][PASSED] - Verify My account has been verified
+
+03-09-2025T11:57:52 - [TEST_STEP][PASSED] - logInfo("Verified My Account"): Verified My Account
+
+03-09-2025T11:57:52 - [MESSAGE][INFO] - Verified My Account
+
+03-09-2025T11:57:52 - [MESSAGE][PASSED] - Call Test Case 'Test Cases/SignIn' successfully
+
+03-09-2025T11:57:52 - [TEST_STEP][PASSED] - logInfo("Signed into the account"): Signed into the account
+
+03-09-2025T11:57:52 - [MESSAGE][INFO] - Signed into the account
+
+03-09-2025T11:57:52 - [TEST_STEP][PASSED] - logInfo("Navigating to change password page"): Navigating to change password page
+
+03-09-2025T11:57:52 - [MESSAGE][INFO] - Navigating to change password page
+
+03-09-2025T11:57:52 - [TEST_STEP][PASSED] - pages.AccountPage.clickOnChangePassword(findTestObject("Object Repository/AccountPage/changePassword")): Change password has been clicked
+
+03-09-2025T11:57:52 - [MESSAGE][PASSED] - Object 'Object Repository/AccountPage/changePassword' is visible
+
+03-09-2025T11:57:52 - [MESSAGE][INFO] - Clicking Change password
+
+03-09-2025T11:57:54 - [MESSAGE][PASSED] - Object: 'Object Repository/AccountPage/changePassword' is clicked on
+
+03-09-2025T11:57:54 - [MESSAGE][PASSED] - Change password has been clicked
+
+03-09-2025T11:57:54 - [TEST_STEP][PASSED] - logInfo("Navigated to change password page"): Navigated to change password page
+
+03-09-2025T11:57:54 - [MESSAGE][INFO] - Navigated to change password page
+
+03-09-2025T11:57:54 - [TEST_STEP][PASSED] - logInfo("Setting up a new password"): Setting up a new password
+
+03-09-2025T11:57:54 - [MESSAGE][INFO] - Setting up a new password
+
+03-09-2025T11:57:54 - [TEST_STEP][PASSED] - pages.PasswordChangePage.inputChangePassword(findTestObject("Object Repository/ChangePasswordPage/inputPassword"), JsonFileReader.getJsonData(section, "password", filepath)): New Password has been entered
+
+03-09-2025T11:57:55 - [MESSAGE][PASSED] - Object 'Object Repository/ChangePasswordPage/inputPassword' is visible
+
+03-09-2025T11:57:55 - [MESSAGE][INFO] - Entering New Password
+
+03-09-2025T11:57:55 - [MESSAGE][PASSED] - Text 'Password@123' is set on object 'Object Repository/ChangePasswordPage/inputPassword'
+
+03-09-2025T11:57:55 - [MESSAGE][PASSED] - New Password has been entered
+
+03-09-2025T11:57:55 - [TEST_STEP][PASSED] - pages.PasswordChangePage.inputConfirmPassword(findTestObject("Object Repository/ChangePasswordPage/inputConfirmPassword"), JsonFileReader.getJsonData(section, "confirmPassword", filepath)): Confirm Password has been entered
+
+03-09-2025T11:57:56 - [MESSAGE][PASSED] - Object 'Object Repository/ChangePasswordPage/inputConfirmPassword' is visible
+
+03-09-2025T11:57:56 - [MESSAGE][INFO] - Entering Confirm Password
+
+03-09-2025T11:57:57 - [MESSAGE][PASSED] - Text 'Password@123' is set on object 'Object Repository/ChangePasswordPage/inputConfirmPassword'
+
+03-09-2025T11:57:57 - [MESSAGE][PASSED] - Confirm Password has been entered
+
+03-09-2025T11:57:57 - [TEST_STEP][PASSED] - pages.PasswordChangePage.clickOnSubmit(findTestObject("Object Repository/ChangePasswordPage/submitButton")): Submit button has been clicked
+
+03-09-2025T11:57:57 - [MESSAGE][PASSED] - Object 'Object Repository/ChangePasswordPage/submitButton' is visible
+
+03-09-2025T11:57:57 - [MESSAGE][INFO] - Clicking Submit button
+
+03-09-2025T11:57:57 - [MESSAGE][PASSED] - Object: 'Object Repository/ChangePasswordPage/submitButton' is clicked on
+
+03-09-2025T11:57:57 - [MESSAGE][PASSED] - Submit button has been clicked
+
+03-09-2025T11:57:57 - [TEST_STEP][PASSED] - logInfo("New password has been set successfully"): New password has been set successfully
+
+03-09-2025T11:57:57 - [MESSAGE][INFO] - New password has been set successfully
+
+03-09-2025T11:57:57 - [TEST_STEP][PASSED] - logInfo("Verifying Password Change Text"): Verifying Password Change Text
+
+03-09-2025T11:57:57 - [MESSAGE][INFO] - Verifying Password Change Text
+
+03-09-2025T11:57:57 - [TEST_STEP][PASSED] - pages.AccountPage.verifyPasswordChange(findTestObject("Object Repository/AccountPage/passwordChangedText"), JsonFileReader.getJsonData(section, "verifyText", filepath)): Verify password change has been verified
+
+03-09-2025T11:58:00 - [MESSAGE][PASSED] - Object 'Object Repository/AccountPage/passwordChangedText' is visible
+
+03-09-2025T11:58:00 - [MESSAGE][INFO] - Verifying Verify password change
+
+03-09-2025T11:58:00 - [MESSAGE][PASSED] - Actual text and expected text of test object 'Object Repository/AccountPage/passwordChangedText' are matched.
+
+03-09-2025T11:58:00 - [MESSAGE][PASSED] - Verify password change has been verified
+
+03-09-2025T11:58:00 - [TEST_STEP][PASSED] - logInfo("Verified Password Change Text"): Verified Password Change Text
+
+03-09-2025T11:58:00 - [MESSAGE][INFO] - Verified Password Change Text
+
+03-09-2025T11:58:00 - [TEST_STEP][PASSED] - logInfo("Updating login password in JSON file"): Updating login password in JSON file
+
+03-09-2025T11:58:00 - [MESSAGE][INFO] - Updating login password in JSON file
+
+03-09-2025T11:58:00 - [TEST_STEP][PASSED] - JsonFileReader.updateJsonValue("loginPage", "password", JsonFileReader.getJsonData(section, "password", filepath), filepath): null
+
+03-09-2025T11:58:00 - [TEST_STEP][PASSED] - logInfo("Updated login password in JSON file"): Updated login password in JSON file
+
+03-09-2025T11:58:00 - [MESSAGE][INFO] - Updated login password in JSON file
+
+03-09-2025T11:58:00 - [TEST_STEP][PASSED] - Start listener action : closeTheBrowser: Browser is closed
+
+03-09-2025T11:58:00 - [TEST_STEP][PASSED] - closeBrowser(): Browser is closed
+
+03-09-2025T11:58:00 - [MESSAGE][PASSED] - Browser is closed]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/AddToCart" time="54.858" classname="Test Cases/AddToCart" status="PASSED">
+         <properties>
+            <property name="data_binding"><![CDATA[{"(Default) order...":"OrderPlacedPage","(Default) filep...":"Include/Data Files/login_data.json","(Default) cartP...":"CartPage"}]]></property>
+         </properties>
+         <system-out><![CDATA[03-09-2025T11:58:00 - [TEST_CASE][PASSED] - Test Cases/AddToCart: Test Cases/AddToCart
+
+03-09-2025T11:58:00 - [TEST_STEP][PASSED] - Start listener action : openTheBrowser: Current window maximized
+
+03-09-2025T11:58:00 - [TEST_STEP][PASSED] - openBrowser(baseUrl): Browser is opened with url: 'https://ecommerce-playground.lambdatest.io/'
+
+03-09-2025T11:58:00 - [MESSAGE][INFO] - Starting 'Chrome' driver
+
+03-09-2025T11:58:00 - [MESSAGE][INFO] - Action delay is set to 0 milliseconds
+
+03-09-2025T11:58:08 - [MESSAGE][PASSED] - Browser is opened with url: 'https://ecommerce-playground.lambdatest.io/'
+
+03-09-2025T11:58:08 - [TEST_STEP][PASSED] - maximizeWindow(): Current window maximized
+
+03-09-2025T11:58:08 - [MESSAGE][PASSED] - Current window maximized
+
+03-09-2025T11:58:08 - [TEST_STEP][PASSED] - logInfo("Signing into the account"): Signing into the account
+
+03-09-2025T11:58:08 - [MESSAGE][INFO] - Signing into the account
+
+03-09-2025T11:58:08 - [TEST_STEP][PASSED] - callTestCase(findTestCase("Test Cases/SignIn"), [:]): Call Test Case 'Test Cases/SignIn' successfully
+
+03-09-2025T11:58:08 - [TEST_CASE][PASSED] - Test Cases/SignIn: Test Cases/SignIn
+
+03-09-2025T11:58:08 - [TEST_STEP][PASSED] - logInfo("Navigating to the sign in page"): Navigating to the sign in page
+
+03-09-2025T11:58:08 - [MESSAGE][INFO] - Navigating to the sign in page
+
+03-09-2025T11:58:08 - [TEST_STEP][PASSED] - pages.HomePage.hoverOverMyAccount(findTestObject("Object Repository/Home_Page/my_Account_Button")): My Account has been hovered
+
+03-09-2025T11:58:09 - [MESSAGE][PASSED] - Object 'Object Repository/Home_Page/my_Account_Button' is visible
+
+03-09-2025T11:58:09 - [MESSAGE][INFO] - Hovering My Account
+
+03-09-2025T11:58:09 - [MESSAGE][PASSED] - Object: 'Object Repository/Home_Page/my_Account_Button' is hovered
+
+03-09-2025T11:58:09 - [MESSAGE][PASSED] - My Account has been hovered
+
+03-09-2025T11:58:09 - [TEST_STEP][PASSED] - pages.HomePage.clickOnLogin(findTestObject("Object Repository/Home_Page/login_Button")): Login Button has been clicked
+
+03-09-2025T11:58:09 - [MESSAGE][PASSED] - Object 'Object Repository/Home_Page/login_Button' is visible
+
+03-09-2025T11:58:09 - [MESSAGE][INFO] - Clicking Login Button
+
+03-09-2025T11:58:11 - [MESSAGE][PASSED] - Object: 'Object Repository/Home_Page/login_Button' is clicked on
+
+03-09-2025T11:58:11 - [MESSAGE][PASSED] - Login Button has been clicked
+
+03-09-2025T11:58:11 - [TEST_STEP][PASSED] - logInfo("Navigated to the sign in page"): Navigated to the sign in page
+
+03-09-2025T11:58:11 - [MESSAGE][INFO] - Navigated to the sign in page
+
+03-09-2025T11:58:11 - [TEST_STEP][PASSED] - logInfo("Signing into the account"): Signing into the account
+
+03-09-2025T11:58:11 - [MESSAGE][INFO] - Signing into the account
+
+03-09-2025T11:58:11 - [TEST_STEP][PASSED] - loginFields = [["id":"input-email", "jsonKey":"email"], ["id":"input-password", "jsonKey":"password"]]: null
+
+03-09-2025T11:58:11 - [TEST_STEP][PASSED] - loginFields.each({ -> ... }): password has been entered
+
+03-09-2025T11:58:12 - [MESSAGE][PASSED] - Object 'Object Repository/LoginPage/generic_Input' is visible
+
+03-09-2025T11:58:12 - [MESSAGE][INFO] - Entering email
+
+03-09-2025T11:58:13 - [MESSAGE][PASSED] - Text 'alicesmith.33@gmail.com' is set on object 'Object Repository/LoginPage/generic_Input'
+
+03-09-2025T11:58:13 - [MESSAGE][PASSED] - email has been entered
+
+03-09-2025T11:58:13 - [MESSAGE][PASSED] - Object 'Object Repository/LoginPage/generic_Input' is visible
+
+03-09-2025T11:58:13 - [MESSAGE][INFO] - Entering password
+
+03-09-2025T11:58:14 - [MESSAGE][PASSED] - Text 'Password@123' is set on object 'Object Repository/LoginPage/generic_Input'
+
+03-09-2025T11:58:14 - [MESSAGE][PASSED] - password has been entered
+
+03-09-2025T11:58:14 - [TEST_STEP][PASSED] - pages.LoginPage.clickOnLoginButton(findTestObject("Object Repository/LoginPage/Login_button")): Login button has been clicked
+
+03-09-2025T11:58:14 - [MESSAGE][PASSED] - Object 'Object Repository/LoginPage/Login_button' is visible
+
+03-09-2025T11:58:14 - [MESSAGE][INFO] - Clicking Login button
+
+03-09-2025T11:58:14 - [MESSAGE][PASSED] - Object: 'Object Repository/LoginPage/Login_button' is clicked on
+
+03-09-2025T11:58:14 - [MESSAGE][PASSED] - Login button has been clicked
+
+03-09-2025T11:58:14 - [TEST_STEP][PASSED] - logInfo("Signed into the account"): Signed into the account
+
+03-09-2025T11:58:14 - [MESSAGE][INFO] - Signed into the account
+
+03-09-2025T11:58:14 - [TEST_STEP][PASSED] - logInfo("Verifying My Account"): Verifying My Account
+
+03-09-2025T11:58:14 - [MESSAGE][INFO] - Verifying My Account
+
+03-09-2025T11:58:14 - [TEST_STEP][PASSED] - pages.AccountPage.verifyMyAccount(findTestObject("Object Repository/AccountPage/my_Account_verification"), JsonFileReader.getJsonData(section, "verification_text", filepath)): Verify My account has been verified
+
+03-09-2025T11:58:18 - [MESSAGE][PASSED] - Object 'Object Repository/AccountPage/my_Account_verification' is visible
+
+03-09-2025T11:58:18 - [MESSAGE][INFO] - Verifying Verify My account
+
+03-09-2025T11:58:18 - [MESSAGE][PASSED] - Actual text and expected text of test object 'Object Repository/AccountPage/my_Account_verification' are matched.
+
+03-09-2025T11:58:18 - [MESSAGE][PASSED] - Verify My account has been verified
+
+03-09-2025T11:58:18 - [TEST_STEP][PASSED] - logInfo("Verified My Account"): Verified My Account
+
+03-09-2025T11:58:18 - [MESSAGE][INFO] - Verified My Account
+
+03-09-2025T11:58:18 - [MESSAGE][PASSED] - Call Test Case 'Test Cases/SignIn' successfully
+
+03-09-2025T11:58:18 - [TEST_STEP][PASSED] - logInfo("Signed in to the account"): Signed in to the account
+
+03-09-2025T11:58:18 - [MESSAGE][INFO] - Signed in to the account
+
+03-09-2025T11:58:18 - [TEST_STEP][PASSED] - logInfo("Navigating to the product page"): Navigating to the product page
+
+03-09-2025T11:58:18 - [MESSAGE][INFO] - Navigating to the product page
+
+03-09-2025T11:58:18 - [TEST_STEP][PASSED] - pages.HomePage.clickOnShopByCategory(findTestObject("Object Repository/Home_Page/shopByCategory")): Shop by category has been clicked
+
+03-09-2025T11:58:18 - [MESSAGE][PASSED] - Object 'Object Repository/Home_Page/shopByCategory' is visible
+
+03-09-2025T11:58:18 - [MESSAGE][INFO] - Clicking Shop by category
+
+03-09-2025T11:58:19 - [MESSAGE][PASSED] - Object: 'Object Repository/Home_Page/shopByCategory' is clicked on
+
+03-09-2025T11:58:19 - [MESSAGE][PASSED] - Shop by category has been clicked
+
+03-09-2025T11:58:19 - [TEST_STEP][PASSED] - pages.HomePage.clickOnComponents(findTestObject("Object Repository/Home_Page/components")): Components has been clicked
+
+03-09-2025T11:58:19 - [MESSAGE][PASSED] - Object 'Object Repository/Home_Page/components' is visible
+
+03-09-2025T11:58:19 - [MESSAGE][INFO] - Clicking Components
+
+03-09-2025T11:58:24 - [MESSAGE][PASSED] - Object: 'Object Repository/Home_Page/components' is clicked on
+
+03-09-2025T11:58:24 - [MESSAGE][PASSED] - Components has been clicked
+
+03-09-2025T11:58:24 - [TEST_STEP][PASSED] - pages.ComponentsPage.clickOnInstock(findTestObject("Object Repository/CompenentsPage/instockLabel")): In stock label has been clicked
+
+03-09-2025T11:58:24 - [MESSAGE][PASSED] - Object 'Object Repository/CompenentsPage/instockLabel' is visible
+
+03-09-2025T11:58:24 - [MESSAGE][INFO] - Clicking In stock label
+
+03-09-2025T11:58:25 - [MESSAGE][PASSED] - Object: 'Object Repository/CompenentsPage/instockLabel' is clicked on
+
+03-09-2025T11:58:25 - [MESSAGE][PASSED] - In stock label has been clicked
+
+03-09-2025T11:58:25 - [TEST_STEP][PASSED] - logInfo("Navigated to the product page"): Navigated to the product page
+
+03-09-2025T11:58:25 - [MESSAGE][INFO] - Navigated to the product page
+
+03-09-2025T11:58:25 - [TEST_STEP][PASSED] - logInfo("Adding the product to the cart"): Adding the product to the cart
+
+03-09-2025T11:58:25 - [MESSAGE][INFO] - Adding the product to the cart
+
+03-09-2025T11:58:25 - [TEST_STEP][PASSED] - pages.ComponentsPage.clickOnProduct(findTestObject("Object Repository/CompenentsPage/productName")): Product has been clicked
+
+03-09-2025T11:58:27 - [MESSAGE][PASSED] - Object 'Object Repository/CompenentsPage/productName' is visible
+
+03-09-2025T11:58:27 - [MESSAGE][INFO] - Clicking Product
+
+03-09-2025T11:58:31 - [MESSAGE][PASSED] - Object: 'Object Repository/CompenentsPage/productName' is clicked on
+
+03-09-2025T11:58:31 - [MESSAGE][PASSED] - Product has been clicked
+
+03-09-2025T11:58:31 - [TEST_STEP][PASSED] - pages.ProductPage.clickOnAddToCart(findTestObject("Object Repository/ProductPage/addToCartButton")): Add To Cart Button has been clicked
+
+03-09-2025T11:58:32 - [MESSAGE][PASSED] - Object 'Object Repository/ProductPage/addToCartButton' is visible
+
+03-09-2025T11:58:32 - [MESSAGE][INFO] - Clicking Add To Cart Button
+
+03-09-2025T11:58:32 - [MESSAGE][PASSED] - Object: 'Object Repository/ProductPage/addToCartButton' is clicked on
+
+03-09-2025T11:58:32 - [MESSAGE][PASSED] - Add To Cart Button has been clicked
+
+03-09-2025T11:58:32 - [TEST_STEP][PASSED] - logInfo("Product added to Cart"): Product added to Cart
+
+03-09-2025T11:58:32 - [MESSAGE][INFO] - Product added to Cart
+
+03-09-2025T11:58:32 - [TEST_STEP][PASSED] - logInfo("Navigating to the checkout page"): Navigating to the checkout page
+
+03-09-2025T11:58:32 - [MESSAGE][INFO] - Navigating to the checkout page
+
+03-09-2025T11:58:32 - [TEST_STEP][PASSED] - pages.ProductPage.clickOnViewCart(findTestObject("Object Repository/ProductPage/viewCartButton")): View Cart has been clicked
+
+03-09-2025T11:58:34 - [MESSAGE][PASSED] - Object 'Object Repository/ProductPage/viewCartButton' is visible
+
+03-09-2025T11:58:34 - [MESSAGE][INFO] - Clicking View Cart
+
+03-09-2025T11:58:36 - [MESSAGE][PASSED] - Object: 'Object Repository/ProductPage/viewCartButton' is clicked on
+
+03-09-2025T11:58:36 - [MESSAGE][PASSED] - View Cart has been clicked
+
+03-09-2025T11:58:36 - [TEST_STEP][PASSED] - pages.ShoppingCartPage.clickOnCheckout(findTestObject("Object Repository/ShoppingCartPage/CheckOutButton")): Checkout button has been clicked
+
+03-09-2025T11:58:37 - [MESSAGE][PASSED] - Object 'Object Repository/ShoppingCartPage/CheckOutButton' is visible
+
+03-09-2025T11:58:37 - [MESSAGE][INFO] - Clicking Checkout button
+
+03-09-2025T11:58:40 - [MESSAGE][PASSED] - Object: 'Object Repository/ShoppingCartPage/CheckOutButton' is clicked on
+
+03-09-2025T11:58:40 - [MESSAGE][PASSED] - Checkout button has been clicked
+
+03-09-2025T11:58:40 - [TEST_STEP][PASSED] - logInfo("Navigated to the checkout page"): Navigated to the checkout page
+
+03-09-2025T11:58:40 - [MESSAGE][INFO] - Navigated to the checkout page
+
+03-09-2025T11:58:40 - [TEST_STEP][PASSED] - logInfo("Entering billing details"): Entering billing details
+
+03-09-2025T11:58:40 - [MESSAGE][INFO] - Entering billing details
+
+03-09-2025T11:58:40 - [TEST_STEP][PASSED] - paymentFields = [["id":"input-payment-firstname", "jsonKey":"firstName", "label":"First Name"], ["id":"input-payment-lastname", "jsonKey":"lastName", "label":"Last Name"], ["id":"input-payment-address-1", "jsonKey":"address", "label":"Address"], ["id":"input-payment-city", "jsonKey":"city", "label":"City"], ["id":"input-payment-postcode", "jsonKey":"postalCode", "label":"Postal Code"]]: null
+
+03-09-2025T11:58:40 - [TEST_STEP][PASSED] - paymentFields.each({ -> ... }): Postal Code has been entered
+
+03-09-2025T11:58:41 - [MESSAGE][PASSED] - Object 'Object Repository/CheckoutPage/dynamicInput' is visible
+
+03-09-2025T11:58:41 - [MESSAGE][INFO] - Entering First Name
+
+03-09-2025T11:58:42 - [MESSAGE][PASSED] - Text 'Alice' is set on object 'Object Repository/CheckoutPage/dynamicInput'
+
+03-09-2025T11:58:42 - [MESSAGE][PASSED] - First Name has been entered
+
+03-09-2025T11:58:42 - [MESSAGE][PASSED] - Object 'Object Repository/CheckoutPage/dynamicInput' is visible
+
+03-09-2025T11:58:42 - [MESSAGE][INFO] - Entering Last Name
+
+03-09-2025T11:58:43 - [MESSAGE][PASSED] - Text 'Smithh' is set on object 'Object Repository/CheckoutPage/dynamicInput'
+
+03-09-2025T11:58:43 - [MESSAGE][PASSED] - Last Name has been entered
+
+03-09-2025T11:58:43 - [MESSAGE][PASSED] - Object 'Object Repository/CheckoutPage/dynamicInput' is visible
+
+03-09-2025T11:58:43 - [MESSAGE][INFO] - Entering Address
+
+03-09-2025T11:58:44 - [MESSAGE][PASSED] - Text '11,Wesley's Road' is set on object 'Object Repository/CheckoutPage/dynamicInput'
+
+03-09-2025T11:58:44 - [MESSAGE][PASSED] - Address has been entered
+
+03-09-2025T11:58:44 - [MESSAGE][PASSED] - Object 'Object Repository/CheckoutPage/dynamicInput' is visible
+
+03-09-2025T11:58:44 - [MESSAGE][INFO] - Entering City
+
+03-09-2025T11:58:45 - [MESSAGE][PASSED] - Text 'Blackburn' is set on object 'Object Repository/CheckoutPage/dynamicInput'
+
+03-09-2025T11:58:45 - [MESSAGE][PASSED] - City has been entered
+
+03-09-2025T11:58:45 - [MESSAGE][PASSED] - Object 'Object Repository/CheckoutPage/dynamicInput' is visible
+
+03-09-2025T11:58:45 - [MESSAGE][INFO] - Entering Postal Code
+
+03-09-2025T11:58:46 - [MESSAGE][PASSED] - Text 'BB1 1AB' is set on object 'Object Repository/CheckoutPage/dynamicInput'
+
+03-09-2025T11:58:46 - [MESSAGE][PASSED] - Postal Code has been entered
+
+03-09-2025T11:58:46 - [TEST_STEP][PASSED] - logInfo("Billing details entered"): Billing details entered
+
+03-09-2025T11:58:46 - [MESSAGE][INFO] - Billing details entered
+
+03-09-2025T11:58:46 - [TEST_STEP][PASSED] - logInfo("Navigating to the confirm order page"): Navigating to the confirm order page
+
+03-09-2025T11:58:46 - [MESSAGE][INFO] - Navigating to the confirm order page
+
+03-09-2025T11:58:46 - [TEST_STEP][PASSED] - pages.CheckOutPage.clickOnPrivacyPolicyStatement(findTestObject("Object Repository/CheckoutPage/privacyPolicyCheckbox")): Privacy Policy statement has been clicked
+
+03-09-2025T11:58:46 - [MESSAGE][PASSED] - Object 'Object Repository/CheckoutPage/privacyPolicyCheckbox' is visible
+
+03-09-2025T11:58:46 - [MESSAGE][INFO] - Clicking Privacy Policy statement
+
+03-09-2025T11:58:47 - [MESSAGE][PASSED] - Object: 'Object Repository/CheckoutPage/privacyPolicyCheckbox' is clicked on
+
+03-09-2025T11:58:47 - [MESSAGE][PASSED] - Privacy Policy statement has been clicked
+
+03-09-2025T11:58:47 - [TEST_STEP][PASSED] - logInfo("Clicked on Continue Button"): Clicked on Continue Button
+
+03-09-2025T11:58:47 - [MESSAGE][INFO] - Clicked on Continue Button
+
+03-09-2025T11:58:47 - [TEST_STEP][PASSED] - pages.CheckOutPage.clickOnContinue(findTestObject("Object Repository/CheckoutPage/continueButton")): Continue Button has been clicked
+
+03-09-2025T11:58:48 - [MESSAGE][PASSED] - Object 'Object Repository/CheckoutPage/continueButton' is visible
+
+03-09-2025T11:58:48 - [MESSAGE][INFO] - Clicking Continue Button
+
+03-09-2025T11:58:48 - [MESSAGE][PASSED] - Object: 'Object Repository/CheckoutPage/continueButton' is clicked on
+
+03-09-2025T11:58:48 - [MESSAGE][PASSED] - Continue Button has been clicked
+
+03-09-2025T11:58:48 - [TEST_STEP][PASSED] - pages.ConfirmOrderPage.clickOnConfirmOrder(findTestObject("Object Repository/ConfirmOrderPage/confirmOrder_Button")): Confirm Order button has been clicked
+
+03-09-2025T11:58:51 - [MESSAGE][PASSED] - Object 'Object Repository/ConfirmOrderPage/confirmOrder_Button' is visible
+
+03-09-2025T11:58:51 - [MESSAGE][INFO] - Clicking Confirm Order button
+
+03-09-2025T11:58:52 - [MESSAGE][PASSED] - Object: 'Object Repository/ConfirmOrderPage/confirmOrder_Button' is clicked on
+
+03-09-2025T11:58:52 - [MESSAGE][PASSED] - Confirm Order button has been clicked
+
+03-09-2025T11:58:52 - [TEST_STEP][PASSED] - logInfo("Navigating to the confirm order page"): Navigating to the confirm order page
+
+03-09-2025T11:58:52 - [MESSAGE][INFO] - Navigating to the confirm order page
+
+03-09-2025T11:58:52 - [TEST_STEP][PASSED] - logInfo("Verifying the confirm order text"): Verifying the confirm order text
+
+03-09-2025T11:58:52 - [MESSAGE][INFO] - Verifying the confirm order text
+
+03-09-2025T11:58:52 - [TEST_STEP][PASSED] - pages.CheckOutSuccessPage.verifyOrderPlaced(findTestObject("Object Repository/CheckOutSuccessPage/OrderConfirmed"), JsonFileReader.getJsonData(orderPlacedPage, "verifyText", filepath)): Order text has been verified
+
+03-09-2025T11:58:55 - [MESSAGE][PASSED] - Object 'Object Repository/CheckOutSuccessPage/OrderConfirmed' is visible
+
+03-09-2025T11:58:55 - [MESSAGE][INFO] - Verifying Order text
+
+03-09-2025T11:58:55 - [MESSAGE][PASSED] - Actual text and expected text of test object 'Object Repository/CheckOutSuccessPage/OrderConfirmed' are matched.
+
+03-09-2025T11:58:55 - [MESSAGE][PASSED] - Order text has been verified
+
+03-09-2025T11:58:55 - [TEST_STEP][PASSED] - logInfo("Verified the confirm order text"): Verified the confirm order text
+
+03-09-2025T11:58:55 - [MESSAGE][INFO] - Verified the confirm order text
+
+03-09-2025T11:58:55 - [TEST_STEP][PASSED] - Start listener action : closeTheBrowser: Browser is closed
+
+03-09-2025T11:58:55 - [TEST_STEP][PASSED] - closeBrowser(): Browser is closed
+
+03-09-2025T11:58:55 - [MESSAGE][PASSED] - Browser is closed]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/ProductReturn" time="32.478" classname="Test Cases/ProductReturn" status="PASSED">
+         <properties>
+            <property name="data_binding"><![CDATA[{"(Default) secti...":"ProductReturnPage","(Default) filep...":"Include/Data Files/login_data.json"}]]></property>
+         </properties>
+         <system-out><![CDATA[03-09-2025T11:58:55 - [TEST_CASE][PASSED] - Test Cases/ProductReturn: Test Cases/ProductReturn
+
+03-09-2025T11:58:55 - [TEST_STEP][PASSED] - Start listener action : openTheBrowser: Current window maximized
+
+03-09-2025T11:58:55 - [TEST_STEP][PASSED] - openBrowser(baseUrl): Browser is opened with url: 'https://ecommerce-playground.lambdatest.io/'
+
+03-09-2025T11:58:55 - [MESSAGE][INFO] - Starting 'Chrome' driver
+
+03-09-2025T11:58:55 - [MESSAGE][INFO] - Action delay is set to 0 milliseconds
+
+03-09-2025T11:59:03 - [MESSAGE][PASSED] - Browser is opened with url: 'https://ecommerce-playground.lambdatest.io/'
+
+03-09-2025T11:59:03 - [TEST_STEP][PASSED] - maximizeWindow(): Current window maximized
+
+03-09-2025T11:59:04 - [MESSAGE][PASSED] - Current window maximized
+
+03-09-2025T11:59:04 - [TEST_STEP][PASSED] - logInfo("Signing into the account"): Signing into the account
+
+03-09-2025T11:59:04 - [MESSAGE][INFO] - Signing into the account
+
+03-09-2025T11:59:04 - [TEST_STEP][PASSED] - callTestCase(findTestCase("Test Cases/SignIn"), [:]): Call Test Case 'Test Cases/SignIn' successfully
+
+03-09-2025T11:59:04 - [TEST_CASE][PASSED] - Test Cases/SignIn: Test Cases/SignIn
+
+03-09-2025T11:59:04 - [TEST_STEP][PASSED] - logInfo("Navigating to the sign in page"): Navigating to the sign in page
+
+03-09-2025T11:59:04 - [MESSAGE][INFO] - Navigating to the sign in page
+
+03-09-2025T11:59:04 - [TEST_STEP][PASSED] - pages.HomePage.hoverOverMyAccount(findTestObject("Object Repository/Home_Page/my_Account_Button")): My Account has been hovered
+
+03-09-2025T11:59:04 - [MESSAGE][PASSED] - Object 'Object Repository/Home_Page/my_Account_Button' is visible
+
+03-09-2025T11:59:04 - [MESSAGE][INFO] - Hovering My Account
+
+03-09-2025T11:59:05 - [MESSAGE][PASSED] - Object: 'Object Repository/Home_Page/my_Account_Button' is hovered
+
+03-09-2025T11:59:05 - [MESSAGE][PASSED] - My Account has been hovered
+
+03-09-2025T11:59:05 - [TEST_STEP][PASSED] - pages.HomePage.clickOnLogin(findTestObject("Object Repository/Home_Page/login_Button")): Login Button has been clicked
+
+03-09-2025T11:59:05 - [MESSAGE][PASSED] - Object 'Object Repository/Home_Page/login_Button' is visible
+
+03-09-2025T11:59:05 - [MESSAGE][INFO] - Clicking Login Button
+
+03-09-2025T11:59:07 - [MESSAGE][PASSED] - Object: 'Object Repository/Home_Page/login_Button' is clicked on
+
+03-09-2025T11:59:07 - [MESSAGE][PASSED] - Login Button has been clicked
+
+03-09-2025T11:59:07 - [TEST_STEP][PASSED] - logInfo("Navigated to the sign in page"): Navigated to the sign in page
+
+03-09-2025T11:59:07 - [MESSAGE][INFO] - Navigated to the sign in page
+
+03-09-2025T11:59:07 - [TEST_STEP][PASSED] - logInfo("Signing into the account"): Signing into the account
+
+03-09-2025T11:59:07 - [MESSAGE][INFO] - Signing into the account
+
+03-09-2025T11:59:07 - [TEST_STEP][PASSED] - loginFields = [["id":"input-email", "jsonKey":"email"], ["id":"input-password", "jsonKey":"password"]]: null
+
+03-09-2025T11:59:07 - [TEST_STEP][PASSED] - loginFields.each({ -> ... }): password has been entered
+
+03-09-2025T11:59:08 - [MESSAGE][PASSED] - Object 'Object Repository/LoginPage/generic_Input' is visible
+
+03-09-2025T11:59:08 - [MESSAGE][INFO] - Entering email
+
+03-09-2025T11:59:09 - [MESSAGE][PASSED] - Text 'alicesmith.33@gmail.com' is set on object 'Object Repository/LoginPage/generic_Input'
+
+03-09-2025T11:59:09 - [MESSAGE][PASSED] - email has been entered
+
+03-09-2025T11:59:09 - [MESSAGE][PASSED] - Object 'Object Repository/LoginPage/generic_Input' is visible
+
+03-09-2025T11:59:09 - [MESSAGE][INFO] - Entering password
+
+03-09-2025T11:59:10 - [MESSAGE][PASSED] - Text 'Password@123' is set on object 'Object Repository/LoginPage/generic_Input'
+
+03-09-2025T11:59:10 - [MESSAGE][PASSED] - password has been entered
+
+03-09-2025T11:59:10 - [TEST_STEP][PASSED] - pages.LoginPage.clickOnLoginButton(findTestObject("Object Repository/LoginPage/Login_button")): Login button has been clicked
+
+03-09-2025T11:59:10 - [MESSAGE][PASSED] - Object 'Object Repository/LoginPage/Login_button' is visible
+
+03-09-2025T11:59:10 - [MESSAGE][INFO] - Clicking Login button
+
+03-09-2025T11:59:10 - [MESSAGE][PASSED] - Object: 'Object Repository/LoginPage/Login_button' is clicked on
+
+03-09-2025T11:59:10 - [MESSAGE][PASSED] - Login button has been clicked
+
+03-09-2025T11:59:10 - [TEST_STEP][PASSED] - logInfo("Signed into the account"): Signed into the account
+
+03-09-2025T11:59:10 - [MESSAGE][INFO] - Signed into the account
+
+03-09-2025T11:59:10 - [TEST_STEP][PASSED] - logInfo("Verifying My Account"): Verifying My Account
+
+03-09-2025T11:59:10 - [MESSAGE][INFO] - Verifying My Account
+
+03-09-2025T11:59:10 - [TEST_STEP][PASSED] - pages.AccountPage.verifyMyAccount(findTestObject("Object Repository/AccountPage/my_Account_verification"), JsonFileReader.getJsonData(section, "verification_text", filepath)): Verify My account has been verified
+
+03-09-2025T11:59:13 - [MESSAGE][PASSED] - Object 'Object Repository/AccountPage/my_Account_verification' is visible
+
+03-09-2025T11:59:13 - [MESSAGE][INFO] - Verifying Verify My account
+
+03-09-2025T11:59:14 - [MESSAGE][PASSED] - Actual text and expected text of test object 'Object Repository/AccountPage/my_Account_verification' are matched.
+
+03-09-2025T11:59:14 - [MESSAGE][PASSED] - Verify My account has been verified
+
+03-09-2025T11:59:14 - [TEST_STEP][PASSED] - logInfo("Verified My Account"): Verified My Account
+
+03-09-2025T11:59:14 - [MESSAGE][INFO] - Verified My Account
+
+03-09-2025T11:59:14 - [MESSAGE][PASSED] - Call Test Case 'Test Cases/SignIn' successfully
+
+03-09-2025T11:59:14 - [TEST_STEP][PASSED] - logInfo("Signed into the account"): Signed into the account
+
+03-09-2025T11:59:14 - [MESSAGE][INFO] - Signed into the account
+
+03-09-2025T11:59:14 - [TEST_STEP][PASSED] - logInfo("Navigating to order history page"): Navigating to order history page
+
+03-09-2025T11:59:14 - [MESSAGE][INFO] - Navigating to order history page
+
+03-09-2025T11:59:14 - [TEST_STEP][PASSED] - sideBarElements = [["text":" Order History", "label":"Order History"]]: null
+
+03-09-2025T11:59:14 - [TEST_STEP][PASSED] - sideBarElements.each({ -> ... }): Order History has been clicked
+
+03-09-2025T11:59:14 - [MESSAGE][PASSED] - Object 'Object Repository/AccountPage/sideBar' is visible
+
+03-09-2025T11:59:14 - [MESSAGE][INFO] - Clicking Order History
+
+03-09-2025T11:59:16 - [MESSAGE][PASSED] - Object: 'Object Repository/AccountPage/sideBar' is clicked on
+
+03-09-2025T11:59:16 - [MESSAGE][PASSED] - Order History has been clicked
+
+03-09-2025T11:59:16 - [TEST_STEP][PASSED] - logInfo("Navigated to order history page"): Navigated to order history page
+
+03-09-2025T11:59:16 - [MESSAGE][INFO] - Navigated to order history page
+
+03-09-2025T11:59:16 - [TEST_STEP][PASSED] - logInfo("Navigating to the order information page"): Navigating to the order information page
+
+03-09-2025T11:59:16 - [MESSAGE][INFO] - Navigating to the order information page
+
+03-09-2025T11:59:16 - [TEST_STEP][PASSED] - pages.OrderHistoryPage.clickOnViewButton(findTestObject("Object Repository/OrderHistoryPage/viewInformationButton")): view Button has been clicked
+
+03-09-2025T11:59:17 - [MESSAGE][PASSED] - Object 'Object Repository/OrderHistoryPage/viewInformationButton' is visible
+
+03-09-2025T11:59:17 - [MESSAGE][INFO] - Clicking view Button
+
+03-09-2025T11:59:19 - [MESSAGE][PASSED] - Object: 'Object Repository/OrderHistoryPage/viewInformationButton' is clicked on
+
+03-09-2025T11:59:19 - [MESSAGE][PASSED] - view Button has been clicked
+
+03-09-2025T11:59:19 - [TEST_STEP][PASSED] - logInfo("Navigated to the order information page"): Navigated to the order information page
+
+03-09-2025T11:59:19 - [MESSAGE][INFO] - Navigated to the order information page
+
+03-09-2025T11:59:19 - [TEST_STEP][PASSED] - logInfo("Navigating to the order return page"): Navigating to the order return page
+
+03-09-2025T11:59:19 - [MESSAGE][INFO] - Navigating to the order return page
+
+03-09-2025T11:59:19 - [TEST_STEP][PASSED] - pages.OrderInformationPage.clickOnReturnButton(findTestObject("Object Repository/OrderInformationPage/returnButton")): Return button has been clicked
+
+03-09-2025T11:59:20 - [MESSAGE][PASSED] - Object 'Object Repository/OrderInformationPage/returnButton' is visible
+
+03-09-2025T11:59:20 - [MESSAGE][INFO] - Clicking Return button
+
+03-09-2025T11:59:22 - [MESSAGE][PASSED] - Object: 'Object Repository/OrderInformationPage/returnButton' is clicked on
+
+03-09-2025T11:59:22 - [MESSAGE][PASSED] - Return button has been clicked
+
+03-09-2025T11:59:22 - [TEST_STEP][PASSED] - pages.OrderReturnPage.clickOnOrderErrorOption(findTestObject("Object Repository/ProductReturnsPage/orderErrorOption")): order error option has been clicked
+
+03-09-2025T11:59:23 - [MESSAGE][PASSED] - Object 'Object Repository/ProductReturnsPage/orderErrorOption' is visible
+
+03-09-2025T11:59:23 - [MESSAGE][INFO] - Clicking order error option
+
+03-09-2025T11:59:23 - [MESSAGE][PASSED] - Object: 'Object Repository/ProductReturnsPage/orderErrorOption' is clicked on
+
+03-09-2025T11:59:23 - [MESSAGE][PASSED] - order error option has been clicked
+
+03-09-2025T11:59:23 - [TEST_STEP][PASSED] - pages.OrderReturnPage.clickOnSubmitButton(findTestObject("Object Repository/ProductReturnsPage/submitButton")): submit button has been clicked
+
+03-09-2025T11:59:23 - [MESSAGE][PASSED] - Object 'Object Repository/ProductReturnsPage/submitButton' is visible
+
+03-09-2025T11:59:23 - [MESSAGE][INFO] - Clicking submit button
+
+03-09-2025T11:59:24 - [MESSAGE][PASSED] - Object: 'Object Repository/ProductReturnsPage/submitButton' is clicked on
+
+03-09-2025T11:59:24 - [MESSAGE][PASSED] - submit button has been clicked
+
+03-09-2025T11:59:24 - [TEST_STEP][PASSED] - logInfo("Navigated to the order return page"): Navigated to the order return page
+
+03-09-2025T11:59:24 - [MESSAGE][INFO] - Navigated to the order return page
+
+03-09-2025T11:59:24 - [TEST_STEP][PASSED] - logInfo("Verifying the order return"): Verifying the order return
+
+03-09-2025T11:59:24 - [MESSAGE][INFO] - Verifying the order return
+
+03-09-2025T11:59:24 - [TEST_STEP][PASSED] - pages.OrderReturnPage.verifyOrderReturn(findTestObject("Object Repository/ProductReturnsPage/verifyText"), JsonFileReader.getJsonData(section, "verifyText", filepath)): Order return has been verified
+
+03-09-2025T11:59:27 - [MESSAGE][PASSED] - Object 'Object Repository/ProductReturnsPage/verifyText' is visible
+
+03-09-2025T11:59:27 - [MESSAGE][INFO] - Verifying Order return
+
+03-09-2025T11:59:27 - [MESSAGE][PASSED] - Actual text and expected text of test object 'Object Repository/ProductReturnsPage/verifyText' are matched.
+
+03-09-2025T11:59:27 - [MESSAGE][PASSED] - Order return has been verified
+
+03-09-2025T11:59:27 - [TEST_STEP][PASSED] - logInfo("Verified the order return"): Verified the order return
+
+03-09-2025T11:59:27 - [MESSAGE][INFO] - Verified the order return
+
+03-09-2025T11:59:27 - [TEST_STEP][PASSED] - Start listener action : closeTheBrowser: Browser is closed
+
+03-09-2025T11:59:27 - [TEST_STEP][PASSED] - closeBrowser(): Browser is closed
+
+03-09-2025T11:59:28 - [MESSAGE][PASSED] - Browser is closed]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/CommentPost" time="19.412" classname="Test Cases/CommentPost" status="PASSED">
+         <properties>
+            <property name="data_binding"><![CDATA[{"(Default) secti...":"ArticlePage","(Default) filep...":"Include/Data Files/login_data.json"}]]></property>
+         </properties>
+         <system-out><![CDATA[03-09-2025T11:59:28 - [TEST_CASE][PASSED] - Test Cases/CommentPost: Test Cases/CommentPost
+
+03-09-2025T11:59:28 - [TEST_STEP][PASSED] - Start listener action : openTheBrowser: Current window maximized
+
+03-09-2025T11:59:28 - [TEST_STEP][PASSED] - openBrowser(baseUrl): Browser is opened with url: 'https://ecommerce-playground.lambdatest.io/'
+
+03-09-2025T11:59:28 - [MESSAGE][INFO] - Starting 'Chrome' driver
+
+03-09-2025T11:59:28 - [MESSAGE][INFO] - Action delay is set to 0 milliseconds
+
+03-09-2025T11:59:35 - [MESSAGE][PASSED] - Browser is opened with url: 'https://ecommerce-playground.lambdatest.io/'
+
+03-09-2025T11:59:35 - [TEST_STEP][PASSED] - maximizeWindow(): Current window maximized
+
+03-09-2025T11:59:35 - [MESSAGE][PASSED] - Current window maximized
+
+03-09-2025T11:59:36 - [TEST_STEP][PASSED] - logInfo("Navigating to the blog page"): Navigating to the blog page
+
+03-09-2025T11:59:36 - [MESSAGE][INFO] - Navigating to the blog page
+
+03-09-2025T11:59:36 - [TEST_STEP][PASSED] - pages.HomePage.clickOnBlog(findTestObject("Object Repository/Home_Page/Blogs"), "Blog"): Blog has been clicked
+
+03-09-2025T11:59:36 - [MESSAGE][PASSED] - Object 'Object Repository/Home_Page/Blogs' is visible
+
+03-09-2025T11:59:36 - [MESSAGE][INFO] - Clicking Blog
+
+03-09-2025T11:59:38 - [MESSAGE][PASSED] - Object: 'Object Repository/Home_Page/Blogs' is clicked on
+
+03-09-2025T11:59:38 - [MESSAGE][PASSED] - Blog has been clicked
+
+03-09-2025T11:59:38 - [TEST_STEP][PASSED] - pages.BlogPage.clickOnArticle(findTestObject("Object Repository/BlogsPage/Article")): Article has been clicked
+
+03-09-2025T11:59:39 - [MESSAGE][PASSED] - Object 'Object Repository/BlogsPage/Article' is visible
+
+03-09-2025T11:59:39 - [MESSAGE][INFO] - Clicking Article
+
+03-09-2025T11:59:42 - [MESSAGE][PASSED] - Object: 'Object Repository/BlogsPage/Article' is clicked on
+
+03-09-2025T11:59:42 - [MESSAGE][PASSED] - Article has been clicked
+
+03-09-2025T11:59:42 - [TEST_STEP][PASSED] - logInfo("Navigated to the blog page"): Navigated to the blog page
+
+03-09-2025T11:59:42 - [MESSAGE][INFO] - Navigated to the blog page
+
+03-09-2025T11:59:42 - [TEST_STEP][PASSED] - logInfo("Entering the detials to post a comment"): Entering the detials to post a comment
+
+03-09-2025T11:59:42 - [MESSAGE][INFO] - Entering the detials to post a comment
+
+03-09-2025T11:59:42 - [TEST_STEP][PASSED] - articleFields = [["id":"input-name", "jsonKey":"name", "label":"Name"], ["id":"input-email", "jsonKey":"email", "label":"Email"]]: null
+
+03-09-2025T11:59:42 - [TEST_STEP][PASSED] - articleFields.each({ -> ... }): Email has been entered
+
+03-09-2025T11:59:42 - [MESSAGE][PASSED] - Object 'Object Repository/ArticlePage/dynamicInput' is visible
+
+03-09-2025T11:59:42 - [MESSAGE][INFO] - Entering Name
+
+03-09-2025T11:59:43 - [MESSAGE][PASSED] - Text 'Amal' is set on object 'Object Repository/ArticlePage/dynamicInput'
+
+03-09-2025T11:59:43 - [MESSAGE][PASSED] - Name has been entered
+
+03-09-2025T11:59:43 - [MESSAGE][PASSED] - Object 'Object Repository/ArticlePage/dynamicInput' is visible
+
+03-09-2025T11:59:43 - [MESSAGE][INFO] - Entering Email
+
+03-09-2025T11:59:44 - [MESSAGE][PASSED] - Text 'amal@gmail.com' is set on object 'Object Repository/ArticlePage/dynamicInput'
+
+03-09-2025T11:59:44 - [MESSAGE][PASSED] - Email has been entered
+
+03-09-2025T11:59:44 - [TEST_STEP][PASSED] - pages.ArticlePage.inputCommentOnArticle(findTestObject("Object Repository/ArticlePage/inputComment"), JsonFileReader.getJsonData(section, "comment", filepath)): Comment has been entered
+
+03-09-2025T11:59:44 - [MESSAGE][PASSED] - Object 'Object Repository/ArticlePage/inputComment' is visible
+
+03-09-2025T11:59:44 - [MESSAGE][INFO] - Entering Comment
+
+03-09-2025T11:59:45 - [MESSAGE][PASSED] - Text 'This comment is to ensure that this testcase is currently running' is set on object 'Object Repository/ArticlePage/inputComment'
+
+03-09-2025T11:59:45 - [MESSAGE][PASSED] - Comment has been entered
+
+03-09-2025T11:59:45 - [TEST_STEP][PASSED] - pages.ArticlePage.clickOnPostCommentButton(findTestObject("Object Repository/ArticlePage/postCommentButton")): Post comment has been clicked
+
+03-09-2025T11:59:46 - [MESSAGE][PASSED] - Object 'Object Repository/ArticlePage/postCommentButton' is visible
+
+03-09-2025T11:59:46 - [MESSAGE][INFO] - Clicking Post comment
+
+03-09-2025T11:59:46 - [MESSAGE][PASSED] - Object: 'Object Repository/ArticlePage/postCommentButton' is clicked on
+
+03-09-2025T11:59:46 - [MESSAGE][PASSED] - Post comment has been clicked
+
+03-09-2025T11:59:46 - [TEST_STEP][PASSED] - logInfo("Details for posting a comment have been entered"): Details for posting a comment have been entered
+
+03-09-2025T11:59:46 - [MESSAGE][INFO] - Details for posting a comment have been entered
+
+03-09-2025T11:59:46 - [TEST_STEP][PASSED] - logInfo("Verifying Success Message"): Verifying Success Message
+
+03-09-2025T11:59:46 - [MESSAGE][INFO] - Verifying Success Message
+
+03-09-2025T11:59:46 - [TEST_STEP][PASSED] - pages.ArticlePage.verifySuccessText(findTestObject("Object Repository/ArticlePage/successMessage"), JsonFileReader.getJsonData(section, "successMessage", filepath)): Success Text has been verified
+
+03-09-2025T11:59:47 - [MESSAGE][PASSED] - Object 'Object Repository/ArticlePage/successMessage' is visible
+
+03-09-2025T11:59:47 - [MESSAGE][INFO] - Verifying Success Text
+
+03-09-2025T11:59:47 - [MESSAGE][PASSED] - Actual text and expected text of test object 'Object Repository/ArticlePage/successMessage' are matched.
+
+03-09-2025T11:59:47 - [MESSAGE][PASSED] - Success Text has been verified
+
+03-09-2025T11:59:47 - [TEST_STEP][PASSED] - logInfo("Verified Success Message"): Verified Success Message
+
+03-09-2025T11:59:47 - [MESSAGE][INFO] - Verified Success Message
+
+03-09-2025T11:59:47 - [TEST_STEP][PASSED] - Start listener action : closeTheBrowser: Browser is closed
+
+03-09-2025T11:59:47 - [TEST_STEP][PASSED] - closeBrowser(): Browser is closed
+
+03-09-2025T11:59:47 - [MESSAGE][PASSED] - Browser is closed]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[03-09-2025T11:56:51 - [TEST_SUITE][PASSED] - TestSuite: null]]></system-out>
+      <system-err><![CDATA[]]></system-err>
+   </testsuite>
+</testsuites>

@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="API_Testcases" time="28.836" tests="3" failures="0" errors="0">
+   <testsuite name="API_Testcases" tests="3" failures="0" errors="0" time="28.836" skipped="0" timestamp="2025-09-19T10:00:29.187Z" hostname="10835442 - 10.235.155.176" id="Test Suites/API_Testcases">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform"/>
+         <property name="logFolder" value="C:\\Users\\10835442\\Katalon Studio\\Luma\\Reports\\20250919_153022\\API_Testcases\\20250919_153022"/>
+         <property name="logFiles" value="C:\\Users\\10835442\\Katalon Studio\\Luma\\Reports\\20250919_153022\\API_Testcases\\20250919_153022\\console0.log, C:\\Users\\10835442\\Katalon Studio\\Luma\\Reports\\20250919_153022\\API_Testcases\\20250919_153022\\execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="userFullName" value="Abinesh R"/>
+         <property name="hostName" value="10835442 - 10.235.155.176"/>
+         <property name="hostAddress" value="10.235.155.176"/>
+         <property name="projectName" value="Luma"/>
+         <property name="os" value="Windows 11 64bit"/>
+         <property name="katalonVersion" value="10.3.1.0"/>
+      </properties>
+      <testcase name="Test Cases/API_Testing/TC01_localToServer_Api" time="26.19" classname="Test Cases/API_Testing/TC01_localToServer_Api" status="PASSED">
+         <properties>
+            <property name="data_binding"><![CDATA[{"(Default) maste...":"Include/Data Files/MasterSchema.json","(Default) syste...":"Include/Data Files/login_data.json","(Default) postS...":"Include/Data Files/post_login_response_schema.json","(Default) filep...":"https://68c8e78aceef5a150f629ed5.mockapi.io/sign_in/credentials"}]]></property>
+         </properties>
+         <system-out><![CDATA[19-09-2025T15:30:30 - [TEST_CASE][PASSED] - Test Cases/API_Testing/TC01_localToServer_Api: Test Cases/API_Testing/TC01_localToServer_Api
+
+19-09-2025T15:30:30 - [TEST_STEP][PASSED] - Start listener action : beforeTestCase: null
+
+19-09-2025T15:30:30 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+19-09-2025T15:30:30 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+19-09-2025T15:30:30 - [TEST_STEP][PASSED] - if (toLowerCase().endsWith("api")): null
+
+19-09-2025T15:30:30 - [TEST_STEP][PASSED] - println(ℹ️ Skipping browser launch for API test case: $testCaseName): null
+
+19-09-2025T15:30:30 - [TEST_STEP][PASSED] - return null: null
+
+19-09-2025T15:30:30 - [TEST_STEP][PASSED] - logInfo("Sending POST request to /credentials to create new credentials"): Sending POST request to /credentials to create new credentials
+
+19-09-2025T15:30:30 - [MESSAGE][INFO] - Sending POST request to /credentials to create new credentials
+
+19-09-2025T15:30:30 - [TEST_STEP][PASSED] - postPayload = JsonOutput.toJson(JsonFileReader.getSectionData("loginPage", systemJsonFilePath)): null
+
+19-09-2025T15:30:30 - [TEST_STEP][PASSED] - println(postPayload): null
+
+19-09-2025T15:30:30 - [TEST_STEP][PASSED] - postResponse = ApiKeywords.sendPost("/credentials", postPayload): Send request successfully
+
+19-09-2025T15:30:55 - [MESSAGE][INFO] - HAR: C:\Users\10835442\Katalon Studio\Luma\Reports\20250919_153022\API_Testcases\20250919_153022\requests\main\POST_Generic_0.har
+
+19-09-2025T15:30:55 - [MESSAGE][PASSED] - Send request successfully
+
+19-09-2025T15:30:55 - [TEST_STEP][PASSED] - verifyResponseStatusCode(postResponse, 201): Verify response status code successfully
+
+19-09-2025T15:30:55 - [MESSAGE][PASSED] - Verify response status code successfully
+
+19-09-2025T15:30:55 - [TEST_STEP][PASSED] - logInfo("POST response status code verified as 201"): POST response status code verified as 201
+
+19-09-2025T15:30:55 - [MESSAGE][INFO] - POST response status code verified as 201
+
+19-09-2025T15:30:55 - [TEST_STEP][PASSED] - postResponseBody = postResponse.getResponseBodyContent(): null
+
+19-09-2025T15:30:55 - [TEST_STEP][PASSED] - println(postResponseBody): null
+
+19-09-2025T15:30:55 - [TEST_STEP][PASSED] - createdCredential = JsonSlurper().parseText(postResponseBody): null
+
+19-09-2025T15:30:55 - [TEST_STEP][PASSED] - println(createdCredential): null
+
+19-09-2025T15:30:55 - [TEST_STEP][PASSED] - credentialId = id: null
+
+19-09-2025T15:30:55 - [TEST_STEP][PASSED] - JsonFileReader.appendToJsonSection(systemJsonFilePath, "postData", "CredentialId", credentialId): null
+
+19-09-2025T15:30:55 - [TEST_STEP][PASSED] - logInfo("Created credential ID: " + credentialId): Created credential ID: 7
+
+19-09-2025T15:30:55 - [MESSAGE][INFO] - Created credential ID: 7
+
+19-09-2025T15:30:55 - [TEST_STEP][PASSED] - validateJsonAgainstSchema(postResponseBody, JsonOutput.toJson(JsonFileReader.getSectionData("postResponse", masterSchemaFilePath))): Validate with JSON Schema successfully
+
+19-09-2025T15:30:55 - [MESSAGE][PASSED] - Validate with JSON Schema successfully
+
+19-09-2025T15:30:55 - [TEST_STEP][PASSED] - markPassed("POST response schema validation passed"): POST response schema validation passed
+
+19-09-2025T15:30:56 - [MESSAGE][PASSED] - POST response schema validation passed
+
+19-09-2025T15:30:56 - [TEST_STEP][PASSED] - Start listener action : closeTheBrowser: null
+
+19-09-2025T15:30:56 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+19-09-2025T15:30:56 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+19-09-2025T15:30:56 - [TEST_STEP][PASSED] - testCaseStatus = testCaseContext.getTestCaseStatus(): null
+
+19-09-2025T15:30:56 - [TEST_STEP][PASSED] - println(testCaseStatus): null
+
+19-09-2025T15:30:56 - [TEST_STEP][PASSED] - StatusMap = DependencyHandler.getStatusMap(): null
+
+19-09-2025T15:30:56 - [TEST_STEP][PASSED] - if (StatusMap.containsKey(testCaseName)): null
+
+19-09-2025T15:30:56 - [TEST_STEP][PASSED] - try: null
+
+19-09-2025T15:30:56 - [TEST_STEP][PASSED] - driver = getWebDriver(): null
+
+19-09-2025T15:30:56 - [TEST_STEP][PASSED] - catch (Exception e): null
+
+19-09-2025T15:30:56 - [TEST_STEP][PASSED] - println(⚠️ Error while closing browser: $e.message): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/API_Testing/TC02_updatingCred_Api" time="0.845" classname="Test Cases/API_Testing/TC02_updatingCred_Api" status="PASSED">
+         <properties>
+            <property name="data_binding"><![CDATA[{"(Default) jsonF...":"Include/Data Files/login_data.json","(Default) schem...":"Include/Data Files/MasterSchema.json"}]]></property>
+         </properties>
+         <system-out><![CDATA[19-09-2025T15:30:56 - [TEST_CASE][PASSED] - Test Cases/API_Testing/TC02_updatingCred_Api: Test Cases/API_Testing/TC02_updatingCred_Api
+
+19-09-2025T15:30:56 - [TEST_STEP][PASSED] - Start listener action : beforeTestCase: null
+
+19-09-2025T15:30:56 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+19-09-2025T15:30:56 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+19-09-2025T15:30:56 - [TEST_STEP][PASSED] - if (toLowerCase().endsWith("api")): null
+
+19-09-2025T15:30:56 - [TEST_STEP][PASSED] - println(ℹ️ Skipping browser launch for API test case: $testCaseName): null
+
+19-09-2025T15:30:56 - [TEST_STEP][PASSED] - return null: null
+
+19-09-2025T15:30:56 - [TEST_STEP][PASSED] - credentialId = JsonFileReader.getJsonData("postData", "CredentialId", jsonFilePath): null
+
+19-09-2025T15:30:56 - [TEST_STEP][PASSED] - logInfo("Sending PATCH request to /credentials/" + credentialId + " to update password"): Sending PATCH request to /credentials/7 to update password
+
+19-09-2025T15:30:56 - [MESSAGE][INFO] - Sending PATCH request to /credentials/7 to update password
+
+19-09-2025T15:30:56 - [TEST_STEP][PASSED] - patchPayload = JsonOutput.toJson(["password":"NewPassword@456"]): null
+
+19-09-2025T15:30:56 - [TEST_STEP][PASSED] - patchResponse = ApiKeywords.sendPatch("/credentials/" + credentialId, patchPayload): Send request successfully
+
+19-09-2025T15:30:56 - [MESSAGE][INFO] - HAR: C:\Users\10835442\Katalon Studio\Luma\Reports\20250919_153022\API_Testcases\20250919_153022\requests\main\PATCH_Generic_1.har
+
+19-09-2025T15:30:56 - [MESSAGE][PASSED] - Send request successfully
+
+19-09-2025T15:30:56 - [TEST_STEP][PASSED] - verifyResponseStatusCode(patchResponse, 200): Verify response status code successfully
+
+19-09-2025T15:30:56 - [MESSAGE][PASSED] - Verify response status code successfully
+
+19-09-2025T15:30:57 - [TEST_STEP][PASSED] - println(patchResponse.getResponseBodyContent()): null
+
+19-09-2025T15:30:57 - [TEST_STEP][PASSED] - validateJsonAgainstSchema(patchResponse.getResponseBodyContent(), JsonOutput.toJson(JsonFileReader.getSectionData("patchResponse", schemaFilePath))): Validate with JSON Schema successfully
+
+19-09-2025T15:30:57 - [MESSAGE][PASSED] - Validate with JSON Schema successfully
+
+19-09-2025T15:30:57 - [TEST_STEP][PASSED] - markPassed("PATCH password update successful"): PATCH password update successful
+
+19-09-2025T15:30:57 - [MESSAGE][PASSED] - PATCH password update successful
+
+19-09-2025T15:30:57 - [TEST_STEP][PASSED] - Start listener action : closeTheBrowser: null
+
+19-09-2025T15:30:57 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+19-09-2025T15:30:57 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+19-09-2025T15:30:57 - [TEST_STEP][PASSED] - testCaseStatus = testCaseContext.getTestCaseStatus(): null
+
+19-09-2025T15:30:57 - [TEST_STEP][PASSED] - println(testCaseStatus): null
+
+19-09-2025T15:30:57 - [TEST_STEP][PASSED] - StatusMap = DependencyHandler.getStatusMap(): null
+
+19-09-2025T15:30:57 - [TEST_STEP][PASSED] - if (StatusMap.containsKey(testCaseName)): null
+
+19-09-2025T15:30:57 - [TEST_STEP][PASSED] - try: null
+
+19-09-2025T15:30:57 - [TEST_STEP][PASSED] - driver = getWebDriver(): null
+
+19-09-2025T15:30:57 - [TEST_STEP][PASSED] - catch (Exception e): null
+
+19-09-2025T15:30:57 - [TEST_STEP][PASSED] - println(⚠️ Error while closing browser: $e.message): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/API_Testing/TC03_gettingCredFromServer_Api" time="0.931" classname="Test Cases/API_Testing/TC03_gettingCredFromServer_Api" status="PASSED">
+         <properties>
+            <property name="data_binding"><![CDATA[{"(Default) maste...":"Include/Data Files/MasterSchema.json","(Default) jsonF...":"Include/Data Files/login_data.json"}]]></property>
+         </properties>
+         <system-out><![CDATA[19-09-2025T15:30:57 - [TEST_CASE][PASSED] - Test Cases/API_Testing/TC03_gettingCredFromServer_Api: Test Cases/API_Testing/TC03_gettingCredFromServer_Api
+
+19-09-2025T15:30:57 - [TEST_STEP][PASSED] - Start listener action : beforeTestCase: null
+
+19-09-2025T15:30:57 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+19-09-2025T15:30:57 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+19-09-2025T15:30:57 - [TEST_STEP][PASSED] - if (toLowerCase().endsWith("api")): null
+
+19-09-2025T15:30:57 - [TEST_STEP][PASSED] - println(ℹ️ Skipping browser launch for API test case: $testCaseName): null
+
+19-09-2025T15:30:57 - [TEST_STEP][PASSED] - return null: null
+
+19-09-2025T15:30:57 - [TEST_STEP][PASSED] - credentialId = JsonFileReader.getJsonData("postData", "CredentialId", jsonFilePath): null
+
+19-09-2025T15:30:57 - [TEST_STEP][PASSED] - logInfo("Sending GET request to /credentials/" + credentialId): Sending GET request to /credentials/7
+
+19-09-2025T15:30:57 - [MESSAGE][INFO] - Sending GET request to /credentials/7
+
+19-09-2025T15:30:57 - [TEST_STEP][PASSED] - getResponse = ApiKeywords.sendGet("/credentials/" + credentialId): Send request successfully
+
+19-09-2025T15:30:57 - [MESSAGE][INFO] - HAR: C:\Users\10835442\Katalon Studio\Luma\Reports\20250919_153022\API_Testcases\20250919_153022\requests\main\GET_Generic_2.har
+
+19-09-2025T15:30:57 - [MESSAGE][PASSED] - Send request successfully
+
+19-09-2025T15:30:57 - [TEST_STEP][PASSED] - verifyResponseStatusCode(getResponse, 200): Verify response status code successfully
+
+19-09-2025T15:30:57 - [MESSAGE][PASSED] - Verify response status code successfully
+
+19-09-2025T15:30:57 - [TEST_STEP][PASSED] - logInfo("GET response status code verified as 200"): GET response status code verified as 200
+
+19-09-2025T15:30:57 - [MESSAGE][INFO] - GET response status code verified as 200
+
+19-09-2025T15:30:57 - [TEST_STEP][PASSED] - getResponseBody = getResponse.getResponseBodyContent(): null
+
+19-09-2025T15:30:57 - [TEST_STEP][PASSED] - validateJsonAgainstSchema(getResponseBody, JsonOutput.toJson(JsonFileReader.getSectionData("postResponse", masterSchemaFilePath))): Validate with JSON Schema successfully
+
+19-09-2025T15:30:57 - [MESSAGE][PASSED] - Validate with JSON Schema successfully
+
+19-09-2025T15:30:57 - [TEST_STEP][PASSED] - markPassed("GET response schema validation passed"): GET response schema validation passed
+
+19-09-2025T15:30:57 - [MESSAGE][PASSED] - GET response schema validation passed
+
+19-09-2025T15:30:57 - [TEST_STEP][PASSED] - logInfo("Sending POST request to /credentials/ to replace full credential"): Sending POST request to /credentials/ to replace full credential
+
+19-09-2025T15:30:57 - [MESSAGE][INFO] - Sending POST request to /credentials/ to replace full credential
+
+19-09-2025T15:30:57 - [TEST_STEP][PASSED] - postResponse = ApiKeywords.sendPost("/credentials", getResponseBody): Send request successfully
+
+19-09-2025T15:30:57 - [MESSAGE][INFO] - HAR: C:\Users\10835442\Katalon Studio\Luma\Reports\20250919_153022\API_Testcases\20250919_153022\requests\main\POST_Generic_3.har
+
+19-09-2025T15:30:57 - [MESSAGE][PASSED] - Send request successfully
+
+19-09-2025T15:30:57 - [TEST_STEP][PASSED] - verifyResponseStatusCode(postResponse, 201): Verify response status code successfully
+
+19-09-2025T15:30:57 - [MESSAGE][PASSED] - Verify response status code successfully
+
+19-09-2025T15:30:57 - [TEST_STEP][PASSED] - validateJsonAgainstSchema(postResponse.getResponseBodyContent(), JsonOutput.toJson(JsonFileReader.getSectionData("postResponse", masterSchemaFilePath))): Validate with JSON Schema successfully
+
+19-09-2025T15:30:57 - [MESSAGE][PASSED] - Validate with JSON Schema successfully
+
+19-09-2025T15:30:57 - [TEST_STEP][PASSED] - markPassed("POST full credential successfully and schema validated"): POST full credential successfully and schema validated
+
+19-09-2025T15:30:57 - [MESSAGE][PASSED] - POST full credential successfully and schema validated
+
+19-09-2025T15:30:58 - [TEST_STEP][PASSED] - Start listener action : closeTheBrowser: null
+
+19-09-2025T15:30:58 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+19-09-2025T15:30:58 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+19-09-2025T15:30:58 - [TEST_STEP][PASSED] - testCaseStatus = testCaseContext.getTestCaseStatus(): null
+
+19-09-2025T15:30:58 - [TEST_STEP][PASSED] - println(testCaseStatus): null
+
+19-09-2025T15:30:58 - [TEST_STEP][PASSED] - StatusMap = DependencyHandler.getStatusMap(): null
+
+19-09-2025T15:30:58 - [TEST_STEP][PASSED] - if (StatusMap.containsKey(testCaseName)): null
+
+19-09-2025T15:30:58 - [TEST_STEP][PASSED] - try: null
+
+19-09-2025T15:30:58 - [TEST_STEP][PASSED] - driver = getWebDriver(): null
+
+19-09-2025T15:30:58 - [TEST_STEP][PASSED] - catch (Exception e): null
+
+19-09-2025T15:30:58 - [TEST_STEP][PASSED] - println(⚠️ Error while closing browser: $e.message): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[19-09-2025T15:30:29 - [TEST_SUITE][PASSED] - API_Testcases: null]]></system-out>
+      <system-err><![CDATA[]]></system-err>
+   </testsuite>
+</testsuites>

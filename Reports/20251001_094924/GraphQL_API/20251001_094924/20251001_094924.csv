@@ -1,0 +1,80 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+GraphQL_API,,,,01-10-2025 09:49:31,01-10-2025 09:49:46,15.082s,FAILED
+,,,,,,,
+Test Cases/API_Testing/GraphQL_API_Testing/TC01_graphql_Get_api,,,,01-10-2025 09:49:39,01-10-2025 09:49:39,0.474s,FAILED
+"DATA BINDING - {""(Default) graph..."":""graphQL"",""(Default) schem..."":""Include/Data Files/MasterSchema.json"",""(Default) apiBa..."":""apiBaseUrl"",""(Default) JsonF..."":""Include/Data Files/login_data.json""}",,,,,,,
+Start listener action : beforeTestCase,,,,01-10-2025 09:49:39,01-10-2025 09:49:39,0.008s,PASSED
+"logInfo(""Sending GraphQL query to fetch post by ID"")",,,,01-10-2025 09:49:39,01-10-2025 09:49:39,0.004s,PASSED
+"testData = JsonFileReader.getSectionData(""graphQL_getPost"", jsonDataFilePath)",,,,01-10-2025 09:49:39,01-10-2025 09:49:39,0.003s,PASSED
+query = QueryBuilder.buildQuery(testData),,,,01-10-2025 09:49:39,01-10-2025 09:49:39,0.001s,PASSED
+variables = variables,,,,01-10-2025 09:49:39,01-10-2025 09:49:39,0.001s,PASSED
+headers = (testData.headers) ? testData.headers : [:],,,,01-10-2025 09:49:39,01-10-2025 09:49:39,0.002s,PASSED
+"profileVariables = loadProfileVariables.loadAllProfileVariables(""graphQL"")",,,,01-10-2025 09:49:39,01-10-2025 09:49:39,0.015s,PASSED
+"response = ApiKeywords.sendGraphQL(profileVariables[""apiBaseUrl""], query, variables, headers)",,,,01-10-2025 09:49:39,01-10-2025 09:49:39,0.321s,PASSED
+"verifyResponseStatusCode(response, 200)",,,,01-10-2025 09:49:39,01-10-2025 09:49:39,0.004s,PASSED
+"logInfo(""GraphQL response status code verified as 200"")",,,,01-10-2025 09:49:39,01-10-2025 09:49:39,0.001s,PASSED
+responseBody = response.getResponseBodyContent(),,,,01-10-2025 09:49:39,01-10-2025 09:49:39,0.001s,PASSED
+json = JsonSlurper().parseText(responseBody),,,,01-10-2025 09:49:39,01-10-2025 09:49:39,0.000s,PASSED
+println(responseBody),,,,01-10-2025 09:49:39,01-10-2025 09:49:39,0.000s,PASSED
+logInfo(Post ID: $json.data.post.id),,,,01-10-2025 09:49:39,01-10-2025 09:49:39,0.004s,PASSED
+logInfo(Post Title: $json.data.post.title),,,,01-10-2025 09:49:39,01-10-2025 09:49:39,0.002s,PASSED
+"SchemaValidator.validateJsonWithSchema(responseBody, JsonOutput.toJson(JsonFileReader.getSectionData(""graphQL_GET"", schemaFilePath)))",,,,01-10-2025 09:49:39,01-10-2025 09:49:39,0.016s,FAILED
+"markPassed(""GraphQL response schema validation passed"")",,,,01-10-2025 09:49:39,01-10-2025 09:49:39,0.002s,PASSED
+"JsonFileReader.storeApiResponse(""get_GraphQL_Response"", response, responseDataFilePath)",,,,01-10-2025 09:49:39,01-10-2025 09:49:39,0.015s,PASSED
+Start listener action : closeTheBrowser,,,,01-10-2025 09:49:39,01-10-2025 09:49:39,0.027s,PASSED
+,,,,,,,
+Test Cases/API_Testing/GraphQL_API_Testing/TC02_graphql_Post_api,,,,01-10-2025 09:49:42,01-10-2025 09:49:43,1.102s,FAILED
+"DATA BINDING - {""(Default) graph..."":""graphQL"",""(Default) schem..."":""Include/Data Files/MasterSchema.json"",""(Default) apiBa..."":""apiBaseUrl"",""(Default) JsonF..."":""Include/Data Files/login_data.json""}",,,,,,,
+Start listener action : beforeTestCase,,,,01-10-2025 09:49:42,01-10-2025 09:49:42,0.005s,PASSED
+"logInfo(""Sending GraphQL mutation to create a new post using stored GET response"")",,,,01-10-2025 09:49:42,01-10-2025 09:49:42,0.001s,PASSED
+"testData = JsonFileReader.getSectionData(""graphQL_createPost"", jsonDataFilePath)",,,,01-10-2025 09:49:42,01-10-2025 09:49:42,0.002s,PASSED
+query = QueryBuilder.buildQuery(testData),,,,01-10-2025 09:49:42,01-10-2025 09:49:42,0.000s,PASSED
+headers = (testData.headers) ? testData.headers : [:],,,,01-10-2025 09:49:42,01-10-2025 09:49:42,0.000s,PASSED
+"storedData = JsonFileReader.getSectionData(""get_GraphQL_Response"", responseDataFilePath)",,,,01-10-2025 09:49:42,01-10-2025 09:49:42,0.002s,PASSED
+postData = post,,,,01-10-2025 09:49:42,01-10-2025 09:49:42,0.000s,PASSED
+"variables = [""input"":[""title"":title, ""body"":body]]",,,,01-10-2025 09:49:42,01-10-2025 09:49:42,0.002s,PASSED
+"baseUrl = GlobalAccessor.getProfileVariable(graphQL, apiBaseUrl)",,,,01-10-2025 09:49:42,01-10-2025 09:49:42,0.004s,PASSED
+"response = ApiKeywords.sendGraphQL(baseUrl, query, variables, headers)",,,,01-10-2025 09:49:42,01-10-2025 09:49:43,1.012s,PASSED
+"verifyResponseStatusCode(response, 200)",,,,01-10-2025 09:49:43,01-10-2025 09:49:43,0.005s,PASSED
+"logInfo(""GraphQL response status code verified as 200"")",,,,01-10-2025 09:49:43,01-10-2025 09:49:43,0.001s,PASSED
+responseBody = response.getResponseBodyContent(),,,,01-10-2025 09:49:43,01-10-2025 09:49:43,0.001s,PASSED
+json = JsonSlurper().parseText(responseBody),,,,01-10-2025 09:49:43,01-10-2025 09:49:43,0.001s,PASSED
+logInfo(Created Post ID: $json.data.createPost.id),,,,01-10-2025 09:49:43,01-10-2025 09:49:43,0.002s,PASSED
+logInfo(Created Post Title: $json.data.createPost.title),,,,01-10-2025 09:49:43,01-10-2025 09:49:43,0.001s,PASSED
+"SchemaValidator.validateJsonWithSchema(responseBody, JsonOutput.toJson(JsonFileReader.getSectionData(""graphQL_Post"", schemaFilePath)))",,,,01-10-2025 09:49:43,01-10-2025 09:49:43,0.013s,FAILED
+"markPassed(""GraphQL createPost response schema validation passed"")",,,,01-10-2025 09:49:43,01-10-2025 09:49:43,0.001s,PASSED
+Start listener action : closeTheBrowser,,,,01-10-2025 09:49:43,01-10-2025 09:49:43,0.013s,PASSED
+,,,,,,,
+Test Cases/API_Testing/GraphQL_API_Testing/TC03_graphql_Patch_api,,,,01-10-2025 09:49:45,01-10-2025 09:49:45,0.444s,FAILED
+"DATA BINDING - {""(Default) graph..."":""graphQL"",""(Default) schem..."":""Include/Data Files/MasterSchema.json"",""(Default) apiBa..."":""apiBaseUrl""}",,,,,,,
+Start listener action : beforeTestCase,,,,01-10-2025 09:49:45,01-10-2025 09:49:45,0.004s,PASSED
+"logInfo(""Sending GraphQL mutation to update post"")",,,,01-10-2025 09:49:45,01-10-2025 09:49:45,0.002s,PASSED
+"testData = JsonFileReader.getSectionData(""graphQL_updatePost"", jsonDataFilePath)",,,,01-10-2025 09:49:45,01-10-2025 09:49:45,0.004s,PASSED
+query = QueryBuilder.buildQuery(testData),,,,01-10-2025 09:49:45,01-10-2025 09:49:45,0.002s,PASSED
+variables = variables,,,,01-10-2025 09:49:45,01-10-2025 09:49:45,0.000s,PASSED
+headers = (testData.headers) ? testData.headers : [:],,,,01-10-2025 09:49:45,01-10-2025 09:49:45,0.000s,PASSED
+"baseUrl = GlobalAccessor.getProfileVariable(graphQL, apiBaseUrl)",,,,01-10-2025 09:49:45,01-10-2025 09:49:45,0.006s,PASSED
+"response = ApiKeywords.sendGraphQL(baseUrl, query, variables, headers)",,,,01-10-2025 09:49:45,01-10-2025 09:49:45,0.297s,PASSED
+"verifyResponseStatusCode(response, 200)",,,,01-10-2025 09:49:45,01-10-2025 09:49:45,0.011s,PASSED
+"logInfo(""GraphQL response status code verified as 200"")",,,,01-10-2025 09:49:45,01-10-2025 09:49:45,0.003s,PASSED
+responseBody = response.getResponseBodyContent(),,,,01-10-2025 09:49:45,01-10-2025 09:49:45,0.000s,PASSED
+json = JsonSlurper().parseText(responseBody),,,,01-10-2025 09:49:45,01-10-2025 09:49:45,0.001s,PASSED
+logInfo(Updated Post ID: $json.data.updatePost.id),,,,01-10-2025 09:49:45,01-10-2025 09:49:45,0.002s,PASSED
+logInfo(Updated Post Title: $json.data.updatePost.title),,,,01-10-2025 09:49:45,01-10-2025 09:49:45,0.001s,PASSED
+"SchemaValidator.validateJsonWithSchema(responseBody, JsonOutput.toJson(JsonFileReader.getSectionData(""graphQL_Patch"", schemaFilePath)))",,,,01-10-2025 09:49:45,01-10-2025 09:49:45,0.023s,FAILED
+"markPassed(""GraphQL updatePost response schema validation passed"")",,,,01-10-2025 09:49:45,01-10-2025 09:49:45,0.005s,PASSED
+Start listener action : closeTheBrowser,,,,01-10-2025 09:49:45,01-10-2025 09:49:45,0.022s,PASSED
+,,,,,,,
+Test Cases/API_Testing/GraphQL_API_Testing/TC04_graphql_Delete_api,,,,01-10-2025 09:49:45,01-10-2025 09:49:46,0.599s,PASSED
+"DATA BINDING - {""(Default) graph..."":""graphQL"",""(Default) apiBa..."":""apiBaseUrl"",""(Default) JsonF..."":""Include/Data Files/login_data.json""}",,,,,,,
+Start listener action : beforeTestCase,,,,01-10-2025 09:49:45,01-10-2025 09:49:45,0.007s,PASSED
+"logInfo(""Sending GraphQL mutation to delete post by ID"")",,,,01-10-2025 09:49:46,01-10-2025 09:49:46,0.007s,PASSED
+"testData = JsonFileReader.getSectionData(""graphQL_deletePost"", jsonDataFilePath)",,,,01-10-2025 09:49:46,01-10-2025 09:49:46,0.006s,PASSED
+query = QueryBuilder.buildQuery(testData),,,,01-10-2025 09:49:46,01-10-2025 09:49:46,0.002s,PASSED
+variables = variables,,,,01-10-2025 09:49:46,01-10-2025 09:49:46,0.002s,PASSED
+headers = (testData.headers) ? testData.headers : [:],,,,01-10-2025 09:49:46,01-10-2025 09:49:46,0.002s,PASSED
+"baseUrl = GlobalAccessor.getProfileVariable(graphQL, apiBaseUrl)",,,,01-10-2025 09:49:46,01-10-2025 09:49:46,0.010s,PASSED
+"response = ApiKeywords.sendGraphQL(baseUrl, query, variables, headers)",,,,01-10-2025 09:49:46,01-10-2025 09:49:46,0.312s,PASSED
+"verifyResponseStatusCode(response, 200)",,,,01-10-2025 09:49:46,01-10-2025 09:49:46,0.013s,PASSED
+"logInfo(""GraphQL response status code verified as 200"")",,,,01-10-2025 09:49:46,01-10-2025 09:49:46,0.005s,PASSED
+Start listener action : closeTheBrowser,,,,01-10-2025 09:49:46,01-10-2025 09:49:46,0.021s,PASSED

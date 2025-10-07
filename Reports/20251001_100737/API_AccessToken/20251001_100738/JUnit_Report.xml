@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="API_AccessToken" time="9.686" tests="4" failures="0" errors="1">
+   <testsuite name="API_AccessToken" tests="4" failures="0" errors="1" time="9.686" skipped="0" timestamp="2025-10-01T04:37:44.469Z" hostname="10835442 - 192.168.1.4" id="Test Suites/API_AccessToken">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform"/>
+         <property name="logFolder" value="C:\\Users\\10835442\\Katalon Studio\\Luma\\Reports\\20251001_100737\\API_AccessToken\\20251001_100738"/>
+         <property name="logFiles" value="C:\\Users\\10835442\\Katalon Studio\\Luma\\Reports\\20251001_100737\\API_AccessToken\\20251001_100738\\console0.log, C:\\Users\\10835442\\Katalon Studio\\Luma\\Reports\\20251001_100737\\API_AccessToken\\20251001_100738\\execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="userFullName" value="abinesh rajendran"/>
+         <property name="hostName" value="10835442 - 192.168.1.4"/>
+         <property name="hostAddress" value="192.168.1.4"/>
+         <property name="projectName" value="Luma"/>
+         <property name="os" value="Windows 11 64bit"/>
+         <property name="katalonVersion" value="10.3.1.0"/>
+      </properties>
+      <testcase name="Test Cases/API_Testing/REST_API_Testing/TC04_getAccessToken_Api" time="4.783" classname="Test Cases/API_Testing/REST_API_Testing/TC04_getAccessToken_Api" status="PASSED">
+         <properties>
+            <property name="data_binding"><![CDATA[{"(Default) maste...":"Include/Data Files/MasterSchema.json","(Default) jsonF...":"Include/Data Files/login_data.json","(Default) apiBa...":"apiBaseUrl","(Default) acces...":"accessTokenUrl"}]]></property>
+         </properties>
+         <system-out><![CDATA[01-10-2025T10:07:45 - [TEST_CASE][PASSED] - Test Cases/API_Testing/REST_API_Testing/TC04_getAccessToken_Api: Test Cases/API_Testing/REST_API_Testing/TC04_getAccessToken_Api
+
+01-10-2025T10:07:45 - [TEST_STEP][PASSED] - Start listener action : beforeTestCase: null
+
+01-10-2025T10:07:45 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+01-10-2025T10:07:45 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+01-10-2025T10:07:45 - [TEST_STEP][PASSED] - if (toLowerCase().endsWith("api")): null
+
+01-10-2025T10:07:45 - [TEST_STEP][PASSED] - logInfo(Skipping browser launch for API test case: $testCaseName): Skipping browser launch for API test case: TC04_getAccessToken_Api
+
+01-10-2025T10:07:45 - [MESSAGE][INFO] - Skipping browser launch for API test case: TC04_getAccessToken_Api
+
+01-10-2025T10:07:45 - [TEST_STEP][PASSED] - return null: null
+
+01-10-2025T10:07:45 - [TEST_STEP][PASSED] - logInfo("Reading payload from JSON file..."): Reading payload from JSON file...
+
+01-10-2025T10:07:45 - [MESSAGE][INFO] - Reading payload from JSON file...
+
+01-10-2025T10:07:45 - [TEST_STEP][PASSED] - payLoad = JsonOutput.toJson(JsonFileReader.getSectionData("postPayload", jsonDataFilePath)): null
+
+01-10-2025T10:07:46 - [TEST_STEP][PASSED] - logInfo("Payload prepared: " + payLoad): Payload prepared: {"username":"emilys","password":"emilyspass","expiresInMins":30}
+
+01-10-2025T10:07:46 - [MESSAGE][INFO] - Payload prepared: {"username":"emilys","password":"emilyspass","expiresInMins":30}
+
+01-10-2025T10:07:46 - [TEST_STEP][PASSED] - logInfo("Sending POST request to /login endpoint..."): Sending POST request to /login endpoint...
+
+01-10-2025T10:07:46 - [MESSAGE][INFO] - Sending POST request to /login endpoint...
+
+01-10-2025T10:07:46 - [TEST_STEP][PASSED] - baseUrl = GlobalAccessor.getProfileVariable(accessToken, apiBaseUrl): null
+
+01-10-2025T10:07:46 - [TEST_STEP][PASSED] - response = ApiKeywords.sendPost(baseUrl, "login", payLoad): Send request successfully
+
+01-10-2025T10:07:49 - [MESSAGE][INFO] - HAR: C:\Users\10835442\Katalon Studio\Luma\Reports\20251001_100737\API_AccessToken\20251001_100738\requests\main\POST_Generic_0.har
+
+01-10-2025T10:07:49 - [MESSAGE][PASSED] - Send request successfully
+
+01-10-2025T10:07:49 - [TEST_STEP][PASSED] - logInfo("Response received with status: " + response.getStatusCode()): Response received with status: 200
+
+01-10-2025T10:07:49 - [MESSAGE][INFO] - Response received with status: 200
+
+01-10-2025T10:07:49 - [TEST_STEP][PASSED] - responseBodyContent = response.getResponseBodyContent(): null
+
+01-10-2025T10:07:49 - [TEST_STEP][PASSED] - logInfo("Response body content:
+" + responseBodyContent): Response body content:
+{"accessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3NTkyOTM0NjgsImV4cCI6MTc1OTI5NTI2OH0.DHLhnmnM0jECByK9C1WEMJjP3_WEj-LI0wulWFAK5aQ","refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3NTkyOTM0NjgsImV4cCI6MTc2MTg4NTQ2OH0.lMGNIgysPxfPSWgRIMPSmiIszqr_Os4WzAsrvXy6h6U","id":1,"username":"emilys","email":"emily.johnson@x.dummyjson.com","firstName":"Emily","lastName":"Johnson","gender":"female","image":"https://dummyjson.com/icon/emilys/128"}
+
+01-10-2025T10:07:49 - [MESSAGE][INFO] - Response body content:
+{"accessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3NTkyOTM0NjgsImV4cCI6MTc1OTI5NTI2OH0.DHLhnmnM0jECByK9C1WEMJjP3_WEj-LI0wulWFAK5aQ","refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3NTkyOTM0NjgsImV4cCI6MTc2MTg4NTQ2OH0.lMGNIgysPxfPSWgRIMPSmiIszqr_Os4WzAsrvXy6h6U","id":1,"username":"emilys","email":"emily.johnson@x.dummyjson.com","firstName":"Emily","lastName":"Johnson","gender":"female","image":"https://dummyjson.com/icon/emilys/128"}
+
+01-10-2025T10:07:49 - [TEST_STEP][PASSED] - logInfo("Validating response against accessTokenSchema..."): Validating response against accessTokenSchema...
+
+01-10-2025T10:07:49 - [MESSAGE][INFO] - Validating response against accessTokenSchema...
+
+01-10-2025T10:07:49 - [TEST_STEP][PASSED] - schemaMap = JsonFileReader.getSectionData("accessTokenSchema", schemaFilePath): null
+
+01-10-2025T10:07:49 - [TEST_STEP][PASSED] - schemaString = JsonOutput.toJson(schemaMap): null
+
+01-10-2025T10:07:49 - [TEST_STEP][PASSED] - SchemaValidator.validateJsonWithSchema(responseBodyContent, schemaString): Schema validation passed.
+
+01-10-2025T10:07:49 - [MESSAGE][INFO] - Schema expects the following fields:
+
+01-10-2025T10:07:49 - [MESSAGE][INFO] - ->Field: 'firstName' | Type: 'string'
+
+01-10-2025T10:07:49 - [MESSAGE][INFO] - ->Field: 'lastName' | Type: 'string'
+
+01-10-2025T10:07:49 - [MESSAGE][INFO] - ->Field: 'image' | Type: 'unknown'
+
+01-10-2025T10:07:49 - [MESSAGE][INFO] - ->Field: 'gender' | Type: 'string'
+
+01-10-2025T10:07:49 - [MESSAGE][INFO] - ->Field: 'id' | Type: 'integer'
+
+01-10-2025T10:07:49 - [MESSAGE][INFO] - ->Field: 'accessToken' | Type: 'string'
+
+01-10-2025T10:07:49 - [MESSAGE][INFO] - ->Field: 'email' | Type: 'string'
+
+01-10-2025T10:07:49 - [MESSAGE][INFO] - ->Field: 'refreshToken' | Type: 'string'
+
+01-10-2025T10:07:49 - [MESSAGE][INFO] - ->Field: 'username' | Type: 'string'
+
+01-10-2025T10:07:49 - [MESSAGE][INFO] - Schema validation passed.
+
+01-10-2025T10:07:49 - [TEST_STEP][PASSED] - logInfo("Schema validation passed."): Schema validation passed.
+
+01-10-2025T10:07:49 - [MESSAGE][INFO] - Schema validation passed.
+
+01-10-2025T10:07:49 - [TEST_STEP][PASSED] - parsedResponse = JsonSlurper().parseText(responseBodyContent): null
+
+01-10-2025T10:07:49 - [TEST_STEP][PASSED] - jwtToken = accessToken: null
+
+01-10-2025T10:07:49 - [TEST_STEP][PASSED] - logInfo("Extracted JWT Token: " + jwtToken): Extracted JWT Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3NTkyOTM0NjgsImV4cCI6MTc1OTI5NTI2OH0.DHLhnmnM0jECByK9C1WEMJjP3_WEj-LI0wulWFAK5aQ
+
+01-10-2025T10:07:49 - [MESSAGE][INFO] - Extracted JWT Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3NTkyOTM0NjgsImV4cCI6MTc1OTI5NTI2OH0.DHLhnmnM0jECByK9C1WEMJjP3_WEj-LI0wulWFAK5aQ
+
+01-10-2025T10:07:49 - [TEST_STEP][PASSED] - logInfo("Storing JWT token in DummyJson section of JSON file..."): Storing JWT token in DummyJson section of JSON file...
+
+01-10-2025T10:07:49 - [MESSAGE][INFO] - Storing JWT token in DummyJson section of JSON file...
+
+01-10-2025T10:07:49 - [TEST_STEP][PASSED] - JsonFileReader.storeJsonData(responseDataFilePath, "DummyJson", "accessToken", jwtToken): Appended 'accessToken: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3NTkyOTM0NjgsImV4cCI6MTc1OTI5NTI2OH0.DHLhnmnM0jECByK9C1WEMJjP3_WEj-LI0wulWFAK5aQ' to section 'DummyJson' in file 'Include/Data Files/Response_data.json'.
+
+01-10-2025T10:07:49 - [MESSAGE][INFO] - Saved updated JSON data to file: Include\Data Files\Response_data.json
+
+01-10-2025T10:07:49 - [MESSAGE][INFO] - Appended 'accessToken: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3NTkyOTM0NjgsImV4cCI6MTc1OTI5NTI2OH0.DHLhnmnM0jECByK9C1WEMJjP3_WEj-LI0wulWFAK5aQ' to section 'DummyJson' in file 'Include/Data Files/Response_data.json'.
+
+01-10-2025T10:07:49 - [TEST_STEP][PASSED] - logInfo("Token stored successfully."): Token stored successfully.
+
+01-10-2025T10:07:49 - [MESSAGE][INFO] - Token stored successfully.
+
+01-10-2025T10:07:49 - [TEST_STEP][PASSED] - Start listener action : closeTheBrowser: Error while closing browser: Browser is not opened
+Build info: version: '4.28.1', revision: '73f5ad48a2'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: driver.version: unknown
+
+01-10-2025T10:07:49 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+01-10-2025T10:07:49 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+01-10-2025T10:07:49 - [TEST_STEP][PASSED] - testCaseStatus = testCaseContext.getTestCaseStatus(): null
+
+01-10-2025T10:07:49 - [TEST_STEP][PASSED] - println(testCaseStatus): null
+
+01-10-2025T10:07:49 - [TEST_STEP][PASSED] - StatusMap = DependencyHandler.getStatusMap(): null
+
+01-10-2025T10:07:49 - [TEST_STEP][PASSED] - if (StatusMap.containsKey(testCaseName)): null
+
+01-10-2025T10:07:49 - [TEST_STEP][PASSED] - try: null
+
+01-10-2025T10:07:49 - [TEST_STEP][PASSED] - driver = getWebDriver(): null
+
+01-10-2025T10:07:50 - [TEST_STEP][PASSED] - catch (Exception e): Error while closing browser: Browser is not opened
+Build info: version: '4.28.1', revision: '73f5ad48a2'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: driver.version: unknown
+
+01-10-2025T10:07:50 - [TEST_STEP][PASSED] - logInfo(Error while closing browser: $e.message): Error while closing browser: Browser is not opened
+Build info: version: '4.28.1', revision: '73f5ad48a2'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: driver.version: unknown
+
+01-10-2025T10:07:50 - [MESSAGE][INFO] - Error while closing browser: Browser is not opened
+Build info: version: '4.28.1', revision: '73f5ad48a2'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: driver.version: unknown]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/API_Testing/REST_API_Testing/TC06_Access_currentUserDetail_positive_Api" time="0.913" classname="Test Cases/API_Testing/REST_API_Testing/TC06_Access_currentUserDetail_positive_Api" status="PASSED">
+         <properties>
+            <property name="data_binding"><![CDATA[{"(Default) jsonF...":"Include/Data Files/login_data.json","(Default) apiBa...":"apiBaseUrl","(Default) acces...":"accessTokenUrl"}]]></property>
+         </properties>
+         <system-out><![CDATA[01-10-2025T10:07:50 - [TEST_CASE][PASSED] - Test Cases/API_Testing/REST_API_Testing/TC06_Access_currentUserDetail_positive_Api: Test Cases/API_Testing/REST_API_Testing/TC06_Access_currentUserDetail_positive_Api
+
+01-10-2025T10:07:50 - [TEST_STEP][PASSED] - Start listener action : beforeTestCase: null
+
+01-10-2025T10:07:50 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+01-10-2025T10:07:50 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+01-10-2025T10:07:50 - [TEST_STEP][PASSED] - if (toLowerCase().endsWith("api")): null
+
+01-10-2025T10:07:50 - [TEST_STEP][PASSED] - logInfo(Skipping browser launch for API test case: $testCaseName): Skipping browser launch for API test case: TC06_Access_currentUserDetail_positive_Api
+
+01-10-2025T10:07:50 - [MESSAGE][INFO] - Skipping browser launch for API test case: TC06_Access_currentUserDetail_positive_Api
+
+01-10-2025T10:07:50 - [TEST_STEP][PASSED] - return null: null
+
+01-10-2025T10:07:50 - [TEST_STEP][PASSED] - logInfo("Reading access token from JSON file..."): Reading access token from JSON file...
+
+01-10-2025T10:07:50 - [MESSAGE][INFO] - Reading access token from JSON file...
+
+01-10-2025T10:07:50 - [TEST_STEP][PASSED] - accessToken = JsonFileReader.getJsonData("DummyJson", "accessToken", responseDataFilePath): null
+
+01-10-2025T10:07:50 - [TEST_STEP][PASSED] - logInfo("Access token retrieved: " + accessToken): Access token retrieved: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3NTkyOTM0NjgsImV4cCI6MTc1OTI5NTI2OH0.DHLhnmnM0jECByK9C1WEMJjP3_WEj-LI0wulWFAK5aQ
+
+01-10-2025T10:07:50 - [MESSAGE][INFO] - Access token retrieved: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3NTkyOTM0NjgsImV4cCI6MTc1OTI5NTI2OH0.DHLhnmnM0jECByK9C1WEMJjP3_WEj-LI0wulWFAK5aQ
+
+01-10-2025T10:07:50 - [TEST_STEP][PASSED] - headers = ["Authorization":accessToken, "Content-Type":"application/json"]: null
+
+01-10-2025T10:07:50 - [TEST_STEP][PASSED] - logInfo("Headers prepared: " + headers.toString()): Headers prepared: [Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3NTkyOTM0NjgsImV4cCI6MTc1OTI5NTI2OH0.DHLhnmnM0jECByK9C1WEMJjP3_WEj-LI0wulWFAK5aQ, Content-Type:application/json]
+
+01-10-2025T10:07:50 - [MESSAGE][INFO] - Headers prepared: [Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3NTkyOTM0NjgsImV4cCI6MTc1OTI5NTI2OH0.DHLhnmnM0jECByK9C1WEMJjP3_WEj-LI0wulWFAK5aQ, Content-Type:application/json]
+
+01-10-2025T10:07:50 - [TEST_STEP][PASSED] - logInfo("Sending GET request to /me endpoint..."): Sending GET request to /me endpoint...
+
+01-10-2025T10:07:50 - [MESSAGE][INFO] - Sending GET request to /me endpoint...
+
+01-10-2025T10:07:50 - [TEST_STEP][PASSED] - baseUrl = GlobalAccessor.getProfileVariable(accessTokenUrl, apiBaseUrl): null
+
+01-10-2025T10:07:50 - [TEST_STEP][PASSED] - response = ApiKeywords.sendGet(baseUrl, "me", headers): Send request successfully
+
+01-10-2025T10:07:50 - [MESSAGE][INFO] - HAR: C:\Users\10835442\Katalon Studio\Luma\Reports\20251001_100737\API_AccessToken\20251001_100738\requests\main\GET_Generic_1.har
+
+01-10-2025T10:07:50 - [MESSAGE][PASSED] - Send request successfully
+
+01-10-2025T10:07:50 - [TEST_STEP][PASSED] - logInfo("Response received with status: " + response.getStatusCode()): Response received with status: 200
+
+01-10-2025T10:07:50 - [MESSAGE][INFO] - Response received with status: 200
+
+01-10-2025T10:07:50 - [TEST_STEP][PASSED] - parsedResponse = JsonSlurper().parseText(response.getResponseBodyContent()): null
+
+01-10-2025T10:07:50 - [TEST_STEP][PASSED] - logInfo("Parsed response: " + parsedResponse.toString()): Parsed response: {id=1, firstName=Emily, lastName=Johnson, maidenName=Smith, age=28, gender=female, email=emily.johnson@x.dummyjson.com, phone=+81 965-431-3024, username=emilys, password=emilyspass, birthDate=1996-5-30, image=https://dummyjson.com/icon/emilys/128, bloodGroup=O-, height=193.24, weight=63.16, eyeColor=Green, hair={color=Brown, type=Curly}, ip=42.48.100.32, address={address=626 Main Street, city=Phoenix, state=Mississippi, stateCode=MS, postalCode=29112, coordinates={lat=-77.16213, lng=-92.084824}, country=United States}, macAddress=47:fa:41:18:ec:eb, university=University of Wisconsin--Madison, bank={cardExpire=03/26, cardNumber=9289760655481815, cardType=Elo, currency=CNY, iban=YPUXISOBI7TTHPK2BR3HAIXL}, company={department=Engineering, name=Dooley, Kozey and Cronin, title=Sales Manager, address={address=263 Tenth Street, city=San Francisco, state=Wisconsin, stateCode=WI, postalCode=37657, coordinates={lat=71.814525, lng=-161.150263}, country=United States}}, ein=977-175, ssn=900-590-289, userAgent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/537.36, crypto={coin=Bitcoin, wallet=0xb9fc2fe63b2a6c003f1c324c3bfa53259162181a, network=Ethereum (ERC20)}, role=admin}
+
+01-10-2025T10:07:50 - [MESSAGE][INFO] - Parsed response: {id=1, firstName=Emily, lastName=Johnson, maidenName=Smith, age=28, gender=female, email=emily.johnson@x.dummyjson.com, phone=+81 965-431-3024, username=emilys, password=emilyspass, birthDate=1996-5-30, image=https://dummyjson.com/icon/emilys/128, bloodGroup=O-, height=193.24, weight=63.16, eyeColor=Green, hair={color=Brown, type=Curly}, ip=42.48.100.32, address={address=626 Main Street, city=Phoenix, state=Mississippi, stateCode=MS, postalCode=29112, coordinates={lat=-77.16213, lng=-92.084824}, country=United States}, macAddress=47:fa:41:18:ec:eb, university=University of Wisconsin--Madison, bank={cardExpire=03/26, cardNumber=9289760655481815, cardType=Elo, currency=CNY, iban=YPUXISOBI7TTHPK2BR3HAIXL}, company={department=Engineering, name=Dooley, Kozey and Cronin, title=Sales Manager, address={address=263 Tenth Street, city=San Francisco, state=Wisconsin, stateCode=WI, postalCode=37657, coordinates={lat=71.814525, lng=-161.150263}, country=United States}}, ein=977-175, ssn=900-590-289, userAgent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/537.36, crypto={coin=Bitcoin, wallet=0xb9fc2fe63b2a6c003f1c324c3bfa53259162181a, network=Ethereum (ERC20)}, role=admin}
+
+01-10-2025T10:07:50 - [TEST_STEP][PASSED] - logInfo("Storing firstName in apiResponse section of JSON file..."): Storing firstName in apiResponse section of JSON file...
+
+01-10-2025T10:07:50 - [MESSAGE][INFO] - Storing firstName in apiResponse section of JSON file...
+
+01-10-2025T10:07:50 - [TEST_STEP][PASSED] - JsonFileReader.storeJsonData(responseDataFilePath, "apiResonse", "firstName", firstName): Appended 'firstName: Emily' to section 'apiResonse' in file 'Include/Data Files/Response_data.json'.
+
+01-10-2025T10:07:50 - [MESSAGE][INFO] - Saved updated JSON data to file: Include\Data Files\Response_data.json
+
+01-10-2025T10:07:50 - [MESSAGE][INFO] - Appended 'firstName: Emily' to section 'apiResonse' in file 'Include/Data Files/Response_data.json'.
+
+01-10-2025T10:07:50 - [TEST_STEP][PASSED] - logInfo("firstName stored successfully: " + firstName): firstName stored successfully: Emily
+
+01-10-2025T10:07:50 - [MESSAGE][INFO] - firstName stored successfully: Emily
+
+01-10-2025T10:07:50 - [TEST_STEP][PASSED] - logInfo("Storing full response under userData section..."): Storing full response under userData section...
+
+01-10-2025T10:07:50 - [MESSAGE][INFO] - Storing full response under userData section...
+
+01-10-2025T10:07:50 - [TEST_STEP][PASSED] - JsonFileReader.storeApiResponse("userData", response, responseDataFilePath): Stored API response under section 'userData' in file 'Include/Data Files/Response_data.json'.
+
+01-10-2025T10:07:50 - [MESSAGE][INFO] - Saved updated JSON data to file: Include\Data Files\Response_data.json
+
+01-10-2025T10:07:50 - [MESSAGE][INFO] - Stored API response under section 'userData' in file 'Include/Data Files/Response_data.json'.
+
+01-10-2025T10:07:50 - [TEST_STEP][PASSED] - logInfo("Full response stored successfully."): Full response stored successfully.
+
+01-10-2025T10:07:50 - [MESSAGE][INFO] - Full response stored successfully.
+
+01-10-2025T10:07:50 - [TEST_STEP][PASSED] - Start listener action : closeTheBrowser: Error while closing browser: Browser is not opened
+Build info: version: '4.28.1', revision: '73f5ad48a2'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: driver.version: unknown
+
+01-10-2025T10:07:50 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+01-10-2025T10:07:50 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+01-10-2025T10:07:51 - [TEST_STEP][PASSED] - testCaseStatus = testCaseContext.getTestCaseStatus(): null
+
+01-10-2025T10:07:51 - [TEST_STEP][PASSED] - println(testCaseStatus): null
+
+01-10-2025T10:07:51 - [TEST_STEP][PASSED] - StatusMap = DependencyHandler.getStatusMap(): null
+
+01-10-2025T10:07:51 - [TEST_STEP][PASSED] - if (StatusMap.containsKey(testCaseName)): null
+
+01-10-2025T10:07:51 - [TEST_STEP][PASSED] - try: null
+
+01-10-2025T10:07:51 - [TEST_STEP][PASSED] - driver = getWebDriver(): null
+
+01-10-2025T10:07:51 - [TEST_STEP][PASSED] - catch (Exception e): Error while closing browser: Browser is not opened
+Build info: version: '4.28.1', revision: '73f5ad48a2'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: driver.version: unknown
+
+01-10-2025T10:07:51 - [TEST_STEP][PASSED] - logInfo(Error while closing browser: $e.message): Error while closing browser: Browser is not opened
+Build info: version: '4.28.1', revision: '73f5ad48a2'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: driver.version: unknown
+
+01-10-2025T10:07:51 - [MESSAGE][INFO] - Error while closing browser: Browser is not opened
+Build info: version: '4.28.1', revision: '73f5ad48a2'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: driver.version: unknown]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/API_Testing/REST_API_Testing/TC05_RefereshAccessToken_Api" time="0.706" classname="Test Cases/API_Testing/REST_API_Testing/TC05_RefereshAccessToken_Api" status="PASSED">
+         <properties>
+            <property name="data_binding"><![CDATA[{"(Default) jsonF...":"Include/Data Files/login_data.json","(Default) apiBa...":"apiBaseUrl","(Default) acces...":"accessTokenUrl"}]]></property>
+         </properties>
+         <system-out><![CDATA[01-10-2025T10:07:51 - [TEST_CASE][PASSED] - Test Cases/API_Testing/REST_API_Testing/TC05_RefereshAccessToken_Api: Test Cases/API_Testing/REST_API_Testing/TC05_RefereshAccessToken_Api
+
+01-10-2025T10:07:51 - [TEST_STEP][PASSED] - Start listener action : beforeTestCase: null
+
+01-10-2025T10:07:51 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+01-10-2025T10:07:51 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+01-10-2025T10:07:51 - [TEST_STEP][PASSED] - if (toLowerCase().endsWith("api")): null
+
+01-10-2025T10:07:51 - [TEST_STEP][PASSED] - logInfo(Skipping browser launch for API test case: $testCaseName): Skipping browser launch for API test case: TC05_RefereshAccessToken_Api
+
+01-10-2025T10:07:51 - [MESSAGE][INFO] - Skipping browser launch for API test case: TC05_RefereshAccessToken_Api
+
+01-10-2025T10:07:51 - [TEST_STEP][PASSED] - return null: null
+
+01-10-2025T10:07:51 - [TEST_STEP][PASSED] - logInfo("Preparing headers for refresh token request..."): Preparing headers for refresh token request...
+
+01-10-2025T10:07:51 - [MESSAGE][INFO] - Preparing headers for refresh token request...
+
+01-10-2025T10:07:51 - [TEST_STEP][PASSED] - headers = ["Content-Type":"application/json"]: null
+
+01-10-2025T10:07:51 - [TEST_STEP][PASSED] - logInfo("Reading refresh payload from JSON file..."): Reading refresh payload from JSON file...
+
+01-10-2025T10:07:51 - [MESSAGE][INFO] - Reading refresh payload from JSON file...
+
+01-10-2025T10:07:51 - [TEST_STEP][WARNING] - payLoad = JsonOutput.toJson(JsonFileReader.getSectionData("refreshData", jsonDataFilePath)): Section 'refreshData' is not a valid object.
+
+01-10-2025T10:07:51 - [MESSAGE][WARNING] - Section 'refreshData' is not a valid object.
+
+01-10-2025T10:07:51 - [TEST_STEP][PASSED] - logInfo("Payload prepared: " + payLoad): Payload prepared: null
+
+01-10-2025T10:07:51 - [MESSAGE][INFO] - Payload prepared: null
+
+01-10-2025T10:07:51 - [TEST_STEP][PASSED] - logInfo("Sending POST request to /refresh endpoint..."): Sending POST request to /refresh endpoint...
+
+01-10-2025T10:07:51 - [MESSAGE][INFO] - Sending POST request to /refresh endpoint...
+
+01-10-2025T10:07:51 - [TEST_STEP][PASSED] - baseUrl = GlobalAccessor.getProfileVariable(accessToken, apiBaseUrl): null
+
+01-10-2025T10:07:51 - [TEST_STEP][PASSED] - refreshResponse = ApiKeywords.sendPost(baseUrl, "refresh", payLoad, headers): Send request successfully
+
+01-10-2025T10:07:51 - [MESSAGE][INFO] - HAR: C:\Users\10835442\Katalon Studio\Luma\Reports\20251001_100737\API_AccessToken\20251001_100738\requests\main\POST_Generic_2.har
+
+01-10-2025T10:07:51 - [MESSAGE][PASSED] - Send request successfully
+
+01-10-2025T10:07:51 - [TEST_STEP][PASSED] - logInfo("Response received with status: " + refreshResponse.getStatusCode()): Response received with status: 400
+
+01-10-2025T10:07:51 - [MESSAGE][INFO] - Response received with status: 400
+
+01-10-2025T10:07:51 - [TEST_STEP][PASSED] - parsedResponse = JsonSlurper().parseText(refreshResponse.getResponseBodyContent()): null
+
+01-10-2025T10:07:51 - [TEST_STEP][PASSED] - logInfo("Parsed response: " + parsedResponse.toString()): Parsed response: {message=Unexpected token 'n', "null" is not valid JSON}
+
+01-10-2025T10:07:51 - [MESSAGE][INFO] - Parsed response: {message=Unexpected token 'n', "null" is not valid JSON}
+
+01-10-2025T10:07:51 - [TEST_STEP][PASSED] - jwtToken = accessToken: null
+
+01-10-2025T10:07:51 - [TEST_STEP][PASSED] - logInfo("Extracted new JWT Token: " + jwtToken): Extracted new JWT Token: null
+
+01-10-2025T10:07:51 - [MESSAGE][INFO] - Extracted new JWT Token: null
+
+01-10-2025T10:07:51 - [TEST_STEP][PASSED] - logInfo("Storing new JWT token in DummyJson section of JSON file..."): Storing new JWT token in DummyJson section of JSON file...
+
+01-10-2025T10:07:51 - [MESSAGE][INFO] - Storing new JWT token in DummyJson section of JSON file...
+
+01-10-2025T10:07:51 - [TEST_STEP][PASSED] - JsonFileReader.storeJsonData(responseDataFilePath, "DummyJson", "accessToken", jwtToken): Appended 'accessToken: null' to section 'DummyJson' in file 'Include/Data Files/Response_data.json'.
+
+01-10-2025T10:07:51 - [MESSAGE][INFO] - Saved updated JSON data to file: Include\Data Files\Response_data.json
+
+01-10-2025T10:07:51 - [MESSAGE][INFO] - Appended 'accessToken: null' to section 'DummyJson' in file 'Include/Data Files/Response_data.json'.
+
+01-10-2025T10:07:51 - [TEST_STEP][PASSED] - logInfo("Token stored successfully."): Token stored successfully.
+
+01-10-2025T10:07:51 - [MESSAGE][INFO] - Token stored successfully.
+
+01-10-2025T10:07:51 - [TEST_STEP][PASSED] - Start listener action : closeTheBrowser: Error while closing browser: Browser is not opened
+Build info: version: '4.28.1', revision: '73f5ad48a2'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: driver.version: unknown
+
+01-10-2025T10:07:51 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+01-10-2025T10:07:51 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+01-10-2025T10:07:51 - [TEST_STEP][PASSED] - testCaseStatus = testCaseContext.getTestCaseStatus(): null
+
+01-10-2025T10:07:51 - [TEST_STEP][PASSED] - println(testCaseStatus): null
+
+01-10-2025T10:07:51 - [TEST_STEP][PASSED] - StatusMap = DependencyHandler.getStatusMap(): null
+
+01-10-2025T10:07:51 - [TEST_STEP][PASSED] - if (StatusMap.containsKey(testCaseName)): null
+
+01-10-2025T10:07:51 - [TEST_STEP][PASSED] - try: null
+
+01-10-2025T10:07:51 - [TEST_STEP][PASSED] - driver = getWebDriver(): null
+
+01-10-2025T10:07:51 - [TEST_STEP][PASSED] - catch (Exception e): Error while closing browser: Browser is not opened
+Build info: version: '4.28.1', revision: '73f5ad48a2'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: driver.version: unknown
+
+01-10-2025T10:07:51 - [TEST_STEP][PASSED] - logInfo(Error while closing browser: $e.message): Error while closing browser: Browser is not opened
+Build info: version: '4.28.1', revision: '73f5ad48a2'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: driver.version: unknown
+
+01-10-2025T10:07:51 - [MESSAGE][INFO] - Error while closing browser: Browser is not opened
+Build info: version: '4.28.1', revision: '73f5ad48a2'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: driver.version: unknown]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/API_Testing/REST_API_Testing/TC07_Access_currentUserDetail_negative_Api" time="0.485" classname="Test Cases/API_Testing/REST_API_Testing/TC07_Access_currentUserDetail_negative_Api" status="ERROR">
+         <properties>
+            <property name="data_binding"><![CDATA[{"(Default) jsonF...":"Include/Data Files/login_data.json","(Default) apiBa...":"apiBaseUrl","(Default) acces...":"accessTokenUrl"}]]></property>
+         </properties>
+         <error type="ERROR" message="Test Cases/API_Testing/REST_API_Testing/TC07_Access_currentUserDetail_negative_Api FAILED.&#xa;Reason:&#xa;groovy.lang.MissingMethodException: No signature of method: static com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.verifyResponseStatusCode() is applicable for argument types: (Integer, Integer) values: [401, 200]&#xa;Possible solutions: verifyResponseStatusCode(com.kms.katalon.core.testobject.ResponseObject, int), verifyResponseStatusCode(com.kms.katalon.core.testobject.ResponseObject, int, com.kms.katalon.core.model.FailureHandling)&#xa;	at TC07_Access_currentUserDetail_negative_Api.run(TC07_Access_currentUserDetail_negative_Api:42)&#xa;	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)&#xa;	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)&#xa;	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)&#xa;	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)&#xa;	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)&#xa;	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)&#xa;	at TempTestSuite1759293458866.run(TempTestSuite1759293458866.groovy:35)&#xa;	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#xa;	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#xa;	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#xa;"/>
+         <system-out><![CDATA[01-10-2025T10:07:53 - [TEST_CASE][ERROR] - Test Cases/API_Testing/REST_API_Testing/TC07_Access_currentUserDetail_negative_Api: Test Cases/API_Testing/REST_API_Testing/TC07_Access_currentUserDetail_negative_Api FAILED.
+Reason:
+groovy.lang.MissingMethodException: No signature of method: static com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.verifyResponseStatusCode() is applicable for argument types: (Integer, Integer) values: [401, 200]
+Possible solutions: verifyResponseStatusCode(com.kms.katalon.core.testobject.ResponseObject, int), verifyResponseStatusCode(com.kms.katalon.core.testobject.ResponseObject, int, com.kms.katalon.core.model.FailureHandling)
+	at TC07_Access_currentUserDetail_negative_Api.run(TC07_Access_currentUserDetail_negative_Api:42)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1759293458866.run(TempTestSuite1759293458866.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+
+01-10-2025T10:07:53 - [TEST_STEP][PASSED] - Start listener action : beforeTestCase: null
+
+01-10-2025T10:07:53 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+01-10-2025T10:07:53 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+01-10-2025T10:07:53 - [TEST_STEP][PASSED] - if (toLowerCase().endsWith("api")): null
+
+01-10-2025T10:07:53 - [TEST_STEP][PASSED] - logInfo(Skipping browser launch for API test case: $testCaseName): Skipping browser launch for API test case: TC07_Access_currentUserDetail_negative_Api
+
+01-10-2025T10:07:53 - [MESSAGE][INFO] - Skipping browser launch for API test case: TC07_Access_currentUserDetail_negative_Api
+
+01-10-2025T10:07:53 - [TEST_STEP][PASSED] - return null: null
+
+01-10-2025T10:07:53 - [TEST_STEP][PASSED] - logInfo("Reading access token from JSON file..."): Reading access token from JSON file...
+
+01-10-2025T10:07:53 - [MESSAGE][INFO] - Reading access token from JSON file...
+
+01-10-2025T10:07:53 - [TEST_STEP][PASSED] - accessToken = JsonFileReader.getJsonData("DummyJson", "invalidToken", jsonDataFilePath): null
+
+01-10-2025T10:07:53 - [TEST_STEP][PASSED] - logInfo("Access token retrieved: " + accessToken): Access token retrieved: qwertyuiosdfghjklzxcvbnm
+
+01-10-2025T10:07:53 - [MESSAGE][INFO] - Access token retrieved: qwertyuiosdfghjklzxcvbnm
+
+01-10-2025T10:07:53 - [TEST_STEP][PASSED] - headers = ["Authorization":accessToken, "Content-Type":"application/json"]: null
+
+01-10-2025T10:07:53 - [TEST_STEP][PASSED] - logInfo("Headers prepared: " + headers.toString()): Headers prepared: [Authorization:qwertyuiosdfghjklzxcvbnm, Content-Type:application/json]
+
+01-10-2025T10:07:53 - [MESSAGE][INFO] - Headers prepared: [Authorization:qwertyuiosdfghjklzxcvbnm, Content-Type:application/json]
+
+01-10-2025T10:07:53 - [TEST_STEP][PASSED] - logInfo("Sending GET request to /me endpoint..."): Sending GET request to /me endpoint...
+
+01-10-2025T10:07:53 - [MESSAGE][INFO] - Sending GET request to /me endpoint...
+
+01-10-2025T10:07:53 - [TEST_STEP][PASSED] - baseUrl = GlobalAccessor.getProfileVariable(accessTokenUrl, apiBaseUrl): null
+
+01-10-2025T10:07:53 - [TEST_STEP][PASSED] - response = ApiKeywords.sendGet(baseUrl, "me", headers): Send request successfully
+
+01-10-2025T10:07:54 - [MESSAGE][INFO] - HAR: C:\Users\10835442\Katalon Studio\Luma\Reports\20251001_100737\API_AccessToken\20251001_100738\requests\main\GET_Generic_6.har
+
+01-10-2025T10:07:54 - [MESSAGE][PASSED] - Send request successfully
+
+01-10-2025T10:07:54 - [TEST_STEP][PASSED] - logInfo("Response received with status: " + response.getStatusCode()): Response received with status: 401
+
+01-10-2025T10:07:54 - [MESSAGE][INFO] - Response received with status: 401
+
+01-10-2025T10:07:54 - [TEST_STEP][ERROR] - verifyResponseStatusCode(response.getStatusCode(), 200): Test Cases/API_Testing/REST_API_Testing/TC07_Access_currentUserDetail_negative_Api FAILED.
+Reason:
+groovy.lang.MissingMethodException: No signature of method: static com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.verifyResponseStatusCode() is applicable for argument types: (Integer, Integer) values: [401, 200]
+Possible solutions: verifyResponseStatusCode(com.kms.katalon.core.testobject.ResponseObject, int), verifyResponseStatusCode(com.kms.katalon.core.testobject.ResponseObject, int, com.kms.katalon.core.model.FailureHandling)
+	at TC07_Access_currentUserDetail_negative_Api.run(TC07_Access_currentUserDetail_negative_Api:42)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1759293458866.run(TempTestSuite1759293458866.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+
+01-10-2025T10:07:54 - [MESSAGE][ERROR] - Test Cases/API_Testing/REST_API_Testing/TC07_Access_currentUserDetail_negative_Api FAILED.
+Reason:
+groovy.lang.MissingMethodException: No signature of method: static com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.verifyResponseStatusCode() is applicable for argument types: (Integer, Integer) values: [401, 200]
+Possible solutions: verifyResponseStatusCode(com.kms.katalon.core.testobject.ResponseObject, int), verifyResponseStatusCode(com.kms.katalon.core.testobject.ResponseObject, int, com.kms.katalon.core.model.FailureHandling)
+	at TC07_Access_currentUserDetail_negative_Api.run(TC07_Access_currentUserDetail_negative_Api:42)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1759293458866.run(TempTestSuite1759293458866.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+
+01-10-2025T10:07:54 - [TEST_STEP][PASSED] - Start listener action : closeTheBrowser: Error while closing browser: Browser is not opened
+Build info: version: '4.28.1', revision: '73f5ad48a2'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: driver.version: unknown
+
+01-10-2025T10:07:54 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+01-10-2025T10:07:54 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+01-10-2025T10:07:54 - [TEST_STEP][PASSED] - testCaseStatus = testCaseContext.getTestCaseStatus(): null
+
+01-10-2025T10:07:54 - [TEST_STEP][PASSED] - println(testCaseStatus): null
+
+01-10-2025T10:07:54 - [TEST_STEP][PASSED] - StatusMap = DependencyHandler.getStatusMap(): null
+
+01-10-2025T10:07:54 - [TEST_STEP][PASSED] - if (StatusMap.containsKey(testCaseName)): null
+
+01-10-2025T10:07:54 - [TEST_STEP][PASSED] - try: null
+
+01-10-2025T10:07:54 - [TEST_STEP][PASSED] - driver = getWebDriver(): null
+
+01-10-2025T10:07:54 - [TEST_STEP][PASSED] - catch (Exception e): Error while closing browser: Browser is not opened
+Build info: version: '4.28.1', revision: '73f5ad48a2'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: driver.version: unknown
+
+01-10-2025T10:07:54 - [TEST_STEP][PASSED] - logInfo(Error while closing browser: $e.message): Error while closing browser: Browser is not opened
+Build info: version: '4.28.1', revision: '73f5ad48a2'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: driver.version: unknown
+
+01-10-2025T10:07:54 - [MESSAGE][INFO] - Error while closing browser: Browser is not opened
+Build info: version: '4.28.1', revision: '73f5ad48a2'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: driver.version: unknown]]></system-out>
+         <system-err><![CDATA[01-10-2025T10:07:53 - [TEST_CASE][ERROR] - Test Cases/API_Testing/REST_API_Testing/TC07_Access_currentUserDetail_negative_Api: Test Cases/API_Testing/REST_API_Testing/TC07_Access_currentUserDetail_negative_Api FAILED.
+Reason:
+groovy.lang.MissingMethodException: No signature of method: static com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.verifyResponseStatusCode() is applicable for argument types: (Integer, Integer) values: [401, 200]
+Possible solutions: verifyResponseStatusCode(com.kms.katalon.core.testobject.ResponseObject, int), verifyResponseStatusCode(com.kms.katalon.core.testobject.ResponseObject, int, com.kms.katalon.core.model.FailureHandling)
+	at TC07_Access_currentUserDetail_negative_Api.run(TC07_Access_currentUserDetail_negative_Api:42)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1759293458866.run(TempTestSuite1759293458866.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)]]></system-err>
+      </testcase>
+      <system-out><![CDATA[01-10-2025T10:07:44 - [TEST_SUITE][ERROR] - API_AccessToken: null]]></system-out>
+      <system-err><![CDATA[01-10-2025T10:07:44 - [TEST_SUITE][ERROR] - API_AccessToken: null]]></system-err>
+   </testsuite>
+</testsuites>

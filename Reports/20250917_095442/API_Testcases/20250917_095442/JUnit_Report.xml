@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="API_Testcases" time="4.388" tests="1" failures="0" errors="0">
+   <testsuite name="API_Testcases" tests="1" failures="0" errors="0" time="4.388" skipped="0" timestamp="2025-09-17T04:24:46.489Z" hostname="10835442 - 10.235.153.97" id="Test Suites/API_Testcases">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform"/>
+         <property name="logFolder" value="C:\\Users\\10835442\\Katalon Studio\\Luma\\Reports\\20250917_095442\\API_Testcases\\20250917_095442"/>
+         <property name="logFiles" value="C:\\Users\\10835442\\Katalon Studio\\Luma\\Reports\\20250917_095442\\API_Testcases\\20250917_095442\\console0.log, C:\\Users\\10835442\\Katalon Studio\\Luma\\Reports\\20250917_095442\\API_Testcases\\20250917_095442\\execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="userFullName" value="Abinesh R"/>
+         <property name="hostName" value="10835442 - 10.235.153.97"/>
+         <property name="hostAddress" value="10.235.153.97"/>
+         <property name="projectName" value="Luma"/>
+         <property name="os" value="Windows 11 64bit"/>
+         <property name="katalonVersion" value="10.3.1.0"/>
+      </properties>
+      <testcase name="Test Cases/JsonPlaceHolder/api_SignIn" time="3.746" classname="Test Cases/JsonPlaceHolder/api_SignIn" status="PASSED">
+         <properties>
+            <property name="data_binding"><![CDATA[{"(Default) getSc...":"Include/Data Files/get_response_schema.json","(Default) postS...":"Include/Data Files/post_login_response_schema.json","(Default) filep...":"https://68c8e78aceef5a150f629ed5.mockapi.io/sign_in/credentials"}]]></property>
+         </properties>
+         <system-out><![CDATA[17-09-2025T09:54:47 - [TEST_CASE][PASSED] - Test Cases/JsonPlaceHolder/api_SignIn: Test Cases/JsonPlaceHolder/api_SignIn
+
+17-09-2025T09:54:47 - [TEST_STEP][PASSED] - Start listener action : beforeTestCase: null
+
+17-09-2025T09:54:47 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+17-09-2025T09:54:47 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+17-09-2025T09:54:47 - [TEST_STEP][PASSED] - if (toLowerCase().startsWith("api_")): null
+
+17-09-2025T09:54:47 - [TEST_STEP][PASSED] - println(ℹ️ Skipping browser launch for API test case: $testCaseName): null
+
+17-09-2025T09:54:47 - [TEST_STEP][PASSED] - return null: null
+
+17-09-2025T09:54:47 - [TEST_STEP][PASSED] - logInfo("Sending GET request to /credentials"): Sending GET request to /credentials
+
+17-09-2025T09:54:47 - [MESSAGE][INFO] - Sending GET request to /credentials
+
+17-09-2025T09:54:47 - [TEST_STEP][PASSED] - getresponse = ApiKeywords.sendGet("/credentials"): Send request successfully
+
+17-09-2025T09:54:49 - [MESSAGE][INFO] - HAR: C:\Users\10835442\Katalon Studio\Luma\Reports\20250917_095442\API_Testcases\20250917_095442\requests\main\GET_Generic_0.har
+
+17-09-2025T09:54:50 - [MESSAGE][PASSED] - Send request successfully
+
+17-09-2025T09:54:50 - [TEST_STEP][PASSED] - verifyResponseStatusCode(getresponse, 200): Verify response status code successfully
+
+17-09-2025T09:54:50 - [MESSAGE][PASSED] - Verify response status code successfully
+
+17-09-2025T09:54:50 - [TEST_STEP][PASSED] - logInfo("GET response status code verified as 200"): GET response status code verified as 200
+
+17-09-2025T09:54:50 - [MESSAGE][INFO] - GET response status code verified as 200
+
+17-09-2025T09:54:50 - [TEST_STEP][PASSED] - credentialList = JsonSlurper().parseText(getresponse.getResponseBodyContent()): null
+
+17-09-2025T09:54:50 - [TEST_STEP][PASSED] - logInfo("Parsed GET response body"): Parsed GET response body
+
+17-09-2025T09:54:50 - [MESSAGE][INFO] - Parsed GET response body
+
+17-09-2025T09:54:50 - [TEST_STEP][PASSED] - getResponseJson = JsonOutput.toJson(JsonFileReader.getSectionData(credentialList, "loginPage")): null
+
+17-09-2025T09:54:50 - [TEST_STEP][PASSED] - logInfo("Extracted loginPage section from credentials list"): Extracted loginPage section from credentials list
+
+17-09-2025T09:54:50 - [MESSAGE][INFO] - Extracted loginPage section from credentials list
+
+17-09-2025T09:54:50 - [TEST_STEP][PASSED] - logInfo("Validating GET response JSON against schema: " + getSchemaFilePath): Validating GET response JSON against schema: Include/Data Files/get_response_schema.json
+
+17-09-2025T09:54:50 - [MESSAGE][INFO] - Validating GET response JSON against schema: Include/Data Files/get_response_schema.json
+
+17-09-2025T09:54:50 - [TEST_STEP][PASSED] - validateJsonAgainstSchema(getResponseJson, getSchemaFilePath): Validate with JSON Schema successfully
+
+17-09-2025T09:54:50 - [MESSAGE][PASSED] - Validate with JSON Schema successfully
+
+17-09-2025T09:54:50 - [TEST_STEP][PASSED] - markPassed("GET response schema validation passed"): GET response schema validation passed
+
+17-09-2025T09:54:50 - [MESSAGE][PASSED] - GET response schema validation passed
+
+17-09-2025T09:54:50 - [TEST_STEP][PASSED] - logInfo("Sending POST request to /credentials with extracted loginPage data"): Sending POST request to /credentials with extracted loginPage data
+
+17-09-2025T09:54:50 - [MESSAGE][INFO] - Sending POST request to /credentials with extracted loginPage data
+
+17-09-2025T09:54:50 - [TEST_STEP][PASSED] - postResponse = ApiKeywords.sendPost("/credentials", getResponseJson): Send request successfully
+
+17-09-2025T09:54:50 - [MESSAGE][INFO] - HAR: C:\Users\10835442\Katalon Studio\Luma\Reports\20250917_095442\API_Testcases\20250917_095442\requests\main\POST_Generic_1.har
+
+17-09-2025T09:54:50 - [MESSAGE][PASSED] - Send request successfully
+
+17-09-2025T09:54:50 - [TEST_STEP][PASSED] - verifyResponseStatusCode(postResponse, 201): Verify response status code successfully
+
+17-09-2025T09:54:50 - [MESSAGE][PASSED] - Verify response status code successfully
+
+17-09-2025T09:54:50 - [TEST_STEP][PASSED] - logInfo("POST response status code verified as 201"): POST response status code verified as 201
+
+17-09-2025T09:54:50 - [MESSAGE][INFO] - POST response status code verified as 201
+
+17-09-2025T09:54:50 - [TEST_STEP][PASSED] - postResponseBody = postResponse.getResponseBodyContent(): null
+
+17-09-2025T09:54:50 - [TEST_STEP][PASSED] - logInfo("Extracted POST response body"): Extracted POST response body
+
+17-09-2025T09:54:50 - [MESSAGE][INFO] - Extracted POST response body
+
+17-09-2025T09:54:50 - [TEST_STEP][PASSED] - logInfo("Validating POST response JSON against schema: " + postSchemaFilePath): Validating POST response JSON against schema: Include/Data Files/post_login_response_schema.json
+
+17-09-2025T09:54:50 - [MESSAGE][INFO] - Validating POST response JSON against schema: Include/Data Files/post_login_response_schema.json
+
+17-09-2025T09:54:50 - [TEST_STEP][PASSED] - validateJsonAgainstSchema(postResponseBody, postSchemaFilePath): Validate with JSON Schema successfully
+
+17-09-2025T09:54:50 - [MESSAGE][PASSED] - Validate with JSON Schema successfully
+
+17-09-2025T09:54:50 - [TEST_STEP][PASSED] - markPassed("POST response schema validation passed"): POST response schema validation passed
+
+17-09-2025T09:54:50 - [MESSAGE][PASSED] - POST response schema validation passed
+
+17-09-2025T09:54:50 - [TEST_STEP][PASSED] - Start listener action : closeTheBrowser: null
+
+17-09-2025T09:54:50 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+17-09-2025T09:54:50 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+17-09-2025T09:54:50 - [TEST_STEP][PASSED] - testCaseStatus = testCaseContext.getTestCaseStatus(): null
+
+17-09-2025T09:54:50 - [TEST_STEP][PASSED] - println(testCaseStatus): null
+
+17-09-2025T09:54:50 - [TEST_STEP][PASSED] - StatusMap = DependencyHandler.getStatusMap(): null
+
+17-09-2025T09:54:50 - [TEST_STEP][PASSED] - if (StatusMap.containsKey(testCaseName)): null
+
+17-09-2025T09:54:50 - [TEST_STEP][PASSED] - try: null
+
+17-09-2025T09:54:50 - [TEST_STEP][PASSED] - driver = getWebDriver(): null
+
+17-09-2025T09:54:50 - [TEST_STEP][PASSED] - catch (Exception e): null
+
+17-09-2025T09:54:50 - [TEST_STEP][PASSED] - println(⚠️ Error while closing browser: $e.message): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[17-09-2025T09:54:46 - [TEST_SUITE][PASSED] - API_Testcases: null]]></system-out>
+      <system-err><![CDATA[]]></system-err>
+   </testsuite>
+</testsuites>

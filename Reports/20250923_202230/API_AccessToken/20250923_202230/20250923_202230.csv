@@ -1,0 +1,48 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+API_AccessToken,,,,23-09-2025 20:22:35,23-09-2025 20:22:40,5.468s,FAILED
+,,,,,,,
+Test Cases/API_Testing/TC04_getAccessToken_Api,,,,23-09-2025 20:22:38,23-09-2025 20:22:38,0.208s,FAILED
+"DATA BINDING - {""(Default) maste..."":""Include/Data Files/MasterSchema.json"",""(Default) jsonF..."":""Include/Data Files/login_data.json""}",,,,,,,
+Start listener action : beforeTestCase,,,,23-09-2025 20:22:38,23-09-2025 20:22:38,0.016s,PASSED
+"logInfo(""Reading payload from JSON file..."")",,,,23-09-2025 20:22:38,23-09-2025 20:22:38,0.003s,PASSED
+"payLoad = JsonOutput.toJson(JsonFileReader.getSectionData(""postPayload"", jsonFilePath))",,,,23-09-2025 20:22:38,23-09-2025 20:22:38,0.004s,PASSED
+"logInfo(""Payload prepared: "" + payLoad)",,,,23-09-2025 20:22:38,23-09-2025 20:22:38,0.006s,PASSED
+"logInfo(""Sending POST request to /login endpoint..."")",,,,23-09-2025 20:22:38,23-09-2025 20:22:38,0.010s,PASSED
+"response = ApiKeywords.sendPost(""login"", payLoad)",,,,23-09-2025 20:22:38,23-09-2025 20:22:38,0.027s,FAILED
+Start listener action : closeTheBrowser,,,,23-09-2025 20:22:38,23-09-2025 20:22:38,0.035s,PASSED
+,,,,,,,
+Test Cases/API_Testing/TC06_Access_currentUserDetail_positive_Api,,,,23-09-2025 20:22:39,23-09-2025 20:22:39,0.142s,FAILED
+"DATA BINDING - {""(Default) jsonF..."":""Include/Data Files/login_data.json""}",,,,,,,
+Start listener action : beforeTestCase,,,,23-09-2025 20:22:39,23-09-2025 20:22:39,0.009s,PASSED
+"logInfo(""Reading access token from JSON file..."")",,,,23-09-2025 20:22:39,23-09-2025 20:22:39,0.001s,PASSED
+"accessToken = JsonFileReader.getJsonData(""DummyJson"", ""accessToken"", jsonFilePath)",,,,23-09-2025 20:22:39,23-09-2025 20:22:39,0.004s,PASSED
+"logInfo(""Access token retrieved: "" + accessToken)",,,,23-09-2025 20:22:39,23-09-2025 20:22:39,0.001s,PASSED
+"headers = [""Authorization"":accessToken, ""Content-Type"":""application/json""]",,,,23-09-2025 20:22:39,23-09-2025 20:22:39,0.000s,PASSED
+"logInfo(""Headers prepared: "" + headers.toString())",,,,23-09-2025 20:22:39,23-09-2025 20:22:39,0.002s,PASSED
+"logInfo(""Sending GET request to /me endpoint..."")",,,,23-09-2025 20:22:39,23-09-2025 20:22:39,0.001s,PASSED
+"response = ApiKeywords.sendGet(""me"", headers)",,,,23-09-2025 20:22:39,23-09-2025 20:22:39,0.029s,FAILED
+Start listener action : closeTheBrowser,,,,23-09-2025 20:22:39,23-09-2025 20:22:39,0.031s,PASSED
+,,,,,,,
+Test Cases/API_Testing/TC05_RefereshAccessToken_Api,,,,23-09-2025 20:22:40,23-09-2025 20:22:40,0.069s,FAILED
+"DATA BINDING - {""(Default) jsonF..."":""Include/Data Files/login_data.json""}",,,,,,,
+Start listener action : beforeTestCase,,,,23-09-2025 20:22:40,23-09-2025 20:22:40,0.004s,PASSED
+"logInfo(""Preparing headers for refresh token request..."")",,,,23-09-2025 20:22:40,23-09-2025 20:22:40,0.002s,PASSED
+"headers = [""Content-Type"":""application/json""]",,,,23-09-2025 20:22:40,23-09-2025 20:22:40,0.000s,PASSED
+"logInfo(""Reading refresh payload from JSON file..."")",,,,23-09-2025 20:22:40,23-09-2025 20:22:40,0.001s,PASSED
+"payLoad = JsonOutput.toJson(JsonFileReader.getSectionData(""refreshData"", jsonFilePath))",,,,23-09-2025 20:22:40,23-09-2025 20:22:40,0.002s,PASSED
+"logInfo(""Payload prepared: "" + payLoad)",,,,23-09-2025 20:22:40,23-09-2025 20:22:40,0.002s,PASSED
+"logInfo(""Sending POST request to /refresh endpoint..."")",,,,23-09-2025 20:22:40,23-09-2025 20:22:40,0.001s,PASSED
+"refreshResponse = ApiKeywords.sendPost(""refresh"", payLoad, headers)",,,,23-09-2025 20:22:40,23-09-2025 20:22:40,0.014s,FAILED
+Start listener action : closeTheBrowser,,,,23-09-2025 20:22:40,23-09-2025 20:22:40,0.011s,PASSED
+,,,,,,,
+Test Cases/API_Testing/TC07_Access_currentUserDetail_negative_Api,,,,23-09-2025 20:22:40,23-09-2025 20:22:40,0.075s,FAILED
+"DATA BINDING - {""(Default) jsonF..."":""Include/Data Files/login_data.json""}",,,,,,,
+Start listener action : beforeTestCase,,,,23-09-2025 20:22:40,23-09-2025 20:22:40,0.004s,PASSED
+"logInfo(""Reading access token from JSON file..."")",,,,23-09-2025 20:22:40,23-09-2025 20:22:40,0.002s,PASSED
+"accessToken = JsonFileReader.getJsonData(""DummyJson"", ""invalidToken"", jsonFilePath)",,,,23-09-2025 20:22:40,23-09-2025 20:22:40,0.003s,PASSED
+"logInfo(""Access token retrieved: "" + accessToken)",,,,23-09-2025 20:22:40,23-09-2025 20:22:40,0.001s,PASSED
+"headers = [""Authorization"":accessToken, ""Content-Type"":""application/json""]",,,,23-09-2025 20:22:40,23-09-2025 20:22:40,0.001s,PASSED
+"logInfo(""Headers prepared: "" + headers.toString())",,,,23-09-2025 20:22:40,23-09-2025 20:22:40,0.001s,PASSED
+"logInfo(""Sending GET request to /me endpoint..."")",,,,23-09-2025 20:22:40,23-09-2025 20:22:40,0.001s,PASSED
+"response = ApiKeywords.sendGet(""me"", headers)",,,,23-09-2025 20:22:40,23-09-2025 20:22:40,0.014s,FAILED
+Start listener action : closeTheBrowser,,,,23-09-2025 20:22:40,23-09-2025 20:22:40,0.014s,PASSED

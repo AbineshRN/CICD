@@ -1,0 +1,16 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+TestSuite,Chrome 140.0.7339.81,Contains the test cases of luma,,08-09-2025 15:43:49,08-09-2025 15:44:31,42.484s,FAILED
+,,,,,,,
+Test Cases/TC_SignIn_Success,Chrome 140.0.7339.81,,,08-09-2025 15:43:50,08-09-2025 15:44:19,29.363s,FAILED
+"DATA BINDING - {""(Default) secti..."":""loginPage"",""(Default) filep..."":""Include/Data Files/login_data.json""}",,,,,,,
+Start listener action : openTheBrowser,Chrome 140.0.7339.81,,,08-09-2025 15:43:50,08-09-2025 15:44:02,12.212s,PASSED
+try,Chrome 140.0.7339.81,,,08-09-2025 15:44:02,08-09-2025 15:44:17,14.833s,FAILED
+catch (Exception e),Chrome 140.0.7339.81,,,08-09-2025 15:44:17,08-09-2025 15:44:18,0.484s,PASSED
+Finally,Chrome 140.0.7339.81,,,08-09-2025 15:44:18,08-09-2025 15:44:18,0.705s,PASSED
+Start listener action : closeTheBrowser,Chrome 140.0.7339.81,,,08-09-2025 15:44:18,08-09-2025 15:44:19,0.510s,PASSED
+,,,,,,,
+Test Cases/TC_AddToCart,Chrome 140.0.7339.81,This testcase checks the functionality of add to cart functionality,,08-09-2025 15:44:19,08-09-2025 15:44:31,12.481s,PASSED
+"DATA BINDING - {""(Default) categ..."":"" Components"",""(Default) order..."":""OrderPlacedPage"",""(Default) filep..."":""Include/Data Files/login_data.json"",""(Default) cartP..."":""CartPage""}",,,,,,,
+Start listener action : openTheBrowser,Chrome 140.0.7339.81,,,08-09-2025 15:44:19,08-09-2025 15:44:30,11.116s,PASSED
+if (!(isSignInPassed)),Chrome 140.0.7339.81,,,08-09-2025 15:44:31,08-09-2025 15:44:31,0.326s,PASSED
+Start listener action : closeTheBrowser,Chrome 140.0.7339.81,,,08-09-2025 15:44:31,08-09-2025 15:44:31,0.515s,PASSED

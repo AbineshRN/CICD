@@ -1,0 +1,911 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="API_AccessToken" time="18.801" tests="4" failures="1" errors="3">
+   <testsuite name="API_AccessToken" tests="4" failures="1" errors="3" time="18.801" skipped="0" timestamp="2025-09-19T09:54:16.153Z" hostname="10835442 - 10.235.155.176" id="Test Suites/API_AccessToken">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform"/>
+         <property name="logFolder" value="C:\\Users\\10835442\\Katalon Studio\\Luma\\Reports\\20250919_152409\\API_AccessToken\\20250919_152409"/>
+         <property name="logFiles" value="C:\\Users\\10835442\\Katalon Studio\\Luma\\Reports\\20250919_152409\\API_AccessToken\\20250919_152409\\console0.log, C:\\Users\\10835442\\Katalon Studio\\Luma\\Reports\\20250919_152409\\API_AccessToken\\20250919_152409\\execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="userFullName" value="Abinesh R"/>
+         <property name="hostName" value="10835442 - 10.235.155.176"/>
+         <property name="hostAddress" value="10.235.155.176"/>
+         <property name="projectName" value="Luma"/>
+         <property name="os" value="Windows 11 64bit"/>
+         <property name="katalonVersion" value="10.3.1.0"/>
+      </properties>
+      <testcase name="Test Cases/API_Testing/TC04_getAccessToken_Api" time="0.492" classname="Test Cases/API_Testing/TC04_getAccessToken_Api" status="FAILED">
+         <properties>
+            <property name="data_binding"><![CDATA[{"(Default) maste...":"Include/Data Files/MasterSchema.json","(Default) jsonF...":"Include/Data Files/login_data.json"}]]></property>
+         </properties>
+         <failure type="FAILED" message="Test Cases/API_Testing/TC04_getAccessToken_Api FAILED.&#xa;Reason:&#xa;com.kms.katalon.core.exception.StepFailedException: Failed to validate your JSON Object with the JSON Schema (Root cause: com.fasterxml.jackson.core.JsonParseException: Unrecognized token 'Invalid': was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false')&#xa; at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 8]&#xa;	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:2572)&#xa;	at com.fasterxml.jackson.core.JsonParser._constructReadException(JsonParser.java:2598)&#xa;	at com.fasterxml.jackson.core.JsonParser._constructReadException(JsonParser.java:2606)&#xa;	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:765)&#xa;	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._reportInvalidToken(ReaderBasedJsonParser.java:3018)&#xa;	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._reportInvalidToken(ReaderBasedJsonParser.java:2996)&#xa;	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._matchToken(ReaderBasedJsonParser.java:2761)&#xa;	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._handleOddValue(ReaderBasedJsonParser.java:2036)&#xa;	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser.nextToken(ReaderBasedJsonParser.java:780)&#xa;	at com.fasterxml.jackson.databind.ObjectMapper._readTreeAndClose(ObjectMapper.java:4934)&#xa;	at com.fasterxml.jackson.databind.ObjectMapper.readTree(ObjectMapper.java:3280)&#xa;	at com.kms.katalon.core.webservice.helper.WebServiceValidationHelper.validateJsonSchema(WebServiceValidationHelper.java:335)&#xa;	at com.kms.katalon.core.webservice.keyword.builtin.ValidateJsonAgainstSchemaKeyword$_validateWithJsonSchema_closure1.doCall(ValidateJsonAgainstSchemaKeyword.groovy:70)&#xa;	at com.kms.katalon.core.webservice.keyword.builtin.ValidateJsonAgainstSchemaKeyword$_validateWithJsonSchema_closure1.call(ValidateJsonAgainstSchemaKeyword.groovy)&#xa;	at com.kms.katalon.core.keyword.internal.KeywordMain.runKeyword(KeywordMain.groovy:75)&#xa;	at com.kms.katalon.core.webservice.keyword.builtin.ValidateJsonAgainstSchemaKeyword.validateWithJsonSchema(ValidateJsonAgainstSchemaKeyword.groovy:68)&#xa;	at com.kms.katalon.core.webservice.keyword.builtin.ValidateJsonAgainstSchemaKeyword.execute(ValidateJsonAgainstSchemaKeyword.groovy:54)&#xa;	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:79)&#xa;	at com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.validateJsonAgainstSchema(WSBuiltInKeywords.groovy:471)&#xa;	at TC04_getAccessToken_Api.run(TC04_getAccessToken_Api:43)&#xa;	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)&#xa;	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)&#xa;	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)&#xa;	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)&#xa;	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)&#xa;	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)&#xa;	at TempTestSuite1758275649455.run(TempTestSuite1758275649455.groovy:35)&#xa;	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#xa;	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#xa;	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#xa;)&#xa;	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:51)&#xa;	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy)&#xa;	at com.kms.katalon.core.keyword.internal.KeywordMain.runKeyword(KeywordMain.groovy:77)&#xa;	at com.kms.katalon.core.webservice.keyword.builtin.ValidateJsonAgainstSchemaKeyword.validateWithJsonSchema(ValidateJsonAgainstSchemaKeyword.groovy:68)&#xa;	at com.kms.katalon.core.webservice.keyword.builtin.ValidateJsonAgainstSchemaKeyword.execute(ValidateJsonAgainstSchemaKeyword.groovy:54)&#xa;	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:79)&#xa;	at com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.validateJsonAgainstSchema(WSBuiltInKeywords.groovy:471)&#xa;	at TC04_getAccessToken_Api.run(TC04_getAccessToken_Api:43)&#xa;	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)&#xa;	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)&#xa;	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)&#xa;	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)&#xa;	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)&#xa;	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)&#xa;	at TempTestSuite1758275649455.run(TempTestSuite1758275649455.groovy:35)&#xa;	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#xa;	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#xa;	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#xa;Caused by: com.fasterxml.jackson.core.JsonParseException: Unrecognized token 'Invalid': was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false')&#xa; at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 8]&#xa;	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:2572)&#xa;	at com.fasterxml.jackson.core.JsonParser._constructReadException(JsonParser.java:2598)&#xa;	at com.fasterxml.jackson.core.JsonParser._constructReadException(JsonParser.java:2606)&#xa;	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:765)&#xa;	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._reportInvalidToken(ReaderBasedJsonParser.java:3018)&#xa;	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._reportInvalidToken(ReaderBasedJsonParser.java:2996)&#xa;	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._matchToken(ReaderBasedJsonParser.java:2761)&#xa;	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._handleOddValue(ReaderBasedJsonParser.java:2036)&#xa;	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser.nextToken(ReaderBasedJsonParser.java:780)&#xa;	at com.fasterxml.jackson.databind.ObjectMapper._readTreeAndClose(ObjectMapper.java:4934)&#xa;	at com.fasterxml.jackson.databind.ObjectMapper.readTree(ObjectMapper.java:3280)&#xa;	at com.kms.katalon.core.webservice.helper.WebServiceValidationHelper.validateJsonSchema(WebServiceValidationHelper.java:335)&#xa;	at com.kms.katalon.core.webservice.keyword.builtin.ValidateJsonAgainstSchemaKeyword$_validateWithJsonSchema_closure1.doCall(ValidateJsonAgainstSchemaKeyword.groovy:70)&#xa;	at com.kms.katalon.core.webservice.keyword.builtin.ValidateJsonAgainstSchemaKeyword$_validateWithJsonSchema_closure1.call(ValidateJsonAgainstSchemaKeyword.groovy)&#xa;	at com.kms.katalon.core.keyword.internal.KeywordMain.runKeyword(KeywordMain.groovy:75)&#xa;	... 23 more&#xa;"/>
+         <system-out><![CDATA[19-09-2025T15:24:28 - [TEST_CASE][FAILED] - Test Cases/API_Testing/TC04_getAccessToken_Api: Test Cases/API_Testing/TC04_getAccessToken_Api FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Failed to validate your JSON Object with the JSON Schema (Root cause: com.fasterxml.jackson.core.JsonParseException: Unrecognized token 'Invalid': was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false')
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 8]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:2572)
+	at com.fasterxml.jackson.core.JsonParser._constructReadException(JsonParser.java:2598)
+	at com.fasterxml.jackson.core.JsonParser._constructReadException(JsonParser.java:2606)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:765)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._reportInvalidToken(ReaderBasedJsonParser.java:3018)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._reportInvalidToken(ReaderBasedJsonParser.java:2996)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._matchToken(ReaderBasedJsonParser.java:2761)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._handleOddValue(ReaderBasedJsonParser.java:2036)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser.nextToken(ReaderBasedJsonParser.java:780)
+	at com.fasterxml.jackson.databind.ObjectMapper._readTreeAndClose(ObjectMapper.java:4934)
+	at com.fasterxml.jackson.databind.ObjectMapper.readTree(ObjectMapper.java:3280)
+	at com.kms.katalon.core.webservice.helper.WebServiceValidationHelper.validateJsonSchema(WebServiceValidationHelper.java:335)
+	at com.kms.katalon.core.webservice.keyword.builtin.ValidateJsonAgainstSchemaKeyword$_validateWithJsonSchema_closure1.doCall(ValidateJsonAgainstSchemaKeyword.groovy:70)
+	at com.kms.katalon.core.webservice.keyword.builtin.ValidateJsonAgainstSchemaKeyword$_validateWithJsonSchema_closure1.call(ValidateJsonAgainstSchemaKeyword.groovy)
+	at com.kms.katalon.core.keyword.internal.KeywordMain.runKeyword(KeywordMain.groovy:75)
+	at com.kms.katalon.core.webservice.keyword.builtin.ValidateJsonAgainstSchemaKeyword.validateWithJsonSchema(ValidateJsonAgainstSchemaKeyword.groovy:68)
+	at com.kms.katalon.core.webservice.keyword.builtin.ValidateJsonAgainstSchemaKeyword.execute(ValidateJsonAgainstSchemaKeyword.groovy:54)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:79)
+	at com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.validateJsonAgainstSchema(WSBuiltInKeywords.groovy:471)
+	at TC04_getAccessToken_Api.run(TC04_getAccessToken_Api:43)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1758275649455.run(TempTestSuite1758275649455.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+)
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:51)
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy)
+	at com.kms.katalon.core.keyword.internal.KeywordMain.runKeyword(KeywordMain.groovy:77)
+	at com.kms.katalon.core.webservice.keyword.builtin.ValidateJsonAgainstSchemaKeyword.validateWithJsonSchema(ValidateJsonAgainstSchemaKeyword.groovy:68)
+	at com.kms.katalon.core.webservice.keyword.builtin.ValidateJsonAgainstSchemaKeyword.execute(ValidateJsonAgainstSchemaKeyword.groovy:54)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:79)
+	at com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.validateJsonAgainstSchema(WSBuiltInKeywords.groovy:471)
+	at TC04_getAccessToken_Api.run(TC04_getAccessToken_Api:43)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1758275649455.run(TempTestSuite1758275649455.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+Caused by: com.fasterxml.jackson.core.JsonParseException: Unrecognized token 'Invalid': was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false')
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 8]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:2572)
+	at com.fasterxml.jackson.core.JsonParser._constructReadException(JsonParser.java:2598)
+	at com.fasterxml.jackson.core.JsonParser._constructReadException(JsonParser.java:2606)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:765)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._reportInvalidToken(ReaderBasedJsonParser.java:3018)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._reportInvalidToken(ReaderBasedJsonParser.java:2996)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._matchToken(ReaderBasedJsonParser.java:2761)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._handleOddValue(ReaderBasedJsonParser.java:2036)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser.nextToken(ReaderBasedJsonParser.java:780)
+	at com.fasterxml.jackson.databind.ObjectMapper._readTreeAndClose(ObjectMapper.java:4934)
+	at com.fasterxml.jackson.databind.ObjectMapper.readTree(ObjectMapper.java:3280)
+	at com.kms.katalon.core.webservice.helper.WebServiceValidationHelper.validateJsonSchema(WebServiceValidationHelper.java:335)
+	at com.kms.katalon.core.webservice.keyword.builtin.ValidateJsonAgainstSchemaKeyword$_validateWithJsonSchema_closure1.doCall(ValidateJsonAgainstSchemaKeyword.groovy:70)
+	at com.kms.katalon.core.webservice.keyword.builtin.ValidateJsonAgainstSchemaKeyword$_validateWithJsonSchema_closure1.call(ValidateJsonAgainstSchemaKeyword.groovy)
+	at com.kms.katalon.core.keyword.internal.KeywordMain.runKeyword(KeywordMain.groovy:75)
+	... 23 more
+
+
+19-09-2025T15:24:28 - [TEST_STEP][PASSED] - Start listener action : beforeTestCase: null
+
+19-09-2025T15:24:28 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+19-09-2025T15:24:28 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+19-09-2025T15:24:28 - [TEST_STEP][PASSED] - if (toLowerCase().endsWith("api")): null
+
+19-09-2025T15:24:28 - [TEST_STEP][PASSED] - println(ℹ️ Skipping browser launch for API test case: $testCaseName): null
+
+19-09-2025T15:24:28 - [TEST_STEP][PASSED] - return null: null
+
+19-09-2025T15:24:28 - [TEST_STEP][PASSED] - logInfo("Reading payload from JSON file..."): Reading payload from JSON file...
+
+19-09-2025T15:24:28 - [MESSAGE][INFO] - Reading payload from JSON file...
+
+19-09-2025T15:24:28 - [TEST_STEP][PASSED] - payLoad = JsonOutput.toJson(JsonFileReader.getSectionData("postPayload", jsonFilePath)): null
+
+19-09-2025T15:24:28 - [TEST_STEP][PASSED] - logInfo("Payload prepared: " + payLoad): Payload prepared: {"username":"emilys","password":"emilyspass","expiresInMins":30}
+
+19-09-2025T15:24:28 - [MESSAGE][INFO] - Payload prepared: {"username":"emilys","password":"emilyspass","expiresInMins":30}
+
+19-09-2025T15:24:28 - [TEST_STEP][PASSED] - logInfo("Sending POST request to /login endpoint..."): Sending POST request to /login endpoint...
+
+19-09-2025T15:24:28 - [MESSAGE][INFO] - Sending POST request to /login endpoint...
+
+19-09-2025T15:24:28 - [TEST_STEP][PASSED] - response = ApiKeywords.sendPost("login", payLoad): Send request successfully
+
+19-09-2025T15:24:29 - [MESSAGE][INFO] - HAR: C:\Users\10835442\Katalon Studio\Luma\Reports\20250919_152409\API_AccessToken\20250919_152409\requests\main\POST_Generic_3.har
+
+19-09-2025T15:24:29 - [MESSAGE][PASSED] - Send request successfully
+
+19-09-2025T15:24:29 - [TEST_STEP][PASSED] - logInfo("Response received with status: " + response.getStatusCode()): Response received with status: 400
+
+19-09-2025T15:24:29 - [MESSAGE][INFO] - Response received with status: 400
+
+19-09-2025T15:24:29 - [TEST_STEP][PASSED] - responseBodyContent = response.getResponseBodyContent(): null
+
+19-09-2025T15:24:29 - [TEST_STEP][PASSED] - logInfo("Response body content:
+" + responseBodyContent): Response body content:
+Invalid request
+
+19-09-2025T15:24:29 - [MESSAGE][INFO] - Response body content:
+Invalid request
+
+19-09-2025T15:24:29 - [TEST_STEP][PASSED] - logInfo("Validating response against accessTokenSchema..."): Validating response against accessTokenSchema...
+
+19-09-2025T15:24:29 - [MESSAGE][INFO] - Validating response against accessTokenSchema...
+
+19-09-2025T15:24:29 - [TEST_STEP][PASSED] - schemaMap = JsonFileReader.getSectionData("accessTokenSchema", masterSchemaFilePath): null
+
+19-09-2025T15:24:29 - [TEST_STEP][PASSED] - schemaString = JsonOutput.toJson(schemaMap): null
+
+19-09-2025T15:24:29 - [TEST_STEP][FAILED] - validateJsonAgainstSchema(responseBodyContent, schemaString): Failed to validate your JSON Object with the JSON Schema (Root cause: com.fasterxml.jackson.core.JsonParseException: Unrecognized token 'Invalid': was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false')
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 8]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:2572)
+	at com.fasterxml.jackson.core.JsonParser._constructReadException(JsonParser.java:2598)
+	at com.fasterxml.jackson.core.JsonParser._constructReadException(JsonParser.java:2606)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:765)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._reportInvalidToken(ReaderBasedJsonParser.java:3018)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._reportInvalidToken(ReaderBasedJsonParser.java:2996)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._matchToken(ReaderBasedJsonParser.java:2761)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._handleOddValue(ReaderBasedJsonParser.java:2036)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser.nextToken(ReaderBasedJsonParser.java:780)
+	at com.fasterxml.jackson.databind.ObjectMapper._readTreeAndClose(ObjectMapper.java:4934)
+	at com.fasterxml.jackson.databind.ObjectMapper.readTree(ObjectMapper.java:3280)
+	at com.kms.katalon.core.webservice.helper.WebServiceValidationHelper.validateJsonSchema(WebServiceValidationHelper.java:335)
+	at com.kms.katalon.core.webservice.keyword.builtin.ValidateJsonAgainstSchemaKeyword$_validateWithJsonSchema_closure1.doCall(ValidateJsonAgainstSchemaKeyword.groovy:70)
+	at com.kms.katalon.core.webservice.keyword.builtin.ValidateJsonAgainstSchemaKeyword$_validateWithJsonSchema_closure1.call(ValidateJsonAgainstSchemaKeyword.groovy)
+	at com.kms.katalon.core.keyword.internal.KeywordMain.runKeyword(KeywordMain.groovy:75)
+	at com.kms.katalon.core.webservice.keyword.builtin.ValidateJsonAgainstSchemaKeyword.validateWithJsonSchema(ValidateJsonAgainstSchemaKeyword.groovy:68)
+	at com.kms.katalon.core.webservice.keyword.builtin.ValidateJsonAgainstSchemaKeyword.execute(ValidateJsonAgainstSchemaKeyword.groovy:54)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:79)
+	at com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.validateJsonAgainstSchema(WSBuiltInKeywords.groovy:471)
+	at TC04_getAccessToken_Api.run(TC04_getAccessToken_Api:43)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1758275649455.run(TempTestSuite1758275649455.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+)
+
+19-09-2025T15:24:29 - [MESSAGE][FAILED] - Failed to validate your JSON Object with the JSON Schema (Root cause: com.fasterxml.jackson.core.JsonParseException: Unrecognized token 'Invalid': was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false')
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 8]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:2572)
+	at com.fasterxml.jackson.core.JsonParser._constructReadException(JsonParser.java:2598)
+	at com.fasterxml.jackson.core.JsonParser._constructReadException(JsonParser.java:2606)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:765)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._reportInvalidToken(ReaderBasedJsonParser.java:3018)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._reportInvalidToken(ReaderBasedJsonParser.java:2996)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._matchToken(ReaderBasedJsonParser.java:2761)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._handleOddValue(ReaderBasedJsonParser.java:2036)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser.nextToken(ReaderBasedJsonParser.java:780)
+	at com.fasterxml.jackson.databind.ObjectMapper._readTreeAndClose(ObjectMapper.java:4934)
+	at com.fasterxml.jackson.databind.ObjectMapper.readTree(ObjectMapper.java:3280)
+	at com.kms.katalon.core.webservice.helper.WebServiceValidationHelper.validateJsonSchema(WebServiceValidationHelper.java:335)
+	at com.kms.katalon.core.webservice.keyword.builtin.ValidateJsonAgainstSchemaKeyword$_validateWithJsonSchema_closure1.doCall(ValidateJsonAgainstSchemaKeyword.groovy:70)
+	at com.kms.katalon.core.webservice.keyword.builtin.ValidateJsonAgainstSchemaKeyword$_validateWithJsonSchema_closure1.call(ValidateJsonAgainstSchemaKeyword.groovy)
+	at com.kms.katalon.core.keyword.internal.KeywordMain.runKeyword(KeywordMain.groovy:75)
+	at com.kms.katalon.core.webservice.keyword.builtin.ValidateJsonAgainstSchemaKeyword.validateWithJsonSchema(ValidateJsonAgainstSchemaKeyword.groovy:68)
+	at com.kms.katalon.core.webservice.keyword.builtin.ValidateJsonAgainstSchemaKeyword.execute(ValidateJsonAgainstSchemaKeyword.groovy:54)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:79)
+	at com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.validateJsonAgainstSchema(WSBuiltInKeywords.groovy:471)
+	at TC04_getAccessToken_Api.run(TC04_getAccessToken_Api:43)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1758275649455.run(TempTestSuite1758275649455.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+)
+
+19-09-2025T15:24:29 - [TEST_STEP][PASSED] - Start listener action : closeTheBrowser: null
+
+19-09-2025T15:24:29 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+19-09-2025T15:24:29 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+19-09-2025T15:24:29 - [TEST_STEP][PASSED] - testCaseStatus = testCaseContext.getTestCaseStatus(): null
+
+19-09-2025T15:24:29 - [TEST_STEP][PASSED] - println(testCaseStatus): null
+
+19-09-2025T15:24:29 - [TEST_STEP][PASSED] - StatusMap = DependencyHandler.getStatusMap(): null
+
+19-09-2025T15:24:29 - [TEST_STEP][PASSED] - if (StatusMap.containsKey(testCaseName)): null
+
+19-09-2025T15:24:29 - [TEST_STEP][PASSED] - try: null
+
+19-09-2025T15:24:29 - [TEST_STEP][PASSED] - driver = getWebDriver(): null
+
+19-09-2025T15:24:29 - [TEST_STEP][PASSED] - catch (Exception e): null
+
+19-09-2025T15:24:29 - [TEST_STEP][PASSED] - println(⚠️ Error while closing browser: $e.message): null]]></system-out>
+         <system-err><![CDATA[19-09-2025T15:24:28 - [TEST_CASE][FAILED] - Test Cases/API_Testing/TC04_getAccessToken_Api: Test Cases/API_Testing/TC04_getAccessToken_Api FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Failed to validate your JSON Object with the JSON Schema (Root cause: com.fasterxml.jackson.core.JsonParseException: Unrecognized token 'Invalid': was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false')
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 8]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:2572)
+	at com.fasterxml.jackson.core.JsonParser._constructReadException(JsonParser.java:2598)
+	at com.fasterxml.jackson.core.JsonParser._constructReadException(JsonParser.java:2606)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:765)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._reportInvalidToken(ReaderBasedJsonParser.java:3018)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._reportInvalidToken(ReaderBasedJsonParser.java:2996)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._matchToken(ReaderBasedJsonParser.java:2761)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._handleOddValue(ReaderBasedJsonParser.java:2036)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser.nextToken(ReaderBasedJsonParser.java:780)
+	at com.fasterxml.jackson.databind.ObjectMapper._readTreeAndClose(ObjectMapper.java:4934)
+	at com.fasterxml.jackson.databind.ObjectMapper.readTree(ObjectMapper.java:3280)
+	at com.kms.katalon.core.webservice.helper.WebServiceValidationHelper.validateJsonSchema(WebServiceValidationHelper.java:335)
+	at com.kms.katalon.core.webservice.keyword.builtin.ValidateJsonAgainstSchemaKeyword$_validateWithJsonSchema_closure1.doCall(ValidateJsonAgainstSchemaKeyword.groovy:70)
+	at com.kms.katalon.core.webservice.keyword.builtin.ValidateJsonAgainstSchemaKeyword$_validateWithJsonSchema_closure1.call(ValidateJsonAgainstSchemaKeyword.groovy)
+	at com.kms.katalon.core.keyword.internal.KeywordMain.runKeyword(KeywordMain.groovy:75)
+	at com.kms.katalon.core.webservice.keyword.builtin.ValidateJsonAgainstSchemaKeyword.validateWithJsonSchema(ValidateJsonAgainstSchemaKeyword.groovy:68)
+	at com.kms.katalon.core.webservice.keyword.builtin.ValidateJsonAgainstSchemaKeyword.execute(ValidateJsonAgainstSchemaKeyword.groovy:54)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:79)
+	at com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.validateJsonAgainstSchema(WSBuiltInKeywords.groovy:471)
+	at TC04_getAccessToken_Api.run(TC04_getAccessToken_Api:43)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1758275649455.run(TempTestSuite1758275649455.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+)
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:51)
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy)
+	at com.kms.katalon.core.keyword.internal.KeywordMain.runKeyword(KeywordMain.groovy:77)
+	at com.kms.katalon.core.webservice.keyword.builtin.ValidateJsonAgainstSchemaKeyword.validateWithJsonSchema(ValidateJsonAgainstSchemaKeyword.groovy:68)
+	at com.kms.katalon.core.webservice.keyword.builtin.ValidateJsonAgainstSchemaKeyword.execute(ValidateJsonAgainstSchemaKeyword.groovy:54)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:79)
+	at com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.validateJsonAgainstSchema(WSBuiltInKeywords.groovy:471)
+	at TC04_getAccessToken_Api.run(TC04_getAccessToken_Api:43)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1758275649455.run(TempTestSuite1758275649455.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+Caused by: com.fasterxml.jackson.core.JsonParseException: Unrecognized token 'Invalid': was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false')
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 8]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:2572)
+	at com.fasterxml.jackson.core.JsonParser._constructReadException(JsonParser.java:2598)
+	at com.fasterxml.jackson.core.JsonParser._constructReadException(JsonParser.java:2606)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:765)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._reportInvalidToken(ReaderBasedJsonParser.java:3018)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._reportInvalidToken(ReaderBasedJsonParser.java:2996)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._matchToken(ReaderBasedJsonParser.java:2761)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._handleOddValue(ReaderBasedJsonParser.java:2036)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser.nextToken(ReaderBasedJsonParser.java:780)
+	at com.fasterxml.jackson.databind.ObjectMapper._readTreeAndClose(ObjectMapper.java:4934)
+	at com.fasterxml.jackson.databind.ObjectMapper.readTree(ObjectMapper.java:3280)
+	at com.kms.katalon.core.webservice.helper.WebServiceValidationHelper.validateJsonSchema(WebServiceValidationHelper.java:335)
+	at com.kms.katalon.core.webservice.keyword.builtin.ValidateJsonAgainstSchemaKeyword$_validateWithJsonSchema_closure1.doCall(ValidateJsonAgainstSchemaKeyword.groovy:70)
+	at com.kms.katalon.core.webservice.keyword.builtin.ValidateJsonAgainstSchemaKeyword$_validateWithJsonSchema_closure1.call(ValidateJsonAgainstSchemaKeyword.groovy)
+	at com.kms.katalon.core.keyword.internal.KeywordMain.runKeyword(KeywordMain.groovy:75)
+	... 23 more]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/API_Testing/TC06_currentUserDetail_positive_Api" time="0.375" classname="Test Cases/API_Testing/TC06_currentUserDetail_positive_Api" status="ERROR">
+         <properties>
+            <property name="data_binding"><![CDATA[{"(Default) jsonF...":"Include/Data Files/login_data.json"}]]></property>
+         </properties>
+         <error type="ERROR" message="Test Cases/API_Testing/TC06_currentUserDetail_positive_Api FAILED.&#xa;Reason:&#xa;groovy.lang.MissingPropertyException: No such property: firstName for class: java.lang.String&#xa;	at TC06_currentUserDetail_positive_Api.run(TC06_currentUserDetail_positive_Api:49)&#xa;	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)&#xa;	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)&#xa;	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)&#xa;	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)&#xa;	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)&#xa;	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)&#xa;	at TempTestSuite1758275649455.run(TempTestSuite1758275649455.groovy:35)&#xa;	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#xa;	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#xa;	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#xa;"/>
+         <system-out><![CDATA[19-09-2025T15:24:30 - [TEST_CASE][ERROR] - Test Cases/API_Testing/TC06_currentUserDetail_positive_Api: Test Cases/API_Testing/TC06_currentUserDetail_positive_Api FAILED.
+Reason:
+groovy.lang.MissingPropertyException: No such property: firstName for class: java.lang.String
+	at TC06_currentUserDetail_positive_Api.run(TC06_currentUserDetail_positive_Api:49)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1758275649455.run(TempTestSuite1758275649455.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+
+19-09-2025T15:24:30 - [TEST_STEP][PASSED] - Start listener action : beforeTestCase: null
+
+19-09-2025T15:24:30 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+19-09-2025T15:24:30 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+19-09-2025T15:24:30 - [TEST_STEP][PASSED] - if (toLowerCase().endsWith("api")): null
+
+19-09-2025T15:24:30 - [TEST_STEP][PASSED] - println(ℹ️ Skipping browser launch for API test case: $testCaseName): null
+
+19-09-2025T15:24:30 - [TEST_STEP][PASSED] - return null: null
+
+19-09-2025T15:24:30 - [TEST_STEP][PASSED] - logInfo("Reading access token from JSON file..."): Reading access token from JSON file...
+
+19-09-2025T15:24:30 - [MESSAGE][INFO] - Reading access token from JSON file...
+
+19-09-2025T15:24:30 - [TEST_STEP][PASSED] - accessToken = JsonFileReader.getJsonData("DummyJson", "accessToken", jsonFilePath): null
+
+19-09-2025T15:24:30 - [TEST_STEP][PASSED] - logInfo("Access token retrieved: " + accessToken): Access token retrieved: null
+
+19-09-2025T15:24:31 - [MESSAGE][INFO] - Access token retrieved: null
+
+19-09-2025T15:24:31 - [TEST_STEP][PASSED] - headers = ["Authorization":accessToken, "Content-Type":"application/json"]: null
+
+19-09-2025T15:24:31 - [TEST_STEP][PASSED] - logInfo("Headers prepared: " + headers.toString()): Headers prepared: [Authorization:null, Content-Type:application/json]
+
+19-09-2025T15:24:31 - [MESSAGE][INFO] - Headers prepared: [Authorization:null, Content-Type:application/json]
+
+19-09-2025T15:24:31 - [TEST_STEP][PASSED] - logInfo("Sending GET request to /me endpoint..."): Sending GET request to /me endpoint...
+
+19-09-2025T15:24:31 - [MESSAGE][INFO] - Sending GET request to /me endpoint...
+
+19-09-2025T15:24:31 - [TEST_STEP][PASSED] - response = ApiKeywords.sendGet("me", headers): Send request successfully
+
+19-09-2025T15:24:31 - [MESSAGE][INFO] - HAR: C:\Users\10835442\Katalon Studio\Luma\Reports\20250919_152409\API_AccessToken\20250919_152409\requests\main\GET_Generic_7.har
+
+19-09-2025T15:24:31 - [MESSAGE][PASSED] - Send request successfully
+
+19-09-2025T15:24:31 - [TEST_STEP][PASSED] - logInfo("Response received with status: " + response.getStatusCode()): Response received with status: 404
+
+19-09-2025T15:24:31 - [MESSAGE][INFO] - Response received with status: 404
+
+19-09-2025T15:24:31 - [TEST_STEP][PASSED] - parsedResponse = JsonSlurper().parseText(response.getResponseBodyContent()): null
+
+19-09-2025T15:24:31 - [TEST_STEP][PASSED] - logInfo("Parsed response: " + parsedResponse.toString()): Parsed response: Not found
+
+19-09-2025T15:24:31 - [MESSAGE][INFO] - Parsed response: Not found
+
+19-09-2025T15:24:31 - [TEST_STEP][PASSED] - logInfo("Storing firstName in apiResponse section of JSON file..."): Storing firstName in apiResponse section of JSON file...
+
+19-09-2025T15:24:31 - [MESSAGE][INFO] - Storing firstName in apiResponse section of JSON file...
+
+19-09-2025T15:24:31 - [TEST_STEP][ERROR] - JsonFileReader.appendToJsonSection(jsonFilePath, "apiResonse", "firstName", firstName): Test Cases/API_Testing/TC06_currentUserDetail_positive_Api FAILED.
+Reason:
+groovy.lang.MissingPropertyException: No such property: firstName for class: java.lang.String
+	at TC06_currentUserDetail_positive_Api.run(TC06_currentUserDetail_positive_Api:49)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1758275649455.run(TempTestSuite1758275649455.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+
+19-09-2025T15:24:31 - [MESSAGE][ERROR] - Test Cases/API_Testing/TC06_currentUserDetail_positive_Api FAILED.
+Reason:
+groovy.lang.MissingPropertyException: No such property: firstName for class: java.lang.String
+	at TC06_currentUserDetail_positive_Api.run(TC06_currentUserDetail_positive_Api:49)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1758275649455.run(TempTestSuite1758275649455.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+
+19-09-2025T15:24:31 - [TEST_STEP][PASSED] - Start listener action : closeTheBrowser: null
+
+19-09-2025T15:24:31 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+19-09-2025T15:24:31 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+19-09-2025T15:24:31 - [TEST_STEP][PASSED] - testCaseStatus = testCaseContext.getTestCaseStatus(): null
+
+19-09-2025T15:24:31 - [TEST_STEP][PASSED] - println(testCaseStatus): null
+
+19-09-2025T15:24:31 - [TEST_STEP][PASSED] - StatusMap = DependencyHandler.getStatusMap(): null
+
+19-09-2025T15:24:31 - [TEST_STEP][PASSED] - if (StatusMap.containsKey(testCaseName)): null
+
+19-09-2025T15:24:31 - [TEST_STEP][PASSED] - try: null
+
+19-09-2025T15:24:31 - [TEST_STEP][PASSED] - driver = getWebDriver(): null
+
+19-09-2025T15:24:31 - [TEST_STEP][PASSED] - catch (Exception e): null
+
+19-09-2025T15:24:31 - [TEST_STEP][PASSED] - println(⚠️ Error while closing browser: $e.message): null]]></system-out>
+         <system-err><![CDATA[19-09-2025T15:24:30 - [TEST_CASE][ERROR] - Test Cases/API_Testing/TC06_currentUserDetail_positive_Api: Test Cases/API_Testing/TC06_currentUserDetail_positive_Api FAILED.
+Reason:
+groovy.lang.MissingPropertyException: No such property: firstName for class: java.lang.String
+	at TC06_currentUserDetail_positive_Api.run(TC06_currentUserDetail_positive_Api:49)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1758275649455.run(TempTestSuite1758275649455.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/API_Testing/TC05_RefereshAccessToken_Api" time="0.377" classname="Test Cases/API_Testing/TC05_RefereshAccessToken_Api" status="ERROR">
+         <properties>
+            <property name="data_binding"><![CDATA[{"(Default) jsonF...":"Include/Data Files/login_data.json"}]]></property>
+         </properties>
+         <error type="ERROR" message="Test Cases/API_Testing/TC05_RefereshAccessToken_Api FAILED.&#xa;Reason:&#xa;groovy.json.JsonException: Unable to determine the current character, it is not a string, number, array, or object&#xa;&#xa;The current character read is 'I' with an int value of 73&#xa;Unable to determine the current character, it is not a string, number, array, or object&#xa;line number 1&#xa;index number 0&#xa;Invalid request&#xa;^&#xa;	at org.apache.groovy.json.internal.JsonParserCharArray.decodeValueInternal(JsonParserCharArray.java:202)&#xa;	at org.apache.groovy.json.internal.JsonParserCharArray.decodeValue(JsonParserCharArray.java:153)&#xa;	at org.apache.groovy.json.internal.JsonParserCharArray.decodeFromChars(JsonParserCharArray.java:43)&#xa;	at org.apache.groovy.json.internal.JsonParserCharArray.parse(JsonParserCharArray.java:380)&#xa;	at org.apache.groovy.json.internal.BaseJsonParser.parse(BaseJsonParser.java:113)&#xa;	at TC05_RefereshAccessToken_Api.run(TC05_RefereshAccessToken_Api:42)&#xa;	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)&#xa;	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)&#xa;	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)&#xa;	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)&#xa;	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)&#xa;	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)&#xa;	at TempTestSuite1758275649455.run(TempTestSuite1758275649455.groovy:35)&#xa;	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#xa;	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#xa;	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#xa;"/>
+         <system-out><![CDATA[19-09-2025T15:24:32 - [TEST_CASE][ERROR] - Test Cases/API_Testing/TC05_RefereshAccessToken_Api: Test Cases/API_Testing/TC05_RefereshAccessToken_Api FAILED.
+Reason:
+groovy.json.JsonException: Unable to determine the current character, it is not a string, number, array, or object
+
+The current character read is 'I' with an int value of 73
+Unable to determine the current character, it is not a string, number, array, or object
+line number 1
+index number 0
+Invalid request
+^
+	at org.apache.groovy.json.internal.JsonParserCharArray.decodeValueInternal(JsonParserCharArray.java:202)
+	at org.apache.groovy.json.internal.JsonParserCharArray.decodeValue(JsonParserCharArray.java:153)
+	at org.apache.groovy.json.internal.JsonParserCharArray.decodeFromChars(JsonParserCharArray.java:43)
+	at org.apache.groovy.json.internal.JsonParserCharArray.parse(JsonParserCharArray.java:380)
+	at org.apache.groovy.json.internal.BaseJsonParser.parse(BaseJsonParser.java:113)
+	at TC05_RefereshAccessToken_Api.run(TC05_RefereshAccessToken_Api:42)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1758275649455.run(TempTestSuite1758275649455.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+
+19-09-2025T15:24:32 - [TEST_STEP][PASSED] - Start listener action : beforeTestCase: null
+
+19-09-2025T15:24:32 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+19-09-2025T15:24:32 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+19-09-2025T15:24:32 - [TEST_STEP][PASSED] - if (toLowerCase().endsWith("api")): null
+
+19-09-2025T15:24:32 - [TEST_STEP][PASSED] - println(ℹ️ Skipping browser launch for API test case: $testCaseName): null
+
+19-09-2025T15:24:32 - [TEST_STEP][PASSED] - return null: null
+
+19-09-2025T15:24:32 - [TEST_STEP][PASSED] - logInfo("Preparing headers for refresh token request..."): Preparing headers for refresh token request...
+
+19-09-2025T15:24:32 - [MESSAGE][INFO] - Preparing headers for refresh token request...
+
+19-09-2025T15:24:32 - [TEST_STEP][PASSED] - headers = ["Content-Type":"application/json"]: null
+
+19-09-2025T15:24:32 - [TEST_STEP][PASSED] - logInfo("Reading refresh payload from JSON file..."): Reading refresh payload from JSON file...
+
+19-09-2025T15:24:32 - [MESSAGE][INFO] - Reading refresh payload from JSON file...
+
+19-09-2025T15:24:32 - [TEST_STEP][PASSED] - payLoad = JsonOutput.toJson(JsonFileReader.getSectionData("refreshData", jsonFilePath)): null
+
+19-09-2025T15:24:32 - [TEST_STEP][PASSED] - logInfo("Payload prepared: " + payLoad): Payload prepared: {"refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3NTgxODg0NDksImV4cCI6MTc1ODE5MDI0OX0.DLmFfVhjYw1LLvTslkDHBCohcrM2O9LF2ujqAWm36EQ","expiresInMins":30}
+
+19-09-2025T15:24:32 - [MESSAGE][INFO] - Payload prepared: {"refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3NTgxODg0NDksImV4cCI6MTc1ODE5MDI0OX0.DLmFfVhjYw1LLvTslkDHBCohcrM2O9LF2ujqAWm36EQ","expiresInMins":30}
+
+19-09-2025T15:24:32 - [TEST_STEP][PASSED] - logInfo("Sending POST request to /refresh endpoint..."): Sending POST request to /refresh endpoint...
+
+19-09-2025T15:24:32 - [MESSAGE][INFO] - Sending POST request to /refresh endpoint...
+
+19-09-2025T15:24:32 - [TEST_STEP][PASSED] - refreshResponse = ApiKeywords.sendPost("refresh", payLoad, headers): Send request successfully
+
+19-09-2025T15:24:32 - [MESSAGE][INFO] - HAR: C:\Users\10835442\Katalon Studio\Luma\Reports\20250919_152409\API_AccessToken\20250919_152409\requests\main\POST_Generic_11.har
+
+19-09-2025T15:24:32 - [MESSAGE][PASSED] - Send request successfully
+
+19-09-2025T15:24:32 - [TEST_STEP][PASSED] - logInfo("Response received with status: " + refreshResponse.getStatusCode()): Response received with status: 400
+
+19-09-2025T15:24:32 - [MESSAGE][INFO] - Response received with status: 400
+
+19-09-2025T15:24:32 - [TEST_STEP][ERROR] - parsedResponse = JsonSlurper().parseText(refreshResponse.getResponseBodyContent()): Test Cases/API_Testing/TC05_RefereshAccessToken_Api FAILED.
+Reason:
+groovy.json.JsonException: Unable to determine the current character, it is not a string, number, array, or object
+
+The current character read is 'I' with an int value of 73
+Unable to determine the current character, it is not a string, number, array, or object
+line number 1
+index number 0
+Invalid request
+^
+	at org.apache.groovy.json.internal.JsonParserCharArray.decodeValueInternal(JsonParserCharArray.java:202)
+	at org.apache.groovy.json.internal.JsonParserCharArray.decodeValue(JsonParserCharArray.java:153)
+	at org.apache.groovy.json.internal.JsonParserCharArray.decodeFromChars(JsonParserCharArray.java:43)
+	at org.apache.groovy.json.internal.JsonParserCharArray.parse(JsonParserCharArray.java:380)
+	at org.apache.groovy.json.internal.BaseJsonParser.parse(BaseJsonParser.java:113)
+	at TC05_RefereshAccessToken_Api.run(TC05_RefereshAccessToken_Api:42)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1758275649455.run(TempTestSuite1758275649455.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+
+19-09-2025T15:24:32 - [MESSAGE][ERROR] - Test Cases/API_Testing/TC05_RefereshAccessToken_Api FAILED.
+Reason:
+groovy.json.JsonException: Unable to determine the current character, it is not a string, number, array, or object
+
+The current character read is 'I' with an int value of 73
+Unable to determine the current character, it is not a string, number, array, or object
+line number 1
+index number 0
+Invalid request
+^
+	at org.apache.groovy.json.internal.JsonParserCharArray.decodeValueInternal(JsonParserCharArray.java:202)
+	at org.apache.groovy.json.internal.JsonParserCharArray.decodeValue(JsonParserCharArray.java:153)
+	at org.apache.groovy.json.internal.JsonParserCharArray.decodeFromChars(JsonParserCharArray.java:43)
+	at org.apache.groovy.json.internal.JsonParserCharArray.parse(JsonParserCharArray.java:380)
+	at org.apache.groovy.json.internal.BaseJsonParser.parse(BaseJsonParser.java:113)
+	at TC05_RefereshAccessToken_Api.run(TC05_RefereshAccessToken_Api:42)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1758275649455.run(TempTestSuite1758275649455.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+
+19-09-2025T15:24:32 - [TEST_STEP][PASSED] - Start listener action : closeTheBrowser: null
+
+19-09-2025T15:24:32 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+19-09-2025T15:24:32 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+19-09-2025T15:24:32 - [TEST_STEP][PASSED] - testCaseStatus = testCaseContext.getTestCaseStatus(): null
+
+19-09-2025T15:24:32 - [TEST_STEP][PASSED] - println(testCaseStatus): null
+
+19-09-2025T15:24:32 - [TEST_STEP][PASSED] - StatusMap = DependencyHandler.getStatusMap(): null
+
+19-09-2025T15:24:32 - [TEST_STEP][PASSED] - if (StatusMap.containsKey(testCaseName)): null
+
+19-09-2025T15:24:32 - [TEST_STEP][PASSED] - try: null
+
+19-09-2025T15:24:32 - [TEST_STEP][PASSED] - driver = getWebDriver(): null
+
+19-09-2025T15:24:32 - [TEST_STEP][PASSED] - catch (Exception e): null
+
+19-09-2025T15:24:32 - [TEST_STEP][PASSED] - println(⚠️ Error while closing browser: $e.message): null]]></system-out>
+         <system-err><![CDATA[19-09-2025T15:24:32 - [TEST_CASE][ERROR] - Test Cases/API_Testing/TC05_RefereshAccessToken_Api: Test Cases/API_Testing/TC05_RefereshAccessToken_Api FAILED.
+Reason:
+groovy.json.JsonException: Unable to determine the current character, it is not a string, number, array, or object
+
+The current character read is 'I' with an int value of 73
+Unable to determine the current character, it is not a string, number, array, or object
+line number 1
+index number 0
+Invalid request
+^
+	at org.apache.groovy.json.internal.JsonParserCharArray.decodeValueInternal(JsonParserCharArray.java:202)
+	at org.apache.groovy.json.internal.JsonParserCharArray.decodeValue(JsonParserCharArray.java:153)
+	at org.apache.groovy.json.internal.JsonParserCharArray.decodeFromChars(JsonParserCharArray.java:43)
+	at org.apache.groovy.json.internal.JsonParserCharArray.parse(JsonParserCharArray.java:380)
+	at org.apache.groovy.json.internal.BaseJsonParser.parse(BaseJsonParser.java:113)
+	at TC05_RefereshAccessToken_Api.run(TC05_RefereshAccessToken_Api:42)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1758275649455.run(TempTestSuite1758275649455.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/API_Testing/TC07_currentUserDetail_negative_Api" time="0.428" classname="Test Cases/API_Testing/TC07_currentUserDetail_negative_Api" status="ERROR">
+         <properties>
+            <property name="data_binding"><![CDATA[{"(Default) jsonF...":"Include/Data Files/login_data.json"}]]></property>
+         </properties>
+         <error type="ERROR" message="Test Cases/API_Testing/TC07_currentUserDetail_negative_Api FAILED.&#xa;Reason:&#xa;groovy.lang.MissingMethodException: No signature of method: static com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.verifyResponseStatusCode() is applicable for argument types: (Integer, Integer) values: [404, 200]&#xa;Possible solutions: verifyResponseStatusCode(com.kms.katalon.core.testobject.ResponseObject, int), verifyResponseStatusCode(com.kms.katalon.core.testobject.ResponseObject, int, com.kms.katalon.core.model.FailureHandling)&#xa;	at TC07_currentUserDetail_negative_Api.run(TC07_currentUserDetail_negative_Api:40)&#xa;	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)&#xa;	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)&#xa;	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)&#xa;	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)&#xa;	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)&#xa;	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)&#xa;	at TempTestSuite1758275649455.run(TempTestSuite1758275649455.groovy:35)&#xa;	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#xa;	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#xa;	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#xa;"/>
+         <system-out><![CDATA[19-09-2025T15:24:34 - [TEST_CASE][ERROR] - Test Cases/API_Testing/TC07_currentUserDetail_negative_Api: Test Cases/API_Testing/TC07_currentUserDetail_negative_Api FAILED.
+Reason:
+groovy.lang.MissingMethodException: No signature of method: static com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.verifyResponseStatusCode() is applicable for argument types: (Integer, Integer) values: [404, 200]
+Possible solutions: verifyResponseStatusCode(com.kms.katalon.core.testobject.ResponseObject, int), verifyResponseStatusCode(com.kms.katalon.core.testobject.ResponseObject, int, com.kms.katalon.core.model.FailureHandling)
+	at TC07_currentUserDetail_negative_Api.run(TC07_currentUserDetail_negative_Api:40)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1758275649455.run(TempTestSuite1758275649455.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+
+19-09-2025T15:24:34 - [TEST_STEP][PASSED] - Start listener action : beforeTestCase: null
+
+19-09-2025T15:24:34 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+19-09-2025T15:24:34 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+19-09-2025T15:24:34 - [TEST_STEP][PASSED] - if (toLowerCase().endsWith("api")): null
+
+19-09-2025T15:24:34 - [TEST_STEP][PASSED] - println(ℹ️ Skipping browser launch for API test case: $testCaseName): null
+
+19-09-2025T15:24:34 - [TEST_STEP][PASSED] - return null: null
+
+19-09-2025T15:24:34 - [TEST_STEP][PASSED] - logInfo("Reading access token from JSON file..."): Reading access token from JSON file...
+
+19-09-2025T15:24:34 - [MESSAGE][INFO] - Reading access token from JSON file...
+
+19-09-2025T15:24:34 - [TEST_STEP][PASSED] - accessToken = JsonFileReader.getJsonData("DummyJson", "invalidToken", jsonFilePath): null
+
+19-09-2025T15:24:34 - [TEST_STEP][PASSED] - logInfo("Access token retrieved: " + accessToken): Access token retrieved: qwertyuiosdfghjklzxcvbnm
+
+19-09-2025T15:24:34 - [MESSAGE][INFO] - Access token retrieved: qwertyuiosdfghjklzxcvbnm
+
+19-09-2025T15:24:34 - [TEST_STEP][PASSED] - headers = ["Authorization":accessToken, "Content-Type":"application/json"]: null
+
+19-09-2025T15:24:34 - [TEST_STEP][PASSED] - logInfo("Headers prepared: " + headers.toString()): Headers prepared: [Authorization:qwertyuiosdfghjklzxcvbnm, Content-Type:application/json]
+
+19-09-2025T15:24:34 - [MESSAGE][INFO] - Headers prepared: [Authorization:qwertyuiosdfghjklzxcvbnm, Content-Type:application/json]
+
+19-09-2025T15:24:34 - [TEST_STEP][PASSED] - logInfo("Sending GET request to /me endpoint..."): Sending GET request to /me endpoint...
+
+19-09-2025T15:24:34 - [MESSAGE][INFO] - Sending GET request to /me endpoint...
+
+19-09-2025T15:24:34 - [TEST_STEP][PASSED] - response = ApiKeywords.sendGet("me", headers): Send request successfully
+
+19-09-2025T15:24:34 - [MESSAGE][INFO] - HAR: C:\Users\10835442\Katalon Studio\Luma\Reports\20250919_152409\API_AccessToken\20250919_152409\requests\main\GET_Generic_15.har
+
+19-09-2025T15:24:34 - [MESSAGE][PASSED] - Send request successfully
+
+19-09-2025T15:24:34 - [TEST_STEP][PASSED] - logInfo("Response received with status: " + response.getStatusCode()): Response received with status: 404
+
+19-09-2025T15:24:34 - [MESSAGE][INFO] - Response received with status: 404
+
+19-09-2025T15:24:34 - [TEST_STEP][ERROR] - verifyResponseStatusCode(response.getStatusCode(), 200): Test Cases/API_Testing/TC07_currentUserDetail_negative_Api FAILED.
+Reason:
+groovy.lang.MissingMethodException: No signature of method: static com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.verifyResponseStatusCode() is applicable for argument types: (Integer, Integer) values: [404, 200]
+Possible solutions: verifyResponseStatusCode(com.kms.katalon.core.testobject.ResponseObject, int), verifyResponseStatusCode(com.kms.katalon.core.testobject.ResponseObject, int, com.kms.katalon.core.model.FailureHandling)
+	at TC07_currentUserDetail_negative_Api.run(TC07_currentUserDetail_negative_Api:40)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1758275649455.run(TempTestSuite1758275649455.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+
+19-09-2025T15:24:34 - [MESSAGE][ERROR] - Test Cases/API_Testing/TC07_currentUserDetail_negative_Api FAILED.
+Reason:
+groovy.lang.MissingMethodException: No signature of method: static com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.verifyResponseStatusCode() is applicable for argument types: (Integer, Integer) values: [404, 200]
+Possible solutions: verifyResponseStatusCode(com.kms.katalon.core.testobject.ResponseObject, int), verifyResponseStatusCode(com.kms.katalon.core.testobject.ResponseObject, int, com.kms.katalon.core.model.FailureHandling)
+	at TC07_currentUserDetail_negative_Api.run(TC07_currentUserDetail_negative_Api:40)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1758275649455.run(TempTestSuite1758275649455.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+
+19-09-2025T15:24:34 - [TEST_STEP][PASSED] - Start listener action : closeTheBrowser: null
+
+19-09-2025T15:24:34 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+19-09-2025T15:24:34 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+19-09-2025T15:24:34 - [TEST_STEP][PASSED] - testCaseStatus = testCaseContext.getTestCaseStatus(): null
+
+19-09-2025T15:24:34 - [TEST_STEP][PASSED] - println(testCaseStatus): null
+
+19-09-2025T15:24:34 - [TEST_STEP][PASSED] - StatusMap = DependencyHandler.getStatusMap(): null
+
+19-09-2025T15:24:34 - [TEST_STEP][PASSED] - if (StatusMap.containsKey(testCaseName)): null
+
+19-09-2025T15:24:34 - [TEST_STEP][PASSED] - try: null
+
+19-09-2025T15:24:34 - [TEST_STEP][PASSED] - driver = getWebDriver(): null
+
+19-09-2025T15:24:34 - [TEST_STEP][PASSED] - catch (Exception e): null
+
+19-09-2025T15:24:34 - [TEST_STEP][PASSED] - println(⚠️ Error while closing browser: $e.message): null]]></system-out>
+         <system-err><![CDATA[19-09-2025T15:24:34 - [TEST_CASE][ERROR] - Test Cases/API_Testing/TC07_currentUserDetail_negative_Api: Test Cases/API_Testing/TC07_currentUserDetail_negative_Api FAILED.
+Reason:
+groovy.lang.MissingMethodException: No signature of method: static com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.verifyResponseStatusCode() is applicable for argument types: (Integer, Integer) values: [404, 200]
+Possible solutions: verifyResponseStatusCode(com.kms.katalon.core.testobject.ResponseObject, int), verifyResponseStatusCode(com.kms.katalon.core.testobject.ResponseObject, int, com.kms.katalon.core.model.FailureHandling)
+	at TC07_currentUserDetail_negative_Api.run(TC07_currentUserDetail_negative_Api:40)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1758275649455.run(TempTestSuite1758275649455.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)]]></system-err>
+      </testcase>
+      <system-out><![CDATA[19-09-2025T15:24:16 - [TEST_SUITE][ERROR] - API_AccessToken: null]]></system-out>
+      <system-err><![CDATA[19-09-2025T15:24:16 - [TEST_SUITE][ERROR] - API_AccessToken: null]]></system-err>
+   </testsuite>
+</testsuites>

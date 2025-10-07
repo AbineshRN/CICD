@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="API_Testcases" time="28.937" tests="3" failures="0" errors="1">
+   <testsuite name="API_Testcases" tests="3" failures="0" errors="1" time="28.937" skipped="0" timestamp="2025-09-18T04:24:48.212Z" hostname="10835442 - 10.235.154.124" id="Test Suites/API_Testcases">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform"/>
+         <property name="logFolder" value="C:\\Users\\10835442\\Katalon Studio\\Luma\\Reports\\20250918_095443\\API_Testcases\\20250918_095443"/>
+         <property name="logFiles" value="C:\\Users\\10835442\\Katalon Studio\\Luma\\Reports\\20250918_095443\\API_Testcases\\20250918_095443\\console0.log, C:\\Users\\10835442\\Katalon Studio\\Luma\\Reports\\20250918_095443\\API_Testcases\\20250918_095443\\execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="userFullName" value="Abinesh R"/>
+         <property name="hostName" value="10835442 - 10.235.154.124"/>
+         <property name="hostAddress" value="10.235.154.124"/>
+         <property name="projectName" value="Luma"/>
+         <property name="os" value="Windows 11 64bit"/>
+         <property name="katalonVersion" value="10.3.1.0"/>
+      </properties>
+      <testcase name="Test Cases/JsonPlaceHolder/api_Local_to_Server" time="24.751" classname="Test Cases/JsonPlaceHolder/api_Local_to_Server" status="PASSED">
+         <properties>
+            <property name="data_binding"><![CDATA[{"(Default) maste...":"Include/Data Files/MasterSchema.json","(Default) syste...":"Include/Data Files/login_data.json","(Default) postS...":"Include/Data Files/post_login_response_schema.json","(Default) filep...":"https://68c8e78aceef5a150f629ed5.mockapi.io/sign_in/credentials"}]]></property>
+         </properties>
+         <system-out><![CDATA[18-09-2025T09:54:48 - [TEST_CASE][PASSED] - Test Cases/JsonPlaceHolder/api_Local_to_Server: Test Cases/JsonPlaceHolder/api_Local_to_Server
+
+18-09-2025T09:54:49 - [TEST_STEP][PASSED] - Start listener action : beforeTestCase: null
+
+18-09-2025T09:54:49 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+18-09-2025T09:54:49 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+18-09-2025T09:54:49 - [TEST_STEP][PASSED] - if (toLowerCase().startsWith("api_")): null
+
+18-09-2025T09:54:49 - [TEST_STEP][PASSED] - println(ℹ️ Skipping browser launch for API test case: $testCaseName): null
+
+18-09-2025T09:54:49 - [TEST_STEP][PASSED] - return null: null
+
+18-09-2025T09:54:49 - [TEST_STEP][PASSED] - logInfo("Sending POST request to /credentials to create new credentials"): Sending POST request to /credentials to create new credentials
+
+18-09-2025T09:54:49 - [MESSAGE][INFO] - Sending POST request to /credentials to create new credentials
+
+18-09-2025T09:54:49 - [TEST_STEP][PASSED] - postPayload = JsonOutput.toJson(JsonFileReader.getSectionData("loginPage", systemJsonFilePath)): null
+
+18-09-2025T09:54:49 - [TEST_STEP][PASSED] - println(postPayload): null
+
+18-09-2025T09:54:49 - [TEST_STEP][PASSED] - postResponse = ApiKeywords.sendPost("/credentials", postPayload): Send request successfully
+
+18-09-2025T09:55:13 - [MESSAGE][INFO] - HAR: C:\Users\10835442\Katalon Studio\Luma\Reports\20250918_095443\API_Testcases\20250918_095443\requests\main\POST_Generic_0.har
+
+18-09-2025T09:55:13 - [MESSAGE][PASSED] - Send request successfully
+
+18-09-2025T09:55:13 - [TEST_STEP][PASSED] - verifyResponseStatusCode(postResponse, 201): Verify response status code successfully
+
+18-09-2025T09:55:13 - [MESSAGE][PASSED] - Verify response status code successfully
+
+18-09-2025T09:55:13 - [TEST_STEP][PASSED] - logInfo("POST response status code verified as 201"): POST response status code verified as 201
+
+18-09-2025T09:55:13 - [MESSAGE][INFO] - POST response status code verified as 201
+
+18-09-2025T09:55:13 - [TEST_STEP][PASSED] - postResponseBody = postResponse.getResponseBodyContent(): null
+
+18-09-2025T09:55:13 - [TEST_STEP][PASSED] - createdCredential = JsonSlurper().parseText(postResponseBody): null
+
+18-09-2025T09:55:13 - [TEST_STEP][PASSED] - credentialId = id: null
+
+18-09-2025T09:55:13 - [TEST_STEP][PASSED] - JsonFileReader.appendToJsonSection(systemJsonFilePath, "postData", "CredentialId", credentialId): null
+
+18-09-2025T09:55:13 - [TEST_STEP][PASSED] - logInfo("Created credential ID: " + credentialId): Created credential ID: 1
+
+18-09-2025T09:55:13 - [MESSAGE][INFO] - Created credential ID: 1
+
+18-09-2025T09:55:13 - [TEST_STEP][PASSED] - validateJsonAgainstSchema(postResponseBody, JsonOutput.toJson(JsonFileReader.getSectionData("postResponse", masterSchemaFilePath))): Validate with JSON Schema successfully
+
+18-09-2025T09:55:13 - [MESSAGE][PASSED] - Validate with JSON Schema successfully
+
+18-09-2025T09:55:13 - [TEST_STEP][PASSED] - markPassed("POST response schema validation passed"): POST response schema validation passed
+
+18-09-2025T09:55:13 - [MESSAGE][PASSED] - POST response schema validation passed
+
+18-09-2025T09:55:13 - [TEST_STEP][PASSED] - Start listener action : closeTheBrowser: null
+
+18-09-2025T09:55:13 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+18-09-2025T09:55:13 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+18-09-2025T09:55:13 - [TEST_STEP][PASSED] - testCaseStatus = testCaseContext.getTestCaseStatus(): null
+
+18-09-2025T09:55:13 - [TEST_STEP][PASSED] - println(testCaseStatus): null
+
+18-09-2025T09:55:13 - [TEST_STEP][PASSED] - StatusMap = DependencyHandler.getStatusMap(): null
+
+18-09-2025T09:55:13 - [TEST_STEP][PASSED] - if (StatusMap.containsKey(testCaseName)): null
+
+18-09-2025T09:55:13 - [TEST_STEP][PASSED] - try: null
+
+18-09-2025T09:55:13 - [TEST_STEP][PASSED] - driver = getWebDriver(): null
+
+18-09-2025T09:55:13 - [TEST_STEP][PASSED] - catch (Exception e): null
+
+18-09-2025T09:55:13 - [TEST_STEP][PASSED] - println(⚠️ Error while closing browser: $e.message): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/JsonPlaceHolder/api_updatingCred" time="0.6" classname="Test Cases/JsonPlaceHolder/api_updatingCred" status="PASSED">
+         <properties>
+            <property name="data_binding"><![CDATA[{"(Default) jsonF...":"Include/Data Files/login_data.json"}]]></property>
+         </properties>
+         <system-out><![CDATA[18-09-2025T09:55:13 - [TEST_CASE][PASSED] - Test Cases/JsonPlaceHolder/api_updatingCred: Test Cases/JsonPlaceHolder/api_updatingCred
+
+18-09-2025T09:55:13 - [TEST_STEP][PASSED] - Start listener action : beforeTestCase: null
+
+18-09-2025T09:55:13 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+18-09-2025T09:55:13 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+18-09-2025T09:55:13 - [TEST_STEP][PASSED] - if (toLowerCase().startsWith("api_")): null
+
+18-09-2025T09:55:13 - [TEST_STEP][PASSED] - println(ℹ️ Skipping browser launch for API test case: $testCaseName): null
+
+18-09-2025T09:55:13 - [TEST_STEP][PASSED] - return null: null
+
+18-09-2025T09:55:13 - [TEST_STEP][PASSED] - credentialId = JsonFileReader.getJsonData("postData", "CredentialId", jsonFilePath): null
+
+18-09-2025T09:55:13 - [TEST_STEP][PASSED] - logInfo("Sending PATCH request to /credentials/" + credentialId + " to update password"): Sending PATCH request to /credentials/1 to update password
+
+18-09-2025T09:55:13 - [MESSAGE][INFO] - Sending PATCH request to /credentials/1 to update password
+
+18-09-2025T09:55:13 - [TEST_STEP][PASSED] - patchPayload = JsonOutput.toJson(["password":"NewPassword@456"]): null
+
+18-09-2025T09:55:13 - [TEST_STEP][PASSED] - patchResponse = ApiKeywords.sendPatch("/credentials/" + credentialId, patchPayload): Send request successfully
+
+18-09-2025T09:55:14 - [MESSAGE][INFO] - HAR: C:\Users\10835442\Katalon Studio\Luma\Reports\20250918_095443\API_Testcases\20250918_095443\requests\main\PATCH_Generic_1.har
+
+18-09-2025T09:55:14 - [MESSAGE][PASSED] - Send request successfully
+
+18-09-2025T09:55:14 - [TEST_STEP][PASSED] - verifyResponseStatusCode(patchResponse, 200): Verify response status code successfully
+
+18-09-2025T09:55:14 - [MESSAGE][PASSED] - Verify response status code successfully
+
+18-09-2025T09:55:14 - [TEST_STEP][PASSED] - println(patchResponse.getResponseBodyContent()): null
+
+18-09-2025T09:55:14 - [TEST_STEP][PASSED] - markPassed("PATCH password update successful"): PATCH password update successful
+
+18-09-2025T09:55:14 - [MESSAGE][PASSED] - PATCH password update successful
+
+18-09-2025T09:55:14 - [TEST_STEP][PASSED] - Start listener action : closeTheBrowser: null
+
+18-09-2025T09:55:14 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+18-09-2025T09:55:14 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+18-09-2025T09:55:14 - [TEST_STEP][PASSED] - testCaseStatus = testCaseContext.getTestCaseStatus(): null
+
+18-09-2025T09:55:14 - [TEST_STEP][PASSED] - println(testCaseStatus): null
+
+18-09-2025T09:55:14 - [TEST_STEP][PASSED] - StatusMap = DependencyHandler.getStatusMap(): null
+
+18-09-2025T09:55:14 - [TEST_STEP][PASSED] - if (StatusMap.containsKey(testCaseName)): null
+
+18-09-2025T09:55:14 - [TEST_STEP][PASSED] - try: null
+
+18-09-2025T09:55:14 - [TEST_STEP][PASSED] - driver = getWebDriver(): null
+
+18-09-2025T09:55:14 - [TEST_STEP][PASSED] - catch (Exception e): null
+
+18-09-2025T09:55:14 - [TEST_STEP][PASSED] - println(⚠️ Error while closing browser: $e.message): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/JsonPlaceHolder/api_gettingCredFromServer" time="0.641" classname="Test Cases/JsonPlaceHolder/api_gettingCredFromServer" status="ERROR">
+         <properties>
+            <property name="data_binding"><![CDATA[{"(Default) maste...":"Include/Data Files/MasterSchema.json","(Default) jsonF...":"Include/Data Files/login_data.json"}]]></property>
+         </properties>
+         <error type="ERROR" message="Test Cases/JsonPlaceHolder/api_gettingCredFromServer FAILED.&#xa;Reason:&#xa;groovy.lang.MissingPropertyException: No such property: postSchemaFilePath for class: Script1758103813687&#xa;	at api_gettingCredFromServer.run(api_gettingCredFromServer:39)&#xa;	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)&#xa;	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)&#xa;	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)&#xa;	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)&#xa;	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)&#xa;	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)&#xa;	at TempTestSuite1758169483240.run(TempTestSuite1758169483240.groovy:35)&#xa;	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#xa;	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#xa;	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#xa;"/>
+         <system-out><![CDATA[18-09-2025T09:55:16 - [TEST_CASE][ERROR] - Test Cases/JsonPlaceHolder/api_gettingCredFromServer: Test Cases/JsonPlaceHolder/api_gettingCredFromServer FAILED.
+Reason:
+groovy.lang.MissingPropertyException: No such property: postSchemaFilePath for class: Script1758103813687
+	at api_gettingCredFromServer.run(api_gettingCredFromServer:39)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1758169483240.run(TempTestSuite1758169483240.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+
+18-09-2025T09:55:16 - [TEST_STEP][PASSED] - Start listener action : beforeTestCase: null
+
+18-09-2025T09:55:16 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+18-09-2025T09:55:16 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+18-09-2025T09:55:16 - [TEST_STEP][PASSED] - if (toLowerCase().startsWith("api_")): null
+
+18-09-2025T09:55:16 - [TEST_STEP][PASSED] - println(ℹ️ Skipping browser launch for API test case: $testCaseName): null
+
+18-09-2025T09:55:16 - [TEST_STEP][PASSED] - return null: null
+
+18-09-2025T09:55:16 - [TEST_STEP][PASSED] - credentialId = JsonFileReader.getJsonData("postData", "CredentialId", jsonFilePath): null
+
+18-09-2025T09:55:16 - [TEST_STEP][PASSED] - logInfo("Sending GET request to /credentials/" + credentialId): Sending GET request to /credentials/1
+
+18-09-2025T09:55:16 - [MESSAGE][INFO] - Sending GET request to /credentials/1
+
+18-09-2025T09:55:16 - [TEST_STEP][PASSED] - getResponse = ApiKeywords.sendGet("/credentials/" + credentialId): Send request successfully
+
+18-09-2025T09:55:16 - [MESSAGE][INFO] - HAR: C:\Users\10835442\Katalon Studio\Luma\Reports\20250918_095443\API_Testcases\20250918_095443\requests\main\GET_Generic_8.har
+
+18-09-2025T09:55:16 - [MESSAGE][PASSED] - Send request successfully
+
+18-09-2025T09:55:16 - [TEST_STEP][PASSED] - verifyResponseStatusCode(getResponse, 200): Verify response status code successfully
+
+18-09-2025T09:55:16 - [MESSAGE][PASSED] - Verify response status code successfully
+
+18-09-2025T09:55:16 - [TEST_STEP][PASSED] - logInfo("GET response status code verified as 200"): GET response status code verified as 200
+
+18-09-2025T09:55:16 - [MESSAGE][INFO] - GET response status code verified as 200
+
+18-09-2025T09:55:16 - [TEST_STEP][PASSED] - getResponseBody = getResponse.getResponseBodyContent(): null
+
+18-09-2025T09:55:16 - [TEST_STEP][PASSED] - validateJsonAgainstSchema(getResponseBody, JsonOutput.toJson(JsonFileReader.getSectionData("postResponse", masterSchemaFilePath))): Validate with JSON Schema successfully
+
+18-09-2025T09:55:16 - [MESSAGE][PASSED] - Validate with JSON Schema successfully
+
+18-09-2025T09:55:16 - [TEST_STEP][PASSED] - markPassed("GET response schema validation passed"): GET response schema validation passed
+
+18-09-2025T09:55:16 - [MESSAGE][PASSED] - GET response schema validation passed
+
+18-09-2025T09:55:16 - [TEST_STEP][PASSED] - logInfo("Sending PUT request to /credentials/" + JsonFileReader.getJsonData("postData", "CredentialId", jsonFilePath) + " to replace full credential"): Sending PUT request to /credentials/1 to replace full credential
+
+18-09-2025T09:55:16 - [MESSAGE][INFO] - Sending PUT request to /credentials/1 to replace full credential
+
+18-09-2025T09:55:16 - [TEST_STEP][PASSED] - putResponse = ApiKeywords.sendPost("/credentials", getResponseBody): Send request successfully
+
+18-09-2025T09:55:17 - [MESSAGE][INFO] - HAR: C:\Users\10835442\Katalon Studio\Luma\Reports\20250918_095443\API_Testcases\20250918_095443\requests\main\POST_Generic_9.har
+
+18-09-2025T09:55:17 - [MESSAGE][PASSED] - Send request successfully
+
+18-09-2025T09:55:17 - [TEST_STEP][PASSED] - verifyResponseStatusCode(putResponse, 201): Verify response status code successfully
+
+18-09-2025T09:55:17 - [MESSAGE][PASSED] - Verify response status code successfully
+
+18-09-2025T09:55:17 - [TEST_STEP][ERROR] - validateJsonAgainstSchema(putResponse.getResponseBodyContent(), postSchemaFilePath): Test Cases/JsonPlaceHolder/api_gettingCredFromServer FAILED.
+Reason:
+groovy.lang.MissingPropertyException: No such property: postSchemaFilePath for class: Script1758103813687
+	at api_gettingCredFromServer.run(api_gettingCredFromServer:39)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1758169483240.run(TempTestSuite1758169483240.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+
+18-09-2025T09:55:17 - [MESSAGE][ERROR] - Test Cases/JsonPlaceHolder/api_gettingCredFromServer FAILED.
+Reason:
+groovy.lang.MissingPropertyException: No such property: postSchemaFilePath for class: Script1758103813687
+	at api_gettingCredFromServer.run(api_gettingCredFromServer:39)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1758169483240.run(TempTestSuite1758169483240.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+
+18-09-2025T09:55:17 - [TEST_STEP][PASSED] - Start listener action : closeTheBrowser: null
+
+18-09-2025T09:55:17 - [TEST_STEP][PASSED] - testCaseId = testCaseContext.getTestCaseId(): null
+
+18-09-2025T09:55:17 - [TEST_STEP][PASSED] - testCaseName = split("/").last(): null
+
+18-09-2025T09:55:17 - [TEST_STEP][PASSED] - testCaseStatus = testCaseContext.getTestCaseStatus(): null
+
+18-09-2025T09:55:17 - [TEST_STEP][PASSED] - println(testCaseStatus): null
+
+18-09-2025T09:55:17 - [TEST_STEP][PASSED] - StatusMap = DependencyHandler.getStatusMap(): null
+
+18-09-2025T09:55:17 - [TEST_STEP][PASSED] - if (StatusMap.containsKey(testCaseName)): null
+
+18-09-2025T09:55:17 - [TEST_STEP][PASSED] - try: null
+
+18-09-2025T09:55:17 - [TEST_STEP][PASSED] - driver = getWebDriver(): null
+
+18-09-2025T09:55:17 - [TEST_STEP][PASSED] - catch (Exception e): null
+
+18-09-2025T09:55:17 - [TEST_STEP][PASSED] - println(⚠️ Error while closing browser: $e.message): null]]></system-out>
+         <system-err><![CDATA[18-09-2025T09:55:16 - [TEST_CASE][ERROR] - Test Cases/JsonPlaceHolder/api_gettingCredFromServer: Test Cases/JsonPlaceHolder/api_gettingCredFromServer FAILED.
+Reason:
+groovy.lang.MissingPropertyException: No such property: postSchemaFilePath for class: Script1758103813687
+	at api_gettingCredFromServer.run(api_gettingCredFromServer:39)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1758169483240.run(TempTestSuite1758169483240.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)]]></system-err>
+      </testcase>
+      <system-out><![CDATA[18-09-2025T09:54:48 - [TEST_SUITE][ERROR] - API_Testcases: null]]></system-out>
+      <system-err><![CDATA[18-09-2025T09:54:48 - [TEST_SUITE][ERROR] - API_Testcases: null]]></system-err>
+   </testsuite>
+</testsuites>

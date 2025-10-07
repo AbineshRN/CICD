@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="TestSuite" time="52.876" tests="2" failures="0" errors="0">
+   <testsuite name="TestSuite" tests="2" failures="0" errors="0" time="52.876" skipped="0" timestamp="2025-09-05T09:42:33.437Z" hostname="10835442 - 10.235.152.34" id="Test Suites/TestSuite">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform"/>
+         <property name="logFolder" value="C:\\Users\\10835442\\Katalon Studio\\Luma\\Reports\\20250905_151221\\TestSuite\\20250905_151224"/>
+         <property name="logFiles" value="C:\\Users\\10835442\\Katalon Studio\\Luma\\Reports\\20250905_151221\\TestSuite\\20250905_151224\\console0.log, C:\\Users\\10835442\\Katalon Studio\\Luma\\Reports\\20250905_151221\\TestSuite\\20250905_151224\\execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="10835442 - 10.235.152.34"/>
+         <property name="os" value="Windows 11 64bit"/>
+         <property name="katalonVersion" value="10.3.1.0"/>
+         <property name="browser" value="Chrome 140.0.7339.81"/>
+         <property name="userFullName" value="Abinesh R"/>
+         <property name="hostAddress" value="10.235.152.34"/>
+         <property name="sessionId" value="9eb94f7efb126d28d3a760e8f324e82f"/>
+         <property name="projectName" value="Luma"/>
+         <property name="seleniumVersion" value="4.28.1"/>
+         <property name="proxyInformation" value="ProxyInformation { proxyOption=NO_PROXY, proxyServerType=HTTP, username=, password=********, proxyServerAddress=, proxyServerPort=0, executionList=&quot;&quot;, isApplyToDesiredCapabilities=true }"/>
+         <property name="platform" value="Windows 11"/>
+      </properties>
+      <testcase name="Test Cases/RegisterUser" time="32.985" classname="Test Cases/RegisterUser" status="PASSED">
+         <properties>
+            <property name="data_binding"><![CDATA[{"(Default) filep...":"Include/Data Files/login_data.json","(Default) regis...":"registrarionSucccessPage"}]]></property>
+         </properties>
+         <system-out><![CDATA[05-09-2025T15:12:34 - [TEST_CASE][PASSED] - Test Cases/RegisterUser: Test Cases/RegisterUser
+
+05-09-2025T15:12:35 - [TEST_STEP][PASSED] - Start listener action : openTheBrowser: Current window maximized
+
+05-09-2025T15:12:35 - [TEST_STEP][PASSED] - openBrowser(baseUrl): Browser is opened with url: 'https://ecommerce-playground.lambdatest.io/'
+
+05-09-2025T15:12:35 - [MESSAGE][INFO] - Starting 'Chrome' driver
+
+05-09-2025T15:12:35 - [MESSAGE][INFO] - Action delay is set to 0 milliseconds
+
+05-09-2025T15:12:43 - [MESSAGE][PASSED] - Browser is opened with url: 'https://ecommerce-playground.lambdatest.io/'
+
+05-09-2025T15:12:43 - [TEST_STEP][PASSED] - maximizeWindow(): Current window maximized
+
+05-09-2025T15:12:47 - [MESSAGE][PASSED] - Current window maximized
+
+05-09-2025T15:12:47 - [TEST_STEP][PASSED] - ExtentManager.initReport("UserRegistrationReport"): null
+
+05-09-2025T15:12:50 - [TEST_STEP][PASSED] - ExtentManager.createTest("User Registration Test"): null
+
+05-09-2025T15:12:50 - [TEST_STEP][PASSED] - try: null
+
+05-09-2025T15:12:50 - [TEST_STEP][PASSED] - ExtentManager.logInfo("Navigating to the registration page"): null
+
+05-09-2025T15:12:50 - [TEST_STEP][PASSED] - pages.HomePage.navigateToRegisterPage(): login button has been clicked
+
+05-09-2025T15:12:51 - [MESSAGE][PASSED] - Object 'Object Repository/Home_Page/my_Account_Button' is visible
+
+05-09-2025T15:12:51 - [MESSAGE][INFO] - Hovering over: my account
+
+05-09-2025T15:12:51 - [MESSAGE][PASSED] - Object: 'Object Repository/Home_Page/my_Account_Button' is hovered
+
+05-09-2025T15:12:51 - [MESSAGE][PASSED] - my account has been hovered
+
+05-09-2025T15:12:52 - [MESSAGE][PASSED] - Object 'Object Repository/Home_Page/register_Button' is visible
+
+05-09-2025T15:12:52 - [MESSAGE][INFO] - Clicking on: login button
+
+05-09-2025T15:12:54 - [MESSAGE][PASSED] - Object: 'Object Repository/Home_Page/register_Button' is clicked on
+
+05-09-2025T15:12:54 - [MESSAGE][PASSED] - login button has been clicked
+
+05-09-2025T15:12:54 - [TEST_STEP][PASSED] - ExtentManager.logPass("Navigated to the register page"): null
+
+05-09-2025T15:12:54 - [TEST_STEP][PASSED] - try: null
+
+05-09-2025T15:12:54 - [TEST_STEP][PASSED] - ExtentManager.logInfo("Entering the details to register an account"): null
+
+05-09-2025T15:12:54 - [TEST_STEP][PASSED] - fieldMappings = [["id":"input-firstname", "jsonKey":"firstName"], ["id":"input-lastname", "jsonKey":"lastName"], ["id":"input-email", "jsonKey":"email"], ["id":"input-telephone", "jsonKey":"telephone"], ["id":"input-password", "jsonKey":"password"], ["id":"input-confirm", "jsonKey":"password"]]: null
+
+05-09-2025T15:12:54 - [TEST_STEP][PASSED] - fieldMappings.each({ -> ... }): password has been entered
+
+05-09-2025T15:12:55 - [MESSAGE][PASSED] - Object 'Object Repository/Registration_Page/generic_Input' is visible
+
+05-09-2025T15:12:55 - [MESSAGE][INFO] - Entering data into: firstName
+
+05-09-2025T15:12:56 - [MESSAGE][PASSED] - Text 'Alice' is set on object 'Object Repository/Registration_Page/generic_Input'
+
+05-09-2025T15:12:56 - [MESSAGE][PASSED] - firstName has been entered
+
+05-09-2025T15:12:56 - [MESSAGE][PASSED] - Object 'Object Repository/Registration_Page/generic_Input' is visible
+
+05-09-2025T15:12:56 - [MESSAGE][INFO] - Entering data into: lastName
+
+05-09-2025T15:12:57 - [MESSAGE][PASSED] - Text 'Smithh' is set on object 'Object Repository/Registration_Page/generic_Input'
+
+05-09-2025T15:12:57 - [MESSAGE][PASSED] - lastName has been entered
+
+05-09-2025T15:12:57 - [MESSAGE][PASSED] - Object 'Object Repository/Registration_Page/generic_Input' is visible
+
+05-09-2025T15:12:57 - [MESSAGE][INFO] - Entering data into: email
+
+05-09-2025T15:12:58 - [MESSAGE][PASSED] - Text 'alicesmith.37@gmail.com' is set on object 'Object Repository/Registration_Page/generic_Input'
+
+05-09-2025T15:12:58 - [MESSAGE][PASSED] - email has been entered
+
+05-09-2025T15:12:58 - [MESSAGE][PASSED] - Object 'Object Repository/Registration_Page/generic_Input' is visible
+
+05-09-2025T15:12:58 - [MESSAGE][INFO] - Entering data into: telephone
+
+05-09-2025T15:12:59 - [MESSAGE][PASSED] - Text '1234567890' is set on object 'Object Repository/Registration_Page/generic_Input'
+
+05-09-2025T15:12:59 - [MESSAGE][PASSED] - telephone has been entered
+
+05-09-2025T15:12:59 - [MESSAGE][PASSED] - Object 'Object Repository/Registration_Page/generic_Input' is visible
+
+05-09-2025T15:12:59 - [MESSAGE][INFO] - Entering data into: password
+
+05-09-2025T15:13:00 - [MESSAGE][PASSED] - Text 'Password123' is set on object 'Object Repository/Registration_Page/generic_Input'
+
+05-09-2025T15:13:00 - [MESSAGE][PASSED] - password has been entered
+
+05-09-2025T15:13:00 - [MESSAGE][PASSED] - Object 'Object Repository/Registration_Page/generic_Input' is visible
+
+05-09-2025T15:13:00 - [MESSAGE][INFO] - Entering data into: password
+
+05-09-2025T15:13:01 - [MESSAGE][PASSED] - Text 'Password123' is set on object 'Object Repository/Registration_Page/generic_Input'
+
+05-09-2025T15:13:01 - [MESSAGE][PASSED] - password has been entered
+
+05-09-2025T15:13:01 - [TEST_STEP][PASSED] - ExtentManager.logPass("Details for registering an account have been set successfully"): null
+
+05-09-2025T15:13:01 - [TEST_STEP][PASSED] - try: null
+
+05-09-2025T15:13:01 - [TEST_STEP][PASSED] - ExtentManager.logInfo("Navigating to the confirmation page"): null
+
+05-09-2025T15:13:01 - [TEST_STEP][PASSED] - pages.UserRegistrationPage.clickOnPolicyCheckBox(findTestObject("Object Repository/Registration_Page/policy_CheckBox")): Policy Checkbox has been clicked
+
+05-09-2025T15:13:01 - [MESSAGE][PASSED] - Object 'Object Repository/Registration_Page/policy_CheckBox' is visible
+
+05-09-2025T15:13:01 - [MESSAGE][INFO] - Clicking on: Policy Checkbox
+
+05-09-2025T15:13:02 - [MESSAGE][PASSED] - Object: 'Object Repository/Registration_Page/policy_CheckBox' is clicked on
+
+05-09-2025T15:13:02 - [MESSAGE][PASSED] - Policy Checkbox has been clicked
+
+05-09-2025T15:13:02 - [TEST_STEP][PASSED] - pages.UserRegistrationPage.clickOnContinue(findTestObject("Object Repository/Registration_Page/continue_Button")): Continue Button has been clicked
+
+05-09-2025T15:13:02 - [MESSAGE][PASSED] - Object 'Object Repository/Registration_Page/continue_Button' is visible
+
+05-09-2025T15:13:02 - [MESSAGE][INFO] - Clicking on: Continue Button
+
+05-09-2025T15:13:05 - [MESSAGE][PASSED] - Object: 'Object Repository/Registration_Page/continue_Button' is clicked on
+
+05-09-2025T15:13:05 - [MESSAGE][PASSED] - Continue Button has been clicked
+
+05-09-2025T15:13:05 - [TEST_STEP][PASSED] - ExtentManager.logPass("Navigated to the confirmation page"): null
+
+05-09-2025T15:13:05 - [TEST_STEP][PASSED] - try: null
+
+05-09-2025T15:13:05 - [TEST_STEP][PASSED] - ExtentManager.logInfo("Verifying Account Creation Text"): null
+
+05-09-2025T15:13:05 - [TEST_STEP][PASSED] - pages.AccountCreationPage.verifyText(findTestObject("Object Repository/Account_Created_Page/account_Creation_Verification"), JsonFileReader.getJsonData(registrationSuccessPage, "verify_Text", filepath), "Account Creation"): Account Creation has been verified
+
+05-09-2025T15:13:06 - [MESSAGE][PASSED] - Object 'Object Repository/Account_Created_Page/account_Creation_Verification' is visible
+
+05-09-2025T15:13:06 - [MESSAGE][INFO] - Verifying text for: Account Creation
+
+05-09-2025T15:13:06 - [MESSAGE][PASSED] - Actual text and expected text of test object 'Object Repository/Account_Created_Page/account_Creation_Verification' are matched.
+
+05-09-2025T15:13:06 - [MESSAGE][PASSED] - Account Creation has been verified
+
+05-09-2025T15:13:06 - [TEST_STEP][PASSED] - ExtentManager.logPass("Verified Account Creation Text"): null
+
+05-09-2025T15:13:06 - [TEST_STEP][PASSED] - try: null
+
+05-09-2025T15:13:06 - [TEST_STEP][PASSED] - ExtentManager.logInfo("Updating login details in JSON file"): null
+
+05-09-2025T15:13:06 - [TEST_STEP][PASSED] - JsonFileReader.updateJsonValue("loginPage", "email", JsonFileReader.getJsonData(registerPage, "email", filepath), filepath): null
+
+05-09-2025T15:13:06 - [TEST_STEP][PASSED] - JsonFileReader.updateJsonValue("loginPage", "password", JsonFileReader.getJsonData(registerPage, "password", filepath), filepath): null
+
+05-09-2025T15:13:06 - [TEST_STEP][PASSED] - ExtentManager.logPass("Updated login details in JSON file"): null
+
+05-09-2025T15:13:06 - [TEST_STEP][PASSED] - ExtentManager.flushReport(): null
+
+05-09-2025T15:13:07 - [TEST_STEP][PASSED] - Start listener action : closeTheBrowser: Browser is closed
+
+05-09-2025T15:13:07 - [TEST_STEP][PASSED] - closeBrowser(): Browser is closed
+
+05-09-2025T15:13:07 - [MESSAGE][PASSED] - Browser is closed]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/SignIn" time="18.493" classname="Test Cases/SignIn" status="PASSED">
+         <properties>
+            <property name="data_binding"><![CDATA[{"(Default) secti...":"loginPage","(Default) filep...":"Include/Data Files/login_data.json"}]]></property>
+         </properties>
+         <system-out><![CDATA[05-09-2025T15:13:07 - [TEST_CASE][PASSED] - Test Cases/SignIn: Test Cases/SignIn
+
+05-09-2025T15:13:07 - [TEST_STEP][PASSED] - Start listener action : openTheBrowser: Current window maximized
+
+05-09-2025T15:13:07 - [TEST_STEP][PASSED] - openBrowser(baseUrl): Browser is opened with url: 'https://ecommerce-playground.lambdatest.io/'
+
+05-09-2025T15:13:07 - [MESSAGE][INFO] - Starting 'Chrome' driver
+
+05-09-2025T15:13:07 - [MESSAGE][INFO] - Action delay is set to 0 milliseconds
+
+05-09-2025T15:13:14 - [MESSAGE][PASSED] - Browser is opened with url: 'https://ecommerce-playground.lambdatest.io/'
+
+05-09-2025T15:13:14 - [TEST_STEP][PASSED] - maximizeWindow(): Current window maximized
+
+05-09-2025T15:13:14 - [MESSAGE][PASSED] - Current window maximized
+
+05-09-2025T15:13:15 - [TEST_STEP][PASSED] - ExtentManager.initReport("LoginTestReport"): null
+
+05-09-2025T15:13:15 - [TEST_STEP][PASSED] - ExtentManager.createTest("Login Test"): null
+
+05-09-2025T15:13:15 - [TEST_STEP][PASSED] - try: null
+
+05-09-2025T15:13:15 - [TEST_STEP][PASSED] - ExtentManager.logInfo("Navigating to the sign in page"): null
+
+05-09-2025T15:13:15 - [TEST_STEP][PASSED] - pages.HomePage.navigateToAccountPage(): login button has been clicked
+
+05-09-2025T15:13:15 - [MESSAGE][PASSED] - Object 'Object Repository/Home_Page/my_Account_Button' is visible
+
+05-09-2025T15:13:15 - [MESSAGE][INFO] - Hovering over: my account
+
+05-09-2025T15:13:15 - [MESSAGE][PASSED] - Object: 'Object Repository/Home_Page/my_Account_Button' is hovered
+
+05-09-2025T15:13:15 - [MESSAGE][PASSED] - my account has been hovered
+
+05-09-2025T15:13:16 - [MESSAGE][PASSED] - Object 'Object Repository/Home_Page/login_Button' is visible
+
+05-09-2025T15:13:16 - [MESSAGE][INFO] - Clicking on: login button
+
+05-09-2025T15:13:18 - [MESSAGE][PASSED] - Object: 'Object Repository/Home_Page/login_Button' is clicked on
+
+05-09-2025T15:13:18 - [MESSAGE][PASSED] - login button has been clicked
+
+05-09-2025T15:13:18 - [TEST_STEP][PASSED] - ExtentManager.logPass("Navigated to the sign in page"): null
+
+05-09-2025T15:13:18 - [TEST_STEP][PASSED] - try: null
+
+05-09-2025T15:13:18 - [TEST_STEP][PASSED] - ExtentManager.logInfo("Signing into the account"): null
+
+05-09-2025T15:13:18 - [TEST_STEP][PASSED] - loginFields = [["id":"input-email", "jsonKey":"email"], ["id":"input-password", "jsonKey":"password"]]: null
+
+05-09-2025T15:13:18 - [TEST_STEP][PASSED] - loginFields.each({ -> ... }): password has been entered
+
+05-09-2025T15:13:19 - [MESSAGE][PASSED] - Object 'Object Repository/LoginPage/generic_Input' is visible
+
+05-09-2025T15:13:19 - [MESSAGE][INFO] - Entering data into: email
+
+05-09-2025T15:13:19 - [MESSAGE][PASSED] - Text 'alicesmith.37@gmail.com' is set on object 'Object Repository/LoginPage/generic_Input'
+
+05-09-2025T15:13:19 - [MESSAGE][PASSED] - email has been entered
+
+05-09-2025T15:13:20 - [MESSAGE][PASSED] - Object 'Object Repository/LoginPage/generic_Input' is visible
+
+05-09-2025T15:13:20 - [MESSAGE][INFO] - Entering data into: password
+
+05-09-2025T15:13:20 - [MESSAGE][PASSED] - Text 'Password123' is set on object 'Object Repository/LoginPage/generic_Input'
+
+05-09-2025T15:13:20 - [MESSAGE][PASSED] - password has been entered
+
+05-09-2025T15:13:20 - [TEST_STEP][PASSED] - pages.LoginPage.clickOnLoginButton(findTestObject("Object Repository/LoginPage/Login_button")): Login button has been clicked
+
+05-09-2025T15:13:21 - [MESSAGE][PASSED] - Object 'Object Repository/LoginPage/Login_button' is visible
+
+05-09-2025T15:13:21 - [MESSAGE][INFO] - Clicking on: Login button
+
+05-09-2025T15:13:24 - [MESSAGE][PASSED] - Object: 'Object Repository/LoginPage/Login_button' is clicked on
+
+05-09-2025T15:13:24 - [MESSAGE][PASSED] - Login button has been clicked
+
+05-09-2025T15:13:24 - [TEST_STEP][PASSED] - ExtentManager.logPass("Signed into the account"): null
+
+05-09-2025T15:13:24 - [TEST_STEP][PASSED] - try: null
+
+05-09-2025T15:13:24 - [TEST_STEP][PASSED] - ExtentManager.logInfo("Verifying My Account"): null
+
+05-09-2025T15:13:24 - [TEST_STEP][PASSED] - pages.AccountPage.verifyMyAccount(findTestObject("Object Repository/AccountPage/my_Account_verification"), JsonFileReader.getJsonData(section, "verification_text", filepath)): Verify My account has been verified
+
+05-09-2025T15:13:25 - [MESSAGE][PASSED] - Object 'Object Repository/AccountPage/my_Account_verification' is visible
+
+05-09-2025T15:13:25 - [MESSAGE][INFO] - Verifying text for: Verify My account
+
+05-09-2025T15:13:25 - [MESSAGE][PASSED] - Actual text and expected text of test object 'Object Repository/AccountPage/my_Account_verification' are matched.
+
+05-09-2025T15:13:25 - [MESSAGE][PASSED] - Verify My account has been verified
+
+05-09-2025T15:13:25 - [TEST_STEP][PASSED] - ExtentManager.logPass("Verified My Account"): null
+
+05-09-2025T15:13:25 - [TEST_STEP][PASSED] - ExtentManager.flushReport(): null
+
+05-09-2025T15:13:25 - [TEST_STEP][PASSED] - Start listener action : closeTheBrowser: Browser is closed
+
+05-09-2025T15:13:25 - [TEST_STEP][PASSED] - closeBrowser(): Browser is closed
+
+05-09-2025T15:13:26 - [MESSAGE][PASSED] - Browser is closed]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[05-09-2025T15:12:33 - [TEST_SUITE][PASSED] - TestSuite: null]]></system-out>
+      <system-err><![CDATA[]]></system-err>
+   </testsuite>
+</testsuites>

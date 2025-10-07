@@ -1,0 +1,28 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+TestSuite,,Contains the test cases of luma,,29-09-2025 14:46:17,29-09-2025 14:46:27,10.271s,PASSED
+,,,,,,,
+Test Cases/API_Testing/REST_API_Testing/TC04_getAccessToken_Api,,,,29-09-2025 14:46:18,29-09-2025 14:46:27,9.573s,PASSED
+"DATA BINDING - {""(Default) maste..."":""Include/Data Files/MasterSchema.json"",""(Default) jsonF..."":""Include/Data Files/login_data.json"",""(Default) apiBa..."":""apiBaseUrl"",""(Default) acces..."":""accessTokenUrl""}",,,,,,,
+Start listener action : beforeTestCase,,,,29-09-2025 14:46:18,29-09-2025 14:46:18,0.166s,PASSED
+"logInfo(""Reading payload from JSON file..."")",,,,29-09-2025 14:46:18,29-09-2025 14:46:18,0.015s,PASSED
+"payLoad = JsonOutput.toJson(JsonFileReader.getSectionData(""postPayload"", jsonFilePath))",,,,29-09-2025 14:46:18,29-09-2025 14:46:18,0.077s,PASSED
+"logInfo(""Payload prepared: "" + payLoad)",,,,29-09-2025 14:46:18,29-09-2025 14:46:18,0.012s,PASSED
+"logInfo(""Sending POST request to /login endpoint..."")",,,,29-09-2025 14:46:18,29-09-2025 14:46:18,0.007s,PASSED
+"baseUrl = GlobalAccessor.getProfileVariable(accessToken, apiBaseUrl)",,,,29-09-2025 14:46:18,29-09-2025 14:46:19,0.126s,PASSED
+"response = ApiKeywords.sendPost(baseUrl, ""login"", payLoad)",,,,29-09-2025 14:46:19,29-09-2025 14:46:27,8.310s,PASSED
+"logInfo(""Response received with status: "" + response.getStatusCode())",,,,29-09-2025 14:46:27,29-09-2025 14:46:27,0.011s,PASSED
+responseBodyContent = response.getResponseBodyContent(),,,,29-09-2025 14:46:27,29-09-2025 14:46:27,0.002s,PASSED
+"logInfo(""Response body content:
+"" + responseBodyContent)",,,,29-09-2025 14:46:27,29-09-2025 14:46:27,0.004s,PASSED
+"logInfo(""Validating response against accessTokenSchema..."")",,,,29-09-2025 14:46:27,29-09-2025 14:46:27,0.004s,PASSED
+"schemaMap = JsonFileReader.getSectionData(""accessTokenSchema"", masterSchemaFilePath)",,,,29-09-2025 14:46:27,29-09-2025 14:46:27,0.009s,PASSED
+schemaString = JsonOutput.toJson(schemaMap),,,,29-09-2025 14:46:27,29-09-2025 14:46:27,0.003s,PASSED
+"SchemaValidator.validateJsonWithSchema(responseBodyContent, schemaString)",,,,29-09-2025 14:46:27,29-09-2025 14:46:27,0.204s,PASSED
+"logInfo(""Schema validation passed."")",,,,29-09-2025 14:46:27,29-09-2025 14:46:27,0.005s,PASSED
+parsedResponse = JsonSlurper().parseText(responseBodyContent),,,,29-09-2025 14:46:27,29-09-2025 14:46:27,0.003s,PASSED
+jwtToken = accessToken,,,,29-09-2025 14:46:27,29-09-2025 14:46:27,0.003s,PASSED
+"logInfo(""Extracted JWT Token: "" + jwtToken)",,,,29-09-2025 14:46:27,29-09-2025 14:46:27,0.006s,PASSED
+"logInfo(""Storing JWT token in DummyJson section of JSON file..."")",,,,29-09-2025 14:46:27,29-09-2025 14:46:27,0.005s,PASSED
+"JsonFileReader.appendToJsonSection(jsonFilePath, ""DummyJson"", ""accessToken"", jwtToken)",,,,29-09-2025 14:46:27,29-09-2025 14:46:27,0.048s,PASSED
+"logInfo(""Token stored successfully."")",,,,29-09-2025 14:46:27,29-09-2025 14:46:27,0.002s,PASSED
+Start listener action : closeTheBrowser,,,,29-09-2025 14:46:27,29-09-2025 14:46:27,0.155s,PASSED
