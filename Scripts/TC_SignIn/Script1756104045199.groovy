@@ -47,7 +47,7 @@ try {
         JsonFileReader.getJsonData(section, 'verification_text', GlobalVariable.jsonDataFilePath),
         FailureHandling.STOP_ON_FAILURE
     )
-    KeywordUtil.markPassed("Verified My Account and pushed this code into git")
+    KeywordUtil.markPassed("Verified My Account")
 } catch (Exception e) {
     KeywordUtil.markFailed('Signin testcase failed: ' + e.message)
     WebUI.takeScreenshot()
