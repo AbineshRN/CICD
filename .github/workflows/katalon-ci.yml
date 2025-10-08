@@ -22,18 +22,33 @@ jobs:
       id: detect
       shell: pwsh
       run: |
-        git fetch origin master
-        $changedSuites = git diff --name-only origin/master HEAD | Select-String "^Test Suites/.*\.ts"
-        echo "Changed test suites:"
-        echo "$changedSuites"
-        echo "changed_suites=$changedSuites" >> $env:GITHUB_ENV
+        # Compare latest commit with previous commit
+        git fetch --unshallow
+        $changedSuites = git diff --name-only HEAD^ HEAD | Select-String "^Test Suites/.*\.ts"
+
+        if ($changedSuites) {
+          $suitesList = ($changedSuites | ForEach-Object { $_.Line }) -join "`n"
+          echo "Changed test suites:"
+          echo $suitesList
+          echo "changed_suites=$suitesList" >> $env:GITHUB_ENV
+        } else {
+          echo "No changed test suites found."
+          echo "changed_suites=" >> $env:GITHUB_ENV
+        }
 
     - name: Run Changed Test Suites
       if: env.changed_suites != ''
       shell: pwsh
       run: |
-        foreach ($suite in "${{ env.changed_suites }}".Split("`n")) {
-          Write-Host "Running test suite: $suite"
-          & "C:\Users\10835442\Katalon Run Time Engine\Katalon_Studio_Engine_Windows_64-10.3.2\katalon.exe" -noSplash -runMode=console -projectPath="${{ github.workspace }}" `
-          -retry=0 -testSuitePath="$suite" -executionProfile="default" -browserType="Chrome"
+        foreach ($suite in ($env:changed_suites -split "`n")) {
+          if ($suite.Trim()) {
+            Write-Host "Running test suite: $suite"
+            & "C:\Users\10835442\Katalon Run Time Engine\Katalon_Studio_Engine_Windows_64-10.3.2\katalon.exe" `
+              -noSplash -runMode=console -projectPath="${{ github.workspace }}" `
+              -retry=0 -testSuitePath="$suite" -executionProfile="default" -browserType="Chrome"
+          }
         }
+
+    - name: No test suites changed
+      if: env.changed_suites == ''
+      run: echo "No test suites changed. Skipping Katalon execution."
