@@ -12,7 +12,7 @@
    <rerunImmediately>true</rerunImmediately>
    <testSuiteGuid>3486e1fd-9537-4f40-91c6-ce8a5497c2d6</testSuiteGuid>
    <testCaseLink>
-      <guid>435e16dc-31d4-4ce3-b6e4-eeff2da771b0</guid>
+      <guid>4b630c0a-5dd0-47a5-8cce-cb373cf91cf5</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/TC_SignIn</testCaseId>
