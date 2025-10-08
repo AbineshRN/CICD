@@ -49,7 +49,7 @@ try {
     }
     CustomKeywords.'pages.ArticlePage.inputCommentOnArticle'(
         findTestObject('Object Repository/ArticlePage/inputComment'),
-        JsonFileReader.getJsonData(section, 'comment', filepath),
+        JsonFileReader.getJsonData(section, 'comment', GlobalVariable.jsonDataFilePath),
         FailureHandling.STOP_ON_FAILURE
     )
     CustomKeywords.'pages.ArticlePage.clickOnPostCommentButton'(
