@@ -1,69 +1,56 @@
-name: Run Katalon Test Suites on Changes
+name: Katalon CI/CD
  
 on:
   push:
-    branches: [ master ]
-  workflow_dispatch:
+    paths:
+      - 'Test Suites/**'
+      - 'Scripts/**'
+      - 'Object Repository/**'
+  pull_request:
+    paths:
+      - 'Test Suites/**'
+      - 'Scripts/**'
+      - 'Object Repository/**'
  
 jobs:
-  katalon-test:
+  run-katalon-tests:
     runs-on: windows-latest
  
     steps:
-      # 1️⃣ Checkout code
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v3
- 
-      # 2️⃣ Setup Java
-      - name: Set up Java
-        uses: actions/setup-java@v3
         with:
-          java-version: '17'
-          distribution: 'temurin'
+          fetch-depth: 0  # Needed to get all history for detecting changed files
  
-      # 3️⃣ Detect changed test cases/suites
-      - name: Detect Changed Files
-        id: detect
-        shell: pwsh
-        run: |
-          git fetch --unshallow
-          $changedFiles = git diff --name-only HEAD^ HEAD
- 
-          $testCaseChanged = $changedFiles | Select-String "^Test Cases/.*\.tc"
-          $testSuiteChanged = $changedFiles | Select-String "^Test Suites/.*\.ts"
- 
-          if ($testCaseChanged -or $testSuiteChanged) {
-            echo "Detected changes in test cases or test suites."
-            echo "run_all_suites=true" >> $env:GITHUB_ENV
-          } else {
-            echo "No relevant changes detected."
-            echo "run_all_suites=false" >> $env:GITHUB_ENV
-          }
- 
-      # 4️⃣ Run Katalon Studio tests using API key
-      - name: Run Changed Test Suites
-        if: env.run_all_suites == 'true'
+      - name: Set up Katalon version
         uses: katalon-studio/katalon-studio-github-action@v2.1
         with:
           version: '10.3.2'
-          projectPath: '${{ github.workspace }}'
-          args: >-
-            -apiKey=${{ secrets.KATALON_API_KEY }}
-            -testSuitePath="Test Suites"
-            -executionProfile="default"
-            -browserType="Chrome"
-            -retry=0
-            -noSplash
  
-      # 5️⃣ Upload HTML reports
-      - name: Upload Katalon Reports
-        if: env.run_all_suites == 'true'
-        uses: actions/upload-artifact@v4
+      - name: Detect changed test suites
+        id: changed-suites
+        run: |
+          echo "Detecting changed test suites..."
+          git fetch --unshallow || true
+          # List all changed files in Test Suites folder
+          CHANGED_TS=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep "Test Suites/" | grep "\.ts$")
+          if [ -z "$CHANGED_TS" ]; then
+            echo "No test suites changed."
+            echo "suites=" >> $GITHUB_OUTPUT
+          else
+            # Convert paths to comma-separated list
+            SUITES=$(echo $CHANGED_TS | tr ' ' ',')
+            echo "Changed test suites: $SUITES"
+            echo "suites=$SUITES" >> $GITHUB_OUTPUT
+          fi
+ 
+      - name: Run Katalon changed test suites
+        if: steps.changed-suites.outputs.suites != ''
+        uses: katalon-studio/katalon-studio-github-action@v2.1
         with:
-          name: katalon-report
-          path: Reports/
- 
-      # 6️⃣ No changes detected
-      - name: No changes detected
-        if: env.run_all_suites == 'false'
-        run: echo "No test case or test suite changes detected. Skipping run."
+          version: '10.3.2'
+          projectPath: 'D:\a\CICD\CICD\CICD.prj'
+          testSuitePath: ${{ steps.changed-suites.outputs.suites }}
+          executionProfile: 'default'
+          browserType: 'Chrome'
+          includeHtmlReport: true
