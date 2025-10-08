@@ -23,7 +23,7 @@ import utils.JsonFileReader as JsonFileReader
 import utils.Helper as helper
 import com.report.ExtentManager as ExtentManager
 try {
-    KeywordUtil.logInfo('Navigating to the sign in page')
+    KeywordUtil.logInfo('Navigating to the sign  in page')
     CustomKeywords.'pages.HomePage.navigateToAccountPage'(FailureHandling.STOP_ON_FAILURE)
     KeywordUtil.markPassed('Navigated to the sign in page')
     KeywordUtil.logInfo('Signing into the account')
