@@ -16,11 +16,9 @@ jobs:
       uses: actions/setup-java@v3
       with:
         java-version: '17'
-        distribution: 'temurin'  # ✅ Required field
 
     - name: Detect Changed Test Suites
       id: detect
-      shell: pwsh  # ✅ Use PowerShell for Windows
       run: |
         git fetch origin master
         $changedSuites = git diff --name-only origin/master HEAD | Select-String "^Test Suites/.*\.ts"
@@ -30,10 +28,9 @@ jobs:
 
     - name: Run Changed Test Suites
       if: env.changed_suites != ''
-      shell: pwsh  # ✅ Use PowerShell for Windows
       run: |
         foreach ($suite in "${{ env.changed_suites }}".Split("`n")) {
           Write-Host "Running test suite: $suite"
-          & "C:\Users\10835442\Katalon Run Time Engine\Katalon_Studio_Engine_Windows_64-10.3.2\katalon.exe" -noSplash -runMode=console -projectPath="${{ github.workspace }}" `
+          "C:\Users\10835442\Katalon Run Time Engine\Katalon_Studio_Engine_Windows_64-10.3.2\katalon.exe" -noSplash -runMode=console -projectPath="${{ github.workspace }}" `
           -retry=0 -testSuitePath="$suite" -executionProfile="default" -browserType="Chrome"
         }
