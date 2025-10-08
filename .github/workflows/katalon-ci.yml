@@ -21,35 +21,38 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
  
-      # 3️⃣ Detect changed test cases/suites
-      - name: Detect Changed Files
+      # 3️⃣ Detect changed test suites
+      - name: Detect Changed Test Suites
         id: detect
         shell: pwsh
         run: |
           git fetch --unshallow
+ 
           $changedFiles = git diff --name-only HEAD^ HEAD
  
-          $testCaseChanged = $changedFiles | Select-String "^Test Cases/.*\.tc"
-          $testSuiteChanged = $changedFiles | Select-String "^Test Suites/.*\.ts"
+          $testSuiteChanged = $changedFiles | Where-Object { $_ -like "Test Suites/*.ts" }
  
-          if ($testCaseChanged -or $testSuiteChanged) {
-            echo "Detected changes in test cases or test suites."
-            echo "run_all_suites=true" >> $env:GITHUB_ENV
+          if ($testSuiteChanged) {
+            echo "Detected changes in the following test suites:"
+            $testSuiteChanged | ForEach-Object { Write-Host $_ }
+            $suitePaths = ($testSuiteChanged -join ";")
+            echo "CHANGED_SUITES=$suitePaths" >> $env:GITHUB_ENV
+            echo "run_suites=true" >> $env:GITHUB_ENV
           } else {
-            echo "No relevant changes detected."
-            echo "run_all_suites=false" >> $env:GITHUB_ENV
+            echo "No test suite changes detected."
+            echo "run_suites=false" >> $env:GITHUB_ENV
           }
  
-      # 4️⃣ Run Katalon Studio tests using API key (specific test suite)
-      - name: Run Changed Test Suite
-        if: env.run_all_suites == 'true'
+      # 4️⃣ Run Changed Test Suites
+      - name: Run Changed Test Suites
+        if: env.run_suites == 'true'
         uses: katalon-studio/katalon-studio-github-action@v2.1
         with:
           version: '10.3.2'
           projectPath: '${{ github.workspace }}'
           args: >-
             -apiKey=${{ secrets.KATALON_API_KEY }}
-            -testSuitePath="Test Suites/RegisterSignIN"
+            -testSuitePath="${{ env.CHANGED_SUITES }}"
             -executionProfile="default"
             -browserType="Chrome"
             -retry=0
@@ -57,7 +60,7 @@ jobs:
  
       # 5️⃣ Upload HTML reports
       - name: Upload Katalon Reports
-        if: env.run_all_suites == 'true'
+        if: env.run_suites == 'true'
         uses: actions/upload-artifact@v4
         with:
           name: katalon-report
@@ -65,5 +68,5 @@ jobs:
  
       # 6️⃣ No changes detected
       - name: No changes detected
-        if: env.run_all_suites == 'false'
+        if: env.run_suites == 'false'
         run: echo "No test case or test suite changes detected. Skipping run."
