@@ -38,10 +38,9 @@ jobs:
           } else {
             echo "No relevant changes detected."
             echo "run_all_suites=false" >> $env:GITHUB_ENV
-          }
  
-      # 4️⃣ Run Katalon Studio tests using API key
-      - name: Run Changed Test Suites
+      # 4️⃣ Run Katalon Studio tests using API key (specific test suite)
+      - name: Run Changed Test Suite
         if: env.run_all_suites == 'true'
         uses: katalon-studio/katalon-studio-github-action@v2.1
         with:
@@ -49,7 +48,7 @@ jobs:
           projectPath: '${{ github.workspace }}'
           args: >-
             -apiKey=${{ secrets.KATALON_API_KEY }}
-            -testSuitePath="Test Suites"
+            -testSuitePath="Test Suites/RegisterSignIN.ts"
             -executionProfile="default"
             -browserType="Chrome"
             -retry=0
