@@ -26,8 +26,6 @@ try {
     KeywordUtil.logInfo('Navigating to the sign in page')
     CustomKeywords.'pages.HomePage.navigateToAccountPage'(FailureHandling.STOP_ON_FAILURE)
     KeywordUtil.markPassed('Navigated to the sign in page')
-
-	
     KeywordUtil.logInfo('Signing into the account')
     List<Map<String, String>> loginFields = [
         [id: 'input-email', jsonKey: 'email'],
