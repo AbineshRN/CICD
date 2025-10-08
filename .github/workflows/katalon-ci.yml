@@ -3,7 +3,7 @@ name: Katalon Test Execution
 on:
   push:
     branches:
-      - main
+      - master
   pull_request:
  
 jobs:
@@ -23,24 +23,23 @@ jobs:
       - name: Get changed test suites
         id: changes
         run: |
-          echo "CHANGED_SUITES="
-          CHANGED=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep "Test Suites/" | tr '\n' ',' | sed 's/,$//')
-          echo "Changed Test Suites: $CHANGED"
+          CHANGED=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep "Test Suites/" | tr '
+' ',' | sed 's/,$//')
           echo "CHANGED_SUITES=$CHANGED" >> $GITHUB_ENV
  
       - name: Run Katalon Studio for changed suites
         if: env.CHANGED_SUITES != ''
-        uses: katalon-studio/katalon-studio-github-action@v2.1
-        with:
-          version: '10.3.2'
-          projectPath: 'C:/Users/10835442/git/CICD/CICD.prj'
-          args: >
-            -noSplash
-            -runMode=console
-            -projectPath="C:/Users/10835442/git/CICD/CICD.prj"
-            -retry=0
-            -testSuitePath="${{ env.CHANGED_SUITES }}"
-            -executionProfile="default"
-            -browserType="Chrome"
-            -reportFolder="Reports"
-            -reportFileName="TestReport"
+        run: |
+          for suite in $(echo "${{ env.CHANGED_SUITES }}" | tr ',' '
+'); do
+            katalonc -noSplash -runMode=console \
+              -projectPath="${{ github.workspace }}/CICD.prj" \
+              -retry=0 \
+              -testSuitePath="$suite" \
+              -executionProfile="default" \
+              -browserType="Chrome" \
+              -reportFolder="Reports" \
+              -reportFileName="TestReport" \
+              -apiKey=${{ secrets.KATALON_API_KEY }}
+          done
+ 
