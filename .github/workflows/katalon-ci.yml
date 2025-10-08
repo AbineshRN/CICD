@@ -7,6 +7,9 @@ on:
 jobs:
   prepare:
     runs-on: windows-latest
+    outputs:
+      suites: ${{ steps.detect.outputs.suites }}
+      should_run: ${{ steps.detect.outputs.should_run }}
     steps:
       - name: Checkout code (fetch at least 2 commits)
         uses: actions/checkout@v3
@@ -31,12 +34,12 @@ jobs:
             }
             if (-not $suites) { $suites = @() }
             $json = $suites | ConvertTo-Json -Compress
-            echo "suites=$json" >> $GITHUB_OUTPUT
-            echo "should_run=true" >> $GITHUB_OUTPUT
+            echo "suites=$json" >> $env:GITHUB_OUTPUT
+            echo "should_run=true" >> $env:GITHUB_OUTPUT
             Write-Host "Suites JSON: $json"
           } else {
-            echo "suites=[]" >> $GITHUB_OUTPUT
-            echo "should_run=false" >> $GITHUB_OUTPUT
+            echo "suites=[]" >> $env:GITHUB_OUTPUT
+            echo "should_run=false" >> $env:GITHUB_OUTPUT
             Write-Host "No relevant changes detected"
           }
  
@@ -63,8 +66,8 @@ jobs:
       - name: Run Test Suite ${{ matrix.suite }}
         uses: katalon-studio/katalon-studio-github-action@v3
         with:
-          version: '10.3.2'                           # change if you use another KRE version
-          projectPath: '${{ github.workspace }}/CICD.prj'  # <-- update if your .prj path differs
+          version: '10.3.2'
+          projectPath: '${{ github.workspace }}/CICD.prj'
           testSuitePath: '${{ matrix.suite }}'
           executionProfile: 'default'
           browserType: 'Chrome'
@@ -77,3 +80,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "No test case or test suite changes detected. Skipping Katalon execution."
+ 
