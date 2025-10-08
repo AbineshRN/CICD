@@ -30,7 +30,7 @@ jobs:
  
           $changedFiles = git diff --name-only HEAD^ HEAD
  
-          $testSuiteChanged = $changedFiles | Where-Object { $_ -like "Test Suites/*.ts" }
+          $testSuiteChanged = $changedFiles | Where-Object { $_ -like "Test Suites/*" }
  
           if ($testSuiteChanged) {
             echo "Detected changes in the following test suites:"
