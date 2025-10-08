@@ -12,22 +12,22 @@
    <rerunImmediately>true</rerunImmediately>
    <testSuiteGuid>3486e1fd-9537-4f40-91c6-ce8a5497c2d6</testSuiteGuid>
    <testCaseLink>
-      <guid>4b630c0a-5dd0-47a5-8cce-cb373cf91cf5</guid>
+      <guid>30d97f0b-e70f-4b53-9374-e7d28ca183b4</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/TC_SignIn</testCaseId>
+      <testCaseId>Test Cases/TC_Blog_PostComment</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
       <variableLink>
          <testDataLinkId></testDataLinkId>
          <type>DEFAULT</type>
          <value></value>
-         <variableId>9abffa8f-76bf-4598-ab80-77ab1289486d</variableId>
+         <variableId>6967210b-ef28-48be-a4c6-5c55ab3fcf1e</variableId>
       </variableLink>
       <variableLink>
          <testDataLinkId></testDataLinkId>
          <type>DEFAULT</type>
          <value></value>
-         <variableId>b0c0380f-1bcd-4edd-9132-890379df2fb0</variableId>
+         <variableId>d2d6dc56-1d16-4837-8119-8cc1b0c1698c</variableId>
       </variableLink>
    </testCaseLink>
 </TestSuiteEntity>
