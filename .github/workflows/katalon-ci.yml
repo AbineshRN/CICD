@@ -1,56 +1,37 @@
-name: Katalon CI/CD
+name: Katalon Test Execution
  
 on:
   push:
-    paths:
-      - 'Test Suites/**'
-      - 'Scripts/**'
-      - 'Object Repository/**'
+    branches:
+      - main
   pull_request:
-    paths:
-      - 'Test Suites/**'
-      - 'Scripts/**'
-      - 'Object Repository/**'
  
 jobs:
-  run-katalon-tests:
+  katalon-tests:
     runs-on: windows-latest
  
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-        with:
-          fetch-depth: 0  # Needed to get all history for detecting changed files
  
-      - name: Set up Katalon version
+      - name: Set up Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+ 
+      - name: Download & Run Katalon Studio
         uses: katalon-studio/katalon-studio-github-action@v2.1
         with:
           version: '10.3.2'
- 
-      - name: Detect changed test suites
-        id: changed-suites
-        run: |
-          echo "Detecting changed test suites..."
-          git fetch --unshallow || true
-          # List all changed files in Test Suites folder
-          CHANGED_TS=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep "Test Suites/" | grep "\.ts$")
-          if [ -z "$CHANGED_TS" ]; then
-            echo "No test suites changed."
-            echo "suites=" >> $GITHUB_OUTPUT
-          else
-            # Convert paths to comma-separated list
-            SUITES=$(echo $CHANGED_TS | tr ' ' ',')
-            echo "Changed test suites: $SUITES"
-            echo "suites=$SUITES" >> $GITHUB_OUTPUT
-          fi
- 
-      - name: Run Katalon changed test suites
-        if: steps.changed-suites.outputs.suites != ''
-        uses: katalon-studio/katalon-studio-github-action@v2.1
-        with:
-          version: '10.3.2'
-          projectPath: 'C:\Users\10835442\git\CICD\CICD.prj'
-          testSuitePath: ${{ steps.changed-suites.outputs.suites }}
-          executionProfile: 'default'
-          browserType: 'Chrome'
-          includeHtmlReport: true
+          projectPath: 'C:\Users\10835442\git\CICD\CICD.prj' # path to your Katalon project
+          args: >
+            -noSplash
+            -runMode=console
+            -projectPath="C:\Users\10835442\git\CICD\CICD.prj"
+            -retry=0
+            -testSuitePath="C:\Users\10835442\git\CICD\Test Suites\RegisterSignIN.ts"
+            -executionProfile="default"
+            -browserType="Chrome"
+            -reportFolder="Reports"
+            -reportFileName="TestReport"
