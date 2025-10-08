@@ -49,7 +49,7 @@ jobs:
         uses: katalon-studio/katalon-studio-github-action@v2.1
         with:
           version: '10.3.2'
-          projectPath: 'D:\a\CICD\CICD\CICD.prj'
+          projectPath: 'C:\Users\10835442\git\CICD\CICD.prj'
           testSuitePath: ${{ steps.changed-suites.outputs.suites }}
           executionProfile: 'default'
           browserType: 'Chrome'
