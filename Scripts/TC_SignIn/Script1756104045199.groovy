@@ -40,7 +40,7 @@ try {
         )
     }
     CustomKeywords.'pages.LoginPage.clickOnLoginButton'(findTestObject('Object Repository/LoginPage/Login_button'), FailureHandling.STOP_ON_FAILURE)
-    KeywordUtil.markPassed('Signed into and adan kasm the account')
+    KeywordUtil.markPassed('Signed into the account')
     KeywordUtil.logInfo('Verifying My Account')
     CustomKeywords.'pages.AccountPage.verifyMyAccount'(
         findTestObject('Object Repository/AccountPage/my_Account_verification'),
