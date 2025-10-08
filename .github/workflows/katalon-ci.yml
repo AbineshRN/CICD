@@ -5,79 +5,55 @@ on:
     branches: [ master ]
  
 jobs:
-  prepare:
+  katalon-test:
     runs-on: windows-latest
-    outputs:
-      suites: ${{ steps.detect.outputs.suites }}
-      should_run: ${{ steps.detect.outputs.should_run }}
+ 
     steps:
-      - name: Checkout code (fetch at least 2 commits)
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 2
+    - name: Checkout code
+      uses: actions/checkout@v3
  
-      - name: Detect changed files and list test suites
-        id: detect
-        shell: pwsh
-        run: |
-          git fetch --unshallow || true
-          $changed = git diff --name-only HEAD^ HEAD
-          Write-Host "Changed files:`n$changed"
+    - name: Set up Java
+      uses: actions/setup-java@v3
+      with:
+        java-version: '17'
+        distribution: 'temurin'
  
-          $testCaseChanged = $changed | Select-String "^Test Cases/.*(\.tc|\.groovy)$"
-          $testSuiteChanged = $changed | Select-String "^Test Suites/.*\.ts$"
+    - name: Detect Changed Files
+      id: detect
+      shell: pwsh
+      run: |
+        git fetch --unshallow
+        $changedFiles = git diff --name-only HEAD^ HEAD
  
-          if ($testCaseChanged -or $testSuiteChanged) {
-            Write-Host "Relevant changes detected — enumerating all test suites..."
-            $suites = Get-ChildItem -Path "Test Suites" -Filter "*.ts" -Recurse | ForEach-Object {
-              $_.FullName.Substring((Get-Location).Path.Length + 1).Replace("\", "/")
-            }
-            if (-not $suites) { $suites = @() }
-            $json = $suites | ConvertTo-Json -Compress
-            echo "suites=$json" >> $env:GITHUB_OUTPUT
-            echo "should_run=true" >> $env:GITHUB_OUTPUT
-            Write-Host "Suites JSON: $json"
-          } else {
-            echo "suites=[]" >> $env:GITHUB_OUTPUT
-            echo "should_run=false" >> $env:GITHUB_OUTPUT
-            Write-Host "No relevant changes detected"
-          }
+        $testCaseChanged = $changedFiles | Select-String "^Test Cases/.*\.tc"
+        $testSuiteChanged = $changedFiles | Select-String "^Test Suites/.*\.ts"
  
-  run-suites:
-    needs: prepare
-    if: needs.prepare.outputs.should_run == 'true'
-    runs-on: windows-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        suite: ${{ fromJson(needs.prepare.outputs.suites) }}
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 2
+        if ($testCaseChanged -or $testSuiteChanged) {
+          echo "Detected changes in test cases or test suites."
+          echo "run_all_suites=true" >> $env:GITHUB_ENV
+        } else {
+          echo "No relevant changes detected."
+          echo "run_all_suites=false" >> $env:GITHUB_ENV
+        }
  
-      - name: Set up Java
-        uses: actions/setup-java@v3
-        with:
-          java-version: '17'
-          distribution: 'temurin'
+    - name: Run All Test Suites
+      if: env.run_all_suites == 'true'
+      uses: katalon-studio/katalon-studio-github-action@v2.1
+      with:
+        version: '10.3.2'                          # Katalon Studio version
+        projectPath: '${{ github.workspace }}'     # Path to your project
+        testSuitePath: 'Test Suites'               # You can use folder path to run all suites
+        executionProfile: 'default'
+        browserType: 'Chrome'
+        includeHtmlReport: 'true'
  
-      - name: Run Test Suite ${{ matrix.suite }}
-        uses: katalon-studio/katalon-studio-github-action@v3
-        with:
-          version: '10.3.2'
-          projectPath: '${{ github.workspace }}/CICD.prj'
-          testSuitePath: '${{ matrix.suite }}'
-          executionProfile: 'default'
-          browserType: 'Chrome'
-          retry: '0'
-          apiKey: ${{ secrets.KATALON_API_KEY }}
+    - name: Upload Reports
+      if: env.run_all_suites == 'true'
+      uses: actions/upload-artifact@v4
+      with:
+        name: katalon-report
+        path: Reports/
  
-  no-changes:
-    needs: prepare
-    if: needs.prepare.outputs.should_run == 'false'
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "No test case or test suite changes detected. Skipping Katalon execution."
- 
+    - name: No changes detected
+      if: env.run_all_suites == 'false'
+      run: echo "No test case or test suite changes detected. Skipping run."
