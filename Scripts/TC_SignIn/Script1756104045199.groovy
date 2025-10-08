@@ -33,7 +33,7 @@ try {
     ]
     loginFields.each {
         CustomKeywords.'pages.LoginPage.inputField'(
-            findTestObject(' Object Repository/LoginPage/generic_Input', [('id') : it.id]),
+            findTestObject('Object Repository/LoginPage/generic_Input', [('id') : it.id]),
             JsonFileReader.getJsonData('loginPage', it.jsonKey, GlobalVariable.jsonDataFilePath),
             it.jsonKey,
             FailureHandling.STOP_ON_FAILURE
