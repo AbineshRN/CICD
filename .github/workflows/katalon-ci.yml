@@ -1,34 +1,38 @@
-
 name: Run Katalon Test Suites on Changes
-
+ 
 on:
   push:
     branches: [ master ]
-
+ 
 jobs:
   katalon-test:
     runs-on: windows-latest
-
+ 
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
-
+      with:
+        fetch-depth: 2   # ✅ Fetch at least 2 commits so HEAD^ exists
+ 
     - name: Set up Java
       uses: actions/setup-java@v3
       with:
         java-version: '17'
         distribution: 'temurin'
-
+ 
     - name: Detect Changed Files
       id: detect
       shell: pwsh
       run: |
-        git fetch --unshallow
+        echo "Fetching commit differences..."
         $changedFiles = git diff --name-only HEAD^ HEAD
-
-        $testCaseChanged = $changedFiles | Select-String "^Test Cases/.*\.tc"
-        $testSuiteChanged = $changedFiles | Select-String "^Test Suites/.*\.ts"
-
+        echo "Changed files:"
+        echo $changedFiles
+ 
+        # ✅ Match changes in test cases (.tc, .groovy) or test suites (.ts)
+        $testCaseChanged = $changedFiles | Select-String "^Test Cases/.*(\.tc|\.groovy)$"
+        $testSuiteChanged = $changedFiles | Select-String "^Test Suites/.*\.ts$"
+ 
         if ($testCaseChanged -or $testSuiteChanged) {
           echo "Detected changes in test cases or test suites."
           echo "run_all_suites=true" >> $env:GITHUB_ENV
@@ -36,20 +40,21 @@ jobs:
           echo "No relevant changes detected."
           echo "run_all_suites=false" >> $env:GITHUB_ENV
         }
-
+ 
     - name: Run All Test Suites
       if: env.run_all_suites == 'true'
       shell: pwsh
       run: |
+        Write-Host "Running all test suites..."
         $suiteFiles = Get-ChildItem -Path "Test Suites" -Filter "*.ts" -Recurse
         foreach ($suite in $suiteFiles) {
           $path = $suite.FullName.Substring((Get-Location).Path.Length + 1).Replace("\", "/")
-          Write-Host "Running test suite: $path"
+          Write-Host "Executing suite: $path"
           & "C:\Users\10835442\Katalon Run Time Engine\Katalon_Studio_Engine_Windows_64-10.3.2\katalonc.exe" `
             -noSplash -runMode=console -projectPath="${{ github.workspace }}" `
             -retry=0 -testSuitePath="$path" -executionProfile="default" -browserType="Chrome"
         }
-
+ 
     - name: No changes detected
       if: env.run_all_suites == 'false'
       run: echo "No test case or test suite changes detected. Skipping run."
