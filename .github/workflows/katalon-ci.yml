@@ -38,6 +38,7 @@ jobs:
           } else {
             echo "No relevant changes detected."
             echo "run_all_suites=false" >> $env:GITHUB_ENV
+          }
  
       # 4️⃣ Run Katalon Studio tests using API key (specific test suite)
       - name: Run Changed Test Suite
