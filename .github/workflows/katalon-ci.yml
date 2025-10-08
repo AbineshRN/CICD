@@ -1,44 +1,69 @@
-name: Katalon Test Execution
+name: Run Katalon Test Suites on Changes
  
 on:
   push:
-    branches:
-      - master
-  pull_request:
+    branches: [ master ]
+  workflow_dispatch:
  
 jobs:
-  katalon-tests:
+  katalon-test:
     runs-on: windows-latest
  
     steps:
-      - name: Checkout repository
+      # 1️⃣ Checkout code
+      - name: Checkout code
         uses: actions/checkout@v3
  
+      # 2️⃣ Setup Java
       - name: Set up Java
         uses: actions/setup-java@v3
         with:
-          distribution: 'temurin'
           java-version: '17'
+          distribution: 'temurin'
  
-      - name: Get changed test suites
-        id: changes
+      # 3️⃣ Detect changed test cases/suites
+      - name: Detect Changed Files
+        id: detect
+        shell: pwsh
         run: |
-          CHANGED=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep "Test Suites/" | tr '
-' ',' | sed 's/,$//')
-          echo "CHANGED_SUITES=$CHANGED" >> $GITHUB_ENV
+          git fetch --unshallow
+          $changedFiles = git diff --name-only HEAD^ HEAD
  
-      - name: Run Katalon Studio for changed suites
-        if: env.CHANGED_SUITES != ''
-        run: |
-          for suite in $(echo "${{ env.CHANGED_SUITES }}" | tr ',' '
-'); do
-            katalonc -noSplash -runMode=console \
-              -projectPath="${{ github.workspace }}/CICD.prj" \
-              -retry=0 \
-              -testSuitePath="$suite" \
-              -executionProfile="default" \
-              -browserType="Chrome" \
-              -reportFolder="Reports" \
-              -reportFileName="TestReport" \
-              -apiKey=${{ secrets.KATALON_API_KEY }}
-          done
+          $testCaseChanged = $changedFiles | Select-String "^Test Cases/.*\.tc"
+          $testSuiteChanged = $changedFiles | Select-String "^Test Suites/.*\.ts"
+ 
+          if ($testCaseChanged -or $testSuiteChanged) {
+            echo "Detected changes in test cases or test suites."
+            echo "run_all_suites=true" >> $env:GITHUB_ENV
+          } else {
+            echo "No relevant changes detected."
+            echo "run_all_suites=false" >> $env:GITHUB_ENV
+          }
+ 
+      # 4️⃣ Run Katalon Studio tests using API key
+      - name: Run Changed Test Suites
+        if: env.run_all_suites == 'true'
+        uses: katalon-studio/katalon-studio-github-action@v2.1
+        with:
+          version: '10.3.2'
+          projectPath: '${{ github.workspace }}'
+          args: >-
+            -apiKey=${{ secrets.KATALON_API_KEY }}
+            -testSuitePath="Test Suites"
+            -executionProfile="default"
+            -browserType="Chrome"
+            -retry=0
+            -noSplash
+ 
+      # 5️⃣ Upload HTML reports
+      - name: Upload Katalon Reports
+        if: env.run_all_suites == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: katalon-report
+          path: Reports/
+ 
+      # 6️⃣ No changes detected
+      - name: No changes detected
+        if: env.run_all_suites == 'false'
+        run: echo "No test case or test suite changes detected. Skipping run."
