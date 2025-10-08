@@ -49,7 +49,7 @@ jobs:
           projectPath: '${{ github.workspace }}'
           args: >-
             -apiKey=${{ secrets.KATALON_API_KEY }}
-            -testSuitePath="Test Suites/RegisterSignIN.ts"
+            -testSuitePath="${{ github.workspace }}/Test Suites/RegisterSignIN.ts"
             -executionProfile="default"
             -browserType="Chrome"
             -retry=0
