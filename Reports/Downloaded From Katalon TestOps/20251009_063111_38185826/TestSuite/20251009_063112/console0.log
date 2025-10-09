@@ -1,0 +1,60 @@
+Warning: NLS unused message: QTEST in: com.kms.katalon.constants.globalMessages
+Warning: NLS missing message: QTEST_NAME in: com.kms.katalon.constants.globalMessages
+2025-10-09 06:31:17.261 INFO  c.k.katalon.core.main.TestSuiteExecutor  - START Test Suites/TestSuite
+2025-10-09 06:31:17.352 INFO  c.k.katalon.core.main.TestSuiteExecutor  - userFullName = abinesh rajendran
+2025-10-09 06:31:17.354 INFO  c.k.katalon.core.main.TestSuiteExecutor  - projectName = CICD
+2025-10-09 06:31:17.356 INFO  c.k.katalon.core.main.TestSuiteExecutor  - hostName = runneradmin - runnervmd3hz3.4vehuri0bxauxp2n5tggwbl33a.cx.internal.cloudapp.net
+2025-10-09 06:31:17.358 INFO  c.k.katalon.core.main.TestSuiteExecutor  - os = Windows Server 2025 64bit
+2025-10-09 06:31:17.360 INFO  c.k.katalon.core.main.TestSuiteExecutor  - hostAddress = 10.1.0.102
+2025-10-09 06:31:17.362 INFO  c.k.katalon.core.main.TestSuiteExecutor  - katalonVersion = 10.3.2.0
+2025-10-09 06:31:17.731 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-10-09 06:31:17.731 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/TC_SignIn
+2025-10-09 06:31:17.822 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) filepath = Include/Data Files/login_data.json
+2025-10-09 06:31:17.834 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) section = loginPage
+2025-10-09 06:31:18.305 INFO  c.k.k.core.webui.driver.DriverFactory    - Starting 'Chrome' driver
+2025-10-09 06:31:18.360 INFO  c.k.k.core.webui.driver.DriverFactory    - Action delay is set to 0 milliseconds
+Oct 09, 2025 6:31:25 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 140, returning the closest version; found: 138; Please update to a Selenium version that supports CDP version 140
+2025-10-09 06:31:26.483 INFO  c.k.k.core.webui.driver.DriverFactory    - sessionId = 0d516792bd03fa4d8a9d2dc9e57a948f
+2025-10-09 06:31:26.485 INFO  c.k.k.core.webui.driver.DriverFactory    - browser = Chrome 140.0.7339.208
+2025-10-09 06:31:26.487 INFO  c.k.k.core.webui.driver.DriverFactory    - platform = Windows Server 2025
+2025-10-09 06:31:26.487 INFO  c.k.k.core.webui.driver.DriverFactory    - seleniumVersion = 4.28.1
+2025-10-09 06:31:26.504 INFO  c.k.k.core.webui.driver.DriverFactory    - proxyInformation = ProxyInformation { proxyOption=NO_PROXY, proxyServerType=HTTP, username=, password=********, proxyServerAddress=, proxyServerPort=0, executionList="", isApplyToDesiredCapabilities=true }
+2025-10-09 06:31:28.325 DEBUG testcase.TC_SignIn                       - 1: try
+2025-10-09 06:31:28.328 DEBUG testcase.TC_SignIn                       - 1: logInfo("Navigating to the sign  in page")
+2025-10-09 06:31:28.337 INFO  com.kms.katalon.core.util.KeywordUtil    - Navigating to the sign  in page
+2025-10-09 06:31:28.340 DEBUG testcase.TC_SignIn                       - 2: pages.HomePage.navigateToAccountPage(STOP_ON_FAILURE)
+2025-10-09 06:31:28.645 INFO  com.kms.katalon.core.util.KeywordUtil    - ℹ️ Hovering over: my account
+2025-10-09 06:31:28.892 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ ✅ my account hovered successfully
+2025-10-09 06:31:29.171 INFO  com.kms.katalon.core.util.KeywordUtil    - ℹ️ Clicking on: login button
+2025-10-09 06:31:29.760 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ ✅ login button clicked successfully
+2025-10-09 06:31:29.763 DEBUG testcase.TC_SignIn                       - 3: markPassed("Navigated to the sign in page")
+2025-10-09 06:31:29.766 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Navigated to the sign in page
+2025-10-09 06:31:29.767 DEBUG testcase.TC_SignIn                       - 4: logInfo("Signing into the account")
+2025-10-09 06:31:29.769 INFO  com.kms.katalon.core.util.KeywordUtil    - Signing into the account
+2025-10-09 06:31:29.770 DEBUG testcase.TC_SignIn                       - 5: loginFields = [["id":"input-email", "jsonKey":"email"], ["id":"input-password", "jsonKey":"password"]]
+2025-10-09 06:31:29.774 DEBUG testcase.TC_SignIn                       - 6: loginFields.each({ -> ... })
+2025-10-09 06:31:30.262 INFO  com.kms.katalon.core.util.KeywordUtil    - ℹ️ Entering data into: email
+2025-10-09 06:31:30.933 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ ✅ email entered successfully
+2025-10-09 06:31:31.188 INFO  com.kms.katalon.core.util.KeywordUtil    - ℹ️ Entering data into: password
+2025-10-09 06:31:31.788 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ ✅ password entered successfully
+2025-10-09 06:31:31.791 DEBUG testcase.TC_SignIn                       - 7: pages.LoginPage.clickOnLoginButton(findTestObject("Object Repository/LoginPage/Login_button"), STOP_ON_FAILURE)
+2025-10-09 06:31:32.033 INFO  com.kms.katalon.core.util.KeywordUtil    - ℹ️ Clicking on: Login button
+2025-10-09 06:31:32.349 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ ✅ Login button clicked successfully
+2025-10-09 06:31:32.367 DEBUG testcase.TC_SignIn                       - 8: markPassed("Signed into  the account")
+2025-10-09 06:31:32.371 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Signed into  the account
+2025-10-09 06:31:32.372 DEBUG testcase.TC_SignIn                       - 9: logInfo("Verifying My Account")
+2025-10-09 06:31:32.374 INFO  com.kms.katalon.core.util.KeywordUtil    - Verifying My Account
+2025-10-09 06:31:32.376 DEBUG testcase.TC_SignIn                       - 10: pages.AccountPage.verifyMyAccount(findTestObject("Object Repository/AccountPage/my_Account_verification"), JsonFileReader.getJsonData(section, "verification_text", jsonDataFilePath), STOP_ON_FAILURE)
+2025-10-09 06:31:33.290 INFO  com.kms.katalon.core.util.KeywordUtil    - ℹ️ Verifying text for: Verify My account
+2025-10-09 06:31:33.547 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ ✅ Verify My account verified successfully
+2025-10-09 06:31:33.549 DEBUG testcase.TC_SignIn                       - 11: markPassed("Verified My Account")
+2025-10-09 06:31:33.551 DEBUG com.kms.katalon.core.util.KeywordUtil    - ✓ Verified My Account
+PASSED
+2025-10-09 06:31:33.627 INFO  com.kms.katalon.core.util.KeywordUtil    - Updated 'TC_SignIn' in 'executionStatus' section to 'PASSED'.
+2025-10-09 06:31:33.720 INFO  com.kms.katalon.core.util.KeywordUtil    - Saved updated JSON data to file: Include\Data Files\JSON_DATA.json
+2025-10-09 06:31:33.972 INFO  com.kms.katalon.core.util.KeywordUtil    - Browser closed successfully.
+2025-10-09 06:31:33.974 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/TC_SignIn
+2025-10-09 06:31:34.006 INFO  c.k.katalon.core.main.TestSuiteExecutor  - --------------------
+2025-10-09 06:31:34.006 INFO  c.k.katalon.core.main.TestSuiteExecutor  - END Test Suites/TestSuite
+2025-10-09 06:31:34.006 INFO  c.k.katalon.core.main.TestSuiteExecutor  - ====================

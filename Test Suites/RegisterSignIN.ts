@@ -30,23 +30,4 @@
          <variableId>b0c0380f-1bcd-4edd-9132-890379df2fb0</variableId>
       </variableLink>
    </testCaseLink>
-   <testCaseLink>
-      <guid>3e921d09-204a-4e77-ad50-5a8aab3f45b2</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/TC_Blog_PostComment</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
-      <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
-         <variableId>6967210b-ef28-48be-a4c6-5c55ab3fcf1e</variableId>
-      </variableLink>
-      <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
-         <variableId>d2d6dc56-1d16-4837-8119-8cc1b0c1698c</variableId>
-      </variableLink>
-   </testCaseLink>
 </TestSuiteEntity>
