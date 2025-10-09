@@ -1,43 +1,64 @@
-name: Scheduled Katalon Test Suite Run
- 
+name: Run All Katalon Test Suites
+
 on:
-  schedule:
-    - cron: '57 7 * * *'  # Runs at 12:53 PM IST (07:23 UTC)
   workflow_dispatch:
- 
+  schedule:
+    - cron: '30 9 * * *'  # Runs daily at 3:00 PM IST (09:30 UTC)
+
 jobs:
-  katalon-test:
+  generate-matrix:
     runs-on: windows-latest
- 
+    outputs:
+      suite-list: ${{ steps.extract.outputs.suites }}
     steps:
-      # 1️⃣ Checkout repository
       - name: Checkout code
         uses: actions/checkout@v3
- 
-      # 2️⃣ Setup Java
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Generate suite matrix
+        run: python suite-tools/generate_suite_matrix.py
+
+      - name: Extract suite list
+        id: extract
+        run: |
+          $json = Get-Content suite_matrix.json -Raw
+          echo "suites=$json" >> $env:GITHUB_OUTPUT
+
+  run-suites:
+    needs: generate-matrix
+    runs-on: windows-latest
+    strategy:
+      matrix:
+        suite: ${{ fromJson(needs.generate-matrix.outputs.suite-list) }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
       - name: Set up Java
         uses: actions/setup-java@v3
         with:
-          distribution: 'temurin'
           java-version: '17'
- 
-      # 3️⃣ Run Katalon Test Suite
-      - name: Run Scheduled Test Suite
+          distribution: 'temurin'
+
+      - name: Run Test Suite
         uses: katalon-studio/katalon-studio-github-action@v2.1
         with:
           version: '10.3.2'
           projectPath: '${{ github.workspace }}'
           args: >-
             -apiKey=${{ secrets.KATALON_API_KEY }}
-            -testSuitePath="Test Suites/RegisterSignIN"
+            -testSuitePath="${{ matrix.suite }}"
             -executionProfile="default"
             -browserType="Chrome"
             -retry=0
             -noSplash
- 
-      # 4️⃣ Upload Katalon Reports
+
       - name: Upload Katalon Reports
         uses: actions/upload-artifact@v4
         with:
-          name: katalon-report
+          name: katalon-report-${{ matrix.suite }}
           path: Reports/
