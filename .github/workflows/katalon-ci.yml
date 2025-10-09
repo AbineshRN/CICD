@@ -21,47 +21,22 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
  
-      #  Detect changed test suites or test cases
-      - name: Detect Changed Test Suites or Test Cases
+      #  Detect changed test suites
+      - name: Detect Changed Test Suites
         id: detect
         shell: pwsh
         run: |
-          git fetch --unshallow || true
+          git fetch --unshallow
  
           $changedFiles = git diff --name-only HEAD^ HEAD
+          $testSuiteChanged = $changedFiles | Where-Object { $_ -like "Test Suites/*.ts" }
  
-          # Detect changed test suites (.ts) and test cases (.tc)
-          $changedSuites = $changedFiles | Where-Object { $_ -like "Test Suites/*.ts" }
-          $changedTestCases = $changedFiles | Where-Object { $_ -like "Test Cases/*.tc" }
- 
-          $affectedSuites = @()
- 
-          # Add directly changed test suites
-          if ($changedSuites) {
-            $affectedSuites += $changedSuites
-          }
- 
-          # If test cases changed, find which suites reference them
-          if ($changedTestCases) {
-            Write-Host "Detecting which test suites include the modified test cases..."
-            foreach ($tc in $changedTestCases) {
-              $tcName = [System.IO.Path]::GetFileNameWithoutExtension($tc)
-              $referencingSuites = Get-ChildItem "Test Suites" -Filter "*.ts" -Recurse | Select-String -Pattern $tcName | ForEach-Object { $_.Path }
-              if ($referencingSuites) {
-                $affectedSuites += $referencingSuites
-              }
-            }
-          }
- 
-          # Remove duplicates
-          $affectedSuites = $affectedSuites | Sort-Object -Unique
- 
-          if ($affectedSuites.Count -gt 0) {
-            Write-Host "Detected changes in or affecting the following test suites:"
-            $affectedSuites | ForEach-Object { Write-Host $_ }
+          if ($testSuiteChanged) {
+            echo "Detected changes in the following test suites:"
+            $testSuiteChanged | ForEach-Object { Write-Host $_ }
  
             # Remove the .ts extension for Katalon compatibility
-            $suitePaths = $affectedSuites | ForEach-Object {
+            $suitePaths = $testSuiteChanged | ForEach-Object {
               $_ -replace '\.ts$', ''
             }
  
@@ -71,7 +46,7 @@ jobs:
             echo "CHANGED_SUITES=$joinedSuites" >> $env:GITHUB_ENV
             echo "run_suites=true" >> $env:GITHUB_ENV
           } else {
-            Write-Host "No related test suite changes detected."
+            echo "No test suite changes detected."
             echo "run_suites=false" >> $env:GITHUB_ENV
           }
  
@@ -101,4 +76,4 @@ jobs:
       #  No changes detected
       - name: No changes detected
         if: env.run_suites == 'false'
-        run: echo "No test suite or relevant test case changes detected. Skipping run."
+        run: echo "No test suite changes detected. Skipping run."
