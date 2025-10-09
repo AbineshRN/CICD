@@ -1,8 +1,8 @@
-name: Scheduled Katalon Test Suites Run
+name: Scheduled Katalon Test Suite Run
  
 on:
   schedule:
-    - cron: '55 7 * * *'  # Runs at 12:53 PM IST (07:23 UTC)
+    - cron: '57 7 * * *'  # Runs at 12:53 PM IST (07:23 UTC)
   workflow_dispatch:
  
 jobs:
@@ -21,34 +21,23 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
  
-      # 3️⃣ Find all test suites dynamically
-      - name: Detect all Test Suites
-        id: detect
-        shell: bash
-        run: |
-          echo "Detecting test suites..."
-          suites=$(find "Test Suites" -name "*.ts" | sed 's| |%20|g' | tr '\n' ',' | sed 's/,$//')
-          echo "Detected suites: $suites"
-          echo "suites=$suites" >> $GITHUB_OUTPUT
- 
-      # 4️⃣ Run each Test Suite
-      - name: Run All Detected Test Suites
-        if: steps.detect.outputs.suites != ''
+      # 3️⃣ Run Katalon Test Suite
+      - name: Run Scheduled Test Suite
         uses: katalon-studio/katalon-studio-github-action@v2.1
         with:
           version: '10.3.2'
           projectPath: '${{ github.workspace }}'
           args: >-
             -apiKey=${{ secrets.KATALON_API_KEY }}
-            -testSuitePath="${{ steps.detect.outputs.suites }}"
+            -testSuitePath="Test Suites/RegisterSignIN"
             -executionProfile="default"
             -browserType="Chrome"
             -retry=0
             -noSplash
  
-      # 5️⃣ Upload Katalon Reports
+      # 4️⃣ Upload Katalon Reports
       - name: Upload Katalon Reports
         uses: actions/upload-artifact@v4
         with:
-          name: katalon-reports
+          name: katalon-report
           path: Reports/
