@@ -20,7 +20,7 @@ import org.openqa.selenium.Keys as Keys
 import utils.JsonFileReader as JsonFileReader
 import com.report.ExtentManager as ExtentManager
 try {
-    KeywordUtil.logInfo(' Navigating to the blog page')
+    KeywordUtil.logInfo('Navigating to the blog page')
     CustomKeywords.'pages.HomePage.clickOnBlog'(findTestObject('Object Repository/HomePage/Blogs'), 'Blog', FailureHandling.STOP_ON_FAILURE)
     KeywordUtil.markPassed('Navigated to the blog page')
 } catch (Exception e) {
