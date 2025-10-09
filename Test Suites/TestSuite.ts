@@ -42,4 +42,23 @@
          <variableId>084b9421-d588-49ad-9d1f-14cd0200c377</variableId>
       </variableLink>
    </testCaseLink>
+   <testCaseLink>
+      <guid>0a287527-5e45-44a9-89ba-a42d0282047d</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/TC_SignIn</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>9abffa8f-76bf-4598-ab80-77ab1289486d</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>b0c0380f-1bcd-4edd-9132-890379df2fb0</variableId>
+      </variableLink>
+   </testCaseLink>
 </TestSuiteEntity>
