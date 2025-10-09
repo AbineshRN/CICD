@@ -24,6 +24,7 @@ jobs:
 
       - name: Extract suite list
         id: extract
+        shell: pwsh
         run: |
           $json = Get-Content suite_matrix.json -Raw
           echo "suites=$json" >> $env:GITHUB_OUTPUT
@@ -59,12 +60,14 @@ jobs:
             -noSplash
 
       - name: Sanitize suite name
-	  id: sanitize
-	  run: |
-	    echo "safe_name=${{ matrix.suite }}" | ForEach-Object { $_ -replace '/', '_' } >> $env:GITHUB_ENV
-	
-	  - name: Upload Katalon Reports
-	  uses: actions/upload-artifact@v4
-	  with:
-	    name: katalon-report-${{ env.safe_name }}
-	    path: Reports/
+        id: sanitize
+        shell: pwsh
+        run: |
+          $safeName = "${{ matrix.suite }}" -replace '/', '_'
+          echo "safe_name=$safeName" >> $env:GITHUB_ENV
+
+      - name: Upload Katalon Reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: katalon-report-${{ env.safe_name }}
+          path: Reports/
