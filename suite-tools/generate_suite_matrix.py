@@ -16,9 +16,9 @@ for root, _, files in os.walk(test_suites_dir):
             suite_path = relative_path.replace(".ts", "")
             suite_paths.append(suite_path)
 
-# Output the suite paths as a JSON array
+# Output the suite paths as a compact JSON array
 with open("suite_matrix.json", "w") as f:
-    json.dump(suite_paths, f, indent=2)
+    json.dump(suite_paths, f, separators=(",", ":"))
 
-print("suite_matrix.json has been generated with the following test suites:")
-print(json.dumps(suite_paths, indent=2))
+# Print the compact JSON for verification
+print(json.dumps(suite_paths, separators=(",", ":"), indent=2))
