@@ -50,37 +50,6 @@
       </variableLink>
    </testCaseLink>
    <testCaseLink>
-      <guid>02353dd2-3225-4424-9b9a-eb74e33b81e5</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/TC_AddToCart</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
-      <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
-         <variableId>ae054e76-1947-48ef-8628-d237a107be1c</variableId>
-      </variableLink>
-      <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
-         <variableId>cb3e9a20-d86a-4936-abf2-958fdd8395c8</variableId>
-      </variableLink>
-      <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
-         <variableId>966fea60-7d65-41cd-849f-1daf167a5ce8</variableId>
-      </variableLink>
-      <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
-         <variableId>084b9421-d588-49ad-9d1f-14cd0200c377</variableId>
-      </variableLink>
-   </testCaseLink>
-   <testCaseLink>
       <guid>7a393da3-48f4-4a0b-ad88-3d212b1b0981</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
