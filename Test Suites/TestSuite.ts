@@ -12,37 +12,6 @@
    <rerunImmediately>true</rerunImmediately>
    <testSuiteGuid>2e1776aa-e5de-414d-90ea-b9de75ceee13</testSuiteGuid>
    <testCaseLink>
-      <guid>a4984d5c-c3d8-49d1-b9e2-423ae2eeabfc</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/TC_AddToCart</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
-      <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
-         <variableId>ae054e76-1947-48ef-8628-d237a107be1c</variableId>
-      </variableLink>
-      <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
-         <variableId>cb3e9a20-d86a-4936-abf2-958fdd8395c8</variableId>
-      </variableLink>
-      <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
-         <variableId>966fea60-7d65-41cd-849f-1daf167a5ce8</variableId>
-      </variableLink>
-      <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
-         <variableId>084b9421-d588-49ad-9d1f-14cd0200c377</variableId>
-      </variableLink>
-   </testCaseLink>
-   <testCaseLink>
       <guid>0a287527-5e45-44a9-89ba-a42d0282047d</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
