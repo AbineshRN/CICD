@@ -32,6 +32,7 @@ jobs:
     needs: generate-matrix
     runs-on: windows-latest
     strategy:
+      fail-fast: false
       matrix:
         suite: ${{ fromJson(needs.generate-matrix.outputs.suite-list) }}
     steps:
@@ -57,8 +58,13 @@ jobs:
             -retry=0
             -noSplash
 
-      - name: Upload Katalon Reports
-        uses: actions/upload-artifact@v4
-        with:
-          name: katalon-report-${{ matrix.suite }}
-          path: Reports/
+      - name: Sanitize suite name
+	  id: sanitize
+	  run: |
+	    echo "safe_name=${{ matrix.suite }}" | ForEach-Object { $_ -replace '/', '_' } >> $env:GITHUB_ENV
+	
+	  - name: Upload Katalon Reports
+	  uses: actions/upload-artifact@v4
+	  with:
+	    name: katalon-report-${{ env.safe_name }}
+	    path: Reports/
