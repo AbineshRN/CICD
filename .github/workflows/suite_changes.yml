@@ -1,42 +1,157 @@
+name: Run Katalon Test Suites on Changes
+
+ 
+
 on:
+
   push:
+
     branches: [ master ]
+
   workflow_dispatch:
 
-jobs:
-  detect-changes:
-    runs-on: ubuntu-latest
-    outputs:
-      suites: ${{ steps.detect.outputs.suites }}
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+ 
 
-      - name: Detect changed test suites
-        id: detect
-        run: |
-          python suite-tools/detect_changed_suites.py > suites.json
-          echo "suites=$(cat suites.json)" >> $GITHUB_OUTPUT
+jobs:
 
   katalon-test:
-    needs: detect-changes
+
     runs-on: windows-latest
-    strategy:
-      matrix:
-        suite: ${{ fromJson(needs.detect-changes.outputs.suites) }}
+
+ 
+
     steps:
+
+      #  Checkout code
+
       - name: Checkout code
+
         uses: actions/checkout@v3
 
+ 
+
+      #  Setup Java
+
       - name: Set up Java
+
         uses: actions/setup-java@v3
+
         with:
-          distribution: 'temurin'
+
           java-version: '17'
 
-      - name: Run Katalon Test Suite
+          distribution: 'temurin'
+
+ 
+
+      #  Detect changed test suites
+
+      - name: Detect Changed Test Suites
+
+        id: detect
+
+        shell: pwsh
+
+        run: |
+
+          git fetch --unshallow
+
+ 
+
+          $changedFiles = git diff --name-only HEAD^ HEAD
+
+          $testSuiteChanged = $changedFiles | Where-Object { $_ -like "Test Suites/*.ts" }
+
+ 
+
+          if ($testSuiteChanged) {
+
+            echo "Detected changes in the following test suites:"
+
+            $testSuiteChanged | ForEach-Object { Write-Host $_ }
+
+ 
+
+            # Remove the .ts extension for Katalon compatibility
+
+            $suitePaths = $testSuiteChanged | ForEach-Object {
+
+              $_ -replace '\.ts$', ''
+
+            }
+
+ 
+
+            # Join multiple suites with semicolon
+
+            $joinedSuites = ($suitePaths -join ";")
+
+ 
+
+            echo "CHANGED_SUITES=$joinedSuites" >> $env:GITHUB_ENV
+
+            echo "run_suites=true" >> $env:GITHUB_ENV
+
+          } else {
+
+            echo "No test suite changes detected."
+
+            echo "run_suites=false" >> $env:GITHUB_ENV
+
+          }
+
+ 
+
+      #  Run Changed Test Suites
+
+      - name: Run Changed Test Suites
+
+        if: env.run_suites == 'true'
+
         uses: katalon-studio/katalon-studio-github-action@v2.1
+
         with:
+
           version: '10.3.2'
-          projectPath: '${{ github.workspace }}/CICD.prj'
-          args: '-noSplash -retry=0 -testSuitePath="${{ matrix.suite }}" -executionProfile=default -browserType=Chrome'
+
+          projectPath: '${{ github.workspace }}'
+
+          args: >-
+
+            -apiKey=${{ secrets.KATALON_API_KEY }}
+
+            -testSuitePath="${{ env.CHANGED_SUITES }}"
+
+            -executionProfile="default"
+
+            -browserType="Chrome"
+
+            -retry=0
+
+            -noSplash
+
+ 
+
+      #  Upload HTML reports
+
+      - name: Upload Katalon Reports
+
+        if: env.run_suites == 'true'
+
+        uses: actions/upload-artifact@v4
+
+        with:
+
+          name: katalon-report
+
+          path: Reports/
+
+ 
+
+      #  No changes detected
+
+      - name: No changes detected
+
+        if: env.run_suites == 'false'
+
+        run: echo "No test suite changes detected. Skipping run."
