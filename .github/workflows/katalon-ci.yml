@@ -10,18 +10,18 @@ jobs:
     runs-on: windows-latest
  
     steps:
-      # 1️⃣ Checkout code
+      #  Checkout code
       - name: Checkout code
         uses: actions/checkout@v3
  
-      # 2️⃣ Setup Java
+      #  Setup Java
       - name: Set up Java
         uses: actions/setup-java@v3
         with:
           java-version: '17'
           distribution: 'temurin'
  
-      # 3️⃣ Detect changed test suites
+      #  Detect changed test suites
       - name: Detect Changed Test Suites
         id: detect
         shell: pwsh
@@ -50,7 +50,7 @@ jobs:
             echo "run_suites=false" >> $env:GITHUB_ENV
           }
  
-      # 4️⃣ Run Changed Test Suites
+      #  Run Changed Test Suites
       - name: Run Changed Test Suites
         if: env.run_suites == 'true'
         uses: katalon-studio/katalon-studio-github-action@v2.1
@@ -65,7 +65,7 @@ jobs:
             -retry=0
             -noSplash
  
-      # 5️⃣ Upload HTML reports
+      #  Upload HTML reports
       - name: Upload Katalon Reports
         if: env.run_suites == 'true'
         uses: actions/upload-artifact@v4
@@ -73,7 +73,7 @@ jobs:
           name: katalon-report
           path: Reports/
  
-      # 6️⃣ No changes detected
+      #  No changes detected
       - name: No changes detected
         if: env.run_suites == 'false'
         run: echo "No test suite changes detected. Skipping run."
