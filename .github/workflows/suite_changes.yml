@@ -30,7 +30,7 @@ jobs:
           if ($suitePaths.Count -eq 0) {
             echo "suites=[]" >> $env:GITHUB_OUTPUT
           } else {
-            $json = "[" + ($suitePaths | ForEach-Object { '"' + $_ + '"' }) -join "," + "]"
+            $json = "[" + ($suitePaths | ForEach-Object { '\"' + $_ + '\"' }) -join "," + "]"
             echo "suites=$json" >> $env:GITHUB_OUTPUT
           }
 
