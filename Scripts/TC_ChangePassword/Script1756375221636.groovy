@@ -48,7 +48,7 @@ try {
 
 try {
     KeywordUtil.logInfo('Verifying Password Change Text')
-    CustomKeywords.'pages.AccountPage.verifyPasswordChange'(findTestObject('Object Repository/AccountPage/passwordChangedText'), JsonFileReader.getJsonData(section, 'verifyText', filepath), FailureHandling.STOP_ON_FAILURE)
+    CustomKeywords.'pages.AccountPage.verifyPasswordChange'(findTestObject('Object Repository/AccountPage/passwordChangedText'), JsonFileReader.getJsonData(section, 'verifyText', GlobalVariable.jsonDataFilePath), FailureHandling.STOP_ON_FAILURE)
     KeywordUtil.markPassed('Verified Password Change Text')
 } catch (Exception e) {
     KeywordUtil.markFailed('Failed to verify password change text: ' + e.message)
