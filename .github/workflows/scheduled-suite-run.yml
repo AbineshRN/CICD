@@ -3,7 +3,7 @@ name: Run All Katalon Test Suites
 on:
   workflow_dispatch:
   schedule:
-    - cron: '30 9 * * *'  # Runs daily at 3:00 PM IST (09:30 UTC)
+    - cron: '*/30 * * * *'  # Runs every 30 mins
 
 jobs:
   generate-matrix:
